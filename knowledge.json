@@ -44,10 +44,10 @@
   },
 
   "email_identity": {
-    "primary": "OncoHealth email (carlos.carrillo@oncologyanalytics.com or similar)",
+    "primary": "carlos.carrillo@newfireglobal.com",
+    "scope": "Used for all NFG-related services: Miro, SharePoint, Teams, Atlassian, Azure DevOps, Databricks",
     "confirmed": true,
-    "source": "user confirmation",
-    "$note": "Exact email TBD — user confirmed 'OncoHealth email' is the one used inside this project"
+    "source": "user confirmation"
   },
 
   "tech_stack": {
@@ -125,16 +125,34 @@
     "completed": [
       "OncoHealth account created",
       "Teams access (OncoHealth_NewFire)",
-      "SharePoint access"
+      "SharePoint access (confirmed by user, but SSO/Okta 2FA blocks automated scraping)"
     ],
     "pending": [
-      "Azure DevOps access",
+      "Azure DevOps access (SSO login required — dev.azure.com/oncologyanalytics/newUM)",
       "Databricks access (email devopsrequest@oncologyanalytics.com)",
       "Database access (email devopsrequest@oncologyanalytics.com)",
-      "Miro board access (contact Rachel Collier)"
+      "Miro board access (contact Rachel Collier)",
+      "Atlassian/Confluence access (SSO login required)"
     ],
+    "access_inventory": {
+      "scan_date": "2026-03-18",
+      "results": [
+        { "resource": "Google Doc (main onboarding)", "status": "ACCESS_DENIED", "action": "Access request sent from carlos.carrillo@newfireglobal.com" },
+        { "resource": "Google Doc (design template)", "status": "ACCESS_DENIED", "action": "Access request sent" },
+        { "resource": "Miro newUM board", "status": "NO_CONTENT", "action": "Need OncoHealth email access in Miro" },
+        { "resource": "Miro Rachel board", "status": "PRIVATE", "action": "Contact Rachel Collier to grant access" },
+        { "resource": "Azure DevOps", "status": "SSO_BLOCKED", "action": "Manual login with OncoHealth SSO + Okta 2FA required" },
+        { "resource": "Atlassian Confluence", "status": "LOGIN_WALL", "action": "Manual login with OncoHealth SSO required" },
+        { "resource": "SharePoint RAID xlsx", "status": "SSO_BLOCKED", "action": "Manual login with OncoHealth SSO + Okta 2FA required" },
+        { "resource": "SharePoint Change Request", "status": "SSO_BLOCKED", "action": "Manual login with OncoHealth SSO + Okta 2FA required" },
+        { "resource": "Databricks dev", "status": "LOGIN_WALL", "action": "Manual login with Okta Verify 2FA required" }
+      ],
+      "accessible": 0,
+      "blocked": 9,
+      "note": "All resources require SSO/Okta 2FA which cannot be automated. Manual login needed."
+    },
     "confirmed": true,
-    "source": "user confirmation"
+    "source": "user confirmation + automated scan 2026-03-18"
   },
 
   "onboarding_documents": {
