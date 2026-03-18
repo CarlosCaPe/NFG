@@ -1,214 +1,173 @@
 {
-  "_meta": {
-    "schema_version": "1.0.0",
-    "created": "2026-03-18",
-    "last_updated": "2026-03-18",
-    "purpose": "Client identity file for the NFG/newUM project. Every fact here is confirmed by the user or vendor. Unconfirmed items live in the 'unknowns' array.",
-    "confirmation_model": {
-      "confirmed_user": "Stated explicitly in the onboarding message shared by Carlos Carrillo",
-      "confirmed_vendor": "Stated in vendor documentation or official links",
-      "needs_confirmation": "Present in this file under 'unknowns' — not used as fact until confirmed"
-    },
-    "4D_classification": {
-      "Describe":  "All facts are labeled with their source and category.",
-      "Delegate":  "Facts grouped by domain: identity, team, environments, databases, tools, documents, policies.",
-      "Diligent":  "No invented data. Every value traces to its source. Unknowns are explicit.",
-      "Disclose":  "The 'unknowns' array discloses every gap. Nothing assumed silently."
-    }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
+  "version": "1.0.0",
+  "last_updated": "2026-03-18",
+  "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
+
+  "identity": {
+    "project_name": "newUM",
+    "project_full_name": "New Utilization Management",
+    "repo_name": "NFG",
+    "confirmed": true,
+    "source": "onboarding doc + user confirmation"
   },
 
-  "client": {
-    "_source": "confirmed_user",
-    "name": "NewFire Global Partners",
-    "short_name": "NFG",
-    "contract_vehicle": "dataqbs",
+  "contracting_chain": {
+    "your_company": {
+      "name": "dataqbs",
+      "role": "contractor"
+    },
+    "staffing_partner": {
+      "name": "NewFire Global Partners",
+      "alias": "NFG",
+      "role": "staffing / consulting partner"
+    },
     "end_client": {
       "name": "OncoHealth",
-      "legal_name": "Oncology Analytics Inc.",
-      "sharepoint_site": "https://oncologyanalytics.sharepoint.com/sites/OncoHealth_NewFire",
-      "teams_channel": "OncoHealth_NewFire"
-    }
+      "legal_name": "Oncology Analytics Inc",
+      "domain": "healthcare / oncology",
+      "role": "end client"
+    },
+    "chain": "dataqbs → NFG → OncoHealth",
+    "confirmed": true,
+    "source": "CLAUDE.md + user confirmation"
   },
 
-  "project": {
-    "_source": "confirmed_user",
-    "name": "newUM",
-    "description": "Utilization management system for OncoHealth. Full description in the onboarding Google Doc (requires OncoHealth account).",
-    "status": "active",
-    "azure_devops": {
-      "org": "oncologyanalytics",
-      "project": "newUM",
-      "url": "https://dev.azure.com/oncologyanalytics/newUM"
-    },
-    "confluence": {
-      "space": "NewUM",
-      "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM"
-    },
-    "sprint_planning_url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM"
+  "your_role": {
+    "title": "AI-Leveraged Documenter",
+    "description": "Project documentation and specs, automated via Python/Node. Builds tooling to capture, process, and maintain project docs using AI.",
+    "scope": "specs, meeting notes, decisions, onboarding, any documentation task imaginable",
+    "tools": ["Python", "Node.js", "VS Code", "Copilot", "Claude"],
+    "confirmed": true,
+    "source": "user confirmation"
   },
 
-  "team": {
-    "_source": "confirmed_user",
-    "contacts": [
-      {
-        "name": "Rachel Collier",
-        "handle": "@Rachel Collier",
-        "role": "OncoHealth access coordinator",
-        "responsibilities": [
-          "Grant OncoHealth account",
-          "Grant access to OncoHealth_NewFire Teams",
-          "Grant access to OncoHealth_NewFire SharePoint",
-          "Grant access to NewUM Miro board"
-        ]
-      }
-    ],
-    "devops_requests_email": "devopsrequest@oncologyanalytics.com",
-    "devops_requests_email_note": "Use your OncoHealth email to request Databricks and database access. Include your role and the specific resource needed."
+  "email_identity": {
+    "primary": "OncoHealth email (carlos.carrillo@oncologyanalytics.com or similar)",
+    "confirmed": true,
+    "source": "user confirmation",
+    "$note": "Exact email TBD — user confirmed 'OncoHealth email' is the one used inside this project"
+  },
+
+  "tech_stack": {
+    "languages": [".NET/C#", "Python", "Databricks (PySpark/SQL)"],
+    "mix": true,
+    "confirmed": true,
+    "source": "user confirmation"
   },
 
   "environments": {
-    "_source": "confirmed_user",
-    "databricks": [
-      {
-        "name": "oh-databricks-ws-dev",
-        "env": "dev",
-        "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
-        "access": "request via devopsrequest@oncologyanalytics.com"
-      },
-      {
-        "name": "oh-databricks-ws-test",
-        "env": "test",
-        "url": null,
-        "_note": "URL not provided in onboarding — needs confirmation"
-      },
-      {
-        "name": "oh-databricks-ws-uat",
-        "env": "uat",
-        "url": null,
-        "_note": "URL not provided in onboarding — needs confirmation"
-      },
-      {
-        "name": "oh-databricks-ws-prod",
-        "env": "prod",
-        "url": null,
-        "_note": "URL not provided in onboarding — needs confirmation"
-      }
-    ]
-  },
-
-  "databases": {
-    "_source": "confirmed_user",
-    "_engine_note": "Database engine not specified in onboarding — assumed Databricks/Delta Lake but needs confirmation",
-    "known_databases": [
-      { "name": "oadb",          "description": null },
-      { "name": "DrugsMS",       "description": "Drugs microservice database" },
-      { "name": "EligibilityMS", "description": "Eligibility microservice database" },
-      { "name": "ProviderMS",    "description": "Provider microservice database" }
-    ],
-    "querymaster_connections": "Not yet configured. Add to ~/.config/querymaster/connections.json once access is granted."
-  },
-
-  "tools": {
-    "_source": "confirmed_user",
-    "mandatory": ["Microsoft Teams", "Slack"],
-    "collaboration": {
-      "miro_boards": [
+    "azure_devops": {
+      "url": "https://dev.azure.com/oncologyanalytics/newUM",
+      "confirmed": true,
+      "source": "onboarding doc"
+    },
+    "atlassian": {
+      "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM",
+      "confirmed": true,
+      "source": "onboarding doc"
+    },
+    "databricks": {
+      "workspaces": [
         {
-          "name": "NewUM (main)",
-          "url": "https://miro.com/app/board/uXjVGVycF3Y=",
-          "access": "OncoHealth email required"
+          "name": "oh-databricks-ws-dev",
+          "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
+          "env": "dev"
         },
-        {
-          "name": "NewUM Miro (Rachel Collier board)",
-          "url": "https://miro.com/app/board/uXjVJUOanb0=/?moveToWidget=3458764651332971013&cot=14",
-          "access": "Request from @Rachel Collier"
-        }
-      ]
+        { "name": "oh-databricks-ws-test", "url": null, "env": "test" },
+        { "name": "oh-databricks-ws-uat", "url": null, "env": "uat" },
+        { "name": "oh-databricks-ws-prod", "url": null, "env": "prod" }
+      ],
+      "confirmed": true,
+      "source": "onboarding doc"
     },
-    "design_doc_template": "https://docs.google.com/document/d/19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno/edit?usp=sharing"
+    "databases": [
+      { "name": "oadb", "engine": "unknown", "purpose": "unknown" },
+      { "name": "DrugsMS", "engine": "unknown", "purpose": "drugs microservice DB" },
+      { "name": "EligibilityMS", "engine": "unknown", "purpose": "eligibility microservice DB" },
+      { "name": "ProviderMS", "engine": "unknown", "purpose": "provider microservice DB" }
+    ],
+    "databases_confirmed": true,
+    "databases_source": "onboarding doc",
+    "databases_unknowns": ["engine type (SQL Server? Postgres? Databricks?)", "connection strings", "schemas"]
   },
 
-  "documents": {
-    "_source": "confirmed_user",
-    "onboarding_guide": {
-      "url": "https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0#heading=h.uz9wsnxboxb6",
-      "access": "OncoHealth Google account required"
+  "communication": {
+    "channels": [
+      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true },
+      { "tool": "Slack", "space": "Newfire Global Partners", "confirmed": true },
+      { "tool": "SharePoint", "site": "OncoHealth_NewFire", "confirmed": true },
+      { "tool": "Miro", "boards": [
+        "https://miro.com/app/board/uXjVGVycF3Y=/",
+        "https://miro.com/app/board/uXjVJUOanb0=/?moveToWidget=3458764651332971013&cot=14"
+      ], "confirmed": true }
+    ],
+    "source": "onboarding doc"
+  },
+
+  "key_contacts": [
+    {
+      "name": "Rachel Collier",
+      "role": "onboarding coordinator / access manager",
+      "confirmed": true,
+      "source": "onboarding doc"
     },
-    "project_management": {
-      "raid": {
-        "url": "https://oncologyanalytics.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx",
-        "description": "RAID — Risks, Assumptions, Issues, Dependencies"
-      },
-      "scope_change_request": {
-        "url": "https://oncologyanalytics.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx"
-      }
+    {
+      "name": "Erik",
+      "role": "unknown — team member or manager",
+      "confirmed": false,
+      "source": "user chat message (partial context)"
+    }
+  ],
+
+  "access_status": {
+    "completed": [
+      "OncoHealth account created",
+      "Teams access (OncoHealth_NewFire)",
+      "SharePoint access"
+    ],
+    "pending": [
+      "Azure DevOps access",
+      "Databricks access (email devopsrequest@oncologyanalytics.com)",
+      "Database access (email devopsrequest@oncologyanalytics.com)",
+      "Miro board access (contact Rachel Collier)"
+    ],
+    "confirmed": true,
+    "source": "user confirmation"
+  },
+
+  "onboarding_documents": {
+    "main_doc": "https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0#heading=h.uz9wsnxboxb6",
+    "raid_risk": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx",
+    "scope_change": "https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx",
+    "design_doc_template": "https://docs.google.com/document/d/19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno/edit?usp=sharing",
+    "devops_email": "devopsrequest@oncologyanalytics.com",
+    "policies": {
+      "secure_development": "link TBD (not provided in onboarding doc)",
+      "cryptography": "link TBD",
+      "data_management": "link TBD",
+      "branching_strategy": "link TBD"
     },
     "assessments": [
-      { "name": "OncoHealth Assessment - Final",                "date": null,         "format": "PDF" },
-      { "name": "OncoHealth Interim Assessment",                "date": "2025-12-09", "format": "PDF" },
-      { "name": "OncoHealth Second Interim Assessment",         "date": "2026-01-10", "format": "PDF" }
-    ]
+      "OncoHealth Assessment - Final.pdf",
+      "OncoHealth Interim Assessment - 12-09-2025.pdf",
+      "OncoHealth Second Interim Assessment - 01-10-2025.pdf"
+    ],
+    "confirmed": true,
+    "source": "onboarding doc"
   },
 
-  "policies": {
-    "_source": "confirmed_user",
-    "_note": "Links exist in the onboarding doc but require OncoHealth account to access. Content not yet ingested.",
-    "known_policies": [
-      { "name": "Secure development policy",  "content_ingested": false },
-      { "name": "Cryptography policy",        "content_ingested": false },
-      { "name": "Data management policy",     "content_ingested": false },
-      { "name": "Branching strategy",         "content_ingested": false }
+  "unknowns": {
+    "$comment": "Items that need vendor or user confirmation before they can be used.",
+    "items": [
+      { "id": "U1", "question": "What database engine do oadb/DrugsMS/EligibilityMS/ProviderMS use?", "options": ["SQL Server", "PostgreSQL", "Databricks SQL", "other"], "status": "unresolved" },
+      { "id": "U2", "question": "What are the exact URLs for oh-databricks-ws-test/uat/prod?", "status": "unresolved" },
+      { "id": "U3", "question": "What are the policy doc links (secure dev, crypto, data mgmt, branching)?", "status": "unresolved" },
+      { "id": "U4", "question": "What is Erik's full name and role?", "status": "unresolved" },
+      { "id": "U5", "question": "What is your exact OncoHealth email address?", "status": "unresolved" },
+      { "id": "U6", "question": "Which Databricks workspace do you need first (dev)?", "status": "unresolved" },
+      { "id": "U7", "question": "Is the newUM codebase in Azure DevOps repos or GitHub?", "status": "unresolved" }
     ]
-  },
-
-  "unknowns": [
-    {
-      "id": "U-01",
-      "topic": "Tech stack",
-      "question": "What language(s) and frameworks are used in newUM? (e.g. Python, .NET, React?)",
-      "blocked_by": "Google Doc / onboarding doc not accessible"
-    },
-    {
-      "id": "U-02",
-      "topic": "Database engine",
-      "question": "What engine powers oadb, DrugsMS, EligibilityMS, ProviderMS? (Databricks Delta Lake? SQL Server? PostgreSQL?)",
-      "blocked_by": "Not stated in the onboarding message"
-    },
-    {
-      "id": "U-03",
-      "topic": "Databricks test/uat/prod URLs",
-      "question": "What are the workspace URLs for oh-databricks-ws-test, oh-databricks-ws-uat, oh-databricks-ws-prod?",
-      "blocked_by": "Not provided in onboarding message"
-    },
-    {
-      "id": "U-04",
-      "topic": "Security policy content",
-      "question": "Can you share the content (or export) of: Secure development policy, Cryptography policy, Data management policy, Branching strategy?",
-      "blocked_by": "Links require OncoHealth account login"
-    },
-    {
-      "id": "U-05",
-      "topic": "Onboarding Google Doc full content",
-      "question": "Full content of https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew. Can you paste relevant sections or grant public read access?",
-      "blocked_by": "Requires Google account authentication"
-    },
-    {
-      "id": "U-06",
-      "topic": "My role in newUM",
-      "question": "What is Carlos Carrillo's specific role in this project? (e.g. Backend engineer, Data engineer, Architect?)",
-      "blocked_by": "Not stated in onboarding message"
-    },
-    {
-      "id": "U-07",
-      "topic": "Repository structure",
-      "question": "Is there a code repository? What is the Azure DevOps repo name / Git URL?",
-      "blocked_by": "Not provided — requires Azure DevOps access"
-    },
-    {
-      "id": "U-08",
-      "topic": "QueryMaster connections",
-      "question": "Once Databricks access is granted, what credentials/tokens should be registered in QueryMaster?",
-      "blocked_by": "Pending devopsrequest@oncologyanalytics.com response"
-    }
-  ]
+  }
 }
