@@ -1,0 +1,14 @@
+URL: https://adb-2393860672770324.4.azuredatabricks.net/
+Date: 2026-03-18T22:33:20.385Z
+Type: databricks
+
+---
+
+Okta Verify (SM-S918B)
+Or enter code
+Send push automatically
+Do not challenge me on this device for the next 15 minutes
+Sign Out
+Connecting to 
+
+Sign in with your account to access Microsoft Office 365

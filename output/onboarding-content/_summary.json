@@ -1,0 +1,56 @@
+[
+  {
+    "name": "01-main-onboarding-doc",
+    "url": "https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0",
+    "chars": 233,
+    "status": "ok"
+  },
+  {
+    "name": "02-design-doc-template",
+    "url": "https://docs.google.com/document/d/19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno/edit?usp=sharing",
+    "chars": 83,
+    "status": "ok"
+  },
+  {
+    "name": "03-miro-newum-board",
+    "url": "https://miro.com/app/board/uXjVGVycF3Y=/",
+    "chars": 21,
+    "status": "ok"
+  },
+  {
+    "name": "04-miro-rachel-board",
+    "url": "https://miro.com/app/board/uXjVJUOanb0=/?moveToWidget=3458764651332971013&cot=14",
+    "chars": 185,
+    "status": "ok"
+  },
+  {
+    "name": "05-azure-devops-newum",
+    "url": "https://dev.azure.com/oncologyanalytics/newUM",
+    "chars": 114,
+    "status": "ok"
+  },
+  {
+    "name": "06-atlassian-sprint-planning",
+    "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM",
+    "chars": 114,
+    "status": "ok"
+  },
+  {
+    "name": "07-sharepoint-raid",
+    "url": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx?d=w2dea0b03cf3c4e6ab0213a70c77834bf&csf=1&web=1&e=34bSYZ",
+    "chars": 206,
+    "status": "ok"
+  },
+  {
+    "name": "08-sharepoint-change-request",
+    "url": "https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx?d=w490ff8ed484b4e358d8669d9ea4360ec&csf=1&web=1&e=cvAcbB",
+    "chars": 114,
+    "status": "ok"
+  },
+  {
+    "name": "09-databricks-dev",
+    "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
+    "chars": 201,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,6 @@
+node_modules/
+output/.browser-profile/
+.env
+.env.*
+.dev.vars
+*.log
