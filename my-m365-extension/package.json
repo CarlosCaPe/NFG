@@ -1,0 +1,61 @@
+{
+  "name": "m365-calendar-transcripts",
+  "displayName": "M365 Calendar & Transcripts",
+  "description": "Shows your Outlook Calendar and lets you fetch Teams meeting transcripts inside VS Code.",
+  "version": "1.0.0",
+  "publisher": "carloscarrillo",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "m365Sidebar",
+          "name": "M365 Calendar",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "m365.refresh",
+        "title": "M365: Refresh Calendar"
+      },
+      {
+        "command": "m365.login",
+        "title": "M365: Login"
+      }
+    ],
+    "configuration": {
+      "title": "M365 Calendar & Transcripts",
+      "properties": {
+        "m365.clientId": {
+          "type": "string",
+          "default": "",
+          "description": "Your Azure AD App (client) ID."
+        },
+        "m365.tenantId": {
+          "type": "string",
+          "default": "common",
+          "description": "Your Azure AD Tenant ID (or 'common' for multi-tenant)."
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^3.0.2",
+    "@azure/identity": "^4.1.0",
+    "isomorphic-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint"
+  }
+}
