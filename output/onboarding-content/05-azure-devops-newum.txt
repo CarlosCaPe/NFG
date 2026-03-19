@@ -1,12 +1,23 @@
-URL: https://dev.azure.com/oncologyanalytics/newUM
-Date: 2026-03-18T22:31:53.841Z
-Type: azure
+﻿Azure DevOps - newUM Project
+Source: https://dev.azure.com/oncologyanalytics/newUM
+Auth: Okta SSO - MFA approved - Connected as CC (Carlos Carrillo)
 
----
+=== NAVIGATION ===
+Project: oncologyanalytics / newUM
+Sections:
+- Overview (Summary, Dashboards)
+- Wiki (SELECTED - You don't have access)
+- SpecFlow+ LivingDoc
+- Boards
+- Pipelines
+- Artifacts
+- Project settings
 
-Sign In
-Remember me
-Need help signing in?
-Connecting to 
+=== CONTENT ===
+Banner: Important Reminder: No PHI Allowed in ADO
+Wiki access: DENIED
+User: CC (Carlos Carrillo) - authenticated
 
-Sign in with your account to access Microsoft Office 365
+=== STATUS ===
+Connection: SUCCESS
+Content: PARTIAL - wiki access denied, need permissions

@@ -1,0 +1,37 @@
+[
+  {
+    "idx": 5,
+    "name": "05-azure-devops-newum",
+    "desc": "Azure DevOps",
+    "authed": true,
+    "chars": 461
+  },
+  {
+    "idx": 6,
+    "name": "06-atlassian-sprint-planning",
+    "desc": "Atlassian Confluence",
+    "authed": false,
+    "chars": 725
+  },
+  {
+    "idx": 7,
+    "name": "07-sharepoint-raid",
+    "desc": "SharePoint RAID",
+    "authed": false,
+    "chars": 881
+  },
+  {
+    "idx": 8,
+    "name": "08-sharepoint-change-request",
+    "desc": "SharePoint CR",
+    "authed": false,
+    "chars": 891
+  },
+  {
+    "idx": 9,
+    "name": "09-databricks-dev",
+    "desc": "Databricks Dev",
+    "authed": false,
+    "chars": 230
+  }
+]

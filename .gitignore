@@ -4,3 +4,5 @@ output/.browser-profile/
 .env.*
 .dev.vars
 *.log
+
+.graph-token.json

@@ -1,0 +1,22 @@
+2026/03/19-15:33:16.958 60fc Reusing MANIFEST C:\Users\CARLOS CARRILLO\git\NFG\.playwright-session-okta\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/19-15:33:16.964 60fc Recovering log #12
+2026/03/19-15:33:16.964 60fc Level-0 table #15: started
+2026/03/19-15:33:16.973 60fc Level-0 table #15: 78424 bytes OK
+2026/03/19-15:33:16.973 60fc Recovering log #15
+2026/03/19-15:33:16.974 60fc Level-0 table #16: started
+2026/03/19-15:33:16.982 60fc Level-0 table #16: 46495 bytes OK
+2026/03/19-15:33:16.990 60fc Delete type=0 #12
+2026/03/19-15:33:16.991 60fc Delete type=0 #15
+2026/03/19-15:33:16.995 5c14 Compacting 5@0 + 1@1 files
+2026/03/19-15:33:17.014 5c14 Generated table #18@0: 239 keys, 429773 bytes
+2026/03/19-15:33:17.014 5c14 Compacted 5@0 + 1@1 files => 429773 bytes
+2026/03/19-15:33:17.016 5c14 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/03/19-15:33:17.017 5c14 Delete type=2 #7
+2026/03/19-15:33:17.017 5c14 Delete type=2 #9
+2026/03/19-15:33:17.017 5c14 Delete type=2 #11
+2026/03/19-15:33:17.017 5c14 Delete type=2 #13
+2026/03/19-15:33:17.018 5c14 Delete type=2 #15
+2026/03/19-15:33:17.018 5c14 Delete type=2 #16
+2026/03/19-15:34:17.022 5c14 Level-0 table #20: started
+2026/03/19-15:34:17.032 5c14 Level-0 table #20: 169126 bytes OK
+2026/03/19-15:34:17.033 5c14 Delete type=0 #17

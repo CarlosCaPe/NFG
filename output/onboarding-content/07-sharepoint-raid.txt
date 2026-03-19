@@ -1,15 +1,41 @@
-URL: https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx?d=w2dea0b03cf3c4e6ab0213a70c77834bf&csf=1&web=1&e=34bSYZ
-Date: 2026-03-18T22:32:48.937Z
-Type: sharepoint
+﻿SharePoint RAID - NewUM_RAID.xlsx
+Source: SharePoint Online (OncoHealth_NewFire)
+Auth: Okta SSO cookies (reused from Azure DevOps session)
+Captured: GPT-4o vision analysis of Excel Online screenshot
 
----
+=== DOCUMENT INFO ===
+File: NewUM_RAID.xlsx
+Sheets: Sign-Offs, RAID Template (active), Definitions
+Editing: Yes (user has edit access)
 
-Sign In
-Remember me
-Need help signing in?
-Connecting to 
+=== RAID TEMPLATE COLUMNS ===
+1. Item (sequential number)
+2. RAID Category
+3. Description
+4. Risk Owner
+5. Probability (P)
+6. Impact (I)
+7. Risk Score (P x I)
+8. Current Status
+9. Mitigation Strategy
+10. Risk Response
 
-Sign in with your account to access Microsoft Office 365
+=== VISIBLE DATA ===
+Row 33:
+- Item: 33
+- Category: Decision
+- Description: Geisinger selected as first client for NewUM. Test automation architecture and technology stack for both API and UI automation, shared on 3/11, does not clearly demonstrate alignment with OncoHealth expectations for a simple, maintainable, and supportable framework. OncoHealth is seeking a streamlined approach for API and UI automation that aligns with proven patterns and supports long-term sustainability, scalability, and ease of adoption across teams.
+- Probability: 0, Impact: 0, Score: 0
+- Status: On Hold
 
-This is the first time you are connecting to sso.oncologyanalytics.com from this browser
-×
+Row 36:
+- Item: 35
+- Description: Configuration rework will potentially push the schedule out.
+- Risk Owner: Erik Hjortshoj
+- Probability: 4, Impact: 5, Score: 20
+- Status: In Progress
+
+=== STATUS ===
+Connection: SUCCESS
+Content: PARTIAL (only 2 visible rows from screenshot, full download needed)
+Toolbar: Copilot add-in visible

@@ -1,0 +1,47 @@
+[
+  {
+    "idx": 5,
+    "name": "05-azure-devops-newum",
+    "url": "https://dev.azure.com/oncologyanalytics/newUM",
+    "type": "azure-devops",
+    "description": "Azure DevOps — newUM project",
+    "status": "PARTIAL",
+    "chars": 323
+  },
+  {
+    "idx": 6,
+    "name": "06-atlassian-sprint-planning",
+    "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM",
+    "type": "atlassian",
+    "description": "Atlassian Confluence — Sprint Planning",
+    "status": "OK",
+    "chars": 672
+  },
+  {
+    "idx": 7,
+    "name": "07-sharepoint-raid",
+    "url": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx?d=w2dea0b03cf3c4e6ab0213a70c77834bf&csf=1&web=1&e=34bSYZ",
+    "type": "sharepoint",
+    "description": "SharePoint — RAID Log (Excel)",
+    "status": "PARTIAL",
+    "chars": 230
+  },
+  {
+    "idx": 8,
+    "name": "08-sharepoint-change-request",
+    "url": "https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx?d=w490ff8ed484b4e358d8669d9ea4360ec&csf=1&web=1&e=cvAcbB",
+    "type": "sharepoint",
+    "description": "SharePoint — Change Request (Word)",
+    "status": "PARTIAL",
+    "chars": 323
+  },
+  {
+    "idx": 9,
+    "name": "09-databricks-dev",
+    "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
+    "type": "databricks",
+    "description": "Databricks Dev Workspace",
+    "status": "OK",
+    "chars": 179
+  }
+]

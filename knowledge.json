@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "last_updated": "2026-03-19",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
@@ -45,9 +45,20 @@
 
   "email_identity": {
     "primary": "carlos.carrillo@newfireglobal.com",
-    "scope": "Used for all NFG-related services: Miro, SharePoint, Teams, Atlassian, Azure DevOps, Databricks",
+    "scope": "NFG identity — used for Miro, Google services",
+    "oncohealth_emails": [
+      "ccarrillo@oncologyanalytics.com",
+      "ccarrillo@oncohealth.us"
+    ],
+    "oncohealth_username": "ccarrillo",
+    "scope_onco": "Used for Azure DevOps, SharePoint, Teams, Databricks, Atlassian — auth via Okta SSO at sso.oncologyanalytics.com",
+    "vpc": {
+      "name": "CPC-ccarr-RY8W8",
+      "url": "https://windows365.microsoft.com",
+      "app": "Windows App (VDI)"
+    },
     "confirmed": true,
-    "source": "user confirmation"
+    "source": "user confirmation + VPC provisioning email"
   },
 
   "tech_stack": {
@@ -98,7 +109,7 @@
 
   "communication": {
     "channels": [
-      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true },
+      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true, "channels": ["Clinical Scheduling", "General", "NewUM", "CRS/CRR Scheduling", "IT Helpdesk Scheduling"], "active_chats": ["Eligibility - Person/Member workshop", "Data team - daily", "Payer taxonomy workshop", "Databricks Lakeflow Connect", "Provider Discussion", "Erik and Michal", "Eligibility workshop", "Claude workshop - how to boost our work performance"], "captured_chars": 97297 },
       { "tool": "Slack", "space": "Newfire Global Partners", "confirmed": true },
       { "tool": "SharePoint", "site": "OncoHealth_NewFire", "confirmed": true },
       { "tool": "Miro", "boards": [
@@ -114,21 +125,71 @@
       "name": "Rachel Collier",
       "role": "onboarding coordinator / access manager",
       "confirmed": true,
-      "source": "onboarding doc"
+      "source": "onboarding doc + Miro board owner"
     },
     {
-      "name": "Erik",
-      "role": "unknown — team member or manager",
-      "confirmed": false,
-      "source": "user chat message (partial context)"
+      "name": "Erik Hjortshoj",
+      "role": "SVP Engineering / Consulting CPTO",
+      "confirmed": true,
+      "source": "onboarding doc + Teams chat + RAID log (risk owner)"
+    },
+    {
+      "name": "Michal Mucha",
+      "role": "Data team lead — runs daily standups, eligibility/payer workshops, Databricks",
+      "confirmed": true,
+      "source": "Teams calendar + chat (organizer of Data team daily, Eligibility workshop, Payer taxonomy workshop, Databricks Lakeflow Connect)"
+    },
+    {
+      "name": "Vika Nobis",
+      "role": "Sprint planning / demo organizer",
+      "confirmed": true,
+      "source": "Teams calendar (Sprint Demo and Planning organizer)"
+    },
+    {
+      "name": "Arben Osmani",
+      "role": "Provider domain — leads Provider Discussion meetings",
+      "confirmed": true,
+      "source": "Teams calendar (Provider Discussion organizer)"
+    },
+    {
+      "name": "Neal Ruggles",
+      "role": "Team member (partial OOO noted)",
+      "confirmed": true,
+      "source": "Teams calendar"
+    },
+    {
+      "name": "Oleksandr Nykonenko",
+      "role": "Team member — attends eligibility workshops",
+      "confirmed": true,
+      "source": "Teams chat messages"
+    },
+    {
+      "name": "Cory Johnson",
+      "role": "Team member",
+      "confirmed": true,
+      "source": "Teams meeting invite"
+    },
+    {
+      "name": "Jack Hall",
+      "role": "Team member",
+      "confirmed": true,
+      "source": "Teams meeting invite"
+    },
+    {
+      "name": "Bernice Nyanjui",
+      "role": "Team member — eligibility domain",
+      "confirmed": true,
+      "source": "Teams meeting invite (Eligibility workshop)"
     }
   ],
 
   "access_status": {
     "completed": [
       "OncoHealth account created",
-      "Teams access (OncoHealth_NewFire)",
-      "SharePoint access (confirmed by user, but SSO/Okta 2FA blocks automated scraping)"
+      "Teams access (OncoHealth_NewFire) — 97K chars captured including meeting transcripts",
+      "Outlook Calendar — 11 events captured for week of March 16-19",
+      "SharePoint access (Okta SSO working, Excel/Word Online loaded)",
+      "Miro REST API (NFG-Reader app, 130K chars from NewUM board)"
     ],
     "pending": [
       "Azure DevOps access (SSO login required — dev.azure.com/oncologyanalytics/newUM)",
@@ -138,21 +199,23 @@
       "Atlassian/Confluence access (SSO login required)"
     ],
     "access_inventory": {
-      "scan_date": "2026-03-18",
+      "scan_date": "2026-03-19",
       "results": [
-        { "resource": "Google Doc (main onboarding)", "status": "ACCESS_DENIED", "action": "Access request sent from carlos.carrillo@newfireglobal.com" },
-        { "resource": "Google Doc (design template)", "status": "ACCESS_DENIED", "action": "Access request sent" },
-        { "resource": "Miro newUM board", "status": "NO_CONTENT", "action": "Need OncoHealth email access in Miro" },
-        { "resource": "Miro Rachel board", "status": "PRIVATE", "action": "Contact Rachel Collier to grant access" },
-        { "resource": "Azure DevOps", "status": "SSO_BLOCKED", "action": "Manual login with OncoHealth SSO + Okta 2FA required" },
-        { "resource": "Atlassian Confluence", "status": "LOGIN_WALL", "action": "Manual login with OncoHealth SSO required" },
-        { "resource": "SharePoint RAID xlsx", "status": "SSO_BLOCKED", "action": "Manual login with OncoHealth SSO + Okta 2FA required" },
-        { "resource": "SharePoint Change Request", "status": "SSO_BLOCKED", "action": "Manual login with OncoHealth SSO + Okta 2FA required" },
-        { "resource": "Databricks dev", "status": "LOGIN_WALL", "action": "Manual login with Okta Verify 2FA required" }
+        { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 44703, "method": "Google Docs export" },
+        { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 2797, "method": "Google Docs export" },
+        { "resource": "Miro newUM board", "status": "COMPLETE", "chars": 130902, "method": "Miro REST API", "items": 2503 },
+        { "resource": "Miro Rachel board", "status": "BLOCKED", "action": "403 Forbidden — private board, need Rachel's invitation" },
+        { "resource": "Azure DevOps", "status": "PARTIAL", "method": "Playwright + Okta SSO + MFA", "note": "Auth works. Wiki access denied. Boards/Pipelines available." },
+        { "resource": "Atlassian Confluence", "status": "BLOCKED", "note": "Separate SSO from Okta — needs Atlassian-specific credentials" },
+        { "resource": "SharePoint RAID xlsx", "status": "PARTIAL", "method": "Playwright + Okta SSO + GPT-4o vision", "note": "Excel Online loaded. 2 RAID rows extracted via screenshot." },
+        { "resource": "SharePoint Change Request", "status": "PARTIAL", "method": "Playwright + Okta SSO + GPT-4o vision", "note": "Word Online loaded. Template doc (Rev 1/20/2026) captured." },
+        { "resource": "Databricks dev", "status": "BLOCKED", "note": "Login page — need 'Continue with Entra ID' click. May need admin provisioning." }
       ],
-      "accessible": 0,
-      "blocked": 9,
-      "note": "All resources require SSO/Okta 2FA which cannot be automated. Manual login needed."
+      "accessible": 3,
+      "partial": 3,
+      "blocked": 3,
+      "total_chars": 183467,
+      "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
     },
     "confirmed": true,
     "source": "user confirmation + automated scan 2026-03-18"

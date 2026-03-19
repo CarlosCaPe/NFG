@@ -1,74 +1,66 @@
-[
-  {
-    "name": "01-main-onboarding-doc",
-    "url": "https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0",
-    "type": "google-doc",
-    "access": "YES",
-    "status": "OK",
-    "chars": 2317
-  },
-  {
-    "name": "02-design-doc-template",
-    "url": "https://docs.google.com/document/d/19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno/edit?usp=sharing",
-    "type": "google-doc",
-    "access": "YES",
-    "status": "OK",
-    "chars": 1977
-  },
-  {
-    "name": "03-miro-newum-board",
-    "url": "https://miro.com/app/board/uXjVGVycF3Y=/",
-    "type": "miro",
-    "access": "NO",
-    "status": "NO_CONTENT",
-    "chars": 12
-  },
-  {
-    "name": "04-miro-rachel-board",
-    "url": "https://miro.com/app/board/uXjVJUOanb0=/?moveToWidget=3458764651332971013&cot=14",
-    "type": "miro",
-    "access": "NO",
-    "status": "NO_ACCESS_DENIED",
-    "chars": 186
-  },
-  {
-    "name": "05-azure-devops-newum",
-    "url": "https://dev.azure.com/oncologyanalytics/newUM",
-    "type": "azure",
-    "access": "NO",
-    "status": "NO_ACCESS_LOGIN_WALL",
-    "chars": 108
-  },
-  {
-    "name": "06-atlassian-sprint-planning",
-    "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM",
-    "type": "atlassian",
-    "access": "NO",
-    "status": "NO_ACCESS_LOGIN_WALL",
-    "chars": 296
-  },
-  {
-    "name": "07-sharepoint-raid",
-    "url": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx?d=w2dea0b03cf3c4e6ab0213a70c77834bf&csf=1&web=1&e=34bSYZ",
-    "type": "sharepoint",
-    "access": "NO",
-    "status": "NO_ACCESS_LOGIN_WALL",
-    "chars": 0
-  },
-  {
-    "name": "08-sharepoint-change-request",
-    "url": "https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx?d=w490ff8ed484b4e358d8669d9ea4360ec&csf=1&web=1&e=cvAcbB",
-    "type": "sharepoint",
-    "access": "NO",
-    "status": "NO_ACCESS_LOGIN_WALL",
-    "chars": 0
-  },
-  {
-    "name": "09-databricks-dev",
-    "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
-    "type": "databricks",
-    "access": "NO",
-    "status": "NO_ACCESS_LOGIN_WALL",
-    "chars": 108
-  }
-]
+﻿{
+    "summary":  {
+                    "partially_captured":  3,
+                    "fully_captured":  3,
+                    "auth_blocked":  3,
+                    "total_chars":  183355,
+                    "total":  9
+                },
+    "generated":  "2026-03-19T14:45:14Z",
+    "services":  [
+                     {
+                         "idx":  1,
+                         "name":  "01-main-onboarding-doc",
+                         "status":  "COMPLETE",
+                         "chars":  44610
+                     },
+                     {
+                         "idx":  2,
+                         "name":  "02-design-doc-template",
+                         "status":  "COMPLETE",
+                         "chars":  2790
+                     },
+                     {
+                         "idx":  3,
+                         "name":  "03-miro-newum-board",
+                         "status":  "COMPLETE",
+                         "chars":  130902
+                     },
+                     {
+                         "idx":  4,
+                         "name":  "04-miro-rachel-board",
+                         "status":  "BLOCKED",
+                         "chars":  223
+                     },
+                     {
+                         "idx":  5,
+                         "name":  "05-azure-devops-newum",
+                         "status":  "PARTIAL",
+                         "chars":  586
+                     },
+                     {
+                         "idx":  6,
+                         "name":  "06-atlassian-sprint-planning",
+                         "status":  "BLOCKED",
+                         "chars":  739
+                     },
+                     {
+                         "idx":  7,
+                         "name":  "07-sharepoint-raid",
+                         "status":  "PARTIAL",
+                         "chars":  1477
+                     },
+                     {
+                         "idx":  8,
+                         "name":  "08-sharepoint-change-request",
+                         "status":  "PARTIAL",
+                         "chars":  1282
+                     },
+                     {
+                         "idx":  9,
+                         "name":  "09-databricks-dev",
+                         "status":  "BLOCKED",
+                         "chars":  746
+                     }
+                 ]
+}

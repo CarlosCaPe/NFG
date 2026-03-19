@@ -1,14 +1,16 @@
-URL: https://adb-2393860672770324.4.azuredatabricks.net/
-Date: 2026-03-18T22:33:20.385Z
-Type: databricks
+﻿Databricks Dev - Azure Databricks
+Source: https://adb-2393860672770324.4.azuredatabricks.net/
+Auth: NOT CONNECTED (login page)
 
----
+=== LOGIN PAGE ===
+Title: Azure Databricks - Log in
+Button: Continue with Microsoft Entra ID (with Microsoft logo)
+Error: Reference ID: 055e9c2e-66dc-4e70-844b-1f70b3c16363
+Message: Contact your site administrator to request access.
+Footer: Privacy Notice, Terms of Use
 
-Okta Verify (SM-S918B)
-Or enter code
-Send push automatically
-Do not challenge me on this device for the next 15 minutes
-Sign Out
-Connecting to 
-
-Sign in with your account to access Microsoft Office 365
+=== STATUS ===
+Connection: FAILED
+Root cause: Script did not click the 'Continue with Microsoft Entra ID' button
+Note: The 'Contact your site administrator to request access' message may indicate access has not been provisioned for this account
+Action needed: (1) Click Entra ID button to trigger SSO, or (2) Request Databricks access from admin

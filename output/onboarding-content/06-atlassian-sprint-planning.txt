@@ -1,12 +1,30 @@
-URL: https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM
-Date: 2026-03-18T22:32:34.909Z
-Type: atlassian
-
----
-
-Sign In
+Log in to continue
+Email*
+Edit email
+Password*
+Show password
+Enter your password
 Remember me
-Need help signing in?
-Connecting to 
+Log in
+Passkey
+Google
+Microsoft
+Apple
+Slack
+Can't log in?
+•
+Create an account
+One account for Confluence, Jira, Trello and more﻿.
+Privacy Policy﻿
+•
+User Notice﻿
+This site is protected by reCAPTCHA and the Google Privacy Policy﻿ and Terms of Service﻿ apply.
 
-Sign in with your account to access Microsoft Office 365
+
+=== META ===
+Title: Log in to continue - Log in with Atlassian account
+viewport: width=device-width, initial-scale=1
+description: Log in to Jira, Confluence, and all other Atlassian Cloud products here. Not an Atlassian user? Sign up for free.
+google-site-verification: HNNnCkeVQ-w56fqPpX2TTEMRmta5QJ-bDunwoaUep-o
+apple-itunes-app: app-id=1006971684
+slack-app-id: AC23SDS77

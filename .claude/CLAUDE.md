@@ -23,6 +23,27 @@ NewFire Global client project. Operates as a dataqbs contract (under dataqbs umb
 - **Atlassian**: https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM
 - **Databases**: oadb, DrugsMS, EligibilityMS, ProviderMS — all **MS-SQL**
 - **Comms**: Teams (OncoHealth_NewFire), Slack (NFG), SharePoint, Miro
+- **VPC**: CPC-ccarr-RY8W8 via https://windows365.microsoft.com (Windows App VDI)
+
+## Connected Services & Automation
+| Service | Auth Method | Status | Script |
+|---------|-------------|--------|--------|
+| Google Docs | Public link | COMPLETE | `scrape-gdoc-export.js` |
+| Miro | REST API (NFG-Reader app) | COMPLETE (NewUM), BLOCKED (Rachel) | `miro-api.js` |
+| Azure DevOps | Okta SSO + MFA | PARTIAL (wiki denied) | `scrape-okta-auto.js` |
+| SharePoint | Okta SSO (reused) | PARTIAL (Excel/Word canvas) | `scrape-okta-auto.js` |
+| Atlassian | Separate SSO | BLOCKED | needs Atlassian password |
+| Databricks | Entra ID | BLOCKED | needs admin provisioning |
+| Teams | Okta SSO + MFA | COMPLETE (97K chars) | `scrape-teams-calendar.js` |
+| Calendar | Okta SSO + MFA | COMPLETE (11 events) | `scrape-teams-calendar.js` |
+| Graph API | Device code flow | BLOCKED (admin consent required) | `graph-api.js` |
+
+## Key Team Members (from Teams/Calendar)
+- **Michal Mucha** — Data team lead (daily standups, eligibility/payer workshops, Databricks)
+- **Vika Nobis** — Sprint Demo & Planning organizer
+- **Arben Osmani** — Provider Discussion lead
+- **Erik Hjortshoj** — SVP Engineering / Consulting CPTO (RAID risk owner)
+- **Rachel Collier** — Onboarding coordinator / Miro board owner
 
 ## Tech Stack (from onboarding doc)
 - **Backend**: .NET 10, MS-SQL, Azure Service Bus, Okta, Azure Cloud Functions, Kubernetes, NUnit
