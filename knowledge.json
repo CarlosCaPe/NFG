@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.0.0",
-  "last_updated": "2026-03-18",
+  "version": "1.1.0",
+  "last_updated": "2026-03-19",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -51,10 +51,13 @@
   },
 
   "tech_stack": {
-    "languages": [".NET/C#", "Python", "Databricks (PySpark/SQL)"],
-    "mix": true,
+    "backend": [".NET 10", "MS-SQL (OADB)", "Azure Service Bus", "Okta (auth)", ".NET WebAPI (API Gateway)", "Azure Cloud Functions", "Kubernetes", "Azure Blob Storage", "NUnit"],
+    "frontend": ["React", "MUI + MUI X (Material Design 3)", "Vite", "TanStack Query", "Vitest + RTL", "React Hook Forms", "Playwright (E2E)"],
+    "devops": ["Azure DevOps (ADO)", "Terraform", "Kubernetes", "SonarQube", "DataDog"],
+    "data": ["Databricks", "MS-SQL", "Azure Blob Storage"],
+    "ai_coding": "Strongly encouraged — Claude Code provisioned, Cursor on request",
     "confirmed": true,
-    "source": "user confirmation"
+    "source": "onboarding doc (Architecture & Tech Stack section)"
   },
 
   "environments": {
@@ -83,14 +86,14 @@
       "source": "onboarding doc"
     },
     "databases": [
-      { "name": "oadb", "engine": "unknown", "purpose": "unknown" },
-      { "name": "DrugsMS", "engine": "unknown", "purpose": "drugs microservice DB" },
-      { "name": "EligibilityMS", "engine": "unknown", "purpose": "eligibility microservice DB" },
-      { "name": "ProviderMS", "engine": "unknown", "purpose": "provider microservice DB" }
+      { "name": "oadb", "engine": "MS-SQL", "purpose": "main operational database (MATIS core), under strain", "note": "case data spread across multiple tables" },
+      { "name": "DrugsMS", "engine": "MS-SQL", "purpose": "Master/Payer Drugs Libraries" },
+      { "name": "EligibilityMS", "engine": "MS-SQL", "purpose": "eligibility data, needs mastering for dedup" },
+      { "name": "ProviderMS", "engine": "MS-SQL", "purpose": "provider data, needs mastering for dedup" }
     ],
     "databases_confirmed": true,
-    "databases_source": "onboarding doc",
-    "databases_unknowns": ["engine type (SQL Server? Postgres? Databricks?)", "connection strings", "schemas"]
+    "databases_source": "onboarding doc (confirmed MS-SQL)",
+    "databases_unknowns": ["connection strings", "exact schemas"]
   },
 
   "communication": {
@@ -179,13 +182,13 @@
   "unknowns": {
     "$comment": "Items that need vendor or user confirmation before they can be used.",
     "items": [
-      { "id": "U1", "question": "What database engine do oadb/DrugsMS/EligibilityMS/ProviderMS use?", "options": ["SQL Server", "PostgreSQL", "Databricks SQL", "other"], "status": "unresolved" },
+      { "id": "U1", "question": "What database engine do oadb/DrugsMS/EligibilityMS/ProviderMS use?", "status": "RESOLVED", "answer": "MS-SQL (confirmed in onboarding doc: Backend Tech Stack section)" },
       { "id": "U2", "question": "What are the exact URLs for oh-databricks-ws-test/uat/prod?", "status": "unresolved" },
-      { "id": "U3", "question": "What are the policy doc links (secure dev, crypto, data mgmt, branching)?", "status": "unresolved" },
-      { "id": "U4", "question": "What is Erik's full name and role?", "status": "unresolved" },
-      { "id": "U5", "question": "What is your exact OncoHealth email address?", "status": "unresolved" },
+      { "id": "U3", "question": "What are the policy doc links (secure dev, crypto, data mgmt, branching)?", "status": "unresolved", "note": "Onboarding doc says 'link' placeholders — not yet provided" },
+      { "id": "U4", "question": "What is Erik's full name and role?", "status": "RESOLVED", "answer": "Erik Hjortshoj, SVP Engineering / Consulting CPTO (confirmed in onboarding doc)" },
+      { "id": "U5", "question": "What is your exact email address?", "status": "RESOLVED", "answer": "carlos.carrillo@newfireglobal.com" },
       { "id": "U6", "question": "Which Databricks workspace do you need first (dev)?", "status": "unresolved" },
-      { "id": "U7", "question": "Is the newUM codebase in Azure DevOps repos or GitHub?", "status": "unresolved" }
+      { "id": "U7", "question": "Is the newUM codebase in Azure DevOps repos or GitHub?", "status": "RESOLVED", "answer": "Azure DevOps (ADO) — confirmed in onboarding doc: Code repository section" }
     ]
   }
 }

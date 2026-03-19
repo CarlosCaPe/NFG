@@ -1,9 +1,849 @@
-URL: https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0
-Date: 2026-03-18T22:43:02.483Z
-Type: google-doc
+﻿OncoHealth NewUM Project Onboarding
+January 2026
 
----
 
-Docs
-Request sent
-You’ll get an email letting you know if your request was approved
+Project introduction        3
+Project Purpose and Background        3
+Project Goals and Objectives        3
+Additional Newfire considerations:        3
+Success criteria        4
+Project high-level schedule        5
+Risk management        5
+Change management        6
+Architecture & Tech Stack        6
+Architecture Review Process        6
+Tools and Framework Review Process        6
+High-Level Architecture        6
+DevOps Stack and Tools        8
+Backend Tech Stack        8
+Frontend Tech stack        8
+Project control        9
+Project team        9
+Executive steering committee        9
+Project working group        9
+Functional Groups and Scrum Team Structure        9
+Scrum Teams        11
+Meetings        11
+Roles and responsibilities        13
+Phase 1 Goals        13
+January - February 2026        13
+Phase 1 Goals by Group        13
+Delivery        15
+Code repository        15
+Coding standards        15
+FE TEAM        15
+AI Assisted Coding        16
+Security standards to follow        16
+Branching strategy        16
+Environments        16
+Release Cycle        17
+Tagging and naming conventions        17
+Definition of ready        17
+Definition of done        18
+Business analysis and documentation used        18
+Business Analysis Approach        18
+Business Analysis Governance        18
+Business Analysis Information Management        18
+Data migration strategy        19
+Documentation and training        19
+Required Reading Links        19
+Optional reading links        19
+Onboarding procedure        19
+Onboarding calendar - first 10 days        20
+Working environment        21
+Links to Spaces, Shared Drives, etc        21
+Account troubleshooting        21
+________________
+
+
+Project introduction
+Project Purpose and Background
+The purpose of the NewUM project is to replace the end-of-life MATIS core monolith with a modern, configurable, and high-performance Utilization Management (UM) case management engine. The current MATIS system is based on a limiting code-based approach that prevents efficient customization, rapid client onboarding, and new feature development. NewUM will drive operational efficiency and quality across OncoHealth by modernizing architecture and data modeling.
+Project Goals and Objectives
+* Improve client experience through better analytics (operational reporting and value-added insights for customers and internal OncoHealth teams) and provide a more responsive client service experience when making needed changes
+* Improve the health care provider experience with a more responsive Portal and extensibility of drug-based approval logic into provider-facing tools
+* Create an invisible migration experience for health plans and providers such that newUM effort is perceived as an ‘upgrade’ of the system
+* Improve OncoHealth Technical Team Efficiency by moving to configurable architecture and a new modern monolith
+* Improve OncoHealth Case Processing Team efficiency (clinical and non-clinical) by replacing the underlying abstraction from the MATIS platform  (regimen-based approvals) to drug-based approvals (potentially while retaining the concept of the regimen) and significantly improving the UI experience with a cleaner set of clicks
+* Create clear ‘hooks’ for AI agents to engage in workflow through design of APIs and UI that are well-suited to current levels of agentic AI capability
+
+
+Additional considerations:
+The NewUM platform will provide a configuration-based approach to workflow creation and will deliver:
+* Client-based configuration rather than custom product coding to enable workflow variations and decision rules for new and existing health plan customers
+* Enhanced clinician experience for internal users (e.g., see case history and more easily see other cases for the same members) and external users interacting with the OncoHealth portal[a]
+* Trailing data guardrails and manual data repair integrated into the new workflow config and UI[b]
+* A workflow platform that enables integration with AI agents throughout the UM process
+* A redesigned user experience that addresses the foundational issues identified in ‘20251107_OncoHealth Initial Research Results.docx’. (In addition, we will identify places in the core redesigned workflows where AI can provide productivity gains.)
+* Provider registration directly in the platform
+* A consistent, fully modern Enterprise Data Platform (EDP) for ingestion and reporting
+In scope
+* Replacement of MATIS core with a new configurable case management engine.
+* Redesigned User Interface (UI) for case entry, clinical review, and decision-making.
+* Development of a continuous Migration Pipeline for historical data.
+* Integration with existing peripheral services for OneUM  (Letters V2, Admin Portal, D&A/Databricks).
+* Implementation of post-launch features including Appeals Case Management and Turn-around-Time (TaT) reporting (to be confirmed for Phase 6).[c][d][e]
+Out of scope
+* SmartUM Client Migrations (requires separate strategic project).
+* Advanced Provider Mastering (3rd party PDM service interfaces).
+* Interoperability APIs for FHIR/CMS-0057 compliance.
+* Native AI-based Clinical Extraction (to be handled via external partnership).
+Success criteria
+* Faster implementation cycles for new health plans (~60 days down from ~90)
+* Better metrics than SmartUM (e.g., case entry per person per month)[f][g]
+* Workflow extensibility (e.g., delegated appeals workflows can be created in a consistent and straightforward manner)
+* Faster employee onboarding
+* Lower training costs and turnover
+* More efficient operations and more favorable staffing ratios
+* Increased portal adoption by providers
+* Reduced operational load and compliance risk
+* Simplified D&A (ingress and compliance/reporting)
+* Reduced case delays and pressure on TaT
+There will be a separate governance document with exact metrics, baselines and monitoring.
+Project high-level schedule
+Major milestones
+* Phase 1        Jan-Feb 2026        Design and load-in, and prototype build                        
+* Phase 2        Mar-Jul 2026        MVP Initial build (including migration pipelines)                
+* Phase 3        Aug-Sep 2026        Integration and hardening                                
+* Phase 4        Oct-Dec 2026        First client migration                                
+* Phase 5        Apr-May 2027        Client migrations and strategic initiatives
+* Phase 6        Jun-Dec 2027 Final migrations, MATIS teardown, strategic initiatives                                
+Risk management
+Instead of tracking risks, blockers, and decisions across various emails and meeting notes, we will be using a RAID log (newUM_RAID.xlsx) as our single source of truth for everything that could impact our delivery.
+Moving forward, everyone should use the log for the following:
+* R (Risks): Identify potential "what-ifs." If you see a storm brewing (e.g., a potential tech bottleneck), log it so we can mitigate it early.
+* A (Assumptions): Document what we’re taking for granted. If you're building based on the belief that "API access will be ready by Friday," put it here.
+* I (Issues): Log active blockers. If something is broken or delayed right now, it goes here with an owner assigned to fix it.
+* D (Dependencies/Decisions): Record what we are waiting on from other teams, and document key decisions so we don't have to ask "Why did we decide that?" three months from now.
+Change management
+The Executive Steering Committee must approve all changes to scope, budget, or overall schedule[h]. All changes must be documented with a formal Change Request (NewUM_Change Request.docx) including:  
+* Description and rationale for the change.  
+* Impact assessment on the "triple constraint" (scope, budget, and schedule).  
+* Formal authorization signature.  
+Architecture & Tech Stack
+Architecture Review Process
+We will run a review committee for major architecture decisions, to ensure we are delivering acceptable solutions to the client.  The exact process will evolve but until further notice please make sure Erik Hjortshojis copied on all design documents and draft decisions.
+
+
+Documentation should indicate “Draft” and “Approved” status on designs and architectural specifications to prevent missed expectations.
+Tools and Framework Review Process
+New tools (productivity, operations, development, etc) and Frameworks (Open source, COTs, Licensed) must be documented, approved and registered before they can be used on the client systems.  This is to prevent downstream surprise security concerns, licensing burdens, and shadow IT.    (exact approval process and register to be determined, but reach out to Erik Hjortshoj in the interim)
+
+
+OncoHealth Approved Software Tools:
+Note that the list below is slightly out of date.  The full list is available via the Onco IT Miro board (different than the NewUM board) - Ask Jack or Erik.  We will provide updates here shortly.
+
+
+* FeatureHub
+* Zoom
+* PubNub
+* Algolia
+* Firebase
+* Elastic Search
+* Auth0
+* Stream.IO
+* Braze
+* Twilio
+* Azure
+* Contentful
+* Salesforce
+* Decisions
+* SonarQube
+* OpenText
+* Mirth
+* Kaleidoscope (Kscope)
+* Documo
+* Datadog
+* Visual Studio
+* Visual Studio Code
+* Azure DevOps (Cosmos, App Insights, etc)
+* SQL Server
+
+
+If other specific tools are needed, please check with we can check with Onco IT help, or escalate to Erik Hjortshojand Rachel Collier.  We will submit a new software application.
+High-Level Architecture[i]
+Newfire Miro (if you don’t have access, ask for it, slack Rachel Collier). NOTE: Please do not create a new board within Miro at this time. We are limited to 3 boards and if a new board is created it will make another board View Only. We are working with OncoHealth on this limitation. All work should go within the NewUM board. The architecture is currently in a draft state; please ask questions about it! Poke holes if you can. The most uncertainty is currently (as of 12/22/25) around:
+
+* case data model
+* management of business rules
+* frontend configurability
+* reporting pipelines
+
+
+The backend architecture is split into three conceptual subsystems: Rules, Data and Interface. 
+
+
+The Rules Subsystem will manage, compile and run sets and versions of rules. It will offer a CLI-based development environment for configuration specialists and interact with the Interface subsystem via Azure Service Bus. It will use the data access layer as a library to interact with cases. 
+
+
+The Data Subsystem will ensure consistency of data throughout NewUM. All access to transactional data should go through the data access layer. It will offer a bulk ingest API for migration and ingest pipelines, or it may be used as a library in other subsystems. All reporting needs should be handled with an OLAP database specifically for reporting, populated by the data access layer.  
+
+
+The Interface Subsystem will offer a unified interface to the UI and also peripheral services from OneUM. 
+
+
+Our initial development will be focused on a vertical slice of the system that can create, view and update a case as well as attach an eligibility record. The first slice should also be able to modify case state using business rules. We will start with the green-highlighted components in the Miro draft architectural diagram.
+The data access layer is one of the most complex parts of the core. The technical demands for tracking cases are extensive: [j]
+
+* data for each case is spread across multiple tables
+* some payers will want custom fields coupled with custom business rules
+* maintain a complete audit log for each case, preferably with a non-PHI view for overseas devs
+* case data must be kept for years[k]
+* data will come from multiple sources: UI, external comms, ingest, Matis migration, etc.
+* MS SQL database (OADB) is under strain in current system, while the business needs to grow
+* a case should enforce one writer at a time to prevent race conditions
+
+The other schemas also have unique needs. The eligibility and provider schemas will need some degree of mastering to avoid confusion from duplicate provider and member records. 
+
+
+Leaving the core, NewUM will need to integrate with several peripheral services from OneUM like a letter-sending system, a fax system, a document manager and so forth. Most of these other services need upgrades (particularly for auth) and will require scaffolding so that the old and new system can coexist. We should use this .NET package for consistency with other OncoHealth systems unless there is a good reason not to. 
+DevOps Stack and Tools[l]
+   * Azure DevOps (ADO) - Code Repo, Scrum Boards, Pipelines, etc
+   * Terraform
+   * Kubernetes
+   * Dev and Higher environments will have OncoHealth’s standard controls
+   * SonarQube
+   * DataDog Security Tools
+
+
+Backend Tech Stack
+The stack OncoHealth uses for Letters v2 and Iris (recent projects) is the starting point:
+   * .NET 10 for new code - using OncoHealth’s common library
+   * Legacy code uses whichever version of .NET is already there
+   * MS-SQL for main operational database
+   * Azure Service Bus for event and messages[m]
+   * Okta for auth
+   * .NET WebAPI for API Gateway
+   * Azure Cloud functions for task workloads e.g. rules inference, bulk data ingest[n]
+   * Kubernetes for asynchronous workloads
+   * Azure Blob Storage for documents and case state
+   * Azure App Insights or DataDog for logging
+   * NUnit for unit testing
+
+Frontend Tech Stack 
+      * React is main framework/lib 
+      * MUI + MUI X framework will provide a set of reusable, adaptable components based on Material Design 3 that will accelerate both the UX team’s design work and the Frontend team’s development work
+      * Vite will be used a builder, it utilises ES6 modules that lets compilation become quite fast[o][p]
+      * TanStack query (former react query) out of the box provides a flexible approach for data loading a data caching 
+      * Vitest + RTL popular unit and component testing combo
+      * React hook forms for forms
+      * Playwright end-to-end test automation framework
+Project control
+Any significant change in the scope, governance, roles & responsibilities, milestone dates or deliverables, shall be identified, assessed, documented for consequences and impact  in. After that, the change  - along with the consequences -  should be brought to the steering committee for decision. 
+
+
+The decision of the steering committee should be documented and communicated to the relevant stakeholders as well as team members, and all the necessary modifications to project artifacts, i.e. epics, milestone definitions, team setups, budgets, etc.
+
+
+The person responsible for that is the project manager.
+Project team
+Executive steering committee
+OncoHealth: Jon Maack, Ashley Wise, Venky Subramaniam, Arsenal Capital representative
+Newfire: Stephen Hau, Will Crawford, Erik Hjortshoj
+Project working group
+Functional Groups and Scrum Team Structure
+This project will run a matrix structure. The main team structure is functional, with members assigned to one team (detailed below).  We will maintain a master sheet in the OncoHealth SharePoint. (reference shortly),  This will include internal and external stakeholders, advisors, and executive governance team members, that will be crucial to the project, above the groups below.
+
+We also have the internal Delivery team build-out and assignment document - Link to the document
+
+
+
+
+      * Project Management Group[q]
+      * Erik Hjortshoj - SVP Engineering
+      * Rachel Collier - Director of Program Management
+      * Donato Buccella - Sr Director of Engineering (Hiring Process)
+      * Luiyi Valentin - Sr DevOps Engineer
+      * Alison Stamp - Director of Product Management (Onco 80%)
+      * Lauren Smith - Director of Product Management (Onco 50%)
+      * Inna Mariienko - Lead Business Analyst
+      * Vika Nobis - Program Manager, Scrum Architect
+      * UX Group (Studio@Newfire)
+      * Caitlin Bowler - Staff Researcher (Team Lead)
+      * Chris Gillis - Staff Designer
+      * Paulina Phillips - Sr Designer
+      * Andrii Zhdan' - Sr Designer
+      * Natasha Mohanty - Designer (50%)
+      * Front-End Group (Jan 12)
+      * Dmytro Petriv - Staff Engineer (Team Lead)
+      * Petro Brezitskiy - Sr Front-End Engineer
+      * Yurii Bodnar - Sr Front-End Engineer
+      * Mykola Vorona - Sr Front-End Engineer
+      * Core Back-End Group
+      * Jack Hall - Staff Engineer (Team Lead)
+      * Roman Buchyn - Sr Back-End Engineer
+      * Dražen Borota - Sr Back-End Engineer
+      * Vladyslav Kyrychuk- Sr Back-End Engineer
+      * Services Back-End Group
+      * Plamena Petrova - Staff Engineer (Team Lead)
+      * Dmytro Hridin - Staff Engineer (temporarily assisting devops)
+      * Bohdan Chachun - Sr Back-End Advisor (50%)
+      * Iryna Lukianovets - Sr Back-End Engineer (temporarily assisting core backend)
+      * Data Engineering Group
+      * Michał Mucha - Lead Data Scientist (joins Feb 9) (Team Lead)
+      * Corey Johnson - Sr Data Engineer (joins Feb 15) (Onco) 
+      * Arben Osmani - Sr Data Engineer (joins Feb 2)
+      * Oleksandr Nykonenko - Sr Data Engineer
+      * Configuration Group
+      * Pero Jaman - Senior BA (Team Lead)
+      * TBH - Phase 2
+      * TBH - Phase 2
+      * TBH - Phase 3
+      * QA and Automation Group
+      * QA Automation Architect - TBH (Team Lead)
+      * Andriy Sapryka - Sr. Automation QA (joining Feb 22nd)
+      * Ivan Karpa - Sr. Automation QA
+      * Taras Badlo - Sr. Manual QA
+      * Sr. Manual QA (finalizing assignment)
+      * Sr. Manual QA (phase 2, probably from Onco)
+
+
+Scrum Teams[r]
+The Scrums will cut across the functional groups.  We will adjust the scrum teams as needed to optimize project performance (always balancing between too many teams and standups and too many people per standup).  
+
+For Phase 1 we will start with two Scrum teams: Front-end and Back-end. 2-week scrum cycles.
+
+
+Front-End (F-E) Scrum Team:
+      * Studio@Newfire (UX)
+      * Front-End Group
+      * QA Automation Group
+
+
+Back-End (B-E) Scrum Team:
+      * Core Back-End Group
+      * Services Back-End Group
+      * Data Engineering Group
+
+
+Both Scrum teams can and will have mixtures of function teams (of course) but also project management teams, leads and key individuals from other functional teams, and some SMEs.
+Meetings[s]
+
+
+Title
+	Leader
+	Cadence
+	Participants
+	Content
+	Project team-level meetings
+	Executive Steering Committee
+	Project Executive Leader
+	Monthly or ad hoc if urgent 
+	Jon Maack, CEO
+Ashley Wise, COO
+Venky Subramaniam, CPTO
+Arsenal Capital Partners representative,
+Stephen Hau, CEO
+Will Crawford, CTO and Head of Advisory
+Erik Hjortshoj, Consulting CPTO
+	Health, Schedule, Quality, Budget, Scope
+	Monthly Governance
+	Project Executive Leader
+	Monthly
+	As above, with additional attendees based on relevant workstreams
+	Health, Schedule, Quality, Cross-Team Coordination, Issue Resolution
+	Project Working Group
+	Project Executive Leader
+	Every two weeks
+	Venky Subramaniam, Will Crawford, Erik Hjortshoj, workstream leads
+	Health, Schedule, Quality, Cross-Team Coordination, Issue Resolution
+	Project Team
+	Project Manager
+	Weekly
+	Project Manager, Project Leads
+	Schedule, Monitor/Identify Risks
+	Standups
+	Lead
+	Daily
+	Agile teams, Scrum Master
+	Day to day focus, synchronization on work
+	Product [t][u]group meeting
+	Project Manager
+	Weekly
+	BAs, product managers from Onco and NewFire, project leadership, UX lead
+	
+
+	Architecture governance
+	Technical / Architecture Lead
+	As needed (Phase 1–3)
+	Architecture Lead, Business Analyst, Core Team Lead, Services Lead, Data Lead
+	Details TBD
+[v]	
+Design & Requirements Workshops (grouped)
+	Business Analyst
+	Phase 1, then ad hoc
+	Business Analyst, Product, Front-End Lead, Back-End Leads, Clinical SMEs, CRS SMEs
+	Workflow definition, case states, configuration behavior, rules intent, UX interaction patterns, data assumptions
+[w]	
+Scrum team-level meetings
+	Daily scrum (one per each team teams)
+	Scrum Master
+	Daily - European and US hours
+	Team lead + team
+	Progress, impediments, escalations
+	Scrum of scrums
+	Project Executive Leader
+	TBD
+	Team leads + Leadership team + onshore members
+	Cross-team progress, impediments, escalations
+
+
+	Backlog Refinement
+	Product Owner
+	Every 2 weeks
+	Team lead + team + BA
+	Stories estimation
+	Sprint planning
+	Scrum Master
+	Every two weeks
+	Scrum team + BA (PO)
+	Cutting the product backlog to screen backlog
+User story estimation
+	Sprint demo & review
+	Scrum Master
+	Every two weeks, US hours
+	Scrum team + BA (PO)
+	
+
+	Sprint retrospection
+	Scrum Master
+	Every two weeks, European hours
+	Scrum team
+	
+
+	Tech dev meeting 
+	Tech lead
+	 Weekly
+	All devs
+	Discuss tech related issues, knowledge sharing on tools being used and best practices (including AI tools usage), on later stages - tech debt discussions 
+	Tech QA meeting
+	QA Lead, Scrum Master
+	Weekly
+	QA team, tech leads
+	Discuss/align QA strategy
+	Phase planning
+	Project Executive Leader
+	Per phase
+	Team + Leadership team + onshore members
+	Phase planning, high level feature estimation, based on phase priorities defining risks and dependencies between teams, validating if goals are achievable in given phase 
+	 
+Roles and responsibilities
+
+
+The file with roles and responsibilities can be found here: link[x][y].[z]
+
+
+Phase 1 Goals
+January - February 2026
+Overall the goal is to complete:
+
+
+      * High level research and designs along with OncoHealth stakeholders. This is mostly on the UX side, but also on the Configuration side as well (capabilities), and Product Management
+      * Complete resourcing and hiring for the team, including onboarding and completion of initial assignment. (mostly complete!)
+      * Build a “thin-slice” vertical prototype of the NewUM system, with as many components as possible, promoted to a UAT environment.  This is mostly a technical proof of concept but is required to help vet high level design documentation for architectural review, and to be able to fully scale our build starting in Phase 2.
+
+
+Phase 1 Goals by Group
+If you exceed these goals, set new ones and keep going! Now is the time to create momentum.
+
+
+      * Project Management Group[aa]
+      * Complete hiring and onboarding
+      * Build product roadmap for NewUM, with Phase 1 and the draft of Phase 2
+      * Establish the two scrum teams, and the N+2 backlog for each
+      * Establish and document working practices, meetings, governance, communications, etc.
+      * Plan all “bonus box” collaborative sessions, and conduct the highest priority ones in this phase.
+      * Set up complete project environments, accounts, code repos, etc. etc.
+      * Define Phase 2 goals in detail
+      * Define client migration order
+      * (there are more)
+      * UX Group (Studio@Newfire)
+      * [Weeks 0–1] Select and set up a UI framework to be shared between UX and Front-End
+      * Evaluate design & technical requirements
+      * Compare leading frameworks and select
+      * Set up Figma with UI framework
+      * Customize UI framework with Onco Health branding
+      * [Week 0] Conduct an inventory of existing UI screens to be reimplemented
+      * [Weeks 1–3] Prepare Figma layouts for core UI screens to support early Front-End work
+      * Primary navigation
+      * Basic index & CRUD layouts
+      * Others to be determined by inventory
+      * Research seven key functional areas, prepare design concepts, and test/validate concepts with users. (As each validated design concept is ready, it can be transitioned to FE team for development.)
+      * [Week 1] Role-based navigation
+      * Required Stakeholders: Jeanette (+ her direct reports), Anju (+ Kristen B), Nichole
+      * [Week 2] Search & Eligibility
+      * Required Stakeholders: Jeanette, Nichole, Data Representative
+      * [Week 3] New case intake flow
+      * Required Stakeholders: Jeanette, Nichole
+      * [Weeks 4–5] Drug & dosing approach + Drug assignment in intake
+      * Required Stakeholders: Anju (+ Kristen B), Nichole, Data Representative
+      * [Week 6] Queuing & Dashboards
+      * Required Stakeholders: Jeanette, Anju, Nichole
+      * [Week 6] Case Review Panel
+      * Required Stakeholders: Anju (+ her direct reports)
+      * [Week 7] Dosing Review
+      * Required Stakeholders: Anju, Kristen B, Nichole
+      * Research and document anticipated front-end configurations for comparison with anticipated back-end configurations
+      * Front-End Group (Jan 12 start)
+      * [ Week 1] UI app skeleton setup (boilerplate, linters, development server etc etc)
+      * [ Week 1] Creation of work protocols for the team (branching strategy, app testing approach, project structure, mr reviews)
+      * [ Week 2-3 ] Prototype Okta authentication
+      * [ Week 4-6 depends on Core BE / Case logic ] Must allow for manual intake of “cases,” with at least one validated state change and the ability to close them.
+      * [ Week 5-6  depends on Core BE / Case logic ] Must have a configurable aspect to it, including error display. (based on completion time of BE team part)
+      * Core Back-End Group
+      * [Week 1] Vertical slice of newUM that can create, display and update a case with an attached eligibility record. Includes data stores, a data access layer for Case and Eligibility, and a web API with controllers for Case and Eligibility. 
+      * [Week 2-3] Create bulk API in data layer for Migration and Ingest pipelines. Integrate with the Migration pipeline to get some case and eligibility data. 
+      * [Week 2-3] Prototype Rules engine with dynamic rules config for validating case eligibility. Integrate with vertical slice via CRUD library and Azure Service Bus.
+      * [Week 4] Basic CI/CD pipelines using terraform to deploy resources. Standardize on basic dev tooling, and write a few unit tests. Automate a regression or integration test that reaches the data layer (with QA team). 
+      * [Week 5-6] Flex, respond to difficulties, refactor, additional prototyping and design decisions.
+      * High-level design documents for all the above, reviewed by the architectural committee. 
+      * Services Back-End Group
+      * [Week 1] High-level design documents for each service (or functional area for the team)
+      * [Week 1] Prototype Okta authentication in older .NET
+      * [Week 2-3] Eligibility and Case data ingest (in coordination with the Data Engineering group)
+      * [Week 4] Mock service wrapper and interface for Letters V2
+      * [Week 5] Mock service wrapper for receiving faxes
+      * [Week 6] Flex, respond to difficulties, aid other teams if needed
+      * Data Engineering Group
+      * [Week 1] Stand up prototype Databricks resources for the migration pipeline and ensure access to MATIS data stores (OADB, EligibilityMS, ProviderMS, DrugsMS)
+      * [Week 1-2] Negotiate the basic shape of the bulk ingest API between the Migration Pipeline and the newUM data access layer. [ab]
+      * Start with Eligibility and Drug data - Initial prototype
+      * [Week 2] Migrate a sample of eligibility data from EligibilityMS (and possibly OADB) to newUM, to support the Phase 1 Thin Vertical Slice of the core backend.
+      * [Week 3-4] Pull case and drugs data from OADB and integrate it with the Master/Payer Drugs Libraries in DrugsMS. Document any gaps. 
+      * [Week 4-5] Stabilize data pipelines:
+      * Add basic data quality checks
+      * Implement pipeline logging and failure handling
+      * Produce data runbook, capture Phase 2 data backlog inputs
+      * [Week 5-6] Flex, respond to difficulties, widen migration data streams, add more data quality checks
+      * Configuration Group
+      * [Week 1-2] Identify points of configurability and design rule management scheme, possibly based on:
+      * Line-of-Business rulesets (per-client Commercial, per-state Medicaid, Medicare, per payer, per plan)
+      * field dependency checks
+      * grains or data domains
+      * [Week 3] Configurations implemented for the thin vertical slice prototype
+      * [Week 4-5] Draft Inventory of configuration by component (e.g. letters, UI, rules)
+      * [Week 6] Flex, respond to questions, write documentation
+      * QA and Automation Group
+      * [Week 1] Establish QA foundations for the Phase 1 prototype:
+      * Define QA practices and processes
+      * Document test environments and defect flow
+      * [Week 2] Define testing standards and automation approach:
+      * Define AQA architecture (API vs E2E), produce API and E2E testing guidelines
+      * Define unit test requirements
+      * [Week 3] Enable testability of the vertical slice
+      * Identify critical Phase 1 test scenarios and define test data strategy
+      * Validate API test access
+      * [Week 4–5] Prototype automated testing for the Phase 1 app:
+      * Implement POC API tests
+      * Implement POC E2E test(s)
+
+
+Delivery[ac][ad][ae][af]
+Code repository
+https://dev.azure.com/oncologyanalytics/newUM 
+Coding standards
+FE TEAM
+ Architecture & Project Structure[ag]
+      * Feature or page based - Folders: Group files by functionality rather than by type. Each folder should contain its own components, hooks, and tests.
+      * Flat Component Hierarchy: Keep components small. If a component grows large, break it into smaller sub-components.
+      * Barrel Files: Use index.ts files in folders to simplify imports
+      * Path Aliases: Use Vite path aliases (e.g., @/components/*) to avoid "import hell" .
+React & TypeScript Standards
+      * Functional Components: Use arrow functions (const Component = () => ...) for consistency.
+      * TypeScript Strict Mode: Enable strict: true in tsconfig.json. No any, for edgecases use unknown
+      * Potentially we will use the interface only for  APIs/libraries and type aliases for internal component props and utils
+      * Hooks Logic: Move complex logic into custom hooks or utils  to keep the UI layer (JSX) clean and declarative.
+Code Quality (ESLint & Prettier)
+      * Pre-commit Hooks: Use Husky or smth similar and lint-staged to run ESLint and Vitest on changed files before every commit.
+      * Import Sorting: Use a plugin to group imports: 1. React/External 2. Internal/Features 3. Styles/Assets.
+      * Use Prettier for auto formatting
+      * Use Eslint to track code style issues
+AI Assisted Coding
+Agentic coding and AI tooling is very very strongly encouraged.
+
+      * Agnetic coding (Claud Code is provisioned.  Cursor and others on request) shall be used to assist design, development, testing and pull request reviews.
+      * The used tools should be disclosed to the project leadership
+      * The AI-generated code must be reviewed and, if needed, adjusted by functionality or clarity manually
+      * Knowledge sharing sessions on AI-assisted and agentic coding should be held by team leads frequently
+      * Once you’ve aligned on an AI coding tool with your team leader, please have your manager submit a license request via the Newfire IT Support Portal.
+
+
+Security standards to follow
+
+
+Secure development policy: link
+
+
+Cryptography policy: link. 
+
+
+Data management policy: link. 
+
+
+Branching strategy
+
+
+The project will follow Newfire’s best-practice, trunk-based, branching strategy: link.
+
+
+Environments
+      * Prod - and ProdDR (PHI)
+      * Staging - (PHI) used for release process testing only (push to prod should follow shortly)
+      * Test (UAT) - NoPHI
+      * Dev - NoPHI
+      * Local - references Dev for services - NoPHI
+
+
+The following needs to be brought into sync with Onco DevOps precedent.[ah]
+Environment
+	Access
+	Data
+	Code
+	Refresh cycle
+	Prod
+	Real users only, no Newfire access
+	Real
+	Current prod
+	N/A
+	Prod support
+	Real users only, no Newfire access
+	Real
+	Current prod
+	2 days after prod deployment
+	User acceptance
+	Real users only, Newfire onshore access
+	Real, low-volume
+	Release candidate
+	
+
+	Integration
+	Real users + engineering teams
+	Synthetic / anonymized, low volume
+	Things fulfilling DoR criteria
+	2 weeks after release
+	Development
+	Engineering teams
+	Synthetic
+	Ongoing development
+	On demand
+	Release Cycle
+Feature branches should be released once the work is completed, and reviewed.  Features should not be held for full sprint releases (there will be too many teams and too much work). This means that Dev will continue to evolve and that rebasing work will be important.
+
+
+Where there are coordinated feature branches, or target deadlines for sets of features the Program Managers, BAs and Product Managers will help coordinate.
+Tagging and naming conventions
+For Azure tagging and any other application mnemonic purposes, “NewUM” will be used.
+Testing approach
+Software delivery & project management tools
+      * M365 office productivity tools
+      * MS Outlook mail client
+      * MS Teams 
+      * MS Sharepoint
+Azure DevOps Boards - 2 week Scrum sprints and Scrum boards w/ N+2 backlogs
+
+
+ADO boards should include a “No PHI” banner to remind users of limitations.
+
+
+
+
+Definition of ready[ai]
+
+
+Definition of done[aj]
+In short - when the feature is deployed to prod.  We have a senior team and changes need oversight, all the way through the process.lin
+Business analysis and documentation used
+See the document here: link.
+Business Analysis Approach
+      * BA defines case workflows, configuration behaviors, rules intent, and data expectations for NewUM
+      * BA work starts in Phase 1 and continues through build, migration, and hardening phases
+      * BA operates ahead of engineering, ensuring backlog items are ready before development begins
+      * BA does not own product prioritization or technical design decisions
+
+________________
+
+
+Business Analysis Governance
+         * Business Analysts own requirements clarity, completeness, traceability, and readiness
+         * Product Management owns scope, sequencing, and business priority
+         * Architecture and Technical Leads own solution design and implementation approach
+         * No requirement enters development without Business Analyst readiness confirmation
+         * Requirements decisions and approvals are documented and traceable
+________________
+
+
+Business Analysis Information Management
+         * Confluence [ak][al][am]is the authoritative source for requirements, workflows, and configuration specifications
+         * Product Management O365 folder is source of supplemental and discovery documentation
+         * Azure DevOps (ADO) is used for delivery tracking (Epics → Features → Stories) 
+         * Every ADO item must reference an approved Confluence specification
+         * Business Analysts maintain alignment between documented intent and delivered behavior
+         * Decisions affecting requirements are logged and linked from specifications
+________________
+
+
+
+
+Data migration strategy
+Running two systems in parallel
+Data migration between systems (migration pipeline) from “day one”
+
+Documentation and training[an][ao]
+Mandatory training[ap]
+
+
+Any resource accessing Protected Health Information (PHI) must complete OncoHealth’s identified training requirements. 
+
+
+
+
+Required Reading Links
+         * OncoHealth Assessment - Final.pdf
+         * NewUM - Miro
+         * NewUM Product Roadmap
+Optional reading links
+         * OncoHealth Interim Assessment - 12-09-2025.pdf
+         * ​OncoHealth Second Interim Assessment - 01-10-2025.pdf​
+Required Demo Links
+         * NewUM MATIS Walkthrough
+Optional Demo Links
+         * Recorded Demos and Meeting Summaries
+Onboarding procedure
+After onboarding with Newfire, a request will be sent (currently by Rachel Collier) to OncoHealth to provision OncoHealth accounts. The request requires name, position, location, PHI need, email and phone number. This request is sent to DevOps Request <devopsrequest@oncologyanalytics.com> with Salin Gabriel <sgabriel@oncohealth.us> on CC.
+
+
+Provide confirmation to Rachel Collier:
+         * that you can log into the OncoHealth environment, VPC.
+         * that you see OncoHealth_NewFire Teams within Microsoft Teams
+         * that you can access OncoHealth_NewFire SharePoint
+         * that you can access NewUM board in OncoHealth Miro https://miro.com/app/board/uXjVGVycF3Y=/ (access with OncoHealth email)
+Upload a photo for your Microsoft 365 account
+         * Access to request
+         * Tools to install (if any)
+         * Documents to read
+         * Trainings to go through
+Checks: 
+         * OncoHealth email account will be setup, VPC 
+         * Email, test environment, what else?
+         * appropriate Microsoft Team assigned
+Onboarding calendar - first 10 days
+Day
+	Meetings
+	Day 1
+	Laptop pickup, mandatory training, logging in
+	Day 2
+	Reading initial documents (see chapter Documentation and training)
+Meeting with Will Crawford, Erik Hjortshoj: project context, business goals, team setup
+	Day 3
+	Reading initial documents
+Architecture introduction: session with Jack Hall
+Project introduction with Rachel Collier
+Team routines with Vika Nobis and Jakub Chabik
+	Day 4
+	Reading initial documents
+Engineering environment setup
+Q&A session with Erik Hjortshoj, Rachel Collier, Jack Hall
+DevOps session with leads and Luiyi Valentin
+	Day 5
+	Engineering environment setup
+Introduction to requirements with Inna Mariienko
+Retrospection with Vika Nobis and Jakub Chabik
+	Day 6
+	Team work with Leads
+Backlog grooming, user story & task estimation
+	Day 7
+	First sprint planning
+	Day 8
+	First day of sprint
+	Day 9
+	
+
+	Day 10
+	Wrap-up with Will Crawford and Erik Hjortshoj
+	Working environment
+         * We need to work Native in the OncoHealth environment
+         * Use SharePoint, Teams Office 365 
+         * Use VDI/VPC  when needed
+         * Can install Teams, etc locally for direct access
+         * Use co-branded[aq][ar] OncoHealth templates by default
+         * Use OncoHealth’s Miro Board
+         * Can copy back content to our Google Workspace and Miro instances for reference.
+         * Teams should be used for daily team communications, access to SMEs and OncoHealth team members, etc.   This is an OncoHealth project, managed by Newfire and heavily staffed by Newfire, but all working materials are expected to be in “their possession” at any given time.
+Links to Spaces, Shared Drives, etc
+
+
+Account troubleshooting
+Alexander Rodriguez, from OncoHealth is assigned to the NewUM project on the DevOps side and should be the point of first escalation along with Luiyi (who has admin rights on our instance).
+
+
+After onboarding, if any issues arise with your OncoHealth account, please submit a ticket for assistance. Lucas Mejia (lmejia@oncohealth.us) is designated to help with VDI/VPN access issues. If an urgent issue arises, reach out directly through Teams to Salin Gabriel (sgabriel@oncohealth.us) or Lucas Mejia.  
+
+
+If any devs are having trouble with the speed of their VPC or VDI connections - please do escalate.  Salin’s team has the ability to increase resources for specific VPCs.
+
+
+devopsrequest@oncologyanalytics.com - DevOps support tickets
+ithelp@oncohealth.us - IT support ticket
+
+
+You can find the status of your tickets on the HaloITSM portal.  oncohealth.haloitsm.com/portal
+
+
+
+
+________________
+ 
+Confidential - Not for distribution                                                        Page 
+[a]Is this duplicative with the UX?
+[b]Won't make sense to some readers
+[c]@rachel.collier@newfireglobal.com @caitlin.bowler@newfireglobal.com  etc - do we have a glossary for this project started? Would be very helpful, I suspect, for new team members.
+[d]No -- Happy to start one. Can we make it an Appendix? @rachel.collier@newfireglobal.com
+[e]Yes.
+[f]@erik@newfireglobal.com  is this "better productivity" or the ability to produce metrics that SmartUM can't?
+[g]@will.crawford@newfireglobal.com - The intent was better productivity, but this success criteria should match the latest SOW
+[h]@rachel.collier@newfireglobal.com  we should harmonize this with what we agreed to in governance. Obviously, there's a lot of flexibility.
+[i]@will.crawford@newfireglobal.com Was this more what you had in mind?
+[j]Do we have disaster recover plan?
+[k]Do we have scenarios where for certain case / customer we need to remove data from our databases?
+[l]Do we need to extend this section with Data tech stack?
+[m]Are we expecting to have near-to-real-time analysis? Especially asking for data processing part in scope of Databricks?
+[n]any reason why would we need serverless alongside with k8s workloads? From telemetry, logs, observability, CI/CD point of view it will be harder so setup this rather have everything in k8s cluster with consistent way of deploying and observing this.
+[o]@jonathan.abbett@newfireglobal.com - validate/clean up if needed.
+[p]I added details about MUI, but I'm not familiar with the Frontend team's other technical items
+[q]@erik@newfireglobal.com I believe this needs to be updated to include me, Sandy, and Matt Emerson
+_Assigned to erik@newfireglobal.com_
+[r]We might potentially need to extend this section with Data team
+[s]Will update project mtgs once SOW is executed to allow for consistency in naming and requirements
+[t]to be reviewed by @vnobis@newfireglobal.com
+[u]reviewed and makes sense, but need to implement those. I'll resolve comments when implemented
+[v]to be reviewed by @vnobis@newfireglobal.com
+[w]to be reviewed by @vnobis@newfireglobal.com
+[x]Needs review; let's be consistent with role naming
+[y]@jakub.chabik@newfireglobal.com is this link complete?
+[z]Who I can ask to get access to this document?
+[aa]@rachel.collier@newfireglobal.com , @inna.mariienko@newfireglobal.com - Can you please refine?
+_Assigned to rachel.collier@newfireglobal.com_
+[ab]Rachel - action, capture dependency Marc & Cory
+[ac]@jakub.chabik@newfireglobal.com does it make sense to define SDLC stages here, or is it still too early for that?
+_Assigned to jakub.chabik@newfireglobal.com_
+[ad]@erik@newfireglobal.com . This should be aligned to OncoHealth SDLC as much as possible, since there will be SOC/HITRUST issues in play.
+[ae]Yes it makes senwse Pero and @luiyi.valentin@newfireglobal.com - we should get any documentation from Sali's team, and refere to best practices.
+_Reassigned to luiyi.valentin@newfireglobal.com_
+[af]I'm going to leave this documentation here. Is too long to paste it in this documentation. https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5037195265/Branching+Strategy+and+Merge+Process
+
+
+People with Onco's Confluence access can see it.
+[ag]Let's call these out as specific trackable deliverables for Jan/Feb @rachel.collier@newfireglobal.com. Already basically done...
+[ah]@luiyi.valentin@newfireglobal.com and @jack.hall@newfireglobal.com  - please align the table with the above bullet points.
+[ai]@dpetriv@newfireglobal.com  - can you help here?
+[aj]@dpetriv@newfireglobal.com - can you help here?
+[ak]@jakub.chabik@newfireglobal.com , @rachel.collier@newfireglobal.com or @inna.mariienko@newfireglobal.com  could someone please share a link to confluence tenant?
+[al]@erik@newfireglobal.com @rachel.collier@newfireglobal.com  Is there a OncoHealth confluence? This probably cannot live in NF
+[am]From my initial onboarding email, I was given 
+Confluence - URL: https://oncologyanalytics.atlassian.net/
+Need to confirm
+[an]Need to update doc to include "NO PHI" tagging / naming. Follow Onco's standards
+[ao]@rachel.collier@newfireglobal.com @erik.hjortshoj@newfireglobal.com
+[ap]@monika.sikorska@newfireglobal.com to bring Udemy courses. See what @gordon.wong@newfireglobal.com and @brendan.iglehart@newfireglobal.com  have.
+[aq]We do not have these yet...we can start with OncoHealth templates, in SharePoint, Project Management folder as of today
+[ar]we can copy the templates and add our logo and "Prepared by Newfire Global Parthers" to the cover sheet.

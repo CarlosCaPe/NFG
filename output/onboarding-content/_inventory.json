@@ -3,17 +3,17 @@
     "name": "01-main-onboarding-doc",
     "url": "https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0",
     "type": "google-doc",
-    "access": "NO",
-    "status": "NO_ACCESS_DENIED",
-    "chars": 83
+    "access": "YES",
+    "status": "OK",
+    "chars": 2317
   },
   {
     "name": "02-design-doc-template",
     "url": "https://docs.google.com/document/d/19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno/edit?usp=sharing",
     "type": "google-doc",
-    "access": "NO",
-    "status": "NO_ACCESS_DENIED",
-    "chars": 83
+    "access": "YES",
+    "status": "OK",
+    "chars": 1977
   },
   {
     "name": "03-miro-newum-board",
@@ -36,8 +36,8 @@
     "url": "https://dev.azure.com/oncologyanalytics/newUM",
     "type": "azure",
     "access": "NO",
-    "status": "NO_ACCESS_DENIED",
-    "chars": 505
+    "status": "NO_ACCESS_LOGIN_WALL",
+    "chars": 108
   },
   {
     "name": "06-atlassian-sprint-planning",
@@ -52,7 +52,7 @@
     "url": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx?d=w2dea0b03cf3c4e6ab0213a70c77834bf&csf=1&web=1&e=34bSYZ",
     "type": "sharepoint",
     "access": "NO",
-    "status": "ERROR",
+    "status": "NO_ACCESS_LOGIN_WALL",
     "chars": 0
   },
   {
@@ -60,7 +60,7 @@
     "url": "https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx?d=w490ff8ed484b4e358d8669d9ea4360ec&csf=1&web=1&e=cvAcbB",
     "type": "sharepoint",
     "access": "NO",
-    "status": "ERROR",
+    "status": "NO_ACCESS_LOGIN_WALL",
     "chars": 0
   },
   {
@@ -69,6 +69,6 @@
     "type": "databricks",
     "access": "NO",
     "status": "NO_ACCESS_LOGIN_WALL",
-    "chars": 90
+    "chars": 108
   }
 ]
