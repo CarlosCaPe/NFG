@@ -1,0 +1,45 @@
+# Client Template — Copy this folder and fill in for each new NFG sub-client
+# cp -r clients/_template clients/<client-name>
+
+client:
+  name: ""                    # e.g. "OncoHealth"
+  legal_name: ""              # e.g. "Oncology Analytics Inc"
+  alias: ""                   # folder name, e.g. "oncohealth"
+  domain: ""                  # e.g. "healthcare / oncology"
+  project: ""                 # e.g. "newUM"
+  project_full: ""            # e.g. "New Utilization Management"
+  description: ""
+
+auth:
+  primary_email: ""           # email provided by the client
+  alt_email: ""               # optional second email
+  username: ""                # SSO username (usually email prefix)
+  sso_provider: ""            # okta | azure-ad | google | none
+  sso_url: ""                 # e.g. https://sso.client.com
+  mfa: ""                     # okta_verify_push | authenticator | sms | none
+  vpc:
+    name: ""                  # VPC/VDI machine name if applicable
+    url: ""
+
+services: []
+  # Copy entries from oncohealth/client.yaml as needed. Each service:
+  # - name: ""
+  #   key: ""                 # sequential number "01", "02"...
+  #   type: ""                # google-doc | miro | azure-devops | atlassian | sharepoint-xlsx | sharepoint-docx | databricks | teams | calendar-outlook | calendar-google | graph-api
+  #   url: ""
+  #   status: not_started     # not_started | complete | partial | blocked
+  #   blocker: ""             # if blocked, explain why
+  #   chars: 0                # captured content size
+
+tech_stack:
+  backend: []
+  frontend: []
+  testing: []
+  devops: []
+  data: []
+
+team: []
+  # - name: ""
+  #   role: ""
+
+executive_steering: []

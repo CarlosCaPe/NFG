@@ -1,0 +1,155 @@
+# OncoHealth — Sub-client configuration
+# Part of NFG (NewFire Global) umbrella contract
+
+client:
+  name: OncoHealth
+  legal_name: Oncology Analytics Inc
+  alias: oncohealth
+  domain: healthcare / oncology
+  project: newUM
+  project_full: New Utilization Management
+  description: Replace end-of-life MATIS monolith with modern configurable UM case management engine
+
+auth:
+  primary_email: ccarrillo@oncologyanalytics.com
+  alt_email: ccarrillo@oncohealth.us
+  username: ccarrillo
+  sso_provider: okta
+  sso_url: https://sso.oncologyanalytics.com
+  mfa: okta_verify_push
+  vpc:
+    name: CPC-ccarr-RY8W8
+    url: https://windows365.microsoft.com
+
+services:
+  - name: Google Docs Main Onboarding
+    key: "01"
+    type: google-doc
+    url: https://docs.google.com/document/d/1XiUDgerQbCFzmhIRmGFRzBbMcqkF3Z2u3pRqEPlzXcU/edit
+    status: complete
+    chars: 44703
+
+  - name: Google Docs Design Template
+    key: "02"
+    type: google-doc
+    url: https://docs.google.com/document/d/1pU8oLn8c2CgGIrFM05Gb6Ag2Jkf3E7RzBMN8tQdlF5o/edit
+    status: complete
+    chars: 2797
+
+  - name: Miro NewUM Board
+    key: "03"
+    type: miro
+    board_id: uXjVIx2JdOQ=
+    status: complete
+    chars: 130902
+
+  - name: Miro Rachel Board
+    key: "04"
+    type: miro
+    board_id: uXjVJUOanb0=
+    status: blocked
+    blocker: "403 Forbidden — private board, need invitation from Rachel Collier"
+
+  - name: Azure DevOps newUM
+    key: "05"
+    type: azure-devops
+    url: https://dev.azure.com/oncologyanalytics/newUM
+    status: partial
+    chars: 589
+    blocker: "Auth works, wiki access denied"
+
+  - name: Atlassian Confluence
+    key: "06"
+    type: atlassian
+    url: https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM
+    status: blocked
+    blocker: "Separate SSO — need Atlassian-specific credentials"
+
+  - name: SharePoint RAID
+    key: "07"
+    type: sharepoint-xlsx
+    url: https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx
+    download_url: https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx
+    status: complete
+    chars: 29886
+
+  - name: SharePoint Change Request
+    key: "08"
+    type: sharepoint-docx
+    url: https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx
+    download_url: https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx
+    status: complete
+    chars: 1351
+
+  - name: Databricks Dev
+    key: "09"
+    type: databricks
+    url: https://adb-2393860672770324.4.azuredatabricks.net/
+    status: blocked
+    blocker: "No account provisioned — need admin"
+
+  - name: Teams (web scrape)
+    type: teams
+    status: complete
+    chars: 97895
+
+  - name: Calendar (Outlook)
+    type: calendar-outlook
+    status: complete
+    chars: 3764
+
+  - name: Calendar (Google/NFG)
+    type: calendar-google
+    status: not_started
+    note: "NFG email calendar not yet captured"
+
+  - name: Graph API
+    type: graph-api
+    status: blocked
+    blocker: "Admin consent required (Request Id: b05c3b4b)"
+
+tech_stack:
+  backend: [".NET 10", "MS-SQL", "Azure Service Bus", "Kubernetes", "Okta"]
+  frontend: ["React", "MUI/MUI X", "Vite", "TanStack Query"]
+  testing: ["NUnit", "Vitest", "RTL", "Playwright"]
+  devops: ["Azure DevOps", "Terraform", "SonarQube", "DataDog"]
+  data: ["Databricks", "Azure Blob Storage"]
+
+team:
+  - name: Erik Hjortshoj
+    role: SVP Engineering / Consulting CPTO
+  - name: Rachel Collier
+    role: PM / Onboarding Coordinator
+  - name: Jack Hall
+    role: Architecture Lead
+  - name: Michal Mucha
+    role: Data Team Lead
+  - name: Vika Nobis
+    role: Sprint Planning / Scrum Master
+  - name: Arben Osmani
+    role: Provider Discussion Lead
+  - name: Sandy Gress
+    role: Product / Client Strategy
+  - name: Alyssa Gessleman
+    role: UX Lead
+  - name: Donato Buccella
+    role: Engineering (Postgres / TAT)
+  - name: Neal Ruggles
+    role: Engineering (.NET / TAT)
+  - name: Ann Dye
+    role: RAID Entry
+  - name: Marc Gale
+    role: Data / Provider Schema
+  - name: Dimple Patel
+    role: Test Automation
+  - name: Caitlin Bowler
+    role: UX Feedback
+
+executive_steering:
+  - Jon Maack
+  - Venky Subramaniam
+  - Ashley Wise
+  - Scott Blanchette
+  - Stephen Hau
+  - Will Crawford
+  - Erik Hjortshoj

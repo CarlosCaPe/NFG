@@ -4,7 +4,10 @@ output/.browser-profile/
 .env.*
 .dev.vars
 *.log
+clients/*/.env
 
 .graph-token.json
 
 .playwright-session-okta/
+.playwright-session-microsoft/
+.playwright-session-ms-auto/

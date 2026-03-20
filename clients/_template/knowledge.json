@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Client knowledge template — copy and fill for each new NFG sub-client",
+  "version": "1.0.0",
+  "last_updated": "",
+  "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
+
+  "identity": {
+    "project_name": "",
+    "project_full_name": "",
+    "confirmed": false,
+    "source": ""
+  },
+
+  "contracting_chain": {
+    "your_company": { "name": "dataqbs", "role": "contractor" },
+    "staffing_partner": { "name": "NewFire Global Partners", "alias": "NFG", "role": "staffing / consulting partner" },
+    "end_client": { "name": "", "legal_name": "", "domain": "", "role": "end client" },
+    "chain": "dataqbs → NFG → [CLIENT]"
+  },
+
+  "your_role": {
+    "title": "AI-Leveraged Documenter",
+    "description": "Project documentation and specs, automated via Python/Node",
+    "tools": ["Python", "Node.js", "VS Code", "Copilot", "Claude"]
+  },
+
+  "email_identity": {
+    "nfg_email": "carlos.carrillo@newfireglobal.com",
+    "client_emails": [],
+    "client_username": ""
+  },
+
+  "environments": {},
+  "tech_stack": {},
+  "key_contacts": [],
+  "access_status": { "completed": [], "partial": [], "blocked": [] },
+  "unknowns": [],
+  "next_steps": []
+}
