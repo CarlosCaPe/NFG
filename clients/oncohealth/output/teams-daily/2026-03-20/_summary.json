@@ -1,80 +1,111 @@
 {
   "date": "2026-03-20",
-  "started": "2026-03-20T18:27:21.989Z",
-  "channels": {
-    "General": {
-      "chars": 2768,
-      "messages": "(fallback)",
-      "file": "General.txt"
+  "started": "2026-03-20T19:28:41.128Z",
+  "channels": {},
+  "chats": {},
+  "calendar": {},
+  "transcripts": {
+    "Data team - daily (Monday)": {
+      "chars": 1441,
+      "file": "Data-team---daily-(Monday).txt",
+      "type": "recap"
     },
-    "NewUM": {
-      "chars": 2788,
-      "messages": "(fallback)",
-      "file": "NewUM.txt"
+    "Data team - daily (Monday) (transcript)": {
+      "chars": 1464,
+      "file": "Data-team---daily-(Monday)-transcript.txt",
+      "type": "transcript"
     },
-    "Clinical Scheduling": {
-      "chars": 2807,
-      "messages": "(fallback)",
-      "file": "Clinical-Scheduling.txt"
+    "Eligibility workshop (Monday)": {
+      "chars": 1376,
+      "file": "Eligibility-workshop-(Monday).txt",
+      "type": "recap"
     },
-    "CRS/CRR Scheduling": {
-      "chars": 2813,
-      "messages": "(fallback)",
-      "file": "CRS-CRR-Scheduling.txt"
+    "Eligibility workshop (Monday) (transcript)": {
+      "chars": 1382,
+      "file": "Eligibility-workshop-(Monday)-transcript.txt",
+      "type": "transcript"
     },
-    "IT Helpdesk Scheduling": {
-      "chars": 2829,
-      "messages": "(fallback)",
-      "file": "IT-Helpdesk-Scheduling.txt"
+    "Sprint Demo and Planning (Tuesday)": {
+      "chars": 1670,
+      "file": "Sprint-Demo-and-Planning-(Tuesday).txt",
+      "type": "recap"
+    },
+    "Sprint Demo and Planning (Tuesday) (transcript)": {
+      "chars": 1729,
+      "file": "Sprint-Demo-and-Planning-(Tuesday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Data team - daily (Tuesday)": {
+      "chars": 1441,
+      "file": "Data-team---daily-(Tuesday).txt",
+      "type": "recap"
+    },
+    "Data team - daily (Tuesday) (transcript)": {
+      "chars": 1464,
+      "file": "Data-team---daily-(Tuesday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Provider Discussion (Tuesday)": {
+      "chars": 1380,
+      "file": "Provider-Discussion-(Tuesday).txt",
+      "type": "recap"
+    },
+    "Provider Discussion (Tuesday) (transcript)": {
+      "chars": 1387,
+      "file": "Provider-Discussion-(Tuesday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Databricks Lakeflow Connect (Wednesday)": {
+      "chars": 1454,
+      "file": "Databricks-Lakeflow-Connect-(Wednesday).txt",
+      "type": "recap"
+    },
+    "Databricks Lakeflow Connect (Wednesday) (transcript)": {
+      "chars": 1395,
+      "file": "Databricks-Lakeflow-Connect-(Wednesday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Data team - daily (Wednesday)": {
+      "chars": 1441,
+      "file": "Data-team---daily-(Wednesday).txt",
+      "type": "recap"
+    },
+    "Data team - daily (Wednesday) (transcript)": {
+      "chars": 1464,
+      "file": "Data-team---daily-(Wednesday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Payer taxonomy workshop (Wednesday)": {
+      "chars": 1430,
+      "file": "Payer-taxonomy-workshop-(Wednesday).txt",
+      "type": "recap"
+    },
+    "Payer taxonomy workshop (Wednesday) (transcript)": {
+      "chars": 1453,
+      "file": "Payer-taxonomy-workshop-(Wednesday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Data team - daily (Thursday)": {
+      "chars": 1441,
+      "file": "Data-team---daily-(Thursday).txt",
+      "type": "recap"
+    },
+    "Data team - daily (Thursday) (transcript)": {
+      "chars": 1464,
+      "file": "Data-team---daily-(Thursday)-transcript.txt",
+      "type": "transcript"
+    },
+    "Eligibility - Payer taxonomy v2 (Thursday)": {
+      "chars": 1519,
+      "file": "Eligibility---Payer-taxonomy-v2-(Thursday).txt",
+      "type": "recap"
+    },
+    "Eligibility - Payer taxonomy v2 (Thursday) (transcript)": {
+      "chars": 1418,
+      "file": "Eligibility---Payer-taxonomy-v2-(Thursday)-transcript.txt",
+      "type": "transcript"
     }
   },
-  "chats": {
-    "Data team - daily": {
-      "chars": 6275,
-      "messages": 20,
-      "file": "Data-team---daily.txt"
-    },
-    "Eligibility - Person/Member workshop": {
-      "chars": 30440,
-      "messages": 12,
-      "file": "Eligibility---Person-Member-workshop.txt"
-    },
-    "Payer taxonomy workshop": {
-      "chars": 573,
-      "messages": 2,
-      "file": "Payer-taxonomy-workshop.txt"
-    },
-    "Databricks Lakeflow Connect": {
-      "chars": 2470,
-      "messages": "(fallback)",
-      "file": "Databricks-Lakeflow-Connect.txt"
-    },
-    "Provider Discussion": {
-      "chars": 2660,
-      "messages": 8,
-      "file": "Provider-Discussion.txt"
-    },
-    "Claude workshop - how to boost our work performance": {
-      "chars": 715,
-      "messages": 8,
-      "file": "Claude-workshop---how-to-boost-our-work-performance.txt"
-    },
-    "Erik and Michal": {
-      "chars": 799,
-      "messages": 10,
-      "file": "Erik-and-Michal.txt"
-    },
-    "Eligibility workshop": {
-      "chars": 7638,
-      "messages": 14,
-      "file": "Eligibility-workshop.txt"
-    }
-  },
-  "calendar": {
-    "success": true,
-    "chars": 1584
-  },
-  "transcripts": {},
-  "total_chars": 67159,
-  "completed": "2026-03-20T18:37:43.226Z"
+  "total_chars": 29213,
+  "completed": "2026-03-20T19:37:05.116Z"
 }

@@ -646,100 +646,293 @@ async function captureCalendar(page) {
 }
 
 // ---------------------------------------------------------------------------
-// Capture: Transcripts (from meeting chats)
+// Capture: Transcripts (from Teams calendar + meeting chats)
 // ---------------------------------------------------------------------------
 async function captureTranscripts(page) {
   console.log('\n' + '═'.repeat(60));
-  console.log('📝 TRANSCRIPTS');
+  console.log('📝 TRANSCRIPTS / RECAPS');
   console.log('═'.repeat(60));
-
-  // Transcripts appear in Teams meeting chats or Calendar meeting details
-  // Strategy: check Chat tab for meetings with transcript indicators
 
   const results = {};
 
-  // Navigate to calendar view in Teams to find recent meetings
+  // ── Step 1: Navigate to Teams ──────────────────────────────────────────────
   try {
-    const calBtn = await page.$('button[aria-label*="Calendar"], a[aria-label*="Calendar"], [data-tid="teams-app-bar-calendar"]');
+    await page.goto('https://teams.microsoft.com', { waitUntil: 'domcontentloaded', timeout: 30000 });
+  } catch (e) {
+    console.log(`  Nav warning: ${e.message.substring(0, 60)}`);
+  }
+  await page.waitForTimeout(5000);
+  const authed = await handleAuth(page);
+  if (!authed) {
+    console.log('  ❌ Teams auth failed for transcripts');
+    return results;
+  }
+  console.log('  ⏳ Waiting for Teams to load (20s)...');
+  await page.waitForTimeout(20000);
+
+  // ── Step 2: Click Calendar in sidebar ─────────────────────────────────────
+  try {
+    const calBtn = await page.$('button[aria-label*="Calendar" i]');
     if (calBtn) {
-      console.log('  → Clicking Calendar in Teams');
+      console.log('  → Clicking Calendar in Teams sidebar');
       await calBtn.click();
-      await page.waitForTimeout(8000);
+    } else {
+      console.log('  ⚠️ Calendar button not found');
+      return results;
     }
-  } catch (e) { /* ignore */ }
+  } catch (e) {
+    console.log('  ❌ Calendar click error:', e.message.substring(0, 60));
+    return results;
+  }
 
-  await page.screenshot({ path: path.join(TODAY_DIR, 'transcripts-calendar.png'), fullPage: false });
+  // ── Step 3: Wait for Outlook iframe to load ───────────────────────────────
+  // Teams Calendar embeds Outlook in an iframe
+  console.log('  ⏳ Waiting for Calendar iframe (30s)...');
+  await page.waitForTimeout(30000);
 
-  // Look for meetings with "Recap" or "Transcript" indicators
-  const meetings = await page.evaluate(() => {
-    const items = document.querySelectorAll('[class*="calendar-event"], [role="listitem"], [data-app-section="CalendarEvent"]');
-    return Array.from(items).map(item => ({
-      text: item.innerText?.trim().substring(0, 200),
-      hasTranscript: item.innerText?.toLowerCase().includes('transcript') ||
-                     item.innerText?.toLowerCase().includes('recap') ||
-                     item.innerText?.toLowerCase().includes('recording'),
-    })).filter(m => m.text && m.text.length > 3);
+  let calFrame = page.frames().find(f => f.url().includes('outlook.office.com'));
+  if (!calFrame) {
+    // Retry once — sometimes iframe takes longer
+    console.log('  ⏳ Retrying iframe detection (10s)...');
+    await page.waitForTimeout(10000);
+    calFrame = page.frames().find(f => f.url().includes('outlook.office.com'));
+  }
+  if (!calFrame) {
+    console.log('  ❌ Calendar iframe not found');
+    await page.screenshot({ path: path.join(TODAY_DIR, 'transcripts', '_no-iframe.png') });
+    return results;
+  }
+  console.log(`  ✅ Calendar iframe: ${calFrame.url().substring(0, 80)}`);
+
+  // ── Step 4: Extract calendar events from iframe ───────────────────────────
+  const events = await calFrame.evaluate(() => {
+    const divs = document.querySelectorAll('div[role="button"]');
+    return Array.from(divs).map(el => ({
+      text: el.innerText?.trim().replace(/\n/g, ' | ').substring(0, 100),
+      ariaLabel: (el.getAttribute('aria-label') || '').substring(0, 300),
+    })).filter(e => e.ariaLabel.includes('AM') || e.ariaLabel.includes('PM'));
   });
 
-  console.log(`  Found ${meetings.length} calendar items`);
-  const withTranscripts = meetings.filter(m => m.hasTranscript);
-  if (withTranscripts.length > 0) {
-    console.log(`  📎 ${withTranscripts.length} with transcript/recap indicators`);
+  console.log(`  📅 Found ${events.length} calendar events`);
+  events.forEach((e, i) => console.log(`    ${i}: ${e.ariaLabel.substring(0, 100)}`));
+
+  if (events.length === 0) {
+    console.log('  ℹ️  No events in current calendar view');
+    return results;
   }
 
-  // For each meeting with transcript, try to click and extract
-  for (const meeting of withTranscripts) {
-    const shortName = meeting.text.split('\n')[0].substring(0, 60);
-    console.log(`\n  📝 Meeting: ${shortName}`);
+  await page.screenshot({ path: path.join(TODAY_DIR, 'transcripts', '_calendar-view.png') });
+
+  // ── Step 5: For each event, click → Chat → Recap ─────────────────────────
+  // De-duplicate events (same meeting name on different days = different instances)
+  const seenNames = new Set();
+
+  for (let idx = 0; idx < events.length; idx++) {
+    const event = events[idx];
+    const ariaLabel = event.ariaLabel;
+
+    // Extract meeting name (first part before the comma)
+    const meetingName = ariaLabel.split(',')[0].trim();
+    // Extract day info for dedup
+    const dayMatch = ariaLabel.match(/(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
+    const day = dayMatch ? dayMatch[1] : `evt${idx}`;
+    const uniqueKey = `${meetingName} (${day})`;
+
+    if (seenNames.has(uniqueKey)) continue;
+    seenNames.add(uniqueKey);
+
+    console.log(`\n  ── [${idx + 1}/${events.length}] ${meetingName} (${day}) ──`);
+
     try {
-      // Click on the meeting
-      const meetingEl = await page.$(`[role="listitem"]:has-text("${shortName}"), [class*="calendar-event"]:has-text("${shortName}")`);
-      if (meetingEl) {
-        await meetingEl.click();
-        await page.waitForTimeout(5000);
-
-        // Look for transcript tab/button
-        const transcriptBtn = await page.$('button:has-text("Transcript"), a:has-text("Transcript"), [aria-label*="Transcript"]');
-        if (transcriptBtn) {
-          await transcriptBtn.click();
-          await page.waitForTimeout(5000);
-        }
-
-        // Look for recap tab/button
-        const recapBtn = await page.$('button:has-text("Recap"), a:has-text("Recap"), [aria-label*="Recap"]');
-        if (recapBtn) {
-          await recapBtn.click();
-          await page.waitForTimeout(5000);
-        }
-
-        // Extract whatever is visible
-        const content = await page.evaluate(() => document.body?.innerText || '');
-        const filename = sanitize(shortName) + '.txt';
-        const filePath = path.join(TODAY_DIR, 'transcripts', filename);
-        fs.writeFileSync(filePath, `=== Transcript: ${shortName} ===\nCaptured: ${new Date().toISOString()}\n\n${content}`, 'utf-8');
-        console.log(`    ✅ ${content.length} chars → ${filename}`);
-        results[shortName] = { chars: content.length, file: filename };
-
-        // Go back
-        await page.goBack();
-        await page.waitForTimeout(3000);
+      // Re-acquire calendar iframe (may have changed after navigation)
+      calFrame = page.frames().find(f => f.url().includes('outlook.office.com'));
+      if (!calFrame) {
+        console.log('    ⚠️ Calendar iframe lost, clicking Calendar again...');
+        const calBtn2 = await page.$('button[aria-label*="Calendar" i]');
+        if (calBtn2) await calBtn2.click();
+        await page.waitForTimeout(15000);
+        calFrame = page.frames().find(f => f.url().includes('outlook.office.com'));
+        if (!calFrame) { console.log('    ❌ Could not recover iframe'); continue; }
       }
+
+      // Click the calendar event in the iframe
+      const eventEl = calFrame.locator(`div[role="button"]`).filter({ hasText: meetingName });
+      const count = await eventEl.count();
+      if (count === 0) {
+        console.log(`    ⚠️ Event not found in DOM`);
+        continue;
+      }
+
+      // If there are multiple events with same name (recurring), click the right day
+      let clicked = false;
+      for (let ci = 0; ci < count; ci++) {
+        const el = eventEl.nth(ci);
+        const elAria = await el.getAttribute('aria-label') || '';
+        if (elAria.includes(day)) {
+          await el.click({ timeout: 5000 });
+          clicked = true;
+          break;
+        }
+      }
+      if (!clicked) {
+        // Fallback: click first matching
+        await eventEl.first().click({ timeout: 5000 });
+      }
+
+      // Wait for popover to appear
+      await page.waitForTimeout(5000);
+
+      // Find and click "Chat" button in the popover (inside iframe)
+      const chatBtn = calFrame.locator('button[aria-label*="Chat with participants"], button:has-text("Chat")').first();
+      const chatExists = await chatBtn.count();
+      if (chatExists === 0) {
+        console.log(`    ⚠️ No Chat button in popover — closing`);
+        await page.keyboard.press('Escape');
+        await page.waitForTimeout(2000);
+        continue;
+      }
+
+      console.log(`    → Clicking Chat button`);
+      await chatBtn.click({ timeout: 5000 });
+      await page.waitForTimeout(8000);
+
+      // Now Teams should have navigated to the meeting chat
+      // Look for Recap tab in the main page (not iframe)
+      const mainText = await page.evaluate(() => document.body?.innerText?.substring(0, 200) || '');
+
+      // Check if we're in the meeting chat (should see tab names)
+      const hasRecapTab = await page.$('button:has-text("Recap"), [role="tab"]:has-text("Recap"), [aria-label*="Recap"]');
+
+      if (hasRecapTab) {
+        console.log(`    → Found Recap tab — clicking`);
+        await hasRecapTab.click();
+        await page.waitForTimeout(8000);
+
+        // Extract recap content — filter out sidebar UI noise
+        const recapContent = await page.evaluate(() => {
+          // Try to find the main content area (right pane)
+          const mainArea = document.querySelector('[data-tid="chat-pane-compose-message"]')?.closest('[class*="chat"]')
+            || document.querySelector('[class*="right-rail"]')
+            || document.querySelector('[class*="message-pane"]')
+            || document.querySelector('main')
+            || null;
+          if (mainArea && mainArea.innerText?.length > 100) return mainArea.innerText;
+
+          // Fallback: grab full body text but strip sidebar (first ~700 chars of noise)
+          const full = document.body?.innerText || '';
+          // Find where meeting name appears in the content area (after sidebar)
+          const sidebarEndIndicators = ['Has context menu\n', 'See all your teams\n', 'See more\n'];
+          let startPos = 0;
+          for (const indicator of sidebarEndIndicators) {
+            const idx = full.lastIndexOf(indicator);
+            if (idx > startPos) startPos = idx + indicator.length;
+          }
+          return full.substring(startPos).trim();
+        });
+
+        if (recapContent.length > 300) {
+          const filename = sanitize(uniqueKey) + '.txt';
+          const filePath = path.join(TODAY_DIR, 'transcripts', filename);
+          fs.writeFileSync(filePath,
+            `=== Meeting Recap: ${meetingName} ===\nDay: ${day}\nSource: ${ariaLabel}\nCaptured: ${new Date().toISOString()}\nType: recap\n\n${recapContent}`,
+            'utf-8'
+          );
+          console.log(`    ✅ RECAP: ${recapContent.length} chars → ${filename}`);
+          results[uniqueKey] = { chars: recapContent.length, file: filename, type: 'recap' };
+        }
+      }
+
+      // Also check for full Transcript tab
+      const hasTranscriptTab = await page.$('button:has-text("Transcript"), [role="tab"]:has-text("Transcript"), [aria-label*="Transcript"]');
+      if (hasTranscriptTab) {
+        console.log(`    → Found Transcript tab — clicking`);
+        await hasTranscriptTab.click();
+        await page.waitForTimeout(8000);
+
+        const transcriptContent = await page.evaluate(() => {
+          const full = document.body?.innerText || '';
+          const sidebarEndIndicators = ['Has context menu\n', 'See all your teams\n', 'See more\n'];
+          let startPos = 0;
+          for (const indicator of sidebarEndIndicators) {
+            const idx = full.lastIndexOf(indicator);
+            if (idx > startPos) startPos = idx + indicator.length;
+          }
+          return full.substring(startPos).trim();
+        });
+
+        if (transcriptContent.length > 300) {
+          const filename = sanitize(uniqueKey) + '-transcript.txt';
+          const filePath = path.join(TODAY_DIR, 'transcripts', filename);
+          fs.writeFileSync(filePath,
+            `=== Meeting Transcript: ${meetingName} ===\nDay: ${day}\nSource: ${ariaLabel}\nCaptured: ${new Date().toISOString()}\nType: transcript\n\n${transcriptContent}`,
+            'utf-8'
+          );
+          console.log(`    ✅ TRANSCRIPT: ${transcriptContent.length} chars → ${filename}`);
+          results[uniqueKey + ' (transcript)'] = { chars: transcriptContent.length, file: filename, type: 'transcript' };
+        }
+      }
+
+      // If no Recap or Transcript tab, at least capture the meeting chat content
+      if (!hasRecapTab && !hasTranscriptTab) {
+        console.log(`    ℹ️  No Recap/Transcript tabs — capturing chat`);
+        const chatContent = await page.evaluate(() => {
+          const full = document.body?.innerText || '';
+          const sidebarEndIndicators = ['Has context menu\n', 'See all your teams\n', 'See more\n'];
+          let startPos = 0;
+          for (const indicator of sidebarEndIndicators) {
+            const idx = full.lastIndexOf(indicator);
+            if (idx > startPos) startPos = idx + indicator.length;
+          }
+          return full.substring(startPos).trim();
+        });
+
+        if (chatContent.length > 300) {
+          const filename = sanitize(uniqueKey) + '-chat.txt';
+          const filePath = path.join(TODAY_DIR, 'transcripts', filename);
+          fs.writeFileSync(filePath,
+            `=== Meeting Chat: ${meetingName} ===\nDay: ${day}\nSource: ${ariaLabel}\nCaptured: ${new Date().toISOString()}\nType: chat\n\n${chatContent}`,
+            'utf-8'
+          );
+          console.log(`    📝 CHAT: ${chatContent.length} chars → ${filename}`);
+          results[uniqueKey] = { chars: chatContent.length, file: filename, type: 'chat' };
+        }
+      }
+
+      // Navigate back to Calendar for next event
+      console.log(`    ← Back to Calendar`);
+      const calBtn3 = await page.$('button[aria-label*="Calendar" i]');
+      if (calBtn3) {
+        await calBtn3.click();
+        await page.waitForTimeout(15000);
+      }
+
     } catch (e) {
-      console.log(`    ❌ Error: ${e.message.substring(0, 60)}`);
+      console.log(`    ❌ Error: ${e.message.substring(0, 80)}`);
+      // Try to recover by going back to Calendar
+      try {
+        const calBtnRecovery = await page.$('button[aria-label*="Calendar" i]');
+        if (calBtnRecovery) {
+          await calBtnRecovery.click();
+          await page.waitForTimeout(10000);
+        }
+      } catch (_) { /* last resort */ }
     }
   }
 
-  if (Object.keys(results).length === 0) {
-    console.log('  ℹ️  No transcripts found for today');
-
-    // Save a summary of what meetings exist
-    if (meetings.length > 0) {
-      const summary = ['=== MEETINGS (no transcripts) ===',
-        `Date: ${TODAY}`, '',
-        ...meetings.map((m, i) => `${i + 1}. ${m.text.split('\n')[0]}`),
-      ].join('\n');
-      fs.writeFileSync(path.join(TODAY_DIR, 'transcripts', '_meetings-summary.txt'), summary, 'utf-8');
-    }
+  // ── Summary ───────────────────────────────────────────────────────────────
+  const capturedCount = Object.keys(results).length;
+  if (capturedCount > 0) {
+    console.log(`\n  ✅ Captured ${capturedCount} meeting recaps/transcripts`);
+  } else {
+    console.log('\n  ℹ️  No meeting content captured');
+    // Save a summary of events detected
+    const summary = [
+      '=== CALENDAR EVENTS DETECTED ===',
+      `Date: ${TODAY}`, '',
+      ...events.map((e, i) => `${i + 1}. ${e.ariaLabel.substring(0, 120)}`),
+    ].join('\n');
+    fs.writeFileSync(path.join(TODAY_DIR, 'transcripts', '_events-detected.txt'), summary, 'utf-8');
+    console.log(`  📋 Saved list of ${events.length} detected events`);
   }
 
   return results;
@@ -763,6 +956,7 @@ async function captureTranscripts(page) {
 
   const context = await chromium.launchPersistentContext(SESSION_DIR, {
     headless: false,
+    channel: 'msedge',
     viewport: { width: 1400, height: 900 },
     args: ['--disable-blink-features=AutomationControlled'],
   });
@@ -788,14 +982,17 @@ async function captureTranscripts(page) {
       capture.chats = await captureChats(page);
     }
 
-    if (TARGET === 'calendar' || TARGET === 'all') {
-      capture.calendar = await captureCalendar(page);
-    }
-
+    // IMPORTANT: Transcripts run BEFORE calendar because captureCalendar
+    // navigates to Outlook (outlook.office.com), breaking the Teams context.
+    // captureTranscripts navigates back to teams.microsoft.com internally.
     if (TARGET === 'transcripts' || TARGET === 'all') {
       if (teamsConfig.capture_transcripts !== false) {
         capture.transcripts = await captureTranscripts(page);
       }
+    }
+
+    if (TARGET === 'calendar' || TARGET === 'all') {
+      capture.calendar = await captureCalendar(page);
     }
 
     // Calculate totals

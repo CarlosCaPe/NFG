@@ -1,5 +1,5 @@
 {
-  "last_capture": "2026-03-20T18:37:43.226Z",
+  "last_capture": "2026-03-20T19:37:05.116Z",
   "captures": [
     {
       "date": "2026-03-20",
@@ -16,6 +16,30 @@
       "transcripts": 0,
       "calendar_chars": 1584,
       "total_chars": 67159
+    },
+    {
+      "date": "2026-03-20",
+      "channels": 0,
+      "chats": 0,
+      "transcripts": 0,
+      "calendar_chars": 0,
+      "total_chars": 0
+    },
+    {
+      "date": "2026-03-20",
+      "channels": 0,
+      "chats": 0,
+      "transcripts": 0,
+      "calendar_chars": 0,
+      "total_chars": 0
+    },
+    {
+      "date": "2026-03-20",
+      "channels": 0,
+      "chats": 0,
+      "transcripts": 20,
+      "calendar_chars": 0,
+      "total_chars": 29213
     }
   ]
 }
