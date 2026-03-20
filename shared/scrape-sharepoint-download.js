@@ -16,12 +16,19 @@ const path = require('path');
 const ExcelJS = require('exceljs');
 const mammoth = require('mammoth');
 
-const OUT_DIR = path.join(__dirname, 'output', 'onboarding-content');
-const DOWNLOAD_DIR = path.join(__dirname, 'output', 'downloads');
-const SESSION_DIR = path.join(__dirname, '.playwright-session-okta');
+const ROOT_DIR = path.join(__dirname, '..');
+// Default to oncohealth client; override with --client <name>
+const clientArg = process.argv.indexOf('--client');
+const CLIENT = clientArg !== -1 ? process.argv[clientArg + 1] : 'oncohealth';
+const CLIENT_DIR = path.join(ROOT_DIR, 'clients', CLIENT);
+const OUT_DIR = path.join(CLIENT_DIR, 'output', 'onboarding-content');
+const DOWNLOAD_DIR = path.join(CLIENT_DIR, 'output', 'downloads');
+const SESSION_DIR = path.join(ROOT_DIR, '.playwright-session-okta');
 
-// Load .env (respect existing env vars)
-const envPath = path.join(__dirname, '.env');
+// Load .env — try client-level first, then root
+const clientEnv = path.join(CLIENT_DIR, '.env');
+const rootEnv = path.join(ROOT_DIR, '.env');
+const envPath = fs.existsSync(clientEnv) ? clientEnv : rootEnv;
 if (fs.existsSync(envPath)) {
   for (const line of fs.readFileSync(envPath, 'utf-8').split('\n')) {
     const m = line.match(/^([^#=]+)=(.+)$/);
@@ -50,6 +57,14 @@ const FILES = [
     viewUrl: 'https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx?d=w490ff8ed484b4e358d8669d9ea4360ec&csf=1&web=1&e=cvAcbB',
     downloadUrl: 'https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx',
     type: 'docx',
+  },
+  {
+    key: 'access',
+    name: 'NewUM - Team Access Inventory.xlsx',
+    outName: '10-team-access-inventory',
+    viewUrl: 'https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/_layouts/15/Doc.aspx?sourcedoc=%7B6FD29B69-5050-4CF0-882A-96C3D8BD0C85%7D&file=NewUM%20-%20Team%20Access%20Inventory.xlsx&action=default&mobileredirect=true',
+    downloadUrl: 'https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/NewUM%20-%20Team%20Access%20Inventory.xlsx',
+    type: 'xlsx',
   },
 ];
 

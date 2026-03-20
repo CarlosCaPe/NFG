@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.3.0",
-  "last_updated": "2026-03-19",
+  "version": "1.4.0",
+  "last_updated": "2026-03-20",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -171,15 +171,51 @@
     },
     {
       "name": "Jack Hall",
-      "role": "Team member",
+      "role": "Architecture Lead / Engineer — Backend",
+      "email": "jhall@oncohealth.us",
       "confirmed": true,
-      "source": "Teams meeting invite"
+      "source": "Teams meeting invite + access inventory"
+    },
+    {
+      "name": "Jakub Chabik",
+      "role": "Manager",
+      "email": "jchabik@oncohealth.us",
+      "confirmed": true,
+      "source": "access inventory"
+    },
+    {
+      "name": "Luiyi Valentin",
+      "role": "DevOps — Shared team",
+      "email": "lvalentin@oncohealth.us",
+      "confirmed": true,
+      "source": "access inventory"
+    },
+    {
+      "name": "Olha Pidhorna",
+      "role": "Lead QA",
+      "email": "opidhorna@oncohealth.us",
+      "confirmed": true,
+      "source": "access inventory"
+    },
+    {
+      "name": "Pero Jaman",
+      "role": "BA — Shared team",
+      "email": "pjaman@oncohealth.us",
+      "confirmed": true,
+      "source": "access inventory"
     },
     {
       "name": "Bernice Nyanjui",
       "role": "Team member — eligibility domain",
       "confirmed": true,
       "source": "Teams meeting invite (Eligibility workshop)"
+    },
+    {
+      "name": "Inna Mariienko",
+      "role": "BA / Admin — Shared team, access provisioning (Confluence)",
+      "email": "imariienko@oncologyanalytics.com",
+      "confirmed": true,
+      "source": "Teams async daily + access inventory"
     }
   ],
 
@@ -192,11 +228,13 @@
       "Miro REST API (NFG-Reader app, 130K chars from NewUM board)"
     ],
     "pending": [
-      "Azure DevOps access (SSO login required — dev.azure.com/oncologyanalytics/newUM)",
+      "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20)",
       "Databricks access (email devopsrequest@oncologyanalytics.com)",
       "Database access (email devopsrequest@oncologyanalytics.com)",
-      "Miro board access (contact Rachel Collier)",
-      "Atlassian/Confluence access (SSO login required)"
+      "Miro board access — contacted Rachel Collier (2026-03-20)",
+      "Atlassian/Confluence access — contacted Inna Mariienko (2026-03-20). NOTE: inventory says 'register with Onco email, access granted automatically' — login loop with @oncologyanalytics.com",
+      "Carlos's access inventory row is blank — needs to be filled in with current access status",
+      "MATIS access — separate request to clientsupport@oncohealth.us"
     ],
     "access_inventory": {
       "scan_date": "2026-03-19",
@@ -207,14 +245,15 @@
         { "resource": "Miro Rachel board", "status": "BLOCKED", "action": "403 Forbidden — private board, need Rachel's invitation" },
         { "resource": "Azure DevOps", "status": "PARTIAL", "method": "Playwright + Okta SSO + MFA", "note": "Auth works. Wiki access denied. Boards/Pipelines available." },
         { "resource": "Atlassian Confluence", "status": "BLOCKED", "note": "Separate SSO from Okta — needs Atlassian-specific credentials" },
-        { "resource": "SharePoint RAID xlsx", "status": "PARTIAL", "method": "Playwright + Okta SSO + GPT-4o vision", "note": "Excel Online loaded. 2 RAID rows extracted via screenshot." },
-        { "resource": "SharePoint Change Request", "status": "PARTIAL", "method": "Playwright + Okta SSO + GPT-4o vision", "note": "Word Online loaded. Template doc (Rev 1/20/2026) captured." },
+        { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
+        { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
+        { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
         { "resource": "Databricks dev", "status": "BLOCKED", "note": "Login page — need 'Continue with Entra ID' click. May need admin provisioning." }
       ],
-      "accessible": 3,
-      "partial": 3,
+      "accessible": 6,
+      "partial": 1,
       "blocked": 3,
-      "total_chars": 183467,
+      "total_chars": 349636,
       "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
     },
     "confirmed": true,
@@ -223,6 +262,15 @@
 
   "onboarding_documents": {
     "main_doc": "https://docs.google.com/document/d/1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew/edit?pli=1&tab=t.0#heading=h.uz9wsnxboxb6",
+    "team_access_inventory": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/_layouts/15/Doc.aspx?sourcedoc=%7B6FD29B69-5050-4CF0-882A-96C3D8BD0C85%7D&file=NewUM%20-%20Team%20Access%20Inventory.xlsx",
+    "onboarding_links": {
+      "vdi": "https://windows.cloud.microsoft/#/",
+      "azure_devops": "https://oncologyanalytics.visualstudio.com/newUM",
+      "confluence": "https://oncologyanalytics.atlassian.net/wiki/",
+      "miro": "https://miro.com/app/dashboard",
+      "sharepoint": "https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/SitePages/CollabHome.aspx",
+      "matis_support": "clientsupport@oncohealth.us"
+    },
     "raid_risk": "https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/newUM_RAID.xlsx",
     "scope_change": "https://oncologyanalyticsinc.sharepoint.com/:w:/r/sites/OncoHealth_NewFire/Shared%20Documents/Project%20Management/NewUM_Change%20Request.docx",
     "design_doc_template": "https://docs.google.com/document/d/19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno/edit?usp=sharing",

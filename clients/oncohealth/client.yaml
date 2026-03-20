@@ -103,6 +103,15 @@ services:
     status: not_started
     note: "NFG email calendar not yet captured"
 
+  - name: Team Access Inventory
+    key: "10"
+    type: sharepoint-xlsx
+    url: https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/_layouts/15/Doc.aspx?sourcedoc=%7B6FD29B69-5050-4CF0-882A-96C3D8BD0C85%7D&file=NewUM%20-%20Team%20Access%20Inventory.xlsx&action=default&mobileredirect=true
+    download_url: https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/NewUM%20-%20Team%20Access%20Inventory.xlsx
+    status: complete
+    chars: 37283
+    note: "Shared by Rachel Collier 2026-03-20. Constantly updated. Carlos has admin privilege. 46 team members, 46 columns of access data."
+
   - name: Graph API
     type: graph-api
     status: blocked
@@ -116,34 +125,246 @@ tech_stack:
   data: ["Databricks", "Azure Blob Storage"]
 
 team:
+  # --- Leadership ---
   - name: Erik Hjortshoj
     role: SVP Engineering / Consulting CPTO
-  - name: Rachel Collier
-    role: PM / Onboarding Coordinator
-  - name: Jack Hall
-    role: Architecture Lead
-  - name: Michal Mucha
-    role: Data Team Lead
-  - name: Vika Nobis
-    role: Sprint Planning / Scrum Master
-  - name: Arben Osmani
-    role: Provider Discussion Lead
+    email: ehjortshoj@oncohealth.us
+    source: inventory + onboarding doc
+  - name: Jakub Chabik
+    role: Manager
+    team: Manager
+    email: jchabik@oncohealth.us
+    source: inventory
   - name: Sandy Gress
     role: Product / Client Strategy
+    source: Teams calendar
+
+  # --- PM / BA ---
+  - name: Rachel Collier
+    role: PM / Onboarding Coordinator
+    email: rcollier@oncohealth.us
+    source: inventory + onboarding doc
+  - name: Vika Nobis
+    role: PM / Sprint Planning
+    team: Shared
+    email: vnobis@oncohealth.us
+    source: inventory
+  - name: Inna Mariienko
+    role: BA / Admin / Access Provisioning
+    team: Shared
+    email: imariienko@oncologyanalytics.com
+    source: inventory
+  - name: Pero Jaman
+    role: BA
+    team: Shared
+    email: pjaman@oncohealth.us
+    source: inventory
+  - name: Keeley Peck
+    role: Product
+    email: kpeck@oncohealth.us
+    source: inventory
+
+  # --- Backend ---
+  - name: Jack Hall
+    role: Architecture Lead / Engineer
+    team: Backend
+    email: jhall@oncohealth.us
+    source: inventory
+  - name: Arben Osmani
+    role: Engineer / Provider Discussion Lead
+    team: Shared
+    email: aosmani@oncohealth.us
+    source: inventory
+  - name: Bogdan Chachun
+    role: Engineer
+    team: Backend
+    email: bchachun@oncologyanalytics.com
+    source: inventory
+  - name: Dmytro Hridin
+    role: Engineer
+    team: Backend
+    email: dhridin@oncohealth.us
+    source: inventory
+  - name: Dražen Borota
+    role: Engineer
+    team: Backend
+    email: dborota@oncohealth.us
+    source: inventory
+  - name: Iryna Lukianovets
+    role: Engineer
+    team: Backend
+    email: ilukianovets@oncohealth.us
+    source: inventory
+  - name: Plamena Petrova
+    role: Engineer
+    team: Backend
+    email: ppetrova@oncohealth.us
+    source: inventory
+  - name: Roman Buchyn
+    role: Engineer
+    team: Backend
+    email: rbuchyn@oncohealth.us
+    source: inventory
+  - name: Vladyslav Kyrychuk
+    role: Engineer
+    team: Backend
+    email: vkyrychuk@oncohealth.us
+    source: inventory
+
+  # --- Frontend ---
+  - name: Dmytro Petriv
+    role: Engineer
+    team: Frontend
+    email: dpetriv@oncohealth.us
+    source: inventory
+  - name: Mykola Vorona
+    role: Engineer
+    team: Frontend
+    email: mvorona@oncohealth.us
+    source: inventory
+  - name: Petro Brezitskiy
+    role: FE Engineer
+    team: Frontend
+    email: pbrezitskiy@oncohealth.us
+    source: inventory
+
+  # --- QA ---
+  - name: Olha Pidhorna
+    role: Lead QA
+    team: QA
+    email: opidhorna@oncohealth.us
+    source: inventory
+  - name: Ivan Karpa
+    role: AQA
+    team: QA
+    email: ikarpa@oncohealth.us
+    source: inventory
+  - name: Taras Badlo
+    role: MQA
+    team: QA
+    email: tbadlo@oncologyanalytics.com
+    source: inventory
+  - name: Andriy Sapryka
+    role: AQA
+    team: Shared
+    email: asapryka@oncohealth.us
+    source: inventory
+
+  # --- UX ---
   - name: Alyssa Gessleman
-    role: UX Lead
+    role: PM (UX)
+    team: UX
+    email: agessleman@oncohealth.us
+    source: inventory
+  - name: Caitlin Bowler
+    role: UX
+    team: UX
+    email: cbowler@oncohealth.us
+    source: inventory
+  - name: Chris Gillis
+    role: UX
+    team: UX
+    email: cgillis@oncohealth.us
+    source: inventory
+  - name: Paulina Phillips
+    role: UX
+    team: UX
+    email: pphillips@oncohealth.us
+    source: inventory
+  - name: Jonathan Abbett
+    role: UX
+    team: UX
+    email: N/A
+    source: inventory
+  - name: Natasha Mohanty
+    role: UX
+    team: Shared
+    email: N/A
+    source: inventory
+  - name: Andrii Zhdan
+    role: UX
+    team: Shared
+    email: azhdan@oncohealth.us
+    source: inventory
+
+  # --- Data / DevOps / Shared ---
+  - name: Michal Mucha
+    role: Data Team Lead / Engineer
+    team: Shared
+    email: mmucha@oncologyanalytics.com
+    source: inventory
+  - name: Luiyi Valentin
+    role: DevOps
+    team: Shared
+    email: lvalentin@oncohealth.us
+    source: inventory
   - name: Donato Buccella
-    role: Engineering (Postgres / TAT)
+    role: Engineer
+    email: dbuccella@oncohealth.us
+    source: inventory
+  - name: Oleksandr Nykonenko
+    role: Engineer
+    team: Shared
+    email: onykonenko@oncohealth.us
+    source: inventory
+  - name: Yurii Bodnar
+    role: Engineer
+    team: Shared
+    email: ybodnar@oncohealth.us
+    source: inventory
+
+  # --- Advisors ---
+  - name: Brendan Iglehart
+    role: Advisor
+    email: biglehart@oncohealth.us
+    source: inventory
+  - name: Gordon Wong
+    role: Advisor
+    email: gwong@oncohealth.us
+    source: inventory
+  - name: John Moore
+    role: Advisor
+    email: jmoore@oncohealth.us
+    source: inventory
+  - name: Stan Huang
+    role: Advisor
+    email: shuang@oncohealth.us
+    source: inventory
+
+  # --- Minimal entries (email-only in inventory) ---
+  - name: Bernice Nyanjui
+    role: Eligibility domain
+    email: bnyanjui@oncohealth.us
+    source: inventory + Teams
+  - name: Evan Pankey
+    email: epankey@oncohealth.us
+    source: inventory
+  - name: Kim Jewell
+    email: kjewell@oncohealth.us
+    source: inventory
+  - name: Matthew Emerson
+    email: memerson@oncohealth.us
+    source: inventory
+  - name: Michal Kochanski
+    email: mkochanski@oncohealth.us
+    source: inventory
+  - name: Will Crawford
+    email: wcrawford@oncohealth.us
+    source: inventory
+
+  # --- From other sources (not in access inventory) ---
   - name: Neal Ruggles
-    role: Engineering (.NET / TAT)
+    role: Engineering (.NET)
+    source: Teams calendar
   - name: Ann Dye
     role: RAID Entry
+    source: RAID log
   - name: Marc Gale
     role: Data / Provider Schema
+    source: Teams chat
   - name: Dimple Patel
     role: Test Automation
-  - name: Caitlin Bowler
-    role: UX Feedback
+    source: Teams chat
 
 executive_steering:
   - Jon Maack
