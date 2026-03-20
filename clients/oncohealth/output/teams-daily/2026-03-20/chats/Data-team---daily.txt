@@ -1,0 +1,203 @@
+=== Chat: Data team - daily ===
+Captured: 2026-03-20T18:31:44.747Z
+
+[20 messages extracted (structured)]
+
+ : Hi guys, i need to log off earlier for family reasons. I'll be available tonight to make up the working hours.
+
+My updates: 
+
+What I have done: 
+updated the provider diagram and the data dictionary based on yesterdays meeting and added them to the system design doc.
+What I plan to next working day: continue reviewing the document and also discuss it with Michal to review it together, if that's okay.
+Questions / brainstorming request / pair programming request:  Probably a discussion with Michal.
+
+1 Like reaction.
+
+ : Arben Osmani
+3/18/2026 8:19 AM
+Hi guys, i need to log off earlier for family reasons. I'll be available tonight to make up the working hours. My updates: What I have done: updated the provider diagram and the data dictionary based on yesterdays meeting and added them to the system design doc. What I plan to next working da…
+
+We need to be professional and deliver best, but remember family & health first. 
+
+1 Heart reaction.
+
+ : Everyone joining?
+
+ : NewUM Data Team System Design Document.docx
+
+NewUM Data Team System Design Document.docx
+OncoHealth_NewFire > Phase 1 Deliverables
+
+ : https://dev.azure.com/oncologyanalytics/newUM/_git/newum_data_processing_analysis
+
+ : 🎶
+
+Steely Dan - Josie
+
+Pink Floyd - Wish you were here, Comfortably Numb
+
+Sublime - Santeria
+
+Eagles - Peaceful Easy Feeling
+
+ 
+
+ 
+
+3 Multiple musical notes reactions.
+3
+
+ : music all kind of music.. but this is special one I think ... https://www.youtube.com/watch?v=0Ssi-9wS1so 
+
+YouTube
+
+Angine de Poitrine - Full Performance (Live on KEXP)
+
+KEXP
+
+3.7M views · one month ago
+
+Open
+By using YouTube, you agree to the 
+privacy policy
+, 
+terms of use
+, and 
+permissions
+.
+1 Like reaction with medium light skin tone.
+1 Multiple musical notes reaction.
+1 Surprised reaction.
+
+ : https://soundcloud.com/bdstf/blue-lights-redux
+
+Blue Lights Redux
+
+Stream Blue Lights Redux by bdstf on desktop and mobile. Play over 320 million tracks for free on SoundCloud.
+
+soundcloud.com
+1 Multiple musical notes reaction.
+1 Like reaction with medium light skin tone.
+
+ : Few from my end:
+
+https://youtu.be/aJg4OJxp-co
+https://youtu.be/umdbVS9ud4I?list=RDumdbVS9ud4I - this guy teach me to play back in time
+https://youtu.be/CDbL51q0pNk?list=RDCDbL51q0pNk - local band from my city
+
+ 
+
+1 Multiple musical notes reaction.
+1 Like reaction with medium light skin tone.
+
+ : Daft Punk - Discovery https://www.youtube.com/watch?v=A2VpR8HahKc&list=PLSdoVPM5WnndSQEXRz704yQkKwx76GvPV
+
+YouTube
+
+Daft Punk - One More Time (Official Audio)
+
+Daft Punk
+
+33.4M views · 10 years ago
+
+Open
+By using YouTube, you agree to the 
+privacy policy
+, 
+terms of use
+, and 
+permissions
+.
+
+ 
+
+1 Heart reaction.
+1 Like reaction with medium light skin tone.
+
+ : Everyone I got clash with meetings, let's do an async daily today, txt format in chat:
+
+What I have done:
+What I plan to next working day:
+Questions / brainstorming request / pair programming request:
+
+1 Like reaction.
+
+ : What I have done:
+
+Mostly documentation, added Case Schema with some key concepts model here
+Also addressing comments from Venky, to be sure we clearly explain what we want to achieve
+Preparation for upcoming meeting on Eligiiblity > Members
+Catching up with Case Domain
+
+What I plan to next working day:
+
+Keep working on documentation
+Case Domain investigation
+
+Questions / brainstorming request / pair programming request:
+
+nothing at the moment from my end
+
+ : Please make sure u keep our board updated, comments, statuses etc
+
+ : What I have done:
+
+Completed SharePoint document extraction — full RAID spreadsheet (35 items, 3 sheets) and Change Request template now fully captured and indexed
+Reviewed RAID items to build context on active risks, decisions, and team responsibilities
+Continued onboarding knowledge capture across services (Teams, Calendar, Miro, Google Docs, SharePoint) — ~313K chars of project knowledge indexed so far
+
+What I plan to next working day:
+
+Deep dive into Case Domain documentation based on captured knowledge
+Review Eligibility / Payer Taxonomy analysis from data team materials
+Continue building documentation profile for newUM — connecting architecture decisions from RAID with technical specs from Miro board
+Follow up on pending access: Atlassian Confluence, Azure DevOps wiki, Databricks
+
+Questions / brainstorming request / pair programming request:
+
+I still don't have access to Atlassian Confluence — who can provision my account? (tried both @oncologyanalytics.com and @oncohealth.us, neither works for login)
+Azure DevOps wiki access is denied — can someone grant wiki read permissions?
+Is there a preferred location/format where documentation deliverables should live? (Confluence? SharePoint? Azure DevOps wiki?)
+
+ : What I have done:
+
+Mostly working on the new part of the databricks app to ingest the data to our UC 
+Catching up with Case Domain
+
+What I plan to next working day:
+
+Keep working on the databricks app
+Case Domain
+
+ : Carlos Carrillo
+3/20/2026 9:43 AM
+What I have done: Completed SharePoint document extraction — full RAID spreadsheet (35 items, 3 sheets) and Change Request template now fully captured and indexedReviewed RAID items to build context on active risks, decisions, and team responsibilitiesContinued onboarding knowledge capture acros…
+I still don't have access to Atlassian Confluence — who can provision my account?
+Azure DevOps wiki access is denied — can someone grant wiki read permissions?
+
+- Vika can u help here?
+
+ : Inna Mariienko was the one who I contacted today and she was able to help me with Confluence. Maybe a good starting point?
+
+ : I believe DevOps is Vika for sure, not sure about Confluence
+
+ : Michal Mucha
+3/20/2026 9:50 AM
+I believe DevOps is Vika for sure, not sure about Confluence
+Yes, Vika helped me with devops. Inna helped with confluence
+
+2 Like reactions.
+2
+
+ : Have done:
+
+Added notebook to highlight data dump from dbx -> lake via parquet (gold snapshot)
+https://dev.azure.com/oncologyanalytics/newUM/_git/newum_data_processing_analysis?path=%2Fsrc%2Fnot…
+Had to use dev lake for now as I still can't get a connection to the vtde lake they want us to use
+
+ 
+
+To do:
+
+Finish specifications/feedback in ADO tickets

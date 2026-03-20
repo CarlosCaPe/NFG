@@ -1,0 +1,21 @@
+{
+  "last_capture": "2026-03-20T18:37:43.226Z",
+  "captures": [
+    {
+      "date": "2026-03-20",
+      "channels": 5,
+      "chats": 8,
+      "transcripts": 0,
+      "calendar_chars": 1579,
+      "total_chars": 1579
+    },
+    {
+      "date": "2026-03-20",
+      "channels": 5,
+      "chats": 8,
+      "transcripts": 0,
+      "calendar_chars": 1584,
+      "total_chars": 67159
+    }
+  ]
+}

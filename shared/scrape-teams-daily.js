@@ -341,7 +341,7 @@ async function captureChannels(page) {
   const results = {};
   const channelNames = teamsConfig.channels || [];
 
-  // Navigate to Teams tab
+  // Navigate to Teams
   try {
     await page.goto('https://teams.microsoft.com', { waitUntil: 'domcontentloaded', timeout: 30000 });
   } catch (e) {
@@ -355,46 +355,55 @@ async function captureChannels(page) {
     return results;
   }
 
-  // Wait for Teams to load
-  console.log('  ⏳ Waiting for Teams to load (15s)...');
-  await page.waitForTimeout(15000);
+  // Wait for Teams SPA to load (it's heavy — 20s)
+  console.log('  ⏳ Waiting for Teams to load (20s)...');
+  await page.waitForTimeout(20000);
 
-  // Click Teams icon in left sidebar
-  try {
-    const teamsBtn = await page.$('button[aria-label*="Teams"], a[aria-label*="Teams"], [data-tid="teams-app-bar-teams"], [data-tid="app-bar-86fcc1a7-4f35-4940-9fb6-4f0e8aa7a5c0"]');
-    if (teamsBtn) {
-      console.log('  → Clicking Teams sidebar');
-      await teamsBtn.click();
-      await page.waitForTimeout(5000);
-    }
-  } catch (e) { /* ignore */ }
-
-  // Screenshot: Teams list
+  // Screenshot: initial state
   await page.screenshot({ path: path.join(TODAY_DIR, 'teams-overview.png'), fullPage: false });
 
-  // For each configured channel, try to navigate and capture
+  // Channels are in the sidebar tree as [role="treeitem"]
+  // Under "Teams and channels" section
   for (const channelName of channelNames) {
     console.log(`\n  📌 Channel: ${channelName}`);
     try {
-      // Try to click on the channel
-      const channelLink = await page.$(`a:has-text("${channelName}"), button:has-text("${channelName}"), [data-tid*="channel"]:has-text("${channelName}")`);
-      if (channelLink) {
-        await channelLink.click();
+      // Find channel in sidebar treeitem list
+      const channelItem = await page.$(`[role="treeitem"]:has-text("${channelName}")`);
+      if (channelItem) {
+        // Check this is a leaf item (actual channel, not the parent "Teams and channels" section)
+        const itemLabel = await channelItem.innerText();
+        // Skip the parent container that lists all channels
+        if (itemLabel.includes('Teams and channels') && itemLabel.length > channelName.length + 30) {
+          // This is the parent — find the specific child
+          const specific = await page.$(`[role="treeitem"] >> text="${channelName}"`);
+          if (specific) {
+            await specific.click();
+          } else {
+            console.log(`    ⚠️  Could not isolate channel "${channelName}" from parent`);
+            results[channelName] = { chars: 0, error: 'parent container matched, not leaf' };
+            continue;
+          }
+        } else {
+          await channelItem.click();
+        }
         await page.waitForTimeout(5000);
 
-        // Scroll up to load more messages
-        for (let s = 0; s < (teamsConfig.scroll_depth || 3); s++) {
+        // Scroll up to load older messages
+        const scrollDepth = teamsConfig.scroll_depth || 3;
+        for (let s = 0; s < scrollDepth; s++) {
           await page.evaluate(() => {
-            const msgContainer = document.querySelector('[data-tid="messageListContainer"], [class*="message-list"], [role="main"]');
-            if (msgContainer) msgContainer.scrollTop = 0;
+            const containers = document.querySelectorAll('[role="main"], [class*="message-list"], [data-tid="messageListContainer"]');
+            containers.forEach(c => c.scrollTop = 0);
+            // Also try scrolling the first scrollable element
+            const scrollable = document.querySelector('[class*="scroll"]');
+            if (scrollable) scrollable.scrollTop = 0;
           });
           await page.waitForTimeout(2000);
+          if (s % 5 === 0 && s > 0) console.log(`    ↑ Scrolled ${s}/${scrollDepth} pages...`);
         }
-
-        // Wait for messages to render
         await page.waitForTimeout(3000);
 
-        // Extract
+        // Extract messages
         const msgResult = await extractMessages(page);
         const text = formatMessages(msgResult, `Channel: ${channelName}`);
         const filename = sanitize(channelName) + '.txt';
@@ -406,8 +415,8 @@ async function captureChannels(page) {
         console.log(`    ✅ ${charCount} chars, ${msgCount} messages → ${filename}`);
         results[channelName] = { chars: charCount, messages: msgCount, file: filename };
       } else {
-        console.log(`    ⚠️  Channel "${channelName}" not found in DOM`);
-        results[channelName] = { chars: 0, error: 'not found in DOM' };
+        console.log(`    ⚠️  Channel "${channelName}" not found in sidebar`);
+        results[channelName] = { chars: 0, error: 'not found in sidebar' };
       }
     } catch (e) {
       console.log(`    ❌ Error: ${e.message.substring(0, 60)}`);
@@ -429,17 +438,13 @@ async function captureChats(page) {
   const results = {};
   const priorityChats = teamsConfig.priority_chats || [];
 
-  // Navigate to Chat
+  // Navigate to Chat via sidebar button (data-tid from DOM inspector)
   try {
-    const chatBtn = await page.$('button[aria-label*="Chat"], a[aria-label*="Chat"], [data-tid="teams-app-bar-chat"], [data-tid="app-bar-ef56c0de-36fc-4ef8-b417-3d82ba9d073c"]');
+    const chatBtn = await page.$('button[aria-label*="Chat" i]');
     if (chatBtn) {
       console.log('  → Clicking Chat sidebar');
       await chatBtn.click();
       await page.waitForTimeout(5000);
-    } else {
-      // Try direct navigation
-      await page.goto('https://teams.microsoft.com/_#/conversations', { waitUntil: 'domcontentloaded', timeout: 20000 });
-      await page.waitForTimeout(8000);
     }
   } catch (e) {
     console.log(`  Nav warning: ${e.message.substring(0, 60)}`);
@@ -448,36 +453,110 @@ async function captureChats(page) {
   // Screenshot: Chat list
   await page.screenshot({ path: path.join(TODAY_DIR, 'chats-overview.png'), fullPage: false });
 
-  // First: capture all visible chat list entries
+  // Capture all visible chat entries from the sidebar tree
   const chatList = await page.evaluate(() => {
-    const items = document.querySelectorAll('[data-tid*="chat-"], [class*="chatListItem"], [role="listitem"]');
-    return Array.from(items).map(item => ({
-      text: item.innerText?.trim().replace(/\n/g, ' | ').substring(0, 200),
-    })).filter(c => c.text && c.text.length > 3);
+    // In new Teams, chats are [role="treeitem"] under "Chats" section
+    const items = document.querySelectorAll('[role="treeitem"]');
+    return Array.from(items)
+      .map(item => ({
+        text: item.innerText?.trim().replace(/\n/g, ' | ').substring(0, 200),
+      }))
+      .filter(c => c.text && c.text.length > 3 &&
+        !c.text.startsWith('Copilot') &&
+        !c.text.startsWith('Discover') &&
+        !c.text.startsWith('Mentions') &&
+        !c.text.startsWith('Followed') &&
+        !c.text.startsWith('Favorites') &&
+        !c.text.startsWith('Teams and channels') &&
+        !c.text.startsWith('See all') &&
+        !c.text.startsWith('Chats |'));    // skip the "Chats" parent node
   });
-  console.log(`  Found ${chatList.length} chats in sidebar`);
+  console.log(`  Found ${chatList.length} items in sidebar`);
 
-  // For priority chats, try to navigate and capture full conversation
+  // For priority chats, click in sidebar treeitem and capture
   for (const chatName of priorityChats) {
     console.log(`\n  💬 Chat: ${chatName}`);
     try {
-      // Search or click on the chat
-      const chatLink = await page.$(`[role="listitem"]:has-text("${chatName}"), [data-tid*="chat-"]:has-text("${chatName}")`);
-      if (chatLink) {
-        await chatLink.click();
+      // Find the chat in sidebar treeitem list
+      const chatItem = await page.$(`[role="treeitem"]:has-text("${chatName}")`);
+      if (chatItem) {
+        // Verify it's the leaf item, not a parent container
+        const itemText = await chatItem.innerText();
+        if (itemText.includes('Chats |') || itemText.length > chatName.length + 50) {
+          // Parent container — try more specific
+          const specific = await page.$(`[role="treeitem"] >> text="${chatName}"`);
+          if (specific) {
+            await specific.click();
+          } else {
+            console.log(`    ⚠️  Could not isolate chat "${chatName}" from parent`);
+            results[chatName] = { chars: 0, error: 'parent matched' };
+            continue;
+          }
+        } else {
+          await chatItem.click();
+        }
         await page.waitForTimeout(5000);
 
-        // Scroll up for more messages
-        for (let s = 0; s < (teamsConfig.scroll_depth || 3); s++) {
+        // Scroll up for older messages
+        const scrollDepth = teamsConfig.scroll_depth || 3;
+        for (let s = 0; s < scrollDepth; s++) {
           await page.evaluate(() => {
-            const msgContainer = document.querySelector('[data-tid="messageListContainer"], [class*="message-list"], [role="main"]');
-            if (msgContainer) msgContainer.scrollTop = 0;
+            const containers = document.querySelectorAll('[role="main"], [class*="message-list"], [data-tid="messageListContainer"]');
+            containers.forEach(c => c.scrollTop = 0);
+            const scrollable = document.querySelector('[class*="scroll"]');
+            if (scrollable) scrollable.scrollTop = 0;
           });
           await page.waitForTimeout(2000);
+          if (s % 5 === 0 && s > 0) console.log(`    ↑ Scrolled ${s}/${scrollDepth} pages...`);
         }
         await page.waitForTimeout(2000);
 
-        const msgResult = await extractMessages(page);
+        // Extract messages — try structured first, then fallback to pane items
+        const msgResult = await page.evaluate(() => {
+          const messages = [];
+
+          // Strategy 1: chat-pane-message items (found in DOM inspector)
+          const paneMessages = document.querySelectorAll('[data-tid="chat-pane-message"]');
+          if (paneMessages.length > 0) {
+            paneMessages.forEach(el => {
+              const text = el.innerText?.trim();
+              if (text && text.length > 1 && text !== 'has context menu') {
+                messages.push({ sender: '', time: '', text });
+              }
+            });
+          }
+
+          // Strategy 2: messageBodyContent (standard Teams selector)
+          if (messages.length === 0) {
+            const bodyMsgs = document.querySelectorAll('[data-tid="messageBodyContent"]');
+            bodyMsgs.forEach(el => {
+              const container = el.closest('[role="listitem"]') || el.parentElement;
+              const timeEl = container?.querySelector('time');
+              const senderEl = container?.querySelector('[data-tid="messageHeaderName"]');
+              const text = el.innerText?.trim();
+              if (text && text.length > 1) {
+                messages.push({
+                  sender: senderEl?.innerText?.trim() || '',
+                  time: timeEl?.getAttribute('datetime') || timeEl?.innerText?.trim() || '',
+                  text,
+                });
+              }
+            });
+          }
+
+          if (messages.length > 0) {
+            return { structured: true, messages, fullText: '' };
+          }
+
+          // Fallback: full page text
+          const mainArea = document.querySelector('[role="main"]');
+          return {
+            structured: false,
+            messages: [],
+            fullText: mainArea?.innerText || document.body?.innerText || '',
+          };
+        });
+
         const text = formatMessages(msgResult, `Chat: ${chatName}`);
         const filename = sanitize(chatName) + '.txt';
         const filePath = path.join(TODAY_DIR, 'chats', filename);
@@ -488,8 +567,8 @@ async function captureChats(page) {
         console.log(`    ✅ ${charCount} chars, ${msgCount} messages → ${filename}`);
         results[chatName] = { chars: charCount, messages: msgCount, file: filename };
       } else {
-        console.log(`    ⚠️  Chat "${chatName}" not found`);
-        results[chatName] = { chars: 0, error: 'not found' };
+        console.log(`    ⚠️  Chat "${chatName}" not found in sidebar`);
+        results[chatName] = { chars: 0, error: 'not found in sidebar' };
       }
     } catch (e) {
       console.log(`    ❌ Error: ${e.message.substring(0, 60)}`);
@@ -497,7 +576,7 @@ async function captureChats(page) {
     }
   }
 
-  // Also capture the raw chat list summary
+  // Save chat list summary
   if (chatList.length > 0) {
     const listText = ['=== CHAT LIST SUMMARY ===',
       `Captured: ${new Date().toISOString()}`, '',

@@ -1,0 +1,80 @@
+{
+  "date": "2026-03-20",
+  "started": "2026-03-20T18:27:21.989Z",
+  "channels": {
+    "General": {
+      "chars": 2768,
+      "messages": "(fallback)",
+      "file": "General.txt"
+    },
+    "NewUM": {
+      "chars": 2788,
+      "messages": "(fallback)",
+      "file": "NewUM.txt"
+    },
+    "Clinical Scheduling": {
+      "chars": 2807,
+      "messages": "(fallback)",
+      "file": "Clinical-Scheduling.txt"
+    },
+    "CRS/CRR Scheduling": {
+      "chars": 2813,
+      "messages": "(fallback)",
+      "file": "CRS-CRR-Scheduling.txt"
+    },
+    "IT Helpdesk Scheduling": {
+      "chars": 2829,
+      "messages": "(fallback)",
+      "file": "IT-Helpdesk-Scheduling.txt"
+    }
+  },
+  "chats": {
+    "Data team - daily": {
+      "chars": 6275,
+      "messages": 20,
+      "file": "Data-team---daily.txt"
+    },
+    "Eligibility - Person/Member workshop": {
+      "chars": 30440,
+      "messages": 12,
+      "file": "Eligibility---Person-Member-workshop.txt"
+    },
+    "Payer taxonomy workshop": {
+      "chars": 573,
+      "messages": 2,
+      "file": "Payer-taxonomy-workshop.txt"
+    },
+    "Databricks Lakeflow Connect": {
+      "chars": 2470,
+      "messages": "(fallback)",
+      "file": "Databricks-Lakeflow-Connect.txt"
+    },
+    "Provider Discussion": {
+      "chars": 2660,
+      "messages": 8,
+      "file": "Provider-Discussion.txt"
+    },
+    "Claude workshop - how to boost our work performance": {
+      "chars": 715,
+      "messages": 8,
+      "file": "Claude-workshop---how-to-boost-our-work-performance.txt"
+    },
+    "Erik and Michal": {
+      "chars": 799,
+      "messages": 10,
+      "file": "Erik-and-Michal.txt"
+    },
+    "Eligibility workshop": {
+      "chars": 7638,
+      "messages": 14,
+      "file": "Eligibility-workshop.txt"
+    }
+  },
+  "calendar": {
+    "success": true,
+    "chars": 1584
+  },
+  "transcripts": {},
+  "total_chars": 67159,
+  "completed": "2026-03-20T18:37:43.226Z"
+}

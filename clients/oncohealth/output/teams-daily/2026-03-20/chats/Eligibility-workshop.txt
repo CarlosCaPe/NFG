@@ -1,0 +1,168 @@
+=== Chat: Eligibility workshop ===
+Captured: 2026-03-20T18:36:09.899Z
+
+[14 messages extracted (structured)]
+
+ : https://miro.com/app/board/uXjVGVycF3Y=/?moveToWidget=3458764661425332328&cot=14
+
+NewUM
+
+A post on Miro provided by: https://miro.com
+
+miro.com
+
+ : I hope we will be having more hands on experience, working together on ER diagram.
+
+ : For reference, draft from Onco guys:
+
+ : Michal Mucha
+3/16/2026 9:27 AM
+📄 Eligibility.jpg
+
+I hope quality of img is good enough to ready it
+
+ : Donato can u join us?
+
+ : Open Questions:
+
+How do we link eligibility records from ingest to the configurable business hierarchy?
+How do we store manually-created eligibility records?
+How do we key PersonId internally? Or do we only use client-provided PersonId?
+
+ : Sorry, need to drop.
+
+ : https://oncologyanalytics.atlassian.net/wiki/x/AQC1LgE
+
+Log in with Atlassian account
+
+Log in to Jira, Confluence, and all other Atlassian Cloud products here. Not an Atlassian user? Sign up for free.
+
+oncologyanalytics.atlassian.net
+
+ : Actions:
+
+make risks for first two questions above in the RAID log
+get Onco data team the data dictionary for manually-created/modified eligibility records
+prototype ways to associate ETL eligibility records with configured business hierarchy
+sanity check eligibility API against FHIR
+
+ : https://miro.com/app/board/uXjVGVycF3Y=/?focusWidget=3458764661425332328
+
+NewUM
+
+A post on Miro provided by: https://miro.com
+
+miro.com
+
+ : Summary of yesterday meeting:
+
+ 
+
+1. Versioning Strategy — Resolved
+
+The team reached consensus on a hybrid versioning approach. Nick explained the need for ETL-style SCD Type 2 timestamps to enable point-in-time queries without complex lead/lag operations. The compromise: keep VersionCreatedAt (synonymous with ETL start) and add a new VersionEndAt field. When a new version of a business key arrives, the old record's VersionEndAt gets set. This gives two time dimensions: (a) version validity window (VersionCreatedAt → VersionEndAt) for "what did we know as of date X", and (b) coverage dates for "was the member covered on date Y".
+
+The Miro diagram currently has EtlStartAt / EtlEndAt in orange — the meeting agreed these can be replaced by VersionCreatedAt + VersionEndAt, which is cleaner naming and aligns with the immutability pattern.
+
+ 
+
+2. Soft Delete vs Version End — Clarified
+
+DeletedAt and VersionEndAt serve different purposes. VersionEndAt means "superseded by a newer version." DeletedAt means "this record should never surface in the UI regardless of time dimension queries" (e.g., member's coverage was retroactively voided by the payer). Both fields may be set on the same record. Tim raised the important point that payers are inconsistent — a member "falling off the file" could mean either coverage ended or coverage was voided, and without a rolling eligibility window there's no way to distinguish.
+
+ 
+
+3. Business Grouping / Business Grain — The Big Open Question
+
+Nick confirmed the business grouping/grain pattern conceptually makes sense for configuration. But the critical unsolved problem is: how does the ETL map variable client source data into the admin hierarchy? Each payer has different levels, different field names, and different grouping logic. Nick's Silver schema uses client custom fields + crosswalk logic per client. Jack confirmed this is the "bronze layer problem" — seeding the hierarchy is a configuration task (not ETL), but linking ETL records to the correct grouping node is the hard part.
+
+ 
+
+The BenefitPlan junk dimension is Nick's proposal for consolidating all variable client attributes into deduplicated combinations (same pattern as Address). Jack pushed back that static junk dimension fields can't guarantee mapping to configuration — the business grouping tables exist precisely for this dynamic linkage.
+
+ 
+
+4. Manual Eligibility Records & Overrides — Parked
+
+Cory opened a critical question: will the app write manual eligibility records to the same database? Jack said "hopefully yes." Nick is strongly against putting manual records in the ETL-managed eligibility table because: (a) ETL will overwrite them nightly, (b) it breaks the insert-only model, (c) auditability becomes difficult. Nick proposed a separate override table with key-value pairs scoped to the case grain. This was deferred to a dedicated session.
+
+ 
+
+5. Person Identity — Deferred
+
+Nick recommends not entering the cross-payer patient matching business. Person ID should be payer-scoped: if the payer provides a unique person identifier, use it; otherwise default to member ID + payer as the business key. Jack proposed system-generated GUIDs; Nick flagged the problem that GUIDs change every file load unless you define the business key grain for deduplication. The grain definition for the Person table primary key is an open question.
+
+ 
+
+6. API Model — FHIR vs Custom
+
+Cory asked whether the API layer should follow FHIR or a proprietary model. Jack recommended custom model sanity-checked against FHIR. Michal noted the Provider analysis against FHIR is already done and in reasonable shape; Eligibility FHIR mapping hasn't been attempted yet.
+
+ 
+
+7. Column Naming
+
+Nick will compile a list of column names he wants changed. "ODS member key" was the first one called out — Cory agreed it should be deleted immediately. Nick wants to ensure the new system uses clean, product-oriented naming rather than carrying over legacy Matis naming.
+
+ : cc Marc Gale
+
+ : Open questions:
+
+Manual eligibility records — storage pattern. Where do manually-created eligibility records live? Same table with a source flag? Separate table? What about field-level overrides at case grain? Competing positions from Nick (separate table) vs Jack (same table with flag). Impact: data exposure architecture, Databricks sync tooling.
+Working hypothesis: manually-created eligibility records should be added to same database as ETL expose eligibility data.
+Business Grouping ↔ ETL mapping strategy. How does the ETL determine which BusinessGrouping node to link an eligibility record to, given that client data structures vary? Is this a bronze-layer crosswalk, a gold-layer configuration, or a mixed approach? This was identified as the single biggest unresolved design question.
+Person ID grain definition. What business data keys constitute the deduplication grain for the Person entity? Hash of member ID + payer? System GUID with a separate natural-key index? Impacts daily ETL load logic and cross-version tracking.
+Eligibility ↔ case re-evaluation trigger. When new eligibility data arrives while a case is in process, the system must trigger case re-evaluation (including potential rule set reload). The mechanism for this trigger needs design.
+FHIR alignment for Eligibility API. Custom model confirmed as direction, but FHIR gap analysis for eligibility hasn't been done yet (providers is complete). Should be added to the backlog.
+
+ : Action items:
+
+ 
+
+Owner	Action	Priority
+
+
+Nick
+
+	Compile column naming change list for business columns	High
+
+
+Nick
+
+	Write up member ID / person code / coverage ID concepts in Confluence	Medium
+
+
+Michal 
+
+	Share data dictionary PDF with Onco team	High (done in meeting)
+
+
+Michal + Nick
+
+	Schedule dedicated working session for business grouping ↔ ETL mapping prototype	High
+
+
+Michal
+
+	Update Miro diagram with VersionEndAt, remove EtlStartAt/EtlEndAt	
+
+High (done in meeting)
+
+
+
+
+Michal
+
+	Add business grouping mapping risk to RAID log	Medium
+
+
+Cory + Nick
+
+	Create test data sets for business grouping prototype	Medium
+All	
+
+Next Eligibility meeting: focus on Person table deep dive + manual override pattern
+
+	
+
+High

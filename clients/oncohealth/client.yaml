@@ -394,5 +394,5 @@ teams_capture:
     - "Claude workshop - how to boost our work performance"
     - "Erik and Michal"
     - "Eligibility workshop"
-  scroll_depth: 3
+  scroll_depth: 15          # deep scroll for full history (reduce to 3 for daily)
   capture_transcripts: true

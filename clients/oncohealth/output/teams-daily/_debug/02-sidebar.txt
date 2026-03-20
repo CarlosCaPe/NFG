@@ -1,0 +1,22 @@
+Nav items found: 7
+  [0] <BUTTON> label="Activity (Ctrl+Shift+1)" data-tid="14d6962d-6eeb-4f48-8890-de55454bb136" id="14d6962d-6eeb-4f48-8890-de55454bb136"
+  [1] <BUTTON> label="Chat (Ctrl+Shift+2)" data-tid="3b64df9d-7e97-4d9c-ac5c-2e0a5d8e6f40" id="3b64df9d-7e97-4d9c-ac5c-2e0a5d8e6f40"
+  [2] <BUTTON> label="Calendar (Ctrl+Shift+3)" data-tid="ef56c0de-36fc-4ef8-b417-3d82ba9d073c" id="ef56c0de-36fc-4ef8-b417-3d82ba9d073c"
+  [3] <BUTTON> label="Calls (Ctrl+Shift+4)" data-tid="20c3440d-c67e-4420-9f80-0e50c39693df" id="20c3440d-c67e-4420-9f80-0e50c39693df"
+  [4] <BUTTON> label="OneDrive (Ctrl+Shift+5)" data-tid="5af6a76b-40fc-4ba1-af29-8f49b08e44fd" id="5af6a76b-40fc-4ba1-af29-8f49b08e44fd"
+  [5] <BUTTON> label="Copilot (Ctrl+Shift+6)" data-tid="b5abf2ae-c16b-4310-8f8a-d3bcdb52f162" id="b5abf2ae-c16b-4310-8f8a-d3bcdb52f162"
+  [6] <BUTTON> label="Shifts (Ctrl+Shift+7)" data-tid="42f6c1da-a241-483a-a3cc-4f5be9185951" id="42f6c1da-a241-483a-a3cc-4f5be9185951"
+
+Teams-related buttons: 12
+  [0] <BUTTON> text="settings and more, new activity" tid="more-options-header" class="fui-Button r1alrhcs ___9tdqbw0 fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu f11d4"
+  [1] <BUTTON> text="activity (ctrl+shift+1)" tid="14d6962d-6eeb-4f48-8890-de55454bb136" class="fui-Button r1alrhcs ___11mxjb5 f1brlhvm f10xn8zz f136y8j8 f1sl3k7w f18ktai2 ftgf"
+  [2] <BUTTON> text="chat (ctrl+shift+2)" tid="3b64df9d-7e97-4d9c-ac5c-2e0a5d8e6f40" class="fui-Button r1alrhcs ___1l5gz2k f1brlhvm f10xn8zz f136y8j8 f1sl3k7w f18ktai2 ftgf"
+  [3] <BUTTON> text="calendar (ctrl+shift+3)" tid="ef56c0de-36fc-4ef8-b417-3d82ba9d073c" class="fui-Button r1alrhcs ___11mxjb5 f1brlhvm f10xn8zz f136y8j8 f1sl3k7w f18ktai2 ftgf"
+  [4] <BUTTON> text="calls (ctrl+shift+4)" tid="20c3440d-c67e-4420-9f80-0e50c39693df" class="fui-Button r1alrhcs ___11mxjb5 f1brlhvm f10xn8zz f136y8j8 f1sl3k7w f18ktai2 ftgf"
+  [5] <BUTTON> text="chats (ctrl+alt+c)" tid="" class="fui-Button r1alrhcs fui-ToggleButton ___gbcxon0 f44lkw9 f1062rbf f1xksiho fk6fou"
+  [6] <BUTTON> text="meeting chats (ctrl+alt+b)" tid="" class="fui-Button r1alrhcs fui-ToggleButton ___gbcxon0 f44lkw9 f1062rbf f1xksiho fk6fou"
+  [7] <BUTTON> text="more chat options" tid="" class="fui-Button r1alrhcs ___5ap6rb0 f1c21dwh f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq"
+  [8] <BUTTON> text="chat" tid="tab-item-com.microsoft.chattabs.chat" class="fui-Tab ___6an8v30 f122n59 f3bhgqh ft85np5 f1k6fduh f13qh94s fi64zpg f1u07yai fr"
+  [9] <BUTTON> text="find in chat (ctrl+f)" tid="chat-header-find-in-chat-search" class="fui-Button r1alrhcs ___jc3srz0 f1c21dwh f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq"
+  [10] <BUTTON> text="open chat details (alt+p)" tid="chat-info-pane-button" class="fui-Button r1alrhcs ___jc3srz0 f1c21dwh f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq"
+  [11] <BUTTON> text="more chat options" tid="chat-header-more-menu-trigger" class="fui-Button r1alrhcs ___cpe5h10 f1c21dwh f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq"

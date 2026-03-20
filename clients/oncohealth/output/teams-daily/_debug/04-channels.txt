@@ -1,0 +1,51 @@
+
+[role="treeitem"]: 24 items
+  [0] Copilot (tid="")
+  [1] Discover (tid="")
+  [2] Mentions (tid="")
+  [3] Followed threads (tid="")
+  [4] Favorites | Carlos Carrillo (You) (tid="")
+  [5] Carlos Carrillo (You) (tid="")
+  [6] Chats | Inna Mariienko | Vika Nobis | Eligibility - Person/Member workshop | Data team - daily | Payer taxonomy workshop (tid="")
+  [7] Inna Mariienko (tid="")
+  [8] Vika Nobis (tid="")
+  [9] Eligibility - Person/Member workshop (tid="")
+  [10] Data team - daily (tid="")
+  [11] Payer taxonomy workshop (tid="")
+  [12] Databricks Lakeflow Connect (tid="")
+  [13] Provider Discussion (tid="")
+  [14] Erik and Michal (tid="")
+  [15] Eligibility workshop (tid="")
+  [16] Claude workshop - how to boost our work performance (tid="")
+  [17] Teams and channels | Clinical Scheduling | General | NewUM | CRS/CRR Scheduling | IT Helpdesk Scheduling | See all your  (tid="")
+  [18] Clinical Scheduling | General (tid="")
+  [19] General (tid="")
+
+[data-tid*="team"]: 1 items
+  [0] undefined (tid="titlebar-teams-icon")
+
+Sidebar panel text:
+Copilot
+Discover
+Mentions
+Followed threads
+Favorites
+Carlos Carrillo (You)
+Chats
+Inna Mariienko
+Vika Nobis
+Eligibility - Person/Member workshop
+Data team - daily
+Payer taxonomy workshop
+Databricks Lakeflow Connect
+Provider Discussion
+Erik and Michal
+Eligibility workshop
+Claude workshop - how to boost our work performance
+Teams and channels
+Clinical Scheduling
+General
+NewUM
+CRS/CRR Scheduling
+IT Helpdesk Scheduling
+See all your teams

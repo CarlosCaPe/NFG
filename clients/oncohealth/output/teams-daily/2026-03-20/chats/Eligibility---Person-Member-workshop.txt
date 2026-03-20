@@ -1,0 +1,429 @@
+=== Chat: Eligibility - Person/Member workshop ===
+Captured: 2026-03-20T18:32:22.561Z
+
+[12 messages extracted (structured)]
+
+ : NewUM V1 Rules & Payer Taxonomy Analysis
+
+Source: 
+
+NewUM V1 Confluence documentation 
+
+— Rules & Configurations, Case Entry, Chemotherapy Entry, Post-Denial Pathway, RBAC (Role-Based Access Control), Standard Reports
+
+1. Grain Hierarchy & Inheritance — The Foundation
+
+The Rules & Configurations functional specification (link) establishes a configurable grain ranking that determines rule precedence. The default hierarchy from highest to lowest:
+
+→ OH (OncoHealth) Global 
+
+→ Payer Parent Org 
+
+→ Payer 
+
+→ Major LOB (Line of Business) 
+
+→ LOB 
+
+→ Product Line 
+
+→ Employer Group
+
+ 
+
+Key principles:
+
+Lowest-level grain always wins. 
+If a drug rule exists at both LOB (e.g., Commercial) and Employer Group (e.g., General Motors), the Employer Group rule executes.
+Grain ranking is configurable per payer
+one payer might rank Employer Group above Product Line, another might not use Employer Group at all.
+Every rule and configuration is scoped to a specific payer org 
+even when grains are shared (e.g., two payers both have "Commercial"), rules are never cross-payer.
+Effective dating is required 
+rules carry Valid From and Valid To metadata, enabling scheduled activation/deactivation without live changes.
+Tie-breaker for v1
+when multiple rules match at the same grain and hierarchy, the newer rule takes precedence; such cases are logged for later review.
+
+Mapping to the business hierarchy diagram: The BusinessGrain levels (PlanType, Market, RiskPool, ProductLine) are the intermediate nodes where rules can be set. A path like "Commercial → PPO (Preferred Provider Organization) → Employer → Claims Only → PPO Prem 1500" represents a traversal the rule engine walks when resolving which configuration applies. The engine walks from Product (leaf) upward toward MajorLineOfBusiness, and the first (most granular) rule it finds wins.
+
+For v1 the rule engine accommodates Commercial and Medicare LOBs only. Additional LOBs are deferred.
+
+Reference: Configuration and rules categories
+
+2. Configurations vs. Rules — Two Control Mechanisms
+
+The documentation distinguishes between two approaches to controlling system behavior without code changes:
+
+Configurations are simple parameters that change infrequently — letter templates, Member ID input formats, UI (User Interface) settings, TAT (Turnaround Time) settings, Boolean or enumerated value setups. These are organized into global (cross-plan) and health-plan-level buckets.
+
+Rules evaluate IF-THEN conditional logic at runtime, accepting structured input parameter packages and producing dynamic outputs. Rules support complex scenarios including branching, prioritization, chaining, and nesting. Rules are triggered at specific workflow steps and events (e.g., Step: CaseEntry, Event: OnSubmit).
+
+Rule execution is tiered:
+
+Tier 1: Result required to proceed; failure → critical error, case blocked
+Tier 2: Result not required; failure → non-critical error displayed to user, explicit confirmation to proceed
+Tier 3: Result not required; failure → logged silently, case proceeds
+
+Rule execution events include: submit, change, focus/blur, load, unload, error, requestSent, responseReceived, timeout. Events can be linked to specific UI elements (e.g., change.[dosage]).
+
+Reference: Configuration and rules categories
+
+3. Member Identification & Eligibility Rules
+
+Source: Member Identification and Coverage
+
+Search-time rules:
+
+Member search requires Health Plan + DOB (Date of Birth) + (Member ID or First + Last Name)
+Users can only search within authorized Health Plans (RBAC-enforced, server-side)
+Member ID validation is payer-configured: Max Member ID Length (mandatory), regex pattern (will be mandatory in NewUM), and helper/validation message (optional)
+For R1 (Release 1), all users have access to all health plans; payer-based access control is deferred
+
+Eligibility verification rules (Treatment Start Date–based):
+
+Coverage Effective Date ≤ Treatment Start Date ≤ Coverage Expiration Date (inclusive boundaries in R1)
+Null expiration date → treated as active if Effective Date ≤ Treatment Start Date
+Multiple active records on Treatment Start Date → eligible if ≥1 record satisfies date criteria
+No eligibility override allowed in R1
+Eligibility-derived fields are read-only: LOB, Product Line, Product Offering, Carrier ID, Account ID, etc.
+
+Eligibility fields consumed by downstream rules:
+
+LOB, Product Line, Product Offering — validated against Admin hierarchy for consistency (LOB ↔ Product Line mapping enforced)
+State of Plan Issue — used for regulatory routing
+Carrier ID, Account ID, Insurance Group ID, Benefit Package — used for carve-out/scope determination
+ASO (Administrative Services Only) Indicator — determines ASO delegation status
+Member Benefit (Medical / Pharmacy / Medical + Pharmacy), Prescription Benefit Carveout, OON (Out-of-Network) Benefit — drives drug benefit determination downstream
+4. Scope Validation Rules
+
+Source: Member Identification and Coverage — Validate Scope for OH Review
+
+Note: Marked as out of scope for R1 but fully specified in the PRD (Product Requirements Document).
+
+Six rules execute sequentially after eligibility verification returns "Eligible." This is the primary payer-taxonomy-aware rule chain:
+
+Rule 1 — LOB Validation: Member's LOB must be active and delegated for OH review under the selected Health Plan. Fail → Out of Scope.
+
+Rule 2 — Product Line / Product Offering Validation: Must be active and delegated under the matched LOB. Fail → Out of Scope.
+
+Rule 3 — State of Plan Issue Restriction: Member's state must be in the payer's allowed set (if one is configured). Fail → Out of Scope.
+
+Rule 4 — Identifier-Based Scope Validation: Carrier ID, Account ID, Insurance Group ID, Benefit Package evaluated against configured allowed identifiers and carve-out identifiers. Match to carve-out → Out of Scope.
+
+Rule 5 — ASO Delegation Rule: If ASO Indicator = Yes AND ASO is excluded from delegation → Out of Scope.
+
+Rule 6 — Benefit-Level Delegation Rule: Evaluates Medical Benefit, Pharmacy Benefit, Prescription Benefit Carve-Out, and OON Benefit against payer delegation configuration. Any non-delegated benefit → Out of Scope.
+
+Each rule either passes (continue to next) or fails (→ Out of Scope, blocks case creation). The scope outcome and eligibility attributes used are recorded for audit.
+
+5. Payer Drug Configuration Rules
+
+Source: Apply Payer Drug Configurations
+
+PDL (Payer Drug Library) lookup key: Insurance Provider + Major LOB + effective date
+
+For each drug added to a case (predefined regimen, custom regimen, or ancillary), the system:
+
+Retrieves the active PDL configuration record matching the member's Insurance Provider and Major LOB
+Sets Benefit Type: Medical / Pharmacy / Crossover — determines which dosing table the drug enters
+Sets Medical Benefit Status: OOS (Out of Scope) / PA (Prior Authorization) Required / PA Exempt
+Sets Pharmacy Benefit Status: OOS / PA Required / PA Exempt / Per Formulary
+Derives Current Drug Status via this mapping:
+Benefit Status	Current Drug Status	Case-Level Impact
+OOS	OOS	Bypasses clinical review
+PA Exempt	PA Exempt	Bypasses clinical review
+PA Required	Pending	Requires clinical review
+Per Formulary	OOS (in R1, since formulary config is out of scope)	Bypasses clinical review
+
+Crossover drug handling: If benefit type = Crossover, the user must select Medical or Pharmacy before the drug enters a dosing table. No default is assigned. Changing the selection triggers immediate re-evaluation of benefit status and drug status. All crossover drugs must have a selected benefit type before case submission is allowed.
+
+Configuration snapshot: The benefit type and benefit status applied at case entry remain fixed for the duration of the case, even if upstream PDL configuration changes.
+
+Submission-level rule: If any drug line has status = Pending, the case requires clinical review. If no drug lines are Pending, the case bypasses clinical review (subject to other rules).
+
+6. Non-Preferred Drug Rules
+
+Source: Apply Payer Non-Preferred Drug Rules
+
+NP (Non-Preferred) rule evaluation matches against all of these payer-hierarchy attributes simultaneously:
+
+Drug matches configured Non-Preferred Drug
+Major LOB, LOB, and Product Line match the rule — this is the deepest payer-taxonomy touch point for NP rules
+Billing Method matches the rule
+Diagnosis Group satisfies configured include/exclude logic
+Member stage and state are not listed in the rule's exclusion criteria
+
+When all conditions are satisfied, the drug is marked Non-Preferred and an "NP" indicator appears in the dosing table. The Rule Type determines enforcement:
+
+Mandatory: User must switch to a configured Preferred Drug to proceed with case creation. If the preferred drug shares the same ingredient RxCUI (RxNorm Concept Unique Identifier) as the NP drug, the drug is replaced within the existing regimen. If not, the system presents alternative regimen options containing the preferred drug.
+Voluntary: User may proceed with the NP drug after selecting a valid Exception Reason from a predefined static list.
+
+Hard override rule: NP rules override indication-based auto-approval — a regimen that would auto-approve on indication gets pended for clinical review if it contains an NP drug. This is not configurable.
+
+FI (Financial Impact) tracking: Every NP-to-Preferred drug switch is captured as a Financial Impact event including original NP drug, selected Preferred drug, all associated dosing information, case identifier, user identifier, and timestamp.
+
+Progression blocking by Rule Type and User Type:
+
+Rule Type	External User without reason	Internal User without reason
+Mandatory	Blocked	Confirmation gate (warning, no hard block)
+Voluntary	Blocked	Confirmation gate (warning, no hard block)
+7. Auto-Determination Rules
+
+Sources: V1. Chemotherapy Entry, Rules and configurations functional specification
+
+Main regimen auto-approve on indication: If the Admin Portal flags the regimen as "Auto" for the diagnosis group and no NP/formulary exceptions exist → set Approve status for pending drugs. "Auto" means approval without full clinical review, not "no validation."
+Ancillary drug auto-approve: Based on regimen-level risk attributes (e.g., febrile neutropenia risk, emetogenic potential) plus Admin Portal Auto flag.
+Case-level auto-determination: If a payer has full delegation enabled and auto-approve is turned on for all drugs in the selected regimen, the rule engine automatically pushes the case to "Approved" status and initiates downstream actions (letter creation, auth file creation, TAT stop event to Qronos).
+Custom regimens always bypass auto-approval and are marked as pending for auto-rules evaluation and/or manual review.
+8. Case Routing & Queue Assignment Rules
+
+Sources: Rules and configurations functional specification, Configuration and rules categories
+
+Case routing uses case data + system rules + queue configurations to assign to the appropriate OH queue
+Queues are NewUM-specific (not shared with smartUM/OneUM)
+Routing factors: pathway type, complexity, LOB, client-specific rules
+Degradation strategy: If the rules engine cannot resolve within 30 minutes (retry every 5 minutes), assign the case to a catch-all queue with explicit messaging
+Queue management capabilities: create, update, retire (soft-delete), add/remove OH personnel accounts; an account can belong to multiple queues
+9. Post-Denial Pathway Rules
+
+Source: V1. Post-Denial Pathway UM Module
+
+Classification rules (FR-02, FR-10, FR-11, FR-12) consume:
+
+Denial type (medical necessity, administrative, benefit exclusion)
+Finality (final vs. non-final, driven by LOB/client configuration and original decision state)
+LOB — drives timeliness rules (CMS (Centers for Medicare and Medicaid Services) vs. Medicaid vs. Commercial have different TAT windows)
+"New info" flag — distinguishes reconsideration from reopen
+
+Routing rules (FR-04, FR-16) are LOB-aware:
+
+Clerical/admin errors → CRS (Case Review Specialist) Operations queue
+Reconsiderations, clinical updates → UM Nurse (RN/Pharmacist) queue
+Complex reconsiderations, appeals → MD (Medical Director) queue
+
+Timeliness enforcement (FR-05, FR-13, FR-23, FR-24, FR-25):
+
+Separate TAT clocks per pathway (reopen, reconsideration, appeal)
+LOB-specific rules for timely filing windows
+Configurable alert thresholds (e.g., 24/48 hours before deadline)
+System blocks late determinations or routes to exception workflow
+
+Integrity rules:
+
+FR-03, FR-20: Original denial is immutable; new post-denial events are linked but never overwrite
+FR-17: One active post-denial event per denial per pathway rules; no parallel reviews
+FR-21, FR-33: Separation of duties — appeal reviewer must differ from original denial reviewer (enforced at role and user level)
+FR-30: Historical records cannot be deleted or altered; corrections appear as new entries referencing prior records
+10. RBAC (Role-Based Access Control) Rules
+
+Source: V1. UM Case Model: RBAC, States, Statuses & Determinations
+
+Key roles and their rule-relevant permissions:
+
+CRS (Case Review Specialist): Enters cases, manages case flow, collects/transmits documentation. Can create manual member records (internal only).
+CRR (Case Review Representative): Labels/routes faxed documents.
+CSR (Customer Service Representative): Manages external user access, Zendesk tickets, manual mailing.
+RN/Pharmacist (UM Nurse/Pharmacy Reviewer): Applies clinical criteria, approves within delegated scope, recommends MD escalation.
+MD/Medical Director: Reviews cases not meeting criteria, issues denials, conducts P2P (Peer-to-Peer) reviews.
+Config Engineer (UM System Admin): Configures workflows, rules, RBAC; manages code sets, criteria versions, plan configurations.
+Provider User: Can enter cases, upload/view documents, see external-facing case state information only.
+Payer User: Views payer-specific cases with limited exposure to internal processes.
+Audit View: External users granted read-only access for UM file audits.
+
+States, Statuses, and Determinations are distinct concepts: States drive internal workflow progression; Statuses are simplified external-facing progress indicators; Determinations are formal adjudicative outcomes (approved, denied, withdrawn, dismissed) produced only at defined decision points by authorized roles.
+
+Determination list is global and final, but which determinations are available is configurable per health plan and LOB (e.g., if network checks are not performed for a health plan, "Denial - Admin" is not shown).
+
+11. TAT (Turnaround Time) Configuration Rules
+
+Source: Qronos integration and TAT configuration
+
+TAT is configured by: Payer Name + LOB + Delegation Level + Post-Denial type + Request Type (Chemo, XRT, GMT, PET) + Billing Method
+
+TAT configuration in NewUM handles how NewUM integrates with Qronos (the TAT subsystem):
+
+Start-at event, pause-at event, continue-at event, stop-on event
+Allowed dates (e.g., pause on weekends and national holidays)
+Threshold for when to update case to "urgent"
+Expedited vs. standard TAT
+Clock start and end definitions per LOB
+
+This is another point where the payer hierarchy fans out — the same payer may have different TAT rules for Commercial vs. Medicare, and within Commercial different rules for different request types and billing methods.
+
+12. Standard Reports Rules
+
+Source: V1. Standard Reports
+
+Reports support parameterized filtering by date range, LOB, provider, etc.
+Multi-tenant logic ensures customer-specific datasets
+Customer-specific configurations (service categories, decision types) are dynamically reflected
+Report categories:
+Operational: Activity Report, TAT Report, FI (Financial Impact) Report, Case-Level Flat File, Element-Level Flat File
+Compliance: Part C ODAG (Organization Determinations, Appeals & Grievances), Part D CDAG (Coverage Determinations, Appeals & Grievances), Audit Sampling Report, Delegation Oversight Report
+RBAC controls which users can view, export, or schedule reports
+PHI (Protected Health Information) and financial data follow least-privilege access rules
+Summary: Where Payer Taxonomy Gets Consumed by Rules
+Rule Domain	Grain Level Consumed	Hierarchy Traversal Pattern
+Eligibility verification	Health Plan + Coverage dates	Simple lookup
+Scope validation (post-R1)	LOB → Product Line → Product Offering → Carrier/Account/Group/Package + ASO + Benefits	Sequential chain; any fail = Out of Scope
+PDL drug config	Insurance Provider + Major LOB	Direct lookup
+NP drug rules	Major LOB + LOB + Product Line + Billing Method + Diagnosis Group	Multi-attribute match at Product Line depth
+Auto-determination	Regimen + Indication (payer-configured flags)	Rule evaluation with NP/formulary override
+Case routing	LOB + client rules + queue config	Rule-driven assignment
+TAT	Payer + LOB + Delegation Level + Request Type + Billing Method	Multi-attribute lookup
+Post-denial classification	Denial type + LOB + finality	Sequential classification
+RBAC / Determinations	Health Plan + LOB	Determines available determinations
+Reporting	Payer + LOB (filtering/tenancy)	Parameterized
+
+The dominant pattern: PDL and scope rules key on Insurance Provider + Major LOB, while NP rules go deeper into LOB + Product Line. The configurable grain hierarchy resolution (lowest wins) applies to all rules and configurations — which maps directly to traversing the business hierarchy diagram from Product (leaf) upward to MajorLineOfBusiness, with BusinessGrain nodes as the intermediate resolution points.
+
+ : Rules Application by Grain Level
+
+Based on NewUM V1 Confluence documentation. Each level inherits from above; lowest-level grain always takes precedence.
+
+OH (OncoHealth) Global
+
+This is the highest-level configuration. Any lower-level configuration overrides it.
+
+Default treatment start date validity window (e.g., today minus 1 month)
+General organizational data consumed by NewUM (OH office addresses, departments, fax numbers, email addresses)
+Lookup management — application data displayed in dropdowns and multi-option UI elements to end users
+RBAC (Role-Based Access Control) — which features/screens are available to each role; internal organizational permissions (Puerto Rico vs. Mainland)
+Queue configuration — management of assignment queues (user groups cases are assigned to)
+MDL (Master Drug Library) management — main vs. ancillary drug classification, vial sizes, RxCUI (RxNorm Concept Unique Identifier) to NDC (National Drug Code) mapping, regimens, dosing schedules, indication approvals
+UI (User Interface) configurations — screens available in each workflow, UI elements and their types per screen, basic data validation
+Global determination list — which determinations exist system-wide (Approved, Denied, Withdrawn, Dismissed, etc.)
+Error message templates — configurable business error and technical error messages
+Rule engine degradation strategy — retry every 5 minutes, catch-all queue assignment at 30 minutes
+Tier classification for rule execution (Tier 1 = hard stop, Tier 2 = user confirmation, Tier 3 = silent log)
+Automated test harness configuration for batch rule testing
+Rollback policies — limited to admin role, reason required, case assignee notified
+
+Reference: Rules and configurations functional specification, Configuration and rules categories
+
+Payer Parent Org
+
+Organizational grouping above individual payer entities. Rules set here apply to all child payers unless overridden.
+
+Parent-level delegation settings — whether the parent org delegates PA (Prior Authorization) processing to OH at all
+Shared configuration defaults inherited by all child payers (e.g., common letter templates, shared carve-out definitions)
+Grain hierarchy ranking configuration — defines which grain levels exist and their precedence order for this org and its children
+
+Reference: Rules and configurations functional specification — Rule grain ranking
+
+Payer
+
+The primary payer-specific configuration level. Each health plan has its own dedicated configuration set managed independently.
+
+Member search rules: Max Member ID Length (mandatory), Member ID Pattern/Expression (mandatory in NewUM), Member ID Helper/Validation Message (optional)
+Eligibility configuration: Eligibility service method, should eligibility check be mandatory, should it generate EOD (End of Day) file, should it be visible to external users
+Payer-level delegation settings: Full delegation vs. partial delegation, which determination types are available for this payer
+PDL (Payer Drug Library): PA Required / PA Exempt / OOS (Out of Scope) flags per drug, Benefit Type (Medical / Pharmacy / Crossover), effective dating — keyed at Insurance Provider + Major LOB
+Diagnosis & Diagnosis Groups: In-scope and out-of-scope diagnoses, grouping, mapping to Procedure Code Descriptions
+Clinical Questions: Clinical questions bank management per payer
+GMTs (Genetic Molecular Tests): Proprietary indicators for diagnoses (CPT codes)
+Case configuration: Service types supported (pre-service, concurrent, post-service), post-service timeframe, custom event messages (hard stops, warnings), DOA (Discontinuation of Auth) settings, deemed approvals, admin approvals, CAR-T settings, Part B/D drug handling, height/weight requirements, place of service requirements
+Formulary configuration: Whether formulary is used, whether it overrides payer settings for PA determination and OOS determination
+Provider configuration: Product code check, GAP review requirements, OON (Out-of-Network) & OOA (Out-of-Area) review requirements, override OON status, custom hard stop messages, medical necessity required flag
+SoC (Site of Care) configuration: SoC required flag, truncated approval length, clinical exception criteria, program type, denial option, grace period
+Letter configuration: Mapping letter templates to each determination and notification, defining recipients per determination, variable and bookmark values
+TAT (Turnaround Time) integration settings: How NewUM interacts with Qronos — expedited vs. standard, clock start/end definitions
+Appeals configuration: Communication channels, post-denial configuration (Appeals / Reopens / Reconsiderations)
+Auth File configuration: Which NewUM case statuses appear on auth file, auth file type (medical or pharmacy)
+Recipient configuration: Which recipients (provider, member, etc.) receive communications per determination, contact data (fax, email)
+Integration toggles: SSO (Single Sign-On), IVR (Interactive Voice Response), PBM (Pharmacy Benefit Manager), mailing, HP Teams — on/off and metadata
+Notification configuration: Required languages, accessibility needs (braille, audio, large print)
+Reporting configuration: Which reports are turned on, cadence of creation, delivery method/location
+Inbound file configuration (v2): Allowed inbound files, frequency, delivery modality, file format, naming conventions, staging/production file locations
+Treatment start date override (e.g., BCBSKA allows today minus 2 months vs. OH default of today minus 1 month)
+Scope validation — Identifier-based carve-out lists: Allowed/excluded Carrier IDs, Account IDs, Insurance Group IDs, Benefit Packages
+Scope validation — ASO delegation setting: Whether ASO populations are delegated to OH
+
+Reference: Member Identification and Coverage, Apply Payer Drug Configurations, Configuration and rules categories, Qronos integration and TAT configuration
+
+Major LOB (Major Line of Business)
+
+In the hierarchy diagram this corresponds to the top node (e.g., "Commercial"). For v1, only Commercial and Medicare are in scope.
+
+PDL lookup grain: PDL records are keyed on Insurance Provider + Major LOB — so drug-level PA/OOS/Benefit Type configuration can differ between Commercial and Medicare for the same payer
+NP (Non-Preferred) drug rule matching: Major LOB is one of the required match attributes for NP rule evaluation
+Scope validation — LOB Validation (Rule 1): Member's LOB must be active and delegated for OH review under the Health Plan
+TAT configuration dimension: TAT rules are set per Payer + LOB + Delegation Level + Request Type + Billing Method
+Post-denial timeliness rules: CMS (Centers for Medicare and Medicaid Services) vs. Commercial vs. Medicaid have fundamentally different TAT windows for reopens, reconsiderations, and appeals
+Post-denial finality determination: Whether a denial is final or non-final is driven by LOB/client configuration
+Determination availability: Which determinations are shown to users is configurable by health plan and LOB (e.g., "Denial - Admin" hidden if no network checks)
+Case routing dimension: LOB is a factor in routing cases to the correct work queue
+Reporting dimension: LOB is a primary filter for all standard operational and compliance reports; Part C ODAG (Organization Determinations, Appeals & Grievances) applies to Medicare Part C, Part D CDAG (Coverage Determinations, Appeals & Grievances) applies to Medicare Part D
+
+Reference: Apply Payer Drug Configurations, Apply Payer Non-Preferred Drug Rules, V1. Post-Denial Pathway UM Module
+
+LOB (Line of Business)
+
+In the hierarchy diagram this corresponds to the PlanType BusinessGrain level (e.g., "HMO", "PPO" under Commercial).
+
+NP drug rule matching: LOB is a required match attribute — NP rules can be set at LOB grain, meaning PPO and HMO under the same Major LOB can have different non-preferred drug policies
+LOB-specific configuration: How OON and OOA benefits should be treated, whether pediatric program is allowed, GAP review requirements, custom data requirements, custom UI display messages, mapping to fields in client eligibility file
+Scope validation — Product Line / Product Offering Validation (Rule 2): Active Product Line / Product Offering must be delegated under the matched LOB
+Post-denial pathway configuration: Appeals communication channels and post-denial configuration (which pathways are available — Appeals, Reopens, Reconsiderations) can be LOB-specific
+TAT dimension: LOB is a component of the TAT lookup key (Payer + LOB + Delegation Level + Request Type + Billing Method)
+Case state transition rules: In-step case states within workflow can be configured differently per LOB
+UI rules: Using data from the case and configurations, the system can display different UI configurations for the same case state per LOB, with distinct payer-required validations
+Eligibility hierarchy validation: LOB must map correctly to Product Line to prevent downstream rule collisions
+
+Reference: Configuration and rules categories, Member Identification and Coverage
+
+Product Line
+
+In the hierarchy diagram this corresponds to the ProductLine BusinessGrain level (e.g., "Bronze", "Silver", "Gold" under Marketplace; or "Claims Only", "Shared Risk" under Employer).
+
+NP drug rule matching — deepest taxonomy grain: Product Line is the most granular payer-hierarchy attribute in NP rule evaluation. This means NP rules can differ between Bronze and Gold plans within the same LOB under the same payer.
+Scope validation — Product Line / Product Offering Validation (Rule 2): Product Line must be active and delegated; Product Offering (more granular, if configured) must belong to the Product Line
+Product Line–specific configuration: Specific plan types, provider network rules, ASO, ARISA (if applicable)
+Eligibility validation: Product Line displayed in member information form must map correctly back to LOB in Admin hierarchy
+Case-level scope behavior: Product Line participates in the identifier-based carve-out evaluation chain (Rule 4 in scope validation)
+Benefit type derivation context: While PDL (Payer Drug Library) is keyed on Insurance Provider + Major LOB, the NP rule enforcement at Product Line grain can override what would otherwise be an auto-approved drug
+
+Reference: Apply Payer Non-Preferred Drug Rules, Member Identification and Coverage
+
+Employer Group
+
+In the hierarchy diagram, Employer Group is architecturally distinct from BusinessGrouping/BusinessGrain — it represents the employer's contractual relationship with a payer, not the payer's internal product taxonomy. It is the lowest default grain level in the hierarchy.
+
+Lowest-grain rule override: Any rule or configuration set at Employer Group level takes absolute precedence over all levels above it. Example from the documentation: if OH's global setting allows treatment start date = today minus 1 month, and a specific Employer Group allows today minus 2 months, the Employer Group setting wins.
+Scope validation — Identifier-based (Rule 4): Insurance Group ID (which maps to Employer Group) is one of the identifiers evaluated against allowed/carve-out lists. A specific Employer Group can be carved out of OH review even if the parent LOB and Product Line are fully delegated.
+Custom UI configuration: Employer Group–specific fields or validation requirements. If a specific employer has opted into additional programs (e.g., Site of Care), the UI may require attestation to clinical exception criteria.
+Custom hard stop and warning messages: Employer Group–level event messages can override payer or LOB defaults.
+Custom data requirements: An Employer Group may require additional non-standard data collection during case entry (e.g., additional text and number input fields added to the standard interface).
+Custom case routing: Employer Group can influence which queue a case is assigned to if group-specific processing rules exist.
+Reporting context: Employer Group is a reportable dimension in Case-Level and Element-Level Flat Files, Financial Impact Reports, and Activity Reports.
+Place in grain ranking: While Employer Group is the lowest default grain, the grain ranking order itself is configurable per payer — a payer could hypothetically place Employer Group above Product Line if their business model requires it.
+
+Reference: Rules and configurations functional specification, Member Identification and Coverage, Configuration and rules categories
+
+ : brb
+
+ : https://oncologyanalytics.atlassian.net/wiki/x/GQAqMwE
+
+Log in with Atlassian account
+
+Log in to Jira, Confluence, and all other Atlassian Cloud products here. Not an Atlassian user? Sign up for free.
+
+oncologyanalytics.atlassian.net
+
+ : running a little late
+
+1 Like reaction.
+
+ : Cory can u join us
+
+ : Patient
+
+ : Address
+
+ : gotta drop
+
+ : sounds like good progress with model
+
+ : Me too
+
+ : me too, thanks!
