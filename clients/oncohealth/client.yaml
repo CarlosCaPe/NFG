@@ -376,3 +376,23 @@ executive_steering:
   - Stephen Hau
   - Will Crawford
   - Erik Hjortshoj
+
+teams_capture:
+  team_name: OncoHealth_NewFire
+  channels:
+    - General
+    - NewUM
+    - Clinical Scheduling
+    - CRS/CRR Scheduling
+    - IT Helpdesk Scheduling
+  priority_chats:
+    - "Data team - daily"
+    - "Eligibility - Person/Member workshop"
+    - "Payer taxonomy workshop"
+    - "Databricks Lakeflow Connect"
+    - "Provider Discussion"
+    - "Claude workshop - how to boost our work performance"
+    - "Erik and Michal"
+    - "Eligibility workshop"
+  scroll_depth: 3
+  capture_transcripts: true
