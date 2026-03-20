@@ -36,19 +36,21 @@ services:
     status: complete
     chars: 2797
 
-  - name: Miro NewUM Board
+  - name: Miro NewFire Board (assessment-era, stale)
     key: "03"
     type: miro
     board_id: uXjVIx2JdOQ=
     status: complete
     chars: 130902
+    note: "Rachel confirmed this is the Newfire assessment board — no longer updated. Captured data is historical only."
 
-  - name: Miro Rachel Board
+  - name: Miro Onco Board (active)
     key: "04"
     type: miro
     board_id: uXjVJUOanb0=
     status: blocked
-    blocker: "403 Forbidden — private board, need invitation from Rachel Collier"
+    blocker: "Not invited to Onco Miro — Rachel requested access 2026-03-20. Should have been part of onboarding setup."
+    note: "This is the active board. Onco environment. Access via ccarrillo@oncohealth.us (not NFG email)."
 
   - name: Azure DevOps newUM
     key: "05"

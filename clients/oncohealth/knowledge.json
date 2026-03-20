@@ -231,7 +231,7 @@
       "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20)",
       "Databricks access (email devopsrequest@oncologyanalytics.com)",
       "Database access (email devopsrequest@oncologyanalytics.com)",
-      "Miro board access — contacted Rachel Collier (2026-03-20)",
+      "Miro Onco board (active) — Rachel requesting access (2026-03-20). Was missed during onboarding. Need Onco email invite.",
       "Atlassian/Confluence access — contacted Inna Mariienko (2026-03-20). NOTE: inventory says 'register with Onco email, access granted automatically' — login loop with @oncologyanalytics.com",
       "Carlos's access inventory row is blank — needs to be filled in with current access status",
       "MATIS access — separate request to clientsupport@oncohealth.us"
@@ -241,8 +241,8 @@
       "results": [
         { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 44703, "method": "Google Docs export" },
         { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 2797, "method": "Google Docs export" },
-        { "resource": "Miro newUM board", "status": "COMPLETE", "chars": 130902, "method": "Miro REST API", "items": 2503 },
-        { "resource": "Miro Rachel board", "status": "BLOCKED", "action": "403 Forbidden — private board, need Rachel's invitation" },
+        { "resource": "Miro NewFire board (assessment, stale)", "status": "COMPLETE", "chars": 130902, "method": "Miro REST API", "items": 2503, "note": "Rachel confirmed this is the old Newfire assessment board — no longer updated" },
+        { "resource": "Miro Onco board (active)", "status": "BLOCKED", "action": "Rachel requesting access (2026-03-20). Not invited during onboarding setup. Access via Onco email." },
         { "resource": "Azure DevOps", "status": "PARTIAL", "method": "Playwright + Okta SSO + MFA", "note": "Auth works. Wiki access denied. Boards/Pipelines available." },
         { "resource": "Atlassian Confluence", "status": "BLOCKED", "note": "Separate SSO from Okta — needs Atlassian-specific credentials" },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
