@@ -6,3 +6,5 @@ output/.browser-profile/
 *.log
 
 .graph-token.json
+
+.playwright-session-okta/

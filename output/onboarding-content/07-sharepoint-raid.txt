@@ -1,41 +1,182 @@
-﻿SharePoint RAID - NewUM_RAID.xlsx
-Source: SharePoint Online (OncoHealth_NewFire)
-Auth: Okta SSO cookies (reused from Azure DevOps session)
-Captured: GPT-4o vision analysis of Excel Online screenshot
+SharePoint RAID - newUM_RAID.xlsx
+Source: SharePoint Online (OncoHealth_NewFire) — downloaded file
+Extracted: 2026-03-20T14:29:08.247Z
+Sheets: RAID Template, Sign-Offs, Definitions
 
-=== DOCUMENT INFO ===
-File: NewUM_RAID.xlsx
-Sheets: Sign-Offs, RAID Template (active), Definitions
-Editing: Yes (user has edit access)
+============================================================
+SHEET: RAID Template
+Rows: 103, Columns: 26
+============================================================
 
-=== RAID TEMPLATE COLUMNS ===
-1. Item (sequential number)
-2. RAID Category
-3. Description
-4. Risk Owner
-5. Probability (P)
-6. Impact (I)
-7. Risk Score (P x I)
-8. Current Status
-9. Mitigation Strategy
-10. Risk Response
+[Headers] Item | RAID Category | Description | Risk Owner | Probability (P) | Impact (I) | Risk Score (P x I) | Current Status | Mitigation Strategy | Risk Reponse | Date Raised | Entered By | Key Updates | Date Closed | Col15 | Col16 | Col17 | Col18 | Col19 | Col20 | Col21 | Col22 | Col23 | Col24 | Col25 | Col26
+--------------------------------------------------------------------------------
+[Row 2] Item: 1 | RAID Category: Risk | Description: Many moving parts and a fast build schedule - could step on each others’ toes | Risk Owner: Rachel Collier | Probability (P): 3 | Impact (I): 4 | Risk Score (P x I): 12 | Current Status: Closed  | Mitigation Strategy: Staff teams, establish ceremonies, introduce governance series, open communication Channels | Risk Reponse: Treat/Reduction | Date Raised: Thu Jan 01 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Monitor progress as Phase 2 gets started. Team can raise specific challenges if/when they arise and will be addressed.  | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 3] Item: 2 | RAID Category: Risk | Description: lack of feedback loop with every user persona:
+CRS
+Onco clinician
+payer
+provider (including provider’s admin assistant)
+patient
+configuration specialist | Risk Owner: Caitlin Bowler | Probability (P): 4 | Impact (I): 3 | Risk Score (P x I): 12 | Current Status: Closed  | Mitigation Strategy: Define/Document UX Review Process | Risk Reponse: Treat/Reduction | Date Raised: Thu Jan 01 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 3/6: Ux Design Review Process Document created, feedback received, and pending final approval. | Date Closed: Thu Mar 05 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 4] Item: 3 | RAID Category: Risk | Description: historical data migration:
+historical data too incomplete or messy to reconcile with new schema
+clients using the same field for different purposes
+difficulty adapting legacy reporting apparatus to new system (not much SDLC) | Risk Owner: Erik Hjortshoj | Probability (P): 4 | Impact (I): 2 | Risk Score (P x I): 8 | Current Status: In Progress | Mitigation Strategy: Review migration approach/drafted plan | Risk Reponse: Treat/Reduction | Date Raised: Thu Jan 01 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 3/5: Design docs and migration plan being drafted. Need to determine if documents resolve risk items capatured.   Historical data captured in another risk. Mtg request to update/define risk now with design docs drafted. Tgt w/o 3/2
+[Row 5] Item: 4 | RAID Category: Risk | Description: management of config
+insufficient testing of business rule combinations
+bad management of intersections between rulesets, leading to bad case states | Risk Owner: Jack Hall | Probability (P): 4 | Impact (I): 4 | Risk Score (P x I): 16 | Current Status: In Progress | Mitigation Strategy: Review/Approval on document Jack has developed. Reasses item after document gets approved.  | Risk Reponse: Treat/Reduction | Date Raised: Thu Jan 01 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 3/5: Jack has a doc that is being reviewed and if accepted should eliminate 3rd bullet and mitigate 2nd. Break apart. Mtg request to update/define risk now with design docs drafted. Tgt w/o 3/2
+[Row 6] Item: 5 | RAID Category: Risk | Description: reused peripheral services
+Matis and NewUM interfere with each other
+not enough service code gets exercised before cutover | Risk Owner: Erik Hjortshoj | Probability (P): 4 | Impact (I): 3 | Risk Score (P x I): 12 | Current Status: Open | Mitigation Strategy: Analysis meeting first | Risk Reponse: Treat/Reduction | Date Raised: Thu Jan 01 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Break apart. Mtg request to update/define risk now with design docs drafted. Tgt w/o 3/2
+[Row 7] Item: 6 | RAID Category: Decision | Description: Use .NET WebAPI for API Gateway (decision based on feedback from Bogdan Chachun and Neal Ruggles) | Risk Owner: Erik Hjortshoj | Current Status: Closed  | Date Raised: Mon Jan 12 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Jack Hall | Key Updates: 2/27: Ask Jason to review/feedback. Email sent
+3/3 update: Per Jason in email "Yes, .NET WebApi for the API gateway is recommended approach to handle our processes steadily.  Agreed there." Closing Decision status | Date Closed: Mon Mar 02 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 8] Item: 7 | RAID Category: Decision | Description: Let OncoHealth handle the TaT service so that it integrates across NewUM, MATIS and SmartUM. Architec | Risk Owner: Erik Hjortshoj | Current Status: Closed  | Date Raised: Mon Jan 12 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Jack Hall | Key Updates: Related to #20. 2/27: Closing this item, reference item #20 going forward.  | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 9] Item: 8 | RAID Category: Risk | Description: New account provisioning for OncoHealth will take at least 5 days | Risk Owner: Rachel Collier | Probability (P): 3 | Impact (I): 3 | Risk Score (P x I): 9 | Current Status: Closed  | Mitigation Strategy: Determine if Newfire can obtain email & phone 1 week in advance of "start" date to get the request in the queue and remove delays | Risk Reponse: Treat/Reduction | Date Raised: Mon Jan 12 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Nearly all accounts are now provisioned for the project. Only a handful of resources are still to join the project and turnaround time has been quick. Closing the Risk 2/17 | Date Closed: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 10] Item: 9 | RAID Category: Risk | Description: UX Schedule Research Delay | Risk Owner: Alyssa Gessleman | Probability (P): 4 | Impact (I): 4 | Risk Score (P x I): 16 | Current Status: Closed  | Mitigation Strategy: First pass with Alison S. and Nichole C. during the rest of January. | Risk Reponse: Treat/Reduction | Date Raised: Wed Jan 14 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Progress made; re-evaluate timeline/impact; 3/3: Resource availability from OH has improved along with end-user accessibility, no longer as risk as originally identified. | Date Closed: Mon Mar 02 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 11] Item: 10 | RAID Category: Decision | Description: Use DataDog for logging; OncoHealth considers AppInsights to be deprecated. | Risk Owner: Erik Hjortshoj | Current Status: Closed  | Date Raised: Tue Jan 20 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Jack Hall | Key Updates: Confirmed with Erik H. 2/27. Moving to Closed | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 12] Item: 11 | RAID Category: Risk | Description: DevOps Environment Setup/ IDE  | Risk Owner: Rachel Collier | Probability (P): 3 | Impact (I): 3 | Risk Score (P x I): 9 | Current Status: Closed  | Mitigation Strategy: Itemize inventory of tools/apps by developer; complete by end of Feb | Risk Reponse: Treat/Reduction | Date Raised: Wed Jan 21 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 2/27: All members have confirmed access with the exception of Matthew and Olha who's accts just got provisioned this week. They will work to confirm access and if any issues come up they will open a ticket to resolve. | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 13] Item: 12 | RAID Category: Risk | Description: Work environments (Account provisoning) | Risk Owner: Rachel Collier | Probability (P): 3 | Impact (I): 3 | Risk Score (P x I): 9 | Current Status: Closed  | Risk Reponse: Treat/Reduction | Date Raised: Mon Jan 12 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Duplicate | Date Closed: Wed Jan 28 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 14] Item: 13 | RAID Category: Decision | Description: Do not use Automapper in .NET Entity Framework | Risk Owner: Erik Hjortshoj | Current Status: Closed  | Risk Reponse: https://oncologyanalyticsinc-my.sharepoint.com/:w:/r/personal/jhall_oncologyanalytics_com/_layouts/15/Doc.aspx?sourcedoc=%7B447717B2-BE52-4C47-AE81-AD9FCC38A4A6%7D&file=Automapper%20or%20No.docx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=WAC.WORD.HOME-BUTTON%2CAPPHOME-WEB.FILEBROWSER.RECENT&wdPreviousSession=ebc71ebf-660e-45eb-a477-b52e302885d9&wdPreviousSessionSrc=AppHomeWeb&ct=1769183354671 | Date Raised: Thu Jan 22 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Jack Hall | Key Updates: 3/17: Per Donato it is not being used and can be closed. Donato checking with team (3/3) | Date Closed: Mon Mar 16 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 15] Item: 14 | RAID Category: Risk | Description: Databricks access is delayed another week | Risk Owner: Vika Nobis | Probability (P): 5 | Impact (I): 4 | Risk Score (P x I): 20 | Current Status: Closed  | Mitigation Strategy: Raised in weekly onboarding meeting | Risk Reponse: Treat/Reduction | Date Raised: Sun Jan 25 2026 18:00:00 GMT-0600 (Central Standard Time) | Key Updates: 2/18: Confirmed with Vika, this is now closed. 1/28: oh-databricks-ws-test has been signed off by Marc as containing no PHI. Cleanup is in progress, and Databricks access is scheduled for 01/29 or 01/30 
+ | Date Closed: Tue Feb 17 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 16] Item: 15 | RAID Category: Risk | Description: Miro Board access (all project team), limitation to 3 boards | Risk Owner: Rachel Collier | Probability (P): 5 | Impact (I): 3 | Risk Score (P x I): 15 | Current Status: Closed  | Mitigation Strategy: team has been asked to stay inside NewUM board | Risk Reponse: Treat/Reduction | Date Raised: Sun Jan 25 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 2/10: Closing risk. Licnenses have been upgraded, resources should now have access as needed.  1/28: License upgraded, team confirming. Ticket number 0032179 | Date Closed: Mon Feb 09 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 17] Item: 16 | RAID Category: Risk | Description: Core team experience with core prior auth and utilization management work flows could lead to longer cycles for BRD development and sign-off | Risk Owner: Erik Hjortshoj | Probability (P): 5 | Impact (I): 4 | Risk Score (P x I): 20 | Current Status: In Progress | Mitigation Strategy: Opportunity to engage external experts (case schema, workflows and configuration approach) | Risk Reponse: Treat/Reduction | Date Raised: Mon Jan 26 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Sandy Gress | Key Updates: 3/13: Monitor going forward. Does not need review in RAID reviews. 2/27: noted Newfire is tapping one of advisors on schema design to have a few hours to work/review design
+[Row 18] Item: 17 | RAID Category: Risk | Description: Item 0 depends on sprint inputs and team capacity; shifts could delay 2/11 Review Package and 2/16 milestone | Risk Owner: Alyssa Gessleman | Probability (P): 3 | Impact (I): 4 | Risk Score (P x I): 12 | Current Status: Closed  | Mitigation Strategy: Confirm owners, mid-sprint check-ins, early escalation | Risk Reponse: Treat/Reduction | Date Raised: Tue Feb 03 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Alyssa Gessleman | Key Updates: Team presented the 2/16 milestone during the Sprint demo | Date Closed: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 19] Item: 18 | RAID Category: Risk | Description: Delayed stakeholder feedback after 2/11 Review Package may cause rework and schedule compression | Risk Owner: Alyssa Gessleman | Probability (P): 3 | Impact (I): 3 | Risk Score (P x I): 9 | Current Status: Closed  | Mitigation Strategy: Studio team to hold design critique with decision makers and document outcomes | Risk Reponse: Treat/Reduction | Date Raised: Tue Feb 03 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Alyssa Gessleman | Key Updates: Feedback and approval provided. | Date Closed: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 20] Item: 19 | RAID Category: Assumption | Description: Any Rules Engine will need to make some assumptions about what kinds of rules can be defined and how they execute. The attached doc contains our current knowledge of how this relates to architectural and business needs. | Risk Owner: Erik Hjortshoj | Current Status: Open | Risk Reponse: Rules Engine Edge Cases.docx | Date Raised: Wed Feb 04 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Jack Hall
+[Row 21] Item: 20 | RAID Category: Risk | Description: TAT design evaluation (review/confirmation on go-forward) | Risk Owner: Rachel Collier | Probability (P): 3 | Impact (I): 3 | Risk Score (P x I): 9 | Current Status: In Progress | Mitigation Strategy: Develop fully functional reference | Risk Reponse: Treat/Reduction | Date Raised: Mon Feb 09 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Action with Neal. 3/11: Confirmed with Neal, Solid progress so far, the team should have access to begin integration by 3/31; the timestamps generated may not be totally accurate but the results will start flowing through.  Related to #7 Decision, keep one.
+2/27: Keep. Fully functional reference due by 3/31. Donato/Neal/Matt have been in contact. An implementation call is to be scheduled. 
+[Row 22] Item: 21 | RAID Category: Risk | Description: Recent spike in issues seen from Letters V2 (per Venky) | Risk Owner: Erik Hjortshoj | Probability (P): 4 | Impact (I): 3 | Risk Score (P x I): 12 | Current Status: Closed  | Mitigation Strategy: Align/Confirm on recent spike resolution | Date Raised: Mon Feb 09 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 2/20: project team mtg Neal stated spike in issues has trickled off. They had handled majority of the issues as a result of the content migration or content model migration.  | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 23] Item: 22 | RAID Category: Risk | Description: Dependency on final V1 scope and functional release definitions ahead of PI Planning for Ux sequencing/planning | Risk Owner: Alyssa Gessleman | Probability (P): 3 | Impact (I): 4 | Risk Score (P x I): 12 | Current Status: Closed  | Mitigation Strategy: Review functional release draft early in the week; surface gaps and decisions quickly via the Decision Log | Risk Reponse: Treat/Reduction | Date Raised: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Alyssa Gessleman | Key Updates: Roadmap/functional releases received and reviewed; Questions raised and resolved with the Product team. UX/UI team planning and entering tickets. | Date Closed: Sun Feb 22 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 24] Item: 23 | RAID Category: Risk | Description: No direction about how much (if any) historical case information needs to be migrated from Matis -> NewUM. This is potentially a huge amount of work which needs to be addressed early in the project | Risk Owner: Erik Hjortshoj | Probability (P): 2 | Impact (I): 3 | Risk Score (P x I): 6 | Current Status: In Progress | Mitigation Strategy: The less that has to be migrated the better; balance that with business needs | Risk Reponse: Treat/Reduction | Date Raised: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Marc Gale | Key Updates: 3/6: draft doc uploaded to SP for review. 2/27: Task to schedule call (Donato) for next week so group can align on scenarios, risks and sequencing. 2/20: discussed in project team mtg. Next step is to identify first client (tgt end of Feb). Then team will need to regroup to determine approach. Will remain In Progress; update can be made after 1st client identified.
+[Row 25] Item: 24 | RAID Category: Risk | Description: Newfire data team wasn't aware of the shortcomings of OH's process of masking PHI. This had been noted several times in earlier meetings | Risk Owner: Erik Hjortshoj | Probability (P): 2 | Impact (I): 3 | Risk Score (P x I): 6 | Current Status: In Progress | Mitigation Strategy: Assess the work needed and plan for it | Risk Reponse: Treat/Reduction | Date Raised: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Marc Gale | Key Updates: 2/20: discussed in project team mtg. We owe designs that show where we're putting mock interfaces, where we're having to generate test data.
+[Row 26] Item: 25 | RAID Category: Risk | Description: Newfire had been working off the wrong diagram for provider schema. This results in rework for them after receiving the correct diagram | Risk Owner: Erik Hjortshoj  | Current Status: Closed  | Mitigation Strategy: Marc provided the schema (again) 2/17 | Risk Reponse: Treat/Reduction | Date Raised: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Marc Gale | Date Closed: Mon Feb 16 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 27] Item: 26 | RAID Category: Risk | Description: First testing client and first production client still unknown. Concerns that they may not be the same client. | Risk Owner: Sandy Gress | Probability (P): 2 | Impact (I): 3 | Risk Score (P x I): 6 | Current Status: Closed  | Mitigation Strategy: Client list being generated by end of Feb. Next steps will include review and decision. Appropriate discussion and planning to take place after decision is made to determine impact.
+ | Risk Reponse: Treat/Reduction | Date Raised: Wed Feb 18 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Keeley Peck | Key Updates: 2/27: presentation on first Client (Sandy); #1 Geisinger, #2 Highmark Wholecare, #3 HealthPartners. Closing the risk now that identificatio has been made. 
+2/20: discussed in project team mtg, target end of Feb to identify 1st client | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 28] Item: 27 | RAID Category: Risk | Description: Anterior impact (public API) | Risk Owner: Erik Hjortshoj | Probability (P): 4 | Impact (I): 1 | Risk Score (P x I): 4 | Current Status: On Hold | Mitigation Strategy: Requirements  & Change Request decision | Date Raised: Sun Feb 22 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: 3/6: Venky noted team is about 2 weeks away from fully defining all the data elements that we are going to get.  Evaluate when ready, determine if a Risk or a CR that needs to be created. Notes: expose public endpoints for our APIs for case entry and (2) we have to make sure there's the idea of provided-but-not-validated data so the CSR can approve the new case and validate the data provided
+[Row 29] Item: 28 | RAID Category: Risk | Description: BAs need to create 60 PRDs for R2 in preparation for the PI planning (2 per day) | Risk Owner: Erik Hjortshoj | Probability (P): 5 | Impact (I): 4 | Risk Score (P x I): 20 | Current Status: In Progress | Mitigation Strategy: Initiate Conf Specialist (BAs) role fulfillment earlier than planned. This is now in progress. | Risk Reponse: Treat/Reduction | Date Raised: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Vika Nobis | Key Updates: 3/18: Staffing being reviewed; additional project resources expected to support.
+[Row 30] Item: 29 | RAID Category: Risk | Description: Team needs to deliver 60 PRDs for R2 (2 per day). Taking into account results of 1st PI planning (8 for PI), this looks like risk | Risk Owner: Erik Hjortshoj | Current Status: Open | Mitigation Strategy: Dependency on item #28 | Date Raised: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Vika Nobis
+[Row 31] Item: 30 | RAID Category: Decision | Description: Project Team to confirm TAT functions correctly with NewUM. The functionality with SmartUM will be handled outside the Project Team | Current Status: Closed  | Date Raised: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Raised/documented during 2/27 prj mtg. | Date Closed: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 32] Item: 31 | RAID Category: Decision | Description: Phase 1 Deliverable Date moved to March 13th | Risk Owner: Rachel Collier | Current Status: Closed  | Date Raised: Mon Mar 02 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Date Closed: Mon Mar 02 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 33] Item: 32 | RAID Category: Decision | Description: Use Postgres as an operational database for NewUM.  | Risk Owner: Donato Buccella | Current Status: In Progress | Mitigation Strategy: waiting on exec sign-off | Date Raised: Mon Mar 02 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Jack Hall | Key Updates: https://oncologyanalyticsinc-my.sharepoint.com/:w:/g/personal/jhall_oncologyanalytics_com/IQD0DSuZtNiXSa6uU3iYJNI7AdkBslIlyHhXlHPWDLdb_Pw?e=60ofzr
+[Row 34] Item: 33 | RAID Category: Decision | Description: Geisinger selected as first client for NewUM | Date Raised: Thu Feb 26 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Rachel Collier | Key Updates: Sandy shared presentation at 2/27 meeting; team moving forward with decision. | Date Closed: Tue Mar 03 2026 18:00:00 GMT-0600 (Central Standard Time)
+[Row 35] Item: 34 | Description: The test automation architecture and technology stack for both API and UI automation, shared on 3/11, does not clearly demonstrate alignment with OncoHealth’s expectations for a simple, maintainable, and supportable framework. OncoHealth is seeking a streamlined approach for API and UI automation that aligns with proven patterns and supports long‑term sustainability, scalability, and ease of adoption across teams. | Current Status: On Hold | Date Raised: Thu Mar 12 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Dimple Patel | Key Updates: 3/18: Per feedback from Venky, this item is deferred until mid April. A few sprints are needed to  gain feedback. Follow up with next steps after 26.04.14 Sprint
+[Row 36] Item: 35 | Description: Configuration rework will potentially push the schedule out. | Risk Owner: Erik Hjortshoj | Probability (P): 4 | Impact (I): 5 | Risk Score (P x I): 20 | Current Status: In Progress | Date Raised: Sun Mar 15 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Ann Dye
+[Row 37] Item: 36
+[Row 38] Item: 37
+[Row 39] Item: 38
+[Row 40] Item: 39
+[Row 41] Item: 40
+[Row 42] Item: 41
+[Row 43] Item: 42
+[Row 44] Item: 43
+[Row 45] Item: 44
+[Row 46] Item: 45
+[Row 47] Item: 46
+[Row 48] Item: 47
+[Row 49] Item: 48
+[Row 50] Item: 49
+[Row 51] Item: 50
+[Row 52] Item: 51
+[Row 53] Item: 52
+[Row 54] Item: 53
+[Row 55] Item: 54
+[Row 56] Item: 55
+[Row 57] Item: 56
+[Row 58] Item: 57
+[Row 59] Item: 58
+[Row 60] Item: 59
+[Row 61] Item: 60
+[Row 62] Item: 61
+[Row 63] Item: 62
+[Row 64] Item: 63
+[Row 65] Item: 64
+[Row 66] Item: 65
+[Row 67] Item: 66
+[Row 68] Item: 67
+[Row 69] Item: 68
+[Row 70] Item: 69
+[Row 71] Item: 70
+[Row 72] Item: 71
+[Row 73] Item: 72
+[Row 74] Item: 73
+[Row 75] Item: 74
+[Row 76] Item: 75
+[Row 77] Item: 76
+[Row 78] Item: 77
+[Row 79] Item: 78
+[Row 80] Item: 79
+[Row 81] Item: 80
+[Row 82] Item: 81
+[Row 83] Item: 82
+[Row 84] Item: 83
+[Row 85] Item: 84
+[Row 86] Item: 85
+[Row 87] Item: 86
+[Row 88] Item: 87
+[Row 89] Item: 88
+[Row 90] Item: 89
+[Row 91] Item: 90
+[Row 92] Item: 91
+[Row 93] Item: 92
+[Row 94] Item: 93
+[Row 95] Item: 94
+[Row 96] Item: 95
+[Row 97] Item: 96
+[Row 98] Item: 97
+[Row 99] Item: 98
+[Row 100] Item: 99
+[Row 101] Item: 100
+[Row 102] Item: 30 | RAID Category: Issue | Description: Product Team needs to review PRDs and provide input for #28. Limited resources | Risk Owner: Sandy Gress | Probability (P): 5 | Impact (I): 5 | Risk Score (P x I): 25 | Current Status: Open | Mitigation Strategy: Raising at 3/13 meeting | Date Raised: Wed Mar 11 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Ann Dye | Key Updates: 3/12- Will discuss in weekly team call. 
 
-=== VISIBLE DATA ===
-Row 33:
-- Item: 33
-- Category: Decision
-- Description: Geisinger selected as first client for NewUM. Test automation architecture and technology stack for both API and UI automation, shared on 3/11, does not clearly demonstrate alignment with OncoHealth expectations for a simple, maintainable, and supportable framework. OncoHealth is seeking a streamlined approach for API and UI automation that aligns with proven patterns and supports long-term sustainability, scalability, and ease of adoption across teams.
-- Probability: 0, Impact: 0, Score: 0
-- Status: On Hold
+============================================================
+SHEET: Sign-Offs
+Rows: 7, Columns: 9
+============================================================
 
-Row 36:
-- Item: 35
-- Description: Configuration rework will potentially push the schedule out.
-- Risk Owner: Erik Hjortshoj
-- Probability: 4, Impact: 5, Score: 20
-- Status: In Progress
+[Headers] Item/ Deliverable | Description | Version/ Artifact Link | Approver Name | Approval Method | Approval Status | Date Approved | Entered By | Notes
+--------------------------------------------------------------------------------
+[Row 2] Item/ Deliverable: Case Intake Flow  | Description: Screens | Version/ Artifact Link: Case Entry | Approver Name: Sandy Gress | Approval Method: Verbal: call on 3/9 | Approval Status: Approved | Date Approved: Sun Mar 08 2026 18:00:00 GMT-0600 (Central Standard Time) | Entered By: Alyssa Gessleman | Notes: User_Testing_Log 
 
-=== STATUS ===
-Connection: SUCCESS
-Content: PARTIAL (only 2 visible rows from screenshot, full download needed)
-Toolbar: Copilot add-in visible
+============================================================
+SHEET: Definitions
+Rows: 45, Columns: 3
+============================================================
+
+[Headers] For risks specifically, follow this 1-5 scoring system for Probability and Impact:
+--------------------------------------------------------------------------------
+[Row 3] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Probability (P): How likely is the risk to occur?
+[Row 4] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Score | Col2: Rating | Col3: Description
+[Row 5] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 5 | Col2: Very High | Col3: Almost certain (70% - 100% chance)
+[Row 6] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 4 | Col2: High | Col3: Likely to occur (50% - 70% chance)
+[Row 7] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 3 | Col2: Medium | Col3: Possible (30% - 50% chance)
+[Row 8] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 2 | Col2: Low | Col3: Unlikely (10% - 30% chance)
+[Row 9] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 1 | Col2: Very Low | Col3: Rare chance (0% - 10% chance)
+[Row 12] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Impact (I): What is the severity if the risk occurs?
+[Row 13] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Score | Col2: Rating | Col3: Description
+[Row 14] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 5 | Col2: Catastrophic | Col3: Project failure, major financial loss, legal penalties
+[Row 15] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 4 | Col2: Severe | Col3: Significant schedule delay, budget overrun, serious reputation damage
+[Row 16] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 3 | Col2: Moderate | Col3: Noticeable delay, moderate cost increase, minor disruption
+[Row 17] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 2 | Col2: Minor | Col3: Slight delay, small cost increase, manageable inconvenience
+[Row 18] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 1 | Col2: Negligible | Col3: Very little or no noticeable effect
+[Row 21] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Risk Score (P x I)
+[Row 22] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Score Range | Col2: Risk Level | Col3: Action Required
+[Row 23] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 1 - 6 | Col2: Low | Col3: Monitor regularly.
+[Row 24] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 7 - 14 | Col2: Medium | Col3: Define clear mitigation plans and review often.
+[Row 25] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: 15 - 25 | Col2: High | Col3: Prioritize immediate action, allocate resources, and track closely.
+[Row 27] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Current Status
+[Row 28] Col2: Open
+[Row 29] Col2: In Progress
+[Row 30] Col2: On Hold
+[Row 31] Col2: Closed 
+[Row 33] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: Risk Response
+[Row 34] Col2: Terminate/Avoidance | Col3: Eliminating the activity that gives rise to the risk
+[Row 35] Col2: Treat/Reduction | Col3: Implementing controls to reduce the likelihood or impact (e.g., security devices, training)
+[Row 36] Col2: Transfer/Sharing | Col3: Shifting the risk to another party (e.g., through insurance, outsourcing, or contracts)
+[Row 37] Col2: Tolerate/Acceptance | Col3: Acknowledging the risk and its potential impact, and budgeting for potential loss if the cost of treatment outweighs the cost of the risk
+[Row 40] For risks specifically, follow this 1-5 scoring system for Probability and Impact:: RAID Category | Col2: Risk | Col3: Is it a possibility? It’s a Risk.
+[Row 41] Col2: Assumption
+[Row 42] Col2: Issue | Col3: Is it a reality? It’s an Issue
+[Row 43] Col2: Decision | Col3: Which way? Decision made between 2 or more alternatives
+[Row 45] Col2: Sign off | Col3: Formal Approval

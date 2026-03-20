@@ -1,38 +1,185 @@
-﻿SharePoint Change Request - NewUM_Change Request.docx
-Source: SharePoint Online (OncoHealth_NewFire)
-Auth: Okta SSO cookies (reused)
-Captured: GPT-4o vision analysis of Word Online screenshot
+SharePoint Change Request - NewUM_Change Request.docx
+Source: SharePoint Online (OncoHealth_NewFire) — downloaded file
+Extracted: 2026-03-20T14:35:25.747Z
 
-=== DOCUMENT INFO ===
-File: NewUM_Change Request.docx
-Page: 1 of 2 (156 words)
-Header Logo: OncoHealth
-Revision: Rev. 1/20/2026
+=== PLAIN TEXT CONTENT ===
+Project Change Request
 
-=== DOCUMENT CONTENT ===
-Title: Project Change Request
+(Rev. 1/20/2026)
 
-Project Information:
-- Project Name: NewUM
-- Request ID: CR-001 (Use a sequential numbering system)
-- Date Requested: [Date]
-- Requester Name: [Name/Department]
 
-Section 1. Description of Change
+
+Project Name: NewUM
+
+Request ID: CR-001 (Use a sequential numbering system) 
+
+Date Requested: [Date]
+
+Requester Name: [Name/Department]
+
+
+
+1. Description of Change
+
 Clearly describe the proposed change. What is being added, removed, or modified?
 
-Section 2. Reason for Change
+
+
+2. Reason for Change
+
 Why is this change necessary? Is it due to a new regulation, a missed requirement, or a stakeholder request?
 
-Section 3. Impact Assessment
-This is the most critical section. What happens if we say Yes?
 
-Impact Assessment Table:
-| Area     | Impact Level (L/M/H) | Description of Impact |
-| Scope    | High                 |                       |
-| Schedule | Medium               |                       |
 
-=== STATUS ===
-Connection: SUCCESS
-Content: FULL TEMPLATE (this is a blank template, not filled data)
-Note: Document appears to be a template for change requests, not actual submitted CRs
+3. Impact Assessment
+
+This is the most critical section. What happens if we say "Yes"?
+
+Area
+
+Impact Level (L/M/H)
+
+Description of Impact
+
+Scope
+
+High
+
+
+
+
+
+Schedule
+
+Medium
+
+
+
+
+
+Budget
+
+Medium
+
+
+
+
+
+Resource
+
+Low
+
+
+
+
+
+
+
+
+
+4. Risks of NOT Approving
+
+What happens if we stay the course?
+
+
+
+5. Alternatives Considered
+
+Did you look for a cheaper or faster way?
+
+6. Recommendation & Sign-Off
+
+
+
+Final Approval Authority
+
+Jon Maack and Stephen Hau (or their designee) must agree to the change. 
+
+
+
+Role
+
+Name
+
+Signature
+
+Date
+
+Executive Steering Committee
+
+
+
+Jon Maack
+
+
+
+
+
+
+
+
+
+Venky Subramaniam
+
+
+
+
+
+
+
+
+
+Ashley Wise
+
+
+
+
+
+
+
+
+
+Scott Blanchette
+
+
+
+
+
+
+
+
+
+Stephen Hau
+
+
+
+
+
+
+
+
+
+Will Crawford
+
+
+
+
+
+
+
+
+
+Erik Hjortshoj
+
+
+
+
+
+
+
+
+
+
+
+=== WARNINGS ===
+(none)
