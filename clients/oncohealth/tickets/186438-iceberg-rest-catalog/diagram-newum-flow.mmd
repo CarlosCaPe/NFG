@@ -1,0 +1,47 @@
+flowchart TD
+    subgraph sources["🗄️ Data Sources · MS-SQL"]
+        oadb["oadb<br/>(MATIS core)"]
+        drugs["DrugsMS"]
+        elig["EligibilityMS"]
+        prov["ProviderMS"]
+    end
+
+    subgraph databricks["☁️ Azure Databricks · Unity Catalog"]
+        bronze["🥉 Bronze<br/>raw ingestion"]
+        silver["🥈 Silver<br/>cleaned / conformed"]
+        gold["🥇 Gold<br/>curated / aggregated"]
+        bronze --> silver --> gold
+        uniform["🔄 UniForm<br/>IcebergCompatV2"]
+        gold -->|"enable on<br/>target tables"| uniform
+    end
+
+    subgraph iceberg_api["🧊 Iceberg REST Catalog"]
+        rest["/api/2.1/unity-catalog/<br/>iceberg-rest<br/><br/>🎫 SAS credential vending"]
+    end
+
+    subgraph consumers["📡 External Consumers · read-only"]
+        ext1["🔥 Apache Spark"]
+        ext2["🐍 PyIceberg"]
+        ext3["❄️ Snowflake"]
+    end
+
+    sources -->|"ADF · Lakeflow<br/>Connect"| bronze
+    uniform --> rest
+    rest -->|"HTTPS + SAS"| consumers
+
+    style sources fill:#CC2927,stroke:#991F1D,color:#fff
+    style databricks fill:#FF3621,stroke:#CC2A1A,color:#fff
+    style iceberg_api fill:#4E8EE9,stroke:#3A6FB8,color:#fff
+    style consumers fill:#2D7D46,stroke:#1B5C30,color:#fff
+    style bronze fill:#CD7F32,stroke:#A66628,color:#fff
+    style silver fill:#C0C0C0,stroke:#808080,color:#000
+    style gold fill:#FFD700,stroke:#CCA900,color:#000
+    style uniform fill:#1B3139,stroke:#00ADD8,color:#00ADD8
+    style rest fill:#4E8EE9,stroke:#fff,color:#fff
+    style oadb fill:#CC2927,stroke:#fff,color:#fff
+    style drugs fill:#CC2927,stroke:#fff,color:#fff
+    style elig fill:#CC2927,stroke:#fff,color:#fff
+    style prov fill:#CC2927,stroke:#fff,color:#fff
+    style ext1 fill:#E25A1C,stroke:#B84816,color:#fff
+    style ext2 fill:#3776AB,stroke:#FFD43B,color:#FFD43B
+    style ext3 fill:#29B5E8,stroke:#1A8AB5,color:#fff

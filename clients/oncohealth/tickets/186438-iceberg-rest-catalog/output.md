@@ -4,6 +4,7 @@
 > **Author**: Carlos Carrillo (`ccarrillo@oncologyanalytics.com`)
 > **Date**: 2026-03-23
 > **Status**: DRAFT — requires TEST workspace access to validate
+> **Project context**: `clients/oncohealth/knowledge.json` v1.7.0 — operational facts cited as [K].
 
 ---
 
@@ -16,8 +17,11 @@ enabling Delta UniForm on target tables, configuring a service principal with
 appropriate UC privileges, and validating network connectivity.
 
 **Key Blocker**: We currently only have TEST workspace access (ticket #0035611).
-DEV workspace (`adb-2393860672770324`) is network-blocked. Investigation findings
-below are based on official Microsoft documentation (last updated 2026-03-19)
+DEV workspace (`adb-2393860672770324`) is network-blocked [K: `databricks.workspaces[0]`].
+TEST workspace URL is still unknown [K: `unknowns.U2`].
+PAT token `visualstudio-carlos` was created (exp 2027-03-22) [K: `access_inventory`] but MFA
+blocks automated validation — user must be at keyboard [K: `access_inventory.note`].
+Investigation findings below are based on official Microsoft documentation (last updated 2026-03-19)
 and must be validated against our actual workspace configuration.
 
 ---
@@ -30,12 +34,20 @@ and must be validated against our actual workspace configuration.
 |----------|--------|-------|
 | Endpoint exists | YES | `/api/2.1/unity-catalog/iceberg-rest` |
 | Public Preview | YES | DBR 16.4 LTS+ (GA path) |
-| Legacy read-only endpoint | EXISTS | `/api/2.1/unity-catalog/iceberg` (deprecated) |
+| Legacy read-only endpoint | EXISTS | `/api/2.1/unity-catalog/iceberg` (predecessor; see [S1] for migration notes) |
 
 **Endpoint URL format**:
 ```
 https://<workspace-url>/api/2.1/unity-catalog/iceberg-rest
 ```
+
+**newUM known workspaces** [K: `databricks.workspaces`]:
+| Workspace | URL | Status |
+|-----------|-----|--------|
+| oh-databricks-ws-dev | `https://adb-2393860672770324.4.azuredatabricks.net/` | Network-blocked for our account |
+| oh-databricks-ws-test | Unknown | Access GRANTED (ticket #0035611), URL pending |
+| oh-databricks-ws-uat | Unknown | No access requested |
+| oh-databricks-ws-prod | Unknown | No access requested |
 
 > **CRITICAL**: The workspace URL MUST include the workspace ID.
 > Without it, API requests return a `303` redirect to a login page.
@@ -45,6 +57,7 @@ https://<workspace-url>/api/2.1/unity-catalog/iceberg-rest
 
 **Validation command** (run when workspace access is available):
 ```bash
+# Using existing PAT token 'visualstudio-carlos' [K: access_inventory]
 curl -X GET \
   -H "Authorization: Bearer $DATABRICKS_TOKEN" \
   -H "Accept: application/json" \
@@ -58,7 +71,22 @@ curl -X GET \
 - Column mapping enabled (`delta.columnMapping.mode` = `name`)
 - `minReaderVersion` >= 2, `minWriterVersion` >= 7
 - Writes use DBR 14.3 LTS or above
-- Deletion vectors **cannot** be enabled (use `REORG` to purge first)
+- Deletion vectors **incompatible with Iceberg v2** (use `REORG` to purge first); **Iceberg v3 supports deletion vectors** ([S2])
+
+**newUM data layer context** [K: `tech_stack.data`]:
+The data team uses Unity Catalog with a Bronze/Silver/Gold medallion architecture.
+Target tables for UniForm enablement should prioritize Gold-layer (curated) tables
+that external services need to read. Michal Mucha [K: `key_contacts`] leads the data team
+and manages the Databricks Lakeflow Connect initiative [K: `communication.active_chats`] —
+he is the primary contact for table selection.
+
+**Existing MS-SQL databases** [K: `environments.databases`] that may have lakehouse counterparts:
+| MS-SQL DB | Purpose | Potential UC Tables |
+|-----------|---------|--------------------|
+| oadb | Main operational DB (MATIS core) | Case data, clinical workflows |
+| DrugsMS | Master/Payer Drugs Libraries | Drug reference tables |
+| EligibilityMS | Eligibility data | Member eligibility |
+| ProviderMS | Provider data | Provider network |
 
 **Enable on existing table**:
 ```sql
@@ -130,9 +158,16 @@ GRANT SELECT ON TABLE <catalog_name>.<schema_name>.<table_name> TO `<service_pri
 GRANT EXTERNAL USE SCHEMA ON SCHEMA <catalog_name>.<schema_name> TO `<service_principal>`;
 ```
 
+**newUM auth context** [K]:
+- Current auth: Entra ID button click (Okta SSO does NOT auto-login to Databricks) [K: `access_inventory.note`]
+- PAT `visualstudio-carlos` already created for TEST workspace (exp 2027-03-22) [K: `access_inventory`]
+- For production: OAuth M2M recommended — request service principal creation via `devopsrequest@oncologyanalytics.com` [K: `onboarding_documents.devops_email`]
+- DevOps team contact: Luiyi Valentin (`lvalentin@oncohealth.us`) [K: `key_contacts`]
+
 ### 2.4 Network Connectivity Validation
 
-**Current status**: BLOCKED — DEV workspace network-restricted for our account.
+**Current status**: BLOCKED — DEV workspace (`adb-2393860672770324`) network-restricted for our account [K: `databricks.workspaces[0]`].
+TEST workspace access GRANTED (ticket #0035611) but URL not yet provided [K: `unknowns.U2`].
 
 **Validation checklist**:
 
@@ -240,7 +275,7 @@ DESCRIBE EXTENDED <catalog>.<schema>.<table>;
 
 | Method | Use Case | Setup | Token Lifetime |
 |--------|----------|-------|---------------|
-| **PAT** | Dev/test, quick validation | Generate in Databricks UI → Settings → Developer → PATs | Configurable (max 365d) |
+| **PAT** | Dev/test, quick validation | Generate in Databricks UI → Settings → Developer → PATs | Configurable (workspace admin controls max lifetime) |
 | **OAuth M2M** | **Production (recommended)** | Service principal + client_id:secret → `/oidc/v1/token` | Short-lived (1h default) |
 | **Entra SP** | Snowflake-specific on Azure | Entra app registration + client secret → Entra token endpoint | Short-lived |
 
@@ -280,7 +315,7 @@ grant_type=client_credentials
 | Snowflake | YES | NO | YES | Catalog-linked DBs auto-sync; Entra SP requires public networking |
 | Trino | YES | CHECK | CHECK | Supports Iceberg REST catalog |
 | Apache Flink | YES | CHECK | CHECK | Supports Iceberg REST catalog |
-| DuckDB | YES | NO | CHECK | Via Iceberg extension |
+| DuckDB | YES | NO | CHECK | Via [DuckDB Iceberg extension](https://duckdb.org/docs/extensions/iceberg.html) (community-supported; not listed in official Databricks docs) |
 
 > **Write clarification**: The new Iceberg REST Catalog API (DBR 16.4+ Public Preview)
 > supports writes for **managed Iceberg tables**. Delta tables with UniForm enabled
@@ -291,11 +326,11 @@ grant_type=client_credentials
 ## 4. Limitations & Constraints
 
 1. **Delta UniForm tables are read-only** via Iceberg clients (writes must use Databricks)
-2. **Deletion vectors incompatible** with IcebergCompatV2 — must purge via `REORG` before enabling
+2. **Deletion vectors incompatible with Iceberg v2** — must purge via `REORG` before enabling; **Iceberg v3 supports deletion vectors** ([S2]: *"Apache Iceberg v3 supports deletion vectors"*)
 3. **No VOID types** in UniForm-enabled tables
 4. **No materialized views or streaming tables** via UniForm
 5. **Table must be accessed by name** (not path) to trigger auto metadata generation
-6. **IcebergCompatV2 is irreversible** — protocol upgrade cannot be undone
+6. **Protocol upgrade partially irreversible** — Iceberg reads can be disabled by unsetting `delta.universalFormat.enabledFormats`, but Delta reader/writer protocol version upgrades and column mapping **cannot** be undone ([S2]: *"You can turn off Iceberg reads by unsetting the delta.universalFormat.enabledFormats table property. Upgrades to Delta Lake reader and writer protocol versions cannot be undone."*)
 7. **Column mapping cannot be dropped** once enabled
 8. **Metadata generation uses write cluster resources** — may increase driver memory usage
 9. **Snowflake + Entra OAuth requires public networking** — no Private Link support
@@ -306,16 +341,18 @@ grant_type=client_credentials
 
 | # | Action | Owner | Status |
 |---|--------|-------|--------|
-| 1 | Obtain TEST workspace URL from DevOps (reply to ticket #0035611) | Carlos | PENDING |
-| 2 | List UC catalogs/schemas/tables in workspace | Carlos | BLOCKED |
-| 3 | Identify target tables for UniForm enablement | Data Team lead (Michal) | NOT STARTED |
-| 4 | Test `DESCRIBE EXTENDED` on a target table to check current properties | Carlos | BLOCKED |
-| 5 | Enable UniForm on a non-prod test table | Carlos + Michal | NOT STARTED |
-| 6 | Validate Iceberg REST endpoint with curl + PAT | Carlos | BLOCKED |
-| 7 | Test PyIceberg read from external network | Carlos | BLOCKED |
-| 8 | Create service principal for production use | DevOps | NOT STARTED |
-| 9 | Grant `EXTERNAL USE SCHEMA` on target schemas | UC Admin | NOT STARTED |
-| 10 | Enable external data access on metastore | UC Admin | NOT STARTED |
+| 1 | Obtain TEST workspace URL from DevOps (reply to ticket #0035611; email `devopsrequest@oncologyanalytics.com` [K]) | Carlos | PENDING |
+| 2 | Validate PAT `visualstudio-carlos` [K] against Iceberg REST endpoint | Carlos | BLOCKED (needs URL) |
+| 3 | List UC catalogs/schemas/tables — identify Bronze/Silver/Gold layers [K: `tech_stack.data`] | Carlos | BLOCKED |
+| 4 | Identify target tables for UniForm enablement | Michal Mucha [K: `key_contacts`] | NOT STARTED |
+| 5 | Test `DESCRIBE EXTENDED` on a target table to check current properties | Carlos | BLOCKED |
+| 6 | Enable UniForm on a non-prod test table | Carlos + Michal | NOT STARTED |
+| 7 | Validate Iceberg REST endpoint with curl + existing PAT [K] | Carlos | BLOCKED |
+| 8 | Test PyIceberg read from external network | Carlos | BLOCKED |
+| 9 | Create dedicated service principal for production use | DevOps (Luiyi Valentin [K]) | NOT STARTED |
+| 10 | Grant `EXTERNAL USE SCHEMA` on target schemas | UC Admin (escalate via Erik Hjortshoj [K]) | NOT STARTED |
+| 11 | Enable external data access on metastore | UC Admin | NOT STARTED |
+| 12 | Resolve unknowns U2 (workspace URLs) and U6 (preferred workspace) [K: `unknowns`] | Carlos / DevOps | PENDING |
 
 ---
 
@@ -329,3 +366,4 @@ All findings sourced from official Microsoft/Databricks documentation:
 4. [Databricks service principals](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/)
 5. [PyIceberg REST catalog configuration](https://py.iceberg.apache.org/configuration/#rest-catalog)
 6. [Iceberg REST API spec (Apache)](https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml)
+7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.7.0 (2026-03-23) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack

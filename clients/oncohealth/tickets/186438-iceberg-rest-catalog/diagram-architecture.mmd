@@ -1,0 +1,30 @@
+graph TD
+    subgraph workspace["☁️ Azure Databricks Workspace"]
+        subgraph uc["🗂️ Unity Catalog"]
+            delta["🔺 Delta Table<br/>(source of truth)"]
+            uniform["🔄 UniForm · IcebergCompatV2<br/><br/>• Async metadata generation<br/>• Parquet data files shared<br/>• Iceberg metadata layer"]
+            delta -->|"writes trigger"| uniform
+        end
+        subgraph api["🧊 Iceberg REST Catalog API"]
+            endpoint["/api/2.1/unity-catalog/iceberg-rest<br/><br/>🔑 Auth: OAuth M2M · PAT<br/>🎫 Credential Vending: SAS tokens"]
+        end
+        uniform --> endpoint
+    end
+
+    endpoint -->|"HTTPS"| pyiceberg["🐍 PyIceberg<br/>Python client"]
+    endpoint -->|"HTTPS"| spark["🔥 Apache Spark<br/>+ Iceberg (JVM)"]
+    endpoint -->|"HTTPS"| snowflake["❄️ Snowflake<br/>Catalog-linked DB"]
+    endpoint -->|"HTTPS"| trino["🔱 Trino · Flink<br/>JVM engines"]
+    endpoint -->|"HTTPS"| duckdb["🦆 DuckDB<br/>Iceberg extension"]
+
+    style workspace fill:#FF3621,stroke:#CC2A1A,color:#fff
+    style uc fill:#1B3139,stroke:#FF3621,color:#fff
+    style api fill:#4E8EE9,stroke:#3A6FB8,color:#fff
+    style delta fill:#00ADD8,stroke:#008FB0,color:#fff
+    style uniform fill:#1B3139,stroke:#00ADD8,color:#fff
+    style endpoint fill:#4E8EE9,stroke:#fff,color:#fff
+    style pyiceberg fill:#3776AB,stroke:#FFD43B,color:#FFD43B
+    style spark fill:#E25A1C,stroke:#B84816,color:#fff
+    style snowflake fill:#29B5E8,stroke:#1A8AB5,color:#fff
+    style trino fill:#DD00A1,stroke:#AA007B,color:#fff
+    style duckdb fill:#FFF000,stroke:#000,color:#000

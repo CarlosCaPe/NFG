@@ -52,4 +52,4 @@ Tracking folder for ADO work items assigned to Carlos Carrillo (`ccarrillo@oncol
 | ADO ID | Title | Sprint | Status |
 |--------|-------|--------|--------|
 | 185594 | review the doc | 26.03.31 | Active |
-| XXXXXX | Iceberg REST Catalog investigation | TBD | Active |
+| 186438 | Iceberg REST Catalog investigation | TBD | Active |
