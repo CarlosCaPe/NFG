@@ -1,0 +1,261 @@
+# Alignment Healthcare — Full Content Export
+Exported: 2026-03-23T19:44:57.890Z
+Pages: 5
+
+
+# Alignment Healthcare
+
+trueRedWork in Progress
+
+Overview
+
+falseThis is the homepage for .
+
+This space has all the documents related to OA client Alignment Healthcare.
+
+Alignment Healthcare Company Overview
+
+falseAlignment Healthcare partners with hospitals that want to transform their business to become the network of choice in the post-reform healthcare system.
+
+Alignment Healthcare is the ONLY POPULATION HEALTH SOLUTION with an advanced clinical model, IT & enablement platform, risk experience and capital.
+
+Alignment Healthcare Key Information
+
+falseHeadquarters: California
+Medicare population only
+Florida headquarters: Tampa, Florida
+Florida Membership population as of 11/1/2017: ~7,500 lives
+
+OA Services Provided
+
+falseChemotherapy review
+Radiation (XRT) therapy review
+Genetic and Molecular Testing (GMT) review
+
+Alignment Healthcare Turn-Around Time Frames
+
+Standard: 7-days
+Urgent/Expedited: 24-hours
+false
+
+Line of Business/Case Priority | Compliance Requirement | OA TAT Requirement | Health Plan remaining TAT Requirement | 
+Urgent/STAT
+
+ | 72 - Hours | 24 - Hours | 48 - Hours | 
+Medicare | 14 Days* | 7 Days* | 7 Days* | 
+Retrospective | 14 Days* | 7 Days* | 7 Days* | 
+*Consecutive days NOT Business days | 
+ | 
+ | 
+ | 
+
+Provider/PayerNotification
+
+falseRecommendation of Approvals to the treating provider and payer
+Recommendation of Adverse determination send to both provider and payer
+
+Alignment Provider Network File Template 
+
+false
+
+Alignment Member Eligibility File Template 
+
+false
+
+Recent space activity
+
+page, comment, blogpost5truesocial
+
+## blank
+
+
+
+## Comparison TPM, ProdM and BA
+
+| Technical Program Manager
+
+ | Product Manager
+
+ | Business Analyst
+
+ | 
+Overall focus
+
+ | Develop the project execution strategy and timeline
+Drive execution / delivery
+Monitor project health
+Generate project reports
+Review User Stories (technical requirements and acceptance criteria)
+
+ | Highly strategic
+Grand vision of the product. Long-term focus
+
+ | More detail-oriented.
+Short to mid-term focus
+
+ | 
+Areas of responsibility
+
+ | Managing Overall Iteration Progress
+Sprint progress review
+Reprioritization of sprints and epics if needed
+Sprint retrospectives 
+
+ | Product vision
+Customer discovery
+Cross-team alignment
+Feature prioritization
+
+ | Optimizing the development process
+Turning the product vision into an actionable backlog
+
+ | 
+Owns
+
+ | Project Delivery
+Project Communications 
+Project Status Reports
+
+ | Product Roadmap
+Product Backlog
+Epics
+
+ | User Stories
+Bugs
+
+ | 
+Success Metrics
+
+ | Performance of the development team
+
+ | NPS (product)
+Conversions (product)
+Revenue (business)
+Churn (business)
+
+ | Completed User Stories ready for development & QA
+
+ |
+
+## Product requirements
+
+com.atlassian.confluence.plugins.confluence-software-blueprints:requirements-blueprintALcom.atlassian.confluence.plugins.confluence-software-blueprints:requirements-blueprintAdd Product requirements
+
+requirementsrequirements
+
+## Test
+Labels: requirements
+
+Fill in project details in the table below. Type /date to quickly add the target release date, /jira to link to Jira epics or issues, and @mention functional owners to keep everyone on the same page.
+
+Target release
+
+ |  | 
+Epic
+
+ |  | 
+Document status
+
+ | DRAFT
+
+ | 
+Document owner
+
+ | 
+
+ | 
+Designer
+
+ |  | 
+Tech lead
+
+ |  | 
+Technical writers
+
+ |  | 
+QA
+
+ |  | 
+Objective
+
+Provide context on this project and explain how it fits into your organization's strategic goals
+
+Success metrics
+
+List project goals and the metrics you'll use to judge its success
+
+Goal
+
+ | Metric
+
+ | 
+e.g., Simplify the user experience
+
+ | e.g., Customer satisfaction score increases
+
+ | 
+ |  | 
+Assumptions
+
+List any assumptions you have about your users, technical constraints, or business goals (e.g., Most users will access this feature from a tablet)
+
+Milestones
+
+Use the roadmap planner (/roadmap) to help your team stay on track. To edit workstreams or dates, select the placeholder below and tap the pencil icon.
+
+true
+        %7B%22title%22%3A%22Roadmap%20Planner%22%2C%22timeline%22%3A%7B%22startDate%22%3A%222018-07-16%2000%3A00%3A00%22%2C%22endDate%22%3A%222019-06-16%2000%3A00%3A00%22%2C%22displayOption%22%3A%22MONTH%22%7D%2C%22lanes%22%3A%5B%7B%22title%22%3A%22Dashboard%22%2C%22color%22%3A%7B%22lane%22%3A%22%23f6c342%22%2C%22bar%22%3A%22%23fadb8e%22%2C%22text%22%3A%22%23594300%22%2C%22count%22%3A1%7D%2C%22bars%22%3A%5B%7B%22title%22%3A%22Feature%201%22%2C%22description%22%3A%22This%20is%20the%20first%20bar.%22%2C%22startDate%22%3A%222018-07-01%2000%3A00%3A00%22%2C%22duration%22%3A2%2C%22rowIndex%22%3A0%2C%22id%22%3A%22eeb2d902-e723-4ff0-a10d-43a5793089a4%22%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22title%22%3A%22Feature%202%22%2C%22description%22%3A%22This%20is%20the%20second%20bar.%22%2C%22startDate%22%3A%222018-09-02%2011%3A38%3A36%22%2C%22duration%22%3A2.297029702970297%2C%22rowIndex%22%3A1%2C%22id%22%3A%220e8f437c-39f1-4d70-b85b-3ca89fd57a00%22%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22rowIndex%22%3A0%2C%22startDate%22%3A%222018-11-15%2006%3A10%3A41%22%2C%22id%22%3A%2290251c8c-3b74-4d2b-b850-684ffd40514b%22%2C%22title%22%3A%22Feature%203%22%2C%22description%22%3A%22%22%2C%22duration%22%3A2.00990099009901%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22rowIndex%22%3A1%2C%22startDate%22%3A%222019-01-18%2019%3A14%3A51%22%2C%22id%22%3A%22d0529fe8-6c8c-45e8-8078-d75c2f063dd9%22%2C%22title%22%3A%22Feature%204%22%2C%22description%22%3A%22%22%2C%22duration%22%3A2.01980198019802%2C%22pageLink%22%3A%7B%7D%7D%5D%7D%2C%7B%22title%22%3A%22Notification%22%2C%22color%22%3A%7B%22lane%22%3A%22%233b7fc4%22%2C%22bar%22%3A%22%236c9fd3%22%2C%22text%22%3A%22%23ffffff%22%2C%22count%22%3A1%7D%2C%22bars%22%3A%5B%7B%22title%22%3A%22iOS%20App%22%2C%22description%22%3A%22This%20is%20the%20third%20bar.%22%2C%22startDate%22%3A%222018-07-13%2021%3A23%3A10%22%2C%22duration%22%3A2.5%2C%22rowIndex%22%3A0%2C%22id%22%3A%22dd93afcd-2704-4253-adb8-809a336cc5ba%22%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22rowIndex%22%3A0%2C%22startDate%22%3A%222018-10-10%2004%3A59%3A24%22%2C%22id%22%3A%228dc8bc2d-b7cb-44a8-b526-7d1ede51f690%22%2C%22title%22%3A%22Android%22%2C%22description%22%3A%22%22%2C%22duration%22%3A2.4752475247524752%2C%22pageLink%22%3A%7B%7D%7D%5D%7D%5D%2C%22markers%22%3A%5B%7B%22title%22%3A%22Milestone%201%22%2C%22markerDate%22%3A%222018-07-31%2016%3A38%3A01%22%7D%2C%7B%22markerDate%22%3A%222018-10-08%2001%3A25%3A32%22%2C%22title%22%3A%22Go%2FNo%20go%22%7D%2C%7B%22markerDate%22%3A%222018-12-31%2001%3A54%3A03%22%2C%22title%22%3A%22Milestone%202%22%7D%5D%7D
+    Roadmap%20Plannerc013a8cf46e3276583f2ddb4893243e4Type /trello to add a card or board to this page or /jira to include a Jira issue, chart, or project.
+
+Requirements
+
+Requirement
+
+ | User Story
+
+ | Importance
+
+ | Jira Issue
+
+ | Notes
+
+ | 
+1 | e.g., Must be mobile responsive
+
+ | e.g., John is a PM who wants to check on his team's progress from the train station
+
+ | HIGHRed
+
+ |  |  | 
+2 |  
+
+ |  
+
+ |  
+
+ |  
+
+ |  
+
+ | 
+User interaction and design
+
+Add mockups, diagrams, or visual designs related to these requirements. Type /image to upload a file.
+
+Open Questions
+
+Question
+
+ | Answer
+
+ | Date Answered
+
+ | 
+e.g., How might we make users more aware of this feature?
+
+ | e.g., We'll announce the feature with a blog post and a Summit presentation
+
+ |  | 
+Out of Scope
+
+List the features discussed which are out of scope or might be revisited in a later release.

@@ -1,0 +1,275 @@
+{
+  "count": 13,
+  "items": [
+    {
+      "id": 179183,
+      "rev": 7,
+      "fields": {
+        "System.Id": 179183,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-01-12T11:09:06.47Z",
+        "System.ChangedDate": "2026-02-03T12:42:34.42Z",
+        "System.Title": "Identity, Access & Administration Foundation",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/179183"
+    },
+    {
+      "id": 180140,
+      "rev": 6,
+      "fields": {
+        "System.Id": 180140,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Ivan Karpa",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+            }
+          },
+          "id": "cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "uniqueName": "ikarpa@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy",
+          "descriptor": "aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+        },
+        "System.CreatedDate": "2026-01-22T07:06:51.77Z",
+        "System.ChangedDate": "2026-02-03T12:42:34.42Z",
+        "System.Title": "Automation Quality Assurance",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<div><span>This epic covers all activities related to the setup, improvement, and scaling of automated testing within the newUM project.<br></span><span>It includes the development of the testing framework, integration of supporting tools, test coverage expansion, infrastructure enhancements, and implementation of reporting and monitoring solutions.</span><br> </div>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180140"
+    },
+    {
+      "id": 181222,
+      "rev": 7,
+      "fields": {
+        "System.Id": 181222,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:49:20.8Z",
+        "System.ChangedDate": "2026-02-03T12:42:34.42Z",
+        "System.Title": "Case Intake",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181222"
+    },
+    {
+      "id": 181223,
+      "rev": 6,
+      "fields": {
+        "System.Id": 181223,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:49:48.49Z",
+        "System.ChangedDate": "2026-02-03T12:42:34.42Z",
+        "System.Title": "Case Entry",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181223"
+    },
+    {
+      "id": 181224,
+      "rev": 5,
+      "fields": {
+        "System.Id": 181224,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:51:25.997Z",
+        "System.ChangedDate": "2026-02-03T12:42:34.42Z",
+        "System.Title": "Case Assignment",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<div>Case Assignment governs how the system evaluates a case after intake and auto-determination checks, then routes non–auto-determined cases to the appropriate operational or clinical work queue based on configurable rules. This capability ensures cases are consistently and automatically assigned to the correct team for timely review and decisioning.<br> </div>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181224"
+    },
+    {
+      "id": 181225,
+      "rev": 5,
+      "fields": {
+        "System.Id": 181225,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:51:59.743Z",
+        "System.ChangedDate": "2026-02-16T15:30:14.437Z",
+        "System.Title": "Case Review - Processing",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181225"
+    },
+    {
+      "id": 181226,
+      "rev": 6,
+      "fields": {
+        "System.Id": 181226,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:52:06.603Z",
+        "System.ChangedDate": "2026-02-16T15:30:00.37Z",
+        "System.Title": "Case Review - Determinations",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<p>Finalize a case by applying the appropriate determination outcome, generating and delivering all required notifications and documents, managing delivery exceptions, and completing the case in compliance with clinical, regulatory, and turnaround time requirements: </p><div style=\"margin-top:14px;margin-bottom:14px;\"><article tabindex=-1 dir=auto><div tabindex=-1><div><div dir=auto><ul><li>Apply Final Determination (Approval, Denial, Withdrawal, Out of Scope, PA Exempt) </li><li>Generate and Send Determination Notification Package </li><li>Complete and Close Case After Successful Notification Delivery </li> </ul> </div> </div><div> </div> </div></article><article tabindex=-1 dir=auto></article><br> </div><p> </p><br><br>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181226"
+    },
+    {
+      "id": 181227,
+      "rev": 5,
+      "fields": {
+        "System.Id": 181227,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:52:12.307Z",
+        "System.ChangedDate": "2026-02-03T12:42:34.42Z",
+        "System.Title": "Outbound",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<p>Enable reliable, compliant outbound communications and data exchanges following case processing and final determination, ensuring timely delivery of authorization information, notifications, and reporting outputs to external stakeholders and internal consumers.: </p><p><ul><li>Pharmacy Drug Authorization Outbound (PBM Integration) </li><li>Medical Drug Authorization Outbound (Health Plan Integration) </li><li>Standard Outbound Reporting &amp; Feeds </li> </ul> </p><br><br>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181227"
+    },
+    {
+      "id": 181230,
+      "rev": 6,
+      "fields": {
+        "System.Id": 181230,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-02T08:53:10.623Z",
+        "System.ChangedDate": "2026-02-16T14:12:43.29Z",
+        "System.Title": "Chemotherapy Entry",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "V1.R1"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181230"
+    },
+    {
+      "id": 181983,
+      "rev": 6,
+      "fields": {
+        "System.Id": 181983,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Vika Nobis",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/7210819e-af1a-6474-9249-9ab61b81edf4",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+            }
+          },
+          "id": "7210819e-af1a-6474-9249-9ab61b81edf4",
+          "uniqueName": "vnobis@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0",
+          "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+        },
+        "System.CreatedDate": "2026-02-09T08:49:15.02Z",
+        "System.ChangedDate": "2026-03-19T07:18:59.127Z",
+        "System.Title": "Platform Foundation",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<p>Establish the core technical foundation required to build and run the NewUM platform.<br>\nThis epic includes initial environment setup, baseline architecture components, core services, data access foundations, and essential integrations needed to enable feature development and end-to-end workflows. </p><p>The work in this epic focuses on making the platform usable and ready for delivery, not on implementing business features. </p><br><br>",
+        "System.Tags": "BE Services; core; Data; FE"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181983"
+    },
+    {
+      "id": 181984,
+      "rev": 5,
+      "fields": {
+        "System.Id": 181984,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Vika Nobis",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/7210819e-af1a-6474-9249-9ab61b81edf4",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+            }
+          },
+          "id": "7210819e-af1a-6474-9249-9ab61b81edf4",
+          "uniqueName": "vnobis@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0",
+          "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+        },
+        "System.CreatedDate": "2026-02-09T08:49:23.2Z",
+        "System.ChangedDate": "2026-03-20T13:05:16.59Z",
+        "System.Title": "Platform Improvements",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<div><p>Deliver ongoing technical enhancements to improve the stability, scalability, performance, and maintainability of the NewUM platform. </p><p>This epic includes infrastructure enhancements, refactoring, integration hardening, performance optimizations, CI/CD improvements, and the reduction of technical debt identified during development and delivery. </p><p>The work in this epic focuses on strengthening and evolving the platform without introducing new business functionality. </p><br> </div>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181984"
+    },
+    {
+      "id": 182837,
+      "rev": 3,
+      "fields": {
+        "System.Id": 182837,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-16T09:52:17.137Z",
+        "System.ChangedDate": "2026-02-27T13:49:59.333Z",
+        "System.Title": "Configuration & Rules Engine",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<div><span style=\"color:rgb(41, 42, 46);font-family:&quot;Atlassian Sans&quot;, ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Ubuntu, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;text-align:left;display:inline !important;\">Provides the underlying rule-based logic that drives system workflows, case routing, criteria application, and program-specific requirements. Supports flexible configuration without code changes.</span><br> </div><div><span style=\"color:rgb(41, 42, 46);font-family:&quot;Atlassian Sans&quot;, ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Ubuntu, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;text-align:left;display:inline !important;\"><br></span> </div><div><span style=\"color:rgb(41, 42, 46);font-family:&quot;Atlassian Sans&quot;, ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Ubuntu, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;text-align:left;display:inline !important;\"><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5127569409/Rules+and+configurations+functional+specification\">Rules and configurations functional specification - NewUM Product Team - Confluence</a>&nbsp;<br></span> </div>",
+        "System.Tags": "core"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182837"
+    },
+    {
+      "id": 182946,
+      "rev": 2,
+      "fields": {
+        "System.Id": 182946,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Epic",
+        "System.State": "New",
+        "System.CreatedDate": "2026-02-16T15:28:09.503Z",
+        "System.ChangedDate": "2026-02-16T15:28:09.893Z",
+        "System.Title": "Admin Portal Enhancements",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182946"
+    }
+  ]
+}

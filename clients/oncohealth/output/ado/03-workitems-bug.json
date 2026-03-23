@@ -1,0 +1,116 @@
+{
+  "count": 4,
+  "items": [
+    {
+      "id": 180347,
+      "rev": 7,
+      "fields": {
+        "System.Id": 180347,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Taras Badlo",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
+            }
+          },
+          "id": "3090f017-4f2d-6e26-9906-4d41973369f3",
+          "uniqueName": "tbadlo@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz",
+          "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
+        },
+        "System.CreatedDate": "2026-01-26T07:37:57.817Z",
+        "System.ChangedDate": "2026-02-18T12:16:17.267Z",
+        "System.Parent": 180326,
+        "System.Title": "BUG CHILD",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180347"
+    },
+    {
+      "id": 181917,
+      "rev": 3,
+      "fields": {
+        "System.Id": 181917,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.CreatedDate": "2026-02-06T12:59:35.89Z",
+        "System.ChangedDate": "2026-02-18T12:16:17.267Z",
+        "System.Parent": 180326,
+        "System.Title": "BUG_FROM_TC_1",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181917"
+    },
+    {
+      "id": 184389,
+      "rev": 10,
+      "fields": {
+        "System.Id": 184389,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.03.03",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Mykola Vorona",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+            }
+          },
+          "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "uniqueName": "mvorona@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
+          "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+        },
+        "System.CreatedDate": "2026-03-02T17:48:46.007Z",
+        "System.ChangedDate": "2026-03-13T15:07:51.46Z",
+        "System.Parent": 180348,
+        "System.Title": "[Patient Search] Date of Birth is shifted by timezone in API request payload (1990-11-04 sent as 1990-11-03T21:00:00.000Z)",
+        "Microsoft.VSTS.Common.Priority": 3
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184389"
+    },
+    {
+      "id": 185473,
+      "rev": 4,
+      "fields": {
+        "System.Id": 185473,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Iryna Lukianovets",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+            }
+          },
+          "id": "8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
+          "uniqueName": "ilukianovets@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx",
+          "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+        },
+        "System.CreatedDate": "2026-03-13T15:52:34.083Z",
+        "System.ChangedDate": "2026-03-17T10:01:18.67Z",
+        "System.Parent": 181257,
+        "System.Title": "Member Search API returns 404 Not Found for an existing member",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/185473"
+    }
+  ]
+}

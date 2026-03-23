@@ -1,0 +1,75 @@
+{
+  "id": 3479109640,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3479109640",
+  "key": "ITOPS",
+  "alias": "ITOPS",
+  "name": "ITOPS",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "3479109972",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/3479109972",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMzQ3OTEwOTk3Mg==",
+    "status": "current",
+    "title": "ITOPS",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 912
+    },
+    "_expandable": {
+      "container": "/rest/api/space/ITOPS",
+      "metadata": "",
+      "restrictions": "/rest/api/content/3479109972/restriction/byOperation",
+      "history": "/rest/api/content/3479109972/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/3479109972/descendant",
+      "space": "/rest/api/space/ITOPS",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/3479109972/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/3479109972",
+      "tinyui": "/x/VAFfzw",
+      "editui": "/pages/resumedraft.action?draftId=3479109972",
+      "webui": "/spaces/ITOPS/overview",
+      "edituiv2": "/spaces/ITOPS/pages/edit-v2/3479109972"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/ITOPS/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=ITOPS",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/ITOPS/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/ITOPS",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/ITOPS",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

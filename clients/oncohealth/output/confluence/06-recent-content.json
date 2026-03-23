@@ -1,0 +1,352 @@
+[
+  {
+    "id": "5274632193",
+    "title": "New Reporting Layer Model",
+    "space": "AT",
+    "modified": "2026-03-23T16:37:06.366Z",
+    "modifiedBy": "Elise Klein"
+  },
+  {
+    "id": "3143204918",
+    "title": "Feature Template",
+    "space": "PM",
+    "modified": "2026-03-18T17:39:22.770Z",
+    "modifiedBy": "Sandy Gress"
+  },
+  {
+    "id": "5052006411",
+    "title": "NewFire Partnership: UM Appeals Requirements (Archive)",
+    "space": "PM",
+    "modified": "2026-03-16T12:47:43.075Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "4797890582",
+    "title": "Decouple Grouped Drugs to Support Accurate End to End UM Processes",
+    "space": "PM",
+    "modified": "2026-03-11T14:03:57.339Z",
+    "modifiedBy": "Nichole Cole"
+  },
+  {
+    "id": "4886069362",
+    "title": "Post MVP Gold Carding",
+    "space": "PM",
+    "modified": "2026-03-09T13:54:20.972Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "5186355206",
+    "title": "Interoperability 2026 - Technical Project",
+    "space": "PM",
+    "modified": "2026-02-27T20:56:24.357Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "5027561495",
+    "title": "PA Metrics Annual Reports",
+    "space": "PM",
+    "modified": "2026-02-27T19:24:05.936Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "5100371970",
+    "title": "BlueKC Notes",
+    "space": "PM",
+    "modified": "2026-02-27T19:19:41.544Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "5026709509",
+    "title": "Interoperability 2025 Operations Project",
+    "space": "PM",
+    "modified": "2026-02-27T19:19:09.235Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "4982931474",
+    "title": "Interoperability",
+    "space": "PM",
+    "modified": "2026-02-27T19:16:16.698Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "5157158955",
+    "title": "ITOps Managed Tools Catalog",
+    "space": "ITOPS",
+    "modified": "2026-02-23T15:38:09.932Z",
+    "modifiedBy": "Brett Rimato"
+  },
+  {
+    "id": "4642144267",
+    "title": "AP Integration Backlog Tracking",
+    "space": "PM",
+    "modified": "2026-02-06T17:42:13.141Z",
+    "modifiedBy": "Nichole Cole"
+  },
+  {
+    "id": "5093916730",
+    "title": "Reopens-  2025 Reporting Escalation for Devoted",
+    "space": "PM",
+    "modified": "2026-02-02T16:57:26.925Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "5076221956",
+    "title": "BCBSMI Gold Carding Requirements",
+    "space": "PM",
+    "modified": "2026-01-29T15:02:08.148Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "3294625793",
+    "title": "Site of Care",
+    "space": "PM",
+    "modified": "2026-01-27T21:38:28.717Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "3190489100",
+    "title": "EPIC - Full Delegation: Reconsiderations, Appeals, Reopens Module - ARCHIVED",
+    "space": "PM",
+    "modified": "2026-01-20T17:48:54.978Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "3396632579",
+    "title": "ITOps/InfoSec/DevOps Software Onboarding Process",
+    "space": "IS",
+    "modified": "2026-01-15T19:08:11.146Z",
+    "modifiedBy": "Brett Rimato"
+  },
+  {
+    "id": "4976607233",
+    "title": "Retrospective & Concurrent Reviews",
+    "space": "PM",
+    "modified": "2026-01-15T03:07:35.717Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "4541644827",
+    "title": "CMS Ruling 2025 - CMS Interoperability and Prior Authorization Final Rule (CMS-0057-F)",
+    "space": "PM",
+    "modified": "2025-12-29T17:24:30.157Z",
+    "modifiedBy": "Lauren Smith"
+  },
+  {
+    "id": "4982800402",
+    "title": "Devoted | Automate OON Process | Discovery",
+    "space": "PM",
+    "modified": "2025-12-26T15:49:52.924Z",
+    "modifiedBy": "Jisha James"
+  },
+  {
+    "id": "4982702123",
+    "title": "Devoted | Automate OON Process | Discovery | GMT Proprietary Codes",
+    "space": "PM",
+    "modified": "2025-12-26T15:49:41.408Z",
+    "modifiedBy": "Jisha James"
+  },
+  {
+    "id": "4411916304",
+    "title": "Gold Carding",
+    "space": "PM",
+    "modified": "2025-12-18T18:16:26.942Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4780654612",
+    "title": "Interoperability Report Business Requirements",
+    "space": "AT",
+    "modified": "2025-12-04T14:58:47.176Z",
+    "modifiedBy": "Elise Klein"
+  },
+  {
+    "id": "4589715474",
+    "title": "Client Report Suite",
+    "space": "AT",
+    "modified": "2025-12-03T04:01:12.075Z",
+    "modifiedBy": "Heta Singh"
+  },
+  {
+    "id": "4911366148",
+    "title": "Cambia Notifications",
+    "space": "PM",
+    "modified": "2025-12-02T23:04:44.170Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "3776577567",
+    "title": "Agile Ceremonies Schedule",
+    "space": "AT",
+    "modified": "2025-12-02T15:16:13.592Z",
+    "modifiedBy": "Heta Singh"
+  },
+  {
+    "id": "4911529986",
+    "title": "Cambia",
+    "space": "PM",
+    "modified": "2025-11-26T16:15:08.035Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4817223731",
+    "title": "No-Touch Automation for Case Determations (Auto-Approvals, OOS, PA Exempt)",
+    "space": "PM",
+    "modified": "2025-11-24T21:34:01.643Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "4881350674",
+    "title": "Excellus Site of Care",
+    "space": "PM",
+    "modified": "2025-11-24T21:16:59.877Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "4886331397",
+    "title": "MVP Gold Carding (Cambia Go-Live 1/1/2026)",
+    "space": "PM",
+    "modified": "2025-11-18T14:43:03.495Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4866932804",
+    "title": "Blue KC Formulary Mapping",
+    "space": "PM",
+    "modified": "2025-11-11T20:21:17.570Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4868177934",
+    "title": "Formulary Files",
+    "space": "PM",
+    "modified": "2025-11-11T20:14:38.097Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4868472874",
+    "title": "Blue Cross Blue Shield of Kansas City",
+    "space": "PM",
+    "modified": "2025-11-11T20:13:41.788Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4830953474",
+    "title": "Technical suggestions for TAT frameworks",
+    "space": "PM",
+    "modified": "2025-10-31T12:32:11.124Z",
+    "modifiedBy": "Vasyl Sikoryn"
+  },
+  {
+    "id": "4825382924",
+    "title": "Business Rule Engine Description for TAT timers",
+    "space": "PM",
+    "modified": "2025-10-30T09:24:05.591Z",
+    "modifiedBy": "Vasyl Sikoryn"
+  },
+  {
+    "id": "4822794262",
+    "title": "Delegated Medicare Appeals",
+    "space": "AT",
+    "modified": "2025-10-29T17:03:59.616Z",
+    "modifiedBy": "Michael Sparace"
+  },
+  {
+    "id": "4473552961",
+    "title": "Discovery: Consolidated TAT Framework",
+    "space": "PM",
+    "modified": "2025-10-27T17:58:38.964Z",
+    "modifiedBy": "Sofia Panfilova"
+  },
+  {
+    "id": "4348084507",
+    "title": "MATIS Deemed Approval Phase 2",
+    "space": "PM",
+    "modified": "2025-10-24T17:46:09.866Z",
+    "modifiedBy": "Anastasia Khmelovska"
+  },
+  {
+    "id": "4673404944",
+    "title": "Code, Outputs & Change Log",
+    "space": "AT",
+    "modified": "2025-09-30T21:15:58.697Z",
+    "modifiedBy": "mgarcia"
+  },
+  {
+    "id": "4745953336",
+    "title": "P32 Workflow Update: External End User-Access",
+    "space": "PM",
+    "modified": "2025-09-29T20:32:41.903Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4745887824",
+    "title": "9/29/2025 Meeting Notes",
+    "space": "PM",
+    "modified": "2025-09-29T20:25:36.185Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4746543212",
+    "title": "Client Implementations - MATIS",
+    "space": "PM",
+    "modified": "2025-09-29T18:41:52.428Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "4717608962",
+    "title": "Code, Outputs & Change Log (ODR)",
+    "space": "AT",
+    "modified": "2025-09-22T02:42:24.587Z",
+    "modifiedBy": "mgarcia"
+  },
+  {
+    "id": "4717674498",
+    "title": "Metric Mapping (ODR)",
+    "space": "AT",
+    "modified": "2025-09-22T02:30:50.406Z",
+    "modifiedBy": "mgarcia"
+  },
+  {
+    "id": "4717248514",
+    "title": "Customizations by Payer (ODR)",
+    "space": "AT",
+    "modified": "2025-09-22T02:07:36.470Z",
+    "modifiedBy": "mgarcia"
+  },
+  {
+    "id": "4717150218",
+    "title": "Overview and Clients (ODR)",
+    "space": "AT",
+    "modified": "2025-09-21T23:39:30.413Z",
+    "modifiedBy": "mgarcia"
+  },
+  {
+    "id": "4630872065",
+    "title": "Monarch QA - Validating the associated tables under Monarch Schema.",
+    "space": "PM",
+    "modified": "2025-09-17T10:01:40.314Z",
+    "modifiedBy": "Deepak Dhyani"
+  },
+  {
+    "id": "4673470467",
+    "title": "ODR – Organization Determinations Reporting",
+    "space": "AT",
+    "modified": "2025-09-15T13:53:31.836Z",
+    "modifiedBy": "mgarcia"
+  },
+  {
+    "id": "4642045982",
+    "title": "Support AP Payer Configurations Related to Treatment Options",
+    "space": "PM",
+    "modified": "2025-09-15T09:25:33.321Z",
+    "modifiedBy": "sdas1"
+  },
+  {
+    "id": "4673732613",
+    "title": "Customizations by Payer",
+    "space": "AT",
+    "modified": "2025-09-05T15:17:57.565Z",
+    "modifiedBy": "mgarcia"
+  }
+]

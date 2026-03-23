@@ -1,0 +1,1616 @@
+# Impact Analysis — Full Content Export
+Exported: 2026-03-23T19:45:07.078Z
+Pages: 34
+
+
+# Impact Analysis Home
+
+Overview
+
+trueGreen2solidWelcome to Impact Analysis homepage.
+
+Oncology Analytics provides health plans with an evidence-based, technologically driven approach to utilization management, which is purpose-built for oncology.
+
+Overview
+
+Description
+
+black1solidThis page contains links to all documents and procedures used for Impact Analysis by the Analytics team. It is documented under the following sections.
+
+Sales Related Impact Analysis Documents
+Impact Analysis Process Related Documents
+
+Claims Savings Rules(CSR) Related Documents
+
+Objectives and Key Results (OKR) Document
+
+Sales Related Impact Analysis Documents
+
+Impact Analysis tracking document is used to track and record the progress of the whole Impact Analysis process right from the sales call is made till the final client presentation is ready for the OA clients.
+
+The Claims Data request document has detailed documentation of all required data fields and type of data requests to be made to OA customers while requesting the Claim Files for analysis.
+
+black1solidOA - Impact Analysis Tracking 
+
+Claims Data Request Documents
+
+Current Impact Analysis projects in Progress
+
+Other Impact Analysis Related Documents
+
+Impact Analysis Process Related Documents
+
+Claims Savings Rules(CSR) Related Documents
+
+Objectives and Key Results (OKR) Documents
+
+Impact Analysis Process Related Documents
+
+The following links under Impact Analysis Current Workflow & Data-flow provides a visual representation of the IA process. The steps followed during the IA process is given in the detailed documentation. 
+
+black1solidImpact Analysis Current Workflow & Data-flow
+
+This is the current workflow being followed for Impact Analysis. 
+
+Impact Analysis Process - Detailed Documentation 
+
+The following file has a detailed documentation of the Impact Analysis process followed by the Analytics team and the ADOS template format to be used while creating the work items for Impact Analysis.
+
+Impact Analysis - Data Dictionary
+
+The following link has detailed documentation of all data used for Impact Analysis.
+
+Impact Analysis - Medcodes Tbl Usage
+
+The following link has detailed documentation of all Medcodes tables used for Impact Analysis.
+
+Payer Impact Analysis Documentation Template
+
+This template is used to update with the known payer information. 
+
+Impact Analysis Benchmark Table
+
+Claims Savings Rules(CSR) Related Documents
+
+Following Claim Savings Rules documents are used in calculating the savings for Chemo drugs, XRT and GMT.
+
+black1solidChemotherapy CSR Documents
+
+XRT CSR Documents
+
+This document explains the detailed formatting of a Payer&rsquo;s XRT Claims Data for Analysis in Excel. This document has been prepared and updated by Dr. Richard Wielder.
+
+GMT CSR Documents
+
+*To be added soon
+
+Objectives and key Results (OKR) Document
+
+This document contains the OKR (Objectives and Key Results) for re-engineering impact analysis into a complete OA immersion for more compelling introduction to Oncology Analytics for our sales prospects.
+
+black1solid
+
+OA - Impact Analysis Archived Documents
+
+black1solidOA - Archived Impact Analysis Tracking Document
+
+Following document has all IA tracking details for completed projects.
+
+OA - Archived Impact Analysis Projects
+
+Following are the links to completed Impact Analysis Projects.
+
+## ADOS Impact Analysis Templates
+
+Overview
+
+black1solidThis page has standard template links created in ADOS for Impact Analysis. 
+
+Description
+
+black1solidThe following links are the standard templates used to create new work items whenever a new Impact Analysis is done for a client.
+
+Use the following links to create new work items in ADOS while doing Impact Analysis.
+
+Note: Add Client name in the Tag section along with the ImpactAnalysis tag. Link the work items as per the hierarchy.
+
+ADOS Feature Link
+
+black1solidXYZ Impact Analysis
+
+Note: Replace XYZ with the Client name.
+
+ADOS User Story Links
+
+black1solidInitial Impact Analysis data preparation - User Story 1
+
+Impact Analysis Savings - User Story 2
+
+Create Final presentation - User Story 3
+
+ADOS Task Links
+
+black1solidUnder User Story 1
+
+Create IA Payer Process Document - Task 1
+
+ Run Initial Eval of the data - Task 2
+
+Map raw data to our standard IA scheme - Task 3
+
+Run NB1 - Updates and Joins - Task 4
+
+Run NB2 - Flags - Task 5
+
+Refresh Dataprep Dashboard - Task 6
+
+Under User Story 2
+
+Run NB3 & NB4 and prep data for Decisions - Task 7
+
+Run Chemo rules - Task 8
+
+Run XRT rules - Task 9
+
+Run GMT rules - Task 10
+
+Run NB5 - Integrate all savings - Task 11
+
+Under User Story 3
+
+Create Final presentation - Task 12
+
+## Affinity Health Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer QualChoice
+
+Description
+
+blacksolidThis page contains the Data Specifications applied for initial Harvard Pilgrim Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of Harvard Pilgrim Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+blacksolid
+
+Evaluation and Distribution Reports
+
+blacksolid
+
+Documents
+
+blacksolid
+
+## Alignment Healthcare Mini-Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Alignment Healthcare
+
+Description
+
+black1solidThis page contains the Data Specifications applied for Alignment Healthcare
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+black1solid
+
+## Amerihealth Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Amerihealth
+
+Description
+
+black1solidThis page contains the Data Specifications applied for Amerihealth, Initial Evaluation and Distribution Analysis reports and the final summary and presentation for Amerihealth Impact Analysis
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Mapping
+
+black1solid
+
+Impact Analysis Documentation
+
+Impact Analysis Summary
+
+black1solid
+
+## Archived In-Scope Oncology Drug and Procedure List
+Labels: file-list
+
+Archived In-Scope Files
+
+The following file contains archived In-scope files for 
+
+ChemoRX_HCPCS
+ChemoRX_NDC 
+OA_Drug
+XRT_HCPCS
+GT_HCPCS
+Look for column "In-Scope for Claims" (Y/N) to determine if the item is currently in-scope for Impact Analysis.Note: Let Dr. Dinah know if you'd like to add/remove a drug or procedure as in-scope.
+
+Orange3solid
+
+## BCBS Idaho Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer BCBS Idaho
+
+Description
+
+blacksolidThis page contains the Data Specifications applied for initial BCBS Idaho Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of BCBS Idaho Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+blacksolid
+
+Evaluation and Distribution Reports
+
+blacksolid
+
+## BCBS Michigan Mini-Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer BCBS Michigan
+
+Description
+
+black1solidThis page contains the Data Specifications applied for BCBS Michigan
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Data Mapping
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+black1solidBCBS Michigan IA Documentation
+
+## Care Oregon Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Care Oregon.
+
+Description 
+
+black1solidThis page contains the Data Specifications applied for Care Oregon, Initial Evaluation and Distribution Analysis reports and the final summary and presentation for Care Oregon Impact Analysis
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Mapping
+
+black1solid
+
+Impact Analysis Documentation
+
+black1solid
+
+Impact Analysis Summary
+
+black1solid
+
+Final Presentation
+
+black1solid
+
+## CareOregon Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer CareOregon.
+
+Description
+
+blacksolidThis page contains the Data Specifications applied for initial QualChoice Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of CareOragon Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+blacksolid
+
+Evaluation and Distribution Reports
+
+blacksolid
+
+## Claims Savings Rules
+
+Overview
+
+black1solidThis page contains all files related to Claims Savings Rules logic used at OA for Claims Analysis. These files are updated as and when required by Dr. Dinah Huff.
+
+The previous Claims Savings Rules versions that are archived can be accessed here .
+
+Current Claims Savings Rules File in Use
+
+black1solid
+
+## Commonly Used Commands for OA Claims Data Analysis
+
+Overview
+
+green2solidThis page has link to the OA repository where all commonly used commands for Claims data Analysis are stored.
+
+You can also see links to download Git, and learn how to run some commonly used Git commands.
+
+Code Repository for OA Claims Analysis
+
+black1solidOA Code RepositoryThe code repository for OA is located here.
+
+OA Code Repository
+
+Use your OA login credentials to log in.
+
+Note: You must install Git to access and use the codes from the OA Repository.
+
+GIT Download
+
+Commonly Used Git Commands
+
+black1solidCommonly Used Git CommandsNote: Use Git bash window to run your Git commands.
+
+To refresh your copy of the repository:  git pull.
+You&rsquo;ll use the following 3 commands when adding changes to the main OA repository.
+
+To stage all changes you&rsquo;ve made: git add *
+To stage changes to a single file: git add "File Name" you are adding.
+
+To commit changes:  git commit -m &ldquo;These are the changes I made&rdquo; (Basically just add a brief description of the changes)
+To push your changes back to the main repository:  git push.
+
+GIT Help Links
+
+black1solidGit Tutorial
+
+Learn-git
+
+Git Book
+
+Github
+
+Git in Action
+
+Commonly Used Git Commands
+
+black1solidGit Commands Cheat-sheetGit Commands Cheat-sheet
+
+## Febrile Neutropenia Related Files
+
+Overview
+
+green1solidThis page has all documents related to Febrile Neutropenia used at OA for Claims Analysis.
+
+FN Files
+
+green1solid
+
+## File Lists
+
+com.atlassian.confluence.plugins.confluence-business-blueprints:file-list-blueprint5f5a7fed-6a79-4c54-9302-ff307c704488Create file list
+
+com.atlassian.confluence.plugins.confluence-business-blueprints:file-list-blueprint5f5a7fed-6a79-4c54-9302-ff307c704488file-listUpload, preview and share files with your team.File listsCreate file listfile-list
+
+## Gateway Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Gateway.
+
+Description
+
+black1solidThis page contains the Data Specifications applied for initial Gateway Impact Analysis, OA - ICD codes used for Claim Analysis, initial Evaluation and Distribution Analysis reports and the final summary of Gateway Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+black1solid
+
+OA - ICD Codes
+
+black1solid
+
+Evaluation and Distribution Reports
+
+The following are the latest Evaluation and Distribution reports done on the files received from Gateway.
+
+black1solid
+
+Claims Savings Rules (CSR) Analysis
+
+black1solid
+
+Gateway Impact Analysis Final Reports
+
+The Gateway Impact Analysis reports are organized by report created date.
+
+black1solid
+
+## Harvard Pilgrim Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer QualChoice
+
+Description
+
+blacksolidThis page contains the Data Specifications applied for initial Harvard Pilgrim Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of Harvard Pilgrim Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+blacksolid
+
+Evaluation and Distribution Reports
+
+blacksolid
+
+Documents
+
+blacksolid
+
+## HealthNow Impact Analysis
+
+Overview
+
+black1solidThis home page contains all relevant files and documents related to Impact Analysis for OA customer HealthNow
+
+Description 
+
+black1solidThis page contains the Data Specifications applied for HealthNow, Initial Evaluation and Distribution Analysis reports and the final summary and presentation for HealthNow Impact Analysis
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Mapping
+
+black1solid250
+
+Impact Analysis Documentation
+
+black1solid250
+
+Impact Analysis Summary
+
+black1solid
+
+Final Presentation
+
+black1solid
+
+## HealthPartners Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer HealthPartners
+
+Description
+
+black1solidThis page contains the Data Specifications applied for initial HealthPartners Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of QualChoice Impact Analysis reports. 
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+black1solid
+
+Evaluation and Distribution Reports
+
+black1solid
+
+black1solid
+
+## Impact Analysis
+Labels: file-list
+
+Overview
+
+orange3solidThis home page contains all relevant files and documents related to Impact Analysis for OA customer Scott & White.
+
+Description
+
+black1solidThis page contains the Data Specifications for the Premera Impact Analysis.
+
+ Premera Impact Analysis Final Reports
+
+black1solid
+
+## Martin's Point Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Martin's Point
+
+Description
+
+black1solidThis page contains the Data Specifications applied for initial Martin's Point Impact Analysis, Initial Evaluation and Distribution Analysis reports and the final summary of Martin's Point Impact Analysis reports.
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+green1solid
+
+Impact Analysis Documentation
+
+green1solid
+
+Final Presentation
+
+green1solid
+
+## OA - Current Impact Analysis Tracking Document
+
+Overview
+
+green2solidThis document is used by the OA team to track the progress of the whole Impact Analysis process.
+
+Description
+
+green1solidThis Impact Analysis Tracking has the following details that help in tracking the whole Impact Analysis process from the beginning to the end.
+
+Name of the Prospect
+Name of the Person Responsible for the Prospect
+Name of the Analytics team person responsible for the Impact Analysis
+Date Data spec was sent to the Prospect
+Date Data Discussion - Planned and Actual happened
+
+Date Data Received from the Client - Planned and Actual happened
+
+Date Data Approved - Planned and Actual happened
+Date Data is Ready for the Analysis - Planned and Actual happened
+
+Date Rules were Executed - Planned and Actual happened
+
+Date Material is Ready - Planned and Actual happened
+
+Date Team is Ready with the Presentation - Planned and Actual happened
+
+Oncology Analytics - Impact Analysis Tracking
+
+Note: Please input Planned Date in RED and Actual Date in Green
+
+green1solid
+
+#
+
+ | Prospect
+Name
+
+ | Sales
+Responsible
+
+ | Analytics
+Responsible
+
+ | Date Data
+Spec Sent
+
+ | Date Follow 
+up Done
+
+ | Date Data
+Discussion
+
+ | Date Data
+Received
+
+ | Date Data Approved | Date Data
+Ready
+
+ | Date Rules
+Executed
+
+ | Date Material
+Ready
+
+ | Presentation Date 
+
+ | Comments | 
+1 |  | Bob Hagan | TMC | 
+ | 
+ | 2/26/19 | Planned Date:
+
+Actual Date:
+
+2/18/19
+
+ | Planned Date:
+
+Actual Date:
+
+3/6/19
+
+ | Planned Date:
+
+3/15/19
+
+Actual Date:
+
+3/8/19
+
+ | Planned Date:
+
+3/18/19
+
+Actual Date:
+
+3/8/19
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+ | 
+2 |  | Kim Eifrid | AM | 
+ | 
+ | 4/10/19 | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+6/18/19
+
+ | Planned Date:
+
+7/10/19
+
+Actual Date:
+
+ | Planned Date:
+
+7/12/19
+
+Actual Date:
+
+ | Planned Date:
+
+7/19/19
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+ | 
+3 | HPSJ - Health Plan San Joaquin | Kim Eifrid | TMC | 
+ | 
+ | N/A | Planned Date:
+
+5/2/2019
+
+Actual Date:
+
+5/3/2019
+
+ | Planned Date:
+
+5/17/2019
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+ | 
+4 | Viva Health | Kim Eifrid | TMC | 5/10/19 | 
+ | 
+ | Planned Date:
+
+Actual Date:
+
+7/22/2019
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+ | 
+5 |  | Mike Scordino | AM | 
+ | 
+ | 2/8/19 | Planned Date:
+
+Actual Date:
+
+7/31/19
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+ | 
+6 | Premera BlueShield (Commercial)
+
+ | Kim Elfrid | TMC | 2/18/20 | 
+ | 
+ | Actual Date:
+
+2/20/20
+
+ | Planned Date:
+
+2/21/20
+
+ | Planned Date:
+
+2/21/20
+
+ | 
+ | 
+ | Planned Date: 
+
+3/4/20
+
+ | Limited data received (only 4 diags). Also used proxy for allow amt. | 
+7 | Devoted Healthcare | Mike Scordino | TMC | 
+ | 
+ | 
+ | Actual Date:
+
+4/22/20
+
+ | Actual Date:
+
+4/30/20
+
+ | Actual Date:
+
+6/4/20
+
+ | Actual Date:
+
+6/4/20
+
+ | Actual Date:
+
+6/9/20
+
+ | Actual Date:
+
+6//18/20
+
+ | Membership ~ 20k l
+
+received only 1 yr of data
+
+ | 
+8 | Premera Blueshield (Medicare)
+
+ | Kim Elfrid | TMC | 
+ | 
+ | 
+ | 4/21/20 | 5/5/20 | N/A | N/A | Actual Date:
+
+5/15/20
+
+ | Actual Date:
+
+5/18/20
+
+ | Mini Impact Analysis with Summary data | 
+9 | Tufts | Mike Scordino | TMC | 
+ | 
+ | 
+ | Actual Date:
+
+4/29/20
+
+ | Actual Date:
+
+6/30/20
+
+ | Actual Date:
+
+7/1/20
+
+ | Actual Date:
+
+7/13/20
+
+ | Planned Date:
+
+8/6/2020
+
+ | Actual Date:
+
+9/28/20
+
+ | Pre - Go-Live (OI) IA Comercial and Medicare only | 
+10 | BCBS Arkansas | Kim Elfrid | TMC | 
+ | 
+ | N/A | Actual Date:
+
+7/14/22
+
+ | Actual Date:
+
+7/20/20
+
+ | Planned Date:
+
+7/22/20
+
+Actual Date:
+
+7/27/2020
+
+ | Planned Date:
+
+7/23/20
+
+Actual Date:
+
+7/29/2020
+
+ | Planned Date:
+
+ | Actual Date:
+
+8/4/2020
+
+ | Walmart population - Commercial LOB only | 
+11 | BCBS Nebraska | Bob Hagan | TMC | 
+ | 
+ | N/A | Actual Date:
+
+7/22/20
+
+ | Planned Date:
+
+7/29/20
+
+Actual Date:
+
+8/28/2020
+
+ | Actual Date:
+
+9/4/2020
+
+ | Actual Date:
+
+9/6/2020
+
+ | Planned Date:
+
+9/18/2020
+
+ | Planned Date:
+
+9/21/2020
+
+ActualDate:
+
+9/21/2020
+
+ | The analysis is excluding 2020 data (these look like run-out)
+
+XRT data seems incomplete.
+
+ | 
+12 | Amerihealth Caritas | Mike Scordino | TMC | 
+ | 
+ | 
+ | Actual Date:
+
+12/8/20
+
+ | Planned Date:
+
+12/15/2020
+
+Actual Date:
+
+ | Planned Date:
+
+12/18/2020
+
+ | Planned Date:
+
+12/28/2020
+
+ | Planned Date:
+
+1/8/2020
+
+ | Planned Date:
+
+1/15/2020
+
+ | 
+ | 
+13 | Care Source
+
+ | Kim Elfrid | TMC | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+14 | Excellus BCBS | Natasha Petrovic | TMC | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | we ran the analysis twice, first time the data was "incomplete" second time was the complete one, | 
+15 | Prime | N/A | TMC | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | Focus on pharmacy benefit.
+
+We presented savings based on intervention rates, but did not get a chance to run the rules in the overall data.
+
+ | 
+16 | Wellmark | Natasha Petrovic | AC | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | just focused on Commercial lob.
+
+Uses our "revamped" impact analysis methodology
+
+ | 
+17 | Priority Health | Leslie Savoia | AC | 
+ | 
+ | 4/29/22 | Planned Date:
+
+ | Planned Date: | Planned Date: | Planned Date: | Planned Date: | Planned Date: | 
+ | 
+
+Detailed Comments & Discussions
+
+green1solid
+
+# | Prospect Name | Date | Detailed Comments & Discussion | Comments Entered By | 
+1 | QualChoice | 
+ | 
+ | 
+ | 
+2 | Tufts | 
+ | 
+ | 
+ | 
+3 | CareOregon | 
+ | 
+ | 
+ | 
+4 | Harvard Pilgrim | 
+ | 
+ | 
+ |
+
+## San Joaquin Impact Analysis
+
+Overview
+
+black1solidThis home page contains all relevant files and documents related to Impact Analysis for OA customer San Joaquin
+
+Description 
+
+black1solidThis page contains the Data Specifications applied for San Joaquin Initial Evaluation and Distribution Analysis reports and the final summary and presentation for San Joaquin Impact Analysis
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Mapping
+
+black1solid
+
+Impact Analysis Documentation
+
+black1solid
+
+Impact Analysis Summary
+
+black1solid
+
+Final Presentation
+
+black1solid
+
+## Scott & White Impact Analysis
+Labels: file-list
+
+Overview
+
+orange3solidThis home page contains all relevant files and documents related to Impact Analysis for OA customer Scott & White.
+
+Description
+
+black1solidThis page contains the Data Specifications applied for initial Scott & White Impact Analysis, OA - ICD codes used for Claim Analysis, Initial Evaluation and Distribution Analysis reports and the final summary of Scott & White Impact Analysis reports.
+
+Scott & White - A Case for TOPA
+
+black1solid
+
+Evaluation and Distribution Reports
+
+black1solid
+
+ Scott & White Impact Analysis Final Reports
+
+black1solid
+
+## Tufts Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Tufts.
+
+Description
+
+black1solidThis page contains the Data Specifications applied for Tufts Impact Analysis, Initial Evaluation and Distribution Analysis reports and the final summary of Tufts Impact Analysis reports.
+
+Evaluation and Distribution Reports
+
+black1solid
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+black1solid
+
+Impact Analysis Documentation
+
+black1solid
+
+Impact Analysis Summary
+
+black1solid
+
+Tufts Final Presentation
+
+black1solid
+
+## Universal Care Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer Universal Care.
+
+Description
+
+green1solidThis page contains the Data Specifications applied for initial Universal Care Impact Analysis, OA - ICD codes used for Claim Analysis, initial Evaluation and Distribution Analysis reports and the final summary of Universal Care Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+green1solid
+
+Evaluation and Distribution Reports
+
+green1solid
+
+Final Presentation
+
+green1solid
+
+## Viva Health Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA prospect Viva Health
+
+Description
+
+blacksolidThis page contains the Data Specifications applied for initial  Viva Health Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of  Viva Health Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+blacksolid
+
+Evaluation and Distribution Reports
+
+blacksolid
+
+### Claims Data Request Files
+Labels: file-list
+
+Overview
+
+The following files have details regarding the required data and type of data requests made to OA customers in order to get the claim files for analysis. It is updated whenever new fields are added. The older versions are retained for reference.
+
+Sales Data Request Files
+
+Orange3solidThe following files have details regarding the required data and type of data requests made to OA customers in order to get the claim files for analysis.
+
+Implementation Data Request Files
+
+Orange3solidThe following files have details regarding the required data and type of data requests made to OA customers in order to get the claim files for analysis.
+
+### Drug Information
+Labels: file-list
+
+Drug Information
+
+The following DrugCategories file have list of all Oncology drugs categorized by class, scope, and their Emetogenic potential.
+
+The CancerPrevalencePerM file has various analytic data on Cancer prevalence by location, Drug and Year.
+
+orange3solid
+
+### FutureState_ClaimsAnalysis
+Labels: file-list
+
+A flow of how the claims analysis process will run, including the review steps. 
+
+true
+
+### FutureState_ClaimsAnalysisv2
+Labels: file-list
+
+File attached contains the detailed process 
+ & data flow.
+
+true
+
+### Gateway
+
+250250250250
+
+### Gateway Impact Analysis Final Reports
+
+
+
+### OA - Archived Impact Analysis Tracking Document
+
+Overview
+
+falseThis page holds the archived Impact Analysis tracking information for OA clients.
+
+Description
+
+black1solidThe tracking documentation for all completed Impact Analysis are stored here.
+
+Once the Impact Analysis process for a OA customer is done the tracking information are archived here for future reference.
+
+ Archived Impact Analysis Tracking Document
+
+Note: Planned Date in RED and Actual Date in Green
+
+green1solid
+
+#
+
+ | Prospect
+Name
+
+ | Sales
+Responsible
+
+ | Analytics
+Responsible
+
+ | Date Data
+Spec Sent
+
+ | Date Follow 
+up Done
+
+ | Date Data
+Discussion
+
+ | Date Data
+Received
+
+ | Date Data Approved | Date Data
+Ready
+
+ | Date Rules
+Executed
+
+ | Date Material
+Ready
+
+ | Presentation Date 
+
+ | 
+1 | Martin's Point
+
+ | 
+
+ | 
+
+ | To be 
+found | 8/16/18 | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+9/14/18
+
+Actual Date:
+
+9/20/18 (RX)
+
+ | 
+ | Planned Date:
+
+10/17/18
+
+Actual Date:
+
+10/26/18
+
+ | Planned Date:
+
+10/18/18
+
+Actual Date:
+
+10/29/18
+
+ | Planned Date:
+
+11/26/2018
+
+Actual Date:
+
+ | Planned Date:
+
+11/28/2018
+
+Actual Date:
+
+ | 
+2 | Universal Care
+
+ | 
+
+ | 
+
+ | 9/5/18
+
+ | 9/10/18 | Planned Date:
+
+9/14/18
+
+Actual Date:
+
+9/14/18
+
+ | Planned Date:
+
+Actual Date:
+
+9/17/18
+
+ | 
+ | Planned Date:
+
+10/23/18
+
+Actual Date:
+
+10/25/18
+
+ | Planned Date:
+
+10/23/18
+
+Actual Date:
+
+10/25/18
+
+ | Planned Date:
+
+Actual Date:
+
+11/9/18
+
+ | Planned Date:
+
+Actual Date:
+
+11/15/2018
+
+ | 
+3 |  | Paul Novasitis | 
+
+ | 
+ | 
+ | 12/20/18 | Planned Date:
+
+Actual Date:
+
+11/30/18
+
+ | Planned Date: 12/26/18
+
+Actual Date:
+
+1/6/2019
+
+ | Planned Date:
+
+12/28/18
+
+Actual Date:
+
+1/6/2019
+
+ | Planned Date:
+
+12/31/18
+
+Actual Date:
+
+1/6/2019
+
+ | Planned Date:
+
+1/11/18
+
+Actual Date:
+
+1/13/2019
+
+1/25/2019
+
+ | Planned Date:
+
+1/14/2019
+
+1/29/2019
+
+Actual Date:
+
+1/14/2019
+
+1/29/2019
+
+ | 
+4 |  | Kim Eifrid | TMC | 11/15/18 | 
+ | 11/21/18
+
+12/12/18
+
+ | Planned Date:
+
+2/15/19
+
+Actual Date:
+
+2/26/19
+
+3/14/19
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+4/14/2019
+
+ | Planned Date:
+
+Actual Date:
+
+4/28/2019
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+5/9/2019
+
+ | 
+5 |  | Paul Novasitis | TMC | 10/12/18 | 
+ | 12/17/18 | Planned Date:
+
+3/15/19
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+4/22/2019
+
+ | Planned Date:
+
+Actual Date:
+
+4/25/2019
+
+ | Planned Date:
+
+Actual Date:
+
+4/26/2019
+
+ | Planned Date:
+
+Actual Date:
+
+5/1/2019
+
+ | 
+6 |  | Paul Novasitis | 
+ | 2/4/19 | 
+ | 2/8/19 | Planned Date:
+
+4/5/19
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+7 | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+
+Detailed Comments & Discussions
+
+green1solid
+
+# | Prospect Name | Date | Detailed Comments & Discussion | Comments Entered By | 
+1 | Martin&rsquo;s Point | 9/11/18
+
+9/17/18
+
+9/20/18
+
+ | SFTP Request done by client
+
+claims data received 9/14 without column headers. 9/17 headers received. 
+
+9/18 RX file requested.  9/20 RX file received.
+
+ | Brian
+
+Kristen
+
+Kristen
+
+ |
+
+### QualChoice Impact Analysis
+
+Overview
+
+falseThis home page contains all relevant files and documents related to Impact Analysis for OA customer QualChoice
+
+Description
+
+blacksolidThis page contains the Data Specifications applied for initial QualChoice Impact Analysis, initial Evaluation and Distribution Analysis reports and the final summary of QualChoice Impact Analysis reports. The final reports are organized by report created date.
+
+Impact Analysis: Data Specifications &ndash; Initial Impact Analysis
+
+blacksolid
+
+Evaluation and Distribution Reports
+
+blacksolid

@@ -1,0 +1,263 @@
+# Information Security — Full Content Export
+Exported: 2026-03-23T19:45:09.072Z
+Pages: 4
+
+
+# Information Security Home
+
+Welcome to the Information Security homepage!
+
+The purpose of this page is to provide content related to Information Security.  You will find important information related to process, procedures, and general information related to security.
+
+For immediate assistance with anything Information Security related please send an email to ithelp@oncohealth.us.
+
+## 🔐 Authorized Locations for Storing Protected Health Information (PHI)
+
+Compliance Reference: HIPAA Privacy & Security Rules, HITRUST CSF
+
+📘 Overview
+
+This document outlines the approved physical and digital locations where PHI may be stored, in compliance with HIPAA and institutional security policies. All personnel handling PHI must ensure that storage practices align with these guidelines to protect patient privacy and maintain regulatory compliance.
+
+🏢 Physical Storage Locations
+
+Location Type
+
+ | Requirements
+
+ | Examples
+
+ | 
+On-site Offices
+
+ | Must have controlled access (e.g., keycard, keypad). PHI must be stored in locked cabinets or rooms when not in use.
+
+ | Secure file cabinets in offices
+
+ | 
+Off-site Archives
+
+ | Must be managed by a HIPAA-compliant vendor. Access logs and audit trails required.
+
+ | Iron Mountain, secure document storage facilities
+
+ | 
+In Transit
+
+ | PHI must be covered and secured to prevent incidental disclosure. Use locked containers or sealed envelopes.
+
+ | Kaleidoscope, Open-Text, Mfax, Inter-office mail, courier services with chain-of-custody tracking
+
+ | 
+💻 Digital Storage Locations
+
+Platform
+
+ | Requirements
+
+ | Examples
+
+ | 
+Encrypted Local Drives
+
+ | Full-disk encryption, endpoint protection, and access control required.
+
+ | Company Owned Laptops with BitLocker or FileVault
+
+ | 
+Secure Network Drives
+
+ | Must be hosted on HIPAA-compliant infrastructure with access logging.
+
+ | Internal file servers with role-based access
+
+ | 
+Cloud Storage
+
+ | Must be HIPAA-compliant with a signed Business Associate Agreement (BAA).
+
+ | HealthFortis/Otava, Microsoft365 products, Microsoft Azure, and ShareFile 
+
+ | 
+🚫 Prohibited Storage Locations
+
+USB drives or external hard drives
+
+Unencrypted mobile devices
+
+Public cloud services without a BAA (e.g., free Dropbox, Gmail)
+
+Open shelves or unlocked cabinets in public or shared spaces
+
+✅ Best Practices
+
+Always lock physical storage when unattended.
+
+Use multi-factor authentication for digital access.
+
+Regularly audit access logs and permissions.
+
+Report any suspected breach immediately to the Information Security Office.
+
+📞 Contact
+
+For questions or to request approval for a new storage location, contact:
+
+IT Operations Team
+📧 ithelp@oncohealth.us
+
+## ITOps/InfoSec/DevOps Software Onboarding Process
+
+Purpose
+
+The purpose of this document is to provide a secure process for evaluating and onboarding third party software, including Cloud based solutions, into the OncoHealth environment as it relates to ITOps, Information Security, and DevOps requirements.  
+
+Having a secure software evaluation process ensures a proper evaluation has been completed before introducing new tools and solutions.  It also ensures OncoHealth has the necessary infrastructure and controls in place to manage these tools and solutions.  
+
+OncoHealth Security and Compliance Requirements
+
+Please reference the Third Party Assurance Procedures below and the Service Provider Onboarding Confluence page for detailed information regarding onboarding third parties.  
+
+   
+
+https://oncologyanalytics.atlassian.net/wiki/pages/resumedraft.action?draftId=3398762497&draftShareId=bb592d14-c8f7-44f0-91d1-a6c98223c954 
+
+Access by third parties to OH&rsquo;s information and systems shall not be provided until due diligence has been conducted (see section 3 below), the appropriate controls have been implemented where necessary, and the BAA and other third-party agreements have been signed.
+
+If the service provider is subject to System and Organization Controls (SOC) examinations (e.g. SOC
+1, SOC 2), HITRUST, or other independent assessments, OH shall obtain and review the results of the
+assessment (e.g. SOC 2 report, or evidence of HITRUST compliance) to evaluate the service provider&rsquo;s
+level of compliance with defined security controls. If the service provider is not subject to such periodic
+assessments, OH shall engage in alternative approaches to evaluate the provider&rsquo;s level of compliance.
+Such alternative approaches may include the following:
+
+Requiring the vendor to complete a security questionnaire provided by OH (OH shall provide
+the OncoHealth Vendor Information Security Questionnaire to the proposed vendor and require
+completion of the Questionnaire for OH review) 
+
+Discussing the vendor&rsquo;s security and control environment with vendor security personnel to
+ascertain the details of the vendor&rsquo;s security and control environment
+
+Ensuring that a &ldquo;right to audit&rdquo; clause is included in the vendor agreement and performing an
+annual vendor audit as part of ongoing vendor monitoring activities
+
+ITOps/InfoSec/DevOps Software Evaluation Process Steps
+
+This process will include evaluations to be performed by the IT Operations, Information Security, and DevOps teams.  Manager approval will be required for all requests.  The team will evaluate the security and infrastructure requirements to support the new solution and its viability as such.  As a part of the evaluation, meetings may be required with the requesting party and the vendor to gather additional information.  
+
+Browse to https://oncohealth.haloitsm.com/portal  and select the &ldquo;New Software EvaluationRequest&rdquo; tile.  Please fill out the form to include the below information:
+
+Name of Software
+
+Software Use Case
+
+Software Requirements Documentation
+
+Data Type to be ingested
+
+Additional Detail of the Data Type
+
+Data Residency
+
+Software Security Certifications
+
+Evidence of a current SOC 2 Type 2, ISO 27001, HITRUST CSF certification, and/or a completed OncoHealth Vendor Information Security Questionnaire. 
+
+Business Associate Agreement Requirement
+
+Manager&rsquo;s Name
+
+Submitting this request will create a ticket that will require two approvals to be completed.  
+
+The respective teams will evaluate the provided documentation and determine if further information is required and communicate with the requestor and each other during the evaluation.
+
+Once the evaluation is complete you will receive the first approval from InfoSec/ITOps and the final approval from DevOps.
+
+## Service Provider Onboarding Procedure
+
+OncoHealth Security and Compliance Requirements
+
+Prior to executing a services agreement with a new service provider, the following steps must be completed:
+
+If OH wishes to engage with a new service provider or make modifications to the products/services
+being provided by an existing vendor, the employee who wishes to engage with the service provider
+shall notify either the Sr. Director of IT Operations (if related to technology) or the VP of Corporate
+and Operational Compliance (for non-technology providers) for a review and evaluation of the vendor
+solution. Such information to be provided shall include the name of the vendor, business use case,
+pricing, start date, and responsible employee or department.
+
+To facilitate the performance of required diligence activities, the VP of Corporate and Operational
+Compliance shall complete the &ldquo;OncoHealth Third Party Onboarding Checklist&rdquo; and retain evidence of
+the completion of such checklist.  
+
+OH shall evaluate whether the services provided by the potential vendor are already being provided to
+OH by an existing vendor, and whether an alternative vendor exists in the marketplace that would better
+serve the needs of the organization.
+
+OH shall determine the nature and extent of the risks related to the use of each proposed vendor,
+considering the:
+
+Nature of the services provided.
+
+Extent to which the provider shall have access to, store on behalf of OH, and/or process transactions involving ePHI.
+
+Extent to which the vendor regularly engages in generally accepted security attestations (e.g. SOC reports, HITRUST, etc.) versus not being subject to regular security audits.
+
+Level of dependence on the services provided by the vendor to achieve OH&rsquo;s overall business objectives.
+
+OH shall ascertain the security capabilities of the vendor and evaluate whether the vendor has
+implemented appropriate security controls and features to protect OH&rsquo;s sensitive information that the
+vendor may gain access to. Such capabilities may include, but are not limited to, the following:
+
+The use of encrypted web traffic for SaaS products (i.e. https)
+
+API&rsquo;s with encrypted tunnels for data transmissions involving OH data
+
+Multifactor authentication capabilities for vendors where user access shall be provided
+
+Defense-in-depth strategy to protect information (controls at multiple infrastructure layers;
+combination of preventative and detective controls, etc.)
+
+Secure data centers to establish physical and environmental security protections
+
+Compatibility of the vendor application with Identity Management software in use by OH (e.g.
+Okta)
+
+For non-technology vendors, other manual controls and processes in place to secure OH data
+(e.g. mail vendors utilizing secure FTP or encrypted means to receive OH data files; physical
+security restrictions in place for the mail vendor processing center, etc.)
+
+In addition to the security capabilities of the vendor, OH shall consider business continuity /
+disaster recovery as it relates to the vendor, and such considerations shall play a primary role
+in the OH vendor selection process. For example, OH shall prefer cloud-based service
+providers with high availability capabilities (data centers, phone services, etc.) that may not be
+impacted in the event of a natural disaster affecting one of the OH local offices.
+
+If the service provider is subject to System and Organization Controls (SOC) examinations (e.g. SOC
+1, SOC 2), HITRUST, or other independent assessments, OH shall obtain and review the results of the
+assessment (e.g. SOC 2 report, or evidence of HITRUST compliance) to evaluate the service provider&rsquo;s
+level of compliance with defined security controls. If the service provider is not subject to such periodic
+assessments, OH shall engage in alternative approaches to evaluate the provider&rsquo;s level of compliance.
+Such alternative approaches may include the following:
+
+Requiring the vendor to complete a security questionnaire provided by OH (OH shall provide
+the OncoHealth Vendor Information Security Questionnaire to the proposed vendor and require
+completion of the Questionnaire for OH review). 
+
+Discussing the vendor&rsquo;s security and control environment with vendor security personnel to
+ascertain the details of the vendor&rsquo;s security and control environment.
+
+Ensuring that a &ldquo;right to audit&rdquo; clause is included in the vendor agreement and performing an
+annual vendor audit as part of ongoing vendor monitoring activities.
+
+When making the determination as to whether OH shall engage with such a third-party service provider, the
+considerations listed above shall govern the security evaluation and decision-making process for service
+provider selection. When the third-party service provider is a provider of software or a technology platform, and such provider shall store or process ePHI as part of the service agreement, OH shall require that such security assessments, preferably by a qualified assessor, are performed prior to implementation of the solution (such as SOC reports as mentioned above). If the security controls and functionality in place from the proposed service provider do not satisfy the minimum requirements established by OH, OH shall consider the residual risk associated with choosing such a solution and may determine that it is not feasible to select the service provider.
+
+To help ensure a consistent process for evaluating the security requirements of a proposed third-party service provider, the IT Operations Team (or Quality and Compliance Team, depending on the nature of the services provided) shall utilize the requirements of this document to formally address multiple safeguards prior to allowing the use of OH information systems by external service providers or external individuals. The group(s) responsible for the implementation of the new service provider shall ensure that security is maintained during any applicable transition process. Parallel secure environments may need to exist temporarily to ensure that security is not compromised during such transitions.  Once the requirements above have been successfully addressed, OH shall execute a service agreement with the vendor, ensuring that the required terms and conditions listed in section 2.1 have been included. The Legal Department shall oversee the execution of such agreements.
+
+Please reference the Third Party Assurance Procedure for all relevant information.
+
+If software is to be evaluated please refer to the ITOps/InfoSec/DevOps Software Onboarding Process.
+
+https://oncologyanalytics.atlassian.net/wiki/pages/resumedraft.action?draftId=3396632579&draftShareId=c8714d55-c04a-439f-aebb-64daed4e8059

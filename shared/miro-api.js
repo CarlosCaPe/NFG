@@ -17,8 +17,13 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-// Load .env
-const envPath = path.join(__dirname, '.env');
+// Load .env — try client dir first, then shared dir
+const ROOT_DIR = path.join(__dirname, '..');
+const clientArg = process.argv.indexOf('--client');
+const CLIENT = clientArg !== -1 ? process.argv[clientArg + 1] : 'oncohealth';
+const clientEnv = path.join(ROOT_DIR, 'clients', CLIENT, '.env');
+const sharedEnv = path.join(__dirname, '.env');
+const envPath = fs.existsSync(clientEnv) ? clientEnv : sharedEnv;
 if (fs.existsSync(envPath)) {
   const lines = fs.readFileSync(envPath, 'utf-8').split('\n');
   for (const line of lines) {

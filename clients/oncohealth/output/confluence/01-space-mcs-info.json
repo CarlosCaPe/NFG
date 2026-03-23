@@ -1,0 +1,75 @@
+{
+  "id": 267583521,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/267583521",
+  "key": "MCS",
+  "alias": "MCS",
+  "name": "MCS",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "267583537",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/267583537",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMjY3NTgzNTM3",
+    "status": "current",
+    "title": "MCS Home",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 1073741823
+    },
+    "_expandable": {
+      "container": "/rest/api/space/MCS",
+      "metadata": "",
+      "restrictions": "/rest/api/content/267583537/restriction/byOperation",
+      "history": "/rest/api/content/267583537/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/267583537/descendant",
+      "space": "/rest/api/space/MCS",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/267583537/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/267583537",
+      "tinyui": "/x/MQDzDw",
+      "editui": "/pages/resumedraft.action?draftId=267583537",
+      "webui": "/spaces/MCS/overview",
+      "edituiv2": "/spaces/MCS/pages/edit-v2/267583537"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/MCS/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=MCS",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/MCS/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/MCS",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/MCS",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

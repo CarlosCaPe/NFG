@@ -1,0 +1,446 @@
+[
+  {
+    "id": 267255959,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/267255959",
+    "key": "AL",
+    "alias": "AL",
+    "name": "Alignment Healthcare",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/AL/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AL",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/AL/theme",
+      "history": "",
+      "homepage": "/rest/api/content/267255975"
+    },
+    "_links": {
+      "webui": "/spaces/AL",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/AL"
+    }
+  },
+  {
+    "id": 258867252,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/258867252",
+    "key": "AP",
+    "alias": "AP",
+    "name": "Analytics Platforms",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/AP/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AP",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/AP/theme",
+      "history": "",
+      "homepage": "/rest/api/content/258867302"
+    },
+    "_links": {
+      "webui": "/spaces/AP",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/AP"
+    }
+  },
+  {
+    "id": 179634209,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/179634209",
+    "key": "AT",
+    "alias": "AT",
+    "name": "Analytics Team",
+    "description": {
+      "plain": {
+        "value": "Share team documents, etc.",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/AT/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AT",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/AT/theme",
+      "history": "",
+      "homepage": "/rest/api/content/179635174"
+    },
+    "_links": {
+      "webui": "/spaces/AT",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/AT"
+    }
+  },
+  {
+    "id": 201392170,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/201392170",
+    "key": "BND",
+    "alias": "BND",
+    "name": "Brand New Day",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/BND/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=BND",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/BND/theme",
+      "history": "",
+      "homepage": "/rest/api/content/201392171"
+    },
+    "_links": {
+      "webui": "/spaces/BND",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/BND"
+    }
+  },
+  {
+    "id": 265650178,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/265650178",
+    "key": "HUM",
+    "alias": "HUM",
+    "name": "Humana",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/HUM/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=HUM",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/HUM/theme",
+      "history": "",
+      "homepage": "/rest/api/content/265650259"
+    },
+    "_links": {
+      "webui": "/spaces/HUM",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/HUM"
+    }
+  },
+  {
+    "id": 60850179,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/60850179",
+    "key": "CA",
+    "alias": "CA",
+    "name": "Impact Analysis",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/CA/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=CA",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/CA/theme",
+      "history": "",
+      "homepage": "/rest/api/content/60850238"
+    },
+    "_links": {
+      "webui": "/spaces/CA",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/CA"
+    }
+  },
+  {
+    "id": 3482550278,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3482550278",
+    "key": "IS",
+    "alias": "IS",
+    "name": "Information Security",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/IS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=IS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/IS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/3482550638"
+    },
+    "_links": {
+      "webui": "/spaces/IS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/IS"
+    }
+  },
+  {
+    "id": 3479109640,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3479109640",
+    "key": "ITOPS",
+    "alias": "ITOPS",
+    "name": "ITOPS",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/ITOPS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=ITOPS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/ITOPS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/3479109972"
+    },
+    "_links": {
+      "webui": "/spaces/ITOPS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/ITOPS"
+    }
+  },
+  {
+    "id": 145195054,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/145195054",
+    "key": "MAT",
+    "alias": "MAT",
+    "name": "MATIS",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/MAT/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=MAT",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/MAT/theme",
+      "history": "",
+      "homepage": "/rest/api/content/145195109"
+    },
+    "_links": {
+      "webui": "/spaces/MAT",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/MAT"
+    }
+  },
+  {
+    "id": 267583521,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/267583521",
+    "key": "MCS",
+    "alias": "MCS",
+    "name": "MCS",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/MCS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=MCS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/MCS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/267583537"
+    },
+    "_links": {
+      "webui": "/spaces/MCS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/MCS"
+    }
+  },
+  {
+    "id": 61079564,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/61079564",
+    "key": "OG",
+    "alias": "OG",
+    "name": "OA General",
+    "description": {
+      "plain": {
+        "value": "This page stores all general documents related to OA.\r\nYou can find OA templates to be used for documentation and presentation purposes.",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/OG/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=OG",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/OG/theme",
+      "history": "",
+      "homepage": "/rest/api/content/61079619"
+    },
+    "_links": {
+      "webui": "/spaces/OG",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/OG"
+    }
+  },
+  {
+    "id": 750452744,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/750452744",
+    "key": "PM",
+    "alias": "PM",
+    "name": "Product Management",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/PM/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=PM",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/PM/theme",
+      "history": "",
+      "homepage": "/rest/api/content/750452864"
+    },
+    "_links": {
+      "webui": "/spaces/PM",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/PM"
+    }
+  }
+]

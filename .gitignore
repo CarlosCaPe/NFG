@@ -8,6 +8,5 @@ clients/*/.env
 
 .graph-token.json
 
-.playwright-session-okta/
-.playwright-session-microsoft/
-.playwright-session-ms-auto/
+.playwright-session-*/
+shared/output/

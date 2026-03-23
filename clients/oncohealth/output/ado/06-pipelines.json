@@ -1,0 +1,110 @@
+{
+  "count": 7,
+  "value": [
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906?revision=2"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=906"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906?revision=2",
+      "id": 906,
+      "revision": 2,
+      "name": "datadog-cd",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/897?revision=2"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=897"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/897?revision=2",
+      "id": 897,
+      "revision": 2,
+      "name": "newum_services (CD)",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/916?revision=2"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=916"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/916?revision=2",
+      "id": 916,
+      "revision": 2,
+      "name": "newum_services (CI)",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+      "id": 896,
+      "revision": 3,
+      "name": "newum_ui (CD)",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/903?revision=2"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=903"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/903?revision=2",
+      "id": 903,
+      "revision": 2,
+      "name": "newum_ui (CI)",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912?revision=2"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=912"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912?revision=2",
+      "id": 912,
+      "revision": 2,
+      "name": "postgresql-cd",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/925?revision=1"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=925"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/925?revision=1",
+      "id": 925,
+      "revision": 1,
+      "name": "Variables",
+      "folder": "\\DevOps"
+    }
+  ]
+}

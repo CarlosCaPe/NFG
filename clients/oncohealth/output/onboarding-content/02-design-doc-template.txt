@@ -1,69 +1,37 @@
-﻿<System Name> System Design Doc
+﻿<System Name> System
+Design Doc
 Proposal Status: Draft
 Last Major Update: Feb 5, 2026
-
-
-
-
-Owner(s): 
+Owner(s):
 Insert @mention names.
-
-
-
-
-Stakeholders / Approvers Sign off[a]
-Name
-	Due Date
-	Project Role
-	Decision
-	
-
-	
-
-	
-
-	Approved
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
+Stakeholders / Approvers Sign oﬀ
+Name Due Date Project Role Decision
+Approved
 Objective
 What problem are we solving? How do we know it’s solved?
 Requirements
-List high level requirements with links to detailed requirements documents 
-Design Summary for Business[b]
+List high level requirements with links to detailed requirements documents
+Design Summary for Business
 High level system design description + high level architecture diagrams
 Detailed Design for Engineers
-How will everything work together? What does each component do? What is the tech stack and briefly why? How will this design scale? If auditing is needed, how will that be done, and how will the audit logs be scrubbed of PHI? [c]
+
+How will everythinGwork together? What does each component do? What is the tech stack and
+brieﬂy why? How will this design scale? If auditinGis needed, how will that be done, and how will
+the audit logs be scrubbed of PHI?
 Alternatives
 What other technical options are there to the design we are proposing?
 Metrics, Monitoring & Alerting
-How do we verify that the software is working and react if it stops working or malfunctions? What tools are we using?
-Deployment, Integration[d] and Rollout
-When, how, and how often will we deploy? How will we integrate this solution with existing systems? Are there any logistical or data management issues to watch for on rollout?
+How do we verify that the software is workinGand react if it stops workinGor malfunctions? What
+tools are we using?
+Deployment, Integration and Rollout
+When, how, and how often will we deploy? How will we integrate this solution with existing
+systems? Are there any logistical or data management issues to watch for on rollout?
 Testing
-Discuss automated test suites, E2E testing, test data management strategies, regression testing, load and performance testing, proposed automation framework, code coverage requirements, and/or QA process.
+Discuss automated test suites, E2E testing, test data management strategies, regression testing,
+load and performance testing, proposed automation framework, code coverage requirements,
+and/or QA process.
 Security and Compliance Concerns
-Are we complying with the law? How do we make sure our data is secure and isn’t exposed? How are we controlling PHI? What safeguards are there for security and authorization? How are we minimizing and monitoring for vulnerabilities? Discuss Secret management and certificates. 
+Are we complyinGwith the law? How do we make sure our data is secure and isn’t exposed?
+How are we controllinGPHI? What safeguards are there for security and authorization? How are
+we minimizinGand monitorinGfor vulnerabilities? Discuss Secret management and certiﬁcates.
 Glossary
-[a]This should be a living document, We don't want to have stakeholders / apprivers.
-[b]I still think this should be called High Level Design. Thinking more about this, this document is for the engineering organization and the goal of the design document is to document all architecual design decisions so that years in the future it is clear why something is the way it is. While "business/product" leaders can view it, it is for engineers and the high level design is the birds eye view of the system.
-
-
-Similarly, the detailed design or the Design Details are the nitty gritty details of all the blocks in the high level design, the precise technologyt that is used for each component, how they communicate, how data flows, etc.
-[c]I think this should be in a separate L1 heading, or be down with what used to be the Data Management heading..
-[d]This should be included in the High Level Design section as (boxes) and in a lot more detail  in the Detail Design section.

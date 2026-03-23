@@ -255,6 +255,7 @@ async function capture(page, service) {
 
   const context = await chromium.launchPersistentContext(SESSION_DIR, {
     headless: false,
+    channel: 'msedge',
     viewport: { width: 1400, height: 900 },
     args: ['--disable-blink-features=AutomationControlled'],
   });

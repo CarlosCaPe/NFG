@@ -1,0 +1,75 @@
+{
+  "id": 201392170,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/201392170",
+  "key": "BND",
+  "alias": "BND",
+  "name": "Brand New Day",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "201392171",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/201392171",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMjAxMzkyMTcx",
+    "status": "current",
+    "title": "Brand New Day",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": "none"
+    },
+    "_expandable": {
+      "container": "/rest/api/space/BND",
+      "metadata": "",
+      "restrictions": "/rest/api/content/201392171/restriction/byOperation",
+      "history": "/rest/api/content/201392171/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/201392171/descendant",
+      "space": "/rest/api/space/BND",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/201392171/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/201392171",
+      "tinyui": "/x/KwABD",
+      "editui": "/pages/resumedraft.action?draftId=201392171",
+      "webui": "/spaces/BND/overview",
+      "edituiv2": "/spaces/BND/pages/edit-v2/201392171"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/BND/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=BND",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/BND/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/BND",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/BND",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

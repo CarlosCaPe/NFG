@@ -1,11 +1,15 @@
 // scrape-gdoc-export.js — Export Google Docs as plain text via the /export URL
-// Uses the same browser profile (cookies) for auth
+// Uses Edge browser with persistent session for auth
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const OUTPUT_DIR = path.join(__dirname, 'output', 'onboarding-content');
-const PROFILE_DIR = path.join(__dirname, 'output', '.browser-profile');
+const ROOT_DIR = path.join(__dirname, '..');
+const clientArg = process.argv.indexOf('--client');
+const CLIENT = clientArg !== -1 ? process.argv[clientArg + 1] : 'oncohealth';
+const CLIENT_DIR = path.join(ROOT_DIR, 'clients', CLIENT);
+const OUTPUT_DIR = path.join(CLIENT_DIR, 'output', 'onboarding-content');
+const PROFILE_DIR = path.join(ROOT_DIR, '.playwright-session-gdoc');
 
 const DOCS = [
   {
@@ -21,11 +25,41 @@ const DOCS = [
 (async () => {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
+  fs.mkdirSync(PROFILE_DIR, { recursive: true });
   const context = await chromium.launchPersistentContext(PROFILE_DIR, {
     headless: false,
+    channel: 'msedge',
     viewport: { width: 1400, height: 900 },
     locale: 'en-US'
   });
+
+  // Check if we need to login to Google first
+  const testPage = await context.newPage();
+  await testPage.goto('https://docs.google.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await testPage.waitForTimeout(3000);
+  const isLoggedIn = await testPage.evaluate(() => {
+    return !document.body.innerText.includes('Sign in') || document.querySelector('[aria-label="Google Account"]') !== null;
+  });
+  await testPage.close();
+
+  if (!isLoggedIn) {
+    console.log('⚠️  Not logged into Google. Opening login page — please sign in manually...');
+    const loginPage = await context.newPage();
+    await loginPage.goto('https://accounts.google.com/signin', { waitUntil: 'domcontentloaded' });
+    console.log('📱 Waiting 60s for manual Google login...');
+    for (let i = 0; i < 12; i++) {
+      await loginPage.waitForTimeout(5000);
+      const url = loginPage.url();
+      if (url.includes('myaccount.google.com') || url.includes('drive.google.com') || url.includes('docs.google.com')) {
+        console.log('✅ Google login detected!');
+        break;
+      }
+      console.log(`  [${(i+1)*5}s] Waiting for login...`);
+    }
+    await loginPage.close();
+  } else {
+    console.log('✅ Already logged into Google');
+  }
 
   for (const doc of DOCS) {
     // Google Docs export as plain text

@@ -1,0 +1,6 @@
+Bugs (4)
+============================================================
+[Closed] #180347 BUG CHILD | Taras Badlo | P2 | pts | newUM\26.02.17 | 
+[Closed] #181917 BUG_FROM_TC_1 | Unassigned | P2 | pts | newUM\26.02.17 | 
+[Closed] #184389 [Patient Search] Date of Birth is shifted by timezone in API request payload (1990-11-04 sent as 1990-11-03T21:00:00.000Z) | Mykola Vorona | P3 | pts | newUM\26.03.03 | 
+[Closed] #185473 Member Search API returns 404 Not Found for an existing member | Iryna Lukianovets | P2 | pts | newUM\26.03.17 | 

@@ -1,0 +1,75 @@
+{
+  "id": 61079564,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/61079564",
+  "key": "OG",
+  "alias": "OG",
+  "name": "OA General",
+  "description": {
+    "plain": {
+      "value": "This page stores all general documents related to OA.\r\nYou can find OA templates to be used for documentation and presentation purposes.",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "61079619",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/61079619",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvNjEwNzk2MTk=",
+    "status": "current",
+    "title": "OA General Home",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 92537871
+    },
+    "_expandable": {
+      "container": "/rest/api/space/OG",
+      "metadata": "",
+      "restrictions": "/rest/api/content/61079619/restriction/byOperation",
+      "history": "/rest/api/content/61079619/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/61079619/descendant",
+      "space": "/rest/api/space/OG",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/61079619/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/61079619",
+      "tinyui": "/x/QwCkAw",
+      "editui": "/pages/resumedraft.action?draftId=61079619",
+      "webui": "/spaces/OG/overview",
+      "edituiv2": "/spaces/OG/pages/edit-v2/61079619"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/OG/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=OG",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/OG/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/OG",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/OG",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

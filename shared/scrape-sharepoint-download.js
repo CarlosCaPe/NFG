@@ -484,6 +484,7 @@ async function main() {
 
   const browser = await chromium.launchPersistentContext(SESSION_DIR, {
     headless: false,
+    channel: 'msedge',
     viewport: { width: 1280, height: 800 },
     acceptDownloads: true,
   });

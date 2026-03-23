@@ -1,0 +1,15 @@
+Epics (13)
+============================================================
+[New] #179183 Identity, Access & Administration Foundation | Unassigned | P2 | pts | newUM | 
+[New] #180140 Automation Quality Assurance | Ivan Karpa | P2 | pts | newUM | 
+[New] #181222 Case Intake | Unassigned | P2 | pts | newUM | 
+[New] #181223 Case Entry | Unassigned | P2 | pts | newUM | 
+[New] #181224 Case Assignment | Unassigned | P2 | pts | newUM | 
+[New] #181225 Case Review - Processing | Unassigned | P2 | pts | newUM | 
+[New] #181226 Case Review - Determinations | Unassigned | P2 | pts | newUM | 
+[New] #181227 Outbound | Unassigned | P2 | pts | newUM | 
+[New] #181230 Chemotherapy Entry | Unassigned | P2 | pts | newUM | V1.R1
+[Active] #181983 Platform Foundation | Vika Nobis | P2 | pts | newUM | BE Services; core; Data; FE
+[Active] #181984 Platform Improvements | Vika Nobis | P2 | pts | newUM | 
+[New] #182837 Configuration & Rules Engine | Unassigned | P2 | pts | newUM | core
+[New] #182946 Admin Portal Enhancements | Unassigned | P2 | pts | newUM\26.02.17 | 

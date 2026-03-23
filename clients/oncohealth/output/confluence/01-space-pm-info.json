@@ -1,0 +1,75 @@
+{
+  "id": 750452744,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/750452744",
+  "key": "PM",
+  "alias": "PM",
+  "name": "Product Management",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "750452864",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/750452864",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvNzUwNDUyODY0",
+    "status": "current",
+    "title": "Product Management",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 750951890
+    },
+    "_expandable": {
+      "container": "/rest/api/space/PM",
+      "metadata": "",
+      "restrictions": "/rest/api/content/750452864/restriction/byOperation",
+      "history": "/rest/api/content/750452864/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/750452864/descendant",
+      "space": "/rest/api/space/PM",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/750452864/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/750452864",
+      "tinyui": "/x/gAC7L",
+      "editui": "/pages/resumedraft.action?draftId=750452864",
+      "webui": "/spaces/PM/overview",
+      "edituiv2": "/spaces/PM/pages/edit-v2/750452864"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/PM/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=PM",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/PM/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/PM",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/PM",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

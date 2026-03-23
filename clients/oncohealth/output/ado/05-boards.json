@@ -1,0 +1,20 @@
+{
+  "count": 3,
+  "value": [
+    {
+      "id": "0d0ca98f-6ac0-420c-a778-de3405056249",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/d6f98e1c-5388-4f30-a46a-ee37a627874b/_apis/work/boards/0d0ca98f-6ac0-420c-a778-de3405056249",
+      "name": "Stories"
+    },
+    {
+      "id": "5184589b-838f-4ed6-a0fe-859acc9f46a8",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/d6f98e1c-5388-4f30-a46a-ee37a627874b/_apis/work/boards/5184589b-838f-4ed6-a0fe-859acc9f46a8",
+      "name": "Epics"
+    },
+    {
+      "id": "f75023d0-44b0-4c35-bb2c-08ef1680c30d",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/d6f98e1c-5388-4f30-a46a-ee37a627874b/_apis/work/boards/f75023d0-44b0-4c35-bb2c-08ef1680c30d",
+      "name": "Features"
+    }
+  ]
+}

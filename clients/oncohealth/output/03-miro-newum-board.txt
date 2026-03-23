@@ -1,0 +1,1692 @@
+
+=== Page 1 ===
+Risks
+1. Member Search, Selection, & C overage Determination, including Draft C ase)
+Data
+Eligibility investigation and schema design may not be ﬁnished in time to unblock
+development.
+Dev environments currently lack usable anonymized data; some key tables are empty.
+No ﬁnalized process yet for anonymization, PHI usage, and transformation validation.
+Scope and feasibility of full data migration is unclear; partial migration will need a reﬁll
+process for missing data.
+Performance tuning may be inaccurate if built on low‑volume or incomplete
+anonymized data.
+Strong dependency on OH Data team in case of knowledge transfer, especially once
+investigating legacy data model.
+Backend
+Rules engine integration is not ﬁnalized
+Frontend
+Missing ﬁnal UX/UI designs increases risk of rework for member, diagnosis, and
+regimen screens.
+API not being ready or additional rework is needed
+2.Diagnosis Selection
+Backend:
+Diagnosis domain not yet modeled in new schema.
+3.Main Regimen Selection:
+Data
+DrugsMS schema complexity (84 tables)
+4.Allow C ustom Regimens
+Backend
+Role- based enforcement enforcement is not ﬁnalized
+5.Apply Payer Drug C onﬁgurations
+Data
+Near- real- time update expectations for Payer Drug Library (PDL) changes
+6.Apply Non- Preferred Drug Rules
+Data:
+Reporting and switch- tracking requirements are not fully deﬁned
+
+=== Page 2 ===
+Near- real- time update expectations for Payer Drug Library (PDL) changes
+6.Apply Non- Preferred Drug Rules
+Data:
+Reporting and switch- tracking requirements are not fully deﬁned
+
+=== Page 3 ===
+NewUM Version 1.0 Product Scope
+[DRAFT]
+Summary
+NewUM Version 1.0 establishes the foundational platform for OncoHealth to deliver fully
+delegated chemotherapy utilization management services
+in Mainland across C ommercial and Medicare lines of business. It achieves functional parity with
+existing OneUM platforms while introducing meaningful improvements in user
+experience, implementation eﬃciency, and clinical workﬂow and decision making. V1.0
+enables OH teams to reliably intake, review, determine, and communicate decisions for
+chemotherapy treatment requests to health plans, providers, and members—within
+compliance timeframes— using a standardized, rules driven platform.
+This is not the ﬁnal version intended for a live health plan launch. Instead, V1.0 delivers a broad
+enough scope to stand up a health plan in a production- like environment and
+conduct extensive user testing with complex cases— a critical step to derisk the ﬁrst real health
+plan migration to NewUM. The target completion, per the SOW and project plans, is June 2026.
+This document is a product scoping guide for product, operational, and technical teams to
+make Version 1.0 decisions. It is intentionally concise and does not capture all product details;
+those will be managed with stakeholder input in Product Requirement Documents
+(PRDs) and NewUM roadmap artifacts.
+End- State C apabilities for Version 1.0
+C ase Submission & Data Foundations
+Providers and health plans can submit chemotherapy drug prior authorization cases through
+current intake methods (fax, phone, and web).
+Treatment details (schedules, dosing, frequency, etc.) are captured using an industry- standard
+data structure with guardrails to improve accuracy and completeness.
+The Admin Portal serves as the truth for all clinical data (drugs, regimens, diagnoses,
+etc.) and health plan speciﬁc drug coverage policies (prior authorization status, non- preferred
+drugs, etc.) and formulary ﬁle information for pharmacy drugs (quantity limits, step therapy).
+Member eligibility and provider network data are sourced from the health plan's existing
+inbound data ﬁles.
+C linical Review & Determinations
+OH Operational teams ( C RS, RNs, PharmDs, and MDs) can see complete protocol details within
+a case for medical necessity review, document clinical notes, record any required clinical
+interventions, and make ﬁnal drug level determinations. The health plan's speciﬁc drug
+coverage policies are visible, actionable, and consistently applied within
+their review workﬂows.
+The system automatically assigns drug level determinations for:
+PA Exempt
+Out of Scope (OOS)
+Indicationbasedapprovals
+
+=== Page 4 ===
+their review workﬂows.
+The system automatically assigns drug level determinations for:
+PA Exempt
+Out of Scope (OOS)
+Indication- based approvals
+When all drugs in the case receive an automatic determination, NewUM auto- generates the
+complete notiﬁcation package and auto- completes the case.
+C linical users can support health plans for appeals processing, but OH is not delegated to
+make these determinations within the platform.
+Health plan and provider oﬃce staﬀ users can search and view basic case details for pending
+and completed cases.
+Work Distribution
+The system assigns cases to operational work queues based on case attributes and
+conﬁgurable routing rules, ensuring appropriate workload distribution across clinical teams.
+Work distribution is conﬁgurable by an operational team (supervisor, manager) end user with
+minimal technical expertise.
+Turnaround Times (TAT)
+All required C ommercial and Medicare turnaround times are support through OH's TAT
+engine.
+Users can see TAT status within the case and can support or prioritize cases in work queues
+based on upcoming deadlines.
+Notiﬁcations & Auth Files
+Standard notiﬁcation packages (letters and IVR) are generated and delivered based
+on conﬁgured business rules.
+Following the completion of the case, the system triggers the appropriate,
+existing outbound authorization ﬁles to the health plan or PBM based on
+the drug's beneﬁt type.
+Health Plan C onﬁguration
+Administrators can conﬁgure OH's standard oﬀering for each health plan within the Admin
+Portal, including:
+Drug policy conﬁgurations
+Formularies
+Delegation and beneﬁt rules
+Network and plan attributes
+These conﬁgurations drive the guardrails and workﬂow logic within NewUM.
+A conﬁgurable rules engine manageable by semitechnical users, with full versioning and
+change audit history so OH can see what rules exist, when they changed, and what
+was modiﬁed.
+Operational Insight
+Basic operational KPIs are available via dashboards to support day- to- day oversight and
+
+=== Page 5 ===
+These conﬁgurations drive the guardrails and workﬂow logic within NewUM.
+A conﬁgurable rules engine manageable by semitechnical users, with full versioning and
+change audit history so OH can see what rules exist, when they changed, and what
+was modiﬁed.
+Operational Insight
+Basic operational KPIs are available via dashboards to support day- to- day oversight and
+performance monitoring.
+A detailed case- level audit log capturing what changed, when, and by whom, including
+visibility into which rules and rule versions were applied during case processing.
+Medicare Speciﬁc Workﬂows
+The following Medicare speciﬁc workﬂows are supported:
+Appointment of Representative (AOR)
+Untimely Determinations:
+Deemed Denials (Part B)
+G enerate Documents for Independent Review Entity (IRE) (Part D)
+Integrated Denial Notices (IDN)
+Dismissal
+Reconsiderations
+Reopens
+Dual Eligible Special Needs Plan (D- SNP)
+Multi- Language Insert (MLI)
+Notiﬁcation Language and Accessibility Support
+Out of Scope
+XRT and G MT
+Delegated Appeals
+Medicaid Workﬂows
+Add- On UM Programs (e.g. Site of C are, Vial Rounding)
+Puerto Rico Speciﬁc Workﬂows
+Provider and Health Plan Portal Enhancements
+Interop APIs for FHIR/ C MS-0057 C ompliance
+Native AI- based C linical Extraction (Anterior)
+Advanced Provider Mastering (3rd Party PDM Service Interfaces)
+
+=== Page 6 ===
+Summary Document
+Overview
+This document provides a concise summary of the infrastructure and services related to the
+Letters v2 project, focusing on data management, APIs, and related technologies.
+Data Management
+The data management infrastructure includes various SQL Server databases such as EligibilityMS,
+ProviderMS, DrugsMS, and LoggingDB. These databases support diﬀerent aspects of the project,
+including eligibility, provider information, and drug data management. Additionally, there are
+multiple Blob Storage solutions for storing inbound faxes and Matis documents, along with other
+storage needs.
+APIs and Services
+Several APIs and services are integral to the system's functionality:
+Eligibility API: Manages eligibility- related queries and data processing.
+Provider API: Handles provider- related information and interactions.
+Drugs API: Facilitates drug data management and retrieval.
+Admin Portal API: Provides administrative functionalities and access control.
+Mail Service (Kaleidoscope): Manages email communications.
+IVR (Voice Recognition) API: Supports voice recognition capabilities.
+Turnaround Time (TaT) API: Monitors and reports on processing times.
+Data Processing and ETL
+The system employs various ETL (Extract, Transform, Load) processes to manage data ﬂow and
+transformation:
+Azure Data Factory ETL and Databricks ETL: Facilitate data integration and processing.
+Salesforce ETL: Integrates Salesforce data into the system.
+Synapse ETL and SSIS ETL: Support data warehousing and integration tasks.
+Additional Services
+EventProcessor Windows Service: Manages event- driven processes.
+MessageBridge Windows Service: Facilitates message routing and processing.
+Fax Service API: Handles fax communications.
+Document API: Manages document- related operations.
+Security and Authentication
+
+=== Page 7 ===
+MessageBridge Windows Service: Facilitates message routing and processing.
+Fax Service API: Handles fax communications.
+Document API: Manages document- related operations.
+Security and Authentication
+The system uses Okta for authentication and identity management, ensuring secure access to
+various services and APIs.
+C ommunication and Integration
+Twilio: Provides communication capabilities, including SMS and voice services.
+Nuance: Supports advanced voice recognition and processing.
+Monitoring and Reporting
+PowerBI: Used for data visualization and reporting.
+JobMonitor API: Tracks and reports on job statuses and performance metrics.
+This summary encapsulates the key components and services of the Letters v2 infrastructure,
+highlighting the integration of data management, APIs, and various supporting technologies.
+
+=== Page 8 ===
+FirstNameLastNameEmailMiroStatus
+Rachel C ollierrcollier@oncohealth.usJoined
+Will C rawfordwcrawford@oncohealth.usInvited
+ErikHjortshojehjortshoj@oncohealth.usJoined
+Bogdan C hachunbchachun@oncohealth.usInvited
+C aitlinBowlercbowler@oncohealth.usInvited
+C hris G illiscgillis@oncohealth.usJoined
+G ordonWonggwong@oncohealth.usInvited
+InnaMariienkoimariienko@oncohealth.usJoined
+JackHalljhall@oncohealth.usJoined
+Jakub C habikjchabik@oncohealth.usInvited
+John Moorejmoore@oncohealth.usInvited
+BrendanIglehartbiglehart@oncohealth.usInvited
+PaulinaPhillipspphillips@oncohealth.usInvited
+StanHuangshuang@oncohealth.usInvited
+PeroJamanpjaman@oncohealth.usJoined
+AndriiZhdanazhdan@oncohealth.usJoined
+DmytroPetrivdpetriv@oncohealth.usInvited
+LuiyiValentinlvalentin@oncohealth.usJoined
+PetroBrezitskiypbrezitskiy@oncohealth.usInvited
+IvanKarpaikarpa@oncohealth.usJoined
+MykolaVoronamvorona@oncohealth.usJoined
+OleksandrNykonenkoonykonenko@oncohealth.usRMeirqouested access for
+RomanBuchynrbuchyn@oncohealth.usJoined
+TarasBadlotbadlo@oncohealth.usJoined
+VikaNobisvnobis@oncohealth.usInvited
+VladyslavKyrychukvkyrychuk@oncohealth.usJoined
+IrynaLukianovetsilukianovets@oncohealth.usInvited
+
+=== Page 9 ===
+C APTURE C URATE C ONSUME
+Azure Data Prefect
+source data Factory
+mqauganlitifyy g waoprsk Older clients
+and riskData is
+Synapsectlrieanntssf etrhrreodu tgoh
+loatlse rotfi ningt earnnda l a mix of push
+Formularymonitoringand pull
+Matis
+SSIS
+EligibiltyNewer C lients
+Analytical Services Enhancement: Data
+SmartUM(SQL Server)Actifvoart icorne aStoinlugt ion
+ProviderMany data exmpaonrtasg teod c dliaetnat s
+chqaullaelnitgye s
+Enhancement: Mirth
+u C postmreparmeh deantsaiv seo suirncgel eto Auth ﬁles (EDI,
+lower implementation costsEDW X12, data ﬁles)
+(Databricks*)
+C laimsEnOhpaenracetimoneanlt :
+contrEanchtsa nwcheemree nDtN: DAa itsa s een ad hoc requestsMetrPicros dfourc tD ata
+as 1st class customer to AirﬂowManufacturingMirth
+improve product qualityIRIS
+Prefectquarterly Statree Mpoerdtsicaid
+business reviews
+Operational impact analysis
+SystemsEnhancement: Standardizing on (sales tool)
+dDreivltean L tirvaen Tsafobrlems aatniodn ms teot alodwatear
+OADB (Matis costs of developing data pipelines ImpFiancatn Rceiaplo rt
+tables)and ongoing maintenance(Sales)
+AuthDBEnlinheaangceem toe nsut:p Epnodr tt op reonadc tdivaet a
+adkmnionwislterdagtieo np rfoodr ufacstitoenr pgrroabplhe m
+resolutionPre SalesAudits!
+HealthFortisDB
+oEbnshearnvcaebmiliteyn fto: rE nodu ttloie er nadle drtaintag
+and monitoring to maintain SLAs
+
+=== Page 10 ===
+NewUM C onﬁguration and Data G ranularity Model
+Payer Parent Organization
+Payer Organization
+Line of Business
+Plan Type
+Product Line
+Em G rpolouyper
+Inherited conﬁguration applies at the C ase
+Regimen C ase
+Drug/FormProviderOPrrgoavnidizeart i
+ularycontainsreferenceson
+Treatment User
+Element
+Treatment/Drug Data C ase and Member DataHealthcare Personnel Data
+
+=== Page 11 ===
+owvDhFevioernraurrrplemiigdud? eut alOi btloMainrorra aniicernsa?yst s,e er Pprreenfﬀeorenrr-ee dd/ rAe qeOxuPeiOArmeS dp/tP/ Doalsianmgtiiettsy/ quretqhsuentiretraspepm y e
+oAnsPlsayuy 1me rpp ahtriaoesnn :t Drugs DBDtr"ieataparcgiectrmnmaeeotvppemsitaonaicseutbt n as clet na"dn
+dDepoﬁ ananeydy roeunle rpsa noyeeerrd pg taor ebnet ParPeanyte Or rgDosing
+- opLrroegwtc?oae eIkrdfrge esl elopnev,rc-v e Yedeeelc o lorse ruvtduheleeleren ayspc ?letawayakeyers Payer OrgRDxr C uUgI Dosing
+LOBfoalPecpuvopestre lo onrnautc ilLaehols: BRTahdeiaratipoyn HD C rPu C gS RDxr C uUgI
+PPlarno dTuycpte hnaePtrwoadi tn pth orpeo ao vldinisddtte: arManual InputManual SelectionManual Selection C onLﬁegtntuerra tio
+LineManual InputfUrosmekrn aose wsleentc tosf ctNhhoioonswtﬁ pwyg leeaiusxtyre aassc utotiroluyen t Send Letter
+pmraoPrnvoivudidaeerl rlNysP IconﬁWgourrkaﬂtioown willpdDaeerplteeiagnla,d tfiiunolgnl o:o crn an tnoy pnbeee,, DisRpelsauyl tEsval DecesionDWePocorneks sﬂti oo??
+DePmatoiegnrtapManual Inputbdeehstpyearsrvotmeev mfiindoe erw rOhsiloOl wN Dhaoonpfeo pset, ve scanool muhuaeledtr i keoiti?nn? I dfNOrOecHo pmtroermo vpiveeaiwdnyeedssr aa tniodn cdatiyﬀnpe berese naatOnp tdpHr/erooarvt meLdOe Bbn yt W C oornkﬂﬁogw
+e C manp tlpooay mteieru nglttri poblueepl osn agt Emhpilcosyer ceodlbingeestﬁiWbyhegslraoeutmver rmekmain ﬂtfee ioowom rwhn iblio lnw ew-r il slYES C heEclkig Pilrboitvyider ProviNdeOr IIN?YESinpVuatlsi C d abaseatese d dDelegOcaeHtse?ido nto scyodsnetetﬁWemgrou mwrrkaiinlﬂtl eiobo whenho wwaivl le PSaeytetrin Ogrsg PYlEaSn TypeEvaluate C aseSparauvrelea aEsml vlt eeirnitlg epRgruesets rauenldtds , Delegate
+- tNhOew ,s biatumht Bec SotiUnmﬁerm? G roupOvEexrirsitd?es NO C heEclikg Mibeilimtyber Eligible?SuggPerostv iOdtehre(sr) INNptbrhree C aop attvlr psaiaaideagcrne reegcdas maen.m ﬁnrToeen ehtnhdd tieta eso ,lvs rirlng euoitgl iiogymbtha ilufcteubo ?ss llr (eteWhO i?o poOhnlueaeNl dts) conosﬁncg hIunergmaetasio t n?s(tee.pgs. wicnha tanht eb t ehp)er onceexsts SeLtOtinBg sPrLoidnuect Merge
+OveYrErSidesEligibility DBNOParPeanyte Or rgDEem G mrpoolougyprearp TreDTayrtpmuege nt RVualleid T Yy/pNe Tier 1beTThiieearrv 11io r
+Eliglbity File??Op G OprsoroSuol vdp-vi d iencderiaec rrrerseds tl-( iocﬂ ato ahbhugelael)sdv e-e :Payer OrghicsHD C rPu C gS ﬂagTier 2beThiearv 1io rreEtwedrDqmniehﬀuitaaﬀpeeittrlrerm oeeeprymdeneaen ntte(ori tter n g erpndt rqsacteo, uoyt wudaielrlpoiierealsssucmg , tlc ndneLeoe odonbueBss).teldtds iT sc taahht oasonae nbrdvsteodeee d Start
+raa-u ccsYlcheeeAmepessrs c,ieassc kw ru reatsobeol tiass eg wte y iphsrbsilaevytill iesriihcrtttm e yeaEo mv lfoie gr? iEnalpirgeus c utgt hbopoe saircynruksagl temr etesome s tubeletrs s DemhoicgrapEm G rpolouype r MedIDicare "skthipe" vseormiﬁec asttieopnss inPlaLnO TBypeRx C UIVaVlaidli dF rToomTTiieerr 34beThiearv 1io rbWcauossritckoaﬂmlolyw ww coeor kncoﬂﬁuogwludr chaotainvoﬁeng a- in conﬁguration entityStartA(l-dt eoerntneear ﬁmtinvinael a cstoitoennpﬁ) g C onﬁgurationManual Input1. C ase Intake
+PBP ID(FNoarmmIDuel/aIDry) Product Labelbehaviorwfoaaorlnou edwlda eb cbdhue ssc ietlnianseettfneseost prm, crweuigidlterh asa ttsti ehoetana otcs h f C onﬁguration1. C ase Intakewoitpuhot mcsosuimbltleeips le Decision
+LineDecision
+daehpﬁTapnOnredDo leOainrc:rg ho rManual Input2 C ase Entry2 C ase Entry
+coSvteartaeg e Tbwhgaoisrsuaei crclxiud nohcl sneedie,pﬁ sefr tgataaielournlrcbnrdmhaas tyciin kooe nf DecisionDecision
+dewﬁonueldd hbeer ePayerPayer C o C PLeoantsstetARe- ﬁpe Drw -pFe oooecgprearkemslﬂsniuoo ae(wOntds rO wacaSuaos)treoktsmﬂoiawotisonn (business rules) C urrently there is 3 Assignment3 Assignment
+LOBLOBDTuerlenAiwsngatsoatraserottuurkiuaomisnncn (pgdtwst/ tinhoimoennnse -: t wcpoaor plorcakbuuialnasbgteli yo da nnansyodst/ oinr oreusre St otiWm, ebru)t we need an understanding how it works and ansitso'si ga anup mbtooiiegnmn tpata taeinnd d RulesDecisionRulesDecision
+Plan TypePlan TypeRSInSegOpeOOSosSrOOtIt SsSSS c(pahagecgmkraaeggeast ieotncs ( toof gcaest edsa)ta from provider provided data dumps and migrate them to Manual Input4 ProcessingwinnTeoOw dgcrDiikatoﬀhOﬂsteeiieo:na.r gwcetw oi.an,o o nmnotnr e rske c d taﬂsudaotsop teseuwdpa sbag?et eees Manual Input4 Processing
+PrLoidnuect PrLoidnuect AuthOSFW HeHIhnnI iRdNtdlee iaoAn rstftPgata sIa bc aunieanurd sett-aee h ﬁisrr sldﬁf)e aFil zecHseescId hRtc,oe a it mnnhp aeasbyrc eoeeo rurpa sFser eHei nad Ia tR sm tlcooo tsp hoeaf rceu sdtaotma iwzaitthio pnrso, vaidnedr tsh aensde wpaoyueldrs need to be DecisionDecision
+Em G rpolouyper Em G rpolouyper C asceas escT oOtcnaaDnﬁOt gbu:u ears ses kadd v Baeersdet d na&ad itsalauns db :aimcbtioitoutentda mr, ywo orhenic doheu ctraa einlsn adﬀect triggering of the ruleManual Input5 C ase FinalizationManual InputFin5a. l C izaasteio n
+DecisionDecision
+6 DeAteprpmroinveadtion - 7 DetReerjmecitneadtion - P8a Drteiatellrym Aipnpartoiovne d- 9 DeWteitrhmdrinaawtnion - DOeutetbromunind6a /Otiuotnpu htsolds
+oucotcn-o pﬁmag-reu w-t -israa ha,rp lieibltnypjhle eradtco hpnrtviaepusedw rmdeonxvbaeemdr polfe :
+C Firsat Nsamee *Entry
+LTaresat tNmaemnet S*tart Date *select date
+C Firsat Nsamee *Entry
+LTaresat tNmaemnet T*ype * C hemoXRT G MT
+NFirste Nwame *Patient Entry
+LTaresat tNmaemnet S*tart Date *select date
+Last Known Diagnosis
+
+=== Page 12 ===
+Assumption:
+Payer has
+only 1 parentPayer
+payer orgParent Org
+Do any rules need to be
+deﬁned on payer parent
+org? If so, do they take Payer Org
+precedence over payer
+org level rules?
+- Yes
+- Lower level rule always
+take precedence
+LOBPotential
+approach:
+focus on LoB
+level rules
+Plan Type
+Product Manual Inp
+Line
+
+=== Page 13 ===
+Patient
+Manual I
+Demograp
+hics
+C an patient belong
+to multiple
+employer groups at
+the same time?Employer
+- NO, but conﬁrm G roup
+with BSU
+Overrides NO
+Exist?
+
+=== Page 14 ===
+Radiation
+Therapy
+ManualInput
+
+=== Page 15 ===
+Diagnosis and
+previous
+treatment can
+impact
+"acceptable"
+treatment
+Dosing
+Drug
+Rx C UI
+Drug
+H C P C S
+ManualSelection
+
+=== Page 16 ===
+Dosing
+Drug
+Rx C UI
+ManualSelection
+
+=== Page 17 ===
+Payer
+Parent Org
+Payer Org
+LOB
+Plan Type
+Product
+Line
+
+=== Page 18 ===
+Employer
+G roup
+Demograp
+hics
+
+=== Page 19 ===
+Treatment
+Type
+Drug
+H C P C S
+Drug
+Rx C UI
+
+=== Page 20 ===
+Rule Type
+Valid Y/N
+ﬂag
+Valid From
+Valid To
+Label
+
+=== Page 21 ===
+be
+ers
+Employer
+DemograpMedicare
+G roup
+hicID
+(Name/ID)
+Formulary
+PBP ID
+ID
+
+=== Page 22 ===
+PA step
+Preferred/ Dosage/qu
+required/Ptherapy
+non- antity
+A exempt/ requireme
+preﬀeredlimits
+OOSnts
+
+=== Page 23 ===
+YES
+Payer Org
+Plan Type
+Settings
+LOB Product
+SettingsLine
+
+=== Page 24 ===
+Tier 1Tier 1
+behavior
+Tier 2Tier 1
+behavior
+Tier 3Tier 1
+behavior
+Tier 4Tier 1
+behavior
+
+=== Page 25 ===
+Letter
+C onﬁguratio
+n
+Not yet sure
+how exactly Send Letter
+this plays out
+conﬁguration
+wise
+Post
+Display Eval DecesionDecesio??
+Resultsn
+Workﬂo
+Workﬂow
+C onﬁg
+Delegate
+
+=== Page 26 ===
+Payer
+LOB
+Plan Type
+Product
+Line
+Employer
+G roup
+
+=== Page 27 ===
+Payer
+LOB
+Plan Type
+Product
+Line
+Employer
+G roup
+
+=== Page 28 ===
+C ase IntakeHealth Plan OH Admin Payer Dr C uga se EntryAOpHp Arouvtaol C Paoyneﬁrg Ds r(uAgP HBeualstihn ePslasn SystemWo C rkOqaHu seuee Assignment C ase Processing C ase FinalizationOutbound
+PhonEen C tearlls - C RS EliDgiabtiality C linPicoarlt aDl ata C onPﬁDgLs) (AP HeParDoltvahitd aPelar n LogicPDL)RulesRules C RSM C Seleidnniicdcaa Nll RDMeaIct ofaor &rd s This is where our speciﬁc Propvriodrteeorqc wuoeli tfshrtdorma wsWithdrawn
+Fax - C RS EntersFaxes e C nRteSr e an qtruyeue forSearch MemberEnteDre Ptraoiltsocol TreaOStierndager crPhinr ogfov &ird ersSumOitH P RAe C vaieswe for d C feautnell yrcm aasuinet eobd-e ? NoApSypsrote C pmarisa eAt est osQi gunesu ePNhuarrsminDgIs medical cnthaeesee dd weedtoa raiklnsﬂdo ww ilwl ﬁilll lb ine all OprHeroa cvclihidneeiscra oflo utret aatomn Proainvgitdreeerevr edtnoot etiohsn en ot MDeedniiceadl N- Leacceks soitfy
+anWd/eobr E -H nPetreaorlvthid Pelra n Waosuesr u sqmhuoeeu utlhdees n,s obet ua jtur etsh ti s MDnecessity met?intervoern C ti C oFn) (P2P Not rhees pporonvsied efrrom DeInnfieodrm - Laaticokn of PharPmBMac yA uDtrhugs -
+C wn"ctchPoauoierlrunrloei rlor-dv e d cnsi nodebtltyaloeele yﬀrr egad ",tna nihhonttyeeefea t rrmdeth eoa nehe r i acsmetal iatgmbshleteee hnp rsf e lop oaarrlnfia c n -s OafaasnPxsdPeis sOmt aRwarTtiectU hhcN oidnImeTgYt pet olfreom tare iApn oIainr tt iogne oniftt , ipso ain gtood starting P C rhIonavtniedgreveres An Pgtrirooenteo s&c ot ol com C lpinleicteals tae a C mF/ C TN G oPetaincﬁkecaraagttieoen Aslul dccosecesunsmftu ellnyt?s Yes C omplete C aseHMeaeldthic aPll aDnr uAgust:h
+ApprovalQuMeouneistNo /or R Eersroolrv eORHe Sptoarntdinagrd
+OPuAt Eoxf eSmcoppte
+[Patient name, DWOhBo, iins sguertatinncge tihnefo t r(epaatymere nnat?me, mbr #, etc.)]pat[tWiDreenihaatygt rmniesoe ctsenhiitsev?] i ng[TreatWmAhneacntilt lt aTreryyap tDem r(u C egnhste ,ma Hroe C , Pt Xh C ReSTy,, Rr G exMc C eUTv)Ie,, i Rveietncgg.i]m?ens, When oisc cthuerr tinrega?tment [Ordering pHroovwid aenr, dP OWTh, esreer visic tihneg tprreoavtimdeern, to ﬃoccceu rcroinngta?ct info, etc.]Patient C linical Details
+HEelaiDgltiahbt iaPlitlayn PtiDbfWisnnhoheeItferiSor osewpb C u nrdia asmUlEsidrs rinaStdvac dt Seou.tcr Ioi ufsyoOp s:om-n rNi WuooR bo rcnEoeen eQss nrw s tws wUasiiof hlnIi tltmRw oadhnEtdeae e S C tar ewah dRyDdneasS -Id tn SmpSRo t C trME oioptUmQhvEvrSiioisUesndS v- I-gIet i ROod rE eNS WrPscpFtDoeuoahhIed Sﬃmxoohbi: C nrna mc WeUEneeecnuS:dh t -tSSnil aroe C iIitymOc nR't:sa h SNp Swtti eilhscmiel ?aelw pnp Rsbhou lEeeipﬃQl seputU c opoweIpn Rwau EtyiphSl l e Admin PortalMRDeAgLd,i mmaneindn PALoinbrcrtiaalllra yr,y C onnsPﬁ (aPgyaueyrrae tri oHeParDoltvahitd aPelar n
+NextWt ShthaeatWdacp trados iitarvlc:leea urrrne meinac qteeeuhnediert dbea est udipdoseien neicn pewi seﬁeistrcah rw c duohlaer t skaﬂe opcwtoioinnts MaRnEPuQaatUlileyIRn EEtnSt er baDckir etoct h peraolvthid pelra nDLiaibgrnaorsyis Drug LibraryDrug Library)Pweroonrvtkeidﬂreoerdw d -t eobtdaadaily s
+RecoFemoligcmuibesi nloitdnya, h tpairopenp- s yfeo prrva iitcnhei ,t- icmaolmb prpa hlseasts:e ly Mbr SearchIDs ImS C bUNr SfooSuIOnNd?YesDoeelisg imbNibolirty h aatv eIs MbrY eOsOS forEnter Diagnosis, Select Assignment Enter Protocol Basic Request Search for OPrrodveirdinegr YeNsoSearch for TreatingNoPTrroevaidtienrg / YesDAottcaucmh ePnattaietinotn Enter Patient NotesAnswer Patient Sumit PA C ase for Proccaeseed to
+npINgeronow ovD irrd C eeeO qPrAusDe aLsr tce,o efnoxﬁiusgntuidnrga trioegnismen, all Ensure strong patient thed taxt es?tart OreelHicge ipbivrieeli tfteyh rOﬁesls Hene, o Tmhto ot erowem evebviveeeewrrn,s ? in ourI C D10, StageTypeDetailsInformationOrdering ProviderFound?Provider / FacilityFacility Found(mediceatlc r.e)cords, This incQluudeessti othnes OH Reviewassignment
+ipuwsupsdeersslheaoeeeeann..crr ttss eFR ci hsoﬁEfsasoerchQn arahoe U otltxeutihInoharlRdeeln myEp /p b-Slpsm aaMe elDnet aerAisI,tee ST ctantsh C hIh ttSpeUirsen r iO Sychotgt hSeKvc eIeaaidOdylnt e Nth or HhmRaEoenQwmdU albeIreR e'rED swSu ( eDae xlIp S:El a C DlingUSniNSbiSnlPeIg)O' tNosgstOchnhoorreoueeom atwrasiul ﬁtteepepehct rs aiw etmp thafalieaoefentrns netec s rwanab swi caemweec ag,a kp nibesy ltte t u ont amtco o ta shethro netvamoemtna edeo t-v liu oeewt nr e Mb&RasinenuE do G rQ tovus MwUitpsc toTepIerR fosy-s E tr hiﬁshSntortu etaIsuonN tnsl idtoVstdeyt Enaba pSterrrsodT et c Iwalwoa G okisr/olA el tn C kTbh?o Ih aeiOIstest ? vN om cteThuo r-hoa mtyIi tst sfs hbo witoirmhn ouXeiiunglRraeglhTdr , TrdttDsArrehhoPreigaouisPasiliugmsLt nim,l Ingd cEeecoe Dntirlnnnucu, .fﬁtdano gden rhusucme:irr lrapaalaetttrri.iiio oomyRn nndUa ,,lr rLocuyElgi gSnisc i,c al TloSadmikhoureeiemitpgsto ehri enmienno ,qodc adsulfitoun ietcudghsare tilosc lsiy enn cb ,a ib ttaenyhisat ectibtch. iei o nei nnﬁ tsfa ldoylkesaredmtt ee oam, uti to n WbeDParuIeoScs vh C iwni UduieleSlss Srnes I reslO oeecNgldaein cct ot soi oednene w tRnehEeraQemtdU ipsnI rRetooE vo Sbiud ere OrsH RWSPeOEerQT vl Uii-kc ISeiRnmlyEg Sa/dT roDrteU InSaMo C tit Un dngSoe SeaeIsnOd dn N o t- qSMqpSTouuraoAmeeyTgss e/irttnSaii oowtcmannliulnsssld dbfbeoaea rra srd ddee ceddqat 'uloes inrermes dining
+UIteTsf hotxhcXrracaei ptlPpnnu pwOa sibimyiV onvaergea(csrkl/gisyscbm i. aen):f oolx elycdr ld iui"fnecysostiienvipgregynnl iyinait.nl g tguo" sa iwte UraosnIr kd U C ra"odne noaXmqen e twPues hwOi m ritcseehVa bm yi ses(eeces erhsb"t nt?a"a)ea: tbp (srcWlpd icfseoaeohny rut .?tonc)h ruDWtee"co ahhvet.eei snnd g U C bpcrbeoaaeaXmnndte iPﬁnge iwnOrn ecmdeV "to e cteen(crhadsd bastt?uhaet): Vi cab sottltsei nastidbehyh s lia eesa nw l nciadgih st" ihe eebacll i tiilkmghit ieyhbin aiislasi t tye s mpRuEaQty tU hwIiRas nEinSt t tDoo I tlSho C eoU kﬂS aoStwI Ow Nhere weakededp g sreepataerra tceo mfopr lneoxwity downstream -NiccnohOfmeoTmrbEmo:i nPatahrtitoeoiortnoan;pc RooyEfl G =d rItMuogtEasNl ft o=rer atment MMHoIbNteueehVimntdeEhgirSaco TahnudIteas G iooa eoAfldnt nTOhs tlI y oOrﬁp dd-elN eaaldd rnyioin sn- n.gPh Ro RoEtw Q&n eUtheIiRdsE fisSo r eMOnﬃAhTcaIenS cc&eo dnS mtdaracatrm tdUeaMttaic idalsrl loayp lfsdrooo mrwen qcsuuirrreedn t haMkn alAoovTetwI oSbsf ot wcotohhdny,a faywun, seadi no htdnha vinoseo nc b aoountsehe s
+Fwrooumld o wthee nr opte wrsapnetc ttoiv edso: tWhahty? kton oewndle udsgeer so?f that matter nseeaerdc hto? run check on each (fEkaxi:as Dtuiointshfgc Ao oanunptt pihﬁnr)lueo?avteido n
+DbSROpmeEr C uo QOrpat UoarcAtucrI U-tRor MIroElsseSf, n t d onhDtou oiIDserSt s C s C sp oOtnUramooASnvt Sedl io(IdtaeOhgexriNirdnccse? go pM ntth lAfyaoT tlrIo S wHo dekuo smw eaasatn nitta, t)o
+
+=== Page 29 ===
+Treatment type (general -- chemo, xrt, gmt)
+tWhhea yuf antxoo mat nsatdtai chrata lwvlyei t hit
+vtasot t fdaoocrhc ii tnt omg tathhneeu caualslsyee?r
+Note
+above
+from S G
+2/3/26PtPhr2eoP vsiudbemr ciottnetra tcot minfaon iusa all yn itcyep eto a h pahvoen fee antuumreb teor a flloorw
+Fieu XtuRrTe, G stMatTe, ccohnesmidoe, rs ua r'gtriecaalt metecnt approach' here...Asismsiuglna t'itoynp,e c' loinf iac tntaocthe,m eetcn.t . Ie lab results,
+c- C o- euMm.lgdpSo. ld iiatnnuryttel eaewakrstioe tmohp bfe e AewnrP atpoI btlr?uyiklpig t-ey -& wPrhrpeoarqvot[i uvdsyii C ooedrecMurek:m nS.eH.e .ete ]npertdeesr !it so
+2/5/26
+tcreaataetdmgdoe rnyt
+
+=== Page 30 ===
+Revisioning C ase Intake / Entry
+Intake ModesPRO C ESS PROPOSAL
+InIntatakkee T TyyppeesSupports case C an it support a pre- Note E C xRRisting Process C RS
+Provider API ccYloeasmsspiﬁlecxaittyio?n by scYuoesmbmpliesstieonne csas sceh eck?INTAKEENTRY
+[P(wfruoetvubir)dee]r Portal Y(iens f uture)Y(iens f uture)(IBnataskice)ADttoacchu m C leinnitcsal ATsrseiagtnmmeenntt Provider DetailsTcaresea tcmomenptl eaxsitsyig fnorm inetnatk ies &th een storyurce of
+IVR (phone)YesYesTcTahhleel bI C VyR RtRr s etyaastktmienmegn tctho teuy plcdae l.rlo cuotuel da Member SearchData InputData InputIrtPtoer'sq oh uvtahiidnreeed sprl e amdretot oraefil stsh paeer ecpi raaoldlcyme tsirnsa iitsnhteraadtt isvtea ﬀ
+mccooammnppullaeelxtlyeit ncyel aassnss.dif cyh ceacske sfo bry c ase DataDE IleingmpibuoitlgitryaphicsPTraetaietnmtMPe ihnneafdtro dmataOPlradceer oinfg t rperaotvmideenrts dbaetloaw th tahte hira lvicee C nRseS doing work
+FaxNot YetNot YetOpo C sRs itbelceh inno tlhoeg yfu ctouureld. make this DPP C rroiaoongvvtiinaddcoeetsrri sOﬃce Ancillary
+Treatment TypesEligibility Veriﬁcation (1/2)
+complexityTTrreeaattmmeenntt T TyyppeesRegimenAbbrev.Proposed Process Re- order C RS
+C C hheemmooAStuatnod- daerdtermined C C HH:: AStudto C RRINTAKEENTRYReorEdnear bthlees smteoprse toof pthuet Tcraesaet menetnryt Atos sbigen cmomenptl elatestd.
+C XRhTemo C ustom C XRHT: C omplex(IBnataskice)Provider DetailsADttoacchu m C leinnitcsal ATsrseiagtnmmeenntt bThy i C s RfrRese ds i C reRcSt'lsy tfoo lfloocwuins go nInlyt aokne Treatment input
+higher G Meunltei-t mic otedsatliintyg G MEMNMember SearchIsst aitn pdoasrdsi b C lhee tmo otr atriena stommeen t C rReRg'ism toen esn?t (e C rH th: Set md)ost
+DataDED IleiinagmpgibunoiotlgitsryaisphicsDataOP Ilrandcpeeur oitnfg t rperaotvmideenrts DataT(p fIruonerrapp rtuoomtsu ee(tNnisn)tEg TW yp)e DataPT IranetapietunmttMe innefdto data
+PP C rrooonvvtiiaddceetrr Oﬃce Na G oocaltdes :e C T aOhruidst, donafe tgSaca cotaipnneg r onerne edde r C linical questionsPAhnacirlmlary
+Eligibility Veriﬁcation (1/2)fdoorc fuumll einnftoartmioantion/clinical
+STAFFIN G IMEPxiLsIt C inAgT IPOroNcSessRe- ordered Process
+(IBnataskice)Do C Aclutintmaicceahnl tsTreatmentPDroevtaidilesr (IBnataskice)PDroevtaidilesr Do C Aclutitnmaicceahnl tsTreatment
+Provider C APHI: Stdn/an/an/an/aProvider C APHI: Stdn/an/an/an/a
+C H: C ompXlReTxnn//aann//aann//aann//aa C H: C ompXlReTxnn//aann//aann//aann//aa
+Provider P G oretanleticn/an/an/an/aProvider P G oretanleticn/an/an/an/a
+C H: C o C mH:p Sletdxnn//aann//aann//aann//aa C H: C o C mH:p Sletdxnn//aann//aann//aann//aa
+G enXeRtiTcnn//aann//aann//aann//aa G enXeRtiTcnn//aann//aann//aann//aa
+Phone (IV C RH): StdSSSSPhone (IV C RH): StdSSSS C ould least complex C hemo cases be input by C RRs?
+C H: C ompXlReTxSSSSSSSS C H: C ompXlReTxRSRSSRRS
+Fax G eneticSSSS G eneticRRRR
+C H: C o C mH:p SletdxRRRRSSSSFax C H: StdRRRR
+G enXeRtiTcRRRRSSSS C H: C ompXlReTxRRRRRRRS
+G eneticRRRR
+
+=== Page 31 ===
+DFeeb.s 1i2g, n20 R26eview 1: Visual Treatment
+C scormeepnosn teon Vt avlaidluaetse swhiothw nO ninc oth ese
+(Setevpepnert:u a Sltlayg)es
+E C lliigniibcailli tDy:o cu Smtateunste Tsable: Fields
+LOetfth Nearv: qu Eleemsteinotsn bsy Role
+WWhhaetn i sd oth wee s einqturoednucece f oar Pthatei ernetv iHseeda d C eRrR?/ C RS ﬂow?
+Do we still need two eligibility checks?
+Dwehdﬁepennrcei oiw surieiost einazrsri ne.p.g .emli rkOsaeHoklyni n ags Paotire nt
+inptlearnn uasl euurss e>er re >x theernalatlh Member?
+AEOrkeennvqygneubironioarteraaecertmhidrosie nnt:n agstb f-bo- irUn gse;r C Monattreinxtw C tiotah laeolnulodtw ahr at nyvpieniengdg ts o
+ccaalleennddaarr tpyrpeivniegwsopemn ocdaluelnedar
+dwqouoseriukn eg,
+wfcbuoyotn ucrﬁkorg elqu,u umtraeanbubslelee - -
+
+=== Page 32 ===
+C suapsep oInrttake: Phone, Fax, Web Intake C ase Entry C hemotherapy EntryAdmin Portal Enhancements C ase Processing
+Intake Source C aptureM C oevmerbaegre S Deaertcehrm, Sienlaetciotinon, &PIDiagnosis Selection & Details for C asePISelect Provider and Oﬃce DetailsEnter Basic C ase DetailsSubmit C aseSLiebleracrty Main Regimen from RegimenPI C ustom Regimen SupportPISelect Ancillary DrugsPI C apture Basic Dosing DetailsPIDynamic C ycle C alculationsSfourp Mpoerdti cDaitsipoennsse As Written (DAW)Apply Payer Drug C onﬁgurationsPIARuplpelsy Payer Non-Preferred DrugPIApply Formulary C onﬁgurationsP(PaDyLe)r Drug Library EnhancementsTreatment Views C ase Look Up
+V1.R1.57Search against the health plan'sUser must select an I C D-10 code forUser can search & select from HealthEnter request initiation date, startSubmitting a case creates a "caseUser can search and select a main G ive users the ability to create aUser is able to search for any drug inMedical drugs and pharmacy drugs C alculate dynamic cycles based onProvide a 'dispense as written' optionRequire users to choose beneﬁt typeSystem applies the NP drug rulesSystem should identify non-Identify existing case by tracking
+e(rNelisagumiblteisli, t fDyo rOd uaBts,a eM ru bsserin lIegDc )mt iaoennmd breetru crrniteriathe prior authorizationPPTrlraeonavt ipdinregor v P(iNdroPevrI i Tddyeaprta e( N f1oP)r Ia aTnnydp OSeer 2dr)veirciinngg /date, etc. ; height weightrecord" within OHr(Hfer C goPimm C SeA ncPo )f druoesmsin gth teh eR edgruimge nna Lmiber(as)r,ycustom regimen on case entrythe MDL designated as 'Ancillary'sdahpiﬀopeurroledpn rbti ead tsoees ﬁpineaglrda tstaebdle ins twoi tthworequested treatment end dateduring case entrydchuarinngge c iat sine denotsriny;g and allow them tofelerlovigemilb wtilhiitteyh AianPn d dbo adssiisenpdgl aoyn o tnh eth me edmrubger'sfsaotsarsmtoucusi alfatrreoydm, qw tuihtahen fttohitreym lmiumelaimtrsyb, eﬁarnle'ds PAnumber, member ID, name, and DOB
+Display the core eligibilityPAodpmuilna tPeo artvaali ldaibalgen Io C sDis-1 li0b rcaordyes fromUser can search & select from HealthValidation of all required case dataList of regimens available to the userUfosre trhse m reugstim enenter dosing informationU(nsoe rm caainn erengteimr ae n'A)ncillary Only' case C alculate Medical Billing Units/AuthSgveyesrnsteeiorminc pidnrr iudogrrui togizv eseesr lsteheceltei obcntriaonnd oefd theSoyr sOteOmS ssthaotuulsde sa papplpyr tohper iPaAte Elyx etom tphetSystem applies the NP drug rulesedloigsiibnigli tiyn faonrdm daitsiopnlay them in theRloeotkuurnp caansde usstaetru pse brmasiesdsi oonns case
+information for the memberAapssporocipartieadte I C dDia-g1n0 ocsoids eg rtoou tph efromPTrlaenat pmroenvitder data for a Place ofUdsuasbteamr lmoisouskisostn ccoonrrﬁercmt p trhioart atoppropriateidsi aligmniotesdis tgor tohuopse associated with the C peunstdo fmor r eaguitmo-erunlse sshould always C myactlcehs othf eA cnyccillleasr yo Df Mruagins sRheoguimldenand Pharmacy Quantity/ C ycleUser is only able to select 1 ancillarycase - shown during case entryfelerlovigemilb wtilhiitteyh AianPn d dbo adssiisenpdgl aoyn o tnh eth me edmrubger'sSeumppplooyrte cr ognroﬁugpu raantido nfosr amt uthlaery levels
+Dtheet etirmmein oef itfr meaetmmbenert (hTaxs S etlaigrti bDilaittye )atthe Admin PortalPwriothviind eprr oavdiddreers sseeas racrhe t voi eewnasubrlee theDisplay the OH Reference NumberSreycsoterdms staov tehse t chaes reegimen and drugRestrict custom regimen creation forSfBoerral enpcdht aaTrpTmpY,ar o G cypP rdIi,ar autneg dss tRarenenpdgr setahsve &en tRfaoxtr C imvUeIdNrauugs epae rd grurogusp - except for theSathynesdt PeBDmeLn s ebhﬁaotsu eTldydp oaenp c ptohlyne ﬁt hmgeue rPmaAtb,i oeOnrO' sfSro,mAllow users to enter a clinical
+Display add'l eligibility data points -Ucdaisanegcrne cora ssnits asgeelesc bt afrsoemd oanp pcrhoopsreiantecorrect location is selectedfor tracking purposesUser can switch between drugs in aexternal users to only after searchingND C eligibilityedxrucegpstion reason (static list) for NP
+translation, accessibility, DSNP, etc.Ensure that only certain diagnosesUcnoasnmetrae mc, teu itnsctf. )oernmteart itohne (permovaiidl,e prhs'o onﬃe,certrheegge iismmaeemnne wb auhsiesldorec imatueldti pRlxe C dUrIu igns t hheave C reugsitmomen r leibgrimarey,n bs usth boeu ladv naiolat bslaev feo tro C Haelicguhlta t&e WAleloigwhetd Dose based onDenisdp ulasye trhe preferred products to the
+Uaa fscteearrss es seahlteo acutnilndy g ph oaai vnmet e tdhmuebr iaenbrgil ictays teo esnatvreytcthyapanet baer ea saspopcrioapterdia twei tfho rt hXaRtT t raenadt m G MentTUser is only able to view theDrugs from the Master Drug Libraryoperational reporting purposesPoonp suellaetcet eindi trieagl idmoesnin dge dteatilasils based
+Ensure that only diagnoses that arephraosv aidcceerss sin t owhich the health plan(fsMreolDemcL t)aa tlbthelaertn ihnaa ttevh ede rtrhueegg i'lEmisAteD)n aL r'd e(rE unxgocltudedSdthyreustrgeesm ainr se ht heoxeui scldtui nsctgho ermcek irm aegggaeiminnses ntfo ttrho et sheaet ifAllow users to edit dosing details
+aapssporcoiparteiadt ew fiothr Pthaayte trr ceaantm beent typeselectiondiagnosisIndicate when a dosing change
+pQuusahnetsit yB/iAlliuntgh Ugnoiets/A aubtohv &e default
+V1. R20
+V1. R30
+
+=== Page 33 ===
+Sprint 1Sprint 2
+Features C ase Entry C ase Entry C hemotherapy Entry C hemotherapy Entry C hemotherapy Entry C hemotherapy Entry C hemotherapy Entry C hemotherapy Entry
+MDreamft b C eaTros S edeoarch, LSelection, & C overage Determination, includingDiagnosTois d SoelectiMon & Details for C aseMain ReTgo idmoen SeLlectionAllow C uTos dtoom ReMgimensSelect ATno cdiollary DMrugs C aptureT oB daosic DoLsing DetailsApply PTaoy deor DrugM C onﬁgurationsApply PTaoy deor Non-MPreferred Drug Rules
+RisksRisksRisksRisksRisksRisks
+Data Team- Build eligibility ingestion pipeline - OOS for NF - Ingest I C D-10 and Diagnosis G roup data--- I Pnrgoevsitd Re esgeiamrcehna Lbilber Marays wteitrh D Drux-g g Lroiburpa rmy adpaptainsegt..-(T IBngDe -s dt eaﬁnnde s wtrhucetruer aen acnilclailrlayr dyr durgusg a crlea ssstoiﬁrceadt)ion - Expose Drug- Level Dosing Reference Dataset- Ingest Payer Drug Library (Beneﬁt Type, PA ﬂag, - -I Pnrgoevsidt eP astyreurc Ntuorne-d P dreaftearsreetd f o(Nr Pr)u rleu leev caolunaﬁtgiounr aatniodn
+(ETLed by OH team)-c aPsreo vsicdhee smeaar.chable diagnosis dataset aligned to -id Menapti ﬁreergsi,m EeAnD-L to ﬂ- dargu).g relationships (include Rx C UI, -e nPfroorvcideem aenncti lalanrdy -s ﬁelatercrehd. dataset for Backend rule - Expose Admin C onﬁguration for C alculation InputsO- POrSo vﬂidage )payer- scoped datasetreporting.
+Back End Team- Add Member Search API (search + eligibility
+p v-a aElyixdltoaeatndiod)n. C rauslee .API for Draft state + eligibility -- DExiategnndo s C isa sAeP AIPI (persist I C D + Stage).--- TRExxe tgTeiynmpdee C nsa eSsleeelc eAtciPotiIno ( nrAe PAgIPi m(I C .ehne m+ od rvusg G sMnaTp vssh XoRt)T.)-c- rAReedagdtii om C nue)s.nt o C mom Rpegarimisoenn lAoPgIi c(case- level drug set -a dExdt/erenmd oRveeg iwmitehn /g C raosuep ArePsI ttroic stiuopnpso, rcty calnecsi lslayrnyc -U- AEnxdittdse /nDAdou st C hian,s gQe C tDya/rlAucuuglt ahAt)Pi.oI nfo ArP DI o(Asilnlogw Senda Dposhseo,t Max --s tAEaxdttudes nP sdDn L C a apEsvseha loDutra.utigo nA P(dI eforirv ecr Boessnoevﬁetr T oyvpeer r+i dSeta +t us).--s wAExdittdceh nN,d Pe x C Rcaueslpeet DiEovrnau lcgua aAptPtiouI nrteo () M.enafnodrcaeto NryP vlos gVioc l(ubnlotacrky, ).
+- Rule Engine integration
+Front End Team- Member search UI with result selection + - Display drug- level Status in dosing tables.- Display NP indicator at drug level (Mandatory vs
+e-(b lDilgoriacbkfit l pi C tryao sdgeirs espaslasviyeo nm ief cehliagnibisimlity + f astilast)e management - I C D search + Stage capture.-d- R iianegigtniiamols edisnr.u sge alirscth p +la sceelheocltdioenr (UnIo ﬁ dltoesriendg bloy gic yet).-- DDruupgli csaetaer cwha +rn minugl.ti- select for custom regimen.-- IEmnfpolrecme egnrto uanpc silelalercyt sioena rccohn/satdrdai nptasn ienl .UI.-- RImenpdleemr eDnots G inuga Tradbraleilss & Field C ontrol-r oImw pwlehmene ncht a C nrogsesdo.ver selector and re- render drug V- oImlupnlteamrye)n.t preferred alternative selection +
+structured exception reason capture.
+UI/UX Team- Member Search UX- Visual indicators for drug Status (Pending /
+--- MDsereaamrfct bhce arrse eIsn uifnlottsre mdraiasctptiioloanny ffpooarrtm tmerunltiple matches-- DStiaaggen osseilse csteioarnc hin UteXr.action.--- TRDxeo gtsyiimnpgee nTsae sbleelaect rUicohXn for C hemo- C ustom regimen ﬂow-m Daeinsi+gann acinllcairllya rﬂyo dwr,u agnsc isllealreyc toionnly e ﬂxopwer)ience ( Dos C inaglc Suulaptpeodr vt sU EXd (iDtaobslien gFi eTaldb Blee Shtarvuicotru)res, E-c hxDeaemnsgipgetn b/ c eOrnoOesSsﬁ)ot. vteypr ed rug UX: beneﬁt type selection, -r eDaessoing ne nNtPry ﬂ.ow: preferred selection and exception
+
+=== Page 34 ===
+S C C tEoeOmpphaenny HauNewﬁreJ C C oEonOm MpaanayckOncoHealth
+W C C ToiOmll p& C a rHnaeywadf oorf dAdvisoryNewﬁre
+A C C MonmdOpreanwy NordenOncoHealthES C VroiPmk Ep Hnagnjoiynretesrhinogj / C onsulting C PTONewﬁreV C C PoeTmnOkpayn SyubramanianOncoHealthA C C OosmhOlpeayn yWiseOncoHealth
+Data TeamFront- End TeamBack- End C ore TeamBack- End Services TeamQA TeamDevOpsProvider RelationsLegal & C omplianceNOopne-r C altinioicnasl DoTcruamineinngta &ti on C linical OperationsUM Operations
+Marc G aleNeal RugglesJason KingDimple PatelSalin G abrielSV C Pao mnPdrpoyadn u G ycrte DsesvelopmentOncoHealthNS C roi Dmchipreoaclnteyo r C UoMle OperationsOncoHealth
+OncSoMHEesalth D C oirmecptoanr yData EngineeringOncoHealthP C roimncpipaanly Platform ArchitectOncoHealthS C ro Dmipreacntyor Application EngineeringOncoHealthQ C oAm SpMaEnyOncoHealthD C oemvOppasn SyMEOncoHealthADilriescotnor S Ptraomdupct Management C Adhde als deeas cSraipbtiboantoASrn Pnro Djeycet ManagerRP C roaomcvhipdeaenlr y G ReuleatriorinesrOncoHealthN C C ooammdppinlaianeny RceusczekOncoHealthJN C eooamnn-p C ealtinntyieca Dl OevpaerraiteionsOncoHealth C T C rooamlinlepinatgtne y& S DwoecunmsoenntationOncoHealthAV C Pon m C julpin a C inchyaol OwpteartautikounsnnelOncoHealthMUMo nMiacnaa KgeernnonJUeMn NNuersseb SitMtE
+& SupportTDiirmec Utorrs Apnraulyntigcs & ReportingMSoiluchtioanesl ASrpcahirtaeccte C QhA aAirtcahniteycat PatollaASrl eDxe vROopds rEingguineezer C ompanyOncoHealth C ompanyOncoHealth C ompanyOncoHealthE C olimzapblieanthce Ruiz C ompanyOncoHealth C ompanyOncoHealth
+C ompanyOncoHealth C ompanyOncoHealth C ompanyOncoHealth C ompanyOncoHealthLD C aoirmuecrpteoannr y PSrmodiuthct ManagementOncoHealthHA C odemdt aap adSneiynscgrhiptionOncoHealth C ompanyOncoHealthHU C oMamy Ppaha aAnrybmua-c Sye SiMrEOncoHealth
+DS C roo Dmnipraeatcnotyo Br uofc EcnegllianeeringNewﬁreProduct TeamProject TeamJV C oPo,nm Satputahdniayon@ ANebwbﬁertetNewﬁre
+MLeiacdh Daal tMa Succiehnatist (Team Lead)DStmaﬀy Etnrogi nPeeetrr (iTveam Lead)JSatacﬀk EHnaglinleer (Team Lead)MStaaﬀt tE nEgmineeresro (Lne a(5d0 F%ul)l Stack)OTelahma LPeiaddhornaLSeuniyioir VDaelveOnptsi nEngineerKS C roe. mDeilpreeaycnt yPore, cPkroductNewﬁreRD C oiarmecchpteoanrl yo C fo Pllrioegrram ManagementNewﬁreStudio@Newﬁre - UX Team
+C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C onﬁguration TeamVika NobisAlyssa G essleman C Staaiﬀt lRines Beaorwchleerr (Team Lead)
+ASernbioern D Oatsam EnagniineerPSeentiroor FBrroenzt-i Etnsdk iEyngineerRSeonmioar nBa Bcku-c Enhdy nEngineerBSeonhiodra Bna c C kh- Eancdh Audnvisor (75%)ASenndiorri yA uStaopmraytkioan (QMAar start)KDiirmec tJoerw, PerollductP C roomjepcat nMyanager / Scrum MasterNewﬁreP C Mom (UpaXn)yNewﬁre C ompanyNewﬁre
+C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁreISnenniaor M BAariienko C S C tohamrﬀi psDa e G nsyiilglinserNewﬁre
+OS C eolnmeikoprsa aDnnyatdar E NngyikneoenrenkoNewﬁreMS C eoynmkiopora lFnary oVnot-r Eonnda EngineerNewﬁreVS C eolanmidopyra sBnlayacvk -K Enydr yEcnhguinkeerNewﬁreDS C eomnmiyoprta rBnoay cHkr- Eidndin EngineerNewﬁreISveanino rK Aaurtpomaation QAPS C eoenmrioop raJ aBnAmyanNewﬁre C ompanyNewﬁrePaulina Phillips
+TBH C Taomrapsa BnyadloNewﬁreETPvOa n(i nPtaernimke)yS C eonmiopra DnyesignerNewﬁre
+OncoHealth Resource C S C eoonmriyopr aJ Donyhatna sEonngineerOncoHealthYS C eounmriiopir aB Fnoryodnnt-a Ernd EngineerNewﬁreS C eonmiopra Bnayck- End EngineerNewﬁreIS C reoynmniopara BLnayuckki-a Enndo EvnegtisneerNewﬁreS C eonmiopra Mnyanual QANewﬁre C ompanyNewﬁreASenndiorri iD Zehsidganenr
+B C olume pbaancykground ﬁllOncoHealth C Seanriloors D C ataar ErinlgloineerTSeBnHio Mr Maannuuaall QQAATT C eoPcmOhnpiacnayl Product OwnerNewﬁre C ompanyNewﬁre
+LR C eeodma dbpoaanryderType something C ompanyNewﬁre C ompanyTBHTTePcOhnical Product OwnerND C oeamstigapnasenhrya ( 5M0%o)hantyNewﬁreIn Progress
+C ompanyNewﬁre
+
+=== Page 35 ===
+Marc G aleNeal RugglesJason KingDimple PatelSalin G abrielSV C Pao mnPdrpoyadn u G ycrte DsesvelopmentOncoHealthNS C roi Dmchipreoaclnteyo r C UoMle OperationsOncoHealth
+OncSoMHEesalth D C oirmecptoanr yData EngineeringOncoHealthP C roimncpipaanly Platform ArchitectOncoHealthS C ro Dmipreacntyor Application EngineeringOncoHealthQ C oAm SpMaEnyOncoHealthD C oemvOppasn SyMEOncoHealthADilriescotnor S Ptraomdupct Management C Adhde als deeas cSraipbtiboantoASrn Pnro Djeycet ManagerRP C roaomcvhipdeaenlr y G ReulaetriorinesrOncoHealthN C C ooammdppinlaianeny RceusczekOncoHealthJN C eooamnn-p C ealtinntyieca Dl OevpaerraiteionsOncoHealth C T C rooamlinlepinatgtne y& S DwoecunmsoenntationOncoHealthAV C Pon m C julpin a C inchayol OwpteartautikounsnnelOncoHealthMUMo nMiacnaa KgeernnonJUeMn NNuersseb SitMtE
+& SupportTDiirmec Utorrs Apnraulyntigcs & ReportingMSoiluchtioanesl ASrpcahirtaeccte C QhA aAirtcahniteycat PatollaASrl eDxe vROopds rEingguineezer C ompanyOncoHealth C ompanyOncoHealth C ompanyOncoHealthE C olimzapblieanthce Ruiz C ompanyOncoHealth C ompanyOncoHealth
+C ompanyOncoHealth C ompanyOncoHealth C ompanyOncoHealth C ompanyOncoHealthLD C oairmuecrpteoannr y PSrmodiuthct ManagementOncoHealthHA C odemdt aap adSneiynscgrhiptionOncoHealth C ompanyOncoHealthHU C oMamy Ppaha aAnrybmua-c Sye SiMrEOncoHealth
+
+=== Page 36 ===
+DSro Dniraetcoto Br uofc Ecnegllianeering
+C ompanyNewﬁre
+Michal MuchaDStmaﬀy Etnrgoi nPeeetrr (iTveam Lead)JSatacﬀk EHnaglinleer (Team Lead)MStaaﬀt tE nEgmineeresro (Lne a(5d0 F%ul)l Stack)OTelahma LPeiaddhornaLSeuniiyoir VDaelveOnptsi nEngineer
+Lead Data Scientist (Team Lead)
+C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre
+ASernbioern D Oatsam EnagniineerPSeentiroor FBrroenzt-i Etnsdk iEyngineerRoman BuchynBSeonhiodra Bna c C kh- Eancdh Audnvisor (75%)Andriy Sapryka (Mar start)
+Senior Back- End EngineerSenior Automation QA
+C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre
+Oleksandr NykonenkoMykola VoronaVladyslav KyrychukDSemniyort rBoa cHkr- Eidndin EngineerIvan Karpa
+Senior Data EngineerSenior Front- End EngineerSenior Back- End EngineerSenior Automation QA
+C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre
+C Seonriyor J Dohatna sEonngineerYSeunriioir B Forodnnt-a Ernd EngineerTSeBnHior Back- End EngineerIryna LukianovetsTSeanriaosr MBaanduloal QA
+Senior Back- End Engineer
+C ompanyOncoHealth C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre C ompanyNewﬁre
+C Seanriloors D C ataar ErinlgloineerTSeBnHio Mr Maannuuaall QQAA
+C ompanyNewﬁre C ompanyTBH
+
+=== Page 37 ===
+NPreinaclip Raul Pglgatlfeosrm Architect
+C ompanyOncoHealth
+MSoiluchtioanesl ASrpcahirtaeccte
+C ompanyOncoHealth
+DSro Dniraetcoto Br uofc Ecnegllianeerin
+C ompany
+JSatacﬀk EHnaglinleer (Team Lead)
+C ompanyNewﬁre
+RSeonmioar nBa Bcku-c Enhdy nEngineer
+C ompanyNewﬁre
+VSelanidoyr sBlaacvk -K Enydr yEcnhguinkeer
+C ompanyNewﬁre
+TSeBnHior Back- End Engineer
+C ompanyNewﬁre
+
+=== Page 38 ===
+MDiraerccto G r aDlaeta Engineering
+C ompanyOncoHealth
+TDiirmec Utorrs Apnraulyntigcs & Reporting
+C ompanyOncoHealth
+MLeiacdh Daal tMa Succiehnatist (Team Lead)
+C ompanyNewﬁre
+ASernbioern D Oatsam Enagniineer
+C ompanyNewﬁre
+OSelneikors aDnatdar E Nngyikneoenrenko
+C ompanyNewﬁre
+C Seonriyor J Dohatna sEonngineer
+C ompanyOncoHealth
+C Seanriloors D C ataar Erinlgloineer
+C ompanyNewﬁre
+
+=== Page 39 ===
+JSar sDoirne cKtoinr gApplication Engineering
+C ompanyOncoHealth
+Newﬁre
+MStaaﬀt tE nEgmineeresro (Lne a(5d0 F%ul)l Stack)
+C ompanyNewﬁre
+BSeonhiodra Bna c C kh- Eancdh Audnvisor (75%)
+C ompanyNewﬁre
+DSemniyort rBoa cHkr- Eidndin Engineer
+C ompanyNewﬁre
+ISreynnioar BLauckki-a Enndo Evnegtisneer
+C ompanyNewﬁre
+
+=== Page 40 ===
+DStmaﬀy Etnrgoi nPeeetrr (iTveam Lead)
+C ompanyNewﬁre
+PSeentiroor FBrroenzt-i Etnsdk iEyngineer
+C ompanyNewﬁre
+MSeynkioor lFar oVnot-r Eonnda Engineer
+C ompanyNewﬁre
+YSeunriioir B Forodnnt-a Ernd Engineer
+C ompanyNewﬁre
+
+=== Page 41 ===
+SDaevliOnp G s aSMbrEiel
+C ompanyOncoHealth
+ASrl eDxe vROopds rEingguineezer
+C ompanyOncoHealth
+LSeuniyioir VDaelveOnptsi nEngineer
+C ompanyNewﬁre
+
+=== Page 42 ===
+DQAim SMplEe Patel
+C ompanyOncoHealth
+C QhA aAirtcahniteycat Patolla
+C ompanyOncoHealth
+OTelahma LPeiaddhorna
+C ompanyNewﬁre
+ASenndiorri yA uStaopmraytkioan (QMAar start)
+C ompanyNewﬁre
+ISveanino rK Aaurtpomaation QA
+C ompanyNewﬁre
+TSeanriaosr MBaanduloal QA
+C ompanyNewﬁre
+TSeBnHio Mr Maannuuaall QQAA
+C ompanyTBH
+
+=== Page 43 ===
+Jonathan Abbett
+VP, Studio@Newﬁre
+C ompanyNewﬁre
+Studio@Newﬁre - UX Team
+C aitlin Bowler
+Staﬀ Researcher (Team Lead)
+C ompanyNewﬁre
+C hris G illis
+Staﬀ Designer
+C ompanyNewﬁre
+Paulina Phillips
+Senior Designer
+C ompanyNewﬁre
+Andrii Zhdan
+Senior Designer
+C ompanyNewﬁre
+Natasha Mohanty
+Designer (50%)
+C ompanyNewﬁre
+
+=== Page 44 ===
+ASrn Pnro Djeycet Manager
+C ompanyOncoHealth
+Project Team
+RDiarecchteorl o C fo Pllrioegrram Management
+C ompanyNewﬁre
+APMly (sUsXa) G essleman
+C ompanyNewﬁre
+
+=== Page 45 ===
+SVPa nPdroyd u G crte Dsesvelopment
+C ompanyOncoHealth
+ADilriescotnor S Ptraomdupct Management C Adhde als deeas cSraipbtiboanto
+C ompanyOncoHealth C ompanyOncoHealth
+LDairuecrteonr PSrmodiuthct ManagementHAdedt aa dSeinscgrhiption
+C ompanyOncoHealth C ompanyOncoHealth
+Product Team
+KSre. Deilreeyct Pore, cPkroduct
+C ompanyNewﬁre
+C onﬁguration TeamVika Nobis
+Project Manager / Scrum Master
+KDiirmec tJoerw, Perollduct C ompanyNewﬁre
+C ompanyNewﬁre
+ISnenniaor M BAariienko
+PSeenrioo rJ aBAman
+C ompanyNewﬁre
+C ompanyNewﬁre
+ETPvOa n(i nPtaernimke)y
+C ompanyNewﬁre
+TTePcOhnical Product Owner
+C ompanyNewﬁre
+TTePcOhnical Product Owner
+C ompanyNewﬁre
+
+=== Page 46 ===
+Rachel G uerrier
+Provider Relations
+C ompanyOncoHealth
+
+=== Page 47 ===
+Anju C howtatukunnel
+VP C linical Operations
+C ompanyOncoHealth
+
+=== Page 48 ===
+C ollette Swenson
+Training & Documentation
+C ompanyOncoHealth
+
+=== Page 49 ===
+Nadine Rusczek
+C ompliance
+C ompanyOncoHealth
+Elizabeth Ruiz
+C ompliance
+C ompanyOncoHealth
+
+=== Page 50 ===
+Jeanette Devarie
+Non- C linical Operations
+C ompanyOncoHealth
+
+=== Page 51 ===
+Nichole C ole
+Sr Director UM Operations
+C ompanyOncoHealth
+Monica KennonJen Nesbitt
+UM ManagerUM Nurse SME
+C ompanyOncoHealth C ompanyOncoHealth
+Haya Abu- Seir
+UM Pharmacy SME
+C ompanyOncoHealth
+
+=== Page 52 ===
+-- s-- eptrrrevoiavctiimdneger np itnr od /va iotdueetr
+dooofe unst e motwfe nmoerbktwe, irof hrokau vte
+- drug eligible
+tredatamteent provider drug
+cov[earreed t hine yth isnetwork cochveercekd
+time][prdc hcoemcking][prd later]
+tWhhea yuf antxoo mat nsatdtai chrata lwvlyei t hit seNrveiecidn gordeMrainkge the
+vtasot t fdaoocrhc ii tnt omg tathhneeu caualslsyee?r providerssearmvieci nasg
+Need to clarify [check box]
+treisa 'trpmelaleacnteet d'o - f t toh is sAeldedcrteiosnss
+peroforrdmeriningg not Facilitymay be
+diﬀerent --
+[2P ldaicgeit
+code]
+codvreurge d
+[prcdh elactker]
+
+=== Page 53 ===
+
+
+=== Page 54 ===
+Work in Progress
+
+=== Page 55 ===
+UMasrechr 2T, e2s02t6ing: C ase Entry
+satalroreAtrai nridesgy ow aone pce ae snesometimbeMas sdeeimLdﬀO eboBrene?r n LIOtD wBorkﬂows acflrooeruda nidindtyfdno io'n tww penu t
+mintfeoomL ctOboaBer adrd :i dd
+
+=== Page 56 ===
+UMasrechr 3T, e2s02t6ing: C ase Entry
+Sandy Disregard - Not ready
++ ability Dsooorcmm uAemecdtoadheln uinanimntng gTon mfytuhpoleerr"e - hOneenrelceydod i rmsireﬀe iaefef es rtforehrenonenm twd ceo e c'#ds
+ﬁlteo neadmit eauthorizations
+imfF dfuiaeosxlctd, u bn pmeoo # edrp neruiftvle aterytneipo nbency e follow
+utph iosn
+Treatment Start Date*run elig chencekxt section
+[input ﬁeld]
+Astdedp p5ethr
+Dtoo snth'hto inswe eFdE
+Wthaiets oen
+mAneeorsrstoharge re
+
+=== Page 57 ===
+
+
+=== Page 58 ===
+Marketplace
+BronzeSilver G oldProductLine Business G rain
+Bronze Select Product
+HD 6000
+
+=== Page 59 ===
+C ase Intake C ase EntrySystem C ase Assignment C ase Processing C ase FinalizationOutbound
+HEelaiDgltiahbt iaPlitlayn C OlinHPi coAardlt amDl ainta C PoaynPeﬁDrg LDs) r(uAgP HPearoltvhid Pelar n AOpLHpo Argouivctaol C PaoynPeﬁDrg LDs) r(uAgP HBeuaRlsutihnle ePsslas n WoRrkOuqlHeu seue C RS C Sleinnidca Nl DMaIt fao &r
+DataMedical Records
+PhonEen C tearlls - C RS Propvriodrteeorqc wuoeli tfshrtodmra wsWithdrawn
+NursingTcnthaheesiese dd iwees dtowa raihklnseﬂdroe ww oi lwul rﬁil lsl lpb ineec aiﬁllc
+Fax - C RS EntersFaxes e C nRteSr e an qtruyeue forSearch MemberEnteDre Ptraoiltsocol TreaOStierndager crPihnr ogfov &ird ersSumOitH P RAe C vaieswe for d C feautnell yrcm aasuinet eobd-e ? NoApSypsrote C pmarisa eAt est osQ igunesu eProavgidreeer dtoo ethse n ot MDeedniiceadl N- Leacceks soitfy
+PharmDneIcse msseitdyi cmael t?OprHeroa cvclihidneeiscr a oflo utret aatomn intervention
+anWd/eobr -H Peraolvthid Pelra n intervoern C t C ioFn) (P2P PharPmBMac yA uDtrhugs -
+EnterWe should not just No trhees pporonvsied efrrom DeInnfieodrm - aLaticokn of
+C urrently the health plan OPPORTUNITY for AI to aoipssuo asrinu gqtmouoee duth esest,as bert uiantr geth is MD
+wn"Poirlnlo o-v dnidelylee reg"na htteeerrd ea h icsea agsletehn f eoprrlia cn -s afaasnxsdeis smt awartiect hhc oidnmegt petolrem tae ipn oainrt igne oniftt , Provider Agrees to C linical team G enerate All documents Medical Drugs:
+ctchoaerueilrd cs obtaoeﬀr ad, nionyfa tmetoner mtimbeers oaf C hInatnegrveesn Ptrioonto &co lcompletes a C F/ C TNoPtaicﬁkcaagtieon succseesnsftu lly?Yes C omplete C aseHealth Plan Auth
+ApprovalNo
+QuMeouneisto /r R Eersroolrv eORHe Sptoarntdinagrd
+Out of Scope
+PA Exempt
+
+=== Page 60 ===
+NewUM Architecture Diagram
+C lient LayerAzure Environment
+Azure
+VNETObservabilitySecrets
+Users
+ETL PipelinesOneUM
+MS SQL DBs
+DatadogKey Vaults
+Logs
+T C P/SQLNewUM
+Azure OneUM
+NewUM React AppPostgreSQL DB
+LogsHTTPS
+HTTPSDatadog AgentDrugs API
+AKS C luster
+HTTPS
+Letter V2 Service
+HTTPSNewUM API
+LogsHTTPS
+HTTPSDocument Manager
+HTTPSEvent- drivenT C P/SQL
+Application G atewaysHTTPS
+Identity ProviderFax Service
+Event- driven
+Rules Engine
+C hronos
+OKTAAzure Service Bus
+
+=== Page 61 ===
+DRAFT: NewUM C ase APILegend
+as of Phase 1PaUgI eMostElyn-d Hpaordinctoded
+C aseIdData G eneric Endpoint
+PayerId
+Payer/User Landing PageNew C ase Page C ase Page
+Okta Auth Page+ U/I C C aosenﬁg/Drugs/RegimenSearch
++/L UisIt c C oanseﬁsg/New C aseUI C onﬁg/ C ase/SaveDraftpatient's / C ase/AssignRegimen
+PersonId/ C ase/History/Drugs/ C reate C ustomRegimen
+/Patient/Search
+/ C ase/ C reateNew C ase/Provider/Search
+Uswer/R Toolkeen /Provider/SearchElsigeliebciltiteydI d
+Al C l Raesem Daiantiang
+User Management PageIndustry- /Drugs/DiagnosisSearch/ C ase/EligibilityOptions
+PaPtSaiteraannmt dSeaetreadrr sch Ordering
+ProviderId/ C ase/Modify
+User Roles
+/ C ase/Submit
+
+=== Page 62 ===
+Test AutomationFramework
+Artifactswithownversion. Package API,SDKand moduleincludesSDK, Testsareseparatemodulesthatarepublishedto Theyareincludedtoeachotherasdependencies, Testsincludes APIandSDKAzureAPI .NET API TestsIncludedependencytoSDK, APIProxyModuleandUIUI Testsin TypeScript
+UseSystem.TUseDotNetEnvforreading.envext.JsonforJSONparsingSDKAPIPlaywritewillbeusedasHTTPIfitwillberequired,addLombok.NET Client..TestsUseFluentAssertionslibraryandsoftassertionswith ThismoduleincludesthedependencyforSDKand ItwillbetakenaXUnitastestrunnerAllureistakenasareporttool..AssertionScopeAPI
+PropertyManagerConfiguration+readingfrom(Using.env) StringUtilsFileUtilsJsonUtilsModelsLoggingEsceptionsAPICommunicationpart SDKAPIProxyModulePageObjects)UI(Locators, Tests
+RequestsResponsesDocerizationResourcesBaseTest(APIFixture)(BeforeAfterTandIMessageSinks)TestListenersestAttribute TestImplementationsAllureExtensionStringUtilsPropertyUtilsJsonUtilsJsonUtilsBasePagePageObjectsWebElementsModelsLoggingDocerizationResourcesBaseTestTestListenersTestImplementationsAllureExtensionBusinessLogicautomation- frameworkpackagessdk
+EnumEndpointsBase Authentication)API(include APIImplementationAPIFacadeTestDataEnvironmentproperties package.jsonbase- uiUIComponentsBasePage
+Shouldcontainthebaselogicforbeforeandaftermethods.Environmentpropertymanagementshouldbemanagedhereaswell base- apiAuthenticationBaseAPI
+reporting
+mcpglobal-healer- instractions.md config.md
+utilsPropertyUtilsJsonUtils
+logging...
+fixturesfixture.tsGlobalLogger:PropertyManager:variables(BASE_URL, AppInsightsTosendtestresultsto ToaccessenvironmentAPI_KEY).Azure
+appsnewumsrc
+playwright.config.tsendpointspagesapisShouldImplementFluentInterface
+workflowsAPIFacadeui
+fixturesindex.tsapiTestData:APIFacade:WConcretePages:orkflows: InjectingspecificJSONdataforthatMemberPage,etc. InitializingtheBusinessLogic. Initializingtheteam'sspecificApiFacade. MappingLoginPage,
+...product'sfeatures.
+promptsgold-element- standard.spec.ts.md naming.md
+testsbusiness- rules.md
+mcpapp-planner context.md.md
+generator.md
+
+=== Page 63 ===
+PROPOSED DRAFT: Provider Schema as of Phase 1
+ATRETaFxoEnoRmEy C Node C ReEfIDENTITY AN C HOR
+AD PK C G oroduepingVVAARR C C HHAARR((2100)0)PKIdProviderIdentityguidVERSIONEProDvid eSrSTtaAteTENETWORK PARTI C IPATIONOR G ANIZATIONPA REQUEST(REF)
+E C C SplaescsiiaﬁlcizaattioionnVVAARR C C HHAARR((110500))NNppiiSourceVVAARR C C HHAARR((1200))PFKKIPdroviderIdgguuiiddROLE C ONProTviEdeXrRTolePKIdProviderNetworkParticipatgiounidOrganizationIdentityPKId C ase (PA Request)guid
+NDDiesﬁpnlaityioNnameVVAARR C C HHAARR(200)PVerorsviiodne C rTryepaetedVTAIMRE C SHTAARM(2P0T)ZVVearlisdiForno C mreatedTTIIMMEESSTTAAMMPPTTZZPFKKIPdroviderIdgguuiiddFFKKPPraoyveirdIedrIdgguuiiddPKINdpigVAuRid C HAR(10)FK C PaayseeNrIudmberIgNuTid
+EREEﬀndeDctaivteeDateDnuAlTlaEble DATEIDXNppesDeactivatedAtTIMESTAMPTZVDaelliedtTeodAtTTIIMMEESSTTAAMMPPTTZZFKOrganizationIdguidNetworkNameVAR C HAR(200)ONprgiSToyupreceVVAARR C C HHAARR((5200))FFKKOTrredaetrininggPPrroovvidideerrVVeerrssioionngguuiidd
+EFEINsa C murerFeinrsttBVAORO C LHEAARN(100)FKRTaoxleoTnyopmey C odeVVAARR C C HHAARR((5200))TPiaeyre C roPdreoviderIdVVAARR C C HHAARR((5100)0)Version C reatedTIMESTAMPTZFKSSetartvuicseFacilityVersiongENuiUdM
+RNNaammeeLMaisdtdleVVAARR C C HHAARR((110000))EEﬀﬀeeccttiivveeFToromDDAATTEE NULLEEﬀﬀeeccttiivveeFToromDDAATTEE NULLTimeReceivedTIMESTAMPTZ
+C TirnedentialsSuﬃxVVAARR C C HHAARR((5200))DVeerlesitoend C ArteatedTTIIMMEESSTTAAMMPPTTZZDVeerlesitoend C ArteatedTTIIMMEESSTTAAMMPPTTZZ
+FKTAadxdorneossmLyin C eo1deVVAARR C C HHAARR((2200)0)PKIdOrganizationStatgeuid
+A C idtdyressLine2VVAARR C C HHAARR((210000))FKONargmaenizationIdgVAuRid C HAR(200)
+SPtoasttea C l C ooddeeVVAARR C C HHAARR((21)0)TAidndressLine1VVAARR C C HHAARR((2200)0)
+C C oaquhnAtrtyt C esotdaetionDateVDAART C EHAR(2)PA PERPFroOvideRrPMaPeArfoNrm C ancEe / G OLD C ARD C Stitayte C odeVVAARR C C HHAARR((120)0)
+FA C ILITY IDENTITYENDPOINTS(NEW)PFKKIPdroviderIdgguuiiddPVeorsstiaol C no C dreeatedVTIAMRE C SHTAARM(1P0T)Z
+ServiceFacilityIdentityPKIdProviderEndpointguidFKPSearyveircIedType C odegVAuRid C HAR(10)VVaalliiddTForomTTIIMMEESSTTAAMMPPTTZZ
+REPKINdpigVAuRid C HAR(10) C REDENTIALSFKPEnrodvpidoeinrtITdypegVAuRid C HAR(50)AAuptporAovpaplrRoavtaelEligibleBDOE C OILMEAALN(5,4)DIse C luerterednAttTbIoMoElSTAMPTZ
+YAL C NmpisS C ocunrceVVAARR C C HHAARR((1200))Provider C redentialEIsnAdcptiovientUrlVBAORO C LHEAARN(500)TToottaallRAepqpuroevsatslsIINNTT
+YVersion C reatedTIMESTAMPTZPFKKIPdroviderIdgguuiiddVDeerlesitoend C ArteatedTTIIMMEESSTTAAMMPPTTZZEAvpaplruoavtaiolRnaPteerTiohdreMsohnotldhsSDME C AILMLIANLT(5,4)
+TIT C IsrseudinengtSitaalTteypeVVAARR C C HHAARR((520))NotesVAR C HAR NULLMPainARvgeDqueecisstiVoonlDuamyesSDME C AILMLIANLT(5,2)OR G NETWORK(NEW)
+NELIsicseuninsgeBNoudmyberVVAARR C C HHAARR((120000))RLaesptoErvtainlugaYteeadrAtSTMIMAELSLTIANMT PNTUZLLPKOrIdganizationNetworkParticipatigouni d(NEW)
+DIIEsxspuieraDtaiotenDateDDAATTEE C ONTPAro C vidTer( C NontEacWt)Version C reatedTIMESTAMPTZFFKKOParygearnIidzationIdgguuiidd
+DVaelaidSFcrhoemduleVTIAMRE C SHTAARM(1P)TZPFKKIPdroviderIdgguuiiddNTieetrw C oodrkeNameVVAARR C C HHAARR((25000))
+ServiceFacilityStateVVaelrisdiToon C reatedTTIIMMEESSTTAAMMPPTTZZ C VaolnuteactTypeVVAARR C C HHAARR((5200)0)EEﬀﬀeeccttiivveeFToromDDAATTEE NULL
+PFKKIFdacilityIdgguuiiddDeletedAtTIMESTAMPTZIVsePrrsiimona C ryreatedBTIOMOELSETAANMPTZDVeerlesitoend C ArteatedTTIIMMEESSTTAAMMPPTTZZ
+NTianmeVVAARR C C HHAARR((22000))DeletedAtTIMESTAMPTZ
+AAddddrreessssLLiinnee12VVAARR C C HHAARR((220000))
+C Stitayte C odeVVAARR C C HHAARR((120)0)
+PVeorsstiaol C no C dreeatedVTIAMRE C SHTAARM(1P0T)Z
+REVVaalliiddFToromTTIIMMEESSTTAAMMPPTTZZ
+YADIse C luerterednAttTbIoMoElSTAMPTZ
+L Y
+TILDATABRI C KS
+I C U C ETL using azure SDKBLOB STORA G EFAST APISWA G ER
+AF
+> n >e ewliugmibilityNewUM
+> 2 >0 0236
+> 1 >2 [name].cvs/.parquet
+
+=== Page 64 ===
+Hypothetical Business HierarchyEvery level in this made- up fragment
+of a business hierarchy (except for
+Payer, MajorLineOfBusiness and
+Product) is a record in the Business
+G rain table.
+Payer OR G Products are always the leaves of
+Payerthis tree structure.
+Each bubble is a record in the
+Business G rouping table. Note that
+the Business G rains are irregular;
+Payer BPayer Athere may be two Business G rains
+with the same parent.
+Medicare C ommercialMedicare MajorLineOfBusiness
+HMOPPOPlanType Business G rain
+EmployerMarketplaceMarket Business G rain
+RiskPool Business G rain C laims OnlyShared Risk
+BronzeSilver G oldProductLine Business G rain
+Beneﬁt planPPO Prem Bronze Select Bronze Select Product
+15003000HD 6000
+
+=== Page 65 ===
+Alternative options
+EHp wroittho cKoalf, ka Incomming data API with Databricks
+pipeDlinaetasb sruicbkssc ribetraNﬃewc UfrMom pull data approach
+to
+Ingestion NewmUeMch ianngiesmstion
+mechanismAPI / Service Bus
+W1ho drkaitnag l ahtyepnoctye fsoisr: v1
+DATABRI C KS
+UNITY C ATALO G uMdpaostveaer rt fe rrloeolmaedv fa utnollt Sfutillll dkaeteap r aebloliatdy tino
+tables approachcase of any issues
+C OPPERbronze_enhancedShared data modelSilver G OLD
+bronhzies twoirtyh full addraitwio dnaatl afe waittuhr esfor all customersAll historical dataETLNewUM schema
+ETL
+BRONZE G old
+Snapshot of data
+AUTOLOADER
+BLOB STORA G EMATIS | SmartUM SYSTEM
+(MOSA- SDQBL)El(iMgiSb-i SlitQyLM)S P(rMovSi-d SeQrML)SD(MruSg- SsQMLS)
+TXT
+API
+AIRFLOWAIRFLOWADMIN
+C USTOMERS' SFTPON C O SFTP
+DRU G S / DRU G S / EMAIL
+ProvidersEligibilityFormulary C LAIMSProvidersEligibilityFormulary C LAIMS
+ON C O DATA TEAMNF DATA TEAM
+
+=== Page 66 ===
+C URRENT DRAFT: NewUM Architecture Plan
+as of Phase 1 (2/16/26 deliverable)OneUM
+Neaecehd o tfo t chleasrief ye ixntteerrnfaalc ceo wmitmhs.
+External C omms
+Twilio/IVRFax ServiceLegendAzure Service Bus
+messages
+KaleidescopeNuance C # calls
+Simple UI for now, HTTP Requests
+N ineceludd minogr:e detail on infrastructure here,NewUM UI C hronos TaTLetters v2 DMoacnuamgeenrt Job Monitor C Ionnteﬁrgf aDceev scoan b eaxcpkeenridm teenatm DBX Delta Sharing
+WApApFlication G ateway(React)(ASP .NET)stheep aUrIa tteealym fr.om
+OktaDKuebpelorynmeteenst to
+A C domninﬁ gP oArPtIal
+C ommon Library
+WebAPIWebAPILegacy C omponent
+AdDmruing sP AoPrtIal Drugs(. NDEoTm C alians Ss)erviceU(.NI C ETo n C tlraoslsleerss)Inte(.gNrEaTti o C nla Ssseervsi)cesEve(.nNtE OTr C chlaessstersa)torRuleset C ompilerRuleset C ontroller C onﬁg C ontrollers
+(.NET C lass)(.NET C lass)(.NET C lasses)Possibility
+OInngeeUsMt Ing(.NesEtT C C olnatsrsoelsle)rs
+(Databricks)
+OneUM C (o.NreE TD a C tlaa sLsaeyse)r C ase( D.NoEmT a C ilna sSse)rviceR(.uNleEsT E C nlagsins)e C (o.NnﬁEgT S C elarsvsic)e
+(DRaetpaobrrtiicnkgs)N(eDwatUaMbr OickLsA)P
+C ore Data Layer
+NewUM Backend C odebase
+ESlcighiebmilitay PSrcohveimdear QScuheeuminag C ase SchemaS C cohneﬁmga
+NewUM OLTP
+(MS- SQL)
+
+=== Page 67 ===
+C URRENT DRAFT: NewUM Service Integration Design
+as of Phase 1 (3/2/26 deliverable)
+ETL ProcessQ* QueueQ* Queue
+Twilio/IVRFax Service...Letter V2OktaFTeoagtgulree ...
+Q
+Q.NET based abstraction component
+Migrreacteioivne drata retryQdead letter on failure
+Event OrchestratorPLroEogvc eeSnstotsser ed
+C ore DB
+
+=== Page 68 ===
+C URRENT DRAFT Workﬂow: New Records Available
+as of Phase 1 (2/16/26 deliverable)
+Is C ase YesUI Receives EventR G eEcTe Riveeq C uaesset Pull Relevant C ase Send ResponseUser Sees C ase
+C hecked Out?(UI C ontrollers)( C ase Domain Layer)(UI C ontrollers)(UI)
+C ase Store
+New Record EventReceive New Record New Record is YesPull Relevant C ase C Roencostrrdusc ftr Nomew E C veanset Run Inference C Roencostrrdusc ftr Nomew R C ualesse Emit C ase Event External Services
+(Event Orchestrator) C ase- Speciﬁc?( C ase Domain Layer)( C ase Domain Layer)( C ore Rules Engine)( C ase Domain Layer)(Event Orchestrator)Receive Event
+No
+LegendAzure Service Bus
+( C Wasriet eD Nomewa iRne Lcaoyredr )Lo( C oaks Uep D Roemleaviann Lta C yaesr)es (EEmveitn Ut Opdrcahtee sEtvraetnotrs)R(eEvceeinvte O Urpchdeastetr Eavtoern)tmessages
+C # calls
+HTTP Requests
+DBX Delta Sharing
+C ore OLTP DBHumans or
+External Systems
+
+=== Page 69 ===
+C URRENT DRAFT Workﬂow: User Modiﬁes C ase
+as of Phase 1 (2/16/26 deliverable)
+Legend
+Amzeusrsea Sgeersvice Bus
+C # calls
+Postgres OLTPHTTP Requests
+DBX Delta Sharing
+User Opens C ase Receive C ase Pull C ase for EditingSend ResponseUser Sees C aseHExutmerannasl Soyrs tems
+(UI) G ET Request( C ase Domain Layer)(UI C ontrollers)(UI)
+(UI C ontrollers)
+Prep InferencePull Ruleset C onﬁg Store
+( C ore Rules Engine)( C onﬁg Data Layer)
+User Modiﬁes C aseReceive C ase C onstruct New C ase Run Inference Postprocessing C ase Send ResponseUser Sees C ase
+(UI)POST RequestRecords from User( C ore Rules Engine)Records from Rules(UI C ontrollers)(UI)
+(UI C ontrollers)( C ase Domain Layer)( C ase Domain Layer)
+Pull C ase for Editing
+( C ase Domain Layer)
+Emit C ase Event External Services
+(Event Orchestrator)Receive Event
+Postgres OLTP
+
+=== Page 70 ===
+OBSOLETE DRAFT: Drugs Schema
+as of Phase 1 (2/16/26 deliverable)DrugFormulary
+RegimenPharmacyDrugElementPKVersionguidPKVersionguid
+PKRegimenVersionguidVersion C reateddtVersion C reateddt
+RegimenIdentityPKDrugVersionguidDeletedAtnullable dtDeletedAtnullable dt
+PKIdguidDosingjsonVersionByguidVersionByguid
+Namestring...VersionForguidVersionForguid
+...Rx C uistringRx C uistring
+RegimenMedicalDrugElementHcpcsstringPayerIdguid
+RegimenPKRegimenVersionguidNdcnullable stringEmployer G roupIdnullable guid
+PKVersionguidPKDrugVersionguidRxNormVersionstrScopeOverrideenum
+Version C reateddtDosingjsonScopeenumIsPreferredboolean
+DeletedAtnullable dt.........
+VersionByguid
+VersionForguidRegimenRadiationElementRadiationSubstitution G roupMembership
+FKIdguidPKRegimenVersionguidPKVersionguidPKDrugVersionguid
+RxNormVersionstringPKRadiationVersionguidVersion C reateddtPK G roupVersiondt
+...DosingjsonDeletedAtnullable dt...
+...VersionByguid
+DiagnosisRegimenThese are bridge tables that add dosing.VersionForguidSubstitution G roup
+PKRegimenVersionguidThey version with Regimen, so each new C pt C odestringPKVersionguid
+PKDiagnosisVersionguidversion of a regimen needs to write new C odeListVersionstringVersion C reateddt
+element records. This is repetitious, butScopeenumDeletedAtnullable dt
+...avoids the confusion being able to ...
+change the elements of a regimen VersionByguid
+without incrementing the regimen Need more clarity about how conﬁg VersionForguid
+Diagnosisversion.versions should relate to RxNorm Namestring
+PKVersionguidversions.Descriptionguid
+Version C reateddt...
+DeletedAtnullable dt
+VersionByguid
+VersionForguid
+Icd10Versionstring
+Icd10 C odestring
+Namestring
+FKParentVersionguid
+...
+
+=== Page 71 ===
+OBSOLETE DRAFT: C ase Meta Schema
+as of Phase 1 (2/16/26 deliverable)
+Open C aseDrugElementMeta (mutable)
+PK C aseElementIdguid
+Open C aseMeta (mutable)PK, FK C aseIdguid
+PK C aseIdguidElementTypeenum
+FKPayerIdguidFKRx C uistring
+FKEligibilityIdguidFKHcpcsstring
+FKOrderingProviderIdguidRxNormVersionstring
+FKTreatingProviderIdguid...
+FKPlaceOfTreatmentIdguid
+...
+Open C aseRadiationElementMeta (mutable)
+PK C aseElementIdguid
+C ontains information neededPK, FK C aseIdguid
+to update denormalized C ase FK C pt C odestring
+Schema.
+C odeListVersionstring
+...
+
+=== Page 72 ===
+OLD DRAFT: Eligibility Schema
+as of Phase 1 (2/16/26 deliverable)Person
+PKVersionguid
+Version C reateddt
+PayerDeletedAtnullable dt
+PKVersionguidVersionByguid1. M G iaspsisn &g Meliisgsibinigli tFyi eﬁldeslds that scope determination requires. The docs explicitly
+Version C reateddtVersionForguidrequ C iraer trhieersIed ﬁ(setlrdins go)n — th ree qEuligiriebdil iftoyr r iedceonrtdiﬁ, beru-t b tahsee dsc shceompea vdaoliedsant'ito snhow them:
+DeletedAtnullable dtPersonIdstringEligibilityAAcScOoIunndtiIcda t/o Irn (sbuoroalnecaen G ) r—ou ApSIOd /d BeelengeaﬁttioPnac rkualgee — carve- out identiﬁers
+VersionByguidFKPayerVersionguidPKVersionguidMPreemscbrieprtBioennBeeﬁnt e(eﬁnt C uamrv: eMoeudti c(baol o/ lPehaanr)macy / Medical+Pharmacy)
+VersionForguid...Version C reateddtORiOskNPBaetineenﬁt t( ﬂ(caogd)e)
+NamestringDeletedAtnullable dtEStliagtiebOiliftPylSaonuIsrcseu e(c (osdtaet)e code)
+e.g. Medicare, Medicaid, C ommercialVersionByguidMInesudricaanrceeBPelanne ﬁ/c PialarnyIDde /s McrBipIt i(ostnr i(nsgtr,i nMge)dicare- only)
+MatisPayerIdintVersionForguidProductOﬀering (string/code — ﬁner- grained than Product)
+...MajorLineOfBusinessThe C PuresfteormreFdieLladnsg (ujsaogne) ,c Aoclucemsnsi boinli tEyl C igoibrrielitsyp oconudledn acbesorb some of these, but that's a red
+PKVersionguidFKPersonVersionguidﬂlikaeg M—e smcobpereB deenteeﬁrmt ainnadt AioSnO rIunldeisc anteoerd t htoa tq dureivrye shtarurdc tbuuresidn eﬁsesld rsu,l enso tm JSuOstN b belo ﬁbrss.t F- cielaldsss
+Version C reateddtFKProductVersionguidc2o. Mluemmnbs.er contact data is missing. The docs require Address, Phone
+Business G roupingDeletedAtnullable dtFKEmployer G roupVenullable guid(home/mobile/work), and Member Representative contact info on the member/eligibility
+PKVersionguidrsionr3e. cNoord C . oNvoenrea goef Ethﬀeescet iavpep/ C eaorv einr aPgeersEonnd odra Etleig pibaiilrit yv iisni bthlee osnch Eelmigaib.ility — though these
+Version C reateddtVersionByguidMemberIdstringa4r. eB suhsoinwens sin G rtahien s'sc hFeKm isa P, wayheicrhV eisr sgiooond (.t ype (Adc Ttyupalely) —th ethy iasr leo othkes rleik.)e a data modeling bug.
+DeletedAtnullable dtVersionForguid C overageEﬀectivedateT5y. pNeo i se xnpolti cai tv aPlrido dFuKc ttyOpﬀe;e irt ilnikge llye vsehlo. uTlhde b deo gcus idde.scribe a 3- level hierarchy: LOB → Product
+VersionByguidNamestring C overageEnddateLOinﬀee r→in gP rgordauncutl aOrﬀitye r(innege. dTehde fsocrh reumlea c hoallsis Mioanj oprrLeivneenOtifoBnu spienre sths e→ d oPcros)d iusnct't, bclueta trhlye Product
+VersionForguidFKPayerVersionguidNamestringr6e. pNroes Menetmedb.erRepresentative entity. The docs specify representative name, relationship,
+FKPayerIdTypeLobTypeenumSSNstringaﬁdelddrse sosn, aPnedrs pohno/Enlieg aibsi lriteyq.uired ﬁelds from eligibility. This would need its own table or
+MajorLineOfBusin...DateOfBirthdate
+FKessVersionguid C ustomFieldsjson
+FKPrsaiorennt G roupingVenullable guid...
+FKBsiuosniness G rainVerguidProduct
+NamestringPKVersionguid
+...Version C reateddt
+DeletedAtnullable dt
+VersionByguid
+Business G rainVersionForguidEmployer G roup
+PKVersionguidNamestringPKVersionguid
+Version C reateddtFKMajorLineOfBusineguidVersion C reateddt
+DeletedAtnullable dtssVersionDeletedAtnullable dt
+VersionByguidFKPuaprinegnVtBeurssiionness G roguidVersionByguid
+VersionForguid...VersionForguid
+FKPayerVersionTypeNamestring
+FKParent G rainVersionnullable guidFKPayerIdguid
+Namestring...
+...
+Flatten this hierarchy?
+
+=== Page 73 ===
+C URRENT DRAFT: C ase Schema (partially denormalized)
+as of Phase 1 (2/16/26 deliverable) C aseAction
+Used by the rules engine PFKKI C daseIdgguuiidd C ase tables
+rbeloqcuke tsht ee xptreorgnrael sasc otifo an coars teo BRuloleckIderTypeegnuuidm
+uorn tmil oer.ge .d eartrao rbse acroem ceosr rected C reatedAtdtFlattened Views of Auxiliary Records
+alikvealiyla hbalev.e R uencoiqrudes sRhuoleuIldds , DReesleotleveddAAttnnuullllaabbllee ddtt
+maybe RuleId should be PK.P...ayloadjson C asePharmacyDrugElementSnapshots of Auxiliary Records
+C DreeleatteeddAAttdntullable dt
+C reatedAt C asedtPKIdguid
+I C D 10 is used to code diagnoses.DeletedAtnullable dtFFKK C DarusegIVdersiongguuiidd
+PKIPdrior C aseIdgnuuildlable guidStatusenumPKVersionDrugguid
+HumanProviderStatusenumFKDEloigsiibniglityVersionjgsuoindVersion C reatedint
+PKIVdersion C reatedgdutidTPirmimeaDruyeEligibilityVerdtAllowedDose?VRexr C suioinForgsturiidng
+DeletedAtnullable dtFFKKsOiordneringProviderIdgguuiiddMQuaaxnBtililtiynPgeUrnAiutsthi?ntHcpcsstring
+VVeerrssiioonnBFoyrgguuiiddFKTreatingProviderIdguid C ycle C ountintNRxdNcormVersionnsturllable string
+IdguidFKPRleagciemOefnTrVeeartsmioenntIdgguuiidd C ...linicalReasonstringScopeenum
+NTipnissttrriinnggDiagnosis G roupstring...
+NamestringITcrde1a0tm C oednetStartsdttring C C reaasteeMdeAdticalDrugElemdetnt
+Provider Schema currentlyS...pecialtystringTreatmentEnddtDeletedAtnullable dtRadiationTherapy
+being designed, just make LWoocrkkeﬂdoBwyStepnsturlilnagble guidPFKKI C daseIdgguuiiddPKVVeerrssiioonn C reatedginutid
+placeholders for now.PlacePriorityenumFKDrugVersionguidVersionForguid
+PKIdguid C ...ommitguidSDtoastiunsgejsnounm C C podt C eoLdisetVersionssttrriinngg
+VDeerlesitoend C Arteateddntullable dt C aseHistory (immutable)FKEligibilityVersionguid...
+VersionByguidPKIdguidAMllaoxwBeildlinDgoUsenits?intKeyFieldType
+VIdersionForgguuiiddNote that history needs to beFK C TaabsleeIdgenuuidmQuantityPerAuth?PKVersionEligibilityguid
+Tinstringtarnadc ktehde aecleromsesn tth tea cbalesse. table C olumnstring C C ylicnliec C aloRuenatsonisntrtingVersion C reateddt
+NAdadmreessssttrriinnggR C eacsoeIrdd Iidf tmhea yc amsea trcehc othrde RFreocmorVdaIlduegnuuildlable string...DVeerlesitoendBAytnguulildable dt
+...itself is being modiﬁed.FKT C ohVaanlgueedForsgturiidng C aseRadiationElementVIdersionForgguuiidd
+FK C C hhaannggeeddBAtygdutid C DreeleatteeddAAttdntullable dtM C oevmerbaegreIdEﬀectivesdtartineg
+...PFKKI C daseIdgguuiidd C SSoNverageEnddstartineg
+PKId C aseMessage (immutagbulied)FKTSthaetruaspyVersiongenuuidmNDaatmeOefBirthsdtartineg
+FK C SeansetRIdeceivedgdutidFKDEloigsiibniglityVersionjgsuoindHWeeiigghhttiinntt
+FToromAMllaoxwBeildlinDgoUsenits?intLIsinEreiOsafBusinessgbuooidlean
+C aseMessage and TMeexdtiumsetnruinmgQ C yucalen C tiotyuPnetrAuth?intI..s.FehbPlanboolean
+C imasmeuDtoacbulem, eanntd a trheu asl rdeoand'ty ... C linical Reasonstring
+need versioning....
+PK C IdaseDocument (immutgaubilde) C ase G eneticMolecularTestingElement
+FK C SeansetRIdeceivedidntt C DreeleatteeddAAttdntullable dt
+FDroocmumentTypestringPFKKI C daseIdgguuiiddPKVer G sieonneticMolecularTegsutid
+M...ediumenumFKTSetasttuVsersiongenuuidmVVeerrssiioonn C Foreratedignutid
+FKE C lliigniibcailliRtyeVaesrosniongsturiidng C C podt C eoLdisetVersionssttrriinngg
+......
+C reatPeodtAetntialEligibilitydt
+PK, FKDEleigleibteilditAyVtersionnguulildable dt
+FK, FK C SeaasercIhdTermsgjsuoindTbhee rseele avraen tth teo Ethligisi bcialistey. rIef cao prdast itehnatt i sc oduuladl peoligteibnitliiatyll,y
+...ftohra tin csatsaen.ce, this table would have two records for
+
+=== Page 74 ===
+OLD DRAFT: NewUM Architecture Plan
+as of Phase 1 (2/16/26 deliverable)Treat the Document Manager as a data store instead?
+Need to clarify interface with each of these services.Only if no external services write directly to it.
+Twilio/IVRFax Service C hronos TaTKaleidescopeNuanceTwilio/IVRLetters v2 DMoacnuamgeenrt
+LegendAzure Service Bus
+messages
+NewUM C onﬁguration Service NewUM C ore Backend C # calls
+(.NET WebAPI in k8s)(.NET WebAPI in k8s)HTTP Requests
+Event Orchestrator I C notnegtrroaltleiorns
+(.NET C lasses)(.NET C lasses)DBX Delta Sharing
+C o C notnroﬁlgle r*Same code deployed
+(.NET C lass) C onﬁg Data Layer* C onﬁg Data Layer*more than once
+C onﬁg Dev (.NET C lasses)( C C oosnmﬁogs DDBB?)(.NET C lasses)Legacy C omponent
+(IAnStPe r.fNaEcTe)
+C Ronutlerosellte r
+Ssoim bpalcek UenI dfo tre naomw , (.NET C lass)
+cseanp aerxapteelryim freonmt Data storage architectureNeed more detail on infrastructure here, including:
+the UI team.needs more design work.WApApFlication G ateway
+Ruleset C ore Rules Engine* C ore Rules Engine*Okta
+(. C NoEmT C plialesrs)(.NET C lass)(.NET C lass)
+U(.NI C ETo n C tlraoslsleerss)NewUM UI
+C asLea Dyeorm*ain C ase Store C asLea Dyeorm*ain
+(.NET C lass)(*)(.NET C lass)
+C (o.NreE TD a C tlaa sLsaeyse)r
+C o(rMe SO- SLTQPL )DBIng(.NesEtT C C olnatsrsoelsle)rs
+
+=== Page 75 ===
+Phase 1 C ase State Machine
+PA RequiredAiuto- Approved
+PA OOS
+
+=== Page 76 ===
+Phase1CaseLifecycle(Conceptual)
+PAExemptPath
+NoUMrNoapprNotiﬁcationsaroevviewisralordenialisgenereprequiroducedindicating:edated
+CaseisclosedasPPriorauthorizationisnot requiredAExempt
+TAT doesnotstart
+Identity,Access&SessionManagementCaseIntake(DraftCaseCreation)IntakeValidation(StructuralCompleteness)EligibilityValidationProviderStatusCheckTreatmentSelection&DrugClassiﬁcationPARequiredPathRulesEv(Praluation&Determination ototypeScope)Notiﬁcations&CaseClosure
+UsermanuallycrCoreintakedataiscaptureatesanewcaseed:Systemvalidates:Membereligibilityisveriﬁedatabasic ProvideridentityisvalidatedRequesteddrugsandserDrugidentiﬁersareresolvvicesaredtotheinternal eidentiﬁedCaseentersUMworkCaseisplacedintoaqueueﬂowRulesengineexlevel:Conﬁguration-ecutesatapr drivenchecksototype Notiﬁcationsaregeneratedbasedon
+UserauthenticatesviaOktaMemberidentiProvideridentiﬁﬁersersRequirFieldformatsandred ﬁeldsareprelationshipsaresente level:CoverageexistsPrconoviderstatusrﬁrmed:equiredforroutingis druglibrBeneﬁtcontext(medicalvspharmacy)is aryrepresentationTCasebecomeseligibleforrules evAaluationT startsatthispointNofullclinicaldepthrPhase1equiredin determinationUsesmockorstubbedintegrationfor
+UserrOnlyauthenticateduserswithvmayinitiateorinteroleandpermissionsaractwithcaseseresolvalidroles edRequestedserDrug(s)vice(s)ErrorsarvalidesurfacedinlineforcorrectionEligibilityoutcomedetermineswhetherthe Benepharmacy)ﬁttypeisidentiﬁed(medicalvs SerPayvicingvsrerassociation(prequestingprototypeleovidervel)establishedEachrthefollowing:equesteddrugisclassiﬁedasoneof Outputprdeterminationactioneparesthecasefora LettersV2CaseepisodeisclosedAudittrailandversionhistoryare
+CaseexistsasadrNoworkinvokedatthisstageﬂow,eligibilityaftshell,rules,or TAT logicisCasecannotprcompleteoceeduntilstructurally casecanprNoclinicalordrugrulesaroceedeappliedDetailednetwork/OONlogicmastubbedorsimpliﬁedforPhase1ybe PPARequirAExemptedDeterminationisrapprDeterminationislinkove/denyinprecorotedtotypeform)ded(e.g., othecase prCaseisaeservedvailableforviewandreporting
+OutofScopeepisode
+OutofScopePath
+Out-thepaNotiﬁ of-cationsaryer scoperesponseispregeneratedfor eparedfor
+applicableparCaseisclosed TAT doesnotstartiest
+
+=== Page 77 ===
+C ase WPoaDrtkiiecﬂtnoiotw nS aFeorayrr:mchs_Data
+ProtNoceowl APsastiigennmt Feonrtm Form
+SIintev eMnatopr /y P(paegre
+NoNoYesNoYesrole)
+YesIf C hemotherapyNoYesNoYes
+Yes
+No
+simple mIfa ernadcd-i nilaleatcrioye/nss/ity (NR)Yes
+YesNo
+YesNoNo
+Yes
+No
+|Iaf pcnopomevaepl-ll recixsak sc ea(M/seD/)
+NoYes
+FigmaFigmaYesNoNo
+No
+YesYes
+isIsf uchese m(Poh/adrrmugD)
+
+=== Page 78 ===
+Ingest Dataﬂow
+Auth Response
+Eligibility (1-2 ﬁles Eligibility Pipeline
+daily)
+Medical Auth
+OneUM
+Provider (1-5 ﬁle Provider Pipeline
+weekly)
+Pharmacy Auth
+Formulary (1 ﬁle
+weekly)Formulary Pipeline
+N/A if no pharmacy
+Medical C laims Iris
+(monthly)
+C laims Pipeline
+Pharmacy C laims AnalyticsRegulatory Reports
+(monthly)
+SLA Reports
+Dashboards
+C onﬁdential - Not for distribution
+
+=== Page 79 ===
+Admin Portal
+Many Azure Functions are C RUD operations.
+Azure
+Arrows between them are not direct;AppInsights
+they write to and read from the same tables in DrugsDB.Logging
+API in Azure Functions in .NET
+Matis Payer
+C onﬁgOADB
+AuthenticationUser Matis Payer
+OktaManagementFormulary
+ETL Viewer
+Blob HealthFortis
+QPP (VB C & StorageSmartUM
+Drugs C onﬁgurationReporting)
+UI
+Single- page App
+in Angular + Drugs FormularyDrug Rules
+primeng C hemo Regimen
+Payer DrugMaster DrugDosingDrugsDB
+Supportive C hemo
+C are
+Diagnosis
+Radiation Regimen
+(XRT)
+G enetic Molecular
+Testing ( G MT)
+RxNav
+Drug Loader ETL C osmosDB
+NoSQL
+NIH
+N C C N C hemo Loader ETL
+C onﬁdential - Not for distribution
+
+=== Page 80 ===
+Matis Service Architecture
+(preliminary)
+TwilioReIVcRo g(Vnoitiicoen )Internal7-S8Q yLe Saersrv aegro
+API(LoggingDB)1D yaetaarD aoggo
+(atgesgelercemugreaitttyriyo),n , BMloabt SistDooracgseSotoothrf aetghr eeB s(le2o)1b2
+Fax ASePrIviceBFaloxb I nSbtooruangde
+A4(pp yrpeAeIazfneurssrri rgeae hgdto)s
+ManwUaegsbeeUrm Ient DocAuPmIentJobMAoPnIitor
+AdmiAnP PIortal
+Admwienb PUoIrtal DAruPgIsSDQrLu SgesrMveSr
+OktaEligAibPIilityESlQigLib SileitryvMerS
+Matis webUIMatis APISOeSArQDvLeB r Lack of transactional history in OADB!
+(case processing)ProviderSQL Server
+APIProviderMS
+NuanceAMzuerses aSegrevBicreid BguesAssignment
+ProAvPidIer
+(KMalaeiild Soesrcvoicpee )BusiEnneAgsPisnI Reules
+EOverWcnhitn C edsootlrlweactsot orrTTuirmnAeaP r(oITuaTn)d
+TaT reporting split between Matis and new Data team stuﬀ.
+newUM webUInewUM APInSeeSwrQvULeM r
+DAesuttihn aFtilioe nLetters v2 Infra
+Salesforce(airﬂSoawle bsrfoornczee -E>TsLilver)
+(old, SgSoISin EgT aLway)
+(olSdy, ngaopinsge EaTwLay)
+SFTSPto orar gBelob (neDwa,t amborviciknsg EhTeLre)
+FAazcutroer yD EaTtaL
+PBM VendorsPytohuotnb/oAuirnﬂdow
+C lient STFP
+PowerBIWDaarteEahD ToBeuasmes
+MReedpiocratrse
+
+=== Page 81 ===
+NewUM Service Architecture
+Internal
+Future State (assessment)
+User BMloabt SistDooracgse
+ManwaegbeUmIent Admin PortalAzure
+AppInosrightsDoSceurvmiceent
+ServiceDataDog
+Sotothraegr eB (l2o1b2
+Admwienb PUoIrtal of these)
+Okta
+newUM MonolithSDerruvgicse
+newUM webUI(local service SDQrLu SgesrMveSr
+architecture)
+TwilioReIVcRo g(Vnoitiicoen )MessageBridge
+ServiceAzure Service BusJobMonitor
+Service
+SQL
+(KMalaeiild Soesrcvoicpee )NuanceDAesuttihn aFtilioe nServer
+Letters v2 InfranewUM
+BFaloxb I nSbtooruangde
+Fax Service
+(LSoQgLg SinegrvDeBr )
+Key
+G ood Enough
+PowerBIEvent C ollectorStrategic Oportunities
+OrWchinedsotrwatso r
+Medicare newUM pipelines C ritical Risk/ C ost
+ReportsData Team
+WareEhDoBusesNewUM Scope
+SFTSPto orar gBelob
+(neDwa,t amborviciknsg EhTeLre)API C all
+C lient STFPMessage Bus
+PBM VendorsPytohuotnb/oAuinrﬂdow Separate Diagram
+
+=== Page 82 ===
+MATIS Service Architecture
+Internal
+C urrent State (assessment)
+User BMloabt SistDooracgse
+ManwaegbeUmIent Admin PortalAzure Document
+ServiceAppInsightsServiceJobSMerovincietor
+Sotothraegr eB (l2o1b2
+Admwienb PUoIrtal Drugsof these)
+OktaService
+SDQrLu SgesrMveSr
+Matis webUIMatis MonolithESliegribviicliety
+(case processing)
+MonarchESlQigLib SileitryvMerS
+Service
+TwilioReIVcRo g(Vnoitiicoen )MessageBridge
+ServiceAzure Service Bus
+PSreorvviidceerSMQLo nSaerrcvher
+Schema
+(KMalaeiild Soesrcvoicpee )Assignment
+NuanceAuth File Provider
+DestinationServiceSQL Server
+BFaloxb I nSbtooruangdeProviderMS
+BusiEnnegsisn Reules
+Fax ServiceService
+SQL Server L haicskto orfy tirna nOsAaDctBio!nal
+(LSoQgLg SinegrvDeBr )OADB
+Letters v2 Infra
+Event C ollector(airﬂSoawle bsrfoornczee -E>TsLilver)
+OrWchinedsotrwatso r
+SaleforceTTuirmnea r(oTuaTn)d Key
+Service(old, SgSoISin EgT aLway)
+PowerBI G ood Enough
+SFTP or Blob (olSdy, ngaopinsge EaTwLay)Strategic Oportunities
+Storage C ritical Risk/ C ost
+Medicare WDaarteah Toeuasmes Databricks ETL
+ReportsEDB(new, moving here)API C all
+C lient STFPAzure Data Factory ETLMessage Bus
+PBM VendorsSeparate Diagram
+Pytohuotnb/oAuinrﬂdow
+
+=== Page 83 ===
+MATIS Service Architecture
+Internal
+w/ NewUM (assessment)
+User BMloabt SistDooracgse
+ManwaegbeUmIent Admin PortalAzure Document
+ServiceAppInsightsServiceJobSMerovincietor
+Sotothraegr eB (l2o1b2
+Admwienb PUoIrtal Drugsof these)
+OktaService
+SDQrLu SgesrMveSr
+Matis webUIMatis MonolithESliegribviicliety
+(case processing)
+MonarchESlQigLib SileitryvMerS
+Service
+TwilioReIVcRo g(Vnoitiicoen )MessageBridge
+ServiceAzure Service Bus
+PSreorvviidceerSMQLo nSaerrcvher
+Schema
+(KMalaeiild Soesrcvoicpee )Assignment
+NuanceAuth File Provider
+DestinationServiceSQL Server
+BFaloxb I nSbtooruangdeProviderMS
+BusiEnnegsisn Reules
+Fax ServiceService
+SeSrQvLe r L haicskto orfy tirna nOsAaDctBio!nal
+(LSoQgLg SinegrvDeBr )OADB
+Letters v2 Infra
+Event C ollectornewUM pipelines
+newUM webUIne(wloUcaMl sMerovnicoeli thOrWchinedsotrwatso r
+architecture)TTuirmnear (oTuaTn)d Salesforce ETL
+Service(airﬂow bronze->silver)
+Key
+SaleforceSQL (old, SgSoISin EgT aLway)
+Server G ood Enough
+newUM
+PowerBISynapse ETLStrategic Oportunities
+(old, going away)
+SFTP or Blob C ritical Risk/ C ost
+StorageDatabricks ETL
+Medicare Data Team (new, moving here)NewUM Scope
+ReportsWareEhDoBuses
+Azure Data Factory ETLAPI C all
+C lient STFPMessage Bus
+PBM VendorsPytohuotnb/oAuinrﬂdow Separate Diagram
+
+=== Page 84 ===
+OLas Dof ea rDly PhRaseA 1 (2F/9/T26): NewUM Architecture for Thin Vertical SliceOLD DRAFT/SKET C H - NewUM Data Model
+NMhtRStpu Rsleu:/sl/e oesnv Eacnolugloaintgieoya nen:v aNallRyutuaicltesios.a nEt:lv aaslsuiaatnio.nne.td/owcixki/spacOLD DRAFT - C ase Engine Proposed Architecture 1/27/26OLD DRAFT/SKET C H C ase Engine Schema 2/9/26
+enRsgu/ilNne eeEwdgUeM C /pasaegse:s R/5u0le6s1 E6n72g9in8e0 /EMdgicer o C saosfet+s.RduolcexsERules SubsystemExternal Outbound MS- SQL (later SQLite?) C C waarssiteeeIE-d oleenmncteei tnaytn Iaddn eidmn tmityu atareble.PPKK, FKI C d C asaesIedElementIdentity (immutginautbidle)
+OLD DRAFT - Sample C ase Engine Workﬂow Diagrams 1/12/26 C ompile Rules (Azure Funcs)RBulloebsest C omms*Interface SubsystemAuth*PKId C aseIdentity (immutableg)uidED...leelmeteendtATtypeennuullamble dtHidden from APIHidden from API
+New Doc ArrivesPublish New C onsume G opfoa sorcsdoe pu/sesoe fr oot rfd nAooIc w,t ob. uatu tthoamt'ast oicuatl ly C ase User Enters C aseNew C ase C o.mNEpTil erRuleNRRepuolessitoryRules (AFziruer eR uFulensc)M&(A aSzneuarrvgeiec F e C u Bansuce?ss) C PT...iaamyseeeNrRIeudcmeibveerdigdnuttidPKVVDeeerrless C iitooeannsd C eAPrtehaatremdacyDrugElemegdnnututildlable dtRead- Only from APIOMLSD- S DQRLAFT C ase Meta Schema 2/9/26OMLSD- S DQRLAFT Drug Schema 2/9/26Read- Only from API
+Fa(xE xRteecreniavle d(EvenDt oQcueue)(EvMeenst s C aRgUeD)S(eUrIv/e G Nateeww aDyo)cU(UseIr/ G Saotretws Dayo)cExyiestss?no(UI/ G ateway)( C a C sree a C tReUdD)St C a#ti c C (.oNnEﬁLTag ly iAbecrrcaerys)s D C yRonunaleﬁmsgic RuNleRBuuleilds erSNeRsusiloens QEuveenute UIR C eadcishePKVersion C aseguidFKVVIdeerrssiioonnBFoyrggguuuiiidddRead/Write from APIRead/Write from API
+(QEuveenutes NScehwe Dmoac)Use(rU IId/ G enattieﬁweas y C )aseWr(i C tSeac shNeee Mmwea C t)aa seS C cRohuneleﬁmsg a versionedVerify RulesUI C ustomizationRealtime EventsA C aPs(eWI C G oenabtrotAlelePwrI)ayHuIm C aDnP r1ov0id eirs (f ruoms eindge stt)o code diagnoses.VDVVeeeerrrlsessiiitoooennnd C BFAoryterateddnggtuuuiillddable dtFFKK C DSDtaroausstegiunIVsdgersionggejsnuuouiinddmPFKKVVeerrssiioonn C Drerautge d(from ingest)ginutidOpen C aseMeta (mutable)PPKK, FKOpen C C C aassaeesEIedlDermuegnEtleIdmentMeta gg(muuiiuddtable)RegimenPharmacyDrugElement
+(DMStoaocnrueam gFeearnx)t Atta( C chas Deo C cR tUoD C )aseP(uEbvle C isnhhta QEnxguteeeurnea)l M(aloncRaauglle set Do eRovulsle)s C uMsetotamd aFtiealdPMreomvidbeerr C C oonnttrroolllleerrUIPKVVDeeerrlsseiitooennd C Arteatedgdnutuildlable dtFKISTdtimateuDsuegednutuidmFKE...ligibilityVersionguidVRHNexcdr C pcsuciosinForgssnttuurriliidlnnaggble stringPFFFKKKK C PEOlaarigydseeiebIrridIildnitgyIPdroviderIdgggguuuuiiiiddddFFKKERHRlxxce C NpmucoesirnmtTVyeprseionessstttnrrruiiinnnmgggRHeidadd-e Onn flryo fmro AmP IAPIPKINdameRegimenIdentitygsturiidngPPKKRDD...erougsgiimnVgeernsVioenrsionggjsuuoiinddPFKKVVeerrssiioonn C reatedDrugginutid
+A(StQtaLcihte t oB l C oabsse)Ndeeve den av miroinnimateunretDMoacnuamgeern*t Past EventsDEvruegnsts C C oonntrtroolllelerrVVINdeeprrissiioonnBFoyrgggstuuuriiiidddngFFFKKKOTPRrleraedgcaeietmriOnienfgnTgPrVPreeroaorvtsvimdiiodeenernrVtVeVerersrsisoioinonngggguuuuiiiiddddPKVVDeeerrlsseiitoo C ennad C sAerteMaeteddicalDrugElemengdntutuildlable dtRS...cxoNpoermVersionsetnrumFFKKTP..r.laecaetiOnfgTPrreoavtimdeernItdIdgguuiidd...Read/Write from API...RegimenPKRegRiemgeimnVeenrMsieodnicalDrugElemgeunitdVRHNexcdr C pcsuciosinForgssnttuurriliidlnnaggble string
+M(oor d C iafys e C Raseeviewed)(RRuelaeds eRtu Blelosbets)Data SubsystemQueue C ontrollerTNS...ipanemciealtyssstttrrriiinnngggI..c.d10 C o C daeseMessage (immutsatbrilne)gFFKKVVI C deearrssseiiIoodnnBFoyrgggguuuuiiiiddddPKVersionRadiation (from ingest)guid C tSoco huneptamdinaats.e i ndfeonromramtiaolniz ende e C daesde PPFKKK, FKOpen C C C C aaapssset C eeREIoadlddeeimateionntIEdlementMetggsatuu r(iiimddngutable)PKVVDVeeeerrrlesssiiitoooennnd C BAryteatedgdngutuuilidldable dtPKDD...rousginVgersiongjsuoindRS...cxoNpoermVersionsetnrum
+(RPuullel sR Auclecseests)E C xotmermna?l yesP(uEbvlei C snhot mQExmuteeurnea)l OLTP MS- SQLSB C QlaoLsbietse C ase C RUD(.NET libraryD aantda AAzcuceress F Luanycesr)PKVersPiloance (from ingestg)uidPFKKV C SeeanrssetiRIodenceivedggduutiiddFKDSDtroaustgiunVsgersiongejsnuouindmFKVV C eeprrtss C iiooodnne C Foreratedigsnturtiidng C ...odeListVersionstringFKVIRdexrNsoiornmFVoerrsionggstuuriiiddngPPKKRReagdiimaRteieognniVmVeeerrnssiRoioanndiationElemeggnuutiiddPFKKVVeerrssiioonn C reateRdadiationginutid
+C on(sFu C irmhea eRn uEglxeetse)rnal ( C Pausell C C aRsUeD)Ru(Fnir Ien Rfeurleensc)e( C Warsiete C C RaUsDe)Pu(Ebvlie C snhht aI Qnnfgueeeruene)ce LeNgoet C nodreMeta C SacsheemaMember VDVVeeeerrrlsessiiitoooennnd C BFAoryterateddnggtuuuliilddable dtFTTMoeroexdmtiumsetnruinmgFKE...ligibilityVersionguid C ...odeListVersionstringEventually m..a.y need a Diagnosis table,D...osingjsonV C C epordts C eiooLdniseFtoVerrsiongsstturriiidnngg
+(SQL C itaes eBslobs)Existing*Aa(erlxle cd weaprtaitt eps-to oosnrseliybsly Drugs)PErloigviibdielirt yS cShcehmemaaAdminPArodvmidiner ITNAdidandmreessgsssttturrriiiidnnnggg...PKVVDeeerrlsseiitooennd C C AartseeaRtaeddiationElementgdnutuildlable dtPKVeErlsigioibnility (from ingegstu)idwtwoii ttehhx awp rhDeiiscashg wndhoiasigcishnR oreesgegisimm.eenn sb rairdeg geo toabdl e TTveehhlereemsysie oev nnea trro serfie obacnr ori derwdggistiemh. tT Reahnbeisg lne iismes etrehdenasp, te t soatoid t wiedora uidctseoh, s nbnineuegwwt. EveS...cnopteually we will neeneumd to allow per-
+( C a C shee Mckeotau tS C chaesema)TMopo-d Leuvleel and can be joinedEvents SchemaE C vReUnDts ...PFKKV C Seeanrsset C iRIoadensceeDivoecdument (immutabgidlneutt)idFFKKVVI C deearrssseiiIoodnnBFoyrgggguuuuiiiiddddVDVVeeeerrrlsessiiitoooennnd C BFAoryterateddnggtuuuliiddlable dtacwvhevitorahsnidioogsune tt. htihneec cr eoelnmefmeunseitnointnsg bo tefh iaen grree aggbiimmle eetnon gEaaxllrlsoeooumw apspl lStco,co wOon pucﬁeotg- n ocaﬁoft-gn SP ﬁcaaogty pueEerrma )g.tp iArolaodniynm e(,e irbn. g G u P.rt o PosrAuht pao luld
+Rules C hangeSubmoduleDrugs SchemaEDxprulogrse rMQauneaugee rSeh.go. umldo dthifey Qpurieouriety M? aMnaaygbeer. tIot umcihg htht eb e C absees tit tsoe ltfr?eat Flatteepdnlrrioug avgiubi/dxirleaiiltridyairayt idoanta:FDMrooecdmuiummentTypesetnruinmgFFKKTSDEhtloiagestiriubnasigpliytyVVeerrssioionngejgsnuuouiinddmIM C doevmerbaegreIdEﬀectivegsdtuartiidneggNverearesindio. mnso srhe oculaldri trye laabteo utot hRoxwN ocromnﬁ g
+A(uRtuhloers NDeewv C RLuIl)e C o( C momnLﬁiatg yN eAercw)ce Rsusl e(RTurilgegs eDr eBvu C ilLdI)BR( C uuoilledmB Rpuuiillelderes &er)t T(QesAt TReuslteesre?t)(VReurliefys RAuccleessest)QScuheeuminag tchaese q. uIfe puriniogr istyys ctheamn gase sa, kuisned C oafs ceo C nRtrUoDl p.lane for a C ase...Message and Dr.u..g and Radiation only C SNDSoaaNvtmeeOerafgBeirEtnhddssdttaarrttiinneeggversions.
+ReOpoLArtPing C inmeaesmeduD vtoaecbrusleimo, neainnntdg a .trheu asl rdeoand'ty cDmhreautngagsdMea tvSai,a is smo n lieegesrsad teviodenr.s fioronm L..i.neOfBusinessguid
+(RWurlietese Rtu Blelosbest)OADB*Reporting*
+Eligibility/Provider C hangesPAodrmtailn* DrugsMS*MPiigprealitnioen New Mocwoonnscet edcpa ets nefot sirrt eaclatyes b einy s C tpoaersrae-g c a C esR:eU SDQ cLoitme pﬁolense sntto. rReedc oasrd bsl oabres , PKVVeeVrressriioosinno C nraebaltee (dtemplatgdeut)idOMLSD- S DQRLAFT Eligibility Schema 2/10/26TPdcrhaiﬀeyeaee Mtrriensen gumt s awbe ne aMeryIwsed,m Mfcraboenemm rcI bhdbeaser niiInngdg e af bo fwoar irsed iavcenea vrl leayylr icPigeheitbarynis looigtfnye I ridnesc otord !
+Ingtooer sEPtl riNgoivebiwdili etRryeMMcSoSrd(MMiiggrraatteio tno PNipewelUinMe)RPer(ocMveiiedvmee rbR Aeedrq mourei nst)PWr(oMrviitedeme trob A eOdr LmoTriP n)( C Pauslel C C aRsUesD)(N C eawse R C eRcUorDd)( C Warsiete C C RaUsDe)P(uEbvle C isnhhta QEnxguteeeurnea)l w C sacnarh iseteeevm -eS oQnanstLl .yti t.Ioef u oinpncdel auotdfe et tshh oceos ecpa iuespes d oaafnt wdes rﬁ iotreeu- t orsunidlleyes r.t eh C ceao seredv see nnfrtgo, icmnree o awtthielel r VVV...eeerrrsssiiiooonnnDBFoyerletedngguuuiillddable dtPKIdPersonguidcoouvre draatgae m. Woed edlo. not want to build that variety into
+Manua(Ul UI)pdate(MembAePr Io C r aPllroviderNew Record(USpQdLaittee B C laosbess)W( C raitsee t o C ROULDA)PProviderMS*Infrac noemepdus:te cluster to ﬁre rules (likely Kubernetes?)FWorfoh tmehne N smetaiannlu dRtiuinagg og ufl epsse t:thtein sge urvpi cae sse, wrveic hea. Ivte'd t hbies apwaceksaogmee t oif aybosut rcaacnt rae l-o t ntMfureuonvtscehttr .is omcnhose dtmoif yas etmht eivgsarelau treieoscn ofsor drc san;ne o wbth eﬁe herla dsncsdh (lneemedv aleasrz aailrylte eb sry o owuldrrci tﬁeine- olgdf -s C )# FKPP...eayrseorIndIdsgturiidngPKVVeerrssiioonn C reaEtelidgibilitygdutid
+C ontroller)Pro(Evliidgeibr iSlictyh eomr a)Lo( C oSakcsuhepe Mm C eaat)sae sN(Reewp Roertcionrgd EligibilityMS*AARMezzSuud-rr SiseeQ oS C Lrel oOrsuviLmidTc ePiFla uBdrnua cctsaat icfboohanres se ef vfooerrn U UtsII G G aatteewwaayyu hustmtep- cisto: /tm/od mkeevo.eanpz- u aaprllei n.ceowm i/nofnracsotlrougcytaunrea lcyotincss/isTteecnhtn!ology/_git/oncohealth- C ase Mpcmeaaetstameh S ItbDcoeh rSe QImDLait ies bnlootb write- only and contains:OM(frLSoD-m S DQ ORLnAcFoTH Peroalvtihd)er SchemaMeaj.ogrL.in MeOfeBudsiinceassre, Medicaid, C ommercialFKDVVIdeeerrlessiitooenndBFAoytrnggguuuuliiildddable dtFrom Nick Foreyt:
+Drugs C hangeOLAP)AQoDlgoudgce curraeymsgaeeabsntl eet(t dcSa otbloolldegre sgs tifsnootgorra rr(geu&del eM fasoso?r np piatroroqrviuindeget,?r )lsa, teelrig)ibility and C thhtoetnp Assu:P/mI/ dpienrvog.ja :itz ujurest.c ionmvo/lovnesc odleoﬁgnyainnga lay tSicesr/vTiceecDhneoﬁlnoigtiyo/n_ ginit /tohnec roohoeta oltfh - ppedparrouyisvgeoir ddI DIeeDrs IIDD?sPKPNaaymePreIadyergsturiidngPFKKINPLdoaabymeTreyIpdegsgetnuuruiiiddnmgFFFKKKMPEMmraeojmpdolurobLcyeitenrLIreid G nOerfoIBduupsIidnessIdgggstuuuriiiidddngWiwdoeern gkteeiﬁdt e afrno t rha aac ttpu praoel vrPsideisertsrso ownwIitdnhee and t pihﬁeeerarsl otfhrno prmelag mna ruodsplte hosesf r toehf ie nhm oW.w II mtf oiasr na1y 1" c cyroeavaderlresa atgone dsg rtsahpveeeyn" ht / aa bv TeeOl.l y NI b ouft ton
+FIonDrgmreuusgtls aNMryeS wto Migr(aMPtieipg etrolai ntNieoe)nw UMR(Dercuegivse E Rxepqloureesrt)(DWrurigtes tEox pOloLTrePr)( C Pauslel C C aRsUesD)(N C eawse R C eRcUorDd)( C Warsiete C C RaUsDe)P(uEbvle C isnhhta QEnxguteeeurnea)l ODUanAtiutaytbh cr aiIcdtkaeslno wtgito yfro kFrse pMdaeigcrearasti to(iponrn ov adian aOdn kRdte anp?oonrptirnogd p) aipnedli nesu ahnmttdp- asinp:/ i/P-d nreoovgt.iarﬁazcmuart.eico.scn,o -y smoeu/rov enicxcetoe?l pnoadgt yhBa…ansaelSyetircvsi/cTee:chnology/_git/oncohealth- C cTahasesee C IMaDlsoesec tt ak C o RfSuocUprhD dSe aQmlatLeyai e tmaerl escbotalao ncdb oma?nt (eatoar r(gic nueos sn SeaﬁQ RwgLe rivtdieetier sﬁ-s) oiloensnl y,f oetart cbc)laes eresl ainti nthge ...... C C NooavvmeeerraaggeeEEﬀndectiveddstaarttineegt Id itmehreiinv eok n aw tPhheaerts sweo enit edImDo soN.u OrTs ewlvaenst. t Voe grey td oaunrgseerlvoeuss iwnt/o p, aist imenatt scahfinetgy ,t heetc c.overages and trying to
+UpdatPeo irnta Aldmin New Record(USpQdLaittee B C laosbess)(DWrurigtes tEox pOlLoArePr)u yFoemau-t agupereit- F nDloaIt griﬁes cg(avisitatior eannt-i svoe ncr,ov Onicﬁkegt?a ps )aA, tuahtn…hdN S/wAuatghgZe, rK feoyrV fareuelt, Redis, Advascnaatmsaege es etsop:rieso isd efu.lly scalable in volume and accessesPFFKKKIPMdaayjeorrILdiBnuesOinfBeusss G inreosuspIdinggTgyuupiiddePFKKINMdaamjoerLineOfBPursoindeuscstIdgsgtuuriiiddngSD C ...SuaNstetoOmfBFiiretlhdssdjstaortinneg In 12m.. C yP oeavxteiperenartgi e/e n M/c PeRl Na(fn r=o =mB te hplleya yEBemurt pptoleonrys eIpDre g/c rt C oivrueap)d: lpeu troc h G arsaivneg insurance coverage from the payer
+(Drugs Schema)Lo( C oaksuep M C eatsae s(ReNpeowrt iRnegc OorLdAP) F C hotlitrep nDst:I,/, / Dydoaeutva. aj,u zesuttcr d.e) .eacﬁonnmde /t aho neB csootoalotrsgttuyrpaap napauletyrot imﬁclsea/ tTaiectca ehllanyc orhel olgagiysyet/e_rrg (sAit eP/ovI,en Brcyouthshieinnaeglst:hs,- Drawchcbaooasrtece/ck ddosaa:ldttaa s tmcoaornad'tge ebl eec nasncpa lbipte su uhplaa bntyed dalecdc iadte inntfrastructure layerFFKKPBN...auarsmeinneet G ssr G ourapiinnIgdngstuurliildnagble guidFKP...arentBusiness G roupingguidHidden from API C cllaa3ii.mmMwssh e pwemrneob rcteeeh rsae s=yci t nThughaa evlsl eyyc soeatmﬀtetmeabcci tnhlouaeoatdtkio eetndod oi/un fbps tiu lhtlreheade nP tccaooet iv aece onPrvtaa e+gtri eea C (ngost)ev /a et vrMoaa pRgilaaNeyb., lntAeho Paettia ra tt cihceleoan vitPme borsiean.cgtoe imn. TeThsim eane m, ooefu mtrh bee r
+Schema)um- api- notiﬁcation- service? path…tnnoee eereddv cteour ssmeto aami nb tmaadiing c rboauntilﬁokg niun lrgoaegtsiioct nA,P mIsust open each SQLite ﬁleFlatten this hierarchy?PKINdameEmployer G roupgsturiidngRead- Only from APIccloavimer.a gWee a actcitvuitayl.l y had derived coverage / member identiﬁers in our EDW because of retro
+Hello!PFFKKKIPPdaayreenrItd G raBiunsiness G raingTnyuupildleable guid...Read/Write from API
+N...amestring
+
+=== Page 85 ===
+PRaOs oPf POhaSseE 1D DRAFT: Eligibility Schema
+PKVersionPayerguidPKVersionRelatedPersonguid
+VVeerrssiioonn C EnredatedddttVVeerrssiioonn C Enredatedddtt
+PDaeyleetreIddAtinnutllable dtDVeerlesitoendBAytnguulidlable dt
+FFKKPPaarreennttPPaayyeerrIVdersiongTyupideVReerlastioionnFToyrpegenuuidm: Subscriber,
+VVeerrssiioonnFBoyrgguuiiddFKRelatedPersonIdRguepidresentative
+NamestringPKVersionEligibilityguidFLiarssttNNaammeessttrriinngg
+DSeersvcirciepMtioenthodnnuullllaabbllee ssttrriinnggVVeerrssiioonn C DreeleatteeddAAttdntullable dtMiddleInitialstring(1)
+RMeaaxlMtimemeAbuetrhIdMLeetnhgotdhninutllable stringVersion C reatedByguid G DeatnedOefrBirthsdtartineg(1)
+MemberIdPatternstring: RegExpVVeerrssiioonnEEnnddByddttFKAHdodmreesPshVoenresiongsturiidn,g nullable
+MIsEemmpbleoryIedrV G arlioduaptiRoenqMueirsesdagesbtoroinlgVersionForgenuuidm: ADD, C HAN G E, TERM, REINSTATE,WorkPhonestring
+FKVReerlastioendAPcetrisoonnVersionMguIi G dRATIONWMoorbkilPehPohnoenEextssttrriinngg
+PKVersionBusiness G roupingguidKeyRPeerlastoendIPdersonAdressVersionTstyrpinegSsnstring
+VVeerrssiioonn C EnredatedddttKeyPPaattiieennttIFdirstNamessttrriinngg
+DVeerlesitoendBAytnguuilldable dtKKeeyyPPaattiieennttALadsdtrNeasmsVeersionTstyrpineg
+FKVPearyseiroIndForgTyupideKeyPatientMiddleInitialstringPKVersionAddressguid
+MajorLineOfBusinessVersionguidKKeeyyPPaattiieenntt G DeantedOefrBirthedntumVVeerrssiioonn C Enredatedddtt
+FFKKPBaurseinnet G ssr G ourapiinnVgeVresriosinonnguuilldable guidKeyPPaattiieennttSHSoNmePhonessttrriinnggDeletedAtnullable dt
+NamestringKeyPatientHomePhoneExtstringVVeerrssiioonnBFoyrgguuiidd
+Business G rainKKeeyyPPaattiieennttWWoorrkkPPhhoonneeExtssttrriinnggAAddddrreessssLLiinnee12ssttrriinngg
+PKVVeerrssiioonn C reatedgdutidKKeeyyPPaattiieennttMMoobbiilleePPhhoonneeExtssttrriinngg C Stitaytessttrriinngg(2)
+VDeerlesitoendEAntddntullable dtKFKeyPParotideuncttPVreerfesirornedLanguage C odeegnuuidmZZiipp C Ploudse C odessttrriinngg
+VVeerrssiioonnFBoyrgguuiiddFKKeyPPaayyeerrVIdersiongguuiidd
+FFKKPPaayreenrVt G errsaiionnVersionTnyuplleable guidFKEElmigpibloilyiteyrS G oruorucpeVersionennuullamb:l eN gewuiUdM, ETLEmployer G roup
+NamestringKeyAMcacjeosrsLiibnieliOtyfPBruesfeinreesnscesgturiidngPKVVeerrssiioonn C reatedgdutid
+BeneﬁtPlanKFKeyHLianseROefpBruessiennetsastViveersionbgouoidlKeyVDeerlesitoendEAntddntullable dt
+PKVVeerrssiioonn C reatedgdutidKeyM C aermdIbderIdssttrriinnggVVeerrssiioonnBFoyrgguuiidd
+VDeerlesitoendEAntddntullable dtKeyMMeemdicbaeirdRNeupmorbtienrgIdssttiinnggFKNAdadmreessVersionsgturiidng
+VVeerrssiioonnFBoyrgguuiiddKeyM C oevdeircaagreeBEﬀeneectﬁivciearyIdTdyapteeEIsxEtreirsnaal G roupIdsbtoroinlg
+NSoaumrceeIdsintrting C PloavneDraegscerEipntdiondstartinegI C soAncttrivaectEﬀectiveDatebdoatoel
+FFKKLPianreeOnftBBuussiinneessssV G erorsuiopningVersiongguuiiddAPasotiIenndtiAcdartoesrsVersionbool C ontractTerminationDatedate
+PPrroodduucctt C LiondeeNamessttrriinnggMemberBeneﬁteMneudmic:a MlAenddiPcahla, rPmhaacrmyacy,
+PHraosdOuucttOOfﬀNeertiwngoNrkaBmeeneﬁtsbtoroinlgS C taartreieOrfIPdlanIssuessttrriinngg
+FormularyNamestringFKABcecnoeuﬁntPtIadckageVersionsgturiidng
+LineOfBusinessIHnassuOrauntOcef G NreotwupoIrdkBeneﬁtsbtoroinlg
+PKVVeerrssiioonn C reatedgdutidIIssRERx C ISaAr vedOutbnouollalble bool
+VDeerlesitoendEAntddntullable dtKeyIPsrFeEsHcrBipPtlaionn C arveoutTypenenuullamb:l eY ebso, oNlo, NotApplicable, nullable
+VVeerrssiioonnBFoyrgguuiiddRRxx C C aarrvveeOOuuttSEtnadrDtDaateteddaattee
+FKNPaaymereVersionsgturiidngRDiusakPlEalitgieibnitlityStatusbstoroinlg
+MPraojdourLcitnTeyOpefBusinessVersionEnNulUlaMble stringIPsrOoudtuOctfTAyrpeaebstoroinlg
+IsActiveboolR C eolvaetrioangsehTiypp C eo C doedessttrriinngg
+C PhoanrtmraactcNy G umrobueprIdssttrriinngg
+ESpligainbTilyitpyeSourcesetnruinmg
+NSuapmperessLetterssbtoroinlg
+L C eutstteormSuFpieplrdesssionDateTjsyopneb
+
+=== Page 86 ===
+PKTaxonomyT C aoxdoenomyReferenceT1VAR C HAR(10)
+T C alaxsosniﬁocmaytiToynpeVVAARR C C HHAARR((5100)0 N) NOOT TN NUULLLL
+STapxeocniaolimzaytDioenscVVAARR C C HHAARR((120000)) NNOULTL NULL
+IsActiveBOOLEAN
+PROPOSED DRAFT: Provider SchemaFKTaxonomy C oTdaexonomyLinkT1VAR C HAR(10) NOT NULL
+FK C lientProviderIdUUID NOT NULL
+PKNetworkDoctoNrIedtworkVAR C HAR(36)PKT1LinkIdT1LinkVAR C HAR(36) C lientT1
+FFKKTT12LLiinnkkIIddVVAARR C C HHAARR((3366)) FFKK C DloiecntotPrIrdoviderIdVVAARR C C HHAARR((3366)) NNOOTT NNUULLLLPFKK C InliseunrtaPnrcoevPidreorvIidderIdVVAARR C C HHAARR((3366)) NOT NULL
+FKONeﬀtewrIodrkStatusVVAARR C C HHAARR((3260)) NNOOTT NNUULLLLNPIVAR C HAR(10) NOT NULLKeyINnPsIuranceProviderVersiongVAuRid C HAR(10) NULL
+NEﬀeetwctoivrekFTrieormVTIAMRE C SHTAARM(2P0 N) NOUT LNLULLTSapxeocniaolimtyy C odeVVAARR C C HHAARR((110000)) NNOOTT NNUULLLL
+EIsﬀAeccttiviveeToTBIOMOELSETAANM PN ONTU NLLULL C UrpedaateteddAAttTTIIMMEESSTTAAMMPP NNOOTT NNUULLLL
+AApppprroovveeddABtyTVIAMRE C SHTAARM(1P0 N0)O NTU NLULLLT1T2Link
+C UrpedaateteddAAttTTIIMMEESSTTAAMMPP NNOOTT NNUULLLLFFKK C C lliieennttPFarocivliitdyeIrdIdVVAARR C C HHAARR((3366))
+PKTaxonomTya C xoodneomyReferenceVAR C HAR(10)PK C lientFacilityId C lientT2VAR C HAR(36)
+T C alaxsosniﬁocmaytiToynpeVVAARR C C HHAARR((5100)0 N) NOOT TN NUULLLLPKT2LinkIdT2LinkVAR C HAR(36)FKKeyIInnssuurraanncceePPrroovviiddeerrIVdersionVgAuRid C HAR(36) NOT NULL
+STapxeocniaolimzaytDioenscVVAARR C C HHAARR((120000)) NNOULTL NULLFFKK C FaliceinlittFyIadcilityIdVVAARR C C HHAARR((3366)) NNOOTT NNUULLLLNTIPNIVVAARR C C HHAARR((1100)0 N) NUULLLL
+IsActiveBOOLEANFKLNoPcIationIdVVAARR C C HHAARR((3366)) NNOOTT NNUULLLL C UrpedaateteddAAttTTIIMMEESSTTAAMMPP NNOOTT NNUULLLL
+FKTaxonomy C ToadxeonomyLinkVAR C HAR(10) NOT NULLPKLocationIdLocationVAR C HAR(36)
+FKDoctorIdUUID NOT NULLFK C AldiednretFsascLiilnitey1IdVVAARR C C HHAARR((3260)0 N) NOOT TN NUULLLL
+PKHistoryIdDoctorT1VAR C HAR(36) A C idtdyressLine2VVAARR C C HHAARR((210000)) NNUOLTL NULL
+FKDFiorscttNoraImdeVVAARR C C HHAARR((3160)0 N) NOOT TN NUULLLLSPtoastteal C odeVVAARR C C HHAARR((5200)) NNUOLTL NULL
+MLaisdtdNleaNmaemeVVAARR C C HHAARR((110000)) NNUOLTL NULL
+S C ureﬃdxentialVVAARR C C HHAARR((2100)0 N) NUULLLL
+G SoelnedPeorprietorVB C OHOALRE(A1N) N NOOTT N NUULLLLPKProviderIdHealthcareProviderVAR C HAR(36)PKHistoryIdLocationVAR C HAR(36)
+IVsaAlicdtFivreomBTIOMOELSETAANM PN ONTU NLLULLNEnPtIityTypeVVAARR C C HHAARR((110) C )HE C K FFKKLFaoccialittiyoIndIdVVAARR C C HHAARR((3366))
+ValidToTIMESTAMP NULL C reatedAt C TIoMnEstSrTaAinMt P('1', '2')FKLAodcdarteiossnLTiynpee1IdVVAARR C C HHAARR((3260)0) NOT NULL
+C C hhaannggeedRBeaysonVVAARR C C HHAARR((120505)) NNOOTT NNUULLLLAddressLine2VAR C HAR(200) NULL
+C StitayteVVAARR C C HHAARR((15000) N) NUOLLT NULL
+PKDoctorLocaDtioocntIodrLocationVAR C HAR(36) NOT NULLPostal C odeVVAARR C C HHAARR((2500)) NNOOTT NNUULLLL
+FFKKDLooccattoiroIndIdVVAARR C C HHAARR((3366)) NNOOTT NNUULLLL C PhoounnetryDVAERFA C UHLATR ('U20S)' NULL
+IEsﬀPercimtivaerFyromBTIOMOELSETAANM PN ONTO NT UNLULLLFIsaPxrimaryVBAORO C LHEAARN( 2N0O) NT UNLULLL
+EﬀectiveToTIMESTAMP NOT NULLI C srAecattievedAtBTIOMOELSETAANM PN ONTO NT UNLULLL
+KeyUFipelddatedAtTTyIMpeESTAMP NOT NULL
+PKHistoryIdFacilityT2VAR C HAR(36)
+FKFNaacmilietyIdVVAARR C C HHAARR((3160)0 N) NOOT TN NUULLLL
+PFaacreilintytFTaycpielityIdUVAURID C H NAURL(5L0) NULL
+IVsaAlicdtFivreomBTIOMOELSETAANM PN ONTO NT UNLULLL
+V C ahlaidnTgoedByTVIAMRE C SHTAARM(1P0 N0)U NLULLL
+C hangedReasonVAR C HAR(255) NULL
+PKLocationTypeIDLocationTypeVAR C HAR(36)
+TTyyppee C DoedsceVVAARR C C HHAARR((2100)0 N) NOOT TN NUULLLL
+I C srAecattievedAtBTIOMOELSETAANM PN ONTO NT UNLULLL
+
+=== Page 87 ===
+C ustom Fields
+Data Dictionary
+Steps
+Transitions
+Actions
+NRules
+Rule C onﬁguration
+View C onﬁguration
+Action Named FunctionsTablesTables
+Templates
+Letters
+C onﬁguration

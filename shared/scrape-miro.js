@@ -2,25 +2,41 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
+// --client flag support
+const args = process.argv.slice(2);
+const clientIdx = args.indexOf('--client');
+const CLIENT = clientIdx !== -1 ? args[clientIdx + 1] : null;
+const ROOT_DIR = path.resolve(__dirname, '..');
+
 const MIRO_URLS = [
-  { name: '03-miro-newum-board', url: 'https://miro.com/app/board/uXjVGVycF3Y=/' },
-  { name: '04-miro-rachel-board', url: 'https://miro.com/app/board/uXjVJUOanb0=/?moveToWidget=3458764651332971013&cot=14' },
+  { name: '03-miro-newum-board', url: 'https://miro.com/app/board/uXjVJUOanb0=/' },
 ];
 
-const OUT_DIR = path.join(__dirname, 'output', 'onboarding-content');
+// Output dir: clients/<client>/output/ if --client, else shared/output/
+const OUT_DIR = CLIENT
+  ? path.join(ROOT_DIR, 'clients', CLIENT, 'output')
+  : path.join(__dirname, 'output', 'onboarding-content');
 
-// Which Miro to start with (0-based index)
-const START = parseInt(process.argv[2] || '0', 10);
+// Which Miro to start with (0-based index from positional args)
+const positionalArgs = args.filter((a, i) => a !== '--client' && (clientIdx === -1 || i !== clientIdx + 1));
+const START = parseInt(positionalArgs[0] || '0', 10);
+
+// Persistent session dir — reuse Okta session (has SSO cookies)
+const SESSION_DIR = path.join(ROOT_DIR, '.playwright-session-okta');
 
 (async () => {
-  const browser = await chromium.launch({ headless: false, slowMo: 100 });
-  const context = await browser.newContext({ viewport: { width: 1400, height: 900 } });
+  const context = await chromium.launchPersistentContext(SESSION_DIR, {
+    headless: false,
+    slowMo: 100,
+    channel: 'msedge',
+    viewport: { width: 1400, height: 900 },
+  });
   const page = await context.newPage();
 
   const entry = MIRO_URLS[START];
   if (!entry) {
     console.log(`Invalid index ${START}. Valid: 0-${MIRO_URLS.length - 1}`);
-    await browser.close();
+    await context.close();
     return;
   }
 
@@ -28,15 +44,131 @@ const START = parseInt(process.argv[2] || '0', 10);
   console.log(`  Opening: ${entry.name}`);
   console.log(`  URL: ${entry.url}`);
   console.log(`========================================`);
-  console.log(`\n>>> You have 2 MINUTES to log in / authenticate.`);
-  console.log(`>>> The script will auto-check every 10 seconds.`);
-  console.log(`>>> Once content is detected, it will capture and save.\n`);
+  console.log(`\n>>> Attempting Miro SSO login with Okta session...`);
+  console.log(`>>> Then loading board. You have 3 MINUTES to authenticate if needed.`);
+  console.log(`>>> The script will auto-check every 10 seconds.\n`);
 
+  // Load .env for credentials
+  const envPath = CLIENT
+    ? path.join(ROOT_DIR, 'clients', CLIENT, '.env')
+    : path.join(__dirname, '.env');
+  if (fs.existsSync(envPath)) {
+    const envContent = fs.readFileSync(envPath, 'utf-8');
+    envContent.split('\n').forEach(line => {
+      const [key, ...rest] = line.split('=');
+      if (key && rest.length) process.env[key.trim()] = rest.join('=').trim();
+    });
+  }
+  const OKTA_USER = process.env.OKTA_USERNAME || process.env.MS_USERNAME || '';
+  const OKTA_PASS = process.env.MS_PASSWORD || '';
+  const MIRO_EMAIL = process.env.MS_USERNAME || OKTA_USER;
+  console.log(`Using email: ${MIRO_EMAIL}`);
+
+  // Step 1: Navigate to board URL directly — Miro will show login wall
   await page.goto(entry.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.waitForTimeout(3000);
 
-  // Poll every 10 seconds for up to 2 minutes
+  // Step 2: Try to automate login if we see the login wall
+  let loginAttempted = false;
+  const tryLogin = async () => {
+    if (loginAttempted) return;
+    const bodyText = await page.evaluate(() => document.body?.innerText || '');
+    if (!bodyText.includes('Sign in') && !bodyText.includes('Log in') && !bodyText.includes('Sign up')) return;
+    
+    console.log('>>> Attempting automated Miro login...');
+    loginAttempted = true;
+
+    // Look for "Sign in" link/button and click it
+    const signInClicked = await page.evaluate(() => {
+      // Try various selectors for the sign-in link
+      const links = document.querySelectorAll('a, button');
+      for (const el of links) {
+        const text = el.textContent?.trim();
+        if (text === 'Sign in' || text === 'Log in' || text === 'Sign in to view') {
+          el.click();
+          return true;
+        }
+      }
+      return false;
+    });
+
+    if (signInClicked) {
+      console.log('  Clicked "Sign in" — waiting for login page...');
+      await page.waitForTimeout(3000);
+    } else {
+      // Try navigating to Miro login directly
+      console.log('  No sign-in button found, navigating to login page...');
+      await page.goto('https://miro.com/login/', { waitUntil: 'domcontentloaded', timeout: 15000 });
+      await page.waitForTimeout(2000);
+    }
+
+    // Try to enter email and submit
+    const currentUrl = page.url();
+    console.log(`  Login page: ${currentUrl}`);
+    
+    // Look for email input field
+    const emailInput = await page.$('input[type="email"], input[name="email"], input[id*="email"], input[placeholder*="email" i], input[placeholder*="Email" i]');
+    if (emailInput && MIRO_EMAIL) {
+      console.log(`  Entering email: ${MIRO_EMAIL}`);
+      await emailInput.fill(MIRO_EMAIL);
+      await page.waitForTimeout(500);
+      
+      // Look for continue/submit button
+      const submitBtn = await page.$('button[type="submit"], button[data-testid*="submit"], button[data-testid*="continue"]');
+      if (submitBtn) {
+        await submitBtn.click();
+        console.log('  Clicked continue/submit — waiting for SSO redirect...');
+      } else {
+        await page.keyboard.press('Enter');
+        console.log('  Pressed Enter — waiting for SSO redirect...');
+      }
+      await page.waitForTimeout(5000);
+      
+      // Check if we're at Okta SSO
+      const ssoUrl = page.url();
+      console.log(`  Current URL after email: ${ssoUrl}`);
+      
+      if (ssoUrl.includes('okta') || ssoUrl.includes('sso')) {
+        console.log('  Okta SSO detected — checking if session handles it...');
+        // The Okta session cookies should handle this
+        // Check for username/password fields
+        const usernameInput = await page.$('input[name="identifier"], input[name="username"], input#okta-signin-username');
+        if (usernameInput) {
+          console.log('  Entering Okta credentials...');
+          await usernameInput.fill(OKTA_USER.includes('@') ? OKTA_USER.split('@')[0] : OKTA_USER);
+          await page.waitForTimeout(500);
+          const nextBtn = await page.$('input[type="submit"], button[type="submit"]');
+          if (nextBtn) await nextBtn.click();
+          await page.waitForTimeout(3000);
+          
+          const passInput = await page.$('input[type="password"], input[name="credentials.passcode"]');
+          if (passInput && OKTA_PASS) {
+            await passInput.fill(OKTA_PASS);
+            await page.waitForTimeout(500);
+            const verifyBtn = await page.$('input[type="submit"], button[type="submit"]');
+            if (verifyBtn) await verifyBtn.click();
+            console.log('  Submitted Okta password — waiting for MFA or redirect...');
+            console.log('  >>> APPROVE THE OKTA MFA PUSH ON YOUR PHONE! <<<');
+            await page.waitForTimeout(15000);
+          }
+        }
+      }
+      
+      // After login flow, go back to board
+      const afterLoginUrl = page.url();
+      if (!afterLoginUrl.includes('board')) {
+        console.log('  Navigating back to board...');
+        await page.goto(entry.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await page.waitForTimeout(5000);
+      }
+    } else {
+      console.log('  No email input found on login page');
+    }
+  };
+
+  // Poll every 10 seconds for up to 3 minutes (18 checks)
   let captured = false;
-  for (let attempt = 1; attempt <= 12; attempt++) {
+  for (let attempt = 1; attempt <= 18; attempt++) {
     await page.waitForTimeout(10000);
 
     const currentUrl = page.url();
@@ -44,7 +176,7 @@ const START = parseInt(process.argv[2] || '0', 10);
     const bodyText = await page.evaluate(() => document.body?.innerText || '');
     const chars = bodyText.length;
 
-    console.log(`[Check ${attempt}/12] ${chars} chars | URL: ${currentUrl.substring(0, 80)}...`);
+    console.log(`[Check ${attempt}/18] ${chars} chars | URL: ${currentUrl.substring(0, 80)}...`);
     console.log(`  Title: ${title}`);
 
     // Check for login walls
@@ -52,7 +184,8 @@ const START = parseInt(process.argv[2] || '0', 10);
     const foundLogin = loginPatterns.filter(p => bodyText.includes(p));
     if (foundLogin.length > 0) {
       console.log(`  ⚠️  Login wall detected: ${foundLogin.join(', ')}`);
-      console.log(`  >>> Please log in in the browser window...`);
+      // Try automated login on first detection
+      await tryLogin();
       continue;
     }
 
@@ -135,8 +268,8 @@ const START = parseInt(process.argv[2] || '0', 10);
       break;
     }
 
-    // If it's been 60 seconds and still nothing, take a diagnostic screenshot
-    if (attempt === 6) {
+    // If it's been 90 seconds and still nothing, take a diagnostic screenshot
+    if (attempt === 9) {
       const diagPath = path.join(OUT_DIR, `${entry.name}-diagnostic.png`);
       await page.screenshot({ path: diagPath, fullPage: false });
       console.log(`  📸 Diagnostic screenshot saved: ${diagPath}`);
@@ -144,7 +277,7 @@ const START = parseInt(process.argv[2] || '0', 10);
   }
 
   if (!captured) {
-    console.log(`\n❌ Could not capture ${entry.name} after 2 minutes.`);
+    console.log(`\n❌ Could not capture ${entry.name} after 3 minutes.`);
     // Save whatever we have
     const finalText = await page.evaluate(() => document.body?.innerText || '');
     const txtPath = path.join(OUT_DIR, `${entry.name}.txt`);
@@ -158,5 +291,5 @@ const START = parseInt(process.argv[2] || '0', 10);
 
   console.log(`\n>>> Done with ${entry.name}. Browser will stay open 30 more seconds...`);
   await page.waitForTimeout(30000);
-  await browser.close();
+  await context.close();
 })();

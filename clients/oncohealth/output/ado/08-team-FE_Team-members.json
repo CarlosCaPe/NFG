@@ -1,0 +1,186 @@
+{
+  "value": [
+    {
+      "identity": {
+        "displayName": "Bogdan Chachun",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+          }
+        },
+        "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+        "uniqueName": "bchachun@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=cecc7f45-f385-6409-8161-11a488ecdd2d",
+        "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Chris Gillis",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/ba151af5-681e-6000-9912-166096d94a5a",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmExNTFhZjUtNjgxZS03MDAwLTk5MTItMTY2MDk2ZDk0YTVh"
+          }
+        },
+        "id": "ba151af5-681e-6000-9912-166096d94a5a",
+        "uniqueName": "cgillis@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=ba151af5-681e-6000-9912-166096d94a5a",
+        "descriptor": "aad.YmExNTFhZjUtNjgxZS03MDAwLTk5MTItMTY2MDk2ZDk0YTVh"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Caitlin Bowler",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/949d4b93-0fe8-6178-bfb0-189253726154",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OTQ5ZDRiOTMtMGZlOC03MTc4LWJmYjAtMTg5MjUzNzI2MTU0"
+          }
+        },
+        "id": "949d4b93-0fe8-6178-bfb0-189253726154",
+        "uniqueName": "cbowler@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=949d4b93-0fe8-6178-bfb0-189253726154",
+        "descriptor": "aad.OTQ5ZDRiOTMtMGZlOC03MTc4LWJmYjAtMTg5MjUzNzI2MTU0"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Andrii Zhdan",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/2b216c32-75c5-61d4-b5da-28daf7beb7e5",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MmIyMTZjMzItNzVjNS03MWQ0LWI1ZGEtMjhkYWY3YmViN2U1"
+          }
+        },
+        "id": "2b216c32-75c5-61d4-b5da-28daf7beb7e5",
+        "uniqueName": "azhdan@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=2b216c32-75c5-61d4-b5da-28daf7beb7e5",
+        "descriptor": "aad.MmIyMTZjMzItNzVjNS03MWQ0LWI1ZGEtMjhkYWY3YmViN2U1"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Dmytro Petriv",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/7cde3231-270d-6966-91ba-42dfadd3f672",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.N2NkZTMyMzEtMjcwZC03OTY2LTkxYmEtNDJkZmFkZDNmNjcy"
+          }
+        },
+        "id": "7cde3231-270d-6966-91ba-42dfadd3f672",
+        "uniqueName": "dpetriv@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=7cde3231-270d-6966-91ba-42dfadd3f672",
+        "descriptor": "aad.N2NkZTMyMzEtMjcwZC03OTY2LTkxYmEtNDJkZmFkZDNmNjcy"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Taras Badlo",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
+          }
+        },
+        "id": "3090f017-4f2d-6e26-9906-4d41973369f3",
+        "uniqueName": "tbadlo@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=3090f017-4f2d-6e26-9906-4d41973369f3",
+        "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Oleksandr Nykonenko",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+          }
+        },
+        "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
+        "uniqueName": "onykonenko@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=12960cbb-32f2-6064-95d1-7b98b06dbad2",
+        "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Vika Nobis",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/7210819e-af1a-6474-9249-9ab61b81edf4",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+          }
+        },
+        "id": "7210819e-af1a-6474-9249-9ab61b81edf4",
+        "uniqueName": "vnobis@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=7210819e-af1a-6474-9249-9ab61b81edf4",
+        "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Petro Brezitskiy",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+          }
+        },
+        "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
+        "uniqueName": "pbrezitskiy@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=a8a86b43-2aad-6047-8d5b-d146ec643602",
+        "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+      }
+    },
+    {
+      "isTeamAdmin": true,
+      "identity": {
+        "displayName": "Alexander Rodriguez",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/47128d46-d056-6a6d-bbf5-de8d4d542008",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDcxMjhkNDYtZDA1Ni03YTZkLWJiZjUtZGU4ZDRkNTQyMDA4"
+          }
+        },
+        "id": "47128d46-d056-6a6d-bbf5-de8d4d542008",
+        "uniqueName": "arodriguez@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=47128d46-d056-6a6d-bbf5-de8d4d542008",
+        "descriptor": "aad.NDcxMjhkNDYtZDA1Ni03YTZkLWJiZjUtZGU4ZDRkNTQyMDA4"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Mykola Vorona",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+          }
+        },
+        "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
+        "uniqueName": "mvorona@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=bf5ae742-7ff0-6848-a304-eb6e527da460",
+        "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Inna Mariienko",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e921eb32-d55a-6ecb-a7fa-f1c12cf85383",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTkyMWViMzItZDU1YS03ZWNiLWE3ZmEtZjFjMTJjZjg1Mzgz"
+          }
+        },
+        "id": "e921eb32-d55a-6ecb-a7fa-f1c12cf85383",
+        "uniqueName": "imariienko@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=e921eb32-d55a-6ecb-a7fa-f1c12cf85383",
+        "descriptor": "aad.ZTkyMWViMzItZDU1YS03ZWNiLWE3ZmEtZjFjMTJjZjg1Mzgz"
+      }
+    }
+  ],
+  "count": 12
+}

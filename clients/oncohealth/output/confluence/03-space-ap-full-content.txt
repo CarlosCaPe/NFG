@@ -1,0 +1,284 @@
+# Analytics Platforms — Full Content Export
+Exported: 2026-03-23T19:44:59.247Z
+Pages: 4
+
+
+# Analytics Azure Platform
+
+Overview
+
+falseWelcome to Analytics Platforms homepage. Here you can find all documentations related to the Analytics platforms, including the data storage and the tools used to process the data. We use Azure as our platform base. Within Azure there are many different tools we utilize. 
+
+Storage Accounts
+
+We have multiple storage accounts that are a mix of blob and more structured lakes. 
+
+black1solidAccounts
+
+ - This is our main analytics account. It has multiple containers. The most used is the analytics container. It has copies of MATIS data, raw claims, eligibility, project specific data, and many other pieces. The folder structure can be found . It also has containers for our matis document repository - faxes, medical records, etc are stored there in multiple forms &ndash; matisdocuments, matisprocesseddocuments, and matisocreddocuments.
+
+oadatameer - Used for datameer snapshots and builds (for more information on datameer talk to Tim)
+various other storage accounts used for tools that are unaccessible except through the toolDatabricks Delta Lake storage: dbstorage35el7kp7cjmla, dbstorageg2kusgu23ditc
+Elastic: elastic7t2sosc6fvz3q
+Decisions: decisionsrgdevdiag, decisionsrguatdiag, decisionsrgrepodiag, decisionsrgproddiag
+ (OCR): nuancergpocdiag
+
+SQLServer
+
+ and our savings data is stored in SQLServer. There are 2 analytics environments, AZ-SQLDEV-01 and AZ-SQLPROD-01, each with multiple databases. 
+
+black1solidMATIS Database Design
+
+Oncology Analytics MATIS Database Design
+
+Analytics Tables &ndash; (these are not complete and some what out of date)
+
+Protocol Elements Table
+
+Patient Protocol Assignment Table
+
+Assignment Details Table
+
+OA Saving Scenarios Table
+
+Humana Savings Scenarios Table
+
+Savings OA Details By Drug Table
+
+Savings OA Additional Details By Drug Table
+
+Savings OA Details by Protocol Table
+
+Savings OA Additional Details By Protocol Table
+
+Databricks 
+
+Databricks is a spark based processing tool that we use for most of our analytics. 
+
+black1solidInstance of Databricks
+
+We have 3 instances of databricks. One (oaspark) is our development engine. This is where we do our research and development along with any processes that are sporadic or inconsistent (Impact Analysis). The second is our testing environment as well as the storage location for some of our powerBI dashboards (oaspark2). The third (insights) is our production engine. It contains both the production versions of the CDR and Oncology Insights. There are much stricter regulations on this server and it's much less flexible. In each instance the folder structure for code is basically the same:
+
+Code Structure
+
+Scripts | Definition | Location | Notes | 
+Templates | templates for building specific instances of our products | Shared/Templates/$Product |  *Don't alter these, always make a copy into the client specific folder | 
+Payer Specific | the template modified or individual code specific to each payer | Shared/Payer/$Payer/$Product | 
+ | 
+Automated | scripts that are automatically run to ingest or process data | Shared/DataUpkeep/$SystemOrProduct | 
+ | 
+Training* | generic introduction and training scripts | Shared/TrainingMaterial | Please make a copy of these to your individual workspace if you want to use | 
+Working*
+
+ | code in the building process, not ready to commit | Shared/Working | 
+ | 
+Users Specific | your personal folder for building scripts or data | Users/$User | 
+ | 
+*only found in the development environments
+
+Table Structure
+
+Database | Definition | Notes | 
+medcodes | med codes data built by Dinah for code processing (icd, hcpcs, ndc, etc) | refreshed with dinah's refreshes | 
+fdb | all first data bank tables | refreshed weekly on sunday | 
+matis | general matis tables | refreshed daily/monthly | 
+$Payer | payer specific tables | 
+ | 
+analytics_dashboard
+
+ | pharmacy dashboard tables | refreshed weekly on sunday | 
+cdr | tables pertaining to the cdr | refreshed daily?
+
+ | 
+oncologyinsights | the generic oncology insights tables | refreshed monthly on the 10th | 
+
+ | 
+ | 
+ | 
+
+ | 
+ | 
+ | 
+
+Delta Lake
+
+Delta Lake is databrick's version of a data lake with the addition of versioning and the speed of spark. The data is structure in a specific format and then tables are built on top for use. This allows the underlying data to be separate from the usable data, which adds another layer of security. 
+
+We have two lake structures, one for the  and one for  tables. More detailed information about these can be found on their respective pages. 
+
+PowerBI
+
+PowerBI is our visualization tool of choice. We've developed a huge suite of dashboards and reports for use by internal and external clients. Everyone who wants to access our dashboards needs an account. These are requested through Technology. To build reports, a pro account is needed. 
+
+black1solidInternal
+
+Management Metrics Dashboard
+Go-Live Dashboard
+Operational Dashboard
+Company Summary
+
+Azure DevOps
+
+We use Azure DevOps to coordinate our work (sprint tracking and backlog), and as our code repository.
+
+## Azure Folder Structures Documentation
+
+Overview
+
+black2solidThis documentation space has all the Azure folder structures we should follow in both our Blob storage and in Data bricks for all of our CA projects.
+
+Folder Structures Documented
+
+black2solidCurrently we have the following folder structures documented.
+
+Blob Structure
+
+Data - Bricks Script Structure
+
+Data-bricks Table Structure
+
+Blob Structure
+
+Analytics Blob
+
+black1solid
+
+Data Type | Definition | Location | Notes | 
+raw data | data straight from the payer | Claims/$payer/raw | 
+ | 
+
+ | 
+ | 
+ | 
+ | 
+mapped data | data mapped to our layout | impact_analysis/data/mapped/$payer | 
+ | 
+expanded | mapped data with additional fields added | impact_analysis/data/updated/$payer | 
+ | 
+final | finalized impact data with flags | impact_analysis/data/final/$payer | 
+ | 
+rule engine | subset of impact data sent to rules engine | impact_analysis/data/rules_engine/$payer | 
+ | 
+rule engine results | data returned from rules engine | impact_analysis/results/rules_engine/$payer | 
+ | 
+combined | data recombined w rule results | impact_analysis/results/final/$payer | 
+ | 
+matis | any tables from matis | MATIS | 
+ | 
+medcodes | anything for lookup or reference | MedCodes | 
+ | 
+
+ | 
+ | 
+ | 
+ | 
+tmps | temp stores while processing | tmp/ | Clean this up when done with data | 
+
+ | 
+ | 
+ | 
+ | 
+
+ | 
+ | 
+ | 
+ | 
+
+Azure Databricks Service
+
+black1solid
+
+Data - Bricks Script Structure
+
+black1solid
+
+Scripts | Definition | Location | Notes | 
+IA Templates | the code to perform IA | Shared/ImpactAnalysis_DataPrep |  *Don't alter these, always make a copy into the client specific folder | 
+Payer specific IA | the template code modified for each payer | Shared/Payer/$Payer  | 
+ | 
+Payer specific adhoc | adhoc code for payer analyses | Shared/Payer/$Payer  | 
+ | 
+
+ | scripts to update med code files | Shared/DataUpkeep | 
+ | 
+Training and playgrounds
+
+ | script used to train | Shared/TrainingMaterial | Please make a copy of these to your individual workspace if you want to use | 
+
+ | place to store reports while building | Shared/Working | 
+ | 
+
+Data-bricks Table Structure
+
+* We can define more of these if we start using lots of tables
+
+black1solid
+
+Data Type | Definition | Database | Notes | 
+medcodes | med code datasets | medcodes | 
+ | 
+impact analyses | tables created during impact analyses | impact_analyses | 
+ | 
+
+ | 
+ | 
+ | 
+ |
+
+### Getting started
+Labels: featured, documentation-space-sample
+
+Here are some tips to get you started. You can edit this page to see how it works!
+
+1. Create a page
+
+Click "Create" and select "Blank Page" to create your first page.
+New pages are created as children of the page you are currently viewing.
+2. Add to your page
+
+Click "Edit" to enter the Confluence editor and use the page layouts feature to structure your content using sections and columns.
+Use headings to format your text and drag and drop images into your page to provide visual interest.
+Click "Insert" and select "Other Macros" to add macros for navigation, special formatting and other media.
+On this page:
+
+3. Organise your pages
+
+Here are some tips for organising your content.
+
+Change the page order
+
+The sidebar on the left displays your pages in a hierarchy. If you have Space Administrator permissions you can click "Space Tools" > "Reorder Pages" to move pages around.
+
+Add labels
+
+Labels help keep pages organised and make it easier for you to find the information you need. Click "Labels" at the bottom of a page to add or edit. The "Related pages" section on this page uses labels too!
+
+Make templates
+
+Standardise and speed up the page creation process with templates. You can create and format a template with page layouts, standard headings and instructional text for hints and guidelines. Check out our sample page on
+                ""
+            
+
+Related pages
+
+AFSDfalsetitledocumentation-space-samplefalsepage
+
+#### Making a template
+Labels: featured, documentation-space-sample
+
+Give your authors a helping hand by using templates in your documentation space. You will need Space Administrator permissions to create templates.
+
+To create a template:
+
+Go to "Space Tools" in the sidebar, select "Content Tools" and create a new template.
+Click "Page Layout" and add sections and columns to your page.
+Add headings and sub-headings as needed.
+Choose "Instructional Text" from the "Template" menu and add text that is only visible in the editor.
+Save your template.
+Your template will become available in the Create dialog for this space.
+
+Related pages
+
+AFSDfalsetitledocumentation-space-samplefalsepage
+
+Useful hintConfluence Administrators can also make templates that are available across your whole Confluence instance.

@@ -1,0 +1,75 @@
+{
+  "id": 145195054,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/145195054",
+  "key": "MAT",
+  "alias": "MAT",
+  "name": "MATIS",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "145195109",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/145195109",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMTQ1MTk1MTA5",
+    "status": "current",
+    "title": "MATIS Home",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 145746196
+    },
+    "_expandable": {
+      "container": "/rest/api/space/MAT",
+      "metadata": "",
+      "restrictions": "/rest/api/content/145195109/restriction/byOperation",
+      "history": "/rest/api/content/145195109/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/145195109/descendant",
+      "space": "/rest/api/space/MAT",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/145195109/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/145195109",
+      "tinyui": "/x/ZYCnC",
+      "editui": "/pages/resumedraft.action?draftId=145195109",
+      "webui": "/spaces/MAT/overview",
+      "edituiv2": "/spaces/MAT/pages/edit-v2/145195109"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/MAT/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=MAT",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/MAT/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/MAT",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/MAT",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

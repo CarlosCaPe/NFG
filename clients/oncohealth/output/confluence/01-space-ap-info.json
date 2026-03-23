@@ -1,0 +1,75 @@
+{
+  "id": 258867252,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/258867252",
+  "key": "AP",
+  "alias": "AP",
+  "name": "Analytics Platforms",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "258867302",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/258867302",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMjU4ODY3MzAy",
+    "status": "current",
+    "title": "Analytics Azure Platform",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 1073741823
+    },
+    "_expandable": {
+      "container": "/rest/api/space/AP",
+      "metadata": "",
+      "restrictions": "/rest/api/content/258867302/restriction/byOperation",
+      "history": "/rest/api/content/258867302/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/258867302/descendant",
+      "space": "/rest/api/space/AP",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/258867302/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/258867302",
+      "tinyui": "/x/ZgBuDw",
+      "editui": "/pages/resumedraft.action?draftId=258867302",
+      "webui": "/spaces/AP/overview",
+      "edituiv2": "/spaces/AP/pages/edit-v2/258867302"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/AP/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AP",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/AP/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/AP",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/AP",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

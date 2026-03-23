@@ -1,0 +1,879 @@
+# MATIS — Full Content Export
+Exported: 2026-03-23T19:45:11.838Z
+Pages: 2
+
+
+# MATIS Home
+
+false
+
+Welcome to MATIS Homepage. Here you can find all documentations related to MATIS.
+
+*This page is currently under construction.
+
+Description
+
+black1solidMATIS is an e-Prior Authorization platform, is purpose built for oncology to efficiently evaluate and approve high-quality and high-value treatments for cancer care.
+
+The platform is updated daily to accurately reflect more than 6,000 oncology treatment protocols for anti-cancer treatment across all cancer types and stages, including chemotherapy, radiation therapy, precision medicine, targeted therapy and supportive care.
+
+Clinical Leadership Team      
+
+black1solidClinical Leadership Team
+
+Distinguished Academic Advisory Board
+
+black1solidDistinguished Academic Advisory Board at OA
+
+Designations and Definitions in MATIS
+
+black1solid
+
+ | Designation | Definition | 
+1 | (S1), (S2), (S3), (S4) | Indicates the stage of the disease under consideration. | 
+2 | AUTO | The selected protocol is automatically approved. | 
+3 | NON-AUTO | The selected protocol requires further information to complete the prior authorization process.
+
+Note: Medical information placed in the patient Notes section is often sufficient. Other times, medical records or a peer to peer review may be required.
+
+ | 
+
+MATIS Workflows
+
+black1solidMATIS Workflows
+
+Refer to : 
+
+MATIS Glossary
+
+black1solid
+
+MATIS Prior Authorization Documents
+
+black1solid
+
+OA Generated MATIS Documents
+
+black1solidThe following are examples of a RAD (RECOMMENDATION FOR ADVERSE DETERMINATION) and CCF (CLINICAL CONSULTATION FAX) documentation sent by OA.
+
+The RAD document is sent to the Health Plan.
+
+The CCF document is sent to the Physician who requested the approval of a drug through MATIS.
+
+OA Customers Using MATIS
+
+black1solid
+
+Line of Business
+
+black1solid
+
+MATIS Database Design
+
+black1solid
+
+MATIS Tables
+
+black1solid
+
+## Assignment Details Table
+
+Overview
+
+green1solidThis page has the details regarding the data fields used in the Assignment Details Table.
+
+Current MATIS Markets
+
+green1solid
+
+Key things to consider
+
+black1solidMATIS Key fields are
+             a. PatientPortocolAssignmentID (for assignments)
+             b. PatientProtocolAssignmentProtocolID (for requested protocols)
+Since one assignment can have multiple protocols &ndash; use PatientProtocolAssignmentProtocolID for counts
+MATIS data contains dummy/test records. Please use below filters to include only the valid records 
+a. Completed = Yes
+b. ProtocolStatusid in (select protocolstatusid from Analytical_Services.dbo.ReportingValidStatuses where ValidForReporting='Y')
+
+Assignment Details Table
+
+black1solid
+
+ | Header | Description | Origin Table | Origin Field Name | 
+1 | InsuranceProvider | Humana, MCS, MMM PR, Preferred Medical Plan | 
+ | 
+ | 
+2 | Market | Currently there are 27 markets -  | 
+ | 
+ | 
+3 | ProviderMarket | Currently there are 43 provider markets grouped -                                | 
+ | 
+ | 
+4 | OriginalPatientID | 
+ | 
+ | 
+ | 
+5 | PatientID | 
+ | 
+ | 
+ | 
+6 | Patient CreatedOn | 
+ | 
+ | 
+ | 
+7 | Eligibility RowID | 
+ | 
+ | 
+ | 
+8 | EligibilityID | 
+ | 
+ | 
+ | 
+9 | MemberID | 
+ | 
+ | 
+ | 
+10 | PatientFirstName | 
+ | 
+ | 
+ | 
+11 | PatientLastName | 
+ | 
+ | 
+ | 
+12 | PatientDOB | 
+
+ | 
+ | 
+ | 
+13 | PatientAge | 
+ | 
+ | 
+ | 
+14 | PatientGender | 
+ | 
+ | 
+ | 
+15 | PatientPlanStateOfIssue | 
+ | 
+ | 
+ | 
+16 | PatientState | 
+ | 
+ | 
+ | 
+17 | PatientZipcode | 
+ | 
+ | 
+ | 
+18 | Patient InsuranceGroupID | 
+ | 
+ | 
+ | 
+19 | PatientInsuranceGroupName | 
+ | 
+ | 
+ | 
+20 | PatientPCPGrouperNumber | 
+ | 
+ | 
+ | 
+21 | PatientCenterNumber | 
+ | 
+ | 
+ | 
+22 | PatientCenterName | 
+ | 
+ | 
+ | 
+23 | PatientContractNumber | 
+ | 
+ | 
+ | 
+24 | PatientPlanID | 
+ | 
+ | 
+ | 
+25 | PatientLOB | NULL, Commercial other (PPO, HMO, POS), Medicaid, Medicare, Medicare Advantage, Medicare HMO (Risk), Medicare PFFS, Medicare PPO, Medicare Risk | 
+ | 
+ | 
+26 | PatientShortLOB | Commercial, Commercial Non Risk, Commercial Risk, Medicaid, Medicare, Medicare Advantage, Medicare Non Risk, Medicare PFFS, Medicare Risk
+
+ | 
+ | 
+ | 
+27 | PatientProductLine | EPO, HML, HMO, IAP, IND, IPP, IPS, IPT, MCD, MEF, MEN, MER, MES, MGP, MGR, MRO, NPOS, POS, PPO
+
+ | 
+ | 
+ | 
+28 | PatientRiskIndicator | 
+ | 
+ | 
+ | 
+29 | PatientASOIndicator | 
+ | 
+ | 
+ | 
+30 | PatientHumOneIndicator | 
+ | 
+ | 
+ | 
+31 | PatientDx9Code | 
+ | 
+ | 
+ | 
+32 | PatientDx9 | 
+ | 
+ | 
+ | 
+33 | PatientDx10Code | 
+ | 
+ | 
+ | 
+34 | PatientDx10 | 
+ | 
+ | 
+ | 
+35 | PatientDiagnosisID | 
+ | 
+ | 
+ | 
+36 | PatientDiagnosis | 
+ | 
+ | 
+ | 
+37 | PatientStage | 
+ | 
+ | 
+ | 
+38 | PatientPerformanceStatus | 
+ | 
+ | 
+ | 
+39 | LineOfTherapyID | 
+ | 
+ | 
+ | 
+40 | LineOfTherapy | 1, 2, >2 andSubsequent | 
+ | 
+ | 
+41 | PatientProtocolAssignmentID | 
+ | 
+ | 
+ | 
+42 | OAReferenceNumber | 
+ | 
+ | 
+ | 
+43 | PayerAuthorizationNumber | 
+ | 
+ | 
+ | 
+44 | ProtocolAssignmentTypeID | 
+ | 
+ | 
+ | 
+45 | ProtocolAssignmentType | New, Retrospective, Re-Authorization, Modified | 
+ | 
+ | 
+46 | AssignmentStatusID | NULL, 17 | 
+ | 
+ | 
+47 | AssignmentStatus | NULL, In Process | 
+ | 
+ | 
+48 | SubmittedBy | 
+ | 
+ | 
+ | 
+49 | Completed | 
+ | 
+ | 
+ | 
+50 | AssignmentProcessedAs | Auto, Non-Auto | 
+ | 
+ | 
+51 | AssignmentPrioritization | Standard, Urgent | 
+ | 
+ | 
+52 | PatientOAStaffNotes | 
+ | 
+ | 
+ | 
+53 | PatientNotes | 
+ | 
+ | 
+ | 
+54 | AssignmentOAStaffNotes | 
+ | 
+ | 
+ | 
+55 | AssignmentNotes | 
+ | 
+ | 
+ | 
+56 | TurnaroundTime | 
+ | 
+ | 
+ | 
+57 | AssignmentCreatedOn | 
+ | 
+ | 
+ | 
+58 | PayerReceiptDate | 
+ | 
+ | 
+ | 
+59 | AssignmentInitiationDate | 
+ | 
+ | 
+ | 
+60 | PriorityChangeDate | 
+ | 
+ | 
+ | 
+61 | DecisionDate | 
+ | 
+ | 
+ | 
+62 | DecisionDateII | 
+ | 
+ | 
+ | 
+63 | ProviderNotificationDate | 
+ | 
+ | 
+ | 
+64 | OverturnDate | 
+ | 
+ | 
+ | 
+65 | TreatmentStartDate | 
+ | 
+ | 
+ | 
+66 | TreatmentEndDate | 
+ | 
+ | 
+ | 
+67 | RetroRequest | BLANK, Yes | 
+ | 
+ | 
+68 | PlaceOfService | 
+ | 
+ | 
+ | 
+69 | AssignmentSource | eMail, Fax, No Data, Not Processed, Phone,Web
+
+ | 
+ | 
+ | 
+70 | AssignmentOrigin | Health Plan, Humana MIT, NP, Oncologist, Pharmacy, Primary Care Physician, Slippage, Test
+
+ | 
+ | 
+ | 
+71 | MethodOfReceivingMedication | 
+ | 
+ | 
+ | 
+72 | PatientProtocolAssignmentProtocolID | 
+ | 
+ | 
+ | 
+73 | ProtocolHistoryID | 
+ | 
+ | 
+ | 
+74 | ProtocolID | 
+ | 
+ | 
+ | 
+75 | NCTNumber | 
+ | 
+ | 
+ | 
+76 | Compendia | 
+ | 
+ | 
+ | 
+77 | NCCNCategory | 1, 1. 2A, 1. 2A. 2B, 1. 2A. 2B, 1. 2A. 3, 1. 2A. N/A, 1. 2B, 1. 3, 1. N/A
+
+2A, 2A. 2B, 2A. 3, 2A. N/A, 2B, 2B. 3, 2B. N/A,
+
+ | 
+ | 
+ | 
+78 | IsBoost | 
+ | 
+ | 
+ | 
+79 | OriginalProtocolTypeID | 
+ | 
+ | 
+ | 
+80 | OriginalProtocolType | 
+ | 
+ | 
+ | 
+81 | ProtocolType | 
+ | 
+ | 
+ | 
+82 | TreatmentTypeID | 
+ | 
+ | 
+ | 
+83 | TreatmentTypeDescription | Chemo, Radiation, Testing
+
+ | 
+ | 
+ | 
+84 | TreatmentType | Chemotherapy, Molecular Testing, PET Scan, Prostate Cancer Active Surveillance, XRT
+
+ | 
+ | 
+ | 
+85 | AutoProcessedID | 
+ | 
+ | 
+ | 
+86 | AutoProcessed | 
+ | 
+ | 
+ | 
+87 | ProtocolAutoAuthorizationByDefault | 
+ | 
+ | 
+ | 
+88 | ProtocolProcessedAs | NULL, Auto, Change to Auto, Change to Non-Auto, Non-Auto
+
+ | 
+ | 
+ | 
+89 | ProtocolStatusID | 
+ | 
+ | 
+ | 
+90 | ProtocolStatus | 
+
+ | 
+ | 
+ | 
+91 | PartD | 
+ | 
+ | 
+ | 
+92 | ClinicalTrial | Yes, No | 
+ | 
+ | 
+93 | PD1 | N/A | 
+ | 
+ | 
+94 | GrowthFactor | 
+ | 
+ | 
+ | 
+95 | ESA | 
+ | 
+ | 
+ | 
+96 | ProtocolName | 
+ | 
+ | 
+ | 
+97 | ProtocolJcode | 
+ | 
+ | 
+ | 
+98 | ProtocolCodes | 
+ | 
+ | 
+ | 
+99 | TreatmentForDiagnosisID | 
+ | 
+ | 
+ | 
+100 | TreatmentForDiagnosis | 
+ | 
+ | 
+ | 
+101 | TreatmentForDiagnosisIDMain | 
+ | 
+ | 
+ | 
+102 | TreatmentForDiagnosisMain | 
+ | 
+ | 
+ | 
+103 | TreatmentForStage | 0, 1, 2, 3, 4
+
+Accelerated Phase, Blast Crisis, Chronic Phase, Extensive, Limited, Multicentric, N/A
+
+ | 
+ | 
+ | 
+104 | EmetogenicPotentialID | 
+ | 
+ | 
+ | 
+105 | EmetogenicPotential | Highly Emetogenic, Low Emetogenic, Minimally Emetogenic, Moderately Emetogenic
+
+ | 
+ | 
+ | 
+106 | EmetogenicPotentialIDMain | 
+ | 
+ | 
+ | 
+107 | EmetogenicPotentialMain | 
+ | 
+ | 
+ | 
+108 | FebrileNeutropeniaRiskID | 
+ | 
+ | 
+ | 
+109 | FebrileNeutropeniaRisk | High Risk, Intermediate Risk, Low Risk, Very Low Risk
+
+ | 
+ | 
+ | 
+110 | FebrileNeutropeniaRiskIDMain | 
+ | 
+ | 
+ | 
+111 | FebrileNeutropeniaRiskMain | 
+ | 
+ | 
+ | 
+112 | ProtocolToxicity | NULL, High Toxicity, Low Toxicity, Medium - High Toxicity, Medium - Low Toxicity, Medium Toxicity, Pending Review
+
+ | 
+ | 
+ | 
+113 | ProtocolEfficacy | NULL, High Efficacy, Low Efficacy, Medium - High Efficacy,Medium - Low Efficacy, Medium Efficacy, Pending Review
+
+ | 
+ | 
+ | 
+114 | ProtocolFinancialToxicity | 
+ | 
+ | 
+ | 
+115 | EstimatedCycles | NULL, 0.00, 1.00,2.00,3.00, 4.00, 5.0, 6.00, 7.00, 8.00, 9.00,11.00, 12.00, 14.00, 16.00, 17.00, 18.00, 20.00, 21.00, 24.00, 26.00, 60.00, 168.00
+
+ | 
+ | 
+ | 
+116 | EstimatedDurationInMonths | 0.00, 1.00, 1.25, 1.50, 2.00, 2.25, 3.00, 4.00, 4.50, 5.00, 6.00, 8.00, 11.00, 12.00
+
+ | 
+ | 
+ | 
+117 | NormalizationFee | 
+ | 
+ | 
+ | 
+118 | InsuranceMonthlyCost | 
+ | 
+ | 
+ | 
+119 | PhysicianMonthlyCost | 
+ | 
+ | 
+ | 
+120 | MonthlyCost1 | 
+ | 
+ | 
+ | 
+121 | MonthlyCost2 | 
+ | 
+ | 
+ | 
+122 | MonthlyCost3 | 
+ | 
+ | 
+ | 
+123 | MonthlyCost4 | 
+ | 
+ | 
+ | 
+124 | InsuranceTotalCost | 
+ | 
+ | 
+ | 
+125 | PhysicianTotalCost | 
+ | 
+ | 
+ | 
+126 | TotalCost1 | 
+ | 
+ | 
+ | 
+127 | TotalCost2 | 
+ | 
+ | 
+ | 
+128 | TotalCost3 | 
+ | 
+ | 
+ | 
+129 | TotalCost4 | 
+ | 
+ | 
+ | 
+130 | ProtocolP2PInternalContact | Clinical Consultation Fax, CRS, MD, N/A, No Data, PharmD, RN
+
+ | 
+ | 
+ | 
+131 | ProtocolP2PExternalContact | 
+
+ARNP, CCF - Peer to Peer, CCF - Verbal Response, Financial Counselor, N/A, No Data, Other MD, Other Provider Staff, PA, Payer Review, PharmD, Review - Unlicensed State, Review Attempted. Not Completed, RN, Treating MD
+
+ | 
+ | 
+ | 
+132 | Reviewer1 | 
+ | 
+ | 
+ | 
+133 | Reviewer2 | 
+ | 
+ | 
+ | 
+134 | CRSID | 
+ | 
+ | 
+ | 
+135 | CRS | 
+ | 
+ | 
+ | 
+136 | AssigningMDID | 
+ | 
+ | 
+ | 
+137 | SFProvidersfId | 
+ | 
+ | 
+ | 
+138 | SFProviderUserName | 
+ | 
+ | 
+ | 
+139 | SFProviderSalutation | 
+ | 
+ | 
+ | 
+140 | SFProviderName | 
+ | 
+ | 
+ | 
+141 | SFProviderType | 
+ | 
+ | 
+ | 
+142 | SFProviderAccountID | 
+ | 
+ | 
+ | 
+143 | SFProviderStreet | 
+ | 
+ | 
+ | 
+144 | SFProviderCounty | 
+ | 
+ | 
+ | 
+145 | SFProviderCity | 
+ | 
+ | 
+ | 
+146 | SFProviderState | 
+ | 
+ | 
+ | 
+147 | SFProviderPostalCode | 
+ | 
+ | 
+ | 
+148 | SFProviderCountry | 
+ | 
+ | 
+ | 
+149 | SFProviderDoNotCall | 
+ | 
+ | 
+ | 
+150 | SFProviderTaxID | 
+ | 
+ | 
+ | 
+151 | SFProviderNPI | 
+ | 
+ | 
+ | 
+152 | SFProviderParticipatingLOB | 
+
+ASO;Medicare;Leased Network, Commercial, Commercial;Medicaid, Commercial;Medicaid;Medicare, Commercial;Medicare, Commercial;Medicare;Medicare Advantage, Commercial;Medicare;Not Participating
+
+Commercial;Not Participating, Medicaid, Medicaid;Medicare, Medicare, Medicare Advantage, Medicare;Not Participating, Not Participating
+
+ | 
+ | 
+ | 
+153 | SFProviderDoingBusinessAs | 
+ | 
+ | 
+ | 
+154 | SFProviderPhone | 
+ | 
+ | 
+ | 
+155 | SFProviderEmail | 
+ | 
+ | 
+ | 
+156 | SFProviderGroupName | 
+ | 
+ | 
+ | 
+157 | SFPracticesfId | 
+ | 
+ | 
+ | 
+158 | SFPracticeName | 
+ | 
+ | 
+ | 
+159 | SFPracticeNameDBA | 
+ | 
+ | 
+ | 
+160 | SFPracticeType | 2, Ambulance Service Provider, Clinic or Group Practice, Clinical Laboratory, Critical Access Hospital, Dermatology, Diagnostic Radiology, End-Stage Renal Disease Facility, Family Practice, General Practice,
+
+General Surgery, Geriatric Medicine, Gynecological/Oncology, Health System, Hematology, Hematology/Oncology, Hospital, Hospital-Children?s (PPS excluded), Hospital-General, Internal Medicine, Medical Oncology,
+
+Medical Supply Company with Pharmacist, MSO, Multi-Specialty Group Practice, Multispecialty Clinic or Group Practice, Neurosurgery, Obstetrics/Gynecology, Oncologist, Oncology Group, Ophthalmology,
+
+Orthopedic Surgery, Other Medical Supply Company, Pathology, PCP, Physician/Allergy/ Immunology, Physician/Anesthesiology, Physician/Dermatology, Physician/Diagnostic Radiology, Physician/Emergency Medicine,
+
+Physician/Family Practice, Physician/Gastroenterology, Physician/General Practice, Physician/General Surgery, Physician/Internal Medicine, Physician/Neurology, Physician/Nuclear Medicine,
+
+Physician/Obstetrics & Gynecology, Physician/Ophthalmology, Physician/Otolaryngology, Physician/Pathology, Physician/Pediatric Medicine, Physician/Radiation Oncology, Physician/Urology, Provider,
+
+Pulmonary Disease, Radiation Oncology, Unknown, Urologist, Urology, Urology Group
+
+ | 
+ | 
+ | 
+161 | SFPracticeStreet | 
+ | 
+ | 
+ | 
+162 | SFPracticeCounty | Cumberland, NEW YORK, PR, Puerto Rico, US, USA, York
+
+ | 
+ | 
+ | 
+163 | SFPracticeCity | 
+ | 
+ | 
+ | 
+164 | SFPracticeState | 
+ | 
+ | 
+ | 
+165 | SFPracticePostalCode | 
+ | 
+ | 
+ | 
+166 | SFPracticeCountry | 
+ | 
+ | 
+ | 
+167 | SFPracticeTaxID | 
+ | 
+ | 
+ | 
+168 | SFPracticeNPI | 
+ | 
+ | 
+ | 
+169 | SFPracticeParticipatingLOB | Commercial, Commercial;Medicaid, Commercial;Medicare, Commercial;Medicare;Medicaid, Medicaid, Medicare, Medicare;Medicaid, Not Participating, Not Participating;Commercial;Medicare
+
+ | 
+ | 
+ | 
+170 | SFPracticeTaxonomyCode | 
+ | 
+ | 
+ | 
+171 | SFPracticeDoingBusinessAs | 
+ | 
+ | 
+ | 
+172 | SFQPPOfficial | 
+ | 
+ | 
+ | 
+173 | SFQPPStreetAddress | 
+ | 
+ | 
+ | 
+174 | SFQPPCity | 
+ | 
+ | 
+ | 
+175 | SFQPPState | 
+ | 
+ | 
+ | 
+176 | SFQPPZipCode | 
+ | 
+ | 
+ | 
+177 | SFMainParent | 
+ | 
+ | 
+ | 
+178 | SFParentAccountsfId | 
+ | 
+ | 
+ | 
+179 | SFParentAccountName | 
+ | 
+ | 
+ | 
+180 | SFParentAccountTaxID | 
+ | 
+ | 
+ | 
+181 | SFParentAccountNPI | 
+ | 
+ | 
+ | 
+182 | SFParentOfParentAccountsfId | 
+ | 
+ | 
+ | 
+183 | SFParentOfParentAccountName | 
+ | 
+ | 
+ | 
+184 | SFParentOfParentAccountTaxID | 
+ | 
+ | 
+ | 
+185 | SFParentOfParentAccountNPI | 
+ | 
+ | 
+ | 
+186 | SFContactOwer | 
+ | 
+ | 
+ |

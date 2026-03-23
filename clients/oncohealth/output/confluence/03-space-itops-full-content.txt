@@ -1,0 +1,802 @@
+# ITOPS — Full Content Export
+Exported: 2026-03-23T19:45:10.774Z
+Pages: 5
+
+
+# ITOPS
+
+:check_mark:atlassian-check_mark#F4F5F7Welcome to your IT team space!
+
+You&rsquo;re in the space overview. It&rsquo;s what visitors first see, like a landing page for your space
+
+Click ✏️ Edit to customize your overview
+
+A space contains pages. Create content in a page to collaborate with your team
+
+Click Create at the top to create a page in your space
+
+We&rsquo;ve added example page templates to show what your pages could look like
+
+Template - ITSM runbook
+Template - IT project poster
+Template - IT change management
+
+Mission
+
+What's your team's mission?
+
+Meet the team
+
+Add team members' photo, role, and how to contact them to help connect your team.
+
+Team member
+
+Role
+
+@mention
+
+Team member
+
+Role
+
+@mention
+
+Team member
+
+Role
+
+@mention
+
+Recently updated
+
+See a list of recently updated pages in this space
+
+page10trueProject milestones
+
+Use the Roadmap Planner (/roadmap) to help your team stay on track.
+
+true%7B%22title%22%3A%22Roadmap%20Planner%22%2C%22timeline%22%3A%7B%22startDate%22%3A%222022-12-20%2000%3A00%3A00%22%2C%22endDate%22%3A%222023-11-20%2000%3A00%3A00%22%2C%22displayOption%22%3A%22MONTH%22%7D%2C%22lanes%22%3A%5B%7B%22title%22%3A%22Lane%201%22%2C%22color%22%3A%7B%22lane%22%3A%22%23f6c342%22%2C%22bar%22%3A%22%23fadb8e%22%2C%22text%22%3A%22%23594300%22%2C%22count%22%3A1%7D%2C%22bars%22%3A%5B%7B%22title%22%3A%22Bar%201%22%2C%22description%22%3A%22This%20is%20the%20first%20bar.%22%2C%22startDate%22%3A%222022-12-01%2000%3A00%3A00%22%2C%22duration%22%3A2%2C%22rowIndex%22%3A0%2C%22id%22%3A%22b9abe04d-959a-4fe9-8031-97bae4b4b607%22%2C%22pageLink%22%3A%7B%7D%7D%2C%7B%22title%22%3A%22Bar%202%22%2C%22description%22%3A%22This%20is%20the%20second%20bar.%22%2C%22startDate%22%3A%222022-12-01%2000%3A00%3A00%22%2C%22duration%22%3A1%2C%22rowIndex%22%3A1%2C%22id%22%3A%22093e8f0e-d227-40fb-9900-dbf2f2afad0e%22%2C%22pageLink%22%3A%7B%7D%7D%5D%7D%2C%7B%22title%22%3A%22Lane%202%22%2C%22color%22%3A%7B%22lane%22%3A%22%233b7fc4%22%2C%22bar%22%3A%22%236c9fd3%22%2C%22text%22%3A%22%23ffffff%22%2C%22count%22%3A1%7D%2C%22bars%22%3A%5B%7B%22title%22%3A%22Bar%203%22%2C%22description%22%3A%22This%20is%20the%20third%20bar.%22%2C%22startDate%22%3A%222022-12-01%2000%3A00%3A00%22%2C%22duration%22%3A2.5%2C%22rowIndex%22%3A0%2C%22id%22%3A%220ae586d8-5f52-449b-b59f-fe0fe8886904%22%2C%22pageLink%22%3A%7B%7D%7D%5D%7D%5D%2C%22markers%22%3A%5B%7B%22title%22%3A%22Marker%201%22%2C%22markerDate%22%3A%222022-12-15%2000%3A00%3A00%22%7D%5D%7DRoadmap%20Planner3095cbab80bc2433d1932cdd12895f88Contact us
+
+How can someone reach out to your team?
+
+✉️ Email address
+
+💬 Chat
+
+Important Pages
+
+List them here
+
+Onboarding FAQs
+
+Add resources for new hires
+
+Meeting notes
+
+Add links to meeting notes
+
+Team goals
+
+List them here
+
+Team news
+
+Create a blog post to share team news. It will automatically appear here once it's published.
+
+## Get the most out of your team space
+
+Create a stellar overview
+
+The overview is the first page visitors will see when they visit your space, so it helps to include some information on what the space is about and what your team is working on.
+
+Add a header image. This gives your overview visual appeal and makes it welcoming for visitors.
+
+Explain what the space is for. Start by summarizing the purpose of the space. This could be your team's mission statement or a brief description of the kind of work you do.
+
+Share team goals. Add links to your team's OKRs, project plans, and product roadmaps so visitors can quickly get a sense of your team's goals.
+
+Tell people how to contact you. Share your timezone and links to Slack channels, email aliases, or other contact details your team uses so visitors can contact you with questions or feedback about your team's work.
+
+Use shortcuts for easy access
+
+Shortcuts are helpful for important pages that members of a space might need to get to often. These shortcuts are added and organized by the space administrator. Space admins can link to pages in the space, other related spaces, or relevant external web content as well as reorder the shortcuts as needed.
+
+Start discussions with inline comments
+
+Thoughtful responses can get lost and lose context as email replies pile up. And if you neglect to copy someone or want to add them later on, it's difficult for them to get up to speed. Inline comments allow anyone (or everyone) to huddle around an idea while referencing key information on the project page.
+
+To leave an inline comment, highlight text on the page and the comment icon will appear.
+
+Team members with permission to access the page can respond to any comment. Plus, when a comment thread comes to its natural conclusion, comments can be resolved and cleared away.
+
+Loop in team members with @mentions
+
+@mentions on Confluence function like @mentions on social media platforms like Twitter, Instagram, and Slack. Type the @ symbol on a Confluence page or in a comment, begin spelling a team member's first name, and a list will appear. Select the individual to ask a question or assign a task.
+
+Endorse ideas with reactions
+
+Use reactions when you want to support a comment or acknowledge you've seen one without clogging up the thread with another comment.
+
+You can also use reactions on a page or blog post. The author of the content will be notified, and if enough team members react or add comments to the content, it'll be surfaced on Confluence home feed
+
+Take your Confluence space to the next level
+
+Extend the capabilities of your Confluence pages by  adding extra functionality or including dynamic content.
+
+To add functionality:
+
+Type ' / ' to open the list of items available to use
+
+Find the item to be inserted and select it
+
+Select Insert
+
+Useful elements for Team space
+
+Introduce the team
+
+Add user profiles to display a short summary of a given Confluence user's profile with their role, profile photo and contact details.
+
+Share news and announcements with your team
+
+Display a stream of latest blog posts so your team can easily see what's been going on.
+
+Display a list of important pages
+
+Paste in page URLs to create smart links, or use the content report table to create a list of all the pages in the space.
+
+## ITOps Managed Tools Catalog
+
+This catalog lists ITOps-managed tools with platform and purpose. Logos are represented as link cards for quick access to official homepages or product hubs.
+
+How to use this catalog
+
+- Scan the table to understand each tool&rsquo;s role and platform alignment.
+
+- Click a logo link card to visit the vendor or product page.
+
+- Use &ldquo;Platform&rdquo; to identify ownership domains (e.g., SaaS, Endpoint, Network, Security, Collaboration).
+
+ITOps Managed Tools
+
+Logo / Link
+
+ | Tool
+
+ | Platform
+
+ | Description
+
+ | 
+https://www.microsoft.com/microsoft-365
+
+ | Microsoft 365
+
+ | SaaS | Productivity & Identity (Entra ID), Email, Collaboration
+
+ | Enterprise productivity suite: Exchange Online, SharePoint, OneDrive, Teams, CoPilot, licensing and identity governance.
+
+ | 
+https://www.atlassian.com/software/confluence
+
+ | Confluence
+
+ | SaaS | Knowledge Management & Documentation
+
+ | Team workspace for documentation, runbooks, and process knowledge.
+
+ | 
+https://dnsfilter.com
+
+ | DNSFilter
+
+ | Security | DNS Protection & Content Filtering
+
+ | Cloud DNS security to block phishing, malware, and risky categories at the resolver layer.
+
+ | 
+https://isdown.app
+
+ | IsDown
+
+ | Monitoring | SaaS Status Aggregation & Alerts
+
+ | External service outage tracking and notifications across vendor status pages.
+
+ | 
+https://1password.com/business
+
+ | 1Password Business
+
+ | Security | Password & Secrets Management
+
+ | Enterprise vaults, SSO/MFA integrations, shared credentials, and item auditing.
+
+ | 
+https://www.admindroid.com/office-365-reporting-tool.php
+
+ | AdminDroid for Microsoft 365
+
+ | Reporting | M365 Analytics & Compliance Reporting
+
+ | Advanced reporting for M365 usage, security, auditing, and license optimization.
+
+ | 
+https://drivestrike.com
+
+ | DriveStrike
+
+ | Endpoint | Remote Lock/Wipe & Device Tracking
+
+ | Remote lock, wipe, and encryption enforcement for lost or decommissioned devices.
+
+ | 
+https://halopsa.com/solutions/it-service-management-haloitsm/
+
+ | HaloITSM (HaloPSA)
+
+ | ITSM | Ticketing, Change, CMDB, Self-Service Portal
+
+ | Service management platform for incident, request, change, SLAs, and knowledge.
+
+ | 
+https://zoom.us
+
+ | Zoom
+
+ | Collaboration | Meetings, Chat, Phone (UCaaS)
+
+ | Video conferencing, webinars, telephony, and integrations with productivity suites.
+
+ | 
+https://www.godaddy.com
+
+ | GoDaddy
+
+ | Domain & DNS | Registrar, DNS Hosting, SSL/TLS
+
+ | Domain registration, DNS management, certificates, and related hosting services.
+
+ | 
+https://www.insight.com/en_US/home/brands/insight.html
+
+ | Insight Direct USA (Insight)
+
+ | Procurement | Reseller & Licensing Partner
+
+ | IT procurement, licensing advisory, renewals, and asset fulfillment.
+
+ | 
+https://mxtoolbox.com
+
+ | MXToolbox
+
+ | Email | DNS, SMTP, Blacklist Monitoring Tools
+
+ | Troubleshooting and monitoring for DNS, MX, SPF, DKIM, DMARC, and blacklists.
+
+ | 
+https://www.ninjaone.com
+
+ | NinjaOne (RMM)
+
+ | Endpoint | RMM, Patching, Scripting, Monitoring
+
+ | Remote monitoring and management for endpoints with automation and patch compliance.
+
+ | 
+https://www.okta.com/
+
+ | Okta Workforce Identity Cloud
+
+ | Identity | SSO, MFA, Lifecycle Management (IGA)
+
+ | Centralized authentication, MFA policies, provisioning, and app access governance.
+
+ | 
+https://miro.com/
+
+ | Miro
+
+ | Collaboration | Visual Whiteboarding & Workshops
+
+ | Online canvas for diagramming, planning, retros, and cross-team ideation.
+
+ | 
+https://www.securew2.com/
+
+ | SecureW2
+
+ | Security | Certificate-based Wi‑Fi & 802.1X AuthN
+
+ | PKI and onboarding for secure Wi‑Fi/EAP-TLS, device certs, and NAC integrations.
+
+ | 
+https://www.sharefile.com/
+
+ | Citrix ShareFile
+
+ | SaaS | Secure File Sharing & Request Workflows
+
+ | External file exchange with DLP controls, e-sign, and client portal features.
+
+ | 
+https://www.siteground.com/
+
+ | SiteGround Hosting
+
+ | Hosting | Web Hosting & Managed WordPress
+
+ | Managed hosting, DNS, backups, and performance tooling for websites.
+
+ | 
+https://www.smartsheet.com/
+
+ | Smartsheet
+
+ | Work Management | Project, Intake, Automation
+
+ | Grid, Gantt, dashboards, and process automation for portfolio work tracking.
+
+ | 
+https://www.splashtop.com/business-access
+
+ | Splashtop Business Access/Streamer
+
+ | Endpoint | Remote Access & Support Tools (RAT)
+
+ | Secure remote control for support and unattended access to endpoints/servers.
+
+ | 
+https://www.wordfence.com/
+
+ | Wordfence Security (WordPress)
+
+ | Web Security | WAF, Malware Scan, Login Security
+
+ | WordPress security plugin with firewall, malware signatures, and 2FA for admins.
+
+ | 
+https://www.zoho.com/
+
+ | Zoho Corporation (Suite & Admin Portals)
+
+ | SaaS | Business Apps (CRM, Desk, Analytics, etc.)
+
+ | Vendor suite and consoles used for select business workflows and integrations.
+
+ | 
+https://www.knowbe4.com/
+
+ | KnowBe4 Security Awareness Training (SAT)
+
+ | Security | Phishing Simulation & Training (SAT)
+
+ | User awareness platform for campaigns, phishing tests, and compliance tracking.
+
+ | 
+https://www.paloaltonetworks.com/cortex/xdr
+
+ | Cortex XDR (Palo Alto Networks)
+
+ | Security | EDR/XDR, Detection & Response
+
+ | Endpoint detection and response with behavioral analytics and threat hunting.
+
+ | 
+https://www.paloaltonetworks.com/network-security/next-generation-firewall
+
+ | Palo Alto Firewalls (NGFW)
+
+ | Network Security | NGFW, IPS, Threat Prevention
+
+ | Perimeter and data center firewalls with App-ID, User-ID, and content inspection.
+
+ | 
+https://www.paloaltonetworks.com/network-security/management/panorama
+
+ | Palo Alto Panorama (Mgmt)
+
+ | Network Security | Centralized FW Management & Policy
+
+ | Central policy, device groups, templates, and logging for NGFW estates.
+
+ | 
+https://www.paloaltonetworks.com/network-security/aiops-firewalls
+
+ | Palo Alto AIOps for NGFWs
+
+ | Operations | Health Monitoring & Best Practice Alerts
+
+ | Cloud service for firewall telemetry, configuration hygiene, and proactive guidance.
+
+ | 
+https://logrhythm.com/
+
+ | LogRhythm SIEM
+
+ | Security | SIEM, Log Aggregation & Correlation
+
+ | Security information and event management with analytics and incident workflows.
+
+ | 
+https://www.paloaltonetworks.com/cortex/xsoar
+
+ | Cortex XSOAR (SOAR)
+
+ | Security | Automation, Playbooks, Case Mgmt (SOAR)
+
+ | Orchestration platform for incident response, enrichment, and automated actions.
+
+ | 
+https://www.paloaltonetworks.com/sase/globalprotect-vpn
+
+ | GlobalProtect (Palo Alto VPN)
+
+ | Remote Access | VPN & ZTNA Edge Options
+
+ | Corporate remote access client integrated with NGFW policies and posture checks.
+
+ | 
+https://www.3cx.com/
+
+ | 3CX Phone System
+
+ | Telephony | PBX/VoIP, Softphones & SIP Trunking
+
+ | On-prem/cloud PBX with web client, softphones, call queues, and IVR routing.
+
+ | 
+https://kandji.io/
+
+ | Iru (Kandji) &ndash; Apple MDM
+
+ | Endpoint | macOS/iOS MDM, Compliance & Patching
+
+ | MDM for Apple fleet: zero‑touch enrollment, blueprints, app deployment, remediation.
+
+ | 
+https://learn.microsoft.com/mem/intune/
+
+ | Microsoft Intune (Endpoint Manager)
+
+ | Endpoint | Windows/Android MDM, Compliance & Apps
+
+ | UEM for Windows and mobile: compliance, configuration profiles, app lifecycle, BitLocker.
+
+ | 
+https://meraki.cisco.com/
+
+ | Cisco Meraki (Cloud Networking)
+
+ | Network | SD‑WAN, Switching, Wi‑Fi, Cameras (Cloud Mgmt)
+
+ | Cloud-managed networking stack with centralized dashboards and APIs.
+
+ | 
+https://securityscorecard.com/
+
+ | SecurityScorecard (External Ratings)
+
+ | Risk | External Security Posture & Vendor Risk Ratings
+
+ | Continuous scoring of external attack surface and third-party risk insights.
+
+ | 
+https://bitsight.com/
+
+ | BitSight (Cyber Ratings)
+
+ | Risk | External Posture, Benchmarking & Third‑Party Risk
+
+ | Cybersecurity performance ratings for benchmarking and vendor due diligence.
+
+ | 
+https://cynomi.com/
+
+ | Cynomi (vCISO Platform)
+
+ | GRC | Gap Analysis, Framework Mapping, Roadmaps
+
+ | Guided security program management aligned to standards and maturity goals.
+
+ | 
+https://getflywheel.com/
+
+ | Flywheel (Managed WordPress Hosting)
+
+ | Hosting | Managed WP, Staging, Backups, CDN
+
+ | Developer-friendly WordPress hosting with staging and performance tooling.
+
+ | 
+https://www.gonitro.com/nitro-pdf-pro
+
+ | Nitro PDF Pro
+
+ | Productivity | PDF Editing, eSign, Conversions
+
+ | Create, edit, and secure PDFs; workflows for forms and electronic signatures.
+
+ | 
+https://www.techsmith.com/screen-capture.html
+
+ | Snagit (TechSmith)
+
+ | Productivity | Screen Capture & Annotation
+
+ | Screenshot and quick video capture with markup tools for documentation.
+
+ | 
+Additional Tools
+
+The following tools are also under ITOps oversight and may be used by specific teams or environments.
+
+Notes and Best Practices
+
+note022dd67f0b64Platform tags are provided for quick scannability and do not replace formal service ownership or CMDB records.
+
+Platform tags are provided for quick scannability and do not replace formal service ownership or CMDB records.
+
+Maintain SSO wherever possible; prefer SCIM/JIT provisioning for lifecycle accuracy.
+
+Centralize audit logs to SIEM and align retention with policy.
+
+Use least-privilege admin roles; rotate and vault break-glass credentials in 1Password.
+
+Document support runbooks in Confluence and link from tool records.
+
+Change History
+
+Initial catalog creation and baselining complete.
+
+## Template - IT change management
+
+2flatpipe Summary
+
+Provide a brief summary of the change that was implemented and the work that was completed.
+
+Change details
+
+Change request
+
+ | Type /link to add a ticket
+
+ | 
+Status
+
+ | IN PROGRESSYellow / DONEGreen / OTHER
+
+ | 
+Related issues
+
+ | Type /link to add tickets related to the change request
+
+ | 
+Driver
+
+ | Describe the problem or incident that the change request addresses
+
+ | 
+Impacted services
+
+ | List the services impacted by the change request
+
+ | 
+Current blockers
+
+ | List any blockers to the change request and @ mention team members to assign follow-up tasks
+
+ | 
+Service owner review
+
+ | @ mention the reviewer
+
+ | 
+Technical review
+
+ | @ reviewers
+
+ | 
+Reporter
+
+ | @ reporter
+
+ | 
+Change approvers
+
+ | @ approvers
+
+ | 
+Informed stakeholders
+
+ | @ stakeholders
+
+ | 
+ Change plans
+
+Plan type
+
+ | Description
+
+ | Impact
+
+ | Risk
+
+ | Schedule
+
+ | 
+TEST PLANPurple / BACKUP PLANBlue / ROLLBACK PLANYellow / OTHER
+
+ | Describe and justify each step of the change plan
+
+ | Describe the impact the plan will have on services
+
+ | HIGHRed / LOWGreen
+
+ | Explain the change timeline and type // to add dates
+
+ | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ Change implementation tasks
+
+Task type
+
+ | Team
+
+ | Description
+
+ | 
+OUTAGERed / NO IMPACTGreen
+
+ | e.g., Database systems
+
+ | e.g., Database backups
+
+ | 
+ |  |  | 
+ |  |  | 
+ Communications
+
+Team
+
+ | Escalation manager
+
+ | Testing
+
+ | Testing manager
+
+ | Testing manager contact information
+
+ | 
+e.g., Database systems
+
+ | @ manager
+
+ | REQUIREDRed / OPTIONALGreen
+
+ | @ manager
+
+ |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ Post-implementation review
+
+Date
+
+ | Type // to add a date
+
+ | 
+Requests for comments
+
+ | Type /link to add RFC plans you've created
+
+ | 
+Service owner
+
+ | @ service owner
+
+ | 
+Participants
+
+ | @ participants
+
+ | 
+Review criteria
+
+ | List the issues participants need to discuss during the post-implementation review
+
+ | 
+Lessons learned
+
+ | Describe the lessons learned during the post-implementation review
+
+ | 
+Follow-up actions
+
+ | \n\n1\nincomplete\n\n\n\n2\nincomplete\n\n\n |
+
+## Template - IT project poster
+
+Priority Level
+
+ | Team
+
+Project owner:Team members: | Status
+
+ | 
+Define the problem
+
+ | 
+What is the problem?
+
+ | Why should you solve this problem and what would happen if we didn't do anything? | 
+What are the possible solutions?
+
+ | Think through several options for how you might solve this problem and which one you think is the best approach. | 
+What teams and systems will be impacted?
+
+ | What teams will you need help from, and what other teams and systems will be impacted? | 
+Solution Details
+
+ | 
+Solution details
+
+ | Summarize how you will solve the problem and what you will deliver | 
+Validation
+
+ | Summarize why you chose this solution, relevant data used to support your decision and any open questions | 
+Visualize the solution
+
+ | Work with your architects to draft how information flows between systems and seek design guidance to understand the user experience | 
+Measuring success
+
+ | Define the outcome you are driving for the business and how you will measure it | 
+Project Impacts
+
+ | 
+Impact rating
+
+ | System or team impacted
+
+ | Contact
+
+ | Description of impact
+
+ | 
+HIGHRed / MEDIUMYellow / LOWGreen
+
+ | List the system or team and the type of impact | @ mention key point of contact | Summarize what the impact or change is | 
+ |  |  |  | 
+Ready to Go
+
+Milestones
+
+ | 
+Milestone summary
+
+ | Details
+
+ | Dependencies
+
+ | Ship date
+
+ | 
+ | List out specifics of what this milestone includes | Is this dependent on any other milestones? | Use /date to share an estimated availability date | 
+ |  |  |  | 
+Team
+
+ | 
+Role
+
+ | Department
+
+ | Which milestones will they work on?
+
+ | Availability notes
+
+ | 
+ | What team are they from? | Connect the people to the milestones you outlined above | List candidates and any potential blockers to staffing this role | 
+ |  |  |  | 
+For IT Project Poster pro tips from Atlassian teams visit:https://www.atlassian.com/team-playbook/plays/it-project-poster

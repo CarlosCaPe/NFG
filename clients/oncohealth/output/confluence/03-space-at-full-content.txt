@@ -1,0 +1,4692 @@
+# Analytics Team — Full Content Export
+Exported: 2026-03-23T19:45:01.346Z
+Pages: 50
+
+
+# Analytics Team
+
+Overview
+
+This is the home page for the Analytics team within Confluence. Important team resources like the work calendar, client information, product documentation, knowledge sharing, etc can be found here. 
+
+Reporting & Analytics Team
+
+Meg Bohse - Senior Director Enterprise Analytic Solutions & Reporting
+
+Heta Singh - Principal Data Consultant
+
+Elise Klein - Senior Data Analyst
+
+Steve Baillio - Senior Data Scientist
+
+Tim Ursprung - Director Analysis & Reporting 
+
+Aaron Morgan - Director of Analytics
+
+Phillip Nguyen - Senior Data Analyst
+
+Vishwas Vishakanta - Power BI Developer
+
+Mandie Scherer - Senior Data Analyst
+
+Maria Garcia Pozo - Senior Data Analyst
+
+Analytics Team Calendar
+
+Please add PTO plans, scheduled client presentations, team events, travel, or any other pertinent dates.
+
+004d624d-393c-4e70-843a-a5e5941aff8a
+
+Key Functions
+
+Client Reporting
+
+Impact Analysis Home
+
+PERSEUS
+
+Standard Report Templates
+
+Compliance Reporting
+
+ | Oncology Insights
+
+/wiki/spaces/OIS/overview
+
+ | Real World Evidence
+
+Clinical Data Repository (CDR)
+
+ | 
+
+Analytics Platforms & Data
+
+Azure Platform
+
+Inscope Codes
+
+Clients
+
+General Client Information in Teams  
+
+Analytics Implementation Payer Template
+
+Humana
+
+MMM
+
+MCS
+
+Alignment
+
+Health Partners
+
+S&W
+
+FirstCare
+
+First Medical
+
+TripleS
+
+Gateway
+
+Harvard Pilgrim
+
+New Employee Orientation 
+
+This page is a compilation of important and useful documentation for the new hires to quickly understand the functionalities of OA and the Analytics team.
+
+New Employee Orientation - OA Analytics Team
+
+Current OKRs
+
+See Teams for the latest
+
+Resources
+
+Anna's Cancer Series
+
+Summit Presentations
+
+Commonly Used Acronyms
+
+Commonly Used OA Business Terms
+
+Carcinoma (Cancer) Types
+
+Analytics Documents
+
+Knowledge Share
+
+Data Training
+
+Med-codes Change Request Log
+
+Following log is to track all the change requests made for all the Med-codes tables.
+
+Med-codes Tables Change Request Log
+
+Test and Code Release  Documentation
+
+The following link has a detailed documentation on Test and Code Release plan for Impact Analyses
+
+Test and Code Release Documentation
+
+Archived Documents
+
+Archived OA Analytics Related Files
+
+## Archive
+
+
+
+## Data Training
+
+Membership & Eligibility - Presentation
+
+Operations - Presentation
+
+Claims - Presentation
+
+Line of Therapy - Presentation
+
+Claims Reconciliation - Presentation
+
+SQL Server Migration to Blobs Storage - Presentation
+
+You can find practice notebooks for all presentations in the Insights instance of Databricks under Workspace &rarr; Analytics_Catalog
+
+Shared Savings Model - Presentation
+
+ PPT Slides
+
+## OI Dashboards
+
+16falsenonelisttrueDashboards for Internal Consumers
+
+Dashboard
+
+ | Owner(s)
+
+ | Description
+
+ | 
+OneUM Company Dashboard
+
+ | Dylan Bergeron
+
+ |  | 
+Clinical Efficiency Dashboard
+
+ | Stefan Santavicca
+
+ | Provides case volume and details for all clinical reviewers. Serves as a tool for management to assess clinical operations and identify avenues for efficiency optimization.
+
+ | 
+Provider Dashboard
+
+Dashboard
+
+Documentation
+
+Repo
+
+Release Notes & Updates
+
+ | Steve Baillio
+
+ | This dashboard showcases case-level OneUM metrics for providers and practices
+
+What should I use this dashboard for?
+
+For looking up and exporting summary statistics about specific providers' OneUM case volumes, approval rates, intervention rates, LOI rates etc.
+
+For comparing providers and practices to one another
+
+Previously, we&rsquo;d provided summary stats for providers within QBRs or client specific reports, but this dashboard allows internal users to look up providers across payers
+
+ | 
+Iris Marketing Dashboard
+
+ | Stefan Santavicca
+
+ | Shows all currently marketing-eligible members for Iris. Refreshed monthly. Users are Marketing team & Product for campaigns and reference for considering lead pool expansion. 
+
+ | 
+Dashboards for External Consumers
+
+Dashboard
+
+ | Owner(s)
+
+ | Description
+
+ | 
+Advanced Analytics
+
+ |  |  | 
+ |  |  | 
+Dashboard Development: Standards & Practices
+
+All dashboards will follow the guidelines spelled out in the following sections. At a high level, all dashboards will be hosted in Oncology Insights, all code & jobs for dashboards will be stored in the oi_dashboards repository, and all dashboards will have thorough documentation (ReadMe files in repos, clearly written/well documented code, and if applicable, a data dictionary + tool tips in the dashboards themselves). Please read on for more detailed requirements.
+
+Repo/Code/Jobs
+
+Databricks Development & Promotion
+
+PowerBI Development & Promotion
+
+## PERSEUS
+
+Precision Evaluation & Reporting System for Enterprise User Statistics
+
+ Purpose
+
+What is PERSEUS?
+
+Perseus is an automated reporting generation and validation system for OncoHealth&rsquo;s monthly and quarterly client deliverables.
+
+PERSEUS Allows us to:
+
+Automatically curate the data needed for each reporting deliverable
+
+Schedule the reports to be created and land in a central location for user review
+
+Conduct enhanced data validation across these reports in compliance with expected output formats
+
+Move files from QA to Production for enterprise access without unnecessary PHI duplication on local machines
+
+Project Artifacts:
+
+The code used to Operate PERSEUS processing can be found in the reporting_fortify repo in Azure Dev Ops here: https://oncologyanalytics.visualstudio.com/Technology/_git/reporting_fortify
+
+The PERSEUS user guide for both developers and administrators can be found here: PERSEUS User Guide.pptx
+
+Automated reports land in Teams here: Client Reporting | PERSEUS | Microsoft Teams
+
+The Report Sweeper tool can be found here: PERSEUS Teams Sweeper - Power BI
+
+Production files delivered to clients can be found here: Client Reporting | General | Microsoft Teams
+
+See workflow for client reporting with PERSEUS swim lane:
+
+See workflow for how to make changes to PERSEUS processing:
+
+ Releases
+
+Release Name
+
+ | Value it adds
+
+ | Status
+
+ | Completed date
+
+ | 
+Prod Release 2024.08.16
+
+ | New Teams Channels, Operational Enhancements
+
+ | Completed
+
+ | 
+
+ | 
+Prod Release 2024.08.23
+
+ | New Reports Automated: 
+
+HealthPartners Delegation Audit
+
+Point32 Active Users
+
+Enhancements to Existing Reports: 
+
+ADO 135701 &ndash; Consolidate Denial / RADs across all activity reports
+
+ADO 136401 &ndash; Additional Coverage Type columns Medical vs Rx in Activity Reports
+
+Defects Addressed:
+
+ADO 136390 &ndash; Schema Mismatch
+
+ | Completed
+
+ | Aug 23, 2024
+
+ | 
+Prod Release 2024.08.29
+
+ | New Reports Automated:
+
+Humana Delegation
+
+Phone Data
+
+Triple S OncoHealth Dashboard
+
+Financial Impact
+
+MCS Eligibility
+
+Geisinger ODR
+
+Enhancements to Existing Reports: 
+
+ADO 135700 &ndash; Deploying Appeal Status to all OneUM clients
+
+ADO 135695 - Update Humana FI report(s) to reference 6 month duration only
+
+ADO 136402 - Coverage Type column in Financial Impact reports136402136402
+
+Defects Addressed:
+
+ | Completed
+
+ | Aug 29, 2024
+
+ | 
+Prod Release 2024.09.05
+
+ | New Reports Automated:
+
+Excellus Performance Guarantee
+
+Enhancements to Existing Reports: 
+
+Update Humana Medicare PMPM
+
+Defects Addressed:
+
+ | Completed
+
+ | Sep 5, 2024
+
+ | 
+Prod Release 2024.09.13
+
+ | New Reports Automated:
+
+Enhancements to Existing Reports: 
+
+ADO 135698 - FCHP ASO Breakouts on FI reports 
+
+ADO 137098 - Update Humana OQM report to real duration4Ad02136402Ad
+
+Defects Addressed:
+
+ | Planned
+
+ | Sep 13, 2024
+
+ | 
+ Next steps
+
+1
+1
+incomplete
+What should we do next?Set a status
+
+ Impact
+
+Add in key metrics and other performance indicators that you are tracking.
+
+ Other documents
+
+Example
+
+### 2018-12-03 Retrospective Report - Analytics Team
+Labels: retrospective
+
+Date |  | 
+Team | Analytics Team | 
+Participants |           Joseph Polifroni | 
+
+Retrospective
+
+What did we do well? | What should we have done better? | 
+Anna Schorer - Very efficient team communication and collaboration, we are on track
+
+Dinah Huff - We are more organized. ADOS board is helpful
+
+Brian York - Did not attend
+
+Mark Mangurian - Dina and Kristen were very helpful in finding data, appreciate them
+
+Hemalatha Elango - Team adopted very well to ADOS. Great job team. We are making great progress in following Sprints. 
+
+Kristen Biskobing - Good progress on documentation of reports and processes for future reference
+
+Tamara Mckelligan - Transition to ADOS was bit uncomfortable initially. Materials from Hema regarding ADOS was very helpful. Following Sprint is very useful to organize my weekly work (Even though we are flexible in our estimates)
+
+Orieta Solano - We did well on communication and consolidation
+
+Anthony Abbatello - Gateway is a big win and we continue to make improvements
+
+Joseph Polifroni - Looking forward to work with the team and be able to contribute in the next retrospective
+
+Carolina Lugo - PTO
+
+ | Anna Schorer - Took responsibility for GMT and working on it but it has dependability on others and making progress
+
+Dinah Huff - 
+
+Brian York - Did not attend
+
+Mark Mangurian - New server transition is good but Dev should have more relevant tables (for example Martin's Point Tables)
+
+Hemalatha Elango - Anyone who goes through the Work item  must be able to understand it easily. Writing a description is a must for all EPICS, Features, User Stories and Tasks created in ADOS. Helps the team to better understand the work items (Why and how is it done) Writing Acceptance criteria is a must and it also helps in breaking the User Stories into Tasks. More refining needed following Sprint methodology, but we are learning and evolving as a team.
+
+Kristen Biskobing - It is better to have back up. Two people in the team must be familiar with the same subject. There must not be any dependency on a single person. It is a problem when that person is on PTO.
+
+Tamara Mckelligan - We must continue to improve and explore other ways to document
+
+Orieta Solano - None
+
+Anthony Abbatello - 
+
+Joseph Polifroni
+
+Carolina Lugo - PTO
+
+ | 
+
+What did we learn? | What questions arose? | 
+Anna Schorer - Focus on categorization of diseases
+
+Dinah Huff - Need to familiarize more with ADOS, Experience difficulty in finding  things in ADOS
+
+Brian York - Did not attend
+
+Mark Mangurian - While working on TKI will learn more on Azure and Databricks
+
+Hemalatha Elango - To insist the team on writing User Stories and Acceptance criteria in ADOS
+
+Kristen Biskobing - We are making good progress as a team.
+
+Tamara Mckelligan - We must make sure that as a team all of us are in the same page through better coordination (avoid repetitive work for lack of communication)
+
+Orieta Solano - Last minute requests for reports (reports within 2 hours). Need to have some norms for the report requests at-least 48 hours notice time.
+
+Anthony Abbatello - Learn more ways to refine savings
+
+Joseph Polifroni
+
+Carolina Lugo - PTO
+
+ | Anna Schorer - 
+
+Dinah Huff - How to include attachments in ADOS work items.
+
+Brian York - Did not attend
+
+Mark Mangurian - 
+
+Hemalatha Elango -
+
+Kristen Biskobing -  Need to look into SQL Dev 02 and decide on a better solution whether to have a new location to store apart from Blob. 
+
+Tamara Mckelligan - 
+
+Orieta Solano -
+
+Anthony Abbatello - 
+
+Joseph Polifroni
+
+Carolina Lugo - PTO
+
+ | 
+Actions                                                                                                        
+
+3
+incomplete
+Anna Schorer -
+
+15
+incomplete
+Dinah Huff - 
+
+5
+incomplete
+Brian York - Did not attend
+
+7
+incomplete
+Mark Mangurian -
+
+8
+complete
+Hemalatha Elango - To prepare a short documentation on how to write better User Stories and Acceptance Criteria in ADOS and the importance of writing them, Guide Dinah in adding attachments to work items in ADOS
+
+9
+complete
+Kristen Biskobing - Find ways to Organize SQL Dev 02
+
+10
+incomplete
+Tamara Mckelligan -
+
+16
+incomplete
+Orieta Solano -
+
+12
+incomplete
+Anthony Abbatello -
+
+17
+incomplete
+Joseph Polifroni
+
+13
+incomplete
+Carolina Lugo - PTO
+
+### 2018-6-22 Retrospective Report - Analytics Team
+Labels: retrospective
+
+Date |  | 
+Participants | Anna Schorer, Dinah Huff, Brian York, Mark Mangurian, Hemalatha Elango, Kristen Biskobing, Tamara Mckelligan, Michael Iannacone, Anthony Abbatello, Carolina Lugo, Raul Machado, John Callegari | 
+
+Retrospective
+
+What did we do well? | What should we have done better? | 
+Anna Schorer - Didn't attend
+
+Dinah Huff - Good communication among team members, Most of the work done, Appreciation to Michael (RF) and Tamara
+
+Brian York - Didn't attend
+
+John Callegari - Didn't attend
+
+Mark Mangurian - Good work done
+
+Hemalatha Elango - Evolving well as a team, Improved communication, Team adaptability
+
+Kristen Biskobing - Good team collaboration
+
+Tamara Mckelligan - Flexibility from everyone, Good learning process
+
+Michael Iannacone - Gateway claims analysis done well, Good CA process understanding by team
+
+Anthony Abbatello - Good progress on FN risk, RF analysis improving
+
+Carolina Lugo - Didn't attend
+
+Raul Machado - Didn't attend
+
+ | Anna Schorer -
+
+Dinah Huff - None
+
+Brian York -
+
+John Callegari -
+
+Mark Mangurian - None
+
+Hemalatha Elango - None
+
+Kristen Biskobing - None
+
+Tamara Mckelligan - None
+
+Michael Iannacone - None
+
+Anthony Abbatello - None
+
+Carolina Lugo -
+
+Raul Machado -
+
+ | 
+
+What did we learn? | What questions arose? | 
+Dinah Huff - Nice to have quicker communication with Brian and Dr. Schorer
+
+Tamara Mckelligan - FN risk documentation version control required
+
+Michael Iannacone - Looking forward to TKI automation
+
+Mark Mangurian: Fix Ad-hoc Jira issue to avoid duplicates
+
+ | Mark Mangurian - Frequency of standup's can be reduced?
+
+Dinah Huff - Frequency of standup's can be reduced?
+
+Kristen Biskobing - Frequency of Retrospective can be reduced to once in two weeks or    once a month (as it will be a repetition)?
+
+ | 
+Actions                                                                                                        
+
+3
+incomplete
+Anna Schorer -
+
+15
+incomplete
+Dinah Huff -
+
+5
+incomplete
+Brian York -
+
+6
+incomplete
+John Callegari -
+
+7
+incomplete
+Mark Mangurian -
+
+8
+incomplete
+Hemalatha Elango - Fix WebEx issues, look into Ad-hoc Jira issue
+
+9
+incomplete
+Kristen Biskobing - Fix Ad-hoc Jira issue, Version control
+
+10
+incomplete
+Tamara Mckelligan -
+
+11
+incomplete
+Michael Iannacone -
+
+12
+incomplete
+Anthony Abbatello -
+
+13
+incomplete
+Carolina Lugo -
+
+14
+incomplete
+Raul Machado -
+
+### 2019-01-29 Meeting notes
+Labels: meeting-notes
+
+Date
+
+Participants
+
+List meeting participants using their @mention names:
+
+ 
+
+ 
+
+ 
+
+ 
+
+Goals
+
+Update on MMM
+
+Discussion topics
+
+Item
+
+ | Presenter
+
+ | Notes
+
+ | 
+Work update
+
+ | Mark
+
+ | Did a drug evaluation of Medicaid claims
+
+Compared them with Medicare claims
+
+Most of the drugs are there - more in Medicare than Medicaid
+
+Average cost per unit seems to be within a reasonable difference between the two LOB&rsquo;s which is good
+
+Kristen loaded the Medicaid files
+
+Noted a file format difference compared to Medicare
+
+Seeing copied from, copied to, reversed from, reversed to, adjusted from, adjusted to 
+
+The claim numbers have an extra ID
+
+Did a reverse engineering to understand
+
+Mapped out  - the first digit is LOB, middle portion is the claim ID and the last digit is the designation in order
+
+Problem is lot of times the designation order refers to a claim which we do not have
+
+Question is - are we getting the right claims? or they are sending the voided claims - we need to check with them.
+
+Why claim line sequence is missing in some
+
+Seeing three amounts 1. Charge_amount 2. RC_amount and 3. Paid_amount - which one to use?
+
+ | 
+
+ | Kristen
+
+ | Will check with Chandler on this issue regarding the claims we got 
+
+ | 
+ | Mark - Carolina
+
+ | Any progress with the views in the Medicare 
+
+Carolina - not yet
+
+Mark - we are looking at Q3 2017 - Q3 2018  
+
+Carolina - understood that the data from the claims are to be compared with MMM fee and FDB and Mark is going to calculate the median and that is the price she has to use
+
+Mark - View indicates the median price for the specialty pharmacy
+
+Mark - we are going to use the median price from the claims for the specialty pharmacy  for the period we are looking at
+
+Carolina - If that is the case why did I calculate the FDB price?
+
+Mark - We changed our approach as it didn&rsquo;t workout well
+
+Carolina - Hema, can you confirm with Brian
+
+Mark -  Use the median unit price for the Jcode from the for specialty pharmacy
+
+ | 
+Action items
+
+64
+complete
+ - Contact Chandler regarding the files received
+
+65
+complete
+ - To confirm with Brian regarding the median cost to be calculated for specialty pharmacy
+
+Decisions
+
+0a2ea18c-6cf1-4c15-9cfc-0e742fc005cdDECIDED0dd1b63c-b782-40f9-82c1-1759c13e8eebWait for clarification from Chandler after she contacts MMMWait for clarification from Chandler after she contacts MMM
+
+### 2019-01-30 Meeting notes
+Labels: meeting-notes
+
+Date
+
+Participants
+
+List meeting participants using their @mention names:
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Goals
+
+Update on MMM
+
+Discussion topics
+
+Item
+
+ |  | Notes
+
+ | 
+ | Mark
+
+ | Kristen sent email to Medicaid regarding the data
+
+ | 
+
+ | 
+Hema
+
+ | Sent an email to you Brian with Mark&rsquo;s update
+
+Brian - saw that
+
+ | 
+ | Carolina
+
+ | Question on the calculation 
+
+understood that the price calculated is a median between MMM fee, FDB price and claim data
+
+It is a misunderstanding
+
+Mark told me that he has done the median of claims prices
+
+ | 
+ | Brian
+
+ | Reason to look at the drugs we took savings on and look at FDB price and median price of the claims is - I don&rsquo;t know how different they are and we need to know that in order to decide how we are going to do it
+
+What i think will happen is (fairly sure is going to happen) is the savings are going to go up because the specialty pharmacy fee schedule is higher than MCA (at-least for those I looked at)
+
+Francisco would like to look at how we calculated these prices and if we haven&rsquo;t looked carefully especially for the drugs we took most savings on - we are likely not to be able to explain what we did and why
+
+Have been asking for this for almost a week to look at the matrix of prices for those drugs we took savings on
+
+Until we do this we can&rsquo;t really decide how we do this. We must do something that is sensible for data
+
+ | 
+ | Carolina
+
+ | who is supposed to compare the median prices from claims with FDB
+
+I am asking you to decide because I am busy with including the new prices for the XRT module that I need to get ready
+
+ | 
+ | Brian
+
+ | Have we put the tables together so that we can walk through
+
+ | 
+ | Carolina
+
+ | Yes, last week I sent all tables with all FDB price available
+
+ | 
+ | Brian
+
+ | Does it have MSO fee schedule and MCA on it?
+
+ | 
+ | Carolina
+
+ | There is another table
+
+ | 
+ | Brian
+
+ | what I want is join and put all those together so that we can look at it and decide
+
+We cant seem to get that organized
+
+ | 
+ | Carolina
+
+ | Please decide on my priority today
+
+Mark if you can do it, I appreciate it very much
+
+ | 
+ | Mark
+
+ | I wasn&rsquo;t clear on the route
+
+wrote out the logic
+
+if MMM protocol not approved then look at Jcode with savings,total units saved then go to the MATIS treating provider NPI and look at the  propensity the provider&rsquo; utilized between the specialty pharmacy vs MSO for patients calculated by claims-line for the last four quarter
+
+then for the propensity for the specialty pharmacy use the median unit of the allowed amount by jcode of the specialty pharmacy  and for the proportion indicated as MSO use the price on the fee schedule
+
+ | 
+ | Brian
+
+ | We do not have discount on MSO fee schedule
+
+ | 
+ | Carolins
+
+ | For providers not using specialty pharmacy we are going to use MSO price which are ready
+
+My understanding for specialty pharmacy is we need to compare the FDB price with the median of the prices in the claims
+
+ | 
+ | Mark
+
+ | We have it and it must be easy
+
+ | 
+ | Brian 
+
+ | Yest it should be easy and we have been talking about it for a week and we haven&rsquo;t done it.
+
+ | 
+ | Mark
+
+ | I thought we are in the process of calculating savings
+
+i didn&rsquo;t know that we are doing a comparison
+
+I was working on Medicaid as well
+
+ | 
+ | Brian
+
+ | Can we look at the specialty pharmacy drug&rsquo;s median prices and FDB prices for those drugs we took savings on
+
+Is there any reason we can&rsquo;t do that
+
+ | 
+ | Mark
+
+ | I can get that done 
+
+ | 
+Action items
+
+Add action items to close the loop on open questions or discussion topics:
+
+152
+complete
+ - Going to setup a meeting this afternoon
+
+153
+complete
+  - To have a table ready with Jcodes in descending order by savings for 2018 with the median unit price from Medicare claims  paid to specialty price and FDB price
+
+437859f4-f8ac-4e36-a3ff-ee58201db9beDECIDED742518c1-cff2-4fa2-ac23-faf906b4f6c6To meet again today afternoon to look at the table created by Mark.To meet again today afternoon to look at the table created by Mark.
+
+### 3/15/2019- Retrospective Report - Analytics Team
+Labels: retrospective
+
+Date | 3/15/2018 | 
+Team | Analytics Team | 
+Participants |           Joseph Polifroni Aaron Morgan Abbey Bernardi | 
+
+Retrospective
+
+What did we do well? | What should we have done better? | 
+Anna Schorer - We have a very knowledgeable team who support each other
+
+Dinah Huff - Automation of XRT involved extensive commitment by the team
+
+Brian York - We have done a lot but not to the point how we create value for the company, Impressed with the work done, Happy to work as a team
+
+Mark Mangurian - Quick communication among the team
+
+Hemalatha Elango - 
+
+Kristen Biskobing - TAT is getting better
+
+Tamara Mckelligan - Continued IA process improvement, Cross traing, Management Metrics Dashboard project went very well - Thanks to Carolina for all the reports provided
+
+Orieta Solano - Hiring moe people with different skill sets
+
+Joseph Polifroni - Working with Dr. Anna, Abbey came up with the algorithm that defined the problem
+
+Carolina Lugo - We have accomplised a lot, plenty of work going on, getting better with the workload
+
+Aaron Morgan - Good documentation, very helpful team
+
+Abbey Bernardi - Very helpful team, generous with their time, data and solutions. Domain knowledge is good - this is unique in my experience
+
+ | Anna Schorer - Can give me more work
+
+Dinah Huff - 
+
+Brian York - Paying attention and better about being present without any distraction
+
+Mark Mangurian - Lot of projects are going on and prioritization is the key
+
+Hemalatha Elango - 
+
+Kristen Biskobing - Need to be more organized in 
+
+Tamara Mckelligan - As we are all busy listing action items at the end of any discussion will be better
+
+Orieta Solano - Naming fields in MATIS
+
+Joseph Polifroni - Parsing the protocols and leearning the goals will talk about it in the upcoming Summit
+
+Carolina Lugo - 
+
+Aaron Morgan - Following Agile methodology can be better
+
+Abbey Bernardi - Clear decisions on action items
+
+ | 
+
+What did we learn? | What questions arose? | 
+Anna Schorer - Learnt a lot from Joe
+
+Dinah Huff - Trying to keep up with lot of projects that are going on
+
+Brian York - We as a team must help the company with the information - for example in the savings reports we can add more savings details. Working on the MMM project we understood our relative strenghts and what skills do we need to improve on. Work with the product team to fill the gaps with all of our team's strength - This is Rick's expectation of our team. We need to solve the Clinical Data Repository problem. How much we can accomplish in creating new products working along with the IT team
+
+Mark Mangurian - Learning a lot by colloborating with others and our team is growing
+
+Hemalatha Elango -
+
+Kristen Biskobing - We can get a lot done if we work on all of our strengths
+
+Tamara Mckelligan - Knowledge sharing
+
+Orieta Solano - 
+
+Joseph Polifroni - 
+
+Carolina Lugo - MMM savings - to work better as a team, it was a difficult and time consuming project
+
+Aaron Morgan -
+
+Abbey Bernardi - tremendous opportunity and I am hoping to help the team to organize and prioritize 
+
+ | Anna Schorer - 
+
+Dinah Huff - Had questions on MMM when Aaron showed the PPT. Keeping the team well informed of ongoing project details
+
+Brian York - 
+
+Mark Mangurian - Would like to know the role of new team members
+
+Hemalatha Elango -
+
+Kristen Biskobing -  What are our priorities 
+
+Tamara Mckelligan - 
+
+Orieta Solano -
+
+Joseph Polifroni -
+
+Carolina Lugo - 
+
+Aaron Morgan -
+
+Abbey Bernardi -
+
+ | 
+Actions                                                                                                        
+
+3
+incomplete
+Anna Schorer -
+
+15
+incomplete
+Dinah Huff - 
+
+5
+incomplete
+Brian York - 
+
+7
+incomplete
+Mark Mangurian -
+
+8
+incomplete
+Hemalatha Elango - 
+
+9
+incomplete
+Kristen Biskobing - 
+
+10
+incomplete
+Tamara Mckelligan -
+
+16
+incomplete
+Orieta Solano -
+
+12
+incomplete
+Anthony Abbatello -
+
+17
+incomplete
+Joseph Polifroni
+
+13
+incomplete
+Carolina Lugo - 
+
+18
+incomplete
+Aaron Morgan -
+
+19
+incomplete
+Abbey Bernardi -
+
+### ADOS - Mandatory Fields
+
+Overview
+
+falseThis page has an overview of all mandatory fields required to be filled and or added to the Work Items by all the team members who create any Work Item in ADOS.
+
+Description
+
+black1solidIn order to do the performance analysis the Analytics team is expected to fill and or add certain mandatory fields while creating as well as working on a work item.
+
+Mandatory Fields Required in a Work Item
+
+black1solid
+
+# | Name of the Field | Description | Fill in  | Pull Down | Tag - Yes /No | 
+1 | Assigned | Name of the person working on the work item | 
+ | Yes
+
+Select your name
+
+ | 
+ | 
+2 | Title  | Write short/simple titles for EPIC, Feature, User Story or Task
+
+Note: Do not write a sentence for a title. 
+
+          Do not use a prefix in your title unless instructed to do so (i.e. a policy agreed to on the team)
+
+ | Yes | 
+ | 
+ | 
+3 | Area | Under Analytics we have
+
+Analytics Main
+Analytics/ Adhoc Analytics AHA
+Analytics / Analytics General 
+ Sub Areas under Analytics / Analytics General 
+
+Analytics\Analytics General\Impact Analysis IA
+Analytics\Data Science DS
+Analytics\BI Work
+Analytics\Analytics Environment AE
+Analytics\Client Support
+ | 
+ | Yes
+
+Pull down under area and select accordingly
+
+ | 
+ | 
+4 | Iteration | Select the appropriate sprint (if you follow Sprint) | 
+ | Yes
+
+Pull down under iteration and select accordingly
+
+ | 
+ | 
+5 | Priority | Prioritize your work item - 1, 2, 3, 4 (from high priority to low priority) | 
+ | Yes
+
+Pull down under priority and choose accordingly
+
+ | 
+ | 
+6 | Story Points | *These are entered during the grooming meeting.
+
+Please refer to  for detailed explanation.
+
+Very quick to deliver and no complexity; on the order of minutes - One should be able to deliver many 0&rsquo;s in a day - 0 Story point
+
+Quick to deliver and minimal complexity; on the order of a an hour+ - One should be able to deliver a handful of 1&rsquo;s in a day - 1 Story point
+
+Quick to deliver and some complexity; on the order of multiple hours/half-day+ - One should be able to deliver one 2's  comfortably in a day - 2 Story points
+
+Moderate time to deliver, moderate complexity, and possibly some uncertainty/unknowns - On the order of about a day or more to deliver - 3 Story points
+
+Longer time to deliver, high complexity, and likely unknowns - On the order of about a week or more to deliver - 5 Story points
+
+Long time to deliver, high complexity, critical unknowns -  On the order of a couple weeks+8 Story points
+
+Long time to delivery, high complexity, many critical unknowns - On the order of many weeks/month - 13 Story points
+
+*Adhoc team can enter the story points for work items that are not groomed | Yes | 
+ | 
+ | 
+7 | *Add Tag | Tagging is very important and helps in filtering a work item using a query
+
+*Adding the name tags is important. Please always remember to add a tag. | 
+ | Yes | 
+ | 
+8 | *Adhoc Report Requested by Tag  | Frequent team members First name and Last name are already added | 
+ | 
+ | 
+ | 
+9 | 
+ | Rick Dean - CEO | 
+ | Pull down and select tag | Yes | 
+10 | 
+ | OA MD Team related - All MD team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+11 | 
+ | OA Nurse Team related - All Nursing team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+12 | 
+ | OA Pharmacy Team related - All Pharmacy team members are already into the tags | 
+ | Pull down and select tag | Yes | 
+13 | 
+ | Provider relationship related - All PR team members are already added into the tags
+
+ | 
+ | Pull down and select tag | Yes | 
+14 | 
+ | Sales Team related - All Sales team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+15 | 
+ | CRS Team related - All CRS team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+16 | 
+ | Analytics Team related - All Analytics  team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+17 | 
+ | Product Management Team related - All PM team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+18 | 
+ | OA Clients related - All OA clients are already added into the tags | 
+ | Pull down and select tag | Yes | 
+19 | 
+ | Client Success - All Client success team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+20 | 
+ | Finance Team related - All Finance team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+21 | 
+ | IT Team - All IT team members are already added into the tags | 
+ | Pull down and select tag | Yes | 
+22 | 
+ | If reports are created without any requestor - Add your First name and Last name as tag | 
+ | Pull down and select tag | Yes | 
+*For Adhoc Team 
+
+Add Tag
+
+black1solidFor the Adhoc Team
+
+The first name and last name of the person who requested the Adhoc report must be tagged to the work item.
+Tags are already added for your convenience. Just select the name and add.
+Select only one tag to a work item. (If there are two requestors, tag the first requestor name)
+If the name you want to tag is missing in the list please contact helango
+
+For the General Analytics Team
+
+Add tags based on the customer name, nature of the work item (documentation, productivity etc.)
+
+Tag Classification - I (For Adhoc Team)
+
+black1solid
+
+ | Name | Department | 
+1 | Dr. Marc Fishman | MD | 
+2 | Dr. Anna Schorer | Analytics | 
+3 | Dr. Graeme Bolger | MD | 
+4 | Dr. Richard Wilder | MD | 
+5 | Dr. Sanjay Jain | MD | 
+6 | Dr. William Early | MD | 
+7 | Dr. Jurgen Kogler | MD | 
+8 | Dr. Dinah Huff | Analytics | 
+9 | Laura Bobolts | Pharmacy | 
+10 | Rakhi Gavan  | Pharmacy | 
+11 | Marjorie Velasquez | Pharmacy | 
+12 | Rebecca Tombleson | Pharmacy | 
+13 | Hung Pham | Pharmacy | 
+14 | Val Fishman | Nursing | 
+15 | Anju Chowattukunnel | Nursing | 
+16 | Colleen Gulla | Nursing | 
+17 | Carol Cullum | Nursing | 
+18 | Kathi Barimo | Nursing | 
+19 | Chris Magalik | Sales | 
+20 | Christine Boyle | Sales | 
+21 | Michael Collett | Sales | 
+22 | Paul Novasitis | Sales | 
+23 | Sarah Long | Sales | 
+24 | Serpil Bizova | Sales | 
+25 | Tamara Watt | Sales | 
+26 | Chandler Case | Provider Relations | 
+27 | Jesus Garcia | Provider Relations | 
+28 | Kathy Mosbaugh | Provider Relations | 
+29 | Linda Baron | Provider Relations | 
+30 | Mark Mangurian | Analytics | 
+31 | Paola Gomez | Provider Relations | 
+32 | Richard Fishman | Provider Relations | 
+33 | Robert Breakiron | Provider Relations | 
+34 | Teresa Izquierdo | Provider Relations | 
+35 | Danielle Fishman | CRS | 
+36 | Celia Quezada | CRS | 
+37 | Colette Swenson | CRS | 
+38 | 
+ | 
+ | 
+39 | 
+ | 
+ | 
+40 | 
+ | 
+ | 
+41 | 
+ | 
+ | 
+42 | 
+ | 
+ | 
+43 | 
+ | 
+ | 
+44 | 
+ | 
+ | 
+45 | 
+ | 
+ | 
+46 | 
+ | 
+ | 
+47 | 
+ | 
+ | 
+48 | 
+ | 
+ | 
+49 | 
+ | 
+ | 
+50 | 
+ | 
+ | 
+51 | 
+ | 
+ | 
+52 | 
+ | 
+ | 
+53 | 
+ | 
+ | 
+54 | 
+ | 
+ | 
+55 | 
+ | 
+ | 
+56 | 
+ | 
+ | 
+57 | 
+ | 
+ | 
+
+Tag Classification - II (For Adhoc Team)
+
+black1solid
+
+ | Name | Department | 
+1 | Celia Quezada | CRS | 
+2 | Colette Swenson | CRS | 
+3 | Cristalle Dobies | CRS | 
+4 | D'Angela Robinson | CRS | 
+5 | Gloria Salgado | CRS | 
+6 | Lina Hoyos | CRS | 
+7 | Linda Friend | CRS | 
+8 | Marsha Davis | CRS | 
+9 | Monica Vinocur | CRS | 
+10 | Yasmine Micourt | CRS | 
+11 | Sara Zywicki | Product Management | 
+12 | Balbino Vazquez | Product Management | 
+13 | Humana | Client | 
+14 | MMM | Client | 
+15 | MCS | Client | 
+16 | Scott & White | Client | 
+17 | Alignment Health Care | Client | 
+18 | Triple S | Client | 
+19 | Martins Point | Client | 
+20 | Crystal Block | Client Success | 
+21 | Brian York | Analytics | 
+22 | Orieta Solano | Analytics | 
+23 | Carolina Lugo | Analytics | 
+24 | Kristen Biskobing | Analytics | 
+25 | Hemalatha Elango | Analytics | 
+26 | Health Partners | Client | 
+27 | Rick Dean | CEO | 
+28 | Miramar | Client | 
+29 | John Callegari | Finance | 
+30 | Karen Hausheer | IT | 
+31 | Alexander Rodriguez | IT | 
+32 | Brenton Chamberland | IT | 
+33 | Tamara McKelligan  | Analytics | 
+34 | Anthony Abbatello | Analytics | 
+35 | Joseph Polifroni | Analytics | 
+36 | 
+ | 
+ | 
+37 | 
+ | 
+ |
+
+### ADOS - Tips on Writing Work Items
+
+Overview
+
+falseThis page has few tips to follow when a Work Item is created in ADOS.
+
+Description
+
+black1solidIn order to  make use of the ADOS board very efficiently, please make sure to follow all the important criteria while creating a new work item in ADOS.
+
+Going forward we expect the team to start writing User Stories and Acceptance Criteria. This will help us in organizing our work and fine-tune the processes.
+
+The ADOS tips are classified under the following topics
+
+Work Items in ADOS
+Title for a Work Item
+Description of a Work Item
+User Story
+Acceptance Criteria
+Attachments and Links to Work Items
+
+Work Items in ADOS
+
+black1solid
+
+PO: Product Owner
+BA: Business Analyst
+QA: Quality Assurance
+
+black1solidWork Items Hierarchy in ADOS 
+
+black1solidImportant Points to Remember
+
+Any Feature or User Story created must be placed under an EPIC.
+
+All the EPICS are a direct pull over from our OKR document.
+
+If not required, You can skip creating Feature and directly create an User story under an EPIC.
+
+Though you can create a Task under Feature, it will show as UNPARENTED while filtering. So always make sure to create an User Story and then add the Tasks under it.
+
+Moreover it is not possible to filter by Tasks in the ADOS Board as well as in the Backlog view.
+
+Always break down your User Stories into many Tasks.
+
+Estimated time for each task is the key in arriving Story Points for the User Story.
+Always add the Story Points (Refer  for Story points)
+
+Title for Work Item
+
+black1solidDo not write a sentence for a title.
+
+Use the description section to provide a detailed explanation of the issue being reported.
+
+Do not use a prefix in your title unless instructed to do so (i.e. a policy agreed to on the team)
+
+Description of a Work Item
+
+black1solidNote: Never leave the Description portion blank when you create an EPIC, Feature, User Story or Task.
+
+Work Item | Description | Acceptance Criteria Needed | 
+Epic | Description &ndash; Major User Story. Few sentences explaining the EPIC | No | 
+Feature | Description &ndash; Write about the Feature explaining it in detail | No | 
+User Story &ndash; Individual Deliverable | Description &ndash; write User Story here | Yes | 
+Task | Description &ndash; Explain the Task you are going to do | No | 
+
+User Story
+
+After reading a user story, the team knows why they are building what they're building and what value it creates.           
+
+black1solidUser stories are
+
+Short - expressed in a few short sentences, ideally using non-technical language.
+Simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system
+User stories are one of the core components of an agile program. They help provide a user-focused framework for daily work &mdash; which drives                                   
+                                   *Collaboration
+
+                                   *Creativity
+
+                                   *Better product overall
+
+Sample Template for an User Story
+
+black1solidAs a < type of user >, I want < some goal > so that < some reason >
+
+Example:As <a data analyst>, I want <to do an evaluation and distribution analysis of the Gateway claim files> so that < I can do a pre-analysis data review>
+
+Acceptance Criteria 
+
+All User Stories must have the Acceptance criteria written.
+
+Clearly written criteria introduce a single solution to the functionality you intend to implement.
+
+Creating acceptance criteria is all about gaining a common understanding. It requires the team to think about the proposed acceptance criteria, and then bring their questions and thoughts to the table with the product owner.
+
+black1solidWhat are Acceptance Criteria Used For
+
+To define boundaries. 
+
+To reach consensus. 
+
+To serve as a basis for tests.(QA)
+
+To allow for accurate planning and estimation.
+
+Acceptance Criteria Format Types and Structures
+
+black1solidAcceptance Criteria can be written in different formats.
+
+There are two most common ones, and the third option is to devise your own format:
+
+Scenario-oriented (Given/When/Then)
+
+Rule-oriented (checklist)
+
+Custom formats
+
+Scenario - Oriented
+
+Scenario-oriented format of writing Acceptance Criteria is known as the Given/When/Then (GWT) type.
+
+Given some precondition
+
+When I do some action
+
+Then I expect some result
+
+black1solidScenario &ndash; the name for the behavior that will be described
+
+Given &ndash; the beginning state of the scenario
+
+When &ndash; specific action that the user makes
+
+Then &ndash; the outcome of the action in &ldquo;When&rdquo;
+
+For User Story Example: As a <Data Analyst> I want to <Filter work items in ADOS based on XYZ criteria> so that <I can generate a performance report for the Adhoc team>
+
+Scenario - Ability to filter by XYZ criteria requested by the analyst in Power BI
+
+Given - All the Analyst requested XYZ filter criteria in Power BI
+
+When - Analyst chooses a specific filter
+
+Then - Analyst is able to filter by chosen criteria
+
+Rule - Oriented
+
+black1solidThe rule-oriented form entails that there is a set of rules that describe the behavior of a system. Based on these rules, you can draw specific scenarios.
+
+Usually, criteria composed using this form look like a simple bullet list. 
+
+For User Story Example: As a <Data Analyst> I want to <Create a work flow in Decisions> so that <I can do XRT savings analysis>
+
+Create a XRT savings calculation Simple Flow in Decisions
+
+Create and add required Simple Flow steps in Decisions
+
+Create and add required Forms in Decisions 
+
+Test the XRT savings calculation Simple Flow
+
+Custom Format
+
+You can invent your own acceptance criteria given they serve their purposes, are written clearly in plain English, and can&rsquo;t be misinterpreted. 
+
+black1solidFor User Story Example: As a <ADOS admin> I want to <Create a Confluence Page > so that <I can publish few important ADOS tips while creating a new Work Item to the team>Create a new Confluence page adding all important ADOS tips and publish it to the team so that they can follow the tips easily while creating their new Work Items.
+
+Add the new page to the Analytics Team space for easy access by the team.
+
+black1solidFew Tips to Write Great Acceptance Criteria
+
+Keep your criteria well-defined so any member of the project team understands the idea you&rsquo;re trying to convey.
+
+Keep the criteria realistic and achievable. 
+
+Define the minimum piece of functionality you&rsquo;re able to deliver and stick to it. On the other hand, don&rsquo;t try to describe every detail since you risk cluttering up your backlog and getting buried under many small tasks.
+
+Coordinate with all the stakeholders so your acceptance criteria are based on consensus.
+
+Create measurable criteria that allow you to adequately estimate development time so you&rsquo;re able to stay within budget and time constraints (this is important in determining the Story points for Sprints)
+
+Consider providing checklists that enable you to see what user stories are covered with acceptance criteria.
+
+Attachments and Links to Work Items and Check History
+
+black1solidMake sure you attach all files (Word, Excel, PPT etc. you created) and links related to the work item. 
+
+This helps in understanding the work items better as well as saves time if someone is on PTO (we don&rsquo;t need to wait for the person to get the files)
+
+How to attach files to a work item?
+
+Just click on the following illustrated icons in the work items and follow the instructions.
+
+Pic #1
+
+### Alignment Healthcare
+
+Overview
+
+falseAlignment Healthcare partners with hospitals that want to transform their business to become the network of choice in the post-reform healthcare system.
+
+Alignment Healthcare is the ONLY POPULATION HEALTH SOLUTION with an advanced clinical model, IT & enablement platform, risk experience and capital.
+
+Alignment Healthcare Key Information
+
+falseHeadquarters: California
+Medicare population only
+Florida headquarters: Tampa, Florida
+Florida Membership population as of 11/1/2017: ~7,500 lives
+
+OA Services Provided
+
+falseChemotherapy review
+Radiation (XRT) therapy review
+Genetic and Molecular Testing (GMT) review
+
+Alignment Healthcare Turn-Around Time Frames
+
+Standard: 7-days
+Urgent/Expedited: 24-hours
+false
+
+Line of Business/Case Priority | Compliance Requirement | OA TAT Requirement | Health Plan remaining TAT Requirement | 
+Urgent/STAT
+
+ | 72 - Hours | 24 - Hours | 48 - Hours | 
+Medicare | 14 Days* | 7 Days* | 7 Days* | 
+Retrospective | 14 Days* | 7 Days* | 7 Days* | 
+*Consecutive days NOT Business days | 
+ | 
+ | 
+ | 
+
+Provider/PayerNotification
+
+falseRecommendation of Approvals to the treating provider and payer
+Recommendation of Adverse determination send to both provider and payer
+
+Alignment Provider Network File Template 
+
+false
+
+Alignment Member Eligibility File Template 
+
+false
+
+Recent space activity
+
+page, comment, blogpost5truesocial
+
+### Analytics Team Development
+
+Start with the powerpoint presentation that walks through roles, levels, and skills. 
+
+Then complete a matrix and deliver to manager for review. 
+
+Create a development plan with your manager, focusing on skills you would like to improve.
+
+### Anna's Cancer Training
+Labels: file-list
+
+Includes the powerpoints from Anna's training sessions on cancer. 
+
+true
+
+### Annotation data set content
+
+Documents for patients with more than 1 line of therapy
+
+Data mined using keywords as terms and phrases within elasticsearch highlight query 
+https://adb-7674707792600009.9.azuredatabricks.net/?o=7674707792600009#notebook/882807478423088/command/3244860803875243
+
+Sentences containing the keywords are further more isolated from the highlight text returned by elastic
+
+The following 8 sets of keyswords and and distribution weights are used to approximate progression data distribution within the broader text
+
+conf = {
+
+  "YP":{
+
+        "prog_yp_newmets" : ("new metastatic", .5),
+
+        "prog_yp_suspect" : ("suspicious", .5),
+
+        "prog_yp_incr" : ("recurrurent increase worse enlarge", 1),
+
+        "prog_yp_prog" : ("disease progression", 1)
+
+      },
+
+ 
+
+    "NP": {
+
+      "prog_np_noprog" : ("no progression", .25),
+
+      "prog_np_stable" : ("stable decrease unchanged ned",.5),
+
+      "prog_np_response" : ("treatment response", .5),
+
+      "prog_np_improve" : ("improve decrease reduce smaller", .25)
+
+    }
+
+   }
+
+https://adb-7674707792600009.9.azuredatabricks.net/?o=7674707792600009#notebook/2178846537803019/command/2178846537805237
+
+4. Each of the full component tables are available as delta tables, for example: &ldquo;/delta/prog_yp_newmets&rdquo;
+
+5. For the final &ldquo;representative&rdquo; table: spark.read.format("delta").load("/delta/progression_annotation_data_v2")
+
+NPC model is used to remove NPC data 
+
+Progression model is used to select appropriate progression data (Yes/No) 
+
+The distribution weights are applied to component tables in the final stage of sampling
+
+### Archived OA Analytics Related Files
+
+Overview
+
+falseThis page has all the archived documents related to OA Analytics team.
+
+Description
+
+falseThe archived files stored here are no longer in use. But these file can be used for future references.
+
+Archived Impact Analysis Current Workflow & Data-flow
+
+false
+
+Archived Impact Analysis Process - Detailed Documentation
+
+false
+
+Archived In-Scope Oncology Drug and Procedure List
+
+false
+
+Archived Claims Savings Rules Files
+
+false
+
+Archived Evaluation and Distribution Reports
+
+false
+
+Archived OKR (Objectives and Key Results) Files
+
+falseOKR - OA Immersion Initial Version
+
+OKR - OA Immersion Updated_20180712
+
+OKR - OA Immersion Updated_20180725
+
+OKR - OA Immersion Updated_20181025
+
+OKR - OA Immersion Updated_20181025
+
+Archived Impact Analyses Tracking
+
+false
+
+green1solid
+
+ | Prospect
+Name
+
+ | Sales
+Responsible
+
+ | Analytics
+Responsible
+
+ | Date Data
+Spec Sent
+
+ | Date Follow 
+up Done
+
+ | Date Data
+Discussion
+
+ | Date Data
+Received
+
+ | Date Data Approved | Date Data
+Ready
+
+ | Date Rules
+Executed
+
+ | Date Material
+Ready
+
+ | Presentation Date 
+
+ | 
+1 | Universal Care
+
+ | 
+
+ | 
+
+ | 9/5/18
+
+ | 9/10/18 | Planned Date:
+
+9/14/18
+
+Actual Date:
+
+9/14/18
+
+ | Planned Date:
+
+Actual Date:
+
+9/17/18
+
+ | 
+ | Planned Date:
+
+10/23/18
+
+Actual Date:
+
+10/25/18
+
+ | Planned Date:
+
+10/23/18
+
+Actual Date:
+
+10/25/18
+
+ | Planned Date:
+
+Actual Date:
+
+11/9/18
+
+ | Planned Date:
+
+Actual Date:
+
+11/15/2018
+
+ | 
+2 | MVP | 
+ | 
+ | 
+ | 
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | Planned Date:
+
+Actual Date:
+
+ | 
+
+Detailed Comments & Discussions
+
+green1solid
+
+ | Prospect Name | Date | Detailed Comments & Discussion | Comments Entered By | 
+1 | Universal Care | 10/16/18 | compiling list of questions for a call | Kristen | 
+2 | MVP | 
+ | List of selected agents to be annotated with savings; provider impact analysis - due 10/5/18 | Brian |
+
+### Clinical Data Repository (CDR)
+
+Overview
+
+falseThe Clinical Data Repository (CDR) is a consolidated repository of all Oncology Analytics client data, as well as an extensive list of publicly available reference data. This data is compiled in a way that makes it easier to do statistical analysis and analytical modeling. 
+
+The CDR uses the Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) as the basis for it's data storage. From there, a flattened data-set is available for use in any modeling efforts. 
+
+Clinical Data Repository (CDR) Mission
+
+falseThe Oncology Analytics (OA) clinical data repository (CDR) implementation requirements supporting the ability to make real world data readily available for life sciences research, clinical decision-making and pharma go-to-market acceleration include the following characteristics:
+
+Industry Standard Data Model
+Comprehensiveness
+Regulatory Compliance
+
+Industry Standard Data Model
+
+The OA CDR must be able to overcome semantic challenges arising from the use of different languages, data models and systems.  Interoperability among clinical, administrative and other third-party systems is the core functionality required to aggregate and use patient data from disparate sources.  Interoperability eliminates the bottlenecks presented by separate systems, different data models, different coding and content standards, different usage of structured (e.g. laboratory results) and unstructured (e.g. clinician notes) data, and different languages.  Real-world data from EMRs and other clinical systems can be shared using a wide range of interoperability languages such as HL7 &reg;, FHIR&reg;, CDA, and many more. Clinical research systems must be able to connect to these applications in their native interoperability languages to effectively ingest all the desired data. In its source system, the clinical data may adhere to a specific data standard, such as HL7 Clinical Document Architecture (CDA). The OA CDR will leverage both a distributed file system-based data lake to ensure the ability to land any data regardless of the source system, with available open-source tools for speed and flexibility with respect to data transformation, mapping and ingestion into a standard data model.  All data is ultimately converted to the OMOP (Observational Medical Outcomes Partnership) Common Data Model (CDM) which has become a leading industry standard and a top choice for outcomes-based research on real world data (Garza, Del Fiol, Tenenbaum, Walden & Zozus, 2016).
+
+Comprehensiveness
+
+The OA CDR must ensure data quality and completeness with the ability to evaluate structured and unstructured data.  All real-world data must be connected, comprehensive, and credible to ensure fitness for its intended purpose and confidence in the results. Additionally, for life sciences and pharma observational investigations, the data must be current. Interoperability addresses the issue of connected, standardized data.  The issue of comprehensive data is addressed by the OA CDR through its ability to aggregate heterogeneous health information from multiple sources, including medical claims, pharmacy claims, laboratory result feeds, NLP medical chart and clinical note extraction, and prior authorization transactions.  The OA CDR will be able to ingest, normalize and rationalize patient data from multiple sources to create detailed views of patients. In addition to normalizing real-world data from multiple sources, the OA CDR must be able to analyze discrete data across the unified records. Clinical data is also a collection of structured and unstructured data, from diagnoses to progress notes. To maximize the utility of real-world data, the OA CDR must be able to derive meaning from both data types. For example, a patient with a condition of interest may have a relevant structured diagnosis code, a descriptive pathology result, or a comment in a clinical note. For the connected, comprehensive data to be credible, it must also be free from errors that may be introduced during transmission and aggregation. Ideally, healthcare information is captured as close to the time and place of care delivery as possible, since a single error in capturing data presents risks that can be magnified as the data is transmitted downstream.  This is a key differentiator of the OA CDR:  data is captured during the chemotherapy planning and delivery period with clinical review and decision-making having the impact to both validate the quality of the data being extracted as well as generate clinical observations with respect to disease progression, adverse events, drug toxicity and impact of other co-morbid conditions.
+
+Regulatory Compliance
+
+The OA CDR must protect the security of the data and comply with privacy and reporting regulations. Patient data must be de-identified to protect patient privacy and minimize, if not eliminate, risk of a protected health information breech.  To this end, the OA CDR will be implementing the de-identification standard as defined by section 164.514(a) of the HIPAA Privacy Rule (www.hhs.gov). Under this standard, health information is not individually identifiable if it does not identify an individual and if the covered entity has no reasonable basis to believe it can be used to identify an individual.
+
+Sections 164.514(b) and(c) of the Privacy Rule contain the implementation specifications that a covered entity must follow to meet the de-identification standard. As summarized in Figure 1, the Privacy Rule provides two methods by which health information can be designated as de-identified.
+
+Figure 1. Two methods to achieve de-identification in accordance with the HIPAA Privacy Rule.
+
+The first is the &ldquo;Expert Determination&rdquo; method, where a third-party representative with appropriate knowledge of and experience with generally accepted statistical and scientific principles and methods for rendering information not individually identifiable completes a thorough review of the data store.  Compliant de-identification is achieved if the expert representative determines that the risk is very small that the information could be used, alone or in combination with other reasonably available information, by an anticipated recipient to identify an individual who is a subject of the information; and documents the methods and results of the analysis that justify such determination.
+
+The second is the &ldquo;Safe Harbor&rdquo; method where 18 identifiers of the individual or of relatives, employers, or household members of the individual, are removed.  These identifiers consist of:
+
+Names
+All geographic subdivisions smaller than a state, including street address, city, county, precinct, ZIP code, and their equivalent geocodes, except for the initial three digits of the ZIP code if, according to the current publicly available data from the Bureau of the Census:The geographic unit formed by combining all ZIP codes with the same three initial digits contains more than 20,000 people; and
+The initial three digits of a ZIP code for all such geographic units containing 20,000 or fewer people is changed to 000
+
+All elements of dates (except year) for dates that are directly related to an individual, including birth date, admission date, discharge date, death date, and all ages over 89 and all elements of dates (including year) indicative of such age, except that such ages and elements may be aggregated into a single category of age 90 or older. Note that because observation and treatment exposure time periods are very important for the types of research to be supported by the OA CDR, dates will be available as a random day interval offset unique to each patient, but not provided to the data recipient.  For example, if patient A gets a random day interval offset of 8, then all dates for any healthcare event for that patient will be shifted forward by 8 days, preserving the treatment and observation period intervals but obfuscating the actual dates that the patient received care.
+Telephone numbers
+Fax numbers
+Email addresses
+Social security numbers
+Medical record numbers
+Health plan beneficiary numbers (e.g. Payer Member IDs)
+Account numbers
+Certificate/license numbers
+Vehicle identifiers and serial numbers, including license plate numbers
+Device identifiers and serial numbers
+Web Universal Resource Locators (URLs)
+Internet Protocol (IP) addresses
+Bio-metric identifiers, including finger and voice prints
+Full-face photographs and any comparable images
+Any other unique identifying number, characteristic, or code, except as permitted by HIPAA re-identification guidelines. Note that the fully de-identified instance of the OA CDR that will be used for real world evidence will not have any hooks or decryptable hashes to enable any possible re-identification. 
+Satisfying either method would demonstrate that a covered entity has met the standard in &sect;164.514(a) above.  The OA CDR solution will leverage both methods to ensure data is completely de-identified and minimize any risk for re-identification. 
+
+ #SustainabilitySustainability and Scalability
+
+The OA CDR should be able to support a spectrum of business use cases that deliver potential benefits across the entire healthcare ecosystem including pharma, life sciences, payers, providers and patients.  The OA CDR must be adaptable, reusable, standards-based and governed within a sustainable ecosystem.  Because it uses open-source and cloud based big data technologies, the OA CDR will be able to power the natural language processing required to extract, analyze and validate the data, as well as support the ability to train machine learning models for monitoring and detection of patient safety issues such as adverse events and drug toxicity as well as patient opportunities like clinical trial eligibility. 
+
+ #ClinicalReviewClinical Review Integration
+
+A key differentiator of the OA CDR from other real world evidence data sources is that the data ingested is integrated with the additional observation and validation of oncology clinicians that are performing concurrent prior authorization reviews of the requested chemotherapy regimens from the treating physicians.  This enables the engagement of clinicians as close to the time of each encounter (both the treatment planning and the subsequent treatment delivery).  This ability to engage with the care provider and patients concurrently not only yields more accurate data, but also enables full integration of the clinical decision-making process with respect to the planned treatment.  Key data points such as the intent of therapy, reasons for therapy change, patient reported outcomes, etc are more readily collected with the level of engagement that OA clinicians have at the precise point of time care is being planned and immediately after the care plan is delivered or stopped.  Further, this level of engagement may enable future product offerings such as clinical trial eligibility match recommendations.
+
+Oncology Analytics CDR Roadmap
+
+falseThe . This document will be kept up to date here.
+
+Data Available in the CDR
+
+falseClick here to find the complete data dictionary of data stored in the CDR.
+
+Clinical Data
+
+The following data is currently available for each client in the CDR. :
+
+Phase | OMOP Table | Alignment | FCHP | FMHP | Gateway | Health Partners | Humana | MCS | MMM | SWHP | 
+Phase 1
+
+ | 
+
+ | 
+ | 
+ | Yes | 
+ | 
+ | Yes | Yes | Yes | Yes | 
+Phase 1 |  | 
+ | 
+ | 
+ | 
+ | 
+ | Yes | Yes | yes | Yes | 
+Phase 1 |  | 
+ | 
+ | Yes | 
+ | 
+ | Yes | Yes | Yes | Yes | 
+Phase 1 |  | 
+ | 
+ | Yes | 
+ | 
+ | Yes | Yes | Yes | Yes | 
+Phase 1 |  | 
+ | 
+ | Yes | 
+ | 
+ | Yes | Yes | Yes | Yes | 
+Phase 1 |  | 
+ | 
+ | 
+ | 
+ | 
+ | Yes | 
+ | 
+ | 
+ | 
+Phase 1 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 1 |  | 
+ | 
+ | 
+ | 
+ | 
+ | Yes | Yes | Yes | 
+ | 
+Phase 1 |  | 
+ | 
+ | 
+ | 
+ | 
+ | Yes | Yes | Yes | Yes | 
+Phase 1 |  | 
+ | 
+ | 
+ | 
+ | 
+ | Yes | Yes | Yes | Yes | 
+Phase 2 |  | 
+ | 
+ | Yes | 
+ | 
+ | Yes | 
+ | 
+ | Yes | 
+Phase 2 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 2 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 2 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 3 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 4 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 4 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 4 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Phase 4 |  | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+Clinical Data Denormalization
+
+A client denormalized dataset is created for each client. This is a flattened set of data for each of the normalized OMOP datasets above. This data is used for analytical research. .
+
+Publicly Available Reference Data
+
+The following publicly available datasets have been curated in to the CDR. Click on the dataset name to drill further into what is in each dataset, and where it is available in the CDR.
+
+Dataset Name | Description | Main Website pulled from | Frequency | 
+ | The Cancer Genome Interpreter flags validated oncogenic alterations, and predicts cancer drivers among mutations of unknown significance. It also flags genomic biomarkers of drug response with different levels of clinical relevance. | https://www.cancergenomeinterpreter.org/biomarkers | Daily | 
+ | AACT is a publicly available relational database that contains all information (protocol and result data elements) about every study registered in ClinicalTrials.gov. Content is downloaded from ClinicalTrials.gov daily and loaded into AACT. The Clinical Trials Transformation Initiative (CTTI) enhanced AACT in October, 2016 to include the following features:
+
+Database content refreshed daily
+Database directly accessible in the cloud
+Static copies of the database available for download
+Open source tools freely available (postgreSQL, Ruby on Rails, Tableau Public)
+Source code available via Github
+The Clinical trials database consists of over 40 tables. .
+
+ | https://aact.ctti-clinicaltrials.org/pipe_files | Daily | 
+GPI Codes | Generic Product Identifiers, as defined by Wolters Kluwer, and their cross-reference to NDCs and RxNorms | https://wolterskluwer.com/ | Monthly | 
+HCPCS Codes | Healthcare Common Procedure Coding System codes and description | https://www.hcpcsdata.com/Codes | Daily | 
+ICD10 CM Codes | ICD10 diagnosis codes and descriptions | https://www.cms.gov/Medicare/Coding/ICD10/2020-ICD-10-CM | Yearly | 
+ | The NCCN Compendium is a comprehensive listing of the drugs and biologics and the recommended uses for such agents in the treatment and management of patients with cancer. The NCCN Compendium is organized by and presented as an alphabetized index of drugs and biologics by generic name. | https://www.nccn.org/professionals/drug_compendium/content/  (Requires a login and password)  | Daily | 
+ | NPPES NPI Registry. The NPI (National Provider Identifier) Registry enables you to search for providers in the NPPES (National Plan and Provider Enumeration System) system. All information produced by the NPI Registry is provided in accordance with the NPPES Data Dissemination Notice | http://download.cms.gov/nppes/NPI_Files.html | Daily | 
+ | OncoKB is a precision oncology knowledge base and contains information about the effects and treatment implications of specific cancer gene alterations. It is developed and maintained by the Knowledge Systems group in the Marie Jos&eacute;e and Henry R. Kravis Center for Molecular Oncology at Memorial Sloan Kettering Cancer Center (MSK), in partnership with Quest Diagnostics and Watson for Genomics, IBM. | http://www.oncokb.org/dataAccess | None (They moved it behind a paywall) | 
+ | The  to house existing vocabularies used in the public domain.It consists of compiled standards from disparate public and private sources and some OMOP- grown concepts.It was built on the shoulders of National Library of Medicine&rsquo;s Unified Medical Language System (UMLS). A great resource to view already-built queries in to the OMOP Vocabulary database can be found here. It is a great resource to use when trying to build queries in to the OMOP tables in the CDR. .
+
+You can find a full list of what vocabularies we are .
+
+ | http://athena.ohdsi.org/search-terms/terms (Requires a login and password)  | Daily | 
+RxNorm codes | RxNav is a browser for several drug information sources, including RxNorm and RxTerms. RxNav finds drugs in RxNorm from the names and codes in its constituent vocabularies. | https://mor.nlm.nih.gov/RxNav/ | Monthly | 
+
+A full, downloadable Microsoft Excel workbook of all reference data available in the CDR can be .Accessing Data in the CDR
+
+falseTo access data in the CDR, you will need the following:
+
+Access to Azure Databricks
+Some basic knowledge of SQL or Spark
+If you do not have access to Azure Databricks, you can request it by sending a request in to Technology Request. Azure Databricks uses Active Directory, so once access is granted, you can log in directly without a separate username or password. 
+
+Data in the CDR is stored as Delta files. If you are unfamiliar with Delta on Databricks, here is an overview.
+
+If you are unfamiliar with Spark, and in particular, PySpark, here is a brief introduction.
+
+To help you create your own queries in to the CDR data, we have created some sample queries for you to use as examples:
+
+Table | Query Description | Sample Code | 
+NPI Registry | This query selects all columns and all rows from the NPI registry |  | 
+NPI Registry | This query selects the provider, NPI, provider name, and taxonomy for a specific provider |  | 
+OMOP | This query uses the OMOP vocabulary to map the GPI code to the RxNorm code for a specific drug (multi table join) |  | 
+Person | Get the number of people that live in each zip code and sort it by count descending |  |
+
+### Code Development & Promotion
+
+Environment: Develop
+
+Create a new branch based off of the develop branch
+
+{your first two initials}_{ado user story number}_{short description}
+
+Example: sb_132678_sporcle_leaderboard_initial_commit
+
+Create a new sub-repo for your dashboard
+
+/data_analytcis_databricks/solutions_reporting/oi_dashboards/{dashboard_name}
+
+Example: /data_analytcis_databricks/solutions_reporting/oi_dashboards/sporcle_leaderboard
+
+It makes sense to just copy an existing dashboard sub-repo and remove what you don&rsquo;t need. 
+
+Create your table_schemas.py file and define your schemas. It&rsquo;s ok if you don&rsquo;t have the schemas finalized quite yet. You&rsquo;re at the development stage and can still easily overwrite your table and play around.
+
+Create job_build_dashboard_tables
+
+Create your data refresh notebooks. This is the bulk of the work.
+
+Create job_refresh_dashboard_tables
+
+Push the changes you&rsquo;ve made to your branch
+
+Set the workflows/jobs you&rsquo;ve created to run off your new branch
+
+Run the jobs in the correct order
+
+QA output and read data sets into PowerBI Desktop
+
+Develop the first draft of your dashboard
+
+Create a PR to merge your code into develop. Publish your dashboard to Internal Reports (Premium) in PowerBI Service and share it with the proper reviewers (for Dev you should be sharing with Aaron or Steve). Please see the section &ldquo;PowerBI Development & Promotion&rdquo; for the specific steps you should take to publish the dashboard to Internal Reports (Premium).
+
+In your ADO PR be sure to include a link to the Dashboard in PowerBI Service
+
+Once your code and the dashboard have been approved, update your jobs to run off of the develop branch, commit the change, and merge your branch into the develop branch
+
+ 
+
+Environment: UAT
+
+Cherry-pick the changes you just merged into the develop branch into the release-uat branch. Create a PR.
+
+Once approved, merge into UAT, ask DevOps to create your jobs in UAT, and then run those jobs in the correct order
+
+Promote the dashboard to Internal Reports (Premium) - Test in PowerBI Online and have it read from the UAT version of the tables (see the PowerBI promotion documentation for the specific steps you should take here)
+
+Share the dashboard with internal stakeholders for QA and feedback
+
+ 
+
+Environment: Prod
+
+Create a branch in the ADO UI that is based off of Prod. This will be your dashboard release branch
+
+Cherry-pick all of your changes into this prod release branch. Create a PR. Set Meg as the required approver
+
+Once approved, merge into the release branch
+
+Create a CR and in the CR tell DevOps to run job_build_dashboard_tables before running job_refresh_dashboard_tables
+
+Promote the dashboard to Internal Reports (Premium) - Production in PowerBI Service (see the PowerBI promotion documentation for the specific steps you should take here)
+
+QA
+
+Set permissions for dashboard users
+
+Inform stakeholders and consumers via release notes
+
+### Commonly Used Acronyms
+
+Overview
+
+This page has a compilation of all the commonly used Acronyms at OA.
+
+There are two links at the bottom of this page to glossary published by healthcare.gov and other commonly used healthcare insurance related acronyms.
+
+A - E
+
+black1solidA - EAAPC - American Academy of Professional Coders
+
+ACA - Affordable Care Act
+
+AHA - American Hospital Association 
+
+AHIMA - American Health Information Management 
+
+AMA - American Medical Association
+
+ANC - Ancillary
+
+APC-DRG- Ambulatory Payment Classifications DRG
+
+APC - Ambulatory Payment Classifications
+
+AP-DRG - All Patient DRG
+
+APG - Ambulatory Patient Group
+
+APR-DRG - All Patient Refined DRG
+
+ASCO - The American Society of Clinical Oncology 
+
+ASO - Administrative Service Only
+
+AUC - Appropriate Use Criteria
+
+AWP - Average Wholesale Price 
+
+CCF - Clinical Consultation Fax
+
+CCR - Cost-to-charge ratio
+
+CD - Castleman disease
+
+CDM - Charge Description Master
+
+CHIP - Children's Health Insurance Program
+
+CIN - Chemotherapy-induced Neutropenia
+
+CLFS - Clinical Laboratory Fee Schedule
+
+CPT - Current Procedural Terminology
+
+CRS - Case Review Specialist
+
+DAAB - Distinguished Academic Advisory Board
+
+DBA - Distinguished Board of Advisors
+
+DMEPOS - Durable Medical Equipment Prosthetics Orthotics and Supplies
+
+DMERC - Durable Medical Equipment Regional Carrier 
+
+DRG - Diagnosis Related Group
+
+E&M - Evaluation and Management
+
+F - J
+
+blacksolidF - JFN - Febrile Neutropenia
+
+GISTs - Gastrointestinal Stromal Tumors 
+
+GMT - Genetic/Molecular Testing
+
+GPI - Generic Product Identifier
+
+GT - Genetic Testing
+
+HCFA - Health Care Financing Administration
+
+HCPCS - The Healthcare Common Procedure Coding System 
+
+HCPCS J-Codes - Applicable Codes for Drugs administered other than oral method
+
+HIPAA - Health Insurance Portability and Accountability Act 
+
+HMO - Health Maintenance Organization
+
+ICD - International Classification of Diseases
+
+IDSA - Infectious Diseases Society of America 
+
+IMRT - Intensity Modulated Radiation Therapy
+
+K - O
+
+black1solidK - OKSHV - Kaposi Sarcoma Herpes Virus 
+
+LOB - Line of Business
+
+LOI - Letter of Intent
+
+LOMN - Letter of Medical Necessity
+
+LOS - Length of Stay
+
+MACRA - Medicare Access and CHIP Re-authorization Act
+
+MCA - Medicare Allowable Calculation
+
+MIT - Medication Intake Team
+
+MPFS - Medicare Physician Fee Schedule 
+
+MS-DRG -  Medicare DRG
+
+MSO - Management Services Organization
+
+NCCN - National Comprehensive Cancer Network
+
+NCQA - National Committee for Quality Assurance
+
+NDC - National Drug Code
+
+NPI - National Provider Identifier
+
+NPPES - National Plan and Provider Enumeration System
+
+NSLC - Non-Small Cell Lung Cancer
+
+OOPC - Out of Pocket Costs
+
+P - T
+
+black1solidP - TOOS - Out of Scope
+
+PBM - Pharmacy Benefit Managers
+
+PMPM - Per Member Per Month 
+
+PNF - Persistent Neutropenic Fever 
+
+POS - Point-of-Service
+
+PPO - Preferred Provider Organization
+
+PPR - Patient Protocol Report
+
+PUF - Provider Update Form
+
+P2P - Peer to Peer
+
+QBR - Quarterly Business Report
+
+QPP - Quality Program Performance
+
+RAD - Recommendation for Adverse Determination
+
+RDI - Relative Dose Intensity
+
+SOI - Severity of Illness
+
+SSIS - Sequel Server Integration Services
+
+SSRS - Sequel Server Reporting Services
+
+STAT - Latin word statum, meaning 'immediately.'
+
+TAT - Turn Around Times
+
+TIN - Tax Identification Number
+
+U - Z
+
+black1solidU - ZXRT - Radiation Therapy
+
+Glossary from HealthCare.gov
+
+black1solidPlease click on the following link to access the Healthcare glossary published by HealthCare.gov
+
+Health Care Glossary
+
+Healthcare Insurance Related Acronyms
+
+black1solidHealthcare Insurance Related Acronyms
+
+### Data Analytics Report repository
+
+Overview
+
+falseThis is the homepage for the Data Analytics reports repository.
+
+Description
+
+black1solidThis page has a full documentation on all types of Data Analytics reports created by the OA Analytics team.
+
+Note: Some of the reports are not currently in use and not created anymore.
+
+Analytical Reports Category
+
+black1solidThe Data Analytics reports are categorized into
+
+Provider Profiling
+Business & Operations
+Internal Operations reports
+Quality Assurance
+Epidemiological
+
+Report Repository Inventory and Link to Reports
+
+black1solid
+
+Copy paste the link in your browser to access the reports. Direct links will be provided soon
+
+M:\Analytical Services\Analytics Reports Inventory
+
+Provider Profiling Data Reports
+
+The following Data Analytics reports are under Provider Profiling category.
+
+black1solidQuality Quotient
+Provider Impact
+MMM Physician Data
+Analysis of Prescribing Behavior of physicians
+Austin Cancer Center: Evaluation of Oncology Preauthorization Patterns
+Aloxi & Emend Use
+MMM Puerto Rico Trends in Protocol Requests, Cost & Savings
+Antiemetic and Febrile Neutropenia Drug Use
+
+Business & Operations Data Reports
+
+The following Data Analytics reports are under Business & Operations category.
+
+black1solidQuarterly Business Report (QBR)
+Quality Performance Program (QPP)
+Tracked Medicaid Requests for Humana
+Linda Web Improvement Initiative
+PD-1 Chart
+Web Utilization Trends Long Term
+Humana Practice Data RAD Focus
+Comparison of Cost of Auto vs Non-Auto Protocols
+Savings by Protocol
+Savings from Levoleucovorin Management
+
+Turnaround Time Report (TAT)
+Plan Dashboard
+
+Internal Operations Data Reports
+
+The following Data Analytics reports are under Internal Operations reports category.
+
+black1solidOperations weekly report
+
+Quality Assurance Data Reports
+
+The following Data Analytics reports are under Quality Assurance reports category.
+
+black1solidFrequency of Entry Errors, RADLOI, and WebUse
+Delegation Report
+
+Epidemiological Data Reports
+
+The following Data Analytics reports are under Epidemiological reports category.
+
+black1solidCancer death rate in the South
+
+### Datameer User Guide
+
+Overview
+
+falseDatameer is a data visualization tool specifically designed for Big Data which allows you to get useful insight from your complex data. Started in 2009, Datameer is one of the fastest growing data analytics platforms in the world. Many big companies are using Datameer to analyze data and get useful insight from it.
+
+Datameer is kind of a complete data analytics tool and helps you to do the following:
+
+Data integration
+Data preparation
+Data analysis
+Data visualization
+
+Accessing Datameer
+
+falseRequesting Access
+
+To request access to Datameer, send an email to Tim Ursprung begging for permission to the application and its data.
+
+Logging in to Datameer
+
+Datameer uses Active Directory to verify your credentials, so when you are presented with a login page, use your Oncology Analytics Active Directory credentials to log in. To Access Datameer, follow this link.
+
+Available Data in Datameer
+
+false
+
+Source | Dataset | 
+MATIS | Assignment Details 20200106 | 
+Clinical Data Repository | CDR Denorm (Coming soon) | 
+
+Tutorials
+
+falseComing Soon
+
+### Decisions Training Documentation
+
+Overview
+
+falseThis is the homepage for Decision training documentation.
+
+Description
+
+black1solidThis page has all the training materials provided by Decisions during the workshop conducted from Jan 15 - 17, 2019.
+
+Some useful videos and documentations from Decisions are also posted here for easy reference.
+
+Decisions Workshop Click-through Documents
+
+black1solid
+
+Day - 1 | Day - 2 | Day -3 | 
+ |  |  | 
+ |  | 
+ | 
+ |  | 
+ | 
+ |  | 
+ | 
+
+ |  | 
+ | 
+
+Decisions Workshop PPT Documents
+
+black1solid
+
+Day - 1 | Day - 2 | Day - 3 | 
+ |  |  | 
+ |  | 
+ | 
+ |  | 
+ | 
+ |  | 
+ | 
+
+Recordings from Onsite Training
+
+Following videos are from Decisions onsite training.
+
+black1solid
+
+ | Decisions Video Links | 
+1 | Portal Overview | 
+2 | Workflow Introduction | 
+3 | Forms Introduction  | 
+4 | Rules Introduction | 
+5 | Advanced Rules | 
+6 | Reports | 
+7 | Dashboards | 
+8 | Datatypes  | 
+9 | Change Management | 
+
+Documentation from Decisions 
+
+The following links are to the Documentation section posted in Decisions. 
+
+black1solid
+
+ | Topic | 
+1 | Introduction to Decisions | 
+2 | Flows | 
+3 | Forms | 
+4 | Rules | 
+5 | Reports | 
+6 | Pages | 
+7 | Data Structures | 
+8 | Designer Folder | 
+
+Decisions Webinar Videos
+
+Following videos are from Decisions
+
+black1solid
+
+ | Decisions Video Links | 
+1 | Building Simple Workflows | 
+2 | Matrix Rules | 
+3 | Unit Tests and Debugging | 
+4 | Version Control | 
+
+Other Resources
+
+Following are the links to other resources
+
+black1solidForum
+
+Documentation
+
+Ebooks
+
+Webinars and Events
+
+Support
+
+Customer Support Portal
+
+### File lists
+
+5f5a7fed-6a79-4c54-9302-ff307c704488com.atlassian.confluence.plugins.confluence-business-blueprints:file-list-blueprintCreate file list
+
+5f5a7fed-6a79-4c54-9302-ff307c704488com.atlassian.confluence.plugins.confluence-business-blueprints:file-list-blueprintfile-listUpload, preview and share files with your team.File listsATCreate file listfile-list
+
+### First Medical
+
+Overview
+
+falseFirst Medical Health Plan, Inc., was founded in 1977. During all these years it has dedicated its efforts to improve the quality of the working community through the planning and implementation of medical services covers of the highest quality at a reasonable cost.
+
+We are the only medical plan institution that has a network of hospital medical services, health centers and pharmacies where our subscribers save deductibles on services and in most of them they DO NOT PAY deductibles.
+
+The commitment to serve our policyholders well has earned the loyalty of those who work in the manufacturing and service sectors, both in private industry and in the government sector.
+
+We trust that the range of coverage, benefits and rates enjoyed by our insured will meet the expectations that a medical plan of excellence must offer you and the staff working in your organization.
+
+Key Information
+
+falseHeadquarters: Guayabo, PR
+Medicaid and Commercial
+Membership as of August 2019: Medicaid ~190k lives, Commercial ~190k lives
+
+OA Services Provided
+
+falseChemotherapy review
+Genetic and Molecular Testing (GMT) review
+
+Launch Dates
+
+false
+
+Analytics Reports
+
+false
+
+### Gateway
+
+Overview
+
+falseGateway Health Plan was established in 1992 as an alternative to the Pennsylvania Department of Human Services. For over 25 years, our members have benefited from services such as: Disease management, health and wellness programs and preventative care.
+
+Gateway Health is one of the nation&rsquo;s leading managed care organizations that serves more than 550,000 members across five states. Gateway Health&rsquo;s network includes more than 78,000 physicians and health care providers, 400 hospitals, and 75,000 pharmacies and clinics nationwide.
+
+Key Information
+
+falseHeadquarters: Pittsburgh, PA
+Medicare and Medicaid
+pending go-live jan 1st 2020
+
+OA Services Provided
+
+falseChemotherapy review
+Oncology InsightsOnly sending cancer patients
+
+Provider/PayerNotification
+
+false
+
+Member Eligibility File Template 
+
+false
+
+### Get to Know Your Client
+
+Non-Delegated
+
+Alignment:
+
+SERVICES: Chemotherapy and Radiation
+
+LOB: Medicare and Medicare Risk
+
+Approvals go to the client
+
+No member letters, no provider letters
+
+No member calls
+
+Excellus:
+
+SERVICES:  Chemotherapy (including Output CAR-T and Pediatric)
+
+LOB: Medicare, Medicaid, Commercial
+
+Recommendations of approval or denial go to client via fax
+
+No member letters, no provider letters
+
+No member calls
+
+HealthPartners:
+
+SERVICES: Chemotherapy
+
+LOB: Medicare and Medicaid
+
+Recommendation of approval or denial go to the client via fax
+
+NO appeals support but; client will email us if they want us to do a reconsideration on specific cases
+
+Sendero:
+
+SERVICES: Chemotherapy
+
+LOB: Commercial
+
+Recommendations are sent to client via Email
+
+No provider or member letters
+
+No calls
+
+Humana:  ** We are fully delegated for approvals only**
+
+SERVICES: Chemotherapy
+
+OA Services Provided: Chemotherapy Review
+
+LOB: Medicare, Medicaid, Commercial
+
+Letters to providers and members (approvals)
+
+Calls to member (approvals)
+
+**See screenshot below for additional Humana Info**
+
+Delegated
+
+Devoted:
+
+SERVICES:  Chemotherapy and Radiation
+
+LOB:  Medicare ( Florida, Texas, Arizona, Ohio)
+
+Letters to provider and member
+
+Calls to member
+
+Appeals support
+
+FC/SWHP:  **Can only have Texas certified clinical staff review cases**
+
+SERVICES:  Chemotherapy, Radiation, GMT
+
+LOB: Medicare, Commercial Non-ASO
+
+Letters to providers and member
+
+Calls to member
+
+Appeals are in house and email sent to OH
+
+Gateway/Highmark:
+
+SERVICES: Chemotherapy
+
+LOB: Medicare and Medicaid
+
+Letters to providers and member
+
+Calls to member
+
+Appeals support
+
+GEHA:
+
+SERVICES: Chemotherapy, Radiation
+
+LOB: Commercial
+
+Letters to providers and member
+
+No calls
+
+Appeals support
+
+HPHC/Point32 (Harvard):
+
+SERVICES: Chemotherapy, Radiation (including Pediatrics)
+
+LOB: Medicare, Medicaid, Commercial
+
+Letters to providers and members
+
+Calls to member &ndash; only Medicare and Medicaid
+
+Appeals support
+
+### Humana
+
+trueRedWork in Progress
+
+Overview
+
+falseHumana's diverse lines of business work to serve all types of consumers. 
+
+From families to seniors to military members to self-employed individuals, there is a plan to meet many unique needs. 
+
+Medicare-eligible consumers can get more from their healthcare dollars. 
+
+Humana plan members choose plans that include both drug and medical coverage, as well as stand-alone prescription drug coverage.
+
+Humana Key Information
+
+falseHeadquarters: Louisville, Kentucky
+Commercial HMO/PPO plans. Medicare plans. Medicare Plans
+Total population as of 4/1/2018: Medicare &ndash; 950,851 Medicaid &ndash; 44,232 Commercial &ndash; 523,620
+We review for FL, TX, GA and all of the NE
+
+Humana Market
+
+OA's current Humana market covers 14 states.
+
+false
+
+# | Market Name | 
+1 | Florida - Miami Dade
+
+              South Florida
+
+              Tampa Area
+
+              North and Central Florida
+
+ | 
+2 | Georgia | 
+3 | Vermont | 
+4 | New Hampshire | 
+5 | Maine | 
+6 | Massachusetts | 
+7 | New Jersey | 
+8 | Delaware | 
+9 | Maryland | 
+10 | Washington DC | 
+11 | Pennsylvania | 
+12 | Connecticut | 
+13 | New York | 
+14 | Rhode Island | 
+
+OA Services Provided
+
+falseChemotherapy review
+Anemia in CKD if treated by a Oncologist/Hematologist
+Osteoporosis in patients being treated by Oncologist/Hematologist
+Prostate Surveillance
+
+Turn-Around Time Frames and availability
+
+false10 days: Retro Commercial plans
+7 days: Standard Medicare requests
+5 days: Retro Medicare plans, Standard Commercial (except Texas)
+24 hours: STAT Medicare and Commercial plans (all states), TX Commercial plans, Maryland Commercial plans, and Standard FL Medicaid plans
+12 hours: STAT FL Medicaid
+
+Provider/Payer Notification
+
+falseThe provider is notified of approvals by fax. Depending on LOB/State and priority of case, Humana and the PCP may be included in the notification.
+All Medicaid requests are simply recommendations and it is up to the PCP to issue the authorization through Availity
+In times where OA is not able to approve a request, we then submit a Recommendation for Adverse Determination to the Provider and Humana for all states and LOB's.
+All Medicaid RADs are simply recommendations and it is up to the PCP to uphold or deny the treatment.
+
+Humana Layout
+
+false
+
+Humana - MATIS Profile Screenshots
+
+false
+
+Availity Related Documents
+
+The Availity Provider Portal is Humana&rsquo;s preferred method for medical and behavioral health providers to check eligibility and benefits, submit referrals and authorizations, manage claims and complete other secure administrative tasks online.
+
+false
+
+Clarity
+
+The Clarity Process refers to a service that Oncology Analytics (OA) provides to its client Humana, where payment claims that are submitted to Humana are sent on a daily basis to OA.
+
+OA reviews each claim line in the file(s) and flags each line with a disposition code that lets Humana know if the claim is out of scope, or if OA recommends that payment be made or denied. 
+
+At the end of the process, OA will send the file(s) back to Humana for processing.
+
+false 
+
+Recent space activity
+
+page, comment, blogpost5truesocial
+
+Space contributors
+
+listdescendants5trueupdate
+
+### Knowledge Share
+
+Throughout the year the Analytics team does knowledge sharing sessions internally and with external teams. These sessions serve to improve our understanding of the company, our industry, and our data. Below you will find the presentations split into categories. These are generic trainings and not typically specific to our company. For more company specific documentation check out the Analytics Documents page. 
+
+Healthcare & Claims Information
+
+Adjustments Presentation
+
+https://oncologyanalytics.zoom.us/recording/share/rQ5JB0hnnG3TM6XqQ8Qy-dIbODVPw67ZBO5x8fOtLymwIumekTziMw 
+
+Cancers
+
+Anna's Cancer Training 
+
+Pharmacy
+
+Power BI & Migration Automation
+
+Presenting & Communication
+
+Data Visualization Principles_DHuff.pptx
+
+Databricks, Azure, Spark
+
+### Management Metrics Dashboard Review
+Labels: meeting-notes
+
+Date
+
+Participants
+
+List meeting participants using their @mention names:
+
+@Rick Dean
+
+ 
+
+@Sara Zywicki
+
+ 
+
+ 
+
+Goals
+
+Review of the Management Metrics Dashboard and take inputs from Rick Dean and Sara Zywicki
+
+Discussion topics
+
+Item
+
+ | Comments by
+
+ | Notes
+
+ | 
+ | Rick
+
+ | Can we see Mainland and Puerto Rico by State?
+
+ | 
+
+ | Brian
+
+ | A scrollable table of graphs as the number of clients increase
+
+ | 
+ | Sara
+
+ | Savings calculations comparison of Humana against others is like comparing Apples to Oranges
+
+ | 
+ | Rick 
+
+ | Helpful to see YTD as well as Trailing 13
+
+ | 
+ | Sara
+
+ | Can we show year over year, Quarter over Quater changes to see if we are getting better and better
+
+ | 
+ | Brian
+
+ | It is a seasonal business and the data varies. There is a trend in sales going up especially after Conferences and new Publications
+
+ | 
+ | Rick
+
+ | Aggregate of rolloling 12 months by year over year and if we hover over it can pop up the data comparison
+
+ | 
+ | Rick
+
+ | How can we capture compassionate care, we must do it
+
+ | 
+ | Sara
+
+ | At present we can do only a discrete check
+
+ | 
+ | Rick
+
+ | Negative savings must have a link to savings reports
+
+Highlight negative savings when they are more than $10,000. Laura and Christine can focus on that and find out the cause
+
+ | 
+ | Rick
+
+ | Is there anyway to find out the total PMPM the plans are spending on the drugs we review
+
+Educating the sales on the market 
+
+Healthplan spend on Oncology drugs
+
+ | 
+ | Rick
+
+ | Find out the reason for drop in Alignment savings from June -July
+
+ | 
+ | Rick
+
+ | Pattern recognition and find the reason and prepare with the reason
+
+ | 
+ | Brian
+
+ | We must make someone responsible to check the data covering the Client Success, Clinical and Analytics side
+
+ | 
+ | Rick
+
+ | We must define Belly button
+
+We have to figure out the Belly button numbers
+
+We need to know the active unique member in a quarter by year
+
+ | 
+ | Rick
+
+ | Breakdown per disease growth over the year, payer wants to see these kind of data
+
+Who looks at the data and what do they use it for is important
+
+ | 
+ | Sara
+
+ | Can we reconcile diagnosis and find out how and what makes sense
+
+Abbey must eyeball on everything related
+
+ | 
+ | Rick
+
+ | QA must be done before we show our data to others
+
+ | 
+ | Rick
+
+ | Make a Pie chart 
+
+Covering last year
+
+Trailing 13
+
+Calendar Year - 2017, 2018 and 2019
+
+ | 
+ | Rick
+
+ | Need an executive view tab
+
+Belly button
+
+Chemotherapy on Annual basis
+
+Each tab has to be linked to details
+
+ | 
+ | Brian
+
+ | This Dashboard will be rolled out soon by March end
+
+ | 
+Action items
+
+To be done by tomorrow
+
+475
+incomplete
+ - Add two pie charts. One by the % of customers and the other by LOB
+
+476
+incomplete
+  - Add a data slicer to the Pie chart  and link them
+
+477
+incomplete
+  - Rearrange the Savings by payer (Trailing 13) page so that graph is at the top and table at the bottom
+
+478
+incomplete
+  - A separate report page with individual Member graphs
+
+479
+incomplete
+ - Highlight negative savings when they are more than $10,000
+
+To be done later before rolling out
+
+480
+incomplete
+ and    - Aggregate of rolloling 12 months by year over year and if we hover over it can pop up the data comparison
+
+481
+incomplete
+ and  - Link negative savings to sales reports
+
+482
+incomplete
+ and  - Build an Executive view tab and link each tab to details
+
+ and  -  Make a Pie chart covering 1) Last Year, 2) Trailing 13 and 3) Calendar year -2017, 2018 and 2019
+
+Decisions
+
+Type /decision to record the decisions you make in this meeting:
+
+8463f083-8dac-488f-bde6-0f1a7d91a856DECIDED36bb390a-48b7-43d4-a5ad-efd55475cc3b
+
+### MCS - Medical Card System
+
+Overview
+
+falseWith 35 years of experience, MCS has stood out for offering innovative products based on a service delivery model that takes all aspects of human health into consideration. 
+
+Its unwavering commitment to its members&rsquo; health has turned it into one of today&rsquo;s strongest companies, leading the industry with a revolutionary business philosophy that redefines health services in Puerto Rico.
+
+*Program Launch Date: October 29, 2016
+
+10px
+
+MCS (Medical Card System) Key Information
+
+falseHeadquarters: Located Ponce De Leon Avenue in San Juan, PR
+Medicare population
+MCS Membership: 190,000
+Client system: CCMS
+OA Services Provided
+
+falseChemotherapy review (IV)
+
+Turn-Around Time Frames
+
+falseIV Drugs
+
+Standard: 6-Days
+
+Urgent/Expedited: 24-hours
+
+Provider/Payer Notification
+
+falseRecommendation of Approvals to the payer only
+Recommendation of Adverse determination send to both provider and payer
+
+Protocol Request Forms in Spanish and English
+
+false
+
+MCS - Turn Around Time Metrics
+
+false
+
+MCS Eligibility Layout
+
+false
+
+MCS Eligibility Layout
+
+false
+
+Recent space activity
+
+page, comment, blogpost5truesocial
+
+Space contributors
+
+listdescendants5trueupdate
+
+### Meeting Notes
+Labels: file-list
+
+true
+
+### MMM PR
+
+Overview
+
+falseMMM is the leading plan in health services under the Medicare Advantage segment in Puerto Rico.Our coverage options address the diverse Medicare health needs plus the advantage of additional services for the beneficiaries. We are focus on improving the life quality of all our members and during the last decade and a half we have established innovative service models with an efficient coordinated care and initiatives that goes towards integral wellness.
+
+Since the beginning, we walk with our people building a trustful relationship.
+
+Key Information
+
+falseHeadquarters: San Juan, PR
+Medicare and Medicaid
+Membership as of August 2019: Medicare ~250k lives, Medicaid ~260k lives
+
+OA Services Provided
+
+falseChemotherapy review
+Genetic and Molecular Testing (GMT) review
+
+Provider/PayerNotification
+
+falseRecommendation of Approvals to the treating provider and payer ????????? is this true for MMM ??????????
+Recommendation of Adverse determination send to both provider and payer ????????? is this true for MMM ??????????
+
+Member Eligibility File Template 
+
+false ---- find the MMM layout
+
+Claims File Information
+
+false
+
+### New Employee Orientation - OA Analytics Team
+
+Overview
+
+green1solidWelcome to the new employees of OA Analytics Team. This page has a list of important documents and links for the new employees to better understand the functionalities of OA and the Analytics team.
+
+OA General Related
+
+green1solid
+
+Confluence and ADOS (Azure DevOps) Related
+
+*Confluence is our collaboration tool used to help teams to collaborate and share knowledge efficiently.
+*Azure DevOps is a practice that unifies people, process, and technology across development and IT in five core practices: planning and tracking, development, build and test, 
+ delivery, and monitoring and operations. 
+ All Work items are created, planned, and tracked here.
+
+OA Analytics Team Related
+
+green1solid
+
+Analytics Platform and Databases Related
+
+green1solidAzure
+
+Analytics Platform
+
+Databricks & Spark
+
+Analytics Data Resources
+
+MATIS Related
+
+MATIS is an e-Prior Authorization platform, is purpose built for oncology to efficiently evaluate and approve high-quality and high-value treatments for cancer care.
+
+The platform is updated daily to accurately reflect more than 6,000 oncology treatment protocols for anti-cancer treatment across all cancer types and stages, including chemotherapy, radiation therapy, precision medicine, targeted therapy and supportive care.
+
+green1solidMATIS Prior Authorization Documents
+
+Providers use the Prior Authorization documents to request a prior approval of Main as well as Ancillary protocols as well as genetic Testing.
+
+OA Generated MATIS Documents
+
+RAD (RECOMMENDATION FOR ADVERSE DETERMINATION) - The RAD document is sent to the Health Plan.
+
+CCF (CLINICAL CONSULTATION FAX) - The CCF document is sent through Fax to the Physician who requested the approval of a drug through MATIS.
+
+green1solidMATIS Glossary
+
+MATIS Workflows
+
+OA LOB - Line of Business
+
+Impact Analysis Related
+
+green1solidThe following documents are of great importance to understand the Impact Analysis process. 
+
+Impact Analysis Current Workflow & Data-flow
+
+Impact Analysis Process
+
+Claims Data Request Documents
+
+Claims Data Request Documents
+
+Impact Analysis Data Dictionary
+
+Claims Savings Rules 
+
+OA Drug Related
+
+green1solid
+
+Protocol Related
+
+green1solid
+
+Knowledge Share
+
+green1solid
+
+### Nuance Server Documentation
+Labels: file-list
+
+User guide and technical documents for OCR engine. 
+
+true
+
+### OCR
+Labels: file-list
+
+OCR Documentation
+
+true
+
+### Repo/Code/Jobs
+
+16falsedecimallisttrueGenerally, during dashboard development, we collect and transform various data sets into smaller, cleaner intermediate data sets that can then be more easily fed into PowerBI. All of these intermediate data sets need to be developed and hosted in Databricks and should follow some standard best practices. Here&rsquo;s how the code should be written and how it should be stored and structured.
+
+The Repository
+
+Example Repo
+
+All of the code for a dashboard needs to be stored in a sub-repo in the data_analytics_databricks/solutions_reporting/oi_dashboards repository
+
+Your Repo name: /data_analytics_databricks/solutions_repoting/oi_dashboards/{dashboard_name}
+
+Repo Structure:
+
+Notebooks to refresh data sets should sit at the top level of the sub-repo. Each intermediate data set should be refreshed via its own notebook unless there are data dependencies between tables such that it makes sense to process things jointly in one notebook. Breaking things up into separate notebooks is encouraged, however, because modular code is easier to debug and is more resilient to ETL failures (i.e. an error with one intermediate table won&rsquo;t lead to all the tables failing to populate).
+
+Ex: nb_refresh_{dashboard_table_name)
+
+Ex: nb_refresh_{dashboard_table2_name)
+
+schemas: 
+
+__init___.py: An empty file that tells python to view a folder as a python module
+
+table_schemas.py: A file containing the schemas of all of the intermediate tables your dashboard needs. The schemas in this file are used when the tables are first created and are imported into the refresh notebooks and validated before data is written. If a table needs a schema update you must update the schema here, submit a PR, and then write a one off script that DevOps can run in Prod to update the schema on the existing delta table object there (more to follow on the one off script process, see below). This is a control file! If a table&rsquo;s schema does not match the schema in here you will get errors!
+
+nb_build_dashboard_tables: A notebook that creates/initializes empty intermediate tables in the catalog using the corresponding schemas in table_schemas.py. Why create empty tables? I like establishing a table's existence and identity first thing to avoid problems with tables not existing during promotions from environment to environment and also to avoid an initial data insert that contradicts the desired schema.
+
+utils
+
+__init___.py: Empty file that tells python to view a folder as a python module
+
+data_prep_utils.py: A file containing all of the helper functions specific to a given project/dashboard (you can name this file whatever you&rsquo;d like)
+
+jobs
+
+job_build_dashboard_tables.json: A json template that creates the pipeline responsible for creating/initializing all of the intermediate tables.
+
+Note: This is likely just going to be a pipeline with one Task that runs &ldquo;nb_build_dashboard_tables&rdquo;
+
+job_refresh_dashboard_tables.json: A json template that creates the pipeline responsible for refreshing the intermediate data sets. Each data set should have its own task within the pipeline.
+
+Note: If all of your intermediate data sets should be refreshed with the same cadence then you can do them all within one refresh job. However, if the data sets should be updated with different cadences (say if one data set updates quarterly and another updates daily) you should set up one job per cadence. 
+
+scripts
+
+This folder contains any ad-hoc scripts that have been run to update your tables. Need to add a column, update a column name, or change a column&rsquo;s data type? You will need to write a script for DevOps to run in Prod that will make this change without completely tearing down the existing Delta Table and its history. Said script will live here and should be named starting with the update&rsquo;s ADO User Story number.
+
+README.md: Here&rsquo;s where you document the blazes out of your dashboard! 
+
+Coding Requirements & Best Practices
+
+Intermediate data sets need to be stored in the &ldquo;oi_dashboards_{env}&rdquo; catalog. Each dashboard will have a schema that contains all of its intermediate tables
+
+Example: I&rsquo;m a developer creating a dashboard called &ldquo;Sporcle Leaderboard&rdquo; with data sets &ldquo;user_participation_quarterly&rdquo; and &ldquo;user_performance_quarterly.&rdquo; I would store the tables like this:
+
+oi_dashboards_{env}.sporcle_leaderboard.user_participation_quarterly
+
+oi_dashboards_{env}.sporcle_leaderboard.user_performance_quarterly
+
+What does a table_schema.py file look like?
+
+Here&rsquo;s an example with one table. In your file you will create one python object/schema per table. Use the naming convention {table_name}_schema. Think carefully about column types and column order! The primary keys to the table should always appear first (in this example, the table is intended to have one row per case, so OAReferenceNumber is consequently the first column)
+
+Your code must check for duplicates in a dataframe before writing to a table
+
+You&rsquo;ll need to run the dataframe_check_dupes() function for every meaningful partition in your data set. Don&rsquo;t just check for unique rows across all columns; check for unique rows across meaningful sets of columns. Any script that isn&rsquo;t checking for dupes with this function will be rejected in a PR (unless your data is supposed to have duplicates of course!)
+
+Btw it doesn&rsquo;t matter if you&rsquo;re checking for dupes in a different way: your code will still be rejected. You need to use this function (I&rsquo;ve seen too many instances of people checking for duplicates incorrectly and corrupting tables)
+
+Also, of note: You must check for dupes directly before the write step! Don&rsquo;t check earlier and then do a bunch of operations on your dataframe
+
+Your refresh notebooks should not overwrite table schemas
+
+You need to make sure the &ldquo;overwriteSchema&rdquo; option is set to false. Any notebook that doesn&rsquo;t do this will be rejected in a PR.
+
+Your refresh notebooks should validate schemas before writing
+
+I know this sounds redundant because the overWriteSchema option is already required to be false, but in my experience Spark doesn&rsquo;t tell you every way in which a dataframe violates a schema and it doesn&rsquo;t necessarily check column order. The validate_table_schema() function does check column order and will tell you every extra column you have, every column you&rsquo;re missing, and every non-nullable column that contains a Null value (in addition to checking data type mismatches, of course). It will also convert easily convertible data types into the correct data type before writing without throwing an error (i.e. type Long and type Int are the same for values between -2.8b and 2.8 billion, so if your dataframe has type Long and your Table is looking for Int validate_table_schema() will make the conversion for values in that range)
+
+Strings will not be converted to dates and vice versa (even if the strings are in ISO format)
+
+Strings will not be converted to int, long, double, float etc.
+
+Int and Long will not be converted to double or float and vice versa
+
+Double and float are convertible up to 4 decimal places. Any number with more than 4 decimal places will not be converted and will throw an error
+
+When you read in parameter values you should convert them to the correct type
+
+Parameter values are always read into a notebook as type string. Make sure to use the parameter conversion functions to convert them to the correct type before performing any actions on them.
+
+It&rsquo;s a good idea to define the period/dates for each intermediate table
+
+Define the minimum start date and the look back period as job parameters and pass them to the notebook.
+
+It&rsquo;s a good idea to define all the paths of your input data sets as variables at the beginning of your script
+
+Having the input paths clearly defined at the beginning of the script makes it very easy for anyone to open the script and familiarize themselves with the data sets involved. Also, defining the paths as variables will ensure that you only need to update the paths in one place in your script.
+
+### Retrospectives
+
+com.atlassian.confluence.plugins.confluence-software-blueprints:retrospectives-blueprintcom.atlassian.confluence.plugins.confluence-software-blueprints:retrospectives-blueprintAdd Retrospective
+
+TitleDate,Participantsretrospectivelabel = "retrospective" and space = currentSpace()
+
+### Scott & White
+
+Overview
+
+falseAs the largest not-for-profit​ healthcare system in Texas and one of the largest in the United States, Baylor Scott & White Health was born from the 2013 combination of Baylor Health Care System and Scott & White Healthcare. Today, Baylor Scott & White includes 48 hospitals, more than 800 patient care sites, more than 7,800 active physicians, over 47,000 employees and the Scott &​ White Health Plan.
+
+Key Information
+
+falseHeadquarters: Dallas, TX
+Medicare and Commercial
+Membership as of August 2019: Medicare ~30k lives, Commercial ~60k lives
+
+OA Services Provided
+
+falseChemotherapy review
+Radiation Therapy (XRT) review
+Genetic and Molecular Testing (GMT) review
+Full Delegation
+
+Provider/PayerNotification
+
+falseRecommendation of Approvals to the treating provider and payer ????????? is this true for S&W ??????????
+Recommendation of Adverse determination send to both provider and payer ????????? is this true for S&W ??????????
+
+Member Eligibility File Template 
+
+false ---- find the S&W layout
+
+### Standard Reports
+
+Oncology Analytics offers a wide set of reports and dashboards to each customer. Below is a list of the standard reports and dashboards that are offered to each customer.
+
+CMS Required Reporting
+
+Report Name
+
+ | Description
+
+ | Frequency
+
+ | Standard Layout Example
+
+ | 
+CMS Part C Organization Determinations, Appeals, and Grievances (ODAG) Report
+
+ | We currently provide the SOD, EOD, and Dismissals reports as separate tabs in an Excel workbook. Download CMS Specification.
+
+ | Monthly
+
+ | Download layout
+
+ | 
+CMS Part D Coverage Determinations, Appeals, and Grievances (CDAG) Report
+
+ | We currently provide the SCD, SCDER, DMRCD, ECD, ECDER, SIAM, and EIAM reports as separate tabs in an Excel workbook. Download CMS CDAG specification.
+
+ | Monthly
+
+ | Download layout
+
+ | 
+CMS Medicare Part C Quarterly (ODR) Report
+
+ | Medicare Advantage Part C quarterly organization determinations
+
+ | Quarterly
+
+ | Download layout
+
+ | 
+Available Customer Standard Reports
+
+Report Name
+
+ | Description
+
+ | Frequency
+
+ | Standard Layout Example
+
+ | Additional Information
+
+ | 
+Turnaround Time (TAT) Report
+
+ | Analysis and summary of compliance to
+timeliness standards to include percentage of
+compliance meeting timeliness standards.
+
+ | Monthly
+
+ | Download standard layout
+
+ | Report Review Guide (Internal Only)
+
+Definitions
+
+Customizations by Payer
+
+ | 
+Financial Impact Report
+
+ | Summarizes the financial impact (savings) provided to customers from drugs and services and savings calculations at the protocol and element levels.
+
+ | Monthly (with 2 year lookback)
+
+ | Download standard layout
+
+ |  | 
+Activity Report
+
+ | Detailed report of each authorization request
+from the previous month. The report includes
+specific transaction data, such as billing codes,
+diagnosis, authorization dates, member
+information and provider data.
+
+ | Monthly
+
+ | Download standard layout
+
+ |  | 
+Phone Dashboard
+
+ | Summarizes phone metrics (from members and providers) such as abandonment rate, average speed of answer, and percentage answered in less than 30 seconds. Summary in pdf and detail in Excel.
+
+ | Monthly / Quarterly (With 2 year lookback)
+
+ |  |  |
+
+### Test and Code Release Documentation
+
+Overview
+
+black1solidThis page has all relevant documents related to testing and code release for Impact Analyses and Medcodes Table updates for the OA Analytics team
+
+Description
+
+black1solidThis page has the detailed documentation on the following procedures
+
+Code Release
+
+Code Release  Process flow
+Code Release log
+Peer Code Review Template 
+Med-codes Table Updates
+
+Process Flow
+Best Practices
+Change Log 
+Impact Analyses 
+
+Best Practices
+    
+
+Code Release Documentation
+
+black1solid
+
+Med-codes Table Updates Process Flow
+
+black1solid
+
+Impact Analyses - Mandatory Things to Do
+
+black1solidBest Practices
+
+Criteria for inscope/include for CSR&rsquo;s is always documented
+Enforce the use of  for all our criteria documentation
+
+### Trash - Delete Page
+
+Overview
+
+Datameer is a data visualization tool specially designed for Big Data which allow you to get useful insight from your complex data. Started in 2009, Datameer is one of the fastest growing data analytics platforms in the world. Many big companies are using Datameer to analyze the data and get the insight from it.
+
+Datameer is kind of a complete data analytics tool and help you to do the following:
+
+Data Integration
+
+Data Preparation
+
+Data Analysis
+
+Data Visualization
+
+ | 
+Accessing Datameer
+
+Requesting Access
+
+To Request access to Datameer, send an email to Tim Ursprung begging for permission to the application and its data.
+
+Logging In to Datameer
+
+Datameer uses Active Directory to verify your credentials, so when you are presented with the login page, use your Oncology Analytics Active Directory credentials to log in. To Access Datameer, follow this link.
+
+ | 
+Available Data In Datameer
+
+Data From MATIS
+
+Assignment Details 20200106
+
+Data From the CDR
+
+CDR Denorn - Coming Soon
+
+ | 
+Tutorials
+
+Coming soon
+
+ |
+
+### Triple S
+
+Overview
+
+falseTriple-S Salud is the leader in health insurance and the largest health insurance company in Puerto Rico. 
+
+For over 55 years Triple S have focused on giving special attention to quality to keep the company at the leading edge of health and technology to assure our present and future. 
+
+Triple S were the first company to offer a health plan with an open access network. 
+
+ Triple-S Salud Key Information
+
+falseHeadquarters: San Juan, PR
+
+OA Services Provided
+
+false
+
+Launch Dates
+
+false
+
+Implementation Documentation
+
+falseImplementation Guide
+
+Recently Updated Pages
+
+page5trueconcise
+
+#### 2018-07-31 Retrospective Report - Analytics Team
+Labels: retrospective
+
+Date |  | 
+Participants |            | 
+
+Retrospective
+
+What did we do well? | What should we have done better? | 
+Anna Schorer - As a team we are making a good progress
+
+Dinah Huff - Appreciate Anthony and Tamara in working out the RF logic and continue to do well
+
+Brian York - All external meetings went very well, We must continue to emphasize on "patient first" in whatever we do, Pleasure to work with the team
+
+Mark Mangurian - Expanding to new technology (Azure) is really helping the team
+
+Hemalatha Elango - The meetings we had at Atlanta office with Kristen, Tamara, and Anthony was really very informative, Learnt a lot and keep learning, Excellent team collaboration
+
+Kristen Biskobing - Good that we started setting up time frames, Documentation of new process is good, Improved workflow, Appreciate the flexibility and adaptability of the team
+
+Tamara Mckelligan - Migration to Azure, even-though more work it is going to make the Claims Analysis process better, Getting to know Humana well
+
+Anthony Abbatello - Re-platforming to Azure, keep learning
+
+Carolina Lugo - We are heading in the right direction regarding organizing our work and documentation
+
+ - Jira is very helpful in organizing work
+
+ | Anna Schorer -
+
+Dinah Huff - Suggest having a thorough review by another person other than those who got involved in doing the project in-order to identify more issues from a different perspective, also increase awareness of any other issues that exists. Review and validation of completed work is required.
+
+Brian York - More grooming for the Ad hoc and CA team board for better streamlining
+
+Mark Mangurian - Same as Dinah, suggest review and validation by another person who is not involved
+
+Hemalatha Elango -
+
+Kristen Biskobing - Suggests leveraging the expertise of others instead of spending to  much time to figure out things, better time management and productivity by doing so
+
+Tamara Mckelligan - Version control for Red flags logic changes to be documented in Confluence
+
+Anthony Abbatello - keep learning the new technology introduced
+
+Carolina Lugo -
+
+ - None
+
+ | 
+What did we learn? | What questions arose? | 
+Anna Schorer - 
+
+Dinah Huff -
+
+Brian York - We have abundant knowledge in our team but there is difficulty in taking advantage of it.
+
+Mark Mangurian -
+
+Hemalatha Elango -
+
+Kristen Biskobing -
+
+Tamara Mckelligan -
+
+Anthony Abbatello -
+
+Carolina Lugo - 
+
+ -
+
+ | Anna Schorer - 
+
+Dinah Huff -
+
+Brian York - Ways to leverage on the team's knowledge/potential to the maximum?
+
+Mark Mangurian - Issues not being addressed to specific persons of a specific team?
+
+Hemalatha Elango - Questions regarding Azure workflow
+
+Kristen Biskobing -
+
+Tamara Mckelligan -
+
+Anthony Abbatello - Technical questions regarding Azure
+
+Carolina Lugo - Be more organized in making requests, handling last minute requests, time constraints?
+
+ -
+
+ | 
+Actions
+
+3
+incomplete
+Anna Schorer -
+
+15
+incomplete
+Dinah Huff -
+
+5
+incomplete
+Brian York -
+
+7
+incomplete
+Mark Mangurian -
+
+8
+incomplete
+Hemalatha Elango - Set up grooming meetings for the Ad hoc and CA board.
+
+9
+incomplete
+Kristen Biskobing -
+
+10
+incomplete
+Tamara Mckelligan -
+
+24
+incomplete
+Anthony Abbatello -
+
+25
+incomplete
+Carolina Lugo -
+
+11
+incomplete
+ -
+
+#### 2018-09-10 Retrospective Report - Analytics Team
+Labels: retrospective
+
+Date |  | 
+Participants |            | 
+
+Retrospective
+
+What did we do well? | What should we have done better? | 
+ | 
+Anna Schorer - Good team work, continue to do better
+
+Dinah Huff - Like the sprint concept - help to focus and finish work quickly
+
+Brian York - Happy with the MMM project progress. Analytics team has really come together as a team - comment by Cathy SVP of client success
+
+Mark Mangurian - Team members helping each other, working in small teams is very productive
+
+Hemalatha Elango - As a team we are helping each other and make good progress
+
+Kristen Biskobing - We did well diving into new technologies
+
+Tamara Mckelligan -Good team work and getting help from all, all are ready to share knowledge
+
+Anthony Abbatello - Good team work
+
+Carolina Lugo - QPP calculations were done successfully and client is happy. Pharmacy and Medical team did a good review and was helpful. Helping Humana client in doing new calculations
+
+ - Communication has improved a lot, Glad to move to VSTS
+
+ | Anna Schorer - None
+
+Dinah Huff - None
+
+Brian York - 
+
+Mark Mangurian - None
+
+Hemalatha Elango -
+
+Kristen Biskobing - Going forward a detailed documentation is important before we begin any work to avoid repeat work
+
+Tamara Mckelligan - Agrees with Kristen on documentation
+
+Anthony Abbatello - None
+
+Carolina Lugo - As a company, internally we need to be more organized in our approaches, everyone's involvement is very much required and avoid last minute requests to work on reports
+
+ -
+
+ | 
+ | 
+
+What did we learn? | What questions arose? | 
+ | 
+Anna Schorer -
+
+Dinah Huff - Recording of any instructions/walk through helps a lot. Avoids asking questions again and again
+
+Brian York - How hard is it to make changes in the company. Necessity for departmental focus. the necessity to have a single track of communication instead of having so many options. 
+
+Mark Mangurian - None
+
+Hemalatha Elango - Helping each other as a team is making our team succeed in whatever we do
+
+Kristen Biskobing - Detailed documentation is important before we begin any work to avoid repeat work 
+
+Tamara Mckelligan - Will work towards creating simplified documentations for better understanding
+
+Anthony Abbatello - Technical questions regarding the new software being introduced
+
+Carolina Lugo - Preparing for QBR was stressful, Internal disorganization, IT people are willing to help in doing protocol versioning. This is not the way QPP must me done.
+
+ - Introduction of new tools
+
+ | Anna Schorer -
+
+Dinah Huff - Communications with slack is distracting
+
+Brian York - CA process to be completed by September end?
+
+Mark Mangurian -
+
+Hemalatha Elango -
+
+Kristen Biskobing -
+
+Tamara Mckelligan -
+
+Anthony Abbatello -
+
+Carolina Lugo -
+
+ - When are we getting new clients? Brian's answer - very soon SSS with around 1 million patients are likely to sign a contract with OA
+
+ | 
+ | 
+Actions
+
+1
+complete
+Hemalatha Elango - Prepare a walk-through document (preferably a PPT) for the team to get accustomed to Azure DevOps Services (ADOS) - Old name VSTS
+
+2
+complete
+Brian York - Going to have a talk with IT to work towards on zeroing in on one tool (Skype/Slack/Team) for better/faster team communication.
+
+#### 2018-10-02 Meeting notes
+Labels: meeting-notes
+
+Date
+
+Attendees
+
+ 
+
+Goals
+
+October Team Meeting (Plantation)
+
+Discussion items
+
+Time
+
+ | Day
+
+ | Item
+
+ | Who
+
+ | Lead
+
+ | Notes
+
+ | 
+30min
+
+ |  | EncoderPro Walkthorugh
+
+ | All
+
+ | BY
+
+ | Notes for this agenda item
+
+ | 
+
+30min
+
+ |  | 
+Migration to Azure (ad-Hoc) Update
+
+ | 
+All
+
+ | KB
+
+ | 
+
+ | 
+60min
+
+ |  | Team Building with Shay
+
+ | All
+
+ |  |  | 
+60min
+
+ |  | Knowledge Sharing 
+
+ | All
+
+ |  | Topic & lead tbd
+
+ | 
+ |  | Impact Analysis Q4 
+
+ | All
+
+ | BY
+
+ |  | 
+Action items
+
+19
+incomplete
+Add an action item here, then use "@" to assign it to someone.
+
+Decisions
+
+787069c6-2301-456e-abfb-4eac3a77408eDECIDED50a6f5e7-0f60-4181-8908-263de1eeb182Highlight any decisions from your meeting here.
+
+#### Analytics Documents
+Labels: file-list
+
+Overview
+
+green1solidThis page contains training documents related to the Analytics' team tools and processes. 
+
+Azure and Databricks 
+
+green1solid
+
+ADOS (Azure Devops) Walk-through
+
+green1solid
+
+Agile Coaching
+
+green1solid
+
+Ingestion Functions
+
+green1solid
+
+Analytics Intro Decisions Training Documentation
+
+green1solid
+
+MATIS Savings 
+
+green1solid
+
+Summit Presentations
+
+green1solid2020 Q2 Presentation
+
+2021 Q2 Presentation
+
+2021 Q3 Presentation
+
+Generic Healthcare Training
+
+green1solidFor more generic training visit the knowledge share page
+
+Misc Zoom Recordings
+
+green1solidHumana training on the service fund reports
+
+#### MedCodes tables Change Log
+
+| Database | Table Name | Dependencies | Change Request By | Change Request Date | Brief description of changes | CR Completion Date (IT) | CR Completion Date (Analytics) | 
+1 | MedCodes
+
+ | ChemoRX_HCPCS
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | updated our list of in-scope drugs and procedures to include new drugs and procedures
+
+ | 10/3/2018
+
+ | 10/4/2018
+
+ | 
+2 | MedCodes
+
+ | ChemoRX_NDC
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | updated our list of in-scope drugs and procedures to include new drugs and procedures
+
+ | 10/3/2018
+
+ | 10/4/2018
+
+ | 
+3 | MedCodes
+
+ | GT_HCPCS
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | updated our list of in-scope drugs and procedures to include new drugs and procedures
+
+ | 10/3/2018
+
+ | 10/26/2018
+
+ | 
+4 | MedCodes
+
+ | XRT_HCPCS
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | updated our list of in-scope drugs and procedures to include new drugs and procedures
+
+ | 10/7/2018
+
+ | Not needed  | 
+5 | MedCodes
+
+ | XRT_REVCodes
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | updated our list of in-scope drugs and procedures to include new drugs and procedures
+
+ | 10/3/2018
+
+ | Not needed  | 
+6 | MedCodes
+
+ | proc_code_modifiers
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | updated our list of in-scope drugs and procedures to include new drugs and procedures
+
+ | 10/7/2018
+
+ | 
+ | 
+7 | MedCodes
+
+ | PETCT_HCPCS
+
+ | 
+ | DH
+
+ | 9/26/2018
+
+ | New table
+
+ | 10/7/2018
+
+ | 
+ | 
+8 | MedCodes
+
+ | ICD_Master 
+
+ | 
+ | DH
+
+ | 9/27/2018
+
+ | added start & end date
+
+ | 10/11/2018
+
+ | Stale | 
+9 | MedCodes
+
+ | FN_Risk_Logic
+
+ | 
+ | DH
+
+ | 10/4/2018
+
+ | 5 drugs added - all low risk
+
+ | 10/8/2018
+
+ | 11/7/2018
+
+ | 
+10 | MedCodes
+
+ | ChemoRX_HCPCS
+
+ | 
+ | DH
+
+ | 10/4/2018
+
+ | correction in Aprepitant IV & Aprepitant Oral.
+
+ | 10/8/2018
+
+ | 10/24/18
+
+ | 
+11 | MedCodes
+
+ | InscopeCodes vw
+
+ | ChemoRX_HCPCS
+
+ChemoRX_NDC
+
+GT_HCPCS
+
+XRT_HCPCS
+
+XRT_REVCodes
+
+ | DH
+
+ | 10/4/2018
+
+ | updates to all feeding tables & remove condition for RT
+
+ | 10/7/2018
+
+ | 10/24/18
+
+ | 
+12 | MedCodes
+
+ | GT_HCPCS
+
+ | 
+ | DH/AS
+
+ | 10/22/2018
+
+ | Dr. Schorer new GT list
+
+ | 10/26/18
+
+ | N/A | 
+13 | MedCodes
+
+ | ChemoRX_HCPCS
+
+ | 
+ | DH
+
+ | 10/25/2018
+
+ | Re - classificaiton of one drug: Leucovorin should be "M
+
+ | 10/29/2018
+
+ | 11/7/2018
+
+ | 
+14 | MedCodes
+
+ | ChemoRX_NDC
+
+InscopeCodes vw
+
+ | 
+
+HCPCS, NDC, GT, XRT tables
+
+ | DH
+
+ | 10/25/2018
+
+ | Re-classificaiton of one drug: Leucovorin should be "M
+
+ | 11/5/2018
+
+ | 11/7/2018
+
+ | 
+15 | MedCodes
+
+ | ICD_Master
+
+ | 
+ | DH
+
+ | 12/13/18
+
+ | Includes start and end date
+
+For all diagnosis description with "leukemic reticuloendotheliosis", the [Primary Cancer] entry was changed from "Leukemic reticuloendotheliosis" to "Hairy cell leukemia".
+
+For all diagnosis description with "Carcinoma of the ampulla of vater", the [Primary Cancer] entry was changed from "Biliary" to "Pancreas".
+
+ | 12/18/18
+
+ | 12/27/18
+
+ | 
+16 | MedCodes
+
+ | ChemoRX_NDC
+
+InscopeCodes vw
+
+ | 
+ | TMC
+
+ | 1/10/19
+
+ | Lpadded all NDC codes
+
+ | N/A
+
+ | 1/9/19
+
+ | 
+17 | MedCodes
+
+ | InscopeCodes vw
+
+ | 
+ | TMC
+
+ | 2/8/2019
+
+ | view to include OA Drug Name and remove the radiation codes that are not in scope 
+
+ | 2/13/19
+
+ | 2/14/19
+
+ | 
+18 | MEDCODES
+
+ | XRT_HCPCS_20180214
+
+ | 
+ | N/A
+
+ | N/A
+
+ | table has been time stamped & it includes xrt type
+
+ | N/A
+
+ | 2/14/19
+
+ | 
+19 | MEDCODES
+
+ | INSCOPECODES VIEW
+
+ | 
+ | TMC
+
+ | 3/4/19
+
+ | Regular updates to all underlying tables
+
+ | 
+ | 3/4/19
+
+ | 
+20 | MEDCODES
+
+ | XRT_HCPCS
+
+ | 
+ | DH
+
+ | 3/4/19
+
+ | new xrt types (srs) & split brachy into low and high
+
+ | 3/13/19
+
+ | 3/8/19
+
+ | 
+21 | MEDCODES
+
+ | INSCOPECODES VIEW
+
+ | 
+ | TMC
+
+ | 3/19/19
+
+ | include the changes for xrt table above
+
+ | 3/13/19
+
+ | 3/19/19
+
+ | 
+22 | MEDCODES
+
+ | GT_HCPCS
+
+ | 
+ | DH
+
+ | 5/17/19
+
+ | dropped GT codes
+
+ | 6/7/2019
+
+ | 5/23/19
+
+ | 
+23 | MEDCODES
+
+ | INSCOPECODES VIEW
+
+ | 
+ | TMC
+
+ | 7/23/19
+
+ | include the changes for GTC table above
+
+ | N/A
+
+ | 7/23/19
+
+ | 
+24 | MEDCODES
+
+ | ChemoRX_NDC
+
+ | 
+ | DH
+
+ | 1/30/20
+
+ | quarterly changes
+
+ | 
+ | 1/31/20
+
+ | 
+25 | MEDCODES
+
+ | ChemoRX_HCPCS
+
+ | 
+ | DH
+
+ | 12/20/20
+
+ | oa drug name changed to generic name
+
+ | 
+ | 1/31/20
+
+ | 
+26 | MEDCODES
+
+ | InscopeCodes vw
+
+ | 
+ | DH
+
+ | 
+ | 
+ | 
+ | 1/31/20
+
+ | 
+27 | MEDCODES
+
+ | TblFnRisk
+
+ | 
+ | DH
+
+ | 1/29/20
+
+ | quarterly changes
+
+ | 
+ | 1/31/20
+
+ | 
+28 | MEDCODES
+
+ | ICD MASTER
+
+ | 
+ | 
+ | 3/24/2020
+
+ | QUARTERLY CHANGES + FIXED SOME INCONSISTENCIES (EYE)
+
+ | 
+ | 4/8/2020
+
+ |
+
+#### Membership Invoicing Discussion on 3/4
+
+We used to take a &ldquo;hair cut&rdquo; out of Texas that we are excluding out of invoicing. 
+
+New asks 
+
+Exclusion file can be through service fund OR the analytics haircut
+
+No one understand what the Hair cut means
+
+what LOBs, etc? are included
+
+County care outs
+
+Risk carve outs
+
+PFFS and Commercial is 3/1 (although Jessica has been manually backing out the commercial)
+
+Meg has a ticket out to Shawn 
+
+4/16 invoicing cycle for the target (we cannot send for March billing
+
+Jessica wants to exclude PFFS for Jan and Feb (Meg to pull these numbers from Analytical Sertvice)
+
+We can get a count and provide it to finance, but we were doing cases for both Commercial and PFFS through 2/29
+
+Humana thought these members would roll off the elig file, but that didn&rsquo;t happen as of 1/1 (because they are sending commercial members in the elig file)
+
+Humana&rsquo;s decision to pull out of the commercial market and focus on medicare, so it was understood that OH should not be sent be commercial. However, some groups are still sending commercial
+
+We should not be doing reviews as of 3/1, so we will not be billing even though we see some activity for commercial coming through. (last decisions 2/29) 
+
+Some of the risk comes from counties in Tx through the service fund. Need to understand the amount that we are taking off (For example, .0255% was the amount we needed to cut out at some point, but Meg can&rsquo;t find any percentage that we are removing. There doesn&rsquo;t seem to be any fixed amount. 
+
+Conclusion:
+
+The PFFS and OOS pcp groups are being cut out before they get to the analytics reporting layer (Membership Details)
+
+#### Spark & Databricks Training Documents
+Labels: file-list
+
+true

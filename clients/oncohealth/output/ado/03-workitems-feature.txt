@@ -1,0 +1,64 @@
+Features (62)
+============================================================
+[Closed] #179188 Okta Authentication Foundation | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #179706 Specify NewUM bulk ingest API | Unassigned | P2 | 2pts | newUM | Data; Q2 2026 Deliverable
+[Closed] #180149 FE App initial config and infra | Dmytro Petriv | P2 | pts | newUM | FE; Q2 2026 Deliverable
+[New] #180229 Setup Test Infrastructure | Ivan Karpa | P2 | pts | newUM | Q2 2026 Deliverable; QA
+[Closed] #180325 Phase 1 Case Intake (POC) | Vika Nobis | P2 | pts | newUM | Q2 2026 Deliverable
+[Closed] #180449 Initial Azure Infrastructure for BE (core and Services) | Luiyi Valentin | P2 | pts | newUM\26.02.03 | DevOps; Q2 2026 Deliverable
+[New] #180450 Initial Data Set up | Unassigned | P2 | pts | newUM\26.03.03 | Data; Q2 2026 Deliverable
+[Closed] #180451 CI/CD implementation | Luiyi Valentin | P2 | pts | newUM\26.02.03 | DevOps; Q2 2026 Deliverable
+[Closed] #180452 Initial Project Set up | Bogdan Chachun | P2 | pts | newUM\26.02.03 | BE Services; core; Q2 2026 Deliverable
+[Closed] #180483 Rules engine prototype  | Unassigned | P2 | pts | newUM\26.02.03 | core; Q2 2026 Deliverable
+[New] #181221 QA Manual work initial set up | Taras Badlo | P2 | pts | newUM | Q2 2026 Deliverable; QA
+[Active] #181228 [V1.R1.] Member Search, Selection, & Coverage Determination, including Draft Case | Inna Mariienko | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[Active] #181229 [V1.R1.] Diagnosis Selection & Details for Case | Inna Mariienko | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[New] #181231 [V1.R1.] Basic Request Information | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #181232 [V1.R1.] Ordering and Servicing Provider Information | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #181233 [V1.R2.]  Patient Clinical Information and Supporting Details | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181234 [V1.R1.] Provider Portal Integration | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #181235 [V1.R2.] Fax Queue Integration | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181236 Auto-Determination Logic | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181238 Queues Management | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181239 NMI for Clinical Data & Medical Records | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181240 Provider Intervention (P2P / CCF) | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181241 Approval | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181243 Denial - Lack of Medical Necessity | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181244 Denial - Lack of Information | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181245 Withdrawal | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181246 Out of Scope | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181247 PA Exempt | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181248 Generate and Send Notification Package | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181249 Complete Case | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181250 Pharmacy Drug Authorization Outbound (PBM Integration) | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181251 Medical Drug Authorization Outbound (Health Plan Integration) | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #181252 Standard Outbound Reporting & Feeds | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[Active] #181314 Design - UI Components | Vika Nobis | P2 | pts | newUM\26.02.17 | Q2 2026 Deliverable
+[Active] #182311 Infrastructure V2 | Vika Nobis | P2 | pts | newUM\26.02.17 | Q2 2026 Deliverable
+[Active] #182312 Tech Debt | Vika Nobis | P2 | pts | newUM | Q2 2026 Deliverable
+[Active] #182325 Monitoring | Arben Osmani | P2 | pts | newUM\26.03.03 | Q2 2026 Deliverable
+[Active] #182327 Architecture outline - Data Team System Design Doc | Michal Mucha | P2 | pts | newUM | Data; Q2 2026 Deliverable
+[New] #182421 Data Migration Pipeline - Backfill & Incremental Notebooks | Unassigned | P2 | pts | newUM\26.03.03 | Data; Q2 2026 Deliverable
+[New] #182836 [V1.R2.] Member Identification and Coverage | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[Active] #182857 NewUM data model | Michal Mucha | P2 | pts | newUM\26.03.03 | Data; Q2 2026 Deliverable
+[Active] #182916 [V1.R1.] Main Regimen Selection | Inna Mariienko | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[Active] #182919 [V1.R1.] Capture Basic Dosing Details | Inna Mariienko | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[Active] #182922 [V1.R1.] Allow Custom Regimens | Inna Mariienko | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[Active] #182923 [V1.R1.] Select Ancillary Drugs | Inna Mariienko | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[New] #182925 [V1.R1.] Dynamic Cycle Calculations | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #182926 [V1.R1.] Dispense As Written (DAW) | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #182927 [V1.R1.] Apply Payer Drug Configurations | Unassigned | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[New] #182928 [V1.R1.] Apply Payer Non-Preferred Drug Rules | Unassigned | P2 | pts | newUM | PI; Q2 2026 Deliverable; V1.R1
+[New] #182929 [V1.R1.] Formulary Configurations | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #182947 Payer Drug Library Enhancements (PDL) | Unassigned | P2 | pts | newUM\26.02.17 | Q2 2026 Deliverable; V1.R1
+[New] #182950 [V1.R1.] Treatment Views | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable; V1.R1
+[New] #184063 Configuration and Rules Repositories | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #184096 Data exchange between Databricks and NewUM | Unassigned | P2 | pts | newUM\26.03.03 | Data; Q2 2026 Deliverable
+[New] #184112 Data exchange between NewUM and Databricks / reporting | Unassigned | P2 | pts | newUM\26.03.03 | Q2 2026 Deliverable
+[Active] #184144 Rules Engine | Vika Nobis | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #184178 Audit | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #184179 Rollback | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #184188 Testing & Validation | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[New] #184800 UI Configuration | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
+[Active] #185934 Phase 1 documentation deliverable | Jack Hall | P2 | pts | newUM\26.03.31 | Q2 2026 Deliverable
+[Active] #185935 Design - case entry | Vika Nobis | P2 | pts | newUM | Q2 2026 Deliverable

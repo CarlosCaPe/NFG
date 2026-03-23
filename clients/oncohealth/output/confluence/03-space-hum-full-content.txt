@@ -1,0 +1,171 @@
+# Humana — Full Content Export
+Exported: 2026-03-23T19:45:05.188Z
+Pages: 2
+
+
+# Humana
+
+trueRedWork in Progress
+
+Overview
+
+falseThis is the homepage for Humana.
+
+This space has all the documents related to OA client Humana.
+
+Humana Company Overview
+
+falseHumana's diverse lines of business work to serve all types of consumers. 
+
+From families to seniors to military members to self-employed individuals, there is a plan to meet many unique needs. 
+
+Medicare-eligible consumers can get more from their healthcare dollars. 
+
+Humana plan members choose plans that include both drug and medical coverage, as well as stand-alone prescription drug coverage.
+
+Humana Key Information
+
+falseHeadquarters: Louisville, Kentucky
+Commercial HMO/PPO plans. Medicare plans. Medicare Plans
+Total population as of 4/1/2018: Medicare &ndash; 950,851 Medicaid &ndash; 44,232 Commercial &ndash; 523,620
+We review for FL, TX, GA and all of the NE
+
+Humana Market
+
+OA's current Humana market covers 14 states.
+
+false
+
+# | Market Name | 
+1 | Florida - Miami Dade
+
+              South Florida
+
+              Tampa Area
+
+              North and Central Florida
+
+ | 
+2 | Georgia | 
+3 | Vermont | 
+4 | New Hampshire | 
+5 | Maine | 
+6 | Massachusetts | 
+7 | New Jersey | 
+8 | Delaware | 
+9 | Maryland | 
+10 | Washington DC | 
+11 | Pennsylvania | 
+12 | Connecticut | 
+13 | New York | 
+14 | Rhode Island | 
+
+OA Services Provided
+
+falseChemotherapy review
+Anemia in CKD if treated by a Oncologist/Hematologist
+Osteoporosis in patients being treated by Oncologist/Hematologist
+Prostate Surveillance
+
+Turn-Around Time Frames and availability
+
+false10 days: Retro Commercial plans
+7 days: Standard Medicare requests
+5 days: Retro Medicare plans, Standard Commercial (except Texas)
+24 hours: STAT Medicare and Commercial plans (all states), TX Commercial plans, Maryland Commercial plans, and Standard FL Medicaid plans
+12 hours: STAT FL Medicaid
+
+Provider/Payer Notification
+
+falseThe provider is notified of approvals by fax. Depending on LOB/State and priority of case, Humana and the PCP may be included in the notification.
+All Medicaid requests are simply recommendations and it is up to the PCP to issue the authorization through Availity
+In times where OA is not able to approve a request, we then submit a Recommendation for Adverse Determination to the Provider and Humana for all states and LOB's.
+All Medicaid RADs are simply recommendations and it is up to the PCP to uphold or deny the treatment.
+
+Humana Layout
+
+false
+
+Humana - MATIS Profile Screenshots
+
+false
+
+Availity Related Documents
+
+The Availity Provider Portal is Humana&rsquo;s preferred method for medical and behavioral health providers to check eligibility and benefits, submit referrals and authorizations, manage claims and complete other secure administrative tasks online.
+
+false
+
+Clarity
+
+The Clarity Process refers to a service that Oncology Analytics (OA) provides to its client Humana, where payment claims that are submitted to Humana are sent on a daily basis to OA.
+
+OA reviews each claim line in the file(s) and flags each line with a disposition code that lets Humana know if the claim is out of scope, or if OA recommends that payment be made or denied. 
+
+At the end of the process, OA will send the file(s) back to Humana for processing.
+
+false 
+
+Claims Documents
+
+Oncology Insights - Claims Documents
+
+false
+
+Recent space activity
+
+page, comment, blogpost5truesocial
+
+Space contributors
+
+listdescendants5trueupdate
+
+## Azure Event Hubs Logging/Audit Trail
+
+Azure Event Hubs is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters. Event Hubs provides a distributed stream processing platform with low latency and seamless integration, with data and analytics services inside and outside Azure to build a complete big data pipeline. We can ingest, buffer, store, and process stream in real-time to get actionable insights. Event Hubs uses a partitioned consumer model, enabling multiple applications to process the stream concurrently and letting us control the speed of processing. Data can be captured in near-real-time in Azure Blob storage or Azure Data Lake Storage for long-term retention or micro-batch processing.
+
+Event Hub Components
+
+Event producers: Anything that sends data to an event hub can count as an event producer. The events can be published using the HTTPS or AMQP 1.0 or Apache Kafka (1.0 and above) protocols. HTTP is usually used in scenarios with a low volume of published events. On the other hand, AMQP can deal with higher volumes of events providing better performance and throughput.
+
+Partitions: Events are streamed to a specific partition and each consumer only reads a specific subset or partition. The number of partitions is specified on the creation and must be between 2 and 32. After specifying the number of partitions while creation this number cannot be modified.
+
+Partition Keys: The partition key is the value to map the incoming event data to a specific partition. In case the partition keys are not specified, the event hub will just store incoming events in a different partition on a round-robin basis.
+
+Consumer: Consumer is any application that reads event data from an Event Hub. For reading event data by the consumer only the AMQP protocol is used, because the events are pushed to the consumer from the event hub via the AMQP channel, the client does not need to pull for data availability.
+
+Consumer groups: Consumer group is a view of an entire event hub. The partitions cannot be accessed directly to fetch the data, but instead, the data can only be accessed through a consumer group. Since each consuming application can have a different way of reading the stream and perhaps some of them want to read it multiple times, consumer groups give the possibility for the consuming entities to have a separate view of the event stream.
+
+Throughput units: Units that control the throughput capacity of Azure Event Hubs and are one of the key parameters in the pricing calculations. Scaling the throughput units is represents scaling of the Event Hubs traffic.
+
+Event receivers: Any entity (application) that reads event data from an event hub.
+
+Audit Event Model
+
+Key Data Points to Collect
+
+User ID
+
+Full Name
+
+Data Subject ID
+
+Function Performed
+
+Success/Failure of the event
+
+Date/Time of occurrence
+
+The account involved
+
+The processes involved
+
+Other additional information about the event
+
+Additional Data/Parameters
+
+Event Logging Tips and Best Practices
+
+To help ensure the security of the audit records, auditing shall be configured in such a way that the records, when generated, are tamper-resistant, i.e. exported to a location that cannot be accessed by the users whose activities are being audited.  This shall prevent a user from performing an unauthorized action and then being able to delete the record of the action being performed.
+
+ Audit records shall be automatically generated upon occurrence of the activity, and shall be sent to desired logging provider for aggregation and further analysis

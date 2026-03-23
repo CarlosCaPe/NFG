@@ -1,0 +1,71 @@
+# MCS — Full Content Export
+Exported: 2026-03-23T19:45:12.973Z
+Pages: 1
+
+
+# MCS Home
+
+trueRedWork in Progress
+
+MCS - Medical Card System
+
+falseThis is the homepage for MCS - Medical Card System.
+
+This space has all the documents related to OA client MCS.
+
+10px
+
+MCS Company Overview
+
+falseWith 35 years of experience, MCS has stood out for offering innovative products based on a service delivery model that takes all aspects of human health into consideration. 
+
+Its unwavering commitment to its members&rsquo; health has turned it into one of today&rsquo;s strongest companies, leading the industry with a revolutionary business philosophy that redefines health services in Puerto Rico.
+
+*Program Launch Date: October 29, 2016
+
+MCS (Medical Card System) Key Information
+
+falseHeadquarters: Located Ponce De Leon Avenue in San Juan, PR
+Medicare population
+MCS Membership: 190,000
+Client system: CCMS
+SAS Services Provided
+
+falseChemotherapy review (IV)
+
+Turn-Around Time Frames
+
+falseIV Drugs
+
+Standard: 6-Days
+
+Urgent/Expedited: 24-hours
+
+Provider/Payer Notification
+
+falseRecommendation of Approvals to the payer only
+Recommendation of Adverse determination send to both provider and payer
+
+Protocol Request Forms in Spanish and English
+
+false
+
+MCS - Turn Around Time Metrics
+
+false
+
+MCS Eligibility Layout
+
+false
+
+MCS Oncology Insights Implementation
+
+falseClaim Review
+
+Recent space activity
+
+page, comment, blogpost5truesocial
+
+Space contributors
+
+listdescendants5trueupdate

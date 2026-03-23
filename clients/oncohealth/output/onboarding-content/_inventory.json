@@ -1,66 +1,148 @@
 ﻿{
-    "summary":  {
-                    "partially_captured":  3,
-                    "fully_captured":  3,
-                    "auth_blocked":  3,
-                    "total_chars":  183355,
-                    "total":  9
-                },
-    "generated":  "2026-03-19T14:45:14Z",
-    "services":  [
-                     {
-                         "idx":  1,
-                         "name":  "01-main-onboarding-doc",
-                         "status":  "COMPLETE",
-                         "chars":  44610
-                     },
-                     {
-                         "idx":  2,
-                         "name":  "02-design-doc-template",
-                         "status":  "COMPLETE",
-                         "chars":  2790
-                     },
-                     {
-                         "idx":  3,
-                         "name":  "03-miro-newum-board",
-                         "status":  "COMPLETE",
-                         "chars":  130902
-                     },
-                     {
-                         "idx":  4,
-                         "name":  "04-miro-rachel-board",
-                         "status":  "BLOCKED",
-                         "chars":  223
-                     },
-                     {
-                         "idx":  5,
-                         "name":  "05-azure-devops-newum",
-                         "status":  "PARTIAL",
-                         "chars":  586
-                     },
-                     {
-                         "idx":  6,
-                         "name":  "06-atlassian-sprint-planning",
-                         "status":  "BLOCKED",
-                         "chars":  739
-                     },
-                     {
-                         "idx":  7,
-                         "name":  "07-sharepoint-raid",
-                         "status":  "PARTIAL",
-                         "chars":  1477
-                     },
-                     {
-                         "idx":  8,
-                         "name":  "08-sharepoint-change-request",
-                         "status":  "PARTIAL",
-                         "chars":  1282
-                     },
-                     {
-                         "idx":  9,
-                         "name":  "09-databricks-dev",
-                         "status":  "BLOCKED",
-                         "chars":  746
-                     }
-                 ]
+    "summary": {
+        "complete": 8,
+        "partial": 1,
+        "not_captured": 2,
+        "blocked": 0,
+        "pending": 1,
+        "total_chars_captured": 2834855,
+        "total_items": 15,
+        "last_audit": "2026-03-23"
+    },
+    "generated": "2026-03-23T00:00:00Z",
+    "note": "Aligned with onboarding plan items 1-16. Items 00-onboarding-plan.md is the canonical checklist.",
+    "sources": [
+        {
+            "idx": 0,
+            "name": "00-onboarding-plan",
+            "onboarding_item": "all",
+            "status": "COMPLETE",
+            "chars": 3361,
+            "file": "00-onboarding-plan.md",
+            "note": "Canonical onboarding checklist saved from user paste (2026-03-23)"
+        },
+        {
+            "idx": 1,
+            "name": "01-main-onboarding-doc",
+            "onboarding_item": "3.1",
+            "status": "COMPLETE",
+            "chars": 38191,
+            "file": "01-main-onboarding-doc.txt",
+            "note": "25 pages, 37K+ text items. Extracted from PDF export via pdfreader + spaced-char cleanup (2026-03-23). Source: Google Docs 1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew"
+        },
+        {
+            "idx": 2,
+            "name": "02-design-doc-template",
+            "onboarding_item": "9",
+            "status": "COMPLETE",
+            "chars": 1689,
+            "file": "02-design-doc-template.txt",
+            "note": "2 pages template. Extracted from PDF export via pdfreader + spaced-char cleanup (2026-03-23). Source: Google Docs 19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno"
+        },
+        {
+            "idx": 3,
+            "name": "03-miro-newum-board (main)",
+            "onboarding_item": "1.4, 16",
+            "status": "COMPLETE",
+            "chars": 106271,
+            "file": "03-miro-newum-board.txt",
+            "note": "87 pages PDF export + pdfreader extraction (2026-03-23). Board ID: uXjVGVycF3Y="
+        },
+        {
+            "idx": 4,
+            "name": "03-miro-newum-board (JSON/API)",
+            "onboarding_item": "16",
+            "status": "COMPLETE",
+            "chars": 130902,
+            "file": "03-miro-newum-board.json",
+            "note": "Miro REST API capture via NFG-Reader app (stale assessment board uXjVIx2JdOQ=, now 404)"
+        },
+        {
+            "idx": 5,
+            "name": "04-miro-rachel-board",
+            "onboarding_item": "4",
+            "status": "PENDING",
+            "chars": 223,
+            "file": "04-miro-rachel-board.txt",
+            "note": "Google login page. Rachel submitted board invite request for Carlos (2026-03-23). Check Monday."
+        },
+        {
+            "idx": 6,
+            "name": "05-azure-devops-newum",
+            "onboarding_item": "5.3, 14",
+            "status": "COMPLETE",
+            "chars": 2101901,
+            "file": "see clients/oncohealth/output/ado/",
+            "note": "Deep REST API capture via Playwright + Okta SSO auto-login (2026-03-23). 33 files, 2053 KB. 13 Epics, 62 Features, 325 User Stories, 348 Tasks, 4 Bugs, 7 Pipelines with runs, 5 Teams (41 members), 7 Iterations/Sprints, 3 Boards, area paths. Wiki access still denied."
+        },
+        {
+            "idx": 7,
+            "name": "06-atlassian-confluence",
+            "onboarding_item": "13, 15",
+            "status": "COMPLETE",
+            "chars": 485274,
+            "file": "see clients/oncohealth/output/confluence/",
+            "note": "Deep REST API capture (2026-03-23). 12 spaces, 171 pages, 41 files, 621 KB. Key spaces: Product Management (197K), Analytics Team (120K), OA General (65K), Information Security (13K), MATIS (13K). Auth via API token + ccarrillo@oncohealth.us email. No NewUM-specific space found — content spread across PM and AT spaces."
+        },
+        {
+            "idx": 8,
+            "name": "07-sharepoint-raid",
+            "onboarding_item": "5.1",
+            "status": "COMPLETE",
+            "chars": 29886,
+            "file": "07-sharepoint-raid.txt",
+            "note": "Full RAID log (103 rows, 26 cols) + Sign-Offs + Definitions extracted via exceljs"
+        },
+        {
+            "idx": 9,
+            "name": "08-sharepoint-change-request",
+            "onboarding_item": "5.2",
+            "status": "COMPLETE",
+            "chars": 1351,
+            "file": "08-sharepoint-change-request.txt",
+            "note": "Template doc (Rev 1/20/2026). Downloaded via mammoth."
+        },
+        {
+            "idx": 10,
+            "name": "09-databricks",
+            "onboarding_item": "10, 11",
+            "status": "PARTIAL",
+            "chars": 749,
+            "file": "09-databricks-dev.txt",
+            "note": "TEST workspace access GRANTED (2026-03-23 via DevOps ticket #0035611). Dev workspace has PHI — read-only test access only. Token 'visualstudio-carlos' created (expires 2027-03-22). Scraper built (shared/scrape-databricks.js) but MFA not approved during automated run. Script ready — re-run when user is at keyboard to approve Okta Verify push."
+        },
+        {
+            "idx": 11,
+            "name": "10-team-access-inventory",
+            "onboarding_item": "N/A (related artifact)",
+            "status": "COMPLETE",
+            "chars": 37286,
+            "file": "10-team-access-inventory.txt",
+            "note": "46 members, 46 columns. Carlos's row is blank."
+        },
+        {
+            "idx": 12,
+            "name": "Google Drive folder",
+            "onboarding_item": "3.2",
+            "status": "NOT_CAPTURED",
+            "chars": 0,
+            "note": "https://drive.google.com/drive/folders/1MX5o74zRMyYIPTLmJAyCyCS5HC79Wes4 — never accessed. Contains assessment PDFs and onboarding docs."
+        },
+        {
+            "idx": 13,
+            "name": "Assessment PDFs",
+            "onboarding_item": "6.5, 6.7, 6.8",
+            "status": "NOT_CAPTURED",
+            "chars": 0,
+            "note": "3 PDFs referenced: OncoHealth Assessment - Final.pdf, Interim Assessment 12-09-2025.pdf, Second Interim Assessment 01-10-2025.pdf. Likely in Google Drive folder (item 3.2)."
+        },
+        {
+            "idx": 14,
+            "name": "Policy documents",
+            "onboarding_item": "6.1, 6.2, 6.3, 6.4",
+            "status": "NOT_CAPTURED",
+            "chars": 0,
+            "note": "4 policies referenced: Secure development, Cryptography, Data management, Branching strategy. Links shown as 'link' placeholder in onboarding doc — never provided."
+        }
+    ]
 }

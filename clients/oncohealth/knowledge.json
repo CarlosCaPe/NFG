@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.4.0",
-  "last_updated": "2026-03-20",
+  "version": "1.7.0",
+  "last_updated": "2026-03-23",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -62,10 +62,11 @@
   },
 
   "tech_stack": {
-    "backend": [".NET 10", "MS-SQL (OADB)", "Azure Service Bus", "Okta (auth)", ".NET WebAPI (API Gateway)", "Azure Cloud Functions", "Kubernetes", "Azure Blob Storage", "NUnit"],
+    "backend": [".NET 10", "MS-SQL (OADB)", "PostgreSQL (newUM core OLTP)", "Azure Service Bus", "Okta (auth)", ".NET WebAPI (API Gateway)", "Azure Cloud Functions", "Kubernetes (AKS)", "Azure Blob Storage", "NUnit"],
     "frontend": ["React", "MUI + MUI X (Material Design 3)", "Vite", "TanStack Query", "Vitest + RTL", "React Hook Forms", "Playwright (E2E)"],
-    "devops": ["Azure DevOps (ADO)", "Terraform", "Kubernetes", "SonarQube", "DataDog"],
-    "data": ["Databricks", "MS-SQL", "Azure Blob Storage"],
+    "devops": ["Azure DevOps (ADO)", "Terraform", "Kubernetes (AKS)", "SonarQube", "DataDog", "Azure AppInsights"],
+    "data": ["Databricks (Unity Catalog: Bronze/Silver/Gold)", "MS-SQL", "Azure Blob Storage", "Azure Data Factory", "Synapse (legacy, going away)", "SSIS (legacy, going away)"],
+    "services": ["Letters v2", "Chronos TaT", "Document Manager", "Job Monitor", "Drugs API", "Fax Service", "Kaleidescope", "Nuance", "Twilio/IVR", "Event Orchestrator", "Rules Engine"],
     "ai_coding": "Strongly encouraged — Claude Code provisioned, Cursor on request",
     "confirmed": true,
     "source": "onboarding doc (Architecture & Tech Stack section)"
@@ -79,8 +80,23 @@
     },
     "atlassian": {
       "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM",
+      "base": "https://oncologyanalytics.atlassian.net",
+      "auth": "API token (ccarrillo@oncohealth.us)",
+      "spaces": ["AL", "AP", "AT", "BND", "HUM", "CA", "IS", "ITOPS", "MAT", "MCS", "OG", "PM"],
+      "spaces_count": 12,
+      "pages_count": 171,
+      "total_chars": 485274,
+      "key_spaces": {
+        "PM": { "name": "Product Management", "pages": 50, "chars": 197580 },
+        "AT": { "name": "Analytics Team", "pages": 50, "chars": 120886 },
+        "OG": { "name": "OA General", "pages": 13, "chars": 65764 },
+        "IS": { "name": "Information Security", "pages": 4, "chars": 13363 },
+        "MAT": { "name": "MATIS", "pages": 2, "chars": 13787 }
+      },
+      "note": "No NewUM-specific space found. Content likely in PM and AT spaces.",
+      "captured": "2026-03-23",
       "confirmed": true,
-      "source": "onboarding doc"
+      "source": "onboarding doc + REST API capture"
     },
     "databricks": {
       "workspaces": [
@@ -225,35 +241,40 @@
       "Teams access (OncoHealth_NewFire) — 97K chars captured including meeting transcripts",
       "Outlook Calendar — 11 events captured for week of March 16-19",
       "SharePoint access (Okta SSO working, Excel/Word Online loaded)",
-      "Miro REST API (NFG-Reader app, 130K chars from NewUM board)"
+      "Miro REST API (NFG-Reader app, 130K chars from NewUM board)",
+      "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)"
     ],
     "pending": [
-      "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20)",
-      "Databricks access (email devopsrequest@oncologyanalytics.com)",
+      "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20). REST API capture working for everything else.",
+      "Databricks TEST workspace — access granted, scraper built. MFA needed for automated run.",
       "Database access (email devopsrequest@oncologyanalytics.com)",
-      "Miro Onco board (active) — Rachel requesting access (2026-03-20). Was missed during onboarding. Need Onco email invite.",
-      "Atlassian/Confluence access — contacted Inna Mariienko (2026-03-20). NOTE: inventory says 'register with Onco email, access granted automatically' — login loop with @oncologyanalytics.com",
+      "Miro Onco board (active) — PDF export working. Rachel requested board invite for ccarrillo@oncohealth.us (2026-03-23). Check Monday for invite.",
       "Carlos's access inventory row is blank — needs to be filled in with current access status",
       "MATIS access — separate request to clientsupport@oncohealth.us"
     ],
     "access_inventory": {
-      "scan_date": "2026-03-19",
+      "scan_date": "2026-03-23",
       "results": [
-        { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 44703, "method": "Google Docs export" },
-        { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 2797, "method": "Google Docs export" },
-        { "resource": "Miro NewFire board (assessment, stale)", "status": "COMPLETE", "chars": 130902, "method": "Miro REST API", "items": 2503, "note": "Rachel confirmed this is the old Newfire assessment board — no longer updated" },
-        { "resource": "Miro Onco board (active)", "status": "BLOCKED", "action": "Rachel requesting access (2026-03-20). Not invited during onboarding setup. Access via Onco email." },
-        { "resource": "Azure DevOps", "status": "PARTIAL", "method": "Playwright + Okta SSO + MFA", "note": "Auth works. Wiki access denied. Boards/Pipelines available." },
-        { "resource": "Atlassian Confluence", "status": "BLOCKED", "note": "Separate SSO from Okta — needs Atlassian-specific credentials" },
+        { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 38191, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "25 pages. Doc ID: 1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew" },
+        { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 1689, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "2 pages template. Doc ID: 19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno" },
+        { "resource": "Google Drive folder", "status": "NOT_CAPTURED", "chars": 0, "note": "https://drive.google.com/drive/folders/1MX5o74zRMyYIPTLmJAyCyCS5HC79Wes4 — never accessed. Contains assessment PDFs." },
+        { "resource": "Assessment PDFs (3 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "OncoHealth Assessment - Final.pdf, Interim 12-09-2025.pdf, Second Interim 01-10-2025.pdf. Likely in Google Drive folder." },
+        { "resource": "Policy documents (4 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "Secure development, Cryptography, Data management, Branching strategy. Links are placeholders — never provided." },
+        { "resource": "Miro NewFire board (assessment, stale)", "status": "BLOCKED", "action": "Board not found (404) — may have been moved/deleted or token expired", "note": "Previously captured 130,902 chars. Board ID uXjVIx2JdOQ= no longer accessible." },
+        { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
+        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2101901, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Deep capture (2026-03-23): 33 files, 2053 KB. 13 Epics, 62 Features, 325 User Stories, 348 Tasks, 4 Bugs, 7 Pipelines with CI/CD runs, 5 Teams (QA:6, UX:3, Data:7, BE:13, FE:12), 7 Sprints, 3 Boards. Wiki still denied. 0 git repos visible (may need project-level permissions)." },
+        { "resource": "Atlassian Confluence", "status": "COMPLETE", "chars": 485274, "method": "REST API + API token", "note": "Deep capture (2026-03-23): 12 spaces, 171 pages, 41 files, 621 KB. Key: PM (197K), AT (120K), OG (65K), IS (13K), MATIS (13K). 41 groups discovered. Auth via ccarrillo@oncohealth.us + API token." },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
-        { "resource": "Databricks dev", "status": "BLOCKED", "note": "Login page — need 'Continue with Entra ID' click. May need admin provisioning." }
+        { "resource": "Databricks test", "status": "PARTIAL", "note": "TEST workspace access GRANTED (2026-03-23, ticket #0035611). Dev has PHI — test only. Token 'visualstudio-carlos' created (exp 2027-03-22). Scraper built (shared/scrape-databricks.js), MFA not approved during automated run. Re-run when user at keyboard." }
       ],
-      "accessible": 6,
+      "complete": 8,
       "partial": 1,
-      "blocked": 3,
-      "total_chars": 349636,
+      "not_captured": 3,
+      "pending": 1,
+      "blocked": 0,
+      "total_chars_captured": 2834855,
       "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
     },
     "confirmed": true,

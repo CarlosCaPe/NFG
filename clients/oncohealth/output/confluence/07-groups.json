@@ -1,0 +1,453 @@
+[
+  {
+    "id": "a778720a-afbe-4b30-8534-09e3b6b598f1",
+    "name": "SmartUM-ConfluenceUserGroup-ReadAccess",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/a778720a-afbe-4b30-8534-09e3b6b598f1",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/SmartUM-ConfluenceUserGroup-ReadAccess"
+    }
+  },
+  {
+    "id": "c5b33423-5ca8-440f-b802-084a9c59a09c",
+    "name": "SmartUM-ConfluenceUserGroup-WriteAccess",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/c5b33423-5ca8-440f-b802-084a9c59a09c",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/SmartUM-ConfluenceUserGroup-WriteAccess"
+    }
+  },
+  {
+    "id": "fca0547e-03b5-47aa-bf8e-6e5178d97a3e",
+    "name": "atlas-users-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/fca0547e-03b5-47aa-bf8e-6e5178d97a3e",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/atlas-users-oncologyanalytics"
+    }
+  },
+  {
+    "id": "1eecec99-ab95-4a9d-b71a-c268e8b2f809",
+    "name": "atlas-admins-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/1eecec99-ab95-4a9d-b71a-c268e8b2f809",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/atlas-admins-oncologyanalytics"
+    }
+  },
+  {
+    "id": "21b55dea-8ed9-433a-974a-cbe3a8d9742c",
+    "name": "UCSCS-ConfluenceUserGroup-WriteAccess",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/21b55dea-8ed9-433a-974a-cbe3a8d9742c",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/UCSCS-ConfluenceUserGroup-WriteAccess"
+    }
+  },
+  {
+    "id": "b0a193de-4bdf-4799-a966-0c10fd6df765",
+    "name": "UCSCS-ConfluenceUserGroup-ReadAccess",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/b0a193de-4bdf-4799-a966-0c10fd6df765",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/UCSCS-ConfluenceUserGroup-ReadAccess"
+    }
+  },
+  {
+    "id": "4bcd0a0c-2fa5-4723-822b-1eb1bf42201d",
+    "name": "UCSCS-ConfluenceUserGroup-AdminAccess",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/4bcd0a0c-2fa5-4723-822b-1eb1bf42201d",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/UCSCS-ConfluenceUserGroup-AdminAccess"
+    }
+  },
+  {
+    "id": "75be2ecc-fb5d-42f7-959e-386d43c5c27f",
+    "name": "atlas-user-access-admins-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/75be2ecc-fb5d-42f7-959e-386d43c5c27f",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/atlas-user-access-admins-oncologyanalytics"
+    }
+  },
+  {
+    "id": "a8ed1293-73db-4f38-932e-0803ac5fd200",
+    "name": "confluence-user-access-admins-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/a8ed1293-73db-4f38-932e-0803ac5fd200",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/confluence-user-access-admins-oncologyanalytics"
+    }
+  },
+  {
+    "id": "7a3959c3-db2c-4906-be0d-6e187d6bc4fa",
+    "name": "user-access-admins-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/7a3959c3-db2c-4906-be0d-6e187d6bc4fa",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/user-access-admins-oncologyanalytics"
+    }
+  },
+  {
+    "id": "c7c1ec32-98f3-4bf0-b62f-977da1ff12e0",
+    "name": "org-admins",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/c7c1ec32-98f3-4bf0-b62f-977da1ff12e0",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/org-admins"
+    }
+  },
+  {
+    "id": "7111bbb6-b000-4287-955c-eb5d78cfd9ca",
+    "name": "confluence-admins-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/7111bbb6-b000-4287-955c-eb5d78cfd9ca",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/confluence-admins-oncologyanalytics"
+    }
+  },
+  {
+    "id": "bbcb528b-6d9a-489e-8341-0fb81c2c5cbb",
+    "name": "Client Solutions",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/bbcb528b-6d9a-489e-8341-0fb81c2c5cbb",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Client%20Solutions"
+    }
+  },
+  {
+    "id": "68a7b7a9-af64-4268-a34f-2f98f7a53376",
+    "name": "IT",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/68a7b7a9-af64-4268-a34f-2f98f7a53376",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/IT"
+    }
+  },
+  {
+    "id": "2df7b4c5-2fbf-47e3-b02d-7e84dc8a10e4",
+    "name": "OA Analytics Team",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/2df7b4c5-2fbf-47e3-b02d-7e84dc8a10e4",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/OA%20Analytics%20Team"
+    }
+  },
+  {
+    "id": "230c9e56-94a7-435c-8721-2d2431f98436",
+    "name": "Softserv Team",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/230c9e56-94a7-435c-8721-2d2431f98436",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Softserv%20Team"
+    }
+  },
+  {
+    "id": "a8724959-f20f-4da0-8f6d-ad68949a5ee5",
+    "name": "system-administrators",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/a8724959-f20f-4da0-8f6d-ad68949a5ee5",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/system-administrators"
+    }
+  },
+  {
+    "id": "6c5b5e06-5614-451e-b767-d40fdb51b3ea",
+    "name": "Iris Users",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/6c5b5e06-5614-451e-b767-d40fdb51b3ea",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Iris%20Users"
+    }
+  },
+  {
+    "id": "4b4d957d-cefd-408e-8f00-ef571b9f03e1",
+    "name": "confluence-guests-oncologyanalytics",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/4b4d957d-cefd-408e-8f00-ef571b9f03e1",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/confluence-guests-oncologyanalytics"
+    }
+  },
+  {
+    "id": "8c799f6a-4d0a-4d3e-8a8f-c15eaa940085",
+    "name": "jira-software-users",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/8c799f6a-4d0a-4d3e-8a8f-c15eaa940085",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/jira-software-users"
+    }
+  },
+  {
+    "id": "d85ca493-9be8-4c5a-a4b1-af65cf763572",
+    "name": "jira-core-users",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/d85ca493-9be8-4c5a-a4b1-af65cf763572",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/jira-core-users"
+    }
+  },
+  {
+    "id": "f8707a19-0bbc-4dee-b3ba-425a1d87730f",
+    "name": "trusted-users-eecb52a1-414a-465c-b474-192a8d9fb818",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/f8707a19-0bbc-4dee-b3ba-425a1d87730f",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/trusted-users-eecb52a1-414a-465c-b474-192a8d9fb818"
+    }
+  },
+  {
+    "id": "1fcc0024-c7ac-4d29-a4eb-aca7e4b471be",
+    "name": "DevOps Users",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/1fcc0024-c7ac-4d29-a4eb-aca7e4b471be",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/DevOps%20Users"
+    }
+  },
+  {
+    "id": "de7747a3-2c0d-4698-b17a-a27d517aa6ac",
+    "name": "site-admins",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/de7747a3-2c0d-4698-b17a-a27d517aa6ac",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/site-admins"
+    }
+  },
+  {
+    "id": "ad291ed4-5be6-4a01-9258-39e5ae4ade09",
+    "name": "jira-administrators",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/ad291ed4-5be6-4a01-9258-39e5ae4ade09",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/jira-administrators"
+    }
+  },
+  {
+    "id": "ef66c6b3-d500-476b-aa3a-1b916df1609f",
+    "name": "OA Interns",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/ef66c6b3-d500-476b-aa3a-1b916df1609f",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/OA%20Interns"
+    }
+  },
+  {
+    "id": "b4bdb997-4bd8-4c12-b8af-bf0aac670d32",
+    "name": "administrators",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/b4bdb997-4bd8-4c12-b8af-bf0aac670d32",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/administrators"
+    }
+  },
+  {
+    "id": "a32711ec-d9d8-410c-a69c-40f9921bb697",
+    "name": "confluence-users",
+    "managedBy": "ADMINS",
+    "usageType": "USERBASE_GROUP",
+    "resourceAri": "ari:cloud:identity::group/a32711ec-d9d8-410c-a69c-40f9921bb697",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/confluence-users"
+    }
+  },
+  {
+    "id": "c122431d-9e98-4d9f-9ea2-0876bb130c60",
+    "name": "NLP team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/c122431d-9e98-4d9f-9ea2-0876bb130c60",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/NLP%20team"
+    }
+  },
+  {
+    "id": "7b434422-9d4a-4f9c-b527-4d6395d61326",
+    "name": "Analytics Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/7b434422-9d4a-4f9c-b527-4d6395d61326",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Analytics%20Team"
+    }
+  },
+  {
+    "id": "5705b310-9e06-43d9-bdf2-27019d1c8a12",
+    "name": "Software Engineering - AAJ Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/5705b310-9e06-43d9-bdf2-27019d1c8a12",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Software%20Engineering%20-%20AAJ%20Team"
+    }
+  },
+  {
+    "id": "b366fb7f-f851-4416-a2b2-fc00d0e630d6",
+    "name": "DevOps",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/b366fb7f-f851-4416-a2b2-fc00d0e630d6",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/DevOps"
+    }
+  },
+  {
+    "id": "a422a24f-8ece-4cd5-92f6-3cdc5e771f52",
+    "name": "Core Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/a422a24f-8ece-4cd5-92f6-3cdc5e771f52",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Core%20Team"
+    }
+  },
+  {
+    "id": "b92000dd-fe9b-4256-9a96-676dbc25f022",
+    "name": "Aurora",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/b92000dd-fe9b-4256-9a96-676dbc25f022",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Aurora"
+    }
+  },
+  {
+    "id": "67b56053-b16f-49b3-9bc6-3313e6d581f4",
+    "name": "Thunder",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/67b56053-b16f-49b3-9bc6-3313e6d581f4",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Thunder"
+    }
+  },
+  {
+    "id": "4b71d457-ca71-4c43-8f7c-06c4db0ac620",
+    "name": "Phoenix Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/4b71d457-ca71-4c43-8f7c-06c4db0ac620",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Phoenix%20Team"
+    }
+  },
+  {
+    "id": "973e817d-f0ed-4864-80b8-56bfd819c99f",
+    "name": "Analytics Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/973e817d-f0ed-4864-80b8-56bfd819c99f",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Analytics%20Team"
+    }
+  },
+  {
+    "id": "ef3c753d-a839-4a3a-909e-7358b9897183",
+    "name": "Falcon",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/ef3c753d-a839-4a3a-909e-7358b9897183",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Falcon"
+    }
+  },
+  {
+    "id": "3764c233-bf09-4dfc-8c8f-ed5af0fade9a",
+    "name": "Atlas Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/3764c233-bf09-4dfc-8c8f-ed5af0fade9a",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Atlas%20Team"
+    }
+  },
+  {
+    "id": "d6a6cf76-cbff-4f15-8d6a-dac7ece0ec91",
+    "name": "Pegasus Team",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/d6a6cf76-cbff-4f15-8d6a-dac7ece0ec91",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Pegasus%20Team"
+    }
+  },
+  {
+    "id": "e474e093-bdd7-445f-8714-e3be37c98daa",
+    "name": "Data Development",
+    "managedBy": "OPEN",
+    "usageType": "TEAM_COLLABORATION",
+    "resourceAri": "ari:cloud:identity::team/e474e093-bdd7-445f-8714-e3be37c98daa",
+    "type": "group",
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/experimental/group/Data%20Development"
+    }
+  }
+]

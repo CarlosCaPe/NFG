@@ -1,0 +1,75 @@
+{
+  "id": 267255959,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/267255959",
+  "key": "AL",
+  "alias": "AL",
+  "name": "Alignment Healthcare",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "267255975",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/267255975",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMjY3MjU1OTc1",
+    "status": "current",
+    "title": "Alignment Healthcare",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 1073741823
+    },
+    "_expandable": {
+      "container": "/rest/api/space/AL",
+      "metadata": "",
+      "restrictions": "/rest/api/content/267255975/restriction/byOperation",
+      "history": "/rest/api/content/267255975/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/267255975/descendant",
+      "space": "/rest/api/space/AL",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/267255975/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/267255975",
+      "tinyui": "/x/pwDuDw",
+      "editui": "/pages/resumedraft.action?draftId=267255975",
+      "webui": "/spaces/AL/overview",
+      "edituiv2": "/spaces/AL/pages/edit-v2/267255975"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/AL/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AL",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/AL/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/AL",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/AL",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

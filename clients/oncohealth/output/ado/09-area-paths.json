@@ -1,0 +1,61 @@
+{
+  "id": 1056,
+  "identifier": "2d386c68-6055-4bd0-b44e-e6a87400f390",
+  "name": "newUM",
+  "structureType": "area",
+  "hasChildren": true,
+  "children": [
+    {
+      "id": 1057,
+      "identifier": "4767c832-f0ef-4b4a-bbfc-91b40f478e87",
+      "name": "BE Team",
+      "structureType": "area",
+      "hasChildren": false,
+      "path": "\\newUM\\Area\\BE Team",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/BE%20Team"
+    },
+    {
+      "id": 1058,
+      "identifier": "9b026969-99cc-4891-9610-a887e5a7f711",
+      "name": "FE Team",
+      "structureType": "area",
+      "hasChildren": false,
+      "path": "\\newUM\\Area\\FE Team",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/FE%20Team"
+    },
+    {
+      "id": 1085,
+      "identifier": "496ea7d2-fdc1-4036-a194-69428f1999c9",
+      "name": "UX Team",
+      "structureType": "area",
+      "hasChildren": false,
+      "path": "\\newUM\\Area\\UX Team",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/UX%20Team"
+    },
+    {
+      "id": 1086,
+      "identifier": "5ac02121-59d1-40c7-87d6-3a0178886e2e",
+      "name": "Data Team",
+      "structureType": "area",
+      "hasChildren": false,
+      "path": "\\newUM\\Area\\Data Team",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/Data%20Team"
+    },
+    {
+      "id": 1089,
+      "identifier": "984df1e0-8fe4-4286-a857-664959668428",
+      "name": "QA Team",
+      "structureType": "area",
+      "hasChildren": false,
+      "path": "\\newUM\\Area\\QA Team",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/QA%20Team"
+    }
+  ],
+  "path": "\\newUM\\Area",
+  "_links": {
+    "self": {
+      "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas"
+    }
+  },
+  "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas"
+}

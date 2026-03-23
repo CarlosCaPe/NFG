@@ -1,0 +1,44 @@
+# Impact Analysis — Blog Posts
+
+## Two Factor Authentication for Confluence and JIRA
+Date: 2018-06-26T18:59:38.341Z
+
+Overview
+
+orange3solidThis page has step by step instructions regarding activating two factor verification by all Confluence and Jira users.
+
+Description
+
+black1solidTwo-step verification protects your Atlassian account by requiring a second login step.
+The second step keeps your account secure, even if your password is compromised.
+Your two factor authentication is made mandatory by the admin.
+Remember to log out of your Confluence and Jira once you finish using in order for the two factor authentication to become effective.
+
+Enable two-step verification
+
+The second login step for two-step verification requires a 6-digit verification code that you get either from a verification app on your smartphone, or by text (SMS) message on any mobile phone.
+
+Use a verification app on your smartphone
+
+black1solidInstall an app such as Google Authenticator, Authy, or Duo on your phone. For download links to these apps, go to atlassian.com/2step on your phone.
+Now, log in to your Atlassian account at https://id.atlassian.com/ and click Two-step verification in the left panel.
+Enter your password in the 'Account password' field and click Set up two-step verification.
+Follow the instructions on your screen to finish setting up.
+Use text (SMS) messages on any mobile phone
+
+black1solidLog in to your Atlassian account at https://id.atlassian.com/ and click Two-step verification in the left panel.
+Enter your password in the 'Account password' field and click Set up two-step verification.
+Choose Don't have a smartphone? then Enable using SMS.
+Enter your phone number and click Send SMS with code. We'll send you a text message with a 6-digit code.
+Enter the 6-digit code and click Connect phone.
+Follow the instructions on your screen to finish setting up.
+Log in with two-step verification
+
+black1solidOnce you've enabled two-step verification, you'll need your phone to log in:
+
+Enter your email address and password as you do normally.
+Get a new 6-digit verification code. Do either of the following:Open the verification app on your smartphone and retrieve the new 6-digit code.
+Check your phone for a text message from Atlassian with the new 6-digit code.
+
+Enter the verification code.
+

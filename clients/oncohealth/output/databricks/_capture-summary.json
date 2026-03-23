@@ -1,0 +1,36 @@
+{
+  "captured": "2026-03-23T20:42:02.251Z",
+  "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
+  "files": 4,
+  "totalBytes": 94135,
+  "errors": [
+    {
+      "section": "workspace",
+      "error": "no files"
+    },
+    {
+      "section": "clusters",
+      "error": {
+        "_error": true,
+        "status": 401,
+        "statusText": ""
+      }
+    },
+    {
+      "section": "jobs",
+      "error": {
+        "_error": true,
+        "status": 401,
+        "statusText": ""
+      }
+    },
+    {
+      "section": "unity-catalog",
+      "error": {
+        "_error": true,
+        "status": 401,
+        "statusText": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": 265650178,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/265650178",
+  "key": "HUM",
+  "alias": "HUM",
+  "name": "Humana",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "265650259",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/265650259",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvMjY1NjUwMjU5",
+    "status": "current",
+    "title": "Humana",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 1073741823
+    },
+    "_expandable": {
+      "container": "/rest/api/space/HUM",
+      "metadata": "",
+      "restrictions": "/rest/api/content/265650259/restriction/byOperation",
+      "history": "/rest/api/content/265650259/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/265650259/descendant",
+      "space": "/rest/api/space/HUM",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/265650259/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/265650259",
+      "tinyui": "/x/U4DVDw",
+      "editui": "/pages/resumedraft.action?draftId=265650259",
+      "webui": "/spaces/HUM/overview",
+      "edituiv2": "/spaces/HUM/pages/edit-v2/265650259"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/HUM/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=HUM",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/HUM/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/HUM",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/HUM",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

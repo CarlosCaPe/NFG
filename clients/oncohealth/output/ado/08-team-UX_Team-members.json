@@ -1,0 +1,53 @@
+{
+  "value": [
+    {
+      "isTeamAdmin": true,
+      "identity": {
+        "displayName": "Caitlin Bowler",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/949d4b93-0fe8-6178-bfb0-189253726154",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OTQ5ZDRiOTMtMGZlOC03MTc4LWJmYjAtMTg5MjUzNzI2MTU0"
+          }
+        },
+        "id": "949d4b93-0fe8-6178-bfb0-189253726154",
+        "uniqueName": "cbowler@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=949d4b93-0fe8-6178-bfb0-189253726154",
+        "descriptor": "aad.OTQ5ZDRiOTMtMGZlOC03MTc4LWJmYjAtMTg5MjUzNzI2MTU0"
+      }
+    },
+    {
+      "isTeamAdmin": true,
+      "identity": {
+        "displayName": "Vika Nobis",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/7210819e-af1a-6474-9249-9ab61b81edf4",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+          }
+        },
+        "id": "7210819e-af1a-6474-9249-9ab61b81edf4",
+        "uniqueName": "vnobis@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=7210819e-af1a-6474-9249-9ab61b81edf4",
+        "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
+      }
+    },
+    {
+      "isTeamAdmin": true,
+      "identity": {
+        "displayName": "Alyssa Gessleman",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e6adc109-97dc-69a6-aea4-f104f7cbe632",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTZhZGMxMDktOTdkYy03OWE2LWFlYTQtZjEwNGY3Y2JlNjMy"
+          }
+        },
+        "id": "e6adc109-97dc-69a6-aea4-f104f7cbe632",
+        "uniqueName": "agessleman@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=e6adc109-97dc-69a6-aea4-f104f7cbe632",
+        "descriptor": "aad.ZTZhZGMxMDktOTdkYy03OWE2LWFlYTQtZjEwNGY3Y2JlNjMy"
+      }
+    }
+  ],
+  "count": 3
+}
