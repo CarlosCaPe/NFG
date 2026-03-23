@@ -808,6 +808,34 @@ async function captureTranscripts(page) {
         await hasRecapTab.click();
         await page.waitForTimeout(8000);
 
+        // Scroll through recap content to load all text
+        console.log(`    → Scrolling recap content...`);
+        await page.evaluate(async () => {
+          const scrollContainer = document.querySelector('[data-tid="recap-content"]') ||
+                                 document.querySelector('[class*="recap"]') ||
+                                 document.querySelector('[class*="message-list"]') ||
+                                 document.querySelector('[role="log"]') ||
+                                 document.querySelector('[class*="scrollable"]') ||
+                                 document.querySelector('main') ||
+                                 document.body;
+
+          if (scrollContainer) {
+            let lastHeight = scrollContainer.scrollHeight;
+            let scrollAttempts = 0;
+            const maxScrolls = 10;
+
+            while (scrollAttempts < maxScrolls) {
+              scrollContainer.scrollTop = scrollContainer.scrollHeight;
+              await new Promise(resolve => setTimeout(resolve, 2000));
+
+              const newHeight = scrollContainer.scrollHeight;
+              if (newHeight === lastHeight) break;
+              lastHeight = newHeight;
+              scrollAttempts++;
+            }
+          }
+        });
+
         // Extract recap content — filter out sidebar UI noise
         const recapContent = await page.evaluate(() => {
           // Try to find the main content area (right pane)
@@ -849,6 +877,38 @@ async function captureTranscripts(page) {
         await hasTranscriptTab.click();
         await page.waitForTimeout(8000);
 
+        // Scroll through transcript content to load all text
+        console.log(`    → Scrolling transcript content...`);
+        await page.evaluate(async () => {
+          // Find the transcript content area (usually scrollable)
+          const scrollContainer = document.querySelector('[data-tid="transcript-content"]') ||
+                                 document.querySelector('[class*="transcript"]') ||
+                                 document.querySelector('[class*="message-list"]') ||
+                                 document.querySelector('[role="log"]') ||
+                                 document.querySelector('[class*="scrollable"]') ||
+                                 document.querySelector('main') ||
+                                 document.body;
+
+          if (scrollContainer) {
+            let lastHeight = scrollContainer.scrollHeight;
+            let scrollAttempts = 0;
+            const maxScrolls = 10; // Limit to prevent infinite scrolling
+
+            while (scrollAttempts < maxScrolls) {
+              scrollContainer.scrollTop = scrollContainer.scrollHeight;
+              await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for content to load
+
+              const newHeight = scrollContainer.scrollHeight;
+              if (newHeight === lastHeight) {
+                // No new content loaded, stop scrolling
+                break;
+              }
+              lastHeight = newHeight;
+              scrollAttempts++;
+            }
+          }
+        });
+
         const transcriptContent = await page.evaluate(() => {
           const full = document.body?.innerText || '';
           const sidebarEndIndicators = ['Has context menu\n', 'See all your teams\n', 'See more\n'];
@@ -875,6 +935,34 @@ async function captureTranscripts(page) {
       // If no Recap or Transcript tab, at least capture the meeting chat content
       if (!hasRecapTab && !hasTranscriptTab) {
         console.log(`    ℹ️  No Recap/Transcript tabs — capturing chat`);
+
+        // Scroll through chat content to load all messages
+        console.log(`    → Scrolling chat content...`);
+        await page.evaluate(async () => {
+          const scrollContainer = document.querySelector('[data-tid="chat-content"]') ||
+                                 document.querySelector('[class*="message-list"]') ||
+                                 document.querySelector('[role="log"]') ||
+                                 document.querySelector('[class*="scrollable"]') ||
+                                 document.querySelector('main') ||
+                                 document.body;
+
+          if (scrollContainer) {
+            let lastHeight = scrollContainer.scrollHeight;
+            let scrollAttempts = 0;
+            const maxScrolls = 10;
+
+            while (scrollAttempts < maxScrolls) {
+              scrollContainer.scrollTop = scrollContainer.scrollHeight;
+              await new Promise(resolve => setTimeout(resolve, 2000));
+
+              const newHeight = scrollContainer.scrollHeight;
+              if (newHeight === lastHeight) break;
+              lastHeight = newHeight;
+              scrollAttempts++;
+            }
+          }
+        });
+
         const chatContent = await page.evaluate(() => {
           const full = document.body?.innerText || '';
           const sidebarEndIndicators = ['Has context menu\n', 'See all your teams\n', 'See more\n'];
