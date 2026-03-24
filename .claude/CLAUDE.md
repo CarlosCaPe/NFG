@@ -50,6 +50,7 @@ cp -r clients/_template clients/<client-name>
 - Idempotent scripts, dry-run by default
 - Per-client `.env` files — never committed
 - Per-client `knowledge.json` — committed (no secrets)
+- **NEVER disclose the repo URL** — this is a private repository. Never include the GitHub URL in ADO comments, emails, Teams messages, client-facing documents, or any external communication. Treat the repo URL as a secret.
 
 ## Active Sub-Clients
 

@@ -66,6 +66,14 @@ const FILES = [
     downloadUrl: 'https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/NewUM%20-%20Team%20Access%20Inventory.xlsx',
     type: 'xlsx',
   },
+  {
+    key: 'systemdesign',
+    name: 'NewUM Data Team System Design Document.docx',
+    outName: '11-system-design-doc',
+    viewUrl: 'https://oncologyanalyticsinc.sharepoint.com/:w:/s/OncoHealth_NewFire/IQDsiFwGD2_bTZKePnbyIi1cAYvpWv1Z6bILJDn1yXfBZjo?e=Tvabue',
+    downloadUrl: 'https://oncologyanalyticsinc.sharepoint.com/sites/OncoHealth_NewFire/Shared%20Documents/Phase%201%20Deliverables/NewUM%20Data%20Team%20System%20Design%20Document.docx',
+    type: 'docx',
+  },
 ];
 
 async function handleAuth(page) {
@@ -439,7 +447,7 @@ async function extractDocx(filePath, outName) {
   const htmlResult = await mammoth.convertToHtml({ path: filePath });
 
   const lines = [];
-  lines.push(`SharePoint Change Request - NewUM_Change Request.docx`);
+  lines.push(`SharePoint Document - ${path.basename(filePath)}`);
   lines.push(`Source: SharePoint Online (OncoHealth_NewFire) — downloaded file`);
   lines.push(`Extracted: ${new Date().toISOString()}`);
   lines.push('');
@@ -471,7 +479,7 @@ async function main() {
   const filesToProcess = target === 'all' ? FILES : FILES.filter(f => f.key === target);
 
   if (filesToProcess.length === 0) {
-    console.log('Usage: node scrape-sharepoint-download.js [raid|cr|all]');
+    console.log('Usage: node scrape-sharepoint-download.js [raid|cr|access|systemdesign|all]');
     process.exit(1);
   }
 
