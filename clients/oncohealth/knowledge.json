@@ -102,10 +102,15 @@
       "workspaces": [
         {
           "name": "oh-databricks-ws-dev",
-          "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
-          "env": "dev"
+          "url": "https://adb-3806388400498653.13.azuredatabricks.net/",
+          "env": "dev",
+          "note": "BLOCKED — contains PHI, data team works only in TEST"
         },
-        { "name": "oh-databricks-ws-test", "url": null, "env": "test" },
+        { "name": "oh-databricks-ws-test",
+          "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
+          "env": "test",
+          "note": "Primary workspace for data team development"
+        },
         { "name": "oh-databricks-ws-uat", "url": null, "env": "uat" },
         { "name": "oh-databricks-ws-prod", "url": null, "env": "prod" }
       ],
@@ -315,7 +320,7 @@
     "$comment": "Items that need vendor or user confirmation before they can be used.",
     "items": [
       { "id": "U1", "question": "What database engine do oadb/DrugsMS/EligibilityMS/ProviderMS use?", "status": "RESOLVED", "answer": "MS-SQL (confirmed in onboarding doc: Backend Tech Stack section)" },
-      { "id": "U2", "question": "What are the exact URLs for oh-databricks-ws-test/uat/prod?", "status": "unresolved" },
+      { "id": "U2", "question": "What are the exact URLs for oh-databricks-ws-uat/prod?", "status": "partial", "note": "TEST URL confirmed (2026-03-24). UAT/PROD still unknown." },
       { "id": "U3", "question": "What are the policy doc links (secure dev, crypto, data mgmt, branching)?", "status": "unresolved", "note": "Onboarding doc says 'link' placeholders — not yet provided" },
       { "id": "U4", "question": "What is Erik's full name and role?", "status": "RESOLVED", "answer": "Erik Hjortshoj, SVP Engineering / Consulting CPTO (confirmed in onboarding doc)" },
       { "id": "U5", "question": "What is your exact email address?", "status": "RESOLVED", "answer": "carlos.carrillo@newfireglobal.com" },
