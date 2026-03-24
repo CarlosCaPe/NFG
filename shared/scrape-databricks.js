@@ -42,12 +42,13 @@ if (fs.existsSync(envPath)) {
 const MS_EMAIL = process.env.MS_USERNAME || '';
 const MS_PASS = process.env.MS_PASSWORD || '';
 const OKTA_USER = MS_EMAIL.split('@')[0];
+const DATABRICKS_TOKEN = process.env.DATABRICKS_TEST_TOKEN || '';
 
 const urlArg = process.argv.indexOf('--url');
 // Dev workspace blocked (has PHI), Test workspace accessible
 const DATABRICKS_URL = urlArg !== -1
   ? process.argv[urlArg + 1]
-  : 'https://adb-2393860672770324.4.azuredatabricks.net/';
+  : (process.env.DATABRICKS_TEST_HOST || 'https://adb-2393860672770324.4.azuredatabricks.net/');
 
 // Helper: call Databricks REST API from browser context
 async function dbFetch(page, endpoint, method = 'GET', body = null) {

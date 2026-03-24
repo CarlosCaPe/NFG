@@ -1,16 +1,22 @@
-﻿Databricks Dev - Azure Databricks
+﻿Databricks TEST Workspace - Azure Databricks
 Source: https://adb-2393860672770324.4.azuredatabricks.net/
-Auth: NOT CONNECTED (login page)
+Auth: PAT (visualstudio-carlos) — validated 2026-03-24
 
-=== LOGIN PAGE ===
-Title: Azure Databricks - Log in
-Button: Continue with Microsoft Entra ID (with Microsoft logo)
-Error: Reference ID: 055e9c2e-66dc-4e70-844b-1f70b3c16363
-Message: Contact your site administrator to request access.
-Footer: Privacy Notice, Terms of Use
+=== API VALIDATION ===
+Endpoint: /api/2.0/clusters/list
+HTTP Status: 200 OK
+Response: {} (no clusters running — expected for test env)
+Token: dapi...ec-3 (stored in .env as DATABRICKS_TEST_TOKEN)
+Created: 2026-03-24 13:54:45 CST
+Expires: 2027-03-24 13:54:45 CST
+
+=== WORKSPACE INFO ===
+Name: oh-databricks-ws-test
+Environment: TEST (primary workspace for data team development)
+Note: Dev workspace (adb-3806388400498653) is BLOCKED — contains PHI
 
 === STATUS ===
-Connection: FAILED
-Root cause: Script did not click the 'Continue with Microsoft Entra ID' button
-Note: The 'Contact your site administrator to request access' message may indicate access has not been provisioned for this account
-Action needed: (1) Click Entra ID button to trigger SSO, or (2) Request Databricks access from admin
+Connection: SUCCESS
+Auth method: Personal Access Token (PAT) via REST API
+Previous status: FAILED (Entra ID SSO button not clicked by scraper)
+Resolution: PAT token created manually, API access confirmed

@@ -29,8 +29,8 @@
   },
   {
     "idx": 9,
-    "name": "09-databricks-dev",
-    "desc": "Databricks Dev",
+    "name": "09-databricks-test",
+    "desc": "Databricks TEST",
     "authed": false,
     "chars": 230
   }

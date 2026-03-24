@@ -37,10 +37,10 @@
   },
   {
     "idx": 9,
-    "name": "09-databricks-dev",
+    "name": "09-databricks-test",
     "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
     "type": "databricks",
-    "description": "Databricks Dev Workspace",
+    "description": "Databricks TEST Workspace",
     "status": "OK",
     "chars": 179
   }

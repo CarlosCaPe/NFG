@@ -41,10 +41,10 @@
     1. Please send an email from your Onco email to devopsrequest@oncologyanalytics.com, 
         telling your role in the project and you need access to this Databricks
 11. Databricks workspaces:
-    1. oh-databricks-ws-dev https://adb-2393860672770324.4.azuredatabricks.net/
-    2. oh-databricks-ws-test 
-    3. oh-databricks-ws-uat
-    4. oh-databricks-ws-prod
+    1. oh-databricks-ws-dev https://adb-3806388400498653.13.azuredatabricks.net/ *(BLOCKED — contains PHI, data team works only in TEST)*
+    2. oh-databricks-ws-test https://adb-2393860672770324.4.azuredatabricks.net/ *(ACCESS GRANTED 2026-03-24 — PAT `visualstudio-carlos` validated, API 200 OK)*
+    3. oh-databricks-ws-uat *(URL unknown)*
+    4. oh-databricks-ws-prod *(URL unknown)*
 12. Databases in use
     1. OADB
     2. DrugsMS

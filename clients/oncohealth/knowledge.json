@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "last_updated": "2026-03-24",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
@@ -247,11 +247,12 @@
       "Outlook Calendar — 11 events captured for week of March 16-19",
       "SharePoint access (Okta SSO working, Excel/Word Online loaded)",
       "Miro REST API (NFG-Reader app, 130K chars from NewUM board)",
-      "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)"
+      "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)",
+      "Databricks TEST workspace — access granted, PAT validated (2026-03-24). Token 'visualstudio-carlos' (expires 2027-03-24), API 200 OK on clusters/list. Saved in .env as DATABRICKS_TEST_TOKEN."
     ],
     "pending": [
       "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20). REST API capture working for everything else.",
-      "Databricks TEST workspace — access granted, scraper built. MFA needed for automated run.",
+      "Databricks TEST workspace — access granted, PAT validated (2026-03-24). Token 'visualstudio-carlos' (expires 2027-03-24), API 200 OK on clusters/list. Saved in .env as DATABRICKS_TEST_TOKEN.",
       "Database access (email devopsrequest@oncologyanalytics.com)",
       "Miro Onco board (active) — PDF export working. Rachel requested board invite for carlos.carrillo@newfireglobal.com (2026-03-23, corrected from oncohealth email). Check Monday for invite.",
       "Carlos's access inventory row is blank — needs to be filled in with current access status",
@@ -272,10 +273,10 @@
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
-        { "resource": "Databricks test", "status": "PARTIAL", "note": "TEST workspace access GRANTED (2026-03-23, ticket #0035611). Dev has PHI — test only. Token 'visualstudio-carlos' created (exp 2027-03-22). Scraper built (shared/scrape-databricks.js), MFA not approved during automated run. Re-run when user at keyboard." }
+        { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." }
       ],
-      "complete": 8,
-      "partial": 1,
+      "complete": 9,
+      "partial": 0,
       "not_captured": 3,
       "pending": 1,
       "blocked": 0,

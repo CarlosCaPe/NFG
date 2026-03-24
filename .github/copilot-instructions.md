@@ -64,7 +64,8 @@ cp -r clients/_template clients/<client-name>
 
 #### Key Environments
 - **Azure DevOps**: https://dev.azure.com/oncologyanalytics/newUM
-- **Databricks (dev)**: https://adb-2393860672770324.4.azuredatabricks.net/
+- **Databricks (test)**: https://adb-2393860672770324.4.azuredatabricks.net/ *(PAT validated 2026-03-24)*
+- **Databricks (dev)**: https://adb-3806388400498653.13.azuredatabricks.net/ *(BLOCKED — contains PHI)*
 - **Atlassian**: https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM
 - **Databases**: oadb, DrugsMS, EligibilityMS, ProviderMS — all **MS-SQL**
 - **Comms**: Teams (OncoHealth_NewFire), Slack (NFG), SharePoint, Miro
@@ -78,7 +79,8 @@ cp -r clients/_template clients/<client-name>
 | Azure DevOps | Okta SSO + MFA | PARTIAL (wiki denied) | `shared/scrape-okta-auto.js` |
 | SharePoint | Okta SSO + download | COMPLETE (68K chars: RAID + CR + Access Inventory) | `shared/scrape-sharepoint-download.js` |
 | Atlassian | Separate SSO | BLOCKED | needs Atlassian credentials |
-| Databricks | Entra ID | BLOCKED | needs admin provisioning |
+| Databricks (test) | PAT (visualstudio-carlos) | COMPLETE (API 200) | `shared/scrape-databricks.js` |
+| Databricks (dev) | Entra ID | BLOCKED — contains PHI | — |
 | Teams | Okta SSO + MFA | COMPLETE (98K chars) | `shared/scrape-teams-calendar.js` |
 | Calendar (Outlook) | Okta SSO + MFA | COMPLETE (3.8K chars) | `shared/scrape-teams-calendar.js` |
 | Calendar (Google) | NFG Google | NOT STARTED | — |
