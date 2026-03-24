@@ -96,8 +96,8 @@ cp -r clients/_template clients/<client-name>
 #### Tech Stack
 - **Backend**: .NET 10, MS-SQL, Azure Service Bus, Okta, Kubernetes, NUnit
 - **Frontend**: React, MUI/MUI X, Vite, TanStack Query, Vitest + RTL, Playwright (E2E)
-- **DevOps**: Azure DevOps, Terraform, Kubernetes, SonarQube, DataDog
-- **Data**: Databricks, MS-SQL (OADB), Azure Blob Storage
+- **DevOps**: Azure DevOps, Databricks Asset Bundles (DAB), Kubernetes, SonarQube, DataDog
+- **Data**: Databricks, Unity Catalog (Bronze/Silver/Gold), Delta Live Tables, Great Expectations, Airflow, MS-SQL (OADB), Azure Blob Storage
 - **AI Coding**: Claude Code provisioned, Cursor on request
 
 ## QueryMaster — Database Query Agent

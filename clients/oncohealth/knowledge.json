@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.7.0",
-  "last_updated": "2026-03-23",
+  "version": "1.9.0",
+  "last_updated": "2026-03-24",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -64,12 +64,12 @@
   "tech_stack": {
     "backend": [".NET 10", "MS-SQL (OADB)", "PostgreSQL (newUM core OLTP)", "Azure Service Bus", "Okta (auth)", ".NET WebAPI (API Gateway)", "Azure Cloud Functions", "Kubernetes (AKS)", "Azure Blob Storage", "NUnit"],
     "frontend": ["React", "MUI + MUI X (Material Design 3)", "Vite", "TanStack Query", "Vitest + RTL", "React Hook Forms", "Playwright (E2E)"],
-    "devops": ["Azure DevOps (ADO)", "Terraform", "Kubernetes (AKS)", "SonarQube", "DataDog", "Azure AppInsights"],
-    "data": ["Databricks (Unity Catalog: Bronze/Silver/Gold)", "MS-SQL", "Azure Blob Storage", "Azure Data Factory", "Synapse (legacy, going away)", "SSIS (legacy, going away)"],
+    "devops": ["Azure DevOps (ADO)", "Databricks Asset Bundles (DAB)", "Kubernetes (AKS)", "SonarQube", "DataDog", "Azure AppInsights"],
+    "data": ["Databricks (Unity Catalog: Bronze/Silver/Gold)", "Delta Live Tables (DLT)", "Great Expectations (Silver DQ)", "Airflow on AKS (orchestration)", "MS-SQL", "Azure Blob Storage (ADLS Gen2)", "Azure Data Factory", "Synapse (legacy, going away)", "SSIS (legacy, going away)"],
     "services": ["Letters v2", "Chronos TaT", "Document Manager", "Job Monitor", "Drugs API", "Fax Service", "Kaleidescope", "Nuance", "Twilio/IVR", "Event Orchestrator", "Rules Engine"],
     "ai_coding": "Strongly encouraged — Claude Code provisioned, Cursor on request",
     "confirmed": true,
-    "source": "onboarding doc (Architecture & Tech Stack section)"
+    "source": "onboarding doc + System Design Doc (ticket #185594)"
   },
 
   "environments": {
@@ -314,6 +314,156 @@
     ],
     "confirmed": true,
     "source": "onboarding doc"
+  },
+
+  "system_design_doc": {
+    "$comment": "Facts extracted from NewUM Data System Design Document — reviewed in ticket #185594.",
+    "source": "clients/oncohealth/tickets/185594-review-the-doc/extracted-text.txt",
+    "captured": "2026-03-24",
+
+    "medallion_architecture": {
+      "bronze": "Raw ingestion; full-fidelity, append-only. Schema valid, no transforms, PII tokenized at write.",
+      "silver": "Cleansed, deduplicated, common data model. Null rates < thresholds, RI enforced, quarantine on failure.",
+      "gold": "Business-facing aggregates, reporting models. All DQ gates passed, certified datasets only.",
+      "ownership": "NewUM Data team delivers raw data to Bronze. Onco Data team drives Bronze→Silver→Gold.",
+      "quarantine": "Rows failing DQ at Silver route to silver.quarantine.<entity_name> with failure metadata."
+    },
+
+    "unity_catalog_naming": {
+      "pattern": "<domain>_<environment>",
+      "examples": ["newum_prod", "providers_staging"],
+      "domains": ["payer", "drugs", "eligibility", "providers", "newum"],
+      "status": "Final naming TBD during Unity Catalog governance setup"
+    },
+
+    "ingestion_sources": [
+      { "name": "NewUM Operational DB", "latency": "daily", "entities": "Cases, Providers, Eligibility, Case Queuing, Configuration" },
+      { "name": "DrugsMS (Matis API)", "latency": "daily", "entities": "MDL, Regimen Library, HCPCS, RxCUI, NDC, GPI, EADL" },
+      { "name": "Payer Eligibility Feed", "latency": "daily", "entities": "MemberEligibility, LOB, ProductLine, CoverageSpan, BenefitPackage" },
+      { "name": "Provider Master Data", "latency": "daily", "entities": "ProviderNPI, Specialty, Address, TaxID, GroupAffiliation" },
+      { "name": "Payer Drug Library (PDL)", "latency": "daily", "entities": "BenefitType, PARequired, OOS, CrossoverFlag, BillingMethod" },
+      { "name": "Admin Portal: Regimen Library", "latency": "daily", "entities": "RegimenName, DiagnosisGroup, DrugDose, AutoApprovedFlag" },
+      { "name": "Admin Portal: ICD10/Dx Library", "latency": "daily", "entities": "ICD10Code, DiagnosisGroup, TreatmentTypeApplicability" },
+      { "name": "Admin Portal: NP Drug Rules", "latency": "daily", "entities": "NP Drug, Preferred Alternatives, Rule Type, LOB, Dx Group" },
+      { "name": "PBM / Formulary Data", "latency": "daily", "entities": "FormularyStatus, QuantityLimit, PAStatus, DrugNDC" }
+    ],
+
+    "data_quality": {
+      "dimensions": ["completeness", "accuracy", "consistency", "timeliness", "uniqueness", "validity"],
+      "tooling": {
+        "silver": "Great Expectations (entity suites)",
+        "gold": "dbt tests (relational tests)",
+        "storage": "Delta CHECK constraints",
+        "bronze_to_silver": "DLT expectations (Delta Live Tables)"
+      }
+    },
+
+    "integration_mechanism": {
+      "chosen": "Batch ingestion via REST API exposed by Data Team",
+      "description": "Data Team exposes REST ingestion API. NewUM calls HTTP POST to push records into Databricks Bronze. NewUM controls push timing. Data Team owns validation, dedup, landing into Delta tables.",
+      "rationale": "Minimal integration surface for NewUM, centralized ingestion on Data Team, API contract serves as versioned boundary.",
+      "options_evaluated": ["Event Hubs (streaming/CDC)", "Azure Service Bus (message queue)", "SQL Warehouse (JDBC/REST)", "Lakebase/Serverless Postgres", "ADLS Gen2 direct file access", "Azure Cache for Redis", "REST API polling", "ADLS file drop"]
+    },
+
+    "cases_domain": {
+      "ownership": "NewUM application layer exclusively owns the Case schema in PostgreSQL",
+      "scope": "Out of Scope in System Design Doc (ownership TBD separately)",
+      "integration": "Operational case data pushed to Databricks Bronze on daily batch cadence via Data Team REST API. NewUM never reads from Databricks for case processing."
+    },
+
+    "schema_gaps": {
+      "count": 30,
+      "priority": "HIGH",
+      "origin": "Feb 2026 Gap Analysis",
+      "open_question": "Which of the 30 HIGH-priority gaps are resolved before V1.0?"
+    },
+
+    "disaster_recovery": {
+      "components": [
+        { "component": "Bronze Delta Tables (ADLS)", "rpo": "< 1 hour", "rto": "< 4 hours", "mechanism": "Azure Storage GRS/RA-GRS; Delta re-register in DR workspace" },
+        { "component": "Silver/Gold Delta Tables", "rpo": "< 4 hours", "rto": "< 8 hours", "mechanism": "ADLS GRS + pipeline re-run from Bronze; Time Travel for clean checkpoint" },
+        { "component": "Airflow (on AKS)", "rpo": "< 1 hour", "rto": "< 2 hours", "mechanism": "AKS cluster in DR region; Helm chart; DAG code in Git; Postgres geo-redundant backup" },
+        { "component": "Databricks Workspace Config", "rpo": "< 1 day", "rto": "< 4 hours", "mechanism": "DAB in Git; redeploy to DR workspace" },
+        { "component": "Unity Catalog Metadata", "rpo": "< 4 hours", "rto": "< 8 hours", "mechanism": "Databricks-managed storage; DR workspace linked to ADLS GRS secondary" }
+      ],
+      "reliability_targets": {
+        "cdc_ingestion": "99.9%/month",
+        "silver_processing": "99.5%/month",
+        "gold_refresh": "99.5%/month",
+        "sql_bi_endpoint": "99.9%/month",
+        "airflow_scheduler": "99.9%/month"
+      },
+      "testing": "DR runbook tested quarterly (tabletop). Live failover to DR workspace annually."
+    }
+  },
+
+  "nfg_policies": {
+    "$comment": "Policies from Newfire LLC (staffing partner), NOT from OncoHealth. These apply to all NFG contractors.",
+    "documents": [
+      {
+        "title": "Asset Management Policy",
+        "version": "1.0",
+        "effective_date": "2025-04-01",
+        "owner": "CTO",
+        "authors": ["Chad Howell (Director of Cybersecurity)", "Will Crawford (CTO)"],
+        "approved_by": "Will Crawford",
+        "organization": "Newfire LLC",
+        "sections": [
+          "Asset Inventory & Ownership",
+          "Acceptable Use of Assets",
+          "Return of Assets",
+          "Information Handling & Classification (Confidential, Internal, Public)",
+          "Management of Removable Media",
+          "Mobile Device Policy (MDM required, remote wipe, encryption)",
+          "BYOD Policy (8 minimum requirements)",
+          "Remote Working (VPN, dedicated workspace, encrypted storage, clean desk)"
+        ],
+        "key_rules": [
+          "All assets tracked in IT asset inventory with owner assignment",
+          "No personal use of company assets without authorization",
+          "BYOD requires MDM enrollment, full-disk encryption, strong passcode",
+          "Remote workers must use VPN for all company resource access",
+          "Removable media (USB etc) prohibited without written approval",
+          "Assets returned within 5 business days of termination",
+          "Data classified as Confidential, Internal, or Public"
+        ],
+        "captured": "2026-03-24",
+        "source": "user-provided full text"
+      },
+      {
+        "title": "Information Security Policy / Acceptable Use Policy",
+        "version": "3.0",
+        "effective_date": "2025-04-01",
+        "owner": "CTO",
+        "authors": ["Chad Howell (Director of Cybersecurity)", "Will Crawford (CTO)"],
+        "approved_by": "Will Crawford",
+        "organization": "Newfire LLC",
+        "sections": [
+          "Information Security Roles & Responsibilities",
+          "Acceptable Use Policy (internet, email, software, social media)",
+          "Clear Desk and Clear Screen Policy",
+          "Remote Working Policy",
+          "Reporting Information Security Events (24-hour rule)",
+          "Compliance & Violations"
+        ],
+        "key_rules": [
+          "CEO has ultimate accountability for information security",
+          "CTO owns InfoSec program implementation",
+          "All employees must report security incidents within 24 hours",
+          "No personal software installation on company devices",
+          "Social media must not reference client names or proprietary info",
+          "Clear desk: sensitive docs locked away when unattended",
+          "Clear screen: lock workstation when stepping away (Win+L)",
+          "Remote work requires dedicated workspace, no public WiFi without VPN",
+          "Annual security awareness training mandatory",
+          "Violations may result in disciplinary action up to termination"
+        ],
+        "captured": "2026-03-24",
+        "source": "user-provided full text"
+      }
+    ],
+    "still_missing_from_oncohealth": ["Secure Development Policy", "Cryptography Policy", "Data Management Policy", "Branching Strategy"],
+    "note": "These are NFG-level policies. The 4 OncoHealth-specific policy docs listed in onboarding_documents.policies are still TBD."
   },
 
   "unknowns": {
