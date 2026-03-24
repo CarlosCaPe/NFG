@@ -1,6 +1,15 @@
+---
+pdf_options:
+  margin:
+    top: 0mm
+    bottom: 0mm
+    left: 15mm
+    right: 15mm
+---
+
 # Investigation: Exposing Unity Catalog Tables via Iceberg REST Catalog API
 
-> **ADO Ticket**: TBD (link after creation)
+> **ADO Ticket**: [#186438](https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/186438)
 > **Author**: Carlos Carrillo (`ccarrillo@oncologyanalytics.com`)
 > **Date**: 2026-03-23
 > **Status**: DRAFT — requires TEST workspace access to validate
@@ -17,8 +26,8 @@ enabling Delta UniForm on target tables, configuring a service principal with
 appropriate UC privileges, and validating network connectivity.
 
 **Key Blocker**: We currently only have TEST workspace access (ticket #0035611).
-DEV workspace (`adb-2393860672770324`) is network-blocked [K: `databricks.workspaces[0]`].
-TEST workspace URL is still unknown [K: `unknowns.U2`].
+DEV workspace (`adb-3806388400498653`) is BLOCKED (contains PHI) [K: `databricks.workspaces[0]`].
+TEST workspace URL: `https://adb-2393860672770324.4.azuredatabricks.net/` [K: `databricks.workspaces[1]`].
 PAT token `visualstudio-carlos` was created (exp 2027-03-22) [K: `access_inventory`] but MFA
 blocks automated validation — user must be at keyboard [K: `access_inventory.note`].
 Investigation findings below are based on official Microsoft documentation (last updated 2026-03-19)
@@ -44,8 +53,8 @@ https://<workspace-url>/api/2.1/unity-catalog/iceberg-rest
 **newUM known workspaces** [K: `databricks.workspaces`]:
 | Workspace | URL | Status |
 |-----------|-----|--------|
-| oh-databricks-ws-dev | `https://adb-2393860672770324.4.azuredatabricks.net/` | Network-blocked for our account |
-| oh-databricks-ws-test | Unknown | Access GRANTED (ticket #0035611), URL pending |
+| oh-databricks-ws-dev | `https://adb-3806388400498653.13.azuredatabricks.net/` | BLOCKED — contains PHI |
+| oh-databricks-ws-test | `https://adb-2393860672770324.4.azuredatabricks.net/` | Access GRANTED (ticket #0035611) |
 | oh-databricks-ws-uat | Unknown | No access requested |
 | oh-databricks-ws-prod | Unknown | No access requested |
 
@@ -166,8 +175,8 @@ GRANT EXTERNAL USE SCHEMA ON SCHEMA <catalog_name>.<schema_name> TO `<service_pr
 
 ### 2.4 Network Connectivity Validation
 
-**Current status**: BLOCKED — DEV workspace (`adb-2393860672770324`) network-restricted for our account [K: `databricks.workspaces[0]`].
-TEST workspace access GRANTED (ticket #0035611) but URL not yet provided [K: `unknowns.U2`].
+**Current status**: DEV workspace (`adb-3806388400498653`) BLOCKED (PHI) [K: `databricks.workspaces[0]`].
+TEST workspace (`adb-2393860672770324`) access GRANTED (ticket #0035611); PAT available but not yet tested [K: `databricks.workspaces[1]`].
 
 **Validation checklist**:
 
@@ -341,8 +350,8 @@ grant_type=client_credentials
 
 | # | Action | Owner | Status |
 |---|--------|-------|--------|
-| 1 | Obtain TEST workspace URL from DevOps (reply to ticket #0035611; email `devopsrequest@oncologyanalytics.com` [K]) | Carlos | PENDING |
-| 2 | Validate PAT `visualstudio-carlos` [K] against Iceberg REST endpoint | Carlos | BLOCKED (needs URL) |
+| 1 | ~~Obtain TEST workspace URL~~ — resolved: `adb-2393860672770324.4` [K: `databricks.workspaces[1]`] | Carlos | DONE |
+| 2 | Validate PAT `visualstudio-carlos` [K] against Iceberg REST endpoint (`https://adb-2393860672770324.4.azuredatabricks.net/api/2.1/unity-catalog/iceberg-rest/v1/config`) | Carlos | PENDING (needs MFA at keyboard) |
 | 3 | List UC catalogs/schemas/tables — identify Bronze/Silver/Gold layers [K: `tech_stack.data`] | Carlos | BLOCKED |
 | 4 | Identify target tables for UniForm enablement | Michal Mucha [K: `key_contacts`] | NOT STARTED |
 | 5 | Test `DESCRIBE EXTENDED` on a target table to check current properties | Carlos | BLOCKED |
@@ -352,7 +361,7 @@ grant_type=client_credentials
 | 9 | Create dedicated service principal for production use | DevOps (Luiyi Valentin [K]) | NOT STARTED |
 | 10 | Grant `EXTERNAL USE SCHEMA` on target schemas | UC Admin (escalate via Erik Hjortshoj [K]) | NOT STARTED |
 | 11 | Enable external data access on metastore | UC Admin | NOT STARTED |
-| 12 | Resolve unknowns U2 (workspace URLs) and U6 (preferred workspace) [K: `unknowns`] | Carlos / DevOps | PENDING |
+| 12 | Resolve unknowns U2 (workspace URLs) and U6 (preferred workspace) [K: `unknowns`] | Carlos / DevOps | PARTIAL — TEST URL known; UAT/PROD still unknown |
 
 ---
 

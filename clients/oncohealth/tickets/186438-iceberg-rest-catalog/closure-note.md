@@ -1,3 +1,12 @@
+---
+pdf_options:
+  margin:
+    top: 0mm
+    bottom: 0mm
+    left: 15mm
+    right: 15mm
+---
+
 # Closure Note — Investigate Iceberg REST Catalog API Feasibility
 
 **ADO Ticket**: [#186438](https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/186438)
@@ -55,12 +64,12 @@ External clients read via REST Catalog API → Credential vending provides tempo
 
 ### Applied to newUM
 
-![newUM Data Flow](diagram-newum-flow.png)
+<p align="center"><img src="diagram-newum-flow.png" alt="newUM Data Flow" style="width:25%;" /></p>
 
 <details><summary>Mermaid source (click to expand)</summary>
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph sources["🗄️ Data Sources · MS-SQL"]
         oadb["oadb\n(MATIS core)"]
         drugs["DrugsMS"]
@@ -116,8 +125,8 @@ The above architecture maps to our confirmed environment [K: `tech_stack.data`, 
 | Layer | newUM Reality | Source |
 |-------|--------------|--------|
 | **Delta tables** | Unity Catalog with Bronze/Silver/Gold medallion | [K: `tech_stack.data`] |
-| **Workspace (DEV)** | `https://adb-2393860672770324.4.azuredatabricks.net/` — network-blocked for our account | [K: `databricks.workspaces[0]`] |
-| **Workspace (TEST)** | URL unknown — access GRANTED via ticket #0035611 (2026-03-23) | [K: `access_inventory.results["Databricks test"]`] |
+| **Workspace (DEV)** | `https://adb-3806388400498653.13.azuredatabricks.net/` — BLOCKED (contains PHI) | [K: `databricks.workspaces[0]`] |
+| **Workspace (TEST)** | `https://adb-2393860672770324.4.azuredatabricks.net/` — access GRANTED via ticket #0035611 (2026-03-23) | [K: `databricks.workspaces[1]`] |
 | **Workspace (UAT/PROD)** | URLs unknown | [K: `databricks.workspaces[2-3]`] |
 | **PAT token** | `visualstudio-carlos` created, expires 2027-03-22 | [K: `access_inventory.results["Databricks test"]`] |
 | **Auth method** | Entra ID button click required (Okta SSO does NOT auto-login to Databricks) | [K: `access_status.access_inventory.note`] |
@@ -138,10 +147,9 @@ The above architecture maps to our confirmed environment [K: `tech_stack.data`, 
 
 > **Note**: Cost estimation is inferred from architecture described in [S2]. Databricks docs state metadata generation *"might increase the driver resource usage"* [S2] but provide no cost figures. For high-throughput write workloads, driver memory impact should be validated in TEST.
 
-## Repo Link
+## Investigation Files
 
-- Investigation: `clients/oncohealth/tickets/186438-iceberg-rest-catalog/output.md`
-- Repo: `https://github.com/CarlosCaPe/NFG` (private)
+- Full report: `clients/oncohealth/tickets/186438-iceberg-rest-catalog/output.md`
 
 ## Pros
 
@@ -166,7 +174,7 @@ The above architecture maps to our confirmed environment [K: `tech_stack.data`, 
 
 | # | Risk/Question | Severity | Mitigation |
 |---|---------------|----------|------------|
-| 1 | **No workspace access validated** — DEV is `adb-2393860672770324` but network-blocked; TEST URL unknown despite access granted [K: `databricks.workspaces`, `access_inventory`] | HIGH | Reply to DevOps ticket #0035611 requesting TEST workspace URL |
+| 1 | **Workspace access not yet validated** — DEV (`adb-3806388400498653`) is BLOCKED (PHI); TEST (`adb-2393860672770324`) access granted but not yet tested [K: `databricks.workspaces`, `access_inventory`] | MEDIUM | Validate PAT against TEST workspace Iceberg endpoint |
 | 2 | **Metadata staleness** — Iceberg metadata may lag Delta writes | MEDIUM | Monitor `converted_delta_version`; use `MSCK REPAIR TABLE` if needed |
 | 3 | **Target tables unknown** — which Unity Catalog tables need UniForm? Bronze/Silver/Gold layers exist [K: `tech_stack.data`] but specific tables not yet identified | MEDIUM | Coordinate with Michal Mucha [K: `key_contacts`] for table selection |
 | 4 | **Network restrictions** — DEV workspace already network-blocked for us [K: `access_inventory`]; TEST/UAT/PROD may have similar restrictions | MEDIUM | Validate firewall/VNet/Private Link config; contact DevOps (`devopsrequest@oncologyanalytics.com` [K]) |
@@ -179,15 +187,15 @@ The above architecture maps to our confirmed environment [K: `tech_stack.data`, 
 
 ### Recommended Next Steps
 
-1. **Obtain TEST workspace URL** — reply to DevOps ticket #0035611; contact `devopsrequest@oncologyanalytics.com` [K]
-2. **Validate existing PAT** — token `visualstudio-carlos` (exp 2027-03-22) [K] should work for initial curl test against the Iceberg REST endpoint
+1. ~~**Obtain TEST workspace URL**~~ — DONE: `https://adb-2393860672770324.4.azuredatabricks.net/` [K: `databricks.workspaces[1]`]
+2. **Validate existing PAT** — token `visualstudio-carlos` (exp 2027-03-22) [K] → curl `https://adb-2393860672770324.4.azuredatabricks.net/api/2.1/unity-catalog/iceberg-rest/v1/config` (needs MFA at keyboard)
 3. **List UC catalogs/tables** — use PAT to query TEST workspace; identify Bronze/Silver/Gold tables [K: `tech_stack.data`] for UniForm candidates
 4. **Coordinate with Michal Mucha** [K: `key_contacts`] — he leads Databricks Lakeflow Connect [K: `communication.channels[0].active_chats`]; align on which tables to expose
 5. **POC on test table** — enable UniForm, validate PyIceberg read from external network
 6. **Create service principal** — with `USE CATALOG`, `USE SCHEMA`, `SELECT`, `EXTERNAL USE SCHEMA`; request via DevOps [K]
 7. **Enable external data access** on metastore — escalate to UC Admin via Erik Hjortshoj [K: `key_contacts`]
-8. **Document network path** — confirm external service can reach workspace endpoint (DEV already blocked for us [K])
-9. **Resolve unknowns U2 & U6** [K: `unknowns`] — TEST/UAT/PROD URLs and preferred workspace for initial validation
+8. **Document network path** — confirm external service can reach TEST workspace endpoint; DEV (`adb-3806388400498653`) is BLOCKED (PHI) [K]
+9. **Resolve unknown U6** [K: `unknowns`] — preferred workspace for initial validation (TEST likely); UAT/PROD URLs still unknown
 
 ## References
 
