@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "last_updated": "2026-03-25",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
@@ -81,7 +81,7 @@
     "atlassian": {
       "url": "https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM",
       "base": "https://oncologyanalytics.atlassian.net",
-      "auth": "API token (ccarrillo@oncohealth.us)",
+      "auth": "API token (ccarrillo@oncologyanalytics.com) — NOTE: old token used ccarrillo@oncohealth.us, new nfg-full-access token (2026-03-25) requires @oncologyanalytics.com email",
       "spaces": ["AL", "AP", "AT", "BND", "HUM", "CA", "IS", "ITOPS", "MAT", "MCS", "OG", "PM"],
       "spaces_count": 12,
       "pages_count": 171,
@@ -95,30 +95,51 @@
       },
       "newum1_space": {
         "key": "NewUM1",
-        "name": "NewUM Product Team (inferred)",
-        "status": "NOT_CAPTURED",
-        "referenced_pages": 13,
-        "page_examples": [
-          "Rules and configurations functional specification",
-          "Member Identification and Coverage (PRD)",
-          "Main Regimen Selection (PRD)",
-          "Capture Basic Dosing Details (PRD + Data Dictionary)",
-          "Configuration Repository",
-          "Rules Repository",
-          "[DRAFT] Configuration Guide",
-          "Allow Custom Regimens",
-          "Select Ancillary Drugs",
-          "Apply Payer Drug Configurations",
-          "Apply Payer Non-Preferred Drug Rules",
-          "UI Configurations",
-          "Diagnosis and Clinical Indication Capture"
+        "name": "NewUM Product Team",
+        "status": "CAPTURED",
+        "pages": 50,
+        "chars": 421823,
+        "captured": "2026-03-25",
+        "auth": "ccarrillo@oncologyanalytics.com + API token nfg-full-access (created 2026-03-25, expires 2026-12-30)",
+        "homepage": "NewUM Product Roadmap",
+        "page_tree": {
+          "root": "NewUM Product Roadmap",
+          "sections": [
+            "NewUM Product Requirements (PRDs — V1 Case Entry, Chemotherapy Entry, Work Queues, Post-Denial Pathway, Standard Reports, Rules & Config Spec, UM Case Model)",
+            "Product Team Decision Log (5 decisions: 0.0 Template, 1.0 Member on the Fly, 6.0 DCoA, 8.0 Provider, 12.0 Model Payer)",
+            "Product Governance Process Overview",
+            "Product Change Management Log",
+            "Project Milestones",
+            "Product Group Meetings (meeting notes)",
+            "Decision log (orphaned legacy page)"
+          ]
+        },
+        "content_categories": {
+          "prds": 30,
+          "decisions": 5,
+          "governance_process": 3,
+          "meeting_notes": 3,
+          "templates": 4,
+          "nfrs_accessibility": 5
+        },
+        "critical_gaps_found": [
+          "V1. Appeals Support — completely empty page (no PRD)",
+          "Patient Clinical Information — blank template (no requirements)",
+          "Decision 6.0 DCoA — Critical priority, Not Started",
+          "Performance metrics — placeholder only (no targets)",
+          "DAW (Dispense As Written) — all user stories blank",
+          "Missing decisions 2-5, 7, 9-11"
         ],
-        "note": "Discovered via ADO work item links (2026-03-25). Space was NOT returned by our API token's /wiki/rest/api/space call — likely restricted permissions. Contains active PRDs, functional specs, data dictionaries, and configuration guides. Contact Inna Mariienko or Rachel Collier for access."
+        "note": "Previously hidden from old API token (ccarrillo@oncohealth.us). Accessed 2026-03-25 using ccarrillo@oncologyanalytics.com + unscoped token. Contains all active PRDs, functional specs, decision log, and configuration guides for newUM V1.0."
       },
-      "note": "NewUM1 space discovered but NOT captured (restricted permissions). 12 other spaces captured. Confluence is the primary wiki for all teams — ADO wiki not used (confirmed Michal Mucha 2026-03-25).",
-      "captured": "2026-03-23",
+      "note": "40 global spaces visible (was 12 before token fix). NewUM1 space now CAPTURED (50 pages, 422K chars). Confluence is the primary wiki for all teams — ADO wiki not used (confirmed Michal Mucha 2026-03-25).",
+      "auth": "ccarrillo@oncologyanalytics.com + API token (nfg-full-access, created 2026-03-25)",
+      "spaces_count": 40,
+      "pages_count_total": 221,
+      "total_chars_total": 907097,
+      "captured": "2026-03-25",
       "confirmed": true,
-      "source": "onboarding doc + REST API capture"
+      "source": "onboarding doc + REST API capture (2026-03-23 for 12 spaces, 2026-03-25 for NewUM1)"
     },
     "databricks": {
       "workspaces": [
@@ -289,6 +310,37 @@
       "role": "Product / Client Strategy",
       "confirmed": true,
       "source": "Teams calendar + GDrive Assessment"
+    },
+    {
+      "name": "Alison Stamp",
+      "role": "Product Director — owns most PRDs and decisions in NewUM1 Confluence",
+      "confirmed": true,
+      "source": "Confluence NewUM1 space (2026-03-25)"
+    },
+    {
+      "name": "Nicole Santiago",
+      "alias": "Nicole Cole",
+      "role": "CRS SME — Operations input, current-state workflow knowledge",
+      "confirmed": true,
+      "source": "Confluence NewUM1 space (Member on the Fly, Ancillary Drugs)"
+    },
+    {
+      "name": "Roman",
+      "role": "Engineering lead (starting early March 2026)",
+      "confirmed": true,
+      "source": "Confluence NewUM1 space (2026-03-25)"
+    },
+    {
+      "name": "Jason King",
+      "role": "Drugs API team",
+      "confirmed": true,
+      "source": "Confluence NewUM1 space (2026-03-25)"
+    },
+    {
+      "name": "Caitlin Bowler",
+      "role": "UX Designer",
+      "confirmed": true,
+      "source": "Confluence NewUM1 space (2026-03-25)"
     }
   ],
 
@@ -302,7 +354,7 @@
       "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)",
       "Databricks TEST workspace — PAT validated (2026-03-24), 12 API endpoints, full UC inventory captured",
       "Google Drive folder — 41 files extracted, 21 text outputs, 5.5M chars (2026-03-25)",
-      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23)"
+      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23) + NewUM1 space 50 pages, 422K chars (2026-03-25)"
     ],
     "pending": [
       "Database access (email devopsrequest@oncologyanalytics.com)",
@@ -322,18 +374,18 @@
         { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
         { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2101901, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Deep capture (2026-03-23): 33 files, 2053 KB. 13 Epics, 62 Features, 325 User Stories, 348 Tasks, 4 Bugs, 7 Pipelines with CI/CD runs, 5 Teams (QA:6, UX:3, Data:7, BE:13, FE:12), 7 Sprints, 3 Boards. No wiki exists — confirmed by Michal Mucha (2026-03-25): teams use Confluence, not ADO wiki. 0 git repos visible." },
         { "resource": "Atlassian Confluence (12 spaces)", "status": "COMPLETE", "chars": 485274, "method": "REST API + API token", "note": "Deep capture (2026-03-23): 12 spaces, 171 pages, 41 files, 621 KB. Key: PM (197K), AT (120K), OG (65K), IS (13K), MATIS (13K). 41 groups discovered. Auth via ccarrillo@oncohealth.us + API token." },
-        { "resource": "Confluence NewUM1 space", "status": "NOT_CAPTURED", "chars": 0, "note": "Discovered 2026-03-25 via ADO work item links. 13+ pages: PRDs, functional specs, data dictionaries, config guides. Space hidden from our API token — restricted permissions. Need access from Inna Mariienko or Rachel Collier." },
+        { "resource": "Confluence NewUM1 space", "status": "COMPLETE", "chars": 421823, "method": "REST API + API token (ccarrillo@oncologyanalytics.com)", "note": "Captured 2026-03-25. 50 pages: PRDs (case entry, chemotherapy, work queues, post-denial, reports, rules/config), decision log (5 decisions), governance, meeting notes, templates. 422K chars. Previously blocked — fixed by using correct email identity with new unscoped token (nfg-full-access)." },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
         { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." }
       ],
-      "complete": 11,
+      "complete": 12,
       "partial": 0,
-      "not_captured": 2,
+      "not_captured": 1,
       "pending": 0,
       "blocked": 0,
-      "total_chars_captured": 8334855,
+      "total_chars_captured": 8756678,
       "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
     },
     "confirmed": true,
@@ -496,6 +548,133 @@
     },
     "newum_components": ["Case Engine", "Case State Machine", "Case Configuration Manager", "Databricks Ingest Gateway"],
     "smartum_risk": "Business continuity gap — SmartUM is current fallback during MATIS transition"
+  },
+
+  "newum_v1_product": {
+    "$comment": "Product knowledge extracted from NewUM1 Confluence space (50 pages, 422K chars). Captured 2026-03-25.",
+    "source": "clients/oncohealth/output/confluence/03-space-newum1-full-content.txt",
+    "captured": "2026-03-25",
+
+    "scope": {
+      "description": "V1.0 establishes foundational platform for fully delegated chemotherapy UM services across Commercial and Medicare LOBs. Functional parity with existing OneUM platforms (MATIS + SmartUM) plus improvements in UX, implementation efficiency, and clinical workflow.",
+      "not_live_launch": "V1.0 is NOT the final version for live health plan launch. It delivers enough scope to stand up a health plan in production-like environment for extensive user testing.",
+      "target_completion": "June 2026 (SOW) / August 2026 (governance doc)",
+      "first_client_migration": "EOY 2026 — Geisinger (selected as model payer, Decision #12.0)"
+    },
+
+    "epics_21": [
+      "Case Intake", "Case Entry (General)", "Case Entry – Chemotherapy", "Case Entry – XRT",
+      "Case Entry – GMT", "System Case Assignment", "Case Review – Processing",
+      "Case Review – Determinations", "Outbound Determination Notifications", "Authorization Files",
+      "Health Plan Reporting", "Operational (OH) Reporting", "Additional UM Programs",
+      "Post Denials Module", "Provider Data", "Turnaround Timers (TAT)",
+      "User Roles, Security, Management", "Admin Portal Enhancements",
+      "Configuration & Rules Engine", "Migration Pipeline", "External User Case Views"
+    ],
+
+    "releases": {
+      "phase_2": "Mar 3 – Jul 31, 2026 (11 sprints, 2-week cadence)",
+      "release_1": { "sprints": "1-3 (Mar – mid-Apr)", "name": "Foundational Intake & Case Creation" },
+      "release_2": { "sprints": "4-6 (mid-Apr – end-May)", "name": "End-to-End Case Review" },
+      "release_3": { "sprints": "7-9 (Jun – early-Jul)", "name": "Medicare, Rules, Audit" },
+      "release_4_hardening": { "sprints": "10-11 (Jul)", "name": "Hardening & Readiness Testing" },
+      "phase_3_hardening": "Aug – Oct 2026"
+    },
+
+    "rbac_roles": ["CRS", "CRR", "CSR", "UM Quality Rep", "UM Oncology RN", "UM Oncology Pharmacist", "UM System Admin", "Medical Director", "Appeals Reviewer", "Reporting/Analytics", "Payer User", "Provider User", "IRE Reviewer", "Audit Reviewer"],
+
+    "case_model": {
+      "states": "Internal workflow positions (drive routing/actions)",
+      "statuses": "External-facing labels (communicate progress to payers/providers)",
+      "determinations": "Formal clinical/admin outcomes (Approved, Denied, etc.)",
+      "workflow": "Case Intake → Case Entry → Case Assignment → Case Processing → Case Finalization → Outbound/Outputs"
+    },
+
+    "drug_libraries": {
+      "mdl": "Master Drug Library — HCPCS, RxCUI (IN/PIN/Brand), NDC, GPI, EADL flag, drug type (Main/Ancillary/Both), benefit type",
+      "pdl": "Payer Drug Library — per-payer configs: PA Required, PA Exempt, OOS, Per Formulary, Non-Preferred flags, billing method (Medical vs Pharmacy)",
+      "regimen_library": "Pre-built regimens with drugs, cycles, dosing defaults; filtered by Diagnosis Group",
+      "eadl": "Equivalent Alternatives Drug List — exclusions from alternative switching within same RxCUI family",
+      "drug_id_chain": "RxCUI (IN/PIN) → HCPCS → NDC → GPI → Representative NDC"
+    },
+
+    "provider_model": {
+      "ordering": "Type 1 NPI (individual prescribing physician)",
+      "servicing": "Treating clinician (may be 'Same as Ordering')",
+      "place_of_treatment": "Type 2 NPI (facility/organization)",
+      "search_scope": "Provider search crosses all Health Plans (not restricted to case's plan)",
+      "pos": "Place of Service code is payer-configurable"
+    },
+
+    "tat_chronos": {
+      "integration": "Service Bus events; NewUM publishes case events, Chronos sends TAT results to Service Bus queue",
+      "config_storage": "CosmosDB",
+      "parameters": "50+ configurable fields per timer: Payer, LOB, Delegation Level, Request Type, Billing Method, Priority (STAT/Standard), etc.",
+      "abstraction": "Jack Hall suggested building abstraction module between newUM and Chronos",
+      "neal_focus": "Neal Ruggles focusing on Chronos for 6 weeks"
+    },
+
+    "reporting": {
+      "compliance": ["Part C ODAG", "Part D CDAG", "Audit Sampling", "Delegation Oversight"],
+      "operational": ["Activity Report", "TAT Report", "Financial Impact Report", "Case-Level Flat File", "Element-Level Flat File"],
+      "format": "CSV + Excel, monthly automated generation",
+      "audit_requirements": "Generation timestamp, data source version, logic version, reproducible sampling (seed-based)"
+    },
+
+    "decision_log": [
+      { "id": "1.0", "title": "Member on the Fly", "status": "In Progress", "priority": "High", "note": "Whether to allow creating members not found in eligibility data" },
+      { "id": "6.0", "title": "Discontinuation of Auth (DCoA)", "status": "Not Started", "priority": "Critical", "note": "Impacts 3.5% of total auths (6,258 of 178,825). ~12 clients affected" },
+      { "id": "8.0", "title": "Servicing/Treating Provider AND Place of Treatment?", "status": "In Progress", "priority": "Medium" },
+      { "id": "12.0", "title": "Model Payer for V1 Testing/Hardening", "status": "CLOSED", "priority": "High", "outcome": "Geisinger selected; Highmark and Health Partners as secondary" }
+    ],
+
+    "model_payer_geisinger": {
+      "selection_rationale": "Combination of technical, business, and strategic requirements",
+      "notes": "Geisinger has multiple LOBs, add-on programs. Highmark has IT constraints. Letters V2 migration completed by Q2.",
+      "payer_etl": "Databricks EDP managed"
+    },
+
+    "key_people_from_confluence": [
+      { "name": "Alison Stamp", "role": "Product Director — owns most PRDs and decisions" },
+      { "name": "Keeley", "role": "Product team (town hall slides)" },
+      { "name": "Lauren Smith", "role": "PRD author (Reopens)" },
+      { "name": "Nicole Santiago/Cole", "role": "CRS SME, operations input" },
+      { "name": "C. Swenson", "role": "Admin Portal / MATIS config access" },
+      { "name": "Roman", "role": "Engineering lead (starting early March)" },
+      { "name": "Plamena", "role": "Engineering" },
+      { "name": "Dmytro Petriv", "role": "Engineering" },
+      { "name": "Jason King", "role": "Drugs API team" },
+      { "name": "Bogdan", "role": "Drugs API team" },
+      { "name": "Caitlin Bowler", "role": "UX" },
+      { "name": "Monica Kenon", "role": "Operations contributor" },
+      { "name": "Jeanette Devarie", "role": "Operations, DCoA knowledge" },
+      { "name": "Heta", "role": "Reporting connection" }
+    ],
+
+    "user_personas": [
+      { "persona": "Faye the Front Liner", "role": "CRS (Case Review Specialist)" },
+      { "persona": "Naomi the Navigator", "role": "oneUM Nurse" },
+      { "persona": "Patrick the Prescribing Provider", "role": "Provider" },
+      { "persona": "Cas the Current Onboarding Client", "role": "Payer/client" }
+    ],
+
+    "accessibility": {
+      "standard": "WCAG 2.1 Level AA",
+      "requirements": 14,
+      "categories": ["Perception", "Operable", "Predictability", "Robustness"],
+      "open_question": "Unclear if OncoHealth is directly subject to HHS Section 504/508 or only by extension through clients"
+    },
+
+    "critical_product_gaps": [
+      "V1. Appeals Support — completely empty page (Core UM function with no PRD)",
+      "Patient Clinical Information — blank template (no requirements defined)",
+      "Decision 6.0 DCoA — Critical priority, Not Started (impacts 12 clients, 3.5% of auths)",
+      "Decision 1.0 Member on the Fly — High priority, no resolution (affects intake)",
+      "Performance metrics — placeholder (no targets or baselines)",
+      "DAW (Dispense As Written) — 2 requirements, all user stories blank",
+      "Missing decisions 2-5, 7, 9-11 (not in Confluence)",
+      "Rules/Config UI — explicitly out of scope for V1 (semi-technical users must use text editing)"
+    ]
   },
 
   "data_flows": {

@@ -14,48 +14,11 @@ pdf_options:
 **Sprint**: TBD
 **Priority**: P2
 **Sources**: All claims verified against official Microsoft Learn docs (fetched 2026-03-23) AND validated against TEST workspace API (2026-03-24). See [References](#references) for full list.
-**Project context**: `clients/oncohealth/knowledge.json` v1.12.0 — operational facts cited as [K].
+**Project context**: `../../knowledge.json` v1.14.0 — operational facts cited as [K].
 
 ## Architecture Overview
 
 ![Architecture Overview](diagram-architecture.png)
-
-<details><summary>Mermaid source (click to expand)</summary>
-
-```mermaid
-graph TD
-    subgraph workspace["☁️ Azure Databricks Workspace"]
-        subgraph uc["🗂️ Unity Catalog"]
-            delta["🔺 Delta Table\n(source of truth)"]
-            uniform["🔄 UniForm · IcebergCompatV2<br/><br/>• Async metadata generation<br/>• Parquet data files shared<br/>• Iceberg metadata layer"]
-            delta -->|"writes trigger"| uniform
-        end
-        subgraph api["🧊 Iceberg REST Catalog API"]
-            endpoint["/api/2.1/unity-catalog/iceberg-rest<br/><br/>🔑 Auth: OAuth M2M · PAT<br/>🎫 Credential Vending: SAS tokens"]
-        end
-        uniform --> endpoint
-    end
-
-    endpoint -->|"HTTPS"| pyiceberg["🐍 PyIceberg\nPython client"]
-    endpoint -->|"HTTPS"| spark["🔥 Apache Spark\n+ Iceberg (JVM)"]
-    endpoint -->|"HTTPS"| snowflake["❄️ Snowflake\nCatalog-linked DB"]
-    endpoint -->|"HTTPS"| trino["🔱 Trino · Flink\nJVM engines"]
-    endpoint -->|"HTTPS"| duckdb["🦆 DuckDB\nIceberg extension"]
-
-    style workspace fill:#FF3621,stroke:#CC2A1A,color:#fff
-    style uc fill:#1B3139,stroke:#FF3621,color:#fff
-    style api fill:#4E8EE9,stroke:#3A6FB8,color:#fff
-    style delta fill:#00ADD8,stroke:#008FB0,color:#fff
-    style uniform fill:#1B3139,stroke:#00ADD8,color:#fff
-    style endpoint fill:#4E8EE9,stroke:#fff,color:#fff
-    style pyiceberg fill:#3776AB,stroke:#FFD43B,color:#FFD43B
-    style spark fill:#E25A1C,stroke:#B84816,color:#fff
-    style snowflake fill:#29B5E8,stroke:#1A8AB5,color:#fff
-    style trino fill:#DD00A1,stroke:#AA007B,color:#fff
-    style duckdb fill:#FFF000,stroke:#000,color:#000
-```
-
-</details>
 
 **Data flow**: Writes go through Databricks (Delta) → UniForm generates Iceberg metadata async →
 External clients read via REST Catalog API → Credential vending provides temporary ADLS SAS tokens.
@@ -64,61 +27,7 @@ External clients read via REST Catalog API → Credential vending provides tempo
 
 ### Applied to newUM
 
-<p align="center"><img src="diagram-newum-flow.png" alt="newUM Data Flow" style="width:25%;" /></p>
-
-<details><summary>Mermaid source (click to expand)</summary>
-
-```mermaid
-flowchart TD
-    subgraph sources["🗄️ Data Sources · MS-SQL"]
-        oadb["oadb\n(MATIS core)"]
-        drugs["DrugsMS"]
-        elig["EligibilityMS"]
-        prov["ProviderMS"]
-    end
-
-    subgraph databricks["☁️ Azure Databricks · Unity Catalog"]
-        bronze["🥉 Bronze\nraw ingestion"]
-        silver["🥈 Silver\ncleaned / conformed"]
-        gold["🥇 Gold\ncurated / aggregated"]
-        bronze --> silver --> gold
-        uniform["🔄 UniForm\nIcebergCompatV2"]
-        gold -->|"enable on\ntarget tables"| uniform
-    end
-
-    subgraph iceberg_api["🧊 Iceberg REST Catalog"]
-        rest["/api/2.1/unity-catalog/<br/>iceberg-rest<br/><br/>🎫 SAS credential vending"]
-    end
-
-    subgraph consumers["📡 External Consumers · read-only"]
-        ext1["🔥 Apache Spark"]
-        ext2["🐍 PyIceberg"]
-        ext3["❄️ Snowflake"]
-    end
-
-    sources -->|"ADF · Lakeflow\nConnect"| bronze
-    uniform --> rest
-    rest -->|"HTTPS + SAS"| consumers
-
-    style sources fill:#CC2927,stroke:#991F1D,color:#fff
-    style databricks fill:#FF3621,stroke:#CC2A1A,color:#fff
-    style iceberg_api fill:#4E8EE9,stroke:#3A6FB8,color:#fff
-    style consumers fill:#2D7D46,stroke:#1B5C30,color:#fff
-    style bronze fill:#CD7F32,stroke:#A66628,color:#fff
-    style silver fill:#C0C0C0,stroke:#808080,color:#000
-    style gold fill:#FFD700,stroke:#CCA900,color:#000
-    style uniform fill:#1B3139,stroke:#00ADD8,color:#00ADD8
-    style rest fill:#4E8EE9,stroke:#fff,color:#fff
-    style oadb fill:#CC2927,stroke:#fff,color:#fff
-    style drugs fill:#CC2927,stroke:#fff,color:#fff
-    style elig fill:#CC2927,stroke:#fff,color:#fff
-    style prov fill:#CC2927,stroke:#fff,color:#fff
-    style ext1 fill:#E25A1C,stroke:#B84816,color:#fff
-    style ext2 fill:#3776AB,stroke:#FFD43B,color:#FFD43B
-    style ext3 fill:#29B5E8,stroke:#1A8AB5,color:#fff
-```
-
-</details>
+<p align="center"><img src="diagram-newum-flow.png" alt="newUM Data Flow" /></p>
 
 The above architecture maps to our confirmed environment [K: `tech_stack.data`, `environments.databricks`]:
 
@@ -190,7 +99,7 @@ This is the key architectural question. Delta Lake already has ACID transactions
 
 ## Investigation Files
 
-- Full report: `clients/oncohealth/tickets/186438-iceberg-rest-catalog/output.md`
+- Full report: `output.md`
 
 ## Pros
 
@@ -250,5 +159,5 @@ All claims in this document were verified against official Microsoft Learn docum
 | **[S4]** | Databricks service principals / Auth | https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/ | — |
 | **[S5]** | PyIceberg REST catalog configuration | https://py.iceberg.apache.org/configuration/#rest-catalog | — |
 | **[S6]** | Apache Iceberg REST API spec | https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml | — |
-| **[K]** | Project knowledge base | `clients/oncohealth/knowledge.json` v1.12.0 | 2026-03-25 |
-| **[DB]** | Databricks TEST workspace API capture | `clients/oncohealth/output/databricks/` (7 files, 987 KB) | 2026-03-24 |
+| **[K]** | Project knowledge base | `../../knowledge.json` v1.14.0 | 2026-03-25 |
+| **[DB]** | Databricks TEST workspace API capture | `../../output/databricks/` (7 files, 987 KB) | 2026-03-24 |

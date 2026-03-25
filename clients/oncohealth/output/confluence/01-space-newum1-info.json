@@ -1,0 +1,75 @@
+{
+  "id": 5067374602,
+  "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/5067374602",
+  "key": "NewUM1",
+  "alias": "NewUM1",
+  "name": "NewUM Product Team",
+  "description": {
+    "plain": {
+      "value": "",
+      "representation": "plain",
+      "embeddedContent": []
+    },
+    "_expandable": {
+      "view": ""
+    }
+  },
+  "homepage": {
+    "id": "5067375081",
+    "type": "page",
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:page/5067375081",
+    "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZWVjYjUyYTEtNDE0YS00NjVjLWI0NzQtMTkyYThkOWZiODE4OmNvbnRlbnQvNTA2NzM3NTA4MQ==",
+    "status": "current",
+    "title": "NewUM Product Roadmap",
+    "macroRenderedOutput": {},
+    "extensions": {
+      "position": 636
+    },
+    "_expandable": {
+      "container": "/rest/api/space/NewUM1",
+      "metadata": "",
+      "restrictions": "/rest/api/content/5067375081/restriction/byOperation",
+      "history": "/rest/api/content/5067375081/history",
+      "body": "",
+      "version": "",
+      "descendants": "/rest/api/content/5067375081/descendant",
+      "space": "/rest/api/space/NewUM1",
+      "childTypes": "",
+      "schedulePublishInfo": "",
+      "operations": "",
+      "schedulePublishDate": "",
+      "children": "/rest/api/content/5067375081/child",
+      "ancestors": "",
+      "draftVersion": ""
+    },
+    "_links": {
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/content/5067375081",
+      "tinyui": "/x/6QEKLgE",
+      "editui": "/pages/resumedraft.action?draftId=5067375081",
+      "webui": "/spaces/NewUM1/overview",
+      "edituiv2": "/spaces/NewUM1/pages/edit-v2/5067375081"
+    }
+  },
+  "type": "global",
+  "status": "current",
+  "_expandable": {
+    "settings": "/rest/api/space/NewUM1/settings",
+    "metadata": "",
+    "operations": "",
+    "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=NewUM1",
+    "identifiers": "",
+    "permissions": "",
+    "roles": "",
+    "icon": "",
+    "typeSettings": "",
+    "theme": "/rest/api/space/NewUM1/theme",
+    "history": ""
+  },
+  "_links": {
+    "context": "/wiki",
+    "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/NewUM1",
+    "collection": "/rest/api/space",
+    "webui": "/spaces/NewUM1",
+    "base": "https://oncologyanalytics.atlassian.net/wiki"
+  }
+}

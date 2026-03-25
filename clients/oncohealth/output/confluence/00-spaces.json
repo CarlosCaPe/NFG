@@ -111,6 +111,43 @@
     }
   },
   {
+    "id": 3197173763,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3197173763",
+    "key": "Archive",
+    "alias": "Archive",
+    "name": "Archive",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/Archive/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=Archive",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/Archive/theme",
+      "history": "",
+      "homepage": "/rest/api/content/3197173823"
+    },
+    "_links": {
+      "webui": "/spaces/Archive",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/Archive"
+    }
+  },
+  {
     "id": 201392170,
     "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/201392170",
     "key": "BND",
@@ -145,6 +182,264 @@
     "_links": {
       "webui": "/spaces/BND",
       "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/BND"
+    }
+  },
+  {
+    "id": 393641992,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/393641992",
+    "key": "CI",
+    "alias": "CI",
+    "name": "Checkpoint Inhibitors",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/CI/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=CI",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/CI/theme",
+      "history": "",
+      "homepage": "/rest/api/content/393642042"
+    },
+    "_links": {
+      "webui": "/spaces/CI",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/CI"
+    }
+  },
+  {
+    "id": 2600304712,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2600304712",
+    "key": "CLAIM",
+    "alias": "CLAIM",
+    "name": "ClaimsIngestion",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/CLAIM/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=CLAIM",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/CLAIM/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2600305085"
+    },
+    "_links": {
+      "webui": "/spaces/CLAIM",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/CLAIM"
+    }
+  },
+  {
+    "id": 2955771908,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2955771908",
+    "key": "CI1",
+    "alias": "CI1",
+    "name": "Client Information",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/CI1/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=CI1",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/CI1/theme",
+      "history": ""
+    },
+    "_links": {
+      "webui": "/spaces/CI1",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/CI1"
+    }
+  },
+  {
+    "id": 2955411514,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2955411514",
+    "key": "CI2",
+    "alias": "CI2",
+    "name": "Client Information",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/CI2/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=CI2",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/CI2/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2955411880"
+    },
+    "_links": {
+      "webui": "/spaces/CI2",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/CI2"
+    }
+  },
+  {
+    "id": 1643184427,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/1643184427",
+    "key": "DE",
+    "alias": "DE",
+    "name": "DataOps",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/DE/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=DE",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/DE/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2472837309"
+    },
+    "_links": {
+      "webui": "/spaces/DE",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/DE"
+    }
+  },
+  {
+    "id": 1998979080,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/1998979080",
+    "key": "ED",
+    "alias": "ED",
+    "name": "Enterprise Data",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/ED/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=ED",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/ED/theme",
+      "history": "",
+      "homepage": "/rest/api/content/1998980074"
+    },
+    "_links": {
+      "webui": "/spaces/ED",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/ED"
+    }
+  },
+  {
+    "id": 2932113426,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2932113426",
+    "key": "EDB",
+    "alias": "EDB",
+    "name": "Enterprise Databricks",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/EDB/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=EDB",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/EDB/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2932113978"
+    },
+    "_links": {
+      "webui": "/spaces/EDB",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/EDB"
     }
   },
   {
@@ -259,6 +554,154 @@
     }
   },
   {
+    "id": 2568749063,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2568749063",
+    "key": "IRM",
+    "alias": "IRM",
+    "name": "Iris Analytics, Reporting, & Metrics",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/IRM/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=IRM",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/IRM/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2568749115"
+    },
+    "_links": {
+      "webui": "/spaces/IRM",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/IRM"
+    }
+  },
+  {
+    "id": 2531590178,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2531590178",
+    "key": "IRIS",
+    "alias": "IRIS",
+    "name": "Iris Product",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/IRIS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=IRIS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/IRIS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2531590551"
+    },
+    "_links": {
+      "webui": "/spaces/IRIS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/IRIS"
+    }
+  },
+  {
+    "id": 2124808194,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2124808194",
+    "key": "IRISENG",
+    "alias": "IRISENG",
+    "name": "Iris - Product Engineering",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/IRISENG/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=IRISENG",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/IRISENG/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2124808251"
+    },
+    "_links": {
+      "webui": "/spaces/IRISENG",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/IRISENG"
+    }
+  },
+  {
+    "id": 2559705118,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2559705118",
+    "key": "ISDO",
+    "alias": "ISDO",
+    "name": "Iris - Service Delivery & Ops",
+    "description": {
+      "plain": {
+        "value": "Iris Service Delivery & Operations Standard Practice & Operating Processes, Guidelines, Collaboration, etc. ",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/ISDO/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=ISDO",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/ISDO/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2559706065"
+    },
+    "_links": {
+      "webui": "/spaces/ISDO",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/ISDO"
+    }
+  },
+  {
     "id": 3479109640,
     "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3479109640",
     "key": "ITOPS",
@@ -293,6 +736,80 @@
     "_links": {
       "webui": "/spaces/ITOPS",
       "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/ITOPS"
+    }
+  },
+  {
+    "id": 1040646157,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/1040646157",
+    "key": "LSDA",
+    "alias": "LSDA",
+    "name": "Life Sciences – Data & Analytics",
+    "description": {
+      "plain": {
+        "value": "Life Sciences – Data & Analytics Team Space",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/LSDA/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=LSDA",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/LSDA/theme",
+      "history": "",
+      "homepage": "/rest/api/content/1040646565"
+    },
+    "_links": {
+      "webui": "/spaces/LSDA",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/LSDA"
+    }
+  },
+  {
+    "id": 1420165942,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/1420165942",
+    "key": "LSND",
+    "alias": "LSND",
+    "name": "Life Sciences -- NLP/Data Development",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/LSND/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=LSND",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/LSND/theme",
+      "history": "",
+      "homepage": "/rest/api/content/1420166829"
+    },
+    "_links": {
+      "webui": "/spaces/LSND",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/LSND"
     }
   },
   {
@@ -370,6 +887,116 @@
     }
   },
   {
+    "id": 5067374602,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/5067374602",
+    "key": "NewUM1",
+    "alias": "NewUM1",
+    "name": "NewUM Product Team",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/NewUM1/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=NewUM1",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/NewUM1/theme",
+      "history": "",
+      "homepage": "/rest/api/content/5067375081"
+    },
+    "_links": {
+      "webui": "/spaces/NewUM1",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/NewUM1"
+    }
+  },
+  {
+    "id": 1431470183,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/1431470183",
+    "key": "NLP",
+    "alias": "NLP",
+    "name": "NLP",
+    "description": {
+      "plain": {
+        "value": "Space for NLP team members to keep track of work",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/NLP/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=NLP",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/NLP/theme",
+      "history": "",
+      "homepage": "/rest/api/content/1431470782"
+    },
+    "_links": {
+      "webui": "/spaces/NLP",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/NLP"
+    }
+  },
+  {
+    "id": 2305753135,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2305753135",
+    "key": "NCD",
+    "alias": "NCD",
+    "name": "NLP Concept Development",
+    "description": {
+      "plain": {
+        "value": "Team investigating, developing, and prioritizing NLP concept development",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/NCD/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=NCD",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/NCD/theme",
+      "history": ""
+    },
+    "_links": {
+      "webui": "/spaces/NCD",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/NCD"
+    }
+  },
+  {
     "id": 61079564,
     "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/61079564",
     "key": "OG",
@@ -407,6 +1034,191 @@
     }
   },
   {
+    "id": 375357463,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/375357463",
+    "key": "OI",
+    "alias": "OI",
+    "name": "OA Interns",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/OI/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=OI",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/OI/theme",
+      "history": "",
+      "homepage": "/rest/api/content/375357578"
+    },
+    "_links": {
+      "webui": "/spaces/OI",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/OI"
+    }
+  },
+  {
+    "id": 707821594,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/707821594",
+    "key": "ODAFR",
+    "alias": "ODAFR",
+    "name": "Oncology Data Asset for RWE",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/ODAFR/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=ODAFR",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/ODAFR/theme",
+      "history": "",
+      "homepage": "/rest/api/content/707821714"
+    },
+    "_links": {
+      "webui": "/spaces/ODAFR",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/ODAFR"
+    }
+  },
+  {
+    "id": 414973974,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/414973974",
+    "key": "OIS",
+    "alias": "OIS",
+    "name": "Oncology Insights",
+    "description": {
+      "plain": {
+        "value": "Space to share Oncology Insights documents",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/OIS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=OIS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/OIS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/414974185"
+    },
+    "_links": {
+      "webui": "/spaces/OIS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/OIS"
+    }
+  },
+  {
+    "id": 497647618,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/497647618",
+    "key": "OU",
+    "alias": "OU",
+    "name": "Oncology UM",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/OU/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=OU",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/OU/theme",
+      "history": "",
+      "homepage": "/rest/api/content/497647728"
+    },
+    "_links": {
+      "webui": "/spaces/OU",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/OU"
+    }
+  },
+  {
+    "id": 2953347106,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/2953347106",
+    "key": "PMO",
+    "alias": "PMO",
+    "name": "PMO",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/PMO/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=PMO",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/PMO/theme",
+      "history": "",
+      "homepage": "/rest/api/content/2953347472"
+    },
+    "_links": {
+      "webui": "/spaces/PMO",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/PMO"
+    }
+  },
+  {
     "id": 750452744,
     "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/750452744",
     "key": "PM",
@@ -441,6 +1253,228 @@
     "_links": {
       "webui": "/spaces/PM",
       "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/PM"
+    }
+  },
+  {
+    "id": 3669000683,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3669000683",
+    "key": "QE",
+    "alias": "QE",
+    "name": "QA Engineering",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/QE/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=QE",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/QE/theme",
+      "history": "",
+      "homepage": "/rest/api/content/3669001700"
+    },
+    "_links": {
+      "webui": "/spaces/QE",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/QE"
+    }
+  },
+  {
+    "id": 392953966,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/392953966",
+    "key": "QF",
+    "alias": "QF",
+    "name": "QBR Factory",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/QF/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=QF",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/QF/theme",
+      "history": "",
+      "homepage": "/rest/api/content/392954081"
+    },
+    "_links": {
+      "webui": "/spaces/QF",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/QF"
+    }
+  },
+  {
+    "id": 148373520,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/148373520",
+    "key": "SE",
+    "alias": "SE",
+    "name": "Software Engineering",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/SE/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=SE",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/SE/theme",
+      "history": "",
+      "homepage": "/rest/api/content/148373671"
+    },
+    "_links": {
+      "webui": "/spaces/SE",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/SE"
+    }
+  },
+  {
+    "id": 176193606,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/176193606",
+    "key": "SS",
+    "alias": "SS",
+    "name": "Software Engineering - SoftServe Team",
+    "description": {
+      "plain": {
+        "value": "Team space for the SoftServe development team",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/SS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=SS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/SS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/176193816"
+    },
+    "_links": {
+      "webui": "/spaces/SS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/SS"
+    }
+  },
+  {
+    "id": 256639038,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/256639038",
+    "key": "SSS",
+    "alias": "SSS",
+    "name": "Triple S",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/SSS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=SSS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/SSS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/256639164"
+    },
+    "_links": {
+      "webui": "/spaces/SSS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/SSS"
+    }
+  },
+  {
+    "id": 3346890764,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/3346890764",
+    "key": "UCSCS",
+    "alias": "UCSCS",
+    "name": "UM - Customer Support & Client Services",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/UCSCS/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=UCSCS",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/UCSCS/theme",
+      "history": "",
+      "homepage": "/rest/api/content/3346891131"
+    },
+    "_links": {
+      "webui": "/spaces/UCSCS",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/UCSCS"
     }
   }
 ]

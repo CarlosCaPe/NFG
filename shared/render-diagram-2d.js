@@ -174,6 +174,40 @@ function distributeEvenly(startY, availH, count, nodeH) {
 // ═══════════════════════════════════════════════════════════════════════════
 function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
+/** Wrap text into lines that fit within maxPx width. Estimates ~7.5px per char at font-size 13. */
+function wrapText(text, maxPx, charWidth) {
+  charWidth = charWidth || 7.5;
+  const maxChars = Math.floor(maxPx / charWidth);
+  if (text.length <= maxChars) return [text];
+  // Split on spaces first; for tokens longer than maxChars, split on / or ·
+  const rawWords = text.split(/\s+/);
+  const words = [];
+  for (const w of rawWords) {
+    if (w.length <= maxChars) { words.push(w); continue; }
+    // Break long tokens (e.g. URLs) at / keeping the delimiter at end of first part
+    const parts = w.split(/(?<=\/)/);
+    let chunk = '';
+    for (const p of parts) {
+      if ((chunk + p).length > maxChars && chunk) { words.push(chunk); chunk = p; }
+      else { chunk += p; }
+    }
+    if (chunk) words.push(chunk);
+  }
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    const test = cur ? cur + ' ' + w : w;
+    if (test.length > maxChars && cur) {
+      lines.push(cur);
+      cur = w;
+    } else {
+      cur = test;
+    }
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
 function nodeBox(x, y, w, h, colors, logoKey, name, subtitle, tag, badge) {
   const rx = 8;
   let svg = '';
@@ -202,10 +236,21 @@ function nodeBox(x, y, w, h, colors, logoKey, name, subtitle, tag, badge) {
 
   // Text — positioned right of logo, or left-aligned if no logo
   const textX = hasLogo ? logoX + logoSize + 10 : x + 14;
-  const nameY = y + 36;
+  const rightPad = 8; // padding before card right edge
+  const availTextW = w - (textX - x) - rightPad;
+
+  // Subtitle: word-wrap into multiple lines (font-size 13, ~7.5px/char)
+  const subLines = subtitle ? wrapText(subtitle, availTextW, 7.5) : [];
+  const lineH = 15; // line height for subtitle
+
+  // Vertically center the text block (name + subtitle lines) within the card
+  const textBlockH = 16 + (subLines.length ? 4 + subLines.length * lineH : 0); // name(16) + gap(4) + lines
+  const nameY = y + Math.max(20, Math.round((h - textBlockH) / 2) + 14);
+
   svg += `<text x="${textX}" y="${nameY}" font-family="${T.font}" font-size="16" font-weight="600" fill="${colors.text}">${esc(name)}</text>`;
-  if (subtitle) {
-    svg += `<text x="${textX}" y="${nameY + 18}" font-family="${T.font}" font-size="13" fill="${T.textSecondary}">${esc(subtitle)}</text>`;
+
+  for (let li = 0; li < subLines.length; li++) {
+    svg += `<text x="${textX}" y="${nameY + 18 + li * lineH}" font-family="${T.font}" font-size="13" fill="${T.textSecondary}">${esc(subLines[li])}</text>`;
   }
 
   // Tag badge (bottom-right inside card)
@@ -334,11 +379,11 @@ function buildArchitectureDiagram() {
   const LANE_BOT = LEGEND_TOP - 10;
   const AVAIL = LANE_BOT - CONTENT_TOP;
 
-  // ── SWIMLANE X-POSITIONS (per spec) ──
+  // ── SWIMLANE X-POSITIONS (content-aware proportional sizing) ──
   const L1 = { x: 20, w: 290 };
-  const L2 = { x: 330, w: 560 };
-  const L3 = { x: 910, w: 340 };
-  const L4 = { x: 1270, w: 450 };
+  const L2 = { x: 330, w: 672 };   // +112px from L4 — room for 2 wider sub-columns
+  const L3 = { x: 1022, w: 340 };
+  const L4 = { x: 1382, w: 338 };  // −25% — consumer subtitles are short
 
   // ── PRE-COMPUTE ALL NODE POSITIONS ──
 
@@ -348,8 +393,8 @@ function buildArchitectureDiagram() {
 
   // Lane 2: two sub-columns, compact gaps
   // Left: ADF + Medallion (4 nodes). Right: UC (3 nodes, starting at Gold's Y)
-  const l2LX = L2.x + PAD, l2LW = 240;                                 // x=350, w=240
-  const l2RX = L2.x + PAD + l2LW + 50, l2RW = 240;                     // x=640, w=240
+  const l2LX = L2.x + PAD, l2LW = 290;                                 // wider Medallion cards
+  const l2RX = L2.x + PAD + l2LW + 50, l2RW = 290;                     // wider Unity Catalog cards
   const adfY = srcYs[0]; // ADF aligned with first source → horizontal arrows
   const l2LeftYs = Array.from({ length: 4 }, (_, i) => adfY + i * (NODE_H + COMPACT_GAP));
   const goldY = l2LeftYs[3];
@@ -538,10 +583,11 @@ function buildNewumFlowDiagram() {
   const CONTENT_TOP = 70;
   const LEGEND_TOP = H - 106;
 
-  // ── Column positions ──
-  const pipeX = 34, pipeW = 340;
-  const authX = 410, authW = 340;
-  const conX = 790, conW = 340;
+  // ── Column positions (content-aware proportional sizing) ──
+  // Pipeline widest (45-char subs), auth medium (38-char), consumers narrowest (32-char)
+  const pipeX = 30, pipeW = 460;
+  const authX = 530, authW = 400;
+  const conX = 970, conW = 360;
 
   // ── Pipeline: 8 nodes, compact gaps ──
   const pipeYs = Array.from({ length: 8 }, (_, i) => CONTENT_TOP + i * (NODE_H + COMPACT_GAP));
@@ -594,7 +640,7 @@ function buildNewumFlowDiagram() {
     { logo: 'databricks', name: 'Bronze Layer', sub: 'Raw ingestion — source-zone aligned tables', tag: 'LAYER', colors: C.bronze },
     { logo: 'databricks', name: 'Silver Layer', sub: 'Cleaned, conformed, deduplicated', tag: 'LAYER', colors: C.silver },
     { logo: 'databricks', name: 'Gold Layer', sub: 'Curated aggregates, business-ready views', tag: 'LAYER', colors: C.gold },
-    { logo: 'delta', name: 'Delta Tables (Unity Catalog)', sub: '127 tables · 6 catalogs · ACID transactions', tag: 'LAYER', colors: C.delta },
+    { logo: 'delta', name: 'Delta Tables (Unity Catalog)', sub: '127 Delta tables · 8 catalogs · ACID transactions', tag: 'LAYER', colors: C.delta },
     { logo: 'iceberg', name: 'UniForm (IcebergCompatV2)', sub: 'Automatic Iceberg metadata bridge', tag: 'PROTOCOL', colors: C.uniform },
     { logo: 'iceberg', name: 'Iceberg REST Catalog API', sub: '/api/2.1/unity-catalog/iceberg-rest', tag: 'PROTOCOL', colors: C.api },
   ];

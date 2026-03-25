@@ -13,7 +13,7 @@ pdf_options:
 > **Author**: Carlos Carrillo (`ccarrillo@oncologyanalytics.com`)
 > **Date**: 2026-03-23 (updated 2026-03-25)
 > **Status**: COMPLETE — Investigation finished. Iceberg REST endpoint validated; 3 implementation prerequisites identified.
-> **Project context**: `clients/oncohealth/knowledge.json` v1.12.0 — operational facts cited as [K].
+> **Project context**: `../../knowledge.json` v1.14.0 — operational facts cited as [K].
 
 ---
 
@@ -470,5 +470,5 @@ All findings sourced from official Microsoft/Databricks documentation:
 4. [Databricks service principals](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/)
 5. [PyIceberg REST catalog configuration](https://py.iceberg.apache.org/configuration/#rest-catalog)
 6. [Iceberg REST API spec (Apache)](https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml)
-7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.12.0 (2026-03-25) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
-8. **[DB]** Databricks TEST workspace API capture: `clients/oncohealth/output/databricks/` — 7 JSON files, 987 KB. Full UC inventory validated 2026-03-24.
+7. **[K]** Project knowledge base: `../../knowledge.json` v1.14.0 (2026-03-25) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
+8. **[DB]** Databricks TEST workspace API capture: `../../output/databricks/` — 7 JSON files, 987 KB. Full UC inventory validated 2026-03-24.
