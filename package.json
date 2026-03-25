@@ -3,8 +3,10 @@
     "exceljs": "^4.4.0",
     "js-yaml": "^4.1.1",
     "mammoth": "^1.12.0",
+    "md-to-pdf": "^5.2.5",
     "pdf-parse": "^2.4.5",
     "pdfreader": "^3.0.8",
-    "playwright": "^1.58.2"
+    "playwright": "^1.58.2",
+    "xlsx": "^0.18.5"
   }
 }

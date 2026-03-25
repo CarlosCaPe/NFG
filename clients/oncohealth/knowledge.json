@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.10.0",
-  "last_updated": "2026-03-24",
+  "version": "1.11.0",
+  "last_updated": "2026-03-25",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -62,10 +62,10 @@
   },
 
   "tech_stack": {
-    "backend": [".NET 10", "MS-SQL (OADB)", "PostgreSQL (newUM core OLTP)", "Azure Service Bus", "Okta (auth)", ".NET WebAPI (API Gateway)", "Azure Cloud Functions", "Kubernetes (AKS)", "Azure Blob Storage", "NUnit"],
+    "backend": [".NET 10", "MS-SQL (OADB)", "PostgreSQL (newUM core OLTP)", "Azure Service Bus", "Okta (auth)", ".NET WebAPI (API Gateway)", "Azure Cloud Functions", "Kubernetes (AKS)", "Azure Blob Storage", "NUnit", "CosmosDB (Admin Portal)", "Mirth (HL7/integration)"],
     "frontend": ["React", "MUI + MUI X (Material Design 3)", "Vite", "TanStack Query", "Vitest + RTL", "React Hook Forms", "Playwright (E2E)"],
     "devops": ["Azure DevOps (ADO)", "Databricks Asset Bundles (DAB)", "Kubernetes (AKS)", "SonarQube", "DataDog", "Azure AppInsights"],
-    "data": ["Databricks (Unity Catalog: Bronze/Silver/Gold)", "Delta Live Tables (DLT)", "Great Expectations (Silver DQ)", "Airflow on AKS (orchestration)", "MS-SQL", "Azure Blob Storage (ADLS Gen2)", "Azure Data Factory", "Synapse (legacy, going away)", "SSIS (legacy, going away)"],
+    "data": ["Databricks (Unity Catalog: Bronze/Silver/Gold)", "Delta Live Tables (DLT)", "Great Expectations (Silver DQ)", "Airflow on AKS (orchestration)", "Prefect (orchestration, some payers)", "MS-SQL", "Azure Blob Storage (ADLS Gen2)", "Azure Data Factory", "Synapse (legacy, going away)", "SSIS (legacy, going away)"],
     "services": ["Letters v2", "Chronos TaT", "Document Manager", "Job Monitor", "Drugs API", "Fax Service", "Kaleidescope", "Nuance", "Twilio/IVR", "Event Orchestrator", "Rules Engine"],
     "ai_coding": "Strongly encouraged — Claude Code provisioned, Cursor on request",
     "confirmed": true,
@@ -237,6 +237,36 @@
       "email": "imariienko@oncologyanalytics.com",
       "confirmed": true,
       "source": "Teams async daily + access inventory"
+    },
+    {
+      "name": "Will Crawford",
+      "role": "CTO — OncoHealth/Newfire LLC. Ultimate owner of InfoSec program. Approved Asset Management + InfoSec policies.",
+      "confirmed": true,
+      "source": "GDrive Assessment Final + NFG policies"
+    },
+    {
+      "name": "Gordon Wong",
+      "role": "VP Data & AI",
+      "confirmed": true,
+      "source": "GDrive Assessment Final — staffing org chart"
+    },
+    {
+      "name": "Jonathan Abbett",
+      "role": "VP UI/UX",
+      "confirmed": true,
+      "source": "GDrive Assessment Final — staffing org chart"
+    },
+    {
+      "name": "Chad Howell",
+      "role": "Director of Cybersecurity / InfoSec — authored Asset Management + InfoSec policies",
+      "confirmed": true,
+      "source": "GDrive Assessment Final + NFG policies"
+    },
+    {
+      "name": "Sandy Gress",
+      "role": "Product / Client Strategy",
+      "confirmed": true,
+      "source": "Teams calendar + GDrive Assessment"
     }
   ],
 
@@ -248,13 +278,14 @@
       "SharePoint access (Okta SSO working, Excel/Word Online loaded)",
       "Miro REST API (NFG-Reader app, 130K chars from NewUM board)",
       "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)",
-      "Databricks TEST workspace — access granted, PAT validated (2026-03-24). Token 'visualstudio-carlos' (expires 2027-03-24), API 200 OK on clusters/list. Saved in .env as DATABRICKS_TEST_TOKEN."
+      "Databricks TEST workspace — PAT validated (2026-03-24), 12 API endpoints, full UC inventory captured",
+      "Google Drive folder — 41 files extracted, 21 text outputs, 5.5M chars (2026-03-25)",
+      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23)"
     ],
     "pending": [
       "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20). REST API capture working for everything else.",
-      "Databricks TEST workspace — access granted, PAT validated (2026-03-24). Token 'visualstudio-carlos' (expires 2027-03-24), API 200 OK on clusters/list. Saved in .env as DATABRICKS_TEST_TOKEN.",
       "Database access (email devopsrequest@oncologyanalytics.com)",
-      "Miro Onco board (active) — PDF export working. Rachel requested board invite for carlos.carrillo@newfireglobal.com (2026-03-23, corrected from oncohealth email). Check Monday for invite.",
+      "Miro Onco board (active) — PDF export working. Rachel requested board invite for carlos.carrillo@newfireglobal.com (2026-03-23). Check Monday for invite.",
       "Carlos's access inventory row is blank — needs to be filled in with current access status",
       "MATIS access — separate request to clientsupport@oncohealth.us"
     ],
@@ -263,8 +294,8 @@
       "results": [
         { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 38191, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "25 pages. Doc ID: 1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew" },
         { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 1689, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "2 pages template. Doc ID: 19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno" },
-        { "resource": "Google Drive folder", "status": "NOT_CAPTURED", "chars": 0, "note": "https://drive.google.com/drive/folders/1MX5o74zRMyYIPTLmJAyCyCS5HC79Wes4 — never accessed. Contains assessment PDFs." },
-        { "resource": "Assessment PDFs (3 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "OncoHealth Assessment - Final.pdf, Interim 12-09-2025.pdf, Second Interim 01-10-2025.pdf. Likely in Google Drive folder." },
+        { "resource": "Google Drive folder", "status": "COMPLETE", "chars": 5500000, "method": "ZIP download + pdfreader + xlsx + mammoth", "note": "41 files extracted (19 PDFs, 5 XLSX, 2 DOCX, images, SVG). 21 text files produced. Includes assessments, architecture diagrams, data dictionaries, eligibility ADO analysis, staffing plan. 6 PDFs are image-only (diagrams). Captured 2026-03-25." },
+        { "resource": "Assessment PDFs (3 files)", "status": "COMPLETE", "chars": 83000, "method": "pdfreader text extraction", "note": "OncoHealth Assessment Final (60K), Interim 12-09-2025, Second Interim 01-10-2025. All extracted. Final covers MATIS monolith analysis, service tiers, cost scenarios." },
         { "resource": "Policy documents (4 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "Secure development, Cryptography, Data management, Branching strategy. Links are placeholders — never provided." },
         { "resource": "Miro NewFire board (assessment, stale)", "status": "BLOCKED", "action": "Board not found (404) — may have been moved/deleted or token expired", "note": "Previously captured 130,902 chars. Board ID uXjVIx2JdOQ= no longer accessible." },
         { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
@@ -275,12 +306,12 @@
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
         { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." }
       ],
-      "complete": 9,
+      "complete": 11,
       "partial": 0,
-      "not_captured": 3,
+      "not_captured": 1,
       "pending": 1,
       "blocked": 0,
-      "total_chars_captured": 2834855,
+      "total_chars_captured": 8334855,
       "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
     },
     "confirmed": true,
@@ -395,6 +426,91 @@
         "airflow_scheduler": "99.9%/month"
       },
       "testing": "DR runbook tested quarterly (tabletop). Live failover to DR workspace annually."
+    }
+  },
+
+  "matis_monolith": {
+    "$comment": "Facts from GDrive Assessment Final (60K chars). MATIS is the legacy system newUM replaces.",
+    "source": "GDrive Assessment Final.pdf (extracted 2026-03-25)",
+    "architecture": {
+      "controllers": "45+",
+      "managers": "218 (business logic layer)",
+      "ui_architectures": 3,
+      "ui_frameworks": ["AngularJS v1 (legacy)", "Angular v18 (partial migration)", "Razor Pages (MVC)"],
+      "god_object": "ManageProtocolController — 55 dependencies injected",
+      "test_coverage": "~5%",
+      "any_types": 303,
+      "memory_leaks": 229,
+      "csrf_occurrences": 855,
+      "feature_flags_in_webconfig": 56,
+      "blob_storage_containers": "212+"
+    },
+    "service_tiers": {
+      "GOOD": ["Letters V2", "D&A Analytics", "Admin Portal"],
+      "BAD": ["Logging", "Eligibility", "TaT (Turnaround Time)"],
+      "UGLY": ["Matis Core", "Business Rules Engine", "Provider"]
+    },
+    "admin_portal": {
+      "tech": ["CosmosDB", "Azure Functions"],
+      "note": "Different stack from rest of system — already partially modernized"
+    },
+    "security_issues": {
+      "critical": ["Path traversal in AppealController/AccountController"],
+      "high": ["855 CSRF occurrences", "5% test coverage", "303 any types"],
+      "recommendation": "Feature flags should migrate to Azure App Configuration ($40-100/mo)"
+    },
+    "cost_scenarios": {
+      "phase_1_12mo": "$1M-$2M",
+      "phase_2_24mo": "$4M-$8M",
+      "phase_3_36mo": "$5M-$10M"
+    },
+    "staffing_plan": {
+      "phases": "5 (Nov 2025 – Mar 2026 ramp)",
+      "phase_1_ftes": "9-10",
+      "phase_2_ftes": "16-18",
+      "critical_first_hires": ["Tech Architect", "DevOps", "Data Engineer Lead", "Rules Engine Specialist", "Security Engineer"],
+      "cost_phase_1": "$800K-$1.1M",
+      "cost_phase_2": "$2.2-$2.8M/year"
+    },
+    "newum_components": ["Case Engine", "Case State Machine", "Case Configuration Manager", "Databricks Ingest Gateway"],
+    "smartum_risk": "Business continuity gap — SmartUM is current fallback during MATIS transition"
+  },
+
+  "data_flows": {
+    "$comment": "Detailed data flow info from GDrive XLSX files (captured 2026-03-25).",
+    "auth_delivery": {
+      "payer_count": 21,
+      "formats": ["Proprietary", "278 EDI", "FHIR", "txt"],
+      "delivery_methods": ["SFTP", "API", "Mirth", "Azure Data Factory"],
+      "schedules": "Real-time/15-min to daily (varies by payer/med type)",
+      "destinations": ["ADLS", "Enterprise Data Lake", "SmartUM", "Airflow"],
+      "med_vs_pharmacy": "Separate auth flows for Med (HCPCS) vs Pharmacy (NDC)",
+      "orchestration_tools": ["Airflow", "Prefect", "Mirth", "Azure Data Factory"],
+      "source": "AuthDelivery-and-Pipelines.xlsx"
+    },
+    "eligibility_etl": {
+      "pipeline": "Payer files (SFTP/FTPS/API) → ETL → EligibilityMS (MS-SQL) → Synapse (lvl0/1/2) → Databricks",
+      "payer_count": "20+",
+      "file_formats": ["pipe-delimited", "fixed-width", "834 EDI", "270/271 EDI"],
+      "ado_work_items": "1000+ eligibility-specific items tracked",
+      "fields_expanded": "50+ fields added over time (MBI, Contract ID, PBP ID, Preferred Language, Out-of-Area flag)",
+      "de_identification": "Redgate data masker / hash techniques for dev/test",
+      "dual_eligibility": "Medicare > Medicaid prioritization logic",
+      "synapse_medallion": "Bronze (lvl0, raw ETL) → Silver (lvl1, mapped/cleaned) → Gold (lvl2, business-ready)",
+      "source": "OncoHealth-Eligibility.xlsx + AuthDelivery-and-Pipelines.xlsx"
+    },
+    "case_workflow": {
+      "steps": ["Login (Okta SSO)", "Plan Selector", "Account Picker", "Patient Search", "Verify Eligibility", "Protocol Assignment", "Create Case", "Process Assignment", "Complete"],
+      "roles": ["CRS", "RN", "PharmD", "MD", "Admin"],
+      "auto_vs_manual": "AUTO protocols skip clinical review; NON-AUTO route to MD/RN/PharmD",
+      "multi_tenant": true,
+      "source": "Case Workflow Forms_Data Dictionary.xlsx + Site Map & Page Inventory.xlsx"
+    },
+    "ado_analysis": {
+      "total_work_items": 2916,
+      "baseline_vs_custom": "78% Baseline / 22% Custom",
+      "top_domains": ["Eligibility", "Rules engine", "Auth/Response", "PBM integrations"],
+      "source": "OncoHealth-ADO-Work-Items-Analysis.xlsx (3.8MB, 6 sheets)"
     }
   },
 

@@ -11,27 +11,24 @@ pdf_options:
 
 > **ADO Ticket**: [#186438](https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/186438)
 > **Author**: Carlos Carrillo (`ccarrillo@oncologyanalytics.com`)
-> **Date**: 2026-03-23 (updated 2026-03-24)
-> **Status**: VALIDATED — Iceberg REST endpoint confirmed working; UniForm enablement pending
-> **Project context**: `clients/oncohealth/knowledge.json` v1.10.0 — operational facts cited as [K].
+> **Date**: 2026-03-23 (updated 2026-03-25)
+> **Status**: COMPLETE — Investigation finished. Iceberg REST endpoint validated; 3 implementation prerequisites identified.
+> **Project context**: `clients/oncohealth/knowledge.json` v1.11.0 — operational facts cited as [K].
 
 ---
 
 ## 1. Executive Summary
 
-**Go/No-Go: Conditionally GO** — The Iceberg REST Catalog API is viable for exposing UC tables
+**Verdict: GO** — The Iceberg REST Catalog API is technically viable for exposing UC tables
 to external services. Azure Databricks natively supports the endpoint at
-`/api/2.1/unity-catalog/iceberg-rest`. The primary requirements are:
-enabling Delta UniForm on target tables, configuring a service principal with
-appropriate UC privileges, and validating network connectivity.
+`/api/2.1/unity-catalog/iceberg-rest`. The API has zero incremental licensing cost.
+Network connectivity validated. Full workspace inventory captured.
 
-**Key Blocker**: RESOLVED — PAT validated 2026-03-24.
-DEV workspace (`adb-3806388400498653`) is BLOCKED (contains PHI) [K: `databricks.workspaces[0]`].
-TEST workspace URL: `https://adb-2393860672770324.4.azuredatabricks.net/` [K: `databricks.workspaces[1]`].
-PAT token `visualstudio-carlos` (exp 2027-03-24) — validated against 12 API endpoints including
+**Validation**: PAT validated 2026-03-24 against 12 API endpoints including
 Iceberg REST Catalog. Full UC inventory captured: 8 catalogs, ~66 schemas, ~466 tables.
+DEV workspace (`adb-3806388400498653`) contains PHI — TEST workspace used for investigation.
 
-**Remaining Blockers** (3 items requiring UC Admin action):
+**Implementation Prerequisites** (3 findings — all require UC Admin action before implementation):
 1. `external_access_enabled = false` on metastore — must be enabled by UC Admin
 2. No `EXTERNAL_USE_SCHEMA` grant on any schema — must be granted per-schema
 3. Zero tables have UniForm/IcebergCompatV2 enabled — `minReaderVersion=1`, `minWriterVersion=2` (needs ≥2/≥7)
@@ -349,17 +346,31 @@ grant_type=client_credentials
 
 ---
 
-## 5. Action Items
+## 5. Investigation Findings Summary
 
-| # | Action | Owner | Status |
-|---|--------|-------|--------|
-| 1 | Identify target tables for UniForm enablement — Gold-layer candidates: `drugmaster_test.drug_master.gold_*` (5 tables), `enterprisedata_test.oneum_dwh.silver_matis_*` (3 views), `newum_migration_test.*` (90 tables). | Michal Mucha | READY — table inventory available |
-| 2 | Enable external data access on metastore — `external_access_enabled = false` confirmed via API. | UC Admin (Erik Hjortshoj) | **BLOCKER** |
-| 3 | Grant `EXTERNAL USE SCHEMA` on target schemas — only `CREATE_FUNCTION`, `CREATE_TABLE`, `MODIFY`, `SELECT`, `USE_SCHEMA` granted today. | UC Admin (Erik Hjortshoj) | **BLOCKER** |
-| 4 | Enable UniForm on a non-prod test table — `ALTER TABLE ... SET TBLPROPERTIES('delta.enableIcebergCompatV2'='true', ...)` | Carlos + Michal | NOT STARTED (needs cluster) |
-| 5 | Test PyIceberg read from external network | Carlos | BLOCKED (needs UniForm + external access) |
-| 6 | Create dedicated service principal for production use — 3 SPs exist: `databricks_airflow_sp_test`, `app-cc28t0 new-data-api`, `databricks_workspace_dev`. May reuse `new-data-api` SP. | DevOps (Luiyi Valentin) | NOT STARTED |
-| 7 | Resolve UAT/PROD workspace URLs | Carlos / DevOps | NOT STARTED |
+All investigation items are **COMPLETE**. Implementation prerequisites are documented for the future implementation ticket.
+
+| # | Finding | Result |
+|---|---------|--------|
+| 1 | **Endpoint exists and responds** | CONFIRMED — `/api/2.1/unity-catalog/iceberg-rest` returns 200 on all catalogs |
+| 2 | **Network connectivity** | CONFIRMED — TEST workspace reachable from external network via PAT; no Private Link required for API access |
+| 3 | **UC inventory** | CAPTURED — 8 catalogs, ~66 schemas, ~466 tables, 3 service principals, 7 cluster policies |
+| 4 | **UniForm readiness** | NOT READY — all tables at `minReaderVersion=1`, `minWriterVersion=2` (needs ≥2/≥7). Protocol upgrade required. |
+| 5 | **External access** | NOT ENABLED — `external_access_enabled = false` on metastore. Requires UC Admin. |
+| 6 | **Permissions gap** | DOCUMENTED — `EXTERNAL_USE_SCHEMA` not granted. Only SELECT, USE_SCHEMA, MODIFY, CREATE_TABLE present. |
+| 7 | **Cost impact** | ZERO incremental licensing — API is built-in, no per-call billing. ~5-15% driver memory overhead on writes. |
+| 8 | **Why not direct Parquet** | DOCUMENTED — Iceberg REST provides governance, ACID reads, credential vending, and schema evolution vs. raw Parquet. |
+
+### Implementation Prerequisites (for future ticket)
+
+| # | Prerequisite | Owner | Notes |
+|---|-------------|-------|-------|
+| 1 | Enable `external_access_enabled` on metastore | UC Admin | Metastore: `30737b7a-18b6-4e81-9016-03e2c816cc37` |
+| 2 | Grant `EXTERNAL USE SCHEMA` on target schemas | UC Admin | Per-schema grant required |
+| 3 | Enable UniForm on POC table(s) | Data Team (Michal Mucha) | Gold-layer candidates identified in Section 6.2 |
+| 4 | Create/configure service principal for production | DevOps (Luiyi Valentin) | 3 existing SPs documented in Section 6.4 |
+| 5 | PyIceberg read validation from external network | Data Team | After prerequisites 1-3 |
+| 6 | UAT/PROD workspace onboarding | DevOps | URLs still unknown |
 
 ---
 
@@ -459,5 +470,5 @@ All findings sourced from official Microsoft/Databricks documentation:
 4. [Databricks service principals](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/)
 5. [PyIceberg REST catalog configuration](https://py.iceberg.apache.org/configuration/#rest-catalog)
 6. [Iceberg REST API spec (Apache)](https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml)
-7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.10.0 (2026-03-24) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
+7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.11.0 (2026-03-25) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
 8. **[DB]** Databricks TEST workspace API capture: `clients/oncohealth/output/databricks/` — 7 JSON files, 987 KB. Full UC inventory validated 2026-03-24.

@@ -1,0 +1,5 @@
+
+
+--- PAGE 1 ---
+
+D r u g s M S n e w U M   d b M i g r a t i o n   P i p e l i n e N e w U M  C  a s e   E n g i n e D o c u m e n t s   S e r v i c e  C  a s e S c h e m a P r o v i d e r S c h e m a E v e n t s   &   T a T  C  a s e   S t a t e   M a c h i n e E x t e r n a l    C  o m m s n e w U M   U I P r o v i d e r   P i p e l i n e A d m i n   P o r t a l O k t a M a i l   M o n i t o r  C  a s e    C  o n ﬁ g   M a n a g e r M o n i t o r S c h e m a S a l e s f o r c e E l i g i b i l i t y  C  h e c k e r D r u g  C  h e c k e r n e w U M   A r c h i t e c t u r e   M o c k u p E l i g i b i l i t y S c h e m a i n c l u d e s   A I   h o o k s t e m p o r a r y   p i p e l i n e r e q u i r e s   m o c k i n g p r e x i s t i n g   c o m p o n e n t s D & A P l a t f o r m  C  o n ﬁ g B l o b s E l i g i b i l i t y   P i p e l i n e O A D B  C  a s e   W o r k ﬂ o w  C  o n ﬁ g u r a t i o n s E l i g i b i l i t y D B D a t a b r i c k s   I n g e s t  G  a t e w a y D r u g s   S e r v i c e  C  o n ﬁ d e n t i a l   -   N o t   f o r   d i s t r i b u t i o n 

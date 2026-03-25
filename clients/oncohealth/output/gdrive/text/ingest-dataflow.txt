@@ -1,0 +1,5 @@
+
+
+--- PAGE 1 ---
+
+I n g e s t   D a t a ﬂ o w P r o v i d e r   ( 1 - 5   ﬁ l e   w e e k l y ) F o r m u l a r y   ( 1   ﬁ l e   w e e k l y ) N / A   i f   n o   p h a r m a c y M e d i c a l    C  l a i m s   ( m o n t h l y ) P h a r m a c y    C  l a i m s   ( m o n t h l y ) M e d i c a l   A u t h P h a r m a c y   A u t h A u t h   R e s p o n s e O n e U M I r i s A n a l y t i c s R e g u l a t o r y   R e p o r t s D a s h b o a r d s S L A   R e p o r t s E l i g i b i l i t y   P i p e l i n e P r o v i d e r   P i p e l i n e F o r m u l a r y   P i p e l i n e  C  l a i m s   P i p e l i n e E l i g i b i l i t y   ( 1 - 2   ﬁ l e s   d a i l y )  C  o n ﬁ d e n t i a l   -   N o t   f o r   d i s t r i b u t i o n 

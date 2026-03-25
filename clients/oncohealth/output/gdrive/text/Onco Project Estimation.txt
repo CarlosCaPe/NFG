@@ -1,0 +1,1942 @@
+This is a DRAFT scratch document, details can be copied out of this as the planning progresses.
+
+
+
+Note that the project scope does not specify which organization is providing resources.  It’s assumed the client will include their staff in the project team, but for budgeting purposes we will account for … mostly offshore cost estimation.  Some of the Onco staff may need NF backfills.
+
+
+
+Overview (mostly AI generated from the final assessment document)
+
+
+
+Core Recommendations:
+
+Phased Approach:
+
+Phase 1 (Months 1-6): 9-10 FTEs focused on foundation - getting architecture, DevOps, and core development established
+
+Phase 2 (Months 6-12): 16-18 FTEs at full strength for major development work
+
+Phase 3 (12+ months): 12-14 FTEs for steady-state operations
+
+Critical First Hires:
+
+Technical Architect - Sets the vision and standards
+
+DevOps Engineer - Establishes CI/CD and automation
+
+Data Engineer Lead - Builds the Databricks foundation
+
+Technology Specialists:
+
+Rules Engine Specialist to extract business logic from code and create a manageable rules system
+
+Security Engineer for HIPAA compliance and security best practices
+
+Strong React and .NET development teams for modernization
+
+Budget Estimate:
+
+Phase 1: ~$800K-$1.1M (6 months)
+
+Phase 2: ~$2.2M-$2.8M (annual)
+
+Steady State: ~$1.6M-$2.1M (annual)
+
+The plan includes cost optimization strategies like using contractors for specialized roles, potential offshore resources for mid-level positions, and managed services where appropriate.
+
+Would you like me to elaborate on any specific role, adjust the team composition, or create detailed job descriptions for priority positions?
+
+
+
+Project Details (again AI generated) 
+
+
+
+OncoHealth Technology Modernization - Staffing Plan
+
+Executive Summary
+
+This staffing plan addresses the critical technology gaps identified in the OncoHealth assessment, focusing on modernizing the platform architecture, improving scalability, implementing proper DevOps practices, and establishing robust data governance.
+
+
+
+Technology Stack Overview
+
+Backend: .NET (C#) with MS SQL Server
+
+Frontend: React
+
+Rules Engine: Business Rules Engine (Drools.NET or similar)
+
+Data Platform: Azure Databricks
+
+Infrastructure: Azure Cloud
+
+
+
+Phase 1: Foundation & Stabilization (Months 1-6)
+
+Core Technical Leadership (3 FTEs)
+
+1. Technical Architect / Engineering Lead (1 FTE)
+
+Responsibilities:
+
+Define target state architecture
+
+Lead technical decision-making
+
+Establish architectural patterns and standards
+
+Guide API design and microservices strategy
+
+Mentor development teams
+
+Key Deliverables:
+
+Architecture blueprints
+
+Technology roadmap
+
+API standards documentation
+
+Code review guidelines
+
+2. DevOps/Platform Engineer (1 FTE)
+
+Responsibilities:
+
+Implement CI/CD pipelines (Azure DevOps)
+
+Establish Infrastructure as Code (Terraform/ARM templates)
+
+Set up monitoring and observability (Application Insights, Log Analytics)
+
+Automate deployment processes
+
+Implement blue-green deployment strategies
+
+Key Deliverables:
+
+Automated deployment pipelines
+
+Infrastructure automation
+
+Monitoring dashboards
+
+Disaster recovery procedures
+
+3. Data Engineer - Lead (1 FTE)
+
+Responsibilities:
+
+Design Databricks architecture
+
+Build data pipelines and ETL processes
+
+Implement data quality frameworks
+
+Establish data governance policies
+
+Optimize SQL Server performance
+
+Key Deliverables:
+
+Data pipeline framework
+
+Data quality metrics
+
+Performance optimization plan
+
+Data catalog
+
+
+
+Phase 2: Development & Modernization (Months 3-12)
+
+Backend Development Team (4-5 FTEs)
+
+4. Senior .NET Developer (2 FTEs)
+
+Responsibilities:
+
+Refactor monolithic applications to microservices
+
+Implement RESTful APIs using ASP.NET Core
+
+Develop business logic layers
+
+Optimize database queries and stored procedures
+
+Implement caching strategies (Redis)
+
+Focus Areas:
+
+Core authorization service modernization
+
+Member eligibility service
+
+Claims processing services
+
+5. Mid-Level .NET Developer (2 FTEs)
+
+Responsibilities:
+
+Develop new features and enhancements
+
+Write unit and integration tests
+
+Implement API endpoints
+
+Support legacy system maintenance during transition
+
+Focus Areas:
+
+Supporting services development
+
+Integration development
+
+Testing automation
+
+6. Rules Engine Specialist (1 FTE - can be contractor initially)
+
+Responsibilities:
+
+Design and implement business rules engine
+
+Migrate business logic from code to rules
+
+Create rules authoring interface
+
+Train business analysts on rules management
+
+Optimize rules execution performance
+
+Technology Options:
+
+NRules (open-source .NET)
+
+Drools.NET
+
+Microsoft Rules Engine
+
+Custom rules engine using Roslyn
+
+Key Deliverables:
+
+Rules engine framework
+
+Rules repository
+
+Rules testing framework
+
+Rules documentation
+
+Frontend Development Team (3 FTEs)
+
+7. Senior React Developer / Frontend Lead (1 FTE)
+
+Responsibilities:
+
+Establish React architecture and patterns
+
+Define component library standards
+
+Implement state management (Redux/Context API)
+
+Create reusable UI components
+
+Mentor frontend developers
+
+Key Deliverables:
+
+Component library
+
+Frontend architecture documentation
+
+Code standards and patterns
+
+Performance optimization guidelines
+
+8. React Developers (2 FTEs)
+
+Responsibilities:
+
+Build user interfaces
+
+Implement responsive designs
+
+Integrate with backend APIs
+
+Write frontend tests (Jest, React Testing Library)
+
+Optimize application performance
+
+Focus Areas:
+
+Portal development
+
+Provider interfaces
+
+Member-facing applications
+
+Data & Analytics Team (2-3 FTEs)
+
+9. Data Engineers (2 FTEs)
+
+Responsibilities:
+
+Build Databricks notebooks and jobs
+
+Implement Delta Lake architecture
+
+Create data transformation pipelines
+
+Develop data quality checks
+
+Optimize Spark jobs
+
+Focus Areas:
+
+Claims data processing
+
+Member data aggregation
+
+Reporting data marts
+
+10. Analytics Engineer / BI Developer (1 FTE)
+
+Responsibilities:
+
+Design analytical data models
+
+Build Power BI reports and dashboards
+
+Create self-service analytics capabilities
+
+Implement ML-ready datasets
+
+Focus Areas:
+
+Operational reporting
+
+Executive dashboards
+
+Predictive analytics support
+
+
+
+Phase 3: Quality & Security (Ongoing from Month 3)
+
+Quality Assurance & Security (2-3 FTEs)
+
+11. QA Engineer / SDET (1-2 FTEs)
+
+Responsibilities:
+
+Develop automated test suites
+
+Implement E2E testing (Playwright/Cypress)
+
+Create test data management strategies
+
+Perform regression testing
+
+Load and performance testing
+
+Key Deliverables:
+
+Test automation framework
+
+Test coverage reports
+
+Performance test results
+
+QA process documentation
+
+12. Security Engineer (1 FTE or contractor)
+
+Responsibilities:
+
+Implement security best practices
+
+Conduct security assessments
+
+Establish secure coding guidelines
+
+Implement HIPAA compliance controls
+
+Set up vulnerability scanning
+
+Manage secrets and certificate management
+
+Key Deliverables:
+
+Security architecture
+
+Compliance documentation
+
+Security testing procedures
+
+Incident response plan
+
+
+
+Supporting Roles
+
+Product & Project Management
+
+13. Technical Product Manager (1 FTE)
+
+Prioritize technical backlog
+
+Coordinate with business stakeholders
+
+Define feature requirements
+
+Manage release planning
+
+14. Scrum Master / Agile Coach (0.5 FTE)
+
+Facilitate agile ceremonies
+
+Remove blockers
+
+Coach teams on agile practices
+
+Track velocity and metrics
+
+Database Administration
+
+15. SQL Server DBA (0.5-1 FTE or contractor)
+
+Database performance tuning
+
+Backup and recovery
+
+Index optimization
+
+Query optimization
+
+High availability configuration
+
+
+
+Staffing Summary by Phase
+
+Phase 1 (Months 1-6): Foundation Team
+
+Total: 9-10 FTEs
+
+Technical Architect: 1
+
+DevOps Engineer: 1
+
+Data Engineer Lead: 1
+
+Senior .NET Developers: 2
+
+Senior React Developer: 1
+
+React Developer: 1
+
+QA Engineer: 1
+
+Technical Product Manager: 1
+
+Scrum Master: 0.5
+
+Phase 2 (Months 6-12): Full Team
+
+Total: 16-18 FTEs
+
+All Phase 1 roles, plus:
+
+Mid-Level .NET Developers: 2
+
+Rules Engine Specialist: 1
+
+React Developer: 1 (additional)
+
+Data Engineers: 2
+
+Analytics Engineer: 1
+
+QA Engineer: 1 (additional)
+
+Security Engineer: 1
+
+Phase 3 (Months 12+): Optimization & Maintenance
+
+Total: 12-14 FTEs (reduced as systems stabilize)
+
+Retain core team
+
+Convert some roles to part-time or contractor
+
+Focus shifts to feature development and optimization
+
+
+
+Engagement Models
+
+Full-Time Employees (Recommended for Core Roles)
+
+Technical Architect
+
+DevOps Engineer
+
+Data Engineer Lead
+
+Senior Developers (Backend & Frontend)
+
+Product Manager
+
+Contract/Augmented Staff (Flexibility)
+
+Mid-level developers
+
+Rules Engine Specialist (initial implementation)
+
+QA Engineers
+
+Security Engineer
+
+Database Administrator
+
+Managed Services Considerations
+
+DevOps Support: Azure consulting partner for infrastructure
+
+Security: Third-party security assessments and penetration testing
+
+QA: Test automation services for accelerated coverage
+
+
+
+Budget Considerations
+
+Annual Staffing Costs (Approximate)
+
+Phase 1 (Foundation - 6 months)
+
+Total: $800K - $1.1M for 6 months
+
+Average: $135K-$185K per resource annually
+
+Phase 2 (Full Team - 12 months)
+
+Total: $2.2M - $2.8M annually
+
+Includes senior technical leadership premium
+
+Phase 3 (Steady State)
+
+Total: $1.6M - $2.1M annually
+
+Optimized team composition
+
+Cost Optimization Strategies
+
+Use contractors for specialized, time-limited needs (Rules Engine, Security assessments)
+
+Leverage offshore/nearshore for mid-level development roles (potential 30-40% savings)
+
+Consider managed services for DevOps and infrastructure
+
+Implement staff augmentation for peak periods
+
+
+
+Success Metrics & KPIs
+
+Technical Metrics
+
+Code coverage: Target 80%+
+
+Deployment frequency: Weekly releases by Month 6
+
+Mean time to recovery (MTTR): < 1 hour
+
+API response times: < 200ms for 95th percentile
+
+System uptime: 99.9%
+
+Delivery Metrics
+
+Story points completed per sprint
+
+Sprint velocity trends
+
+Defect escape rate
+
+Technical debt reduction (track monthly)
+
+Business Metrics
+
+Time-to-market for new features
+
+Authorization processing time reduction
+
+System scalability (concurrent users supported)
+
+Cost per transaction
+
+
+
+Risk Mitigation
+
+Knowledge Transfer
+
+Pair programming for critical systems
+
+Documentation sprints
+
+Architecture decision records (ADRs)
+
+Regular knowledge sharing sessions
+
+Talent Retention
+
+Competitive compensation
+
+Modern technology stack
+
+Professional development budget
+
+Clear career progression paths
+
+Vendor Management
+
+Maintain relationships with 2-3 staff augmentation vendors
+
+Pre-vetted contractor pool for rapid scaling
+
+Managed service agreements with clear SLAs
+
+
+
+Implementation Roadmap
+
+Month 1-2: Team Bootstrap
+
+Hire Technical Architect, DevOps Engineer, Data Lead
+
+Establish development standards
+
+Set up development environments
+
+Conduct assessment and planning workshops
+
+Month 3-4: Core Team Formation
+
+Onboard senior developers
+
+Implement CI/CD foundation
+
+Begin API development
+
+Start frontend component library
+
+Month 5-6: Expansion
+
+Add mid-level developers
+
+Implement first microservices
+
+Deploy initial Databricks pipelines
+
+Launch rules engine POC
+
+Month 7-12: Full Capability
+
+Complete team formation
+
+Deliver major system components
+
+Migrate critical workloads
+
+Establish production support model
+
+
+
+Recommendations
+
+Start with strong technical leadership - The architect and DevOps engineer are critical to setting the foundation
+
+Build incrementally - Begin with core authorization services before expanding to all systems
+
+Invest in automation early - CI/CD and testing automation will pay dividends throughout the project
+
+Consider hybrid staffing model - Mix of FTEs for core roles and contractors for flexibility
+
+Plan for knowledge transfer - Document extensively and cross-train team members
+
+Establish clear governance - Regular architecture reviews and technical steering committee
+
+Monitor and adjust - Review staffing quarterly and adjust based on delivery metrics
+
+
+
+Next Steps
+
+Approve staffing plan and budget
+
+Prioritize critical roles for immediate hiring
+
+Engage recruiting partners
+
+Define detailed job descriptions
+
+Schedule technical assessment workshops
+
+Establish onboarding program
+
+
+
+System Components
+
+OncoHealth Technology Modernization - Staffing Plan
+
+Executive Summary
+
+This staffing plan addresses the critical technology gaps identified in the OncoHealth assessment, focusing on modernizing the platform architecture, improving scalability, implementing proper DevOps practices, and establishing robust data governance.
+
+
+
+Technology Stack Overview
+
+Backend: .NET (C#) with MS SQL Server
+
+Frontend: React
+
+Rules Engine: Business Rules Engine (Drools.NET or similar)
+
+Data Platform: Azure Databricks
+
+Infrastructure: Azure Cloud
+
+
+
+Phase 1: Foundation & Stabilization (Months 1-6)
+
+Core Technical Leadership (3 FTEs)
+
+1. Technical Architect / Engineering Lead (1 FTE)
+
+Responsibilities:
+
+Define target state architecture
+
+Lead technical decision-making
+
+Establish architectural patterns and standards
+
+Guide API design and microservices strategy
+
+Mentor development teams
+
+Key Deliverables:
+
+Architecture blueprints
+
+Technology roadmap
+
+API standards documentation
+
+Code review guidelines
+
+2. DevOps/Platform Engineer (1 FTE)
+
+Responsibilities:
+
+Implement CI/CD pipelines (Azure DevOps)
+
+Establish Infrastructure as Code (Terraform/ARM templates)
+
+Set up monitoring and observability (Application Insights, Log Analytics)
+
+Automate deployment processes
+
+Implement blue-green deployment strategies
+
+Key Deliverables:
+
+Automated deployment pipelines
+
+Infrastructure automation
+
+Monitoring dashboards
+
+Disaster recovery procedures
+
+3. Data Engineer - Lead (1 FTE)
+
+Responsibilities:
+
+Design Databricks architecture
+
+Build data pipelines and ETL processes
+
+Implement data quality frameworks
+
+Establish data governance policies
+
+Optimize SQL Server performance
+
+Key Deliverables:
+
+Data pipeline framework
+
+Data quality metrics
+
+Performance optimization plan
+
+Data catalog
+
+
+
+Phase 2: Development & Modernization (Months 3-12)
+
+Backend Development Team (4-5 FTEs)
+
+4. Senior .NET Developer (2 FTEs)
+
+Responsibilities:
+
+Refactor monolithic applications to microservices
+
+Implement RESTful APIs using ASP.NET Core
+
+Develop business logic layers
+
+Optimize database queries and stored procedures
+
+Implement caching strategies (Redis)
+
+Focus Areas:
+
+Core authorization service modernization
+
+Member eligibility service
+
+Claims processing services
+
+5. Mid-Level .NET Developer (2 FTEs)
+
+Responsibilities:
+
+Develop new features and enhancements
+
+Write unit and integration tests
+
+Implement API endpoints
+
+Support legacy system maintenance during transition
+
+Focus Areas:
+
+Supporting services development
+
+Integration development
+
+Testing automation
+
+6. Rules Engine Specialist (1 FTE - can be contractor initially)
+
+Responsibilities:
+
+Design and implement business rules engine
+
+Migrate business logic from code to rules
+
+Create rules authoring interface
+
+Train business analysts on rules management
+
+Optimize rules execution performance
+
+Technology Options:
+
+NRules (open-source .NET)
+
+Drools.NET
+
+Microsoft Rules Engine
+
+Custom rules engine using Roslyn
+
+Key Deliverables:
+
+Rules engine framework
+
+Rules repository
+
+Rules testing framework
+
+Rules documentation
+
+Frontend Development Team (3 FTEs)
+
+7. Senior React Developer / Frontend Lead (1 FTE)
+
+Responsibilities:
+
+Establish React architecture and patterns
+
+Define component library standards
+
+Implement state management (Redux/Context API)
+
+Create reusable UI components
+
+Mentor frontend developers
+
+Key Deliverables:
+
+Component library
+
+Frontend architecture documentation
+
+Code standards and patterns
+
+Performance optimization guidelines
+
+8. React Developers (2 FTEs)
+
+Responsibilities:
+
+Build user interfaces
+
+Implement responsive designs
+
+Integrate with backend APIs
+
+Write frontend tests (Jest, React Testing Library)
+
+Optimize application performance
+
+Focus Areas:
+
+Portal development
+
+Provider interfaces
+
+Member-facing applications
+
+Data & Analytics Team (2-3 FTEs)
+
+9. Data Engineers (2 FTEs)
+
+Responsibilities:
+
+Build Databricks notebooks and jobs
+
+Implement Delta Lake architecture
+
+Create data transformation pipelines
+
+Develop data quality checks
+
+Optimize Spark jobs
+
+Focus Areas:
+
+Claims data processing
+
+Member data aggregation
+
+Reporting data marts
+
+10. Analytics Engineer / BI Developer (1 FTE)
+
+Responsibilities:
+
+Design analytical data models
+
+Build Power BI reports and dashboards
+
+Create self-service analytics capabilities
+
+Implement ML-ready datasets
+
+Focus Areas:
+
+Operational reporting
+
+Executive dashboards
+
+Predictive analytics support
+
+
+
+Phase 3: Quality & Security (Ongoing from Month 3)
+
+Quality Assurance & Security (2-3 FTEs)
+
+11. QA Engineer / SDET (1-2 FTEs)
+
+Responsibilities:
+
+Develop automated test suites
+
+Implement E2E testing (Playwright/Cypress)
+
+Create test data management strategies
+
+Perform regression testing
+
+Load and performance testing
+
+Key Deliverables:
+
+Test automation framework
+
+Test coverage reports
+
+Performance test results
+
+QA process documentation
+
+12. Security Engineer (1 FTE or contractor)
+
+Responsibilities:
+
+Implement security best practices
+
+Conduct security assessments
+
+Establish secure coding guidelines
+
+Implement HIPAA compliance controls
+
+Set up vulnerability scanning
+
+Manage secrets and certificate management
+
+Key Deliverables:
+
+Security architecture
+
+Compliance documentation
+
+Security testing procedures
+
+Incident response plan
+
+
+
+Supporting Roles
+
+Product & Project Management
+
+13. Technical Product Manager (1 FTE)
+
+Prioritize technical backlog
+
+Coordinate with business stakeholders
+
+Define feature requirements
+
+Manage release planning
+
+14. Scrum Master / Agile Coach (0.5 FTE)
+
+Facilitate agile ceremonies
+
+Remove blockers
+
+Coach teams on agile practices
+
+Track velocity and metrics
+
+Database Administration
+
+15. SQL Server DBA (0.5-1 FTE or contractor)
+
+Database performance tuning
+
+Backup and recovery
+
+Index optimization
+
+Query optimization
+
+High availability configuration
+
+
+
+Staffing Summary by Phase
+
+Phase 1 (Months 1-6): Foundation Team
+
+Total: 9-10 FTEs
+
+Technical Architect: 1
+
+DevOps Engineer: 1
+
+Data Engineer Lead: 1
+
+Senior .NET Developers: 2
+
+Senior React Developer: 1
+
+React Developer: 1
+
+QA Engineer: 1
+
+Technical Product Manager: 1
+
+Scrum Master: 0.5
+
+Phase 2 (Months 6-12): Full Team
+
+Total: 16-18 FTEs
+
+All Phase 1 roles, plus:
+
+Mid-Level .NET Developers: 2
+
+Rules Engine Specialist: 1
+
+React Developer: 1 (additional)
+
+Data Engineers: 2
+
+Analytics Engineer: 1
+
+QA Engineer: 1 (additional)
+
+Security Engineer: 1
+
+Phase 3 (Months 12+): Optimization & Maintenance
+
+Total: 12-14 FTEs (reduced as systems stabilize)
+
+Retain core team
+
+Convert some roles to part-time or contractor
+
+Focus shifts to feature development and optimization
+
+
+
+Engagement Models
+
+Full-Time Employees (Recommended for Core Roles)
+
+Technical Architect
+
+DevOps Engineer
+
+Data Engineer Lead
+
+Senior Developers (Backend & Frontend)
+
+Product Manager
+
+Contract/Augmented Staff (Flexibility)
+
+Mid-level developers
+
+Rules Engine Specialist (initial implementation)
+
+QA Engineers
+
+Security Engineer
+
+Database Administrator
+
+Managed Services Considerations
+
+DevOps Support: Azure consulting partner for infrastructure
+
+Security: Third-party security assessments and penetration testing
+
+QA: Test automation services for accelerated coverage
+
+
+
+Budget Considerations
+
+Annual Staffing Costs (Approximate)
+
+Phase 1 (Foundation - 6 months)
+
+Total: $800K - $1.1M for 6 months
+
+Average: $135K-$185K per resource annually
+
+Phase 2 (Full Team - 12 months)
+
+Total: $2.2M - $2.8M annually
+
+Includes senior technical leadership premium
+
+Phase 3 (Steady State)
+
+Total: $1.6M - $2.1M annually
+
+Optimized team composition
+
+Cost Optimization Strategies
+
+Use contractors for specialized, time-limited needs (Rules Engine, Security assessments)
+
+Leverage offshore/nearshore for mid-level development roles (potential 30-40% savings)
+
+Consider managed services for DevOps and infrastructure
+
+Implement staff augmentation for peak periods
+
+
+
+Success Metrics & KPIs
+
+Technical Metrics
+
+Code coverage: Target 80%+
+
+Deployment frequency: Weekly releases by Month 6
+
+Mean time to recovery (MTTR): < 1 hour
+
+API response times: < 200ms for 95th percentile
+
+System uptime: 99.9%
+
+Delivery Metrics
+
+Story points completed per sprint
+
+Sprint velocity trends
+
+Defect escape rate
+
+Technical debt reduction (track monthly)
+
+Business Metrics
+
+Time-to-market for new features
+
+Authorization processing time reduction
+
+System scalability (concurrent users supported)
+
+Cost per transaction
+
+
+
+Risk Mitigation
+
+Knowledge Transfer
+
+Pair programming for critical systems
+
+Documentation sprints
+
+Architecture decision records (ADRs)
+
+Regular knowledge sharing sessions
+
+Talent Retention
+
+Competitive compensation
+
+Modern technology stack
+
+Professional development budget
+
+Clear career progression paths
+
+Vendor Management
+
+Maintain relationships with 2-3 staff augmentation vendors
+
+Pre-vetted contractor pool for rapid scaling
+
+Managed service agreements with clear SLAs
+
+
+
+Implementation Roadmap
+
+Month 1-2: Team Bootstrap
+
+Hire Technical Architect, DevOps Engineer, Data Lead
+
+Establish development standards
+
+Set up development environments
+
+Conduct assessment and planning workshops
+
+Month 3-4: Core Team Formation
+
+Onboard senior developers
+
+Implement CI/CD foundation
+
+Begin API development
+
+Start frontend component library
+
+Month 5-6: Expansion
+
+Add mid-level developers
+
+Implement first microservices
+
+Deploy initial Databricks pipelines
+
+Launch rules engine POC
+
+Month 7-12: Full Capability
+
+Complete team formation
+
+Deliver major system components
+
+Migrate critical workloads
+
+Establish production support model
+
+
+
+Recommendations
+
+Start with strong technical leadership - The architect and DevOps engineer are critical to setting the foundation
+
+Build incrementally - Begin with core authorization services before expanding to all systems
+
+Invest in automation early - CI/CD and testing automation will pay dividends throughout the project
+
+Consider hybrid staffing model - Mix of FTEs for core roles and contractors for flexibility
+
+Plan for knowledge transfer - Document extensively and cross-train team members
+
+Establish clear governance - Regular architecture reviews and technical steering committee
+
+Monitor and adjust - Review staffing quarterly and adjust based on delivery metrics
+
+
+
+Next Steps
+
+Approve staffing plan and budget
+
+Prioritize critical roles for immediate hiring
+
+Engage recruiting partners
+
+Define detailed job descriptions
+
+Schedule technical assessment workshops
+
+Establish onboarding program
+
+
+
+New Staffing Model after asking it to recalculate based on components.
+
+
+
+Major Revisions:
+
+Team Size Increases:
+
+Phase 1: 9-10 FTEs → 14-15 FTEs (+50%)
+
+Phase 2: 16-18 FTEs → 28-33 FTEs (+75%)
+
+Steady State: 12-14 FTEs → 20-24 FTEs (+65%)
+
+New Roles Added (8 critical positions):
+
+Integration Architect - Critical for EDI, HL7/FHIR complexity
+
+Integration Developers (2) - Dedicated EDI/HL7 specialists
+
+Compliance/Healthcare IT Specialist - HIPAA and clinical standards
+
+QA Lead - Manage testing across all components
+
+UI/UX Designer - Multiple portals and interfaces
+
+Business Analysts (2) - Requirements and rules documentation
+
+Technical Project Manager - Coordinate complex dependencies
+
+
+
+Before and After analysis
+
+COMPARISON: ORIGINAL VS REVISED PLAN
+
+Metric
+
+Original Plan
+
+Revised Plan
+
+Change
+
+Phase 1 Team
+
+9-10 FTEs
+
+14-15 FTEs
+
++50%
+
+Phase 2 Team
+
+16-18 FTEs
+
+28-33 FTEs
+
++75%
+
+Steady State
+
+12-14 FTEs
+
+20-24 FTEs
+
++65%
+
+24-Month Cost
+
+$4.5M-$5.5M
+
+$6.7M-$7.8M
+
++45%
+
+Backend Devs
+
+4-5 FTEs
+
+8-9 FTEs
+
++80%
+
+Frontend Devs
+
+3 FTEs
+
+4-5 FTEs
+
++50%
+
+New Roles Added
+
+-
+
+8 roles
+
+-
+
+
+
+
+
+Phases (rough)
+
+
+
+Planning, Team Building, Prototyping  (Nov-Dec)
+
+Detailed BA work and PM work
+
+Hiring
+
+Building mocks, Source code repos, and initial project scaffolding
+
+Refining plans, estimates, milestones, etc.
+
+MVP Development - CS Best Practice Template Client (Jan-May)
+
+Build running test systems
+
+NewUM UI
+
+Monolith with Local Service Architecture
+
+Rules engine
+
+Event engine
+
+OLTP database
+
+Data Ingest pipelines (best practice)
+
+Reporting Egress
+
+Admin Portal (Monarch) integration
+
+Configuration capabilities
+
+Build migration pipelines from MATIS OADB
+
+E2E testing framework
+
+Observability and Logging
+
+Hardening and Testing (Jun-Sep)
+
+Provider Management
+
+Eligibility workflows 
+
+TaT builds and reporting
+
+Testing 
+
+Client migration proofing
+
+Client Migrations
+
+
+
+
+
+
+
+Staffing
+
+
+
+
+
+
+
+
+
+Phase 1Foundations
+
+Nov-Dec
+
+Phase 2MVPJan-May
+
+Phase 3Hardening
+
+Jun-Sep
+
+Phase 4First ClientsSep-Oct
+
+Phase 5Matis ClientsNov-Mar
+
+Product
+
+
+
+
+
+
+
+
+
+
+
+Product Manager
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Project Manager
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Scrum Master
+
+
+
+
+
+
+
+
+
+
+
+Business Analyst
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Design
+
+
+
+
+
+
+
+
+
+
+
+Sr. Researcher
+
+1
+
+1
+
+
+
+
+
+
+
+Sr. Designer
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Technology
+
+
+
+
+
+
+
+
+
+
+
+Engineering Manager
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Architect
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Lead (Full Stack)
+
+1
+
+2
+
+2
+
+2
+
+2
+
+Sr. Back-End .Net
+
+2
+
+3
+
+3
+
+3
+
+3
+
+Sr. Front-End (React)
+
+2
+
+3
+
+3
+
+2
+
+2
+
+Rules Eng. Eng.
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Configuration Tech
+
+0
+
+1
+
+2
+
+2
+
+3
+
+SRE
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Data
+
+
+
+
+
+
+
+
+
+
+
+Data Manager
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Databricks Dev
+
+2
+
+3
+
+3
+
+3
+
+3
+
+QA
+
+
+
+
+
+
+
+
+
+
+
+QA Manager
+
+1
+
+1
+
+1
+
+1
+
+1
+
+Sr. AQA
+
+2
+
+2
+
+2
+
+2
+
+2
+
+Manual QA
+
+0
+
+1
+
+2
+
+2
+
+2
+
+SME - Onco
+
+
+
+
+
+
+
+
+
+
+
+Clinical
+
+
+
+
+
+
+
+
+
+
+
+Pharma
+
+
+
+
+
+
+
+
+
+
+
+CRS
+
+
+
+
+
+
+
+
+
+
+
+Advisory
+
+
+
+
+
+
+
+
+
+
+
+CPTO Advisor
+
+
+
+
+
+
+
+
+
+
+
+Architect/Dev
+
+
+
+
+
+
+
+
+
+
+
+UX Projects
+
+
+
+
+
+
+
+
+
+
+
+Data Specialist
+
+
+
+
+
+
+
+
+
+
+
+Provider SME
+
+
+
+
+
+
+
+
+
+
+
+
+
