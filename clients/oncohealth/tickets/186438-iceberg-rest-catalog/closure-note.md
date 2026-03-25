@@ -14,7 +14,7 @@ pdf_options:
 **Sprint**: TBD
 **Priority**: P2
 **Sources**: All claims verified against official Microsoft Learn docs (fetched 2026-03-23) AND validated against TEST workspace API (2026-03-24). See [References](#references) for full list.
-**Project context**: `clients/oncohealth/knowledge.json` v1.11.0 — operational facts cited as [K].
+**Project context**: `clients/oncohealth/knowledge.json` v1.12.0 — operational facts cited as [K].
 
 ## Architecture Overview
 
@@ -168,23 +168,23 @@ This is a Databricks product strategy decision: they include it to make Unity Ca
 - **Ongoing**: Monitor metadata lag, ensure write clusters stay on DBR 14.3+ LTS → negligible if already on modern runtime
 - **Risk**: Protocol upgrade is partially irreversible (Delta reader/writer version bumps can't be undone)
 
-### Why Not Just Connect Directly to Parquet Files?
+### Why Not Just Read Delta Lake Directly?
 
-This is the key architectural question. The Delta Lake tables on ADLS Gen2 **are** Parquet files underneath. So why not just read them directly?
+This is the key architectural question. Delta Lake already has ACID transactions, schema evolution, and time travel — so it's not the same as reading raw Parquet. The issue is what happens when systems **outside Databricks** need to read that data.
 
-| Approach | Direct Parquet/Delta Read | Iceberg REST Catalog API |
-|----------|--------------------------|-------------------------|
-| **Auth** | Need ADLS storage keys or SAS tokens — must manage and rotate | API-level auth (PAT/OAuth) → automatic SAS credential vending with 1h expiry |
-| **Schema** | Must parse `_delta_log/` JSON files to understand schema, partitions, and which Parquet files are current | Standard Iceberg catalog protocol — schema discovery built-in |
-| **ACID** | Risk of reading partially-written transactions ("dirty reads") if you read Parquet mid-write | Iceberg metadata guarantees snapshot isolation — always reads a consistent version |
-| **Governance** | No audit trail — direct storage access bypasses Unity Catalog permissions | All reads go through UC permissions → audit logs, column-level security, row filters |
-| **Time Travel** | Must manually parse Delta log to find historical versions | Iceberg snapshots supported natively |
-| **Deletion Vectors** | Must understand Delta's DV format to skip deleted rows — most Parquet readers can't | Handled transparently by Iceberg metadata layer |
-| **Column Mapping** | Delta's column ID mapping means physical Parquet column names ≠ logical names — direct read returns wrong column names | Iceberg metadata maps logical ↔ physical correctly |
-| **Client Support** | Raw Parquet read works in Spark/Python but breaks with schema evolution | PyIceberg, Spark, Snowflake, Trino, DuckDB — all have native Iceberg REST catalog connectors |
-| **Security Compliance** | Gives external systems direct access to ADLS — storage-level blast radius | API-level access only — storage credentials are temporary (1h SAS tokens), scoped to specific tables |
+| Dimension | Direct Delta Lake Read | Iceberg REST Catalog API |
+|-----------|------------------------|-------------------------|
+| **Client compatibility** | Requires Delta-compatible library (Spark, delta-rs, Delta Sharing). Our .NET backend doesn't speak Delta natively. | Open standard — PyIceberg, Spark, Snowflake, Trino, DuckDB all have native Iceberg REST connectors |
+| **Auth** | Need ADLS storage keys or SAS tokens — must generate and rotate manually | API-level auth (PAT/OAuth) → automatic SAS credential vending with 1h expiry |
+| **Governance** | Direct storage access bypasses Unity Catalog — no audit trail, no column masking, no row filters | All reads go through UC permissions → audit logs, column-level security, row filters |
+| **Schema** | Must parse `_delta_log/` JSON to understand schema, partitions, current files | Standard catalog protocol — schema discovery built-in |
+| **ACID isolation** | Risk of reading mid-write ("dirty reads") if not using a Delta-aware client | Iceberg metadata guarantees snapshot isolation — always reads a consistent version |
+| **Deletion Vectors** | Must understand Delta's DV format to skip deleted rows — most non-Spark readers can't | Handled transparently by Iceberg metadata layer |
+| **Column Mapping** | Delta's column ID mapping means physical Parquet column names ≠ logical names — non-Delta readers return wrong column names | Iceberg metadata maps logical ↔ physical correctly |
+| **Time Travel** | Must manually parse Delta log for historical versions | Iceberg snapshots supported natively |
+| **Security Compliance** | Gives external systems direct ADLS access — storage-level blast radius | API-level access only — temporary SAS tokens (1h), scoped to specific tables |
 
-**Bottom line**: Direct Parquet access is like giving someone the keys to the filing cabinet. Iceberg REST is like giving them a controlled API window where they can look at specific files, with an audit trail and automatic credential expiry. For a healthcare company handling PHI-adjacent data, the governance difference alone justifies the approach.
+**Bottom line**: Delta Lake is the internal language of our lakehouse. Iceberg REST is the translator that lets any external system read it — without needing a Delta-aware library, without us handing over our storage keys, and with full audit trail. For a healthcare company handling PHI-adjacent data, the governance difference alone justifies the approach.
 
 > Sources: [S1] credential vending + audit; [S2] UniForm metadata generation + resource impact; [S2] *"might increase the driver resource usage"*.
 
@@ -234,8 +234,8 @@ All investigation objectives have been met:
 | UC inventory captured | COMPLETE — 8 catalogs, ~66 schemas, ~466 tables, 3 SPs |
 | UniForm readiness assessed | COMPLETE — zero tables ready, prerequisites documented |
 | Permissions gap identified | COMPLETE — missing `EXTERNAL_USE_SCHEMA` |
-| Cost analysis | COMPLETE — zero incremental licensing; detailed breakdown above |
-| "Why not direct Parquet?" | COMPLETE — 8-dimension comparison above |
+| Cost analysis | COMPLETE — zero incremental licensing; real inventory costing above (< $1-30/mo depending on scenario) |
+| "Why not read Delta directly?" | COMPLETE — 9-dimension comparison above |
 | Implementation prerequisites | DOCUMENTED — 6 items for future ticket |
 
 ## References
@@ -250,5 +250,5 @@ All claims in this document were verified against official Microsoft Learn docum
 | **[S4]** | Databricks service principals / Auth | https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/ | — |
 | **[S5]** | PyIceberg REST catalog configuration | https://py.iceberg.apache.org/configuration/#rest-catalog | — |
 | **[S6]** | Apache Iceberg REST API spec | https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml | — |
-| **[K]** | Project knowledge base | `clients/oncohealth/knowledge.json` v1.11.0 | 2026-03-25 |
+| **[K]** | Project knowledge base | `clients/oncohealth/knowledge.json` v1.12.0 | 2026-03-25 |
 | **[DB]** | Databricks TEST workspace API capture | `clients/oncohealth/output/databricks/` (7 files, 987 KB) | 2026-03-24 |

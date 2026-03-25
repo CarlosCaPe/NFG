@@ -13,7 +13,7 @@ pdf_options:
 > **Author**: Carlos Carrillo (`ccarrillo@oncologyanalytics.com`)
 > **Date**: 2026-03-23 (updated 2026-03-25)
 > **Status**: COMPLETE — Investigation finished. Iceberg REST endpoint validated; 3 implementation prerequisites identified.
-> **Project context**: `clients/oncohealth/knowledge.json` v1.11.0 — operational facts cited as [K].
+> **Project context**: `clients/oncohealth/knowledge.json` v1.12.0 — operational facts cited as [K].
 
 ---
 
@@ -358,8 +358,8 @@ All investigation items are **COMPLETE**. Implementation prerequisites are docum
 | 4 | **UniForm readiness** | NOT READY — all tables at `minReaderVersion=1`, `minWriterVersion=2` (needs ≥2/≥7). Protocol upgrade required. |
 | 5 | **External access** | NOT ENABLED — `external_access_enabled = false` on metastore. Requires UC Admin. |
 | 6 | **Permissions gap** | DOCUMENTED — `EXTERNAL_USE_SCHEMA` not granted. Only SELECT, USE_SCHEMA, MODIFY, CREATE_TABLE present. |
-| 7 | **Cost impact** | ZERO incremental licensing — API is built-in, no per-call billing. ~5-15% driver memory overhead on writes. |
-| 8 | **Why not direct Parquet** | DOCUMENTED — Iceberg REST provides governance, ACID reads, credential vending, and schema evolution vs. raw Parquet. |
+| 7 | **Cost impact** | ZERO incremental licensing — API is built-in, no per-call billing. ~5-15% driver memory overhead on writes. Real inventory: 127 Delta tables, daily batch. Est. < $1-30/mo depending on cluster headroom. |
+| 8 | **Why not read Delta directly** | DOCUMENTED — 9-dimension comparison: client compatibility (Delta requires delta-rs/Spark; Iceberg has broad native support), governance (UC audit trail vs. direct storage bypass), credential management (auto SAS vending vs. manual key rotation), ACID isolation, deletion vectors, column mapping, schema discovery, time travel, security compliance. |
 
 ### Implementation Prerequisites (for future ticket)
 
@@ -470,5 +470,5 @@ All findings sourced from official Microsoft/Databricks documentation:
 4. [Databricks service principals](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/)
 5. [PyIceberg REST catalog configuration](https://py.iceberg.apache.org/configuration/#rest-catalog)
 6. [Iceberg REST API spec (Apache)](https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml)
-7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.11.0 (2026-03-25) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
+7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.12.0 (2026-03-25) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
 8. **[DB]** Databricks TEST workspace API capture: `clients/oncohealth/output/databricks/` — 7 JSON files, 987 KB. Full UC inventory validated 2026-03-24.
