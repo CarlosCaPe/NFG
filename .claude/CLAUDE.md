@@ -58,7 +58,7 @@ cp -r clients/_template clients/<client-name>
 - **Project**: newUM (New Utilization Management) — healthcare/oncology
 - **Purpose**: Replace end-of-life MATIS monolith with modern configurable UM case management engine
 - **Config**: `clients/oncohealth/client.yaml`
-- **Knowledge**: `clients/oncohealth/knowledge.json` (v1.4.0)
+- **Knowledge**: `clients/oncohealth/knowledge.json` (v1.12.0)
 - **Auth**: `ccarrillo@oncologyanalytics.com` / `ccarrillo@oncohealth.us` → Okta SSO
 - **VPC**: CPC-ccarr-RY8W8 via https://windows365.microsoft.com
 
@@ -76,7 +76,7 @@ cp -r clients/_template clients/<client-name>
 | Google Docs | Public link | COMPLETE (47.5K chars) | `shared/scrape-gdoc-export.js` |
 | Miro (NewFire) | REST API (NFG-Reader app) | COMPLETE (131K) — stale assessment board | `shared/miro-api.js` |
 | Miro (Onco) | Onco email invite | BLOCKED — Rachel requesting access (2026-03-20) | `shared/miro-api.js` |
-| Azure DevOps | Okta SSO + MFA | PARTIAL (wiki denied) | `shared/scrape-okta-auto.js` |
+| Azure DevOps | Okta SSO + MFA | COMPLETE (no wiki exists — Confluence used) | `shared/scrape-okta-auto.js` |
 | SharePoint | Okta SSO + download | COMPLETE (68K chars: RAID + CR + Access Inventory) | `shared/scrape-sharepoint-download.js` |
 | Atlassian | Separate SSO | BLOCKED | needs Atlassian credentials |
 | Databricks (test) | PAT (visualstudio-carlos) | COMPLETE (API 200) | `shared/scrape-databricks.js` |

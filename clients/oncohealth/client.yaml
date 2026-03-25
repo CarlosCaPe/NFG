@@ -48,24 +48,25 @@ services:
     key: "04"
     type: miro
     board_id: uXjVJUOanb0=
-    status: blocked
-    blocker: "Not invited to Onco Miro — Rachel requested access 2026-03-20. Should have been part of onboarding setup."
-    note: "This is the active board. Onco environment. Access via ccarrillo@oncohealth.us (not NFG email)."
+    status: complete
+    chars: 106271
+    note: "PDF export from desktop app (2026-03-25). Browser SSO still blocked (AADSTS7000112). Rachel requested REST API invite."
 
   - name: Azure DevOps newUM
     key: "05"
     type: azure-devops
     url: https://dev.azure.com/oncologyanalytics/newUM
-    status: partial
-    chars: 589
-    blocker: "Auth works, wiki access denied"
+    status: complete
+    chars: 2101901
+    note: "No wiki exists — teams use Confluence (confirmed Michal Mucha 2026-03-25)"
 
   - name: Atlassian Confluence
     key: "06"
     type: atlassian
     url: https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM
-    status: blocked
-    blocker: "Separate SSO — need Atlassian-specific credentials"
+    status: complete
+    chars: 485274
+    note: "Primary wiki for all teams. 12 spaces, 171 pages (2026-03-23)"
 
   - name: SharePoint RAID
     key: "07"
@@ -92,6 +93,14 @@ services:
     auth: PAT (visualstudio-carlos, expires 2027-03-24)
     validated: 2026-03-24
     note: "API validated — clusters/list returned 200. Primary workspace for data team."
+
+  - name: Google Drive Folder
+    key: "11"
+    type: google-drive
+    url: https://drive.google.com/drive/u/0/folders/1MX5o74zRMyYIPTLmJAyCyCS5HC79Wes4
+    status: complete
+    chars: 5500000
+    note: "41 files (19 PDFs, 5 XLSX, 2 DOCX, images, SVG). ZIP download + batch text extraction (2026-03-25)."
 
   - name: Databricks DEV
     key: "09b"

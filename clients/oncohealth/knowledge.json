@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "last_updated": "2026-03-25",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
@@ -93,7 +93,7 @@
         "IS": { "name": "Information Security", "pages": 4, "chars": 13363 },
         "MAT": { "name": "MATIS", "pages": 2, "chars": 13787 }
       },
-      "note": "No NewUM-specific space found. Content likely in PM and AT spaces.",
+      "note": "No NewUM-specific space found. Content likely in PM and AT spaces. Confluence is the primary wiki for all teams — ADO wiki not used (confirmed Michal Mucha 2026-03-25).",
       "captured": "2026-03-23",
       "confirmed": true,
       "source": "onboarding doc + REST API capture"
@@ -283,7 +283,6 @@
       "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23)"
     ],
     "pending": [
-      "Azure DevOps wiki access — contacted Vika Nobis (2026-03-20). REST API capture working for everything else.",
       "Database access (email devopsrequest@oncologyanalytics.com)",
       "Miro Onco board (active) — PDF export working. Rachel requested board invite for carlos.carrillo@newfireglobal.com (2026-03-23). Check Monday for invite.",
       "Carlos's access inventory row is blank — needs to be filled in with current access status",
@@ -299,7 +298,7 @@
         { "resource": "Policy documents (4 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "Secure development, Cryptography, Data management, Branching strategy. Links are placeholders — never provided." },
         { "resource": "Miro NewFire board (assessment, stale)", "status": "BLOCKED", "action": "Board not found (404) — may have been moved/deleted or token expired", "note": "Previously captured 130,902 chars. Board ID uXjVIx2JdOQ= no longer accessible." },
         { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
-        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2101901, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Deep capture (2026-03-23): 33 files, 2053 KB. 13 Epics, 62 Features, 325 User Stories, 348 Tasks, 4 Bugs, 7 Pipelines with CI/CD runs, 5 Teams (QA:6, UX:3, Data:7, BE:13, FE:12), 7 Sprints, 3 Boards. Wiki still denied. 0 git repos visible (may need project-level permissions)." },
+        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2101901, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Deep capture (2026-03-23): 33 files, 2053 KB. 13 Epics, 62 Features, 325 User Stories, 348 Tasks, 4 Bugs, 7 Pipelines with CI/CD runs, 5 Teams (QA:6, UX:3, Data:7, BE:13, FE:12), 7 Sprints, 3 Boards. No wiki exists — confirmed by Michal Mucha (2026-03-25): teams use Confluence, not ADO wiki. 0 git repos visible." },
         { "resource": "Atlassian Confluence", "status": "COMPLETE", "chars": 485274, "method": "REST API + API token", "note": "Deep capture (2026-03-23): 12 spaces, 171 pages, 41 files, 621 KB. Key: PM (197K), AT (120K), OG (65K), IS (13K), MATIS (13K). 41 groups discovered. Auth via ccarrillo@oncohealth.us + API token." },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
@@ -309,7 +308,7 @@
       "complete": 11,
       "partial": 0,
       "not_captured": 1,
-      "pending": 1,
+      "pending": 0,
       "blocked": 0,
       "total_chars_captured": 8334855,
       "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
