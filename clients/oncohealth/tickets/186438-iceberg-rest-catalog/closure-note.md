@@ -185,12 +185,12 @@ The above architecture maps to our confirmed environment [K: `tech_stack.data`, 
 
 ### Recommended Next Steps
 
-1. **Coordinate with Michal Mucha** — share table inventory; agree on Gold-layer tables for UniForm POC. Candidates: `drugmaster_test.drug_master.gold_*`, `newum_migration_test.drugs.*`.
-2. **Request UC Admin actions** (3 blockers):
+1. **Coordinate with Michal Mucha** — message sent 2026-03-24, awaiting table selection. Candidates: `drugmaster_test.drug_master.gold_*`, `newum_migration_test.drugs.*`. **WAITING**
+2. **Request UC Admin actions** (3 blockers) — message sent to Michal 2026-03-24, awaiting escalation. **WAITING**
    - a. Enable `external_access_enabled` on metastore (`30737b7a-18b6-4e81-9016-03e2c816cc37`)
    - b. Grant `EXTERNAL USE SCHEMA` on target schemas
    - c. Enable UniForm on target table(s) (requires cluster with DBR 14.3+ LTS)
-3. **POC on test table** — enable UniForm on e.g. `drugmaster_test.drug_master.gold_drug_master`, validate via Iceberg REST endpoint
+3. **POC on test table** — enable UniForm on selected table, validate via Iceberg REST endpoint
 4. **Service principal** — evaluate reusing existing `app-cc28t0 new-data-api` SP; if not, create dedicated SP via DevOps
 5. **PyIceberg read test** — after UniForm + external access enabled, validate from outside the workspace
 6. **UAT/PROD URLs** — resolve with DevOps
