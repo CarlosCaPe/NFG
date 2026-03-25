@@ -1,0 +1,28 @@
+{
+    "Resources":  [
+                      {
+                          "displayName":  "databricks_airflow_sp_test",
+                          "active":  true,
+                          "id":  "140793984782931",
+                          "applicationId":  "6759a888-3038-4b05-a76b-8556aba5ad7a"
+                      },
+                      {
+                          "displayName":  "app-cc28t0 new-data-api",
+                          "active":  true,
+                          "id":  "147774383615744",
+                          "applicationId":  "90336730-f2e6-4960-adcd-a890cf092a20"
+                      },
+                      {
+                          "displayName":  "databricks_workspace_dev",
+                          "active":  true,
+                          "id":  "8142368403112201",
+                          "applicationId":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b"
+                      }
+                  ],
+    "totalResults":  3,
+    "startIndex":  1,
+    "itemsPerPage":  3,
+    "schemas":  [
+                    "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+                ]
+}

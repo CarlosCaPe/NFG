@@ -1,0 +1,2564 @@
+{
+    "eligibility_test":  [
+                             {
+                                 "name":  "bronze",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "hmalik@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.bronze",
+                                 "created_at":  1745314255270,
+                                 "created_by":  "hmalik@oncologyanalytics.com",
+                                 "updated_at":  1745314255270,
+                                 "updated_by":  "hmalik@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "efe4e348-647a-4674-a995-8a3f25f0b2e8",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZZc1hGm"
+                             },
+                             {
+                                 "name":  "config",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "hmalik@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.config",
+                                 "created_at":  1745313909307,
+                                 "created_by":  "hmalik@oncologyanalytics.com",
+                                 "updated_at":  1745313909307,
+                                 "updated_by":  "hmalik@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "86df1c8c-1f8e-4944-9420-c56d78f473ff",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZZc0Mo7"
+                             },
+                             {
+                                 "name":  "data_tables",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "hmalik@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.data_tables",
+                                 "created_at":  1745914297715,
+                                 "created_by":  "hmalik@oncologyanalytics.com",
+                                 "updated_at":  1745914297715,
+                                 "updated_by":  "hmalik@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "42ed7f0b-52f6-41ad-b8ae-18b3d01578e4",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZaAmf1z"
+                             },
+                             {
+                                 "name":  "gold",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "hmalik@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.gold",
+                                 "created_at":  1745314256795,
+                                 "created_by":  "hmalik@oncologyanalytics.com",
+                                 "updated_at":  1745314256795,
+                                 "updated_by":  "hmalik@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "a5d35bb0-e92f-4c4a-9e01-593e3ad504d3",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZZc1heb"
+                             },
+                             {
+                                 "name":  "highmark_bronze_final",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "smaheshwari@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.highmark_bronze_final",
+                                 "created_at":  1753795721527,
+                                 "created_by":  "smaheshwari@oncologyanalytics.com",
+                                 "updated_at":  1753795721527,
+                                 "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "31c39f97-e70c-4338-b07e-6af757526e71",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZhWXvk3"
+                             },
+                             {
+                                 "name":  "highmark_snake_testing",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "smaheshwari@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.highmark_snake_testing",
+                                 "created_at":  1753690260166,
+                                 "created_by":  "smaheshwari@oncologyanalytics.com",
+                                 "updated_at":  1753690260166,
+                                 "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "050392d7-dfab-4633-b8c7-a1fd4b934d16",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZhQFcLG"
+                             },
+                             {
+                                 "name":  "highmark_snake_testing_2",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "smaheshwari@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.highmark_snake_testing_2",
+                                 "created_at":  1753694006683,
+                                 "created_by":  "smaheshwari@oncologyanalytics.com",
+                                 "updated_at":  1753694006683,
+                                 "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "7dacb306-b066-4549-89c4-4a2082052373",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZhQTu2b"
+                             },
+                             {
+                                 "name":  "information_schema",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "System user",
+                                 "comment":  "Information schema (auto-created)",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.information_schema",
+                                 "created_at":  1745248404998,
+                                 "created_by":  "System user",
+                                 "updated_at":  1745248404998,
+                                 "updated_by":  "System user",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "schema_id":  "868f1cd0-08b1-480a-8619-eef18d4a638d",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_SYSTEM",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZZY6UYG"
+                             },
+                             {
+                                 "name":  "logs",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "hmalik@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.logs",
+                                 "created_at":  1745313910055,
+                                 "created_by":  "hmalik@oncologyanalytics.com",
+                                 "updated_at":  1745313910055,
+                                 "updated_by":  "hmalik@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "64bb03e9-bd9a-4b0c-9def-310996b3736c",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZZc0M0n"
+                             },
+                             {
+                                 "name":  "p32_testing",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "smaheshwari@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.p32_testing",
+                                 "created_at":  1752487582853,
+                                 "created_by":  "smaheshwari@oncologyanalytics.com",
+                                 "updated_at":  1752487582853,
+                                 "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "a549a7f7-0284-42a0-bd68-688e6b70395e",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZgIZlyF"
+                             },
+                             {
+                                 "name":  "silver",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "hmalik@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.silver",
+                                 "created_at":  1745314256002,
+                                 "created_by":  "hmalik@oncologyanalytics.com",
+                                 "updated_at":  1745314256002,
+                                 "updated_by":  "hmalik@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "b8ec2aba-81de-4f24-8d93-214011b7b4e0",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZZc1hSC"
+                             },
+                             {
+                                 "name":  "silver_demo",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "asharma1@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.silver_demo",
+                                 "created_at":  1751973652863,
+                                 "created_by":  "asharma1@oncologyanalytics.com",
+                                 "updated_at":  1751973652863,
+                                 "updated_by":  "asharma1@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "3cbf9f17-0323-41fd-9239-b0b47b5c63ec",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZfpxGl/"
+                             },
+                             {
+                                 "name":  "silver_p32_snakecase",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "smaheshwari@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.silver_p32_snakecase",
+                                 "created_at":  1753772287829,
+                                 "created_by":  "smaheshwari@oncologyanalytics.com",
+                                 "updated_at":  1753772287829,
+                                 "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "f9a46659-53b9-4ae6-9567-616dfc5f9b9b",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZhU+WdV"
+                             },
+                             {
+                                 "name":  "silver_p32_snakecase_2",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "smaheshwari@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.silver_p32_snakecase_2",
+                                 "created_at":  1753789595540,
+                                 "created_by":  "smaheshwari@oncologyanalytics.com",
+                                 "updated_at":  1753789595540,
+                                 "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "cd1bc5ee-939b-46da-a805-ad4be8d85eb7",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZhWAX+U"
+                             },
+                             {
+                                 "name":  "test_as",
+                                 "catalog_name":  "eligibility_test",
+                                 "owner":  "asharma1@oncologyanalytics.com",
+                                 "comment":  "",
+                                 "properties":  {
+                                                    "owner":  "root"
+                                                },
+                                 "enable_auto_maintenance":  "INHERIT",
+                                 "enable_predictive_optimization":  "INHERIT",
+                                 "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                 "full_name":  "eligibility_test.test_as",
+                                 "created_at":  1753436626693,
+                                 "created_by":  "asharma1@oncologyanalytics.com",
+                                 "updated_at":  1753436626693,
+                                 "updated_by":  "asharma1@oncologyanalytics.com",
+                                 "catalog_type":  "MANAGED_CATALOG",
+                                 "effective_auto_maintenance_flag":  {
+                                                                         "value":  "ENABLE",
+                                                                         "inherited_from_type":  "METASTORE",
+                                                                         "inherited_from_name":  "metastore"
+                                                                     },
+                                 "effective_predictive_optimization_flag":  {
+                                                                                "value":  "ENABLE",
+                                                                                "inherited_from_type":  "METASTORE",
+                                                                                "inherited_from_name":  "metastore"
+                                                                            },
+                                 "schema_id":  "ca7b9733-1d2c-484f-8734-1a2e7a5fc839",
+                                 "securable_type":  "SCHEMA",
+                                 "securable_kind":  "SCHEMA_STANDARD",
+                                 "browse_only":  false,
+                                 "metastore_version":  -1,
+                                 "cache_version_info":  {
+                                                            "metastore_version":  -1
+                                                        },
+                                 "etag":  "CAESCAAAAZhA958F"
+                             }
+                         ],
+    "system":  [
+                   {
+                       "name":  "ai",
+                       "catalog_name":  "system",
+                       "owner":  "System user",
+                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                       "full_name":  "system.ai",
+                       "created_at":  1716510407436,
+                       "created_by":  "System user",
+                       "updated_at":  1774042073094,
+                       "updated_by":  "System user",
+                       "catalog_type":  "SYSTEM_CATALOG",
+                       "provisioning_info":  {
+                                                 "state":  "ACTIVE"
+                                             },
+                       "schema_id":  "669ca948-558d-41bf-9dff-2f74728e429f",
+                       "delta_sharing_valid_through_timestamp":  1774042133047,
+                       "securable_type":  "SCHEMA",
+                       "securable_kind":  "SCHEMA_SYSTEM",
+                       "browse_only":  false,
+                       "metastore_version":  -1,
+                       "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                       "share_name":  "system_schemas_ai_share",
+                       "cache_version_info":  {
+                                                  "metastore_version":  -1
+                                              },
+                       "etag":  "CAESCAAAAZ0NJcgG"
+                   },
+                   {
+                       "name":  "information_schema",
+                       "catalog_name":  "system",
+                       "owner":  "System user",
+                       "comment":  "Information schema (auto-created)",
+                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                       "full_name":  "system.information_schema",
+                       "created_at":  1676579368230,
+                       "created_by":  "System user",
+                       "updated_at":  1676579368230,
+                       "updated_by":  "System user",
+                       "catalog_type":  "SYSTEM_CATALOG",
+                       "schema_id":  "a25dcd6f-eff9-49db-8c80-35d8fd98d2d1",
+                       "securable_type":  "SCHEMA",
+                       "securable_kind":  "SCHEMA_SYSTEM",
+                       "browse_only":  false,
+                       "metastore_version":  -1,
+                       "cache_version_info":  {
+                                                  "metastore_version":  -1
+                                              },
+                       "etag":  "CAESCAAAAYZb6u0m"
+                   }
+               ],
+    "drugmaster_test":  [
+                            {
+                                "name":  "drug_master",
+                                "catalog_name":  "drugmaster_test",
+                                "owner":  "raggarwal@oncologyanalytics.com",
+                                "comment":  "",
+                                "properties":  {
+                                                   "owner":  "root"
+                                               },
+                                "enable_auto_maintenance":  "INHERIT",
+                                "enable_predictive_optimization":  "INHERIT",
+                                "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                "full_name":  "drugmaster_test.drug_master",
+                                "created_at":  1729234167302,
+                                "created_by":  "raggarwal@oncologyanalytics.com",
+                                "updated_at":  1729234167302,
+                                "updated_by":  "raggarwal@oncologyanalytics.com",
+                                "catalog_type":  "MANAGED_CATALOG",
+                                "effective_auto_maintenance_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                                "effective_predictive_optimization_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                "schema_id":  "863e7c13-00bb-4d2b-a646-e42d4ea14dcb",
+                                "securable_type":  "SCHEMA",
+                                "securable_kind":  "SCHEMA_STANDARD",
+                                "browse_only":  false,
+                                "metastore_version":  -1,
+                                "cache_version_info":  {
+                                                           "metastore_version":  -1
+                                                       },
+                                "etag":  "CAESCAAAAZKeY2YG"
+                            },
+                            {
+                                "name":  "information_schema",
+                                "catalog_name":  "drugmaster_test",
+                                "owner":  "System user",
+                                "comment":  "Information schema (auto-created)",
+                                "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                "full_name":  "drugmaster_test.information_schema",
+                                "created_at":  1724337961226,
+                                "created_by":  "System user",
+                                "updated_at":  1724337961226,
+                                "updated_by":  "System user",
+                                "catalog_type":  "MANAGED_CATALOG",
+                                "schema_id":  "a9e5b088-73a9-42d7-932f-c8ff7f662ca6",
+                                "securable_type":  "SCHEMA",
+                                "securable_kind":  "SCHEMA_SYSTEM",
+                                "browse_only":  false,
+                                "metastore_version":  -1,
+                                "cache_version_info":  {
+                                                           "metastore_version":  -1
+                                                       },
+                                "etag":  "CAESCAAAAZF6jTkK"
+                            },
+                            {
+                                "name":  "public",
+                                "catalog_name":  "drugmaster_test",
+                                "owner":  "raggarwal@oncologyanalytics.com",
+                                "comment":  "",
+                                "properties":  {
+                                                   "owner":  "root"
+                                               },
+                                "enable_auto_maintenance":  "INHERIT",
+                                "enable_predictive_optimization":  "INHERIT",
+                                "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                "full_name":  "drugmaster_test.public",
+                                "created_at":  1724656324561,
+                                "created_by":  "raggarwal@oncologyanalytics.com",
+                                "updated_at":  1724656324561,
+                                "updated_by":  "raggarwal@oncologyanalytics.com",
+                                "catalog_type":  "MANAGED_CATALOG",
+                                "effective_auto_maintenance_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                                "effective_predictive_optimization_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                "schema_id":  "6c1f3e79-c5fb-48c6-a165-062967cdcbf5",
+                                "securable_type":  "SCHEMA",
+                                "securable_kind":  "SCHEMA_STANDARD",
+                                "browse_only":  false,
+                                "metastore_version":  -1,
+                                "cache_version_info":  {
+                                                           "metastore_version":  -1
+                                                       },
+                                "etag":  "CAESCAAAAZGNhw/R"
+                            },
+                            {
+                                "name":  "test_drug_master",
+                                "catalog_name":  "drugmaster_test",
+                                "owner":  "smaheshwari@oncologyanalytics.com",
+                                "comment":  "",
+                                "properties":  {
+                                                   "owner":  "root"
+                                               },
+                                "enable_auto_maintenance":  "INHERIT",
+                                "enable_predictive_optimization":  "INHERIT",
+                                "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                "full_name":  "drugmaster_test.test_drug_master",
+                                "created_at":  1745925671996,
+                                "created_by":  "smaheshwari@oncologyanalytics.com",
+                                "updated_at":  1745925671996,
+                                "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                "catalog_type":  "MANAGED_CATALOG",
+                                "effective_auto_maintenance_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                                "effective_predictive_optimization_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                "schema_id":  "025e8a95-1b03-41b8-bcfa-90d1e4f4f70a",
+                                "securable_type":  "SCHEMA",
+                                "securable_kind":  "SCHEMA_STANDARD",
+                                "browse_only":  false,
+                                "metastore_version":  -1,
+                                "cache_version_info":  {
+                                                           "metastore_version":  -1
+                                                       },
+                                "etag":  "CAESCAAAAZaBR4w8"
+                            }
+                        ],
+    "inbound_ingestion_test":  [
+                                   {
+                                       "name":  "bronze_demo",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.bronze_demo",
+                                       "created_at":  1745911121444,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1745911121444,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "5b88ff4e-a98e-497f-8509-c5e81ae314dc",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZaAaYYk"
+                                   },
+                                   {
+                                       "name":  "bronze_std",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "bjha@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.bronze_std",
+                                       "created_at":  1728466821455,
+                                       "created_by":  "bjha@oncologyanalytics.com",
+                                       "updated_at":  1728466821455,
+                                       "updated_by":  "bjha@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "f3d9e41e-a5e5-4cdf-9c36-bc7b0867e38a",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZJwpqFP"
+                                   },
+                                   {
+                                       "name":  "config",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.config",
+                                       "created_at":  1734515006719,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1734515006719,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "8a5c7fad-1bb2-4578-8855-d74dafa0e9d0",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZPZJpz/"
+                                   },
+                                   {
+                                       "name":  "config_t",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.config_t",
+                                       "created_at":  1749623770458,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1749623770458,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "9875f1f4-c699-4c80-8934-019c403bf49f",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZddtA1a"
+                                   },
+                                   {
+                                       "name":  "data_tables",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.data_tables",
+                                       "created_at":  1749810784972,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1749810784972,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "c5e3fbe9-4419-4a51-bf11-71ed29ad76b4",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZdo2arM"
+                                   },
+                                   {
+                                       "name":  "data_tables_t",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.data_tables_t",
+                                       "created_at":  1749623771589,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1749623771589,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "9770209b-2a29-4ab0-bdba-10bb1cf2f020",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZddtBHF"
+                                   },
+                                   {
+                                       "name":  "highmark_testing",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "vmandloi@oncologyanalytics.com",
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.highmark_testing",
+                                       "created_at":  1752486708715,
+                                       "created_by":  "vmandloi@oncologyanalytics.com",
+                                       "updated_at":  1752486708715,
+                                       "updated_by":  "vmandloi@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "eb6cd7ec-ea67-4530-80c0-f662d4c50cb1",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZgIWQXr"
+                                   },
+                                   {
+                                       "name":  "information_schema",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "System user",
+                                       "comment":  "Information schema (auto-created)",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.information_schema",
+                                       "created_at":  1727268785233,
+                                       "created_by":  "System user",
+                                       "updated_at":  1727268785233,
+                                       "updated_by":  "System user",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "schema_id":  "7d94789f-ee36-4e12-bd52-98cca00aa1da",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_SYSTEM",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZIpPgxR"
+                                   },
+                                   {
+                                       "name":  "logs",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.logs",
+                                       "created_at":  1737353159973,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1737353159973,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "14c101fd-e19b-4cf2-bb7d-97ffe47f5758",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZSCUWUl"
+                                   },
+                                   {
+                                       "name":  "logs_t",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.logs_t",
+                                       "created_at":  1749623771061,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1749623771061,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "da7f97e5-0283-4395-8781-7baf89d50604",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZddtA+1"
+                                   },
+                                   {
+                                       "name":  "p32_testing",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "smaheshwari@oncologyanalytics.com",
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.p32_testing",
+                                       "created_at":  1752482213534,
+                                       "created_by":  "smaheshwari@oncologyanalytics.com",
+                                       "updated_at":  1752482213534,
+                                       "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "c8707a3a-d4e9-4964-97bb-fdd914e22668",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZgIFG6e"
+                                   },
+                                   {
+                                       "name":  "p32_testing_1",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "smaheshwari@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.p32_testing_1",
+                                       "created_at":  1752568899679,
+                                       "created_by":  "smaheshwari@oncologyanalytics.com",
+                                       "updated_at":  1752568899679,
+                                       "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "8af73a71-7b4a-4f84-89d3-b344057de266",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZgNPyhf"
+                                   },
+                                   {
+                                       "name":  "poc_ac",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "achaudhary@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_ac",
+                                       "created_at":  1735636998436,
+                                       "created_by":  "achaudhary@oncologyanalytics.com",
+                                       "updated_at":  1735636998436,
+                                       "updated_by":  "achaudhary@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "9a113ae1-f404-4c7b-bb90-cf902a7954c2",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZQcBtkk"
+                                   },
+                                   {
+                                       "name":  "poc_ag",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "agupta@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_ag",
+                                       "created_at":  1743591463505,
+                                       "created_by":  "agupta@oncologyanalytics.com",
+                                       "updated_at":  1743591463505,
+                                       "updated_by":  "agupta@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "3534b481-5bf8-4d17-aee4-faafc37a26a0",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZX2JlpR"
+                                   },
+                                   {
+                                       "name":  "poc_as",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_as",
+                                       "created_at":  1735636997543,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1735636997543,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "0726043b-44b1-4147-b107-cc40806c3036",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZQcBtWn"
+                                   },
+                                   {
+                                       "name":  "poc_as_bronze",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_as_bronze",
+                                       "created_at":  1743625096993,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1743625096993,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "cf8da17c-fd05-46a3-8bfd-c1c60a11478a",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZX4J48h"
+                                   },
+                                   {
+                                       "name":  "poc_bronze_elig_enhanced",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_bronze_elig_enhanced",
+                                       "created_at":  1746180265925,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1746180265925,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "3b1ae63e-b01d-4372-b3ef-1e23717e5136",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZaQdFfF"
+                                   },
+                                   {
+                                       "name":  "poc_bs",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "bsingh@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_bs",
+                                       "created_at":  1736148597534,
+                                       "created_by":  "bsingh@oncologyanalytics.com",
+                                       "updated_at":  1736148597534,
+                                       "updated_by":  "bsingh@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "0b44d8bd-de9d-4628-bb2b-39caf559cc33",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZQ6hTse"
+                                   },
+                                   {
+                                       "name":  "poc_bsvm",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "bsingh@oncologyanalytics.com",
+                                       "comment":  "This is a new schema for organizing tables",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_bsvm",
+                                       "created_at":  1746531363062,
+                                       "created_by":  "bsingh@oncologyanalytics.com",
+                                       "updated_at":  1746531363062,
+                                       "updated_by":  "bsingh@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "cb6ce87f-f660-4530-9fd2-c61b13100d8e",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZalYaj2"
+                                   },
+                                   {
+                                       "name":  "poc_elig_2",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_elig_2",
+                                       "created_at":  1743626768830,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1743626768830,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "775854b3-7bf7-4156-94c1-a7d4efab644d",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZX4QRG+"
+                                   },
+                                   {
+                                       "name":  "poc_hm",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_hm",
+                                       "created_at":  1736762378367,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1736762378367,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "aa163797-8430-44c6-8d96-bef7c8c57252",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZRfGsh/"
+                                   },
+                                   {
+                                       "name":  "poc_sm",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "smaheshwari@oncologyanalytics.com",
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.poc_sm",
+                                       "created_at":  1748511000481,
+                                       "created_by":  "smaheshwari@oncologyanalytics.com",
+                                       "updated_at":  1748511000481,
+                                       "updated_by":  "smaheshwari@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "3dff66cb-4d82-4ae8-b893-826269bdb513",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZcbYIeh"
+                                   },
+                                   {
+                                       "name":  "silver_config_poc",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.silver_config_poc",
+                                       "created_at":  1747727687530,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1747727687530,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "d3766459-1fb6-4ac5-b54b-4e7547af361e",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZbssB9q"
+                                   },
+                                   {
+                                       "name":  "silver_demo",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "asharma1@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.silver_demo",
+                                       "created_at":  1751884596631,
+                                       "created_by":  "asharma1@oncologyanalytics.com",
+                                       "updated_at":  1751884596631,
+                                       "updated_by":  "asharma1@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "35720690-a238-4fe0-aa27-53d83c929a26",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZfkdYWX"
+                                   },
+                                   {
+                                       "name":  "test_config",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.test_config",
+                                       "created_at":  1744270738144,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1744270738144,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "4f4594cd-10ec-46bc-9992-b26da70e3b67",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZYeo0Lg"
+                                   },
+                                   {
+                                       "name":  "test_ghp_dm",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "dmathur@oncologyanalytics.com",
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.test_ghp_dm",
+                                       "created_at":  1750148511467,
+                                       "created_by":  "dmathur@oncologyanalytics.com",
+                                       "updated_at":  1750148511467,
+                                       "updated_by":  "dmathur@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "134e7fbe-c0b9-4d44-97b4-a8ee8e36eb00",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZd8+vbr"
+                                   },
+                                   {
+                                       "name":  "test_logs",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.test_logs",
+                                       "created_at":  1744270739004,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1744270739004,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "dc0be658-dd33-4e4e-b499-0deca455fc7b",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZYeo0Y8"
+                                   },
+                                   {
+                                       "name":  "test_silver_dm",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "dmathur@oncologyanalytics.com",
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.test_silver_dm",
+                                       "created_at":  1751453719676,
+                                       "created_by":  "dmathur@oncologyanalytics.com",
+                                       "updated_at":  1751453719676,
+                                       "updated_by":  "dmathur@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "3a2b433d-c167-4432-925b-c2aefc6f35b5",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZfKxtx8"
+                                   },
+                                   {
+                                       "name":  "testing_hm",
+                                       "catalog_name":  "inbound_ingestion_test",
+                                       "owner":  "hmalik@oncologyanalytics.com",
+                                       "comment":  "",
+                                       "properties":  {
+                                                          "owner":  "root"
+                                                      },
+                                       "enable_auto_maintenance":  "INHERIT",
+                                       "enable_predictive_optimization":  "INHERIT",
+                                       "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                       "full_name":  "inbound_ingestion_test.testing_hm",
+                                       "created_at":  1738224209237,
+                                       "created_by":  "hmalik@oncologyanalytics.com",
+                                       "updated_at":  1738224209237,
+                                       "updated_by":  "hmalik@oncologyanalytics.com",
+                                       "catalog_type":  "MANAGED_CATALOG",
+                                       "effective_auto_maintenance_flag":  {
+                                                                               "value":  "ENABLE",
+                                                                               "inherited_from_type":  "METASTORE",
+                                                                               "inherited_from_name":  "metastore"
+                                                                           },
+                                       "effective_predictive_optimization_flag":  {
+                                                                                      "value":  "ENABLE",
+                                                                                      "inherited_from_type":  "METASTORE",
+                                                                                      "inherited_from_name":  "metastore"
+                                                                                  },
+                                       "schema_id":  "0ca17746-61c9-44d8-8ed7-5422d91b41fd",
+                                       "securable_type":  "SCHEMA",
+                                       "securable_kind":  "SCHEMA_STANDARD",
+                                       "browse_only":  false,
+                                       "metastore_version":  -1,
+                                       "cache_version_info":  {
+                                                                  "metastore_version":  -1
+                                                              },
+                                       "etag":  "CAESCAAAAZS2PI1V"
+                                   }
+                               ],
+    "enterprisedata_test":  [
+                                {
+                                    "name":  "configs",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "ssingh@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.configs",
+                                    "created_at":  1744187700664,
+                                    "created_by":  "ssingh@oncologyanalytics.com",
+                                    "updated_at":  1744187700664,
+                                    "updated_by":  "ssingh@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "b48b0c0c-d5a7-47e6-94ef-3256c3ca4afa",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZYZsDW4"
+                                },
+                                {
+                                    "name":  "ent_rep_2_test",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "ksing@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.ent_rep_2_test",
+                                    "created_at":  1739261554022,
+                                    "created_by":  "ksing@oncologyanalytics.com",
+                                    "updated_at":  1739261554022,
+                                    "updated_by":  "ksing@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "2a697b18-9dff-4791-a39f-ee34f3507dec",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZT0ES1m"
+                                },
+                                {
+                                    "name":  "healthfortis_db",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "ssingh@oncologyanalytics.com",
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.healthfortis_db",
+                                    "created_at":  1748843161087,
+                                    "created_by":  "ssingh@oncologyanalytics.com",
+                                    "updated_at":  1748843161087,
+                                    "updated_by":  "ssingh@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "0b0f8c09-77a8-40f6-a1b3-2282605119f0",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZcvLOX/"
+                                },
+                                {
+                                    "name":  "information_schema",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "System user",
+                                    "comment":  "Information schema (auto-created)",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.information_schema",
+                                    "created_at":  1720484241077,
+                                    "created_by":  "System user",
+                                    "updated_at":  1720484241077,
+                                    "updated_by":  "System user",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "schema_id":  "0b13bdbd-3c5e-4cb8-8f8b-70303edf78d7",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_SYSTEM",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZCU2h61"
+                                },
+                                {
+                                    "name":  "logs",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "agupta@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.logs",
+                                    "created_at":  1752831951376,
+                                    "created_by":  "agupta@oncologyanalytics.com",
+                                    "updated_at":  1752831951376,
+                                    "updated_by":  "agupta@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "a606e065-cad1-4b89-9482-21a7ccce869a",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZgc7QIQ"
+                                },
+                                {
+                                    "name":  "oneum_dwh",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "ssingh@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.oneum_dwh",
+                                    "created_at":  1746092695103,
+                                    "created_by":  "ssingh@oncologyanalytics.com",
+                                    "updated_at":  1746092695103,
+                                    "updated_by":  "ssingh@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "e647679f-1eb5-4a8b-b2c0-f810e686312d",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZaLPB4/"
+                                },
+                                {
+                                    "name":  "oneum_dwh_test",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "agupta@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.oneum_dwh_test",
+                                    "created_at":  1752831952299,
+                                    "created_by":  "agupta@oncologyanalytics.com",
+                                    "updated_at":  1752831952299,
+                                    "updated_by":  "agupta@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "017c8448-1748-4dfa-b1d5-9fb491fa9202",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZgc7QWr"
+                                },
+                                {
+                                    "name":  "poc_cdc_dlt",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "agupta@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.poc_cdc_dlt",
+                                    "created_at":  1745296378541,
+                                    "created_by":  "agupta@oncologyanalytics.com",
+                                    "updated_at":  1745296378541,
+                                    "updated_by":  "agupta@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "a78c1592-c48b-4e68-8bc3-abb6d9f17cdd",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZZbxUqt"
+                                },
+                                {
+                                    "name":  "poc_jdbc_cdc",
+                                    "catalog_name":  "enterprisedata_test",
+                                    "owner":  "agupta@oncologyanalytics.com",
+                                    "comment":  "",
+                                    "properties":  {
+                                                       "owner":  "root"
+                                                   },
+                                    "enable_auto_maintenance":  "INHERIT",
+                                    "enable_predictive_optimization":  "INHERIT",
+                                    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                    "full_name":  "enterprisedata_test.poc_jdbc_cdc",
+                                    "created_at":  1745297416003,
+                                    "created_by":  "agupta@oncologyanalytics.com",
+                                    "updated_at":  1745297416003,
+                                    "updated_by":  "agupta@oncologyanalytics.com",
+                                    "catalog_type":  "MANAGED_CATALOG",
+                                    "effective_auto_maintenance_flag":  {
+                                                                            "value":  "ENABLE",
+                                                                            "inherited_from_type":  "METASTORE",
+                                                                            "inherited_from_name":  "metastore"
+                                                                        },
+                                    "effective_predictive_optimization_flag":  {
+                                                                                   "value":  "ENABLE",
+                                                                                   "inherited_from_type":  "METASTORE",
+                                                                                   "inherited_from_name":  "metastore"
+                                                                               },
+                                    "schema_id":  "092f6403-dbaa-44a0-aa7b-f71c676fecb1",
+                                    "securable_type":  "SCHEMA",
+                                    "securable_kind":  "SCHEMA_STANDARD",
+                                    "browse_only":  false,
+                                    "metastore_version":  -1,
+                                    "cache_version_info":  {
+                                                               "metastore_version":  -1
+                                                           },
+                                    "etag":  "CAESCAAAAZZb1R9D"
+                                }
+                            ],
+    "main":  [
+                 {
+                     "name":  "default",
+                     "catalog_name":  "main",
+                     "owner":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                     "comment":  "Default schema (auto-created)",
+                     "enable_auto_maintenance":  "INHERIT",
+                     "enable_predictive_optimization":  "INHERIT",
+                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                     "full_name":  "main.default",
+                     "created_at":  1676579368215,
+                     "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                     "updated_at":  1676579368215,
+                     "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                     "catalog_type":  "MANAGED_CATALOG",
+                     "effective_auto_maintenance_flag":  {
+                                                             "value":  "ENABLE",
+                                                             "inherited_from_type":  "METASTORE",
+                                                             "inherited_from_name":  "metastore"
+                                                         },
+                     "effective_predictive_optimization_flag":  {
+                                                                    "value":  "ENABLE",
+                                                                    "inherited_from_type":  "METASTORE",
+                                                                    "inherited_from_name":  "metastore"
+                                                                },
+                     "schema_id":  "9eafbc4d-6c67-4850-9637-a9082b547f56",
+                     "securable_type":  "SCHEMA",
+                     "securable_kind":  "SCHEMA_STANDARD",
+                     "browse_only":  false,
+                     "metastore_version":  -1,
+                     "cache_version_info":  {
+                                                "metastore_version":  -1
+                                            },
+                     "etag":  "CAESCAAAAYZb6u0X"
+                 },
+                 {
+                     "name":  "information_schema",
+                     "catalog_name":  "main",
+                     "owner":  "System user",
+                     "comment":  "Information schema (auto-created)",
+                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                     "full_name":  "main.information_schema",
+                     "created_at":  1676579368386,
+                     "created_by":  "System user",
+                     "updated_at":  1676579368386,
+                     "updated_by":  "System user",
+                     "catalog_type":  "MANAGED_CATALOG",
+                     "schema_id":  "67761c9b-e7bf-4374-8239-efec2023f4c2",
+                     "securable_type":  "SCHEMA",
+                     "securable_kind":  "SCHEMA_SYSTEM",
+                     "browse_only":  false,
+                     "metastore_version":  -1,
+                     "cache_version_info":  {
+                                                "metastore_version":  -1
+                                            },
+                     "etag":  "CAESCAAAAYZb6u3C"
+                 }
+             ],
+    "samples":  [
+                    {
+                        "name":  "accuweather",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.accuweather",
+                        "created_at":  1731994263058,
+                        "created_by":  "System user",
+                        "updated_at":  1766597313042,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "provisioning_info":  {
+                                                  "state":  "ACTIVE"
+                                              },
+                        "schema_id":  "e0fe5d2c-c8ec-4be3-8a93-8a3ece6e377c",
+                        "delta_sharing_valid_through_timestamp":  1766597373003,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_accuweather_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZtRZ8IS"
+                    },
+                    {
+                        "name":  "bakehouse",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.bakehouse",
+                        "created_at":  1731994263074,
+                        "created_by":  "System user",
+                        "updated_at":  1774384351377,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "provisioning_info":  {
+                                                  "state":  "ACTIVE"
+                                              },
+                        "schema_id":  "f1f6100e-4939-48fa-b396-ccc1197fa892",
+                        "delta_sharing_valid_through_timestamp":  1774384411327,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_bakehouse_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZ0hjIiR"
+                    },
+                    {
+                        "name":  "healthverity",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.healthverity",
+                        "created_at":  1744933258115,
+                        "created_by":  "System user",
+                        "updated_at":  1746797136331,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "schema_id":  "8993803e-3ace-4f4d-bd2d-b97af680bf0e",
+                        "delta_sharing_valid_through_timestamp":  1746797196268,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM_DELTASHARING",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_healthverity_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZa1OQnL"
+                    },
+                    {
+                        "name":  "information_schema",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "comment":  "Information schema (auto-created)",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.information_schema",
+                        "created_at":  1731954981376,
+                        "created_by":  "System user",
+                        "updated_at":  1731954981376,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "schema_id":  "ec752bae-4981-467a-8054-53c3e15759d5",
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZNAj7oA"
+                    },
+                    {
+                        "name":  "nyctaxi",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.nyctaxi",
+                        "created_at":  1731958204621,
+                        "created_by":  "System user",
+                        "updated_at":  1774384351194,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "provisioning_info":  {
+                                                  "state":  "ACTIVE"
+                                              },
+                        "schema_id":  "683889bc-19c1-4ab3-aaea-152ac6fd92b0",
+                        "delta_sharing_valid_through_timestamp":  1774384411116,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_nyctaxi_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZ0hjIfa"
+                    },
+                    {
+                        "name":  "sec",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.sec",
+                        "created_at":  1773884451315,
+                        "created_by":  "System user",
+                        "updated_at":  1773884451587,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "schema_id":  "bd710dd9-a68d-4faa-abb9-02ca96d7d425",
+                        "delta_sharing_valid_through_timestamp":  1773884511539,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM_DELTASHARING",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_sec_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZ0DwKsD"
+                    },
+                    {
+                        "name":  "tpcds_sf1",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.tpcds_sf1",
+                        "created_at":  1754079883809,
+                        "created_by":  "System user",
+                        "updated_at":  1754079884778,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "schema_id":  "07b44892-3a3e-493d-952d-45a13911cb2b",
+                        "delta_sharing_valid_through_timestamp":  1754079943947,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM_DELTASHARING",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_tpcds_sf1_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZhnTvXq"
+                    },
+                    {
+                        "name":  "tpcds_sf1000",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.tpcds_sf1000",
+                        "created_at":  1754079883690,
+                        "created_by":  "System user",
+                        "updated_at":  1754079884366,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "schema_id":  "50b57881-8e9e-490e-ba9b-77e71e35c59a",
+                        "delta_sharing_valid_through_timestamp":  1754079943947,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM_DELTASHARING",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_tpcds_sf1000_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZhnTvRO"
+                    },
+                    {
+                        "name":  "tpch",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.tpch",
+                        "created_at":  1731994263074,
+                        "created_by":  "System user",
+                        "updated_at":  1774384351160,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "provisioning_info":  {
+                                                  "state":  "ACTIVE"
+                                              },
+                        "schema_id":  "7c69fac6-1799-4a49-9ace-c6f14c362a2c",
+                        "delta_sharing_valid_through_timestamp":  1774384411107,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_tpch_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZ0hjIe4"
+                    },
+                    {
+                        "name":  "wanderbricks",
+                        "catalog_name":  "samples",
+                        "owner":  "System user",
+                        "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                        "full_name":  "samples.wanderbricks",
+                        "created_at":  1760511165477,
+                        "created_by":  "System user",
+                        "updated_at":  1760511165892,
+                        "updated_by":  "System user",
+                        "catalog_type":  "SYSTEM_CATALOG",
+                        "schema_id":  "9bff715b-3baf-4281-8470-4114bad196b1",
+                        "delta_sharing_valid_through_timestamp":  1760511225615,
+                        "securable_type":  "SCHEMA",
+                        "securable_kind":  "SCHEMA_SYSTEM_DELTASHARING",
+                        "browse_only":  false,
+                        "metastore_version":  -1,
+                        "provider_id":  "2c633410-d786-4bb0-a3da-c0393526ea9a",
+                        "share_name":  "system_schemas_wanderbricks_share",
+                        "cache_version_info":  {
+                                                   "metastore_version":  -1
+                                               },
+                        "etag":  "CAESCAAAAZnmpIXE"
+                    }
+                ],
+    "newum_migration_test":  [
+                                 {
+                                     "name":  "default",
+                                     "catalog_name":  "newum_migration_test",
+                                     "owner":  "mmucha@oncologyanalytics.com",
+                                     "enable_auto_maintenance":  "INHERIT",
+                                     "enable_predictive_optimization":  "INHERIT",
+                                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                     "full_name":  "newum_migration_test.default",
+                                     "created_at":  1771419390124,
+                                     "created_by":  "mmucha@oncologyanalytics.com",
+                                     "updated_at":  1771419390124,
+                                     "updated_by":  "mmucha@oncologyanalytics.com",
+                                     "catalog_type":  "MANAGED_CATALOG",
+                                     "effective_auto_maintenance_flag":  {
+                                                                             "value":  "ENABLE",
+                                                                             "inherited_from_type":  "METASTORE",
+                                                                             "inherited_from_name":  "metastore"
+                                                                         },
+                                     "effective_predictive_optimization_flag":  {
+                                                                                    "value":  "ENABLE",
+                                                                                    "inherited_from_type":  "METASTORE",
+                                                                                    "inherited_from_name":  "metastore"
+                                                                                },
+                                     "schema_id":  "3e31342c-c930-4915-91e4-2905a4f41d57",
+                                     "securable_type":  "SCHEMA",
+                                     "securable_kind":  "SCHEMA_STANDARD",
+                                     "browse_only":  false,
+                                     "metastore_version":  -1,
+                                     "cache_version_info":  {
+                                                                "metastore_version":  -1
+                                                            },
+                                     "etag":  "CAESCAAAAZxw0tCs"
+                                 },
+                                 {
+                                     "name":  "drugs",
+                                     "catalog_name":  "newum_migration_test",
+                                     "owner":  "onykonenko@oncologyanalytics.com",
+                                     "comment":  "",
+                                     "properties":  {
+                                                        "owner":  "root"
+                                                    },
+                                     "enable_auto_maintenance":  "INHERIT",
+                                     "enable_predictive_optimization":  "INHERIT",
+                                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                     "full_name":  "newum_migration_test.drugs",
+                                     "created_at":  1770306742384,
+                                     "created_by":  "onykonenko@oncologyanalytics.com",
+                                     "updated_at":  1770306742384,
+                                     "updated_by":  "onykonenko@oncologyanalytics.com",
+                                     "catalog_type":  "MANAGED_CATALOG",
+                                     "effective_auto_maintenance_flag":  {
+                                                                             "value":  "ENABLE",
+                                                                             "inherited_from_type":  "METASTORE",
+                                                                             "inherited_from_name":  "metastore"
+                                                                         },
+                                     "effective_predictive_optimization_flag":  {
+                                                                                    "value":  "ENABLE",
+                                                                                    "inherited_from_type":  "METASTORE",
+                                                                                    "inherited_from_name":  "metastore"
+                                                                                },
+                                     "schema_id":  "31a147ca-16a4-4aa4-9375-6439a9f3a027",
+                                     "securable_type":  "SCHEMA",
+                                     "securable_kind":  "SCHEMA_STANDARD",
+                                     "browse_only":  false,
+                                     "metastore_version":  -1,
+                                     "cache_version_info":  {
+                                                                "metastore_version":  -1
+                                                            },
+                                     "etag":  "CAESCAAAAZwugShw"
+                                 },
+                                 {
+                                     "name":  "eligibility",
+                                     "catalog_name":  "newum_migration_test",
+                                     "owner":  "onykonenko@oncologyanalytics.com",
+                                     "comment":  "",
+                                     "properties":  {
+                                                        "owner":  "root"
+                                                    },
+                                     "enable_auto_maintenance":  "INHERIT",
+                                     "enable_predictive_optimization":  "INHERIT",
+                                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                     "full_name":  "newum_migration_test.eligibility",
+                                     "created_at":  1770305046594,
+                                     "created_by":  "onykonenko@oncologyanalytics.com",
+                                     "updated_at":  1774084936704,
+                                     "updated_by":  "onykonenko@oncologyanalytics.com",
+                                     "catalog_type":  "MANAGED_CATALOG",
+                                     "effective_auto_maintenance_flag":  {
+                                                                             "value":  "ENABLE",
+                                                                             "inherited_from_type":  "METASTORE",
+                                                                             "inherited_from_name":  "metastore"
+                                                                         },
+                                     "effective_predictive_optimization_flag":  {
+                                                                                    "value":  "ENABLE",
+                                                                                    "inherited_from_type":  "METASTORE",
+                                                                                    "inherited_from_name":  "metastore"
+                                                                                },
+                                     "schema_id":  "236bb2cb-5995-4223-887a-1de24abf8ce1",
+                                     "securable_type":  "SCHEMA",
+                                     "securable_kind":  "SCHEMA_STANDARD",
+                                     "browse_only":  false,
+                                     "metastore_version":  -1,
+                                     "cache_version_info":  {
+                                                                "metastore_version":  -1
+                                                            },
+                                     "etag":  "CAESCAAAAZ0Ps9QA"
+                                 },
+                                 {
+                                     "name":  "information_schema",
+                                     "catalog_name":  "newum_migration_test",
+                                     "owner":  "System user",
+                                     "comment":  "Information schema (auto-created)",
+                                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                     "full_name":  "newum_migration_test.information_schema",
+                                     "created_at":  1770302456076,
+                                     "created_by":  "System user",
+                                     "updated_at":  1770302456076,
+                                     "updated_by":  "System user",
+                                     "catalog_type":  "MANAGED_CATALOG",
+                                     "schema_id":  "3bc98e56-1975-425b-b92a-bf0a3c38a687",
+                                     "securable_type":  "SCHEMA",
+                                     "securable_kind":  "SCHEMA_SYSTEM",
+                                     "browse_only":  false,
+                                     "metastore_version":  -1,
+                                     "cache_version_info":  {
+                                                                "metastore_version":  -1
+                                                            },
+                                     "etag":  "CAESCAAAAZwuP8EM"
+                                 },
+                                 {
+                                     "name":  "provider",
+                                     "catalog_name":  "newum_migration_test",
+                                     "owner":  "onykonenko@oncologyanalytics.com",
+                                     "comment":  "",
+                                     "properties":  {
+                                                        "owner":  "root"
+                                                    },
+                                     "enable_auto_maintenance":  "INHERIT",
+                                     "enable_predictive_optimization":  "INHERIT",
+                                     "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                                     "full_name":  "newum_migration_test.provider",
+                                     "created_at":  1770305782580,
+                                     "created_by":  "onykonenko@oncologyanalytics.com",
+                                     "updated_at":  1770305782580,
+                                     "updated_by":  "onykonenko@oncologyanalytics.com",
+                                     "catalog_type":  "MANAGED_CATALOG",
+                                     "effective_auto_maintenance_flag":  {
+                                                                             "value":  "ENABLE",
+                                                                             "inherited_from_type":  "METASTORE",
+                                                                             "inherited_from_name":  "metastore"
+                                                                         },
+                                     "effective_predictive_optimization_flag":  {
+                                                                                    "value":  "ENABLE",
+                                                                                    "inherited_from_type":  "METASTORE",
+                                                                                    "inherited_from_name":  "metastore"
+                                                                                },
+                                     "schema_id":  "f8392597-1237-4797-b1a1-3cb7701c3889",
+                                     "securable_type":  "SCHEMA",
+                                     "securable_kind":  "SCHEMA_STANDARD",
+                                     "browse_only":  false,
+                                     "metastore_version":  -1,
+                                     "cache_version_info":  {
+                                                                "metastore_version":  -1
+                                                            },
+                                     "etag":  "CAESCAAAAZwucoM0"
+                                 }
+                             ]
+}

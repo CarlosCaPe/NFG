@@ -13,8 +13,8 @@ pdf_options:
 **Area**: newUM\Data Team
 **Sprint**: TBD
 **Priority**: P2
-**Sources**: All claims verified against official Microsoft Learn docs (fetched 2026-03-23). See [References](#references) for full list.
-**Project context**: `clients/oncohealth/knowledge.json` v1.7.0 — operational facts cited as [K].
+**Sources**: All claims verified against official Microsoft Learn docs (fetched 2026-03-23) AND validated against TEST workspace API (2026-03-24). See [References](#references) for full list.
+**Project context**: `clients/oncohealth/knowledge.json` v1.10.0 — operational facts cited as [K].
 
 ## Architecture Overview
 
@@ -174,28 +174,26 @@ The above architecture maps to our confirmed environment [K: `tech_stack.data`, 
 
 | # | Risk/Question | Severity | Mitigation |
 |---|---------------|----------|------------|
-| 1 | **Workspace access not yet validated** — DEV (`adb-3806388400498653`) is BLOCKED (PHI); TEST (`adb-2393860672770324`) access granted but not yet tested [K: `databricks.workspaces`, `access_inventory`] | MEDIUM | Validate PAT against TEST workspace Iceberg endpoint |
-| 2 | **Metadata staleness** — Iceberg metadata may lag Delta writes | MEDIUM | Monitor `converted_delta_version`; use `MSCK REPAIR TABLE` if needed |
-| 3 | **Target tables unknown** — which Unity Catalog tables need UniForm? Bronze/Silver/Gold layers exist [K: `tech_stack.data`] but specific tables not yet identified | MEDIUM | Coordinate with Michal Mucha [K: `key_contacts`] for table selection |
-| 4 | **Network restrictions** — DEV workspace already network-blocked for us [K: `access_inventory`]; TEST/UAT/PROD may have similar restrictions | MEDIUM | Validate firewall/VNet/Private Link config; contact DevOps (`devopsrequest@oncologyanalytics.com` [K]) |
-| 5 | **External data access not enabled** — metastore may need admin config | MEDIUM | Requires UC Admin to enable; escalate via Erik Hjortshoj (SVP Engineering) [K: `key_contacts`] |
+| 1 | **External data access not enabled** — `external_access_enabled: false` on metastore | **HIGH** | Requires UC Admin to enable; escalate via Erik Hjortshoj |
+| 2 | **No UniForm on any table** — all tables at `minReaderVersion=1`, `minWriterVersion=2`. Protocol upgrade needed on every candidate table. | **HIGH** | Coordinate with Data Team; test on non-critical table first |
+| 3 | **No `EXTERNAL_USE_SCHEMA` grant** — `NewFire Offshore DBX Users` has SELECT but not EXTERNAL_USE_SCHEMA. | **HIGH** | Request grant from UC Admin |
+| 4 | **Metadata staleness** — Iceberg metadata may lag Delta writes | MEDIUM | Monitor `converted_delta_version`; use `MSCK REPAIR TABLE` if needed |
+| 5 | **Network restrictions** — DEV workspace BLOCKED (PHI); TEST accessible via PAT | MEDIUM | Validate firewall/VNet/Private Link config; contact DevOps |
 | 6 | **Protocol upgrade partially irreversible** — Iceberg reads can be toggled off, but Delta protocol versions and column mapping cannot be undone ([S2]) | LOW | Test on non-prod table first; protocol is forward-compatible |
 | 7 | **Deletion vectors on existing tables** — need REORG for Iceberg v2; Iceberg v3 supports them natively ([S2]) | LOW | Schedule during maintenance window; REORG is idempotent |
-| 8 | **Write via Iceberg not supported for Delta UniForm** — confirmed | INFO | Out of scope per ticket; writes stay in Databricks |
-| 9 | **MFA blocks automation** — Databricks login requires Entra ID button click, not automated via Okta SSO like ADO/SharePoint [K: `access_inventory.note`] | LOW | Manual validation needed; user must be at keyboard |
-| 10 | **Unresolved unknowns** — TEST/UAT/PROD URLs unknown (U2), preferred workspace unknown (U6) [K: `unknowns`] | MEDIUM | Resolve with Michal or DevOps before proceeding |
+| 8 | **UAT/PROD URLs** still unknown | LOW | Resolve with Michal or DevOps before proceeding |
 
 ### Recommended Next Steps
 
-1. ~~**Obtain TEST workspace URL**~~ — DONE: `https://adb-2393860672770324.4.azuredatabricks.net/` [K: `databricks.workspaces[1]`]
-2. **Validate existing PAT** — token `visualstudio-carlos` (exp 2027-03-22) [K] → curl `https://adb-2393860672770324.4.azuredatabricks.net/api/2.1/unity-catalog/iceberg-rest/v1/config` (needs MFA at keyboard)
-3. **List UC catalogs/tables** — use PAT to query TEST workspace; identify Bronze/Silver/Gold tables [K: `tech_stack.data`] for UniForm candidates
-4. **Coordinate with Michal Mucha** [K: `key_contacts`] — he leads Databricks Lakeflow Connect [K: `communication.channels[0].active_chats`]; align on which tables to expose
-5. **POC on test table** — enable UniForm, validate PyIceberg read from external network
-6. **Create service principal** — with `USE CATALOG`, `USE SCHEMA`, `SELECT`, `EXTERNAL USE SCHEMA`; request via DevOps [K]
-7. **Enable external data access** on metastore — escalate to UC Admin via Erik Hjortshoj [K: `key_contacts`]
-8. **Document network path** — confirm external service can reach TEST workspace endpoint; DEV (`adb-3806388400498653`) is BLOCKED (PHI) [K]
-9. **Resolve unknown U6** [K: `unknowns`] — preferred workspace for initial validation (TEST likely); UAT/PROD URLs still unknown
+1. **Coordinate with Michal Mucha** — share table inventory; agree on Gold-layer tables for UniForm POC. Candidates: `drugmaster_test.drug_master.gold_*`, `newum_migration_test.drugs.*`.
+2. **Request UC Admin actions** (3 blockers):
+   - a. Enable `external_access_enabled` on metastore (`30737b7a-18b6-4e81-9016-03e2c816cc37`)
+   - b. Grant `EXTERNAL USE SCHEMA` on target schemas
+   - c. Enable UniForm on target table(s) (requires cluster with DBR 14.3+ LTS)
+3. **POC on test table** — enable UniForm on e.g. `drugmaster_test.drug_master.gold_drug_master`, validate via Iceberg REST endpoint
+4. **Service principal** — evaluate reusing existing `app-cc28t0 new-data-api` SP; if not, create dedicated SP via DevOps
+5. **PyIceberg read test** — after UniForm + external access enabled, validate from outside the workspace
+6. **UAT/PROD URLs** — resolve with DevOps
 
 ## References
 
@@ -209,4 +207,5 @@ All claims in this document were verified against official Microsoft Learn docum
 | **[S4]** | Databricks service principals / Auth | https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/ | — |
 | **[S5]** | PyIceberg REST catalog configuration | https://py.iceberg.apache.org/configuration/#rest-catalog | — |
 | **[S6]** | Apache Iceberg REST API spec | https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml | — |
-| **[K]** | Project knowledge base | `clients/oncohealth/knowledge.json` v1.7.0 | 2026-03-23 |
+| **[K]** | Project knowledge base | `clients/oncohealth/knowledge.json` v1.10.0 | 2026-03-24 |
+| **[DB]** | Databricks TEST workspace API capture | `clients/oncohealth/output/databricks/` (7 files, 987 KB) | 2026-03-24 |

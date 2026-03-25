@@ -1,0 +1,301 @@
+{
+    "catalogs":  [
+                     {
+                         "name":  "drugmaster_test",
+                         "owner":  "metastore_admins",
+                         "comment":  "Drug Master TEST",
+                         "properties":  {
+                                            "purpose":  "drugmaster_test"
+                                        },
+                         "storage_root":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/",
+                         "enable_auto_maintenance":  "INHERIT",
+                         "enable_predictive_optimization":  "INHERIT",
+                         "catalog_type":  "MANAGED_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1724337961210,
+                         "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "updated_at":  1769470242707,
+                         "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "storage_location":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/__unitystorage/catalogs/d594f2c4-7b19-401a-bc76-7108324e6fbd",
+                         "isolation_mode":  "ISOLATED",
+                         "accessible_in_current_workspace":  true,
+                         "effective_auto_maintenance_flag":  {
+                                                                 "value":  "ENABLE",
+                                                                 "inherited_from_type":  "METASTORE",
+                                                                 "inherited_from_name":  "metastore"
+                                                             },
+                         "effective_predictive_optimization_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                         "browse_only":  false,
+                         "id":  "d594f2c4-7b19-401a-bc76-7108324e6fbd",
+                         "full_name":  "drugmaster_test",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_STANDARD",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/d594f2c4-7b19-401a-bc76-7108324e6fbd",
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZv8pS+T"
+                     },
+                     {
+                         "name":  "eligibility_test",
+                         "owner":  "metastore_admins",
+                         "comment":  "Eligibility TEST",
+                         "properties":  {
+                                            "purpose":  "eligibility_test"
+                                        },
+                         "storage_root":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/",
+                         "enable_auto_maintenance":  "INHERIT",
+                         "enable_predictive_optimization":  "INHERIT",
+                         "catalog_type":  "MANAGED_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1745248404961,
+                         "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "updated_at":  1769470242377,
+                         "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "storage_location":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/__unitystorage/catalogs/2c3a402b-4a8f-478c-93b2-be4468a12afb",
+                         "isolation_mode":  "ISOLATED",
+                         "accessible_in_current_workspace":  true,
+                         "effective_auto_maintenance_flag":  {
+                                                                 "value":  "ENABLE",
+                                                                 "inherited_from_type":  "METASTORE",
+                                                                 "inherited_from_name":  "metastore"
+                                                             },
+                         "effective_predictive_optimization_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                         "browse_only":  false,
+                         "id":  "2c3a402b-4a8f-478c-93b2-be4468a12afb",
+                         "full_name":  "eligibility_test",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_STANDARD",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/2c3a402b-4a8f-478c-93b2-be4468a12afb",
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZv8pS5J"
+                     },
+                     {
+                         "name":  "enterprisedata_test",
+                         "owner":  "metastore_admins",
+                         "comment":  "EnterpriseData TEST",
+                         "properties":  {
+                                            "purpose":  "enterprisedata_test"
+                                        },
+                         "storage_root":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/",
+                         "enable_auto_maintenance":  "INHERIT",
+                         "enable_predictive_optimization":  "INHERIT",
+                         "catalog_type":  "MANAGED_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1720484241077,
+                         "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "updated_at":  1773932424648,
+                         "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "storage_location":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/__unitystorage/catalogs/ad084b23-4f46-427d-9927-087c473b8db9",
+                         "isolation_mode":  "ISOLATED",
+                         "accessible_in_current_workspace":  true,
+                         "effective_auto_maintenance_flag":  {
+                                                                 "value":  "ENABLE",
+                                                                 "inherited_from_type":  "METASTORE",
+                                                                 "inherited_from_name":  "metastore"
+                                                             },
+                         "effective_predictive_optimization_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                         "browse_only":  false,
+                         "id":  "ad084b23-4f46-427d-9927-087c473b8db9",
+                         "full_name":  "enterprisedata_test",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_STANDARD",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/ad084b23-4f46-427d-9927-087c473b8db9",
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZ0GnK3I"
+                     },
+                     {
+                         "name":  "inbound_ingestion_test",
+                         "owner":  "metastore_admins",
+                         "comment":  "Inbound Ingestion TEST",
+                         "properties":  {
+                                            "purpose":  "inbound_ingestion_test"
+                                        },
+                         "storage_root":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/",
+                         "enable_auto_maintenance":  "INHERIT",
+                         "enable_predictive_optimization":  "INHERIT",
+                         "catalog_type":  "MANAGED_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1727268785217,
+                         "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "updated_at":  1769470242911,
+                         "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "storage_location":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/__unitystorage/catalogs/652dfb93-ab90-4bd0-b036-9e97403025f2",
+                         "isolation_mode":  "ISOLATED",
+                         "accessible_in_current_workspace":  true,
+                         "effective_auto_maintenance_flag":  {
+                                                                 "value":  "ENABLE",
+                                                                 "inherited_from_type":  "METASTORE",
+                                                                 "inherited_from_name":  "metastore"
+                                                             },
+                         "effective_predictive_optimization_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                         "browse_only":  false,
+                         "id":  "652dfb93-ab90-4bd0-b036-9e97403025f2",
+                         "full_name":  "inbound_ingestion_test",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_STANDARD",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/652dfb93-ab90-4bd0-b036-9e97403025f2",
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZv8pTBf"
+                     },
+                     {
+                         "name":  "main",
+                         "owner":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "comment":  "Main catalog (auto-created)",
+                         "enable_auto_maintenance":  "INHERIT",
+                         "enable_predictive_optimization":  "INHERIT",
+                         "catalog_type":  "MANAGED_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1676579368199,
+                         "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "updated_at":  1676579368199,
+                         "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "isolation_mode":  "OPEN",
+                         "accessible_in_current_workspace":  true,
+                         "effective_auto_maintenance_flag":  {
+                                                                 "value":  "ENABLE",
+                                                                 "inherited_from_type":  "METASTORE",
+                                                                 "inherited_from_name":  "metastore"
+                                                             },
+                         "effective_predictive_optimization_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                         "browse_only":  false,
+                         "id":  "9d3c2aa1-7613-4a1f-89a2-8a313f06c334",
+                         "full_name":  "main",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_STANDARD",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/9d3c2aa1-7613-4a1f-89a2-8a313f06c334",
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAYZb6u0H"
+                     },
+                     {
+                         "name":  "newum_migration_test",
+                         "owner":  "metastore_admins",
+                         "comment":  "newUM Migration TEST",
+                         "properties":  {
+                                            "purpose":  "newum_migration_test"
+                                        },
+                         "storage_root":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/",
+                         "enable_auto_maintenance":  "INHERIT",
+                         "enable_predictive_optimization":  "INHERIT",
+                         "catalog_type":  "MANAGED_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1770302456027,
+                         "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "updated_at":  1774084936811,
+                         "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                         "storage_location":  "abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/__unitystorage/catalogs/126209e2-fd17-4a13-a094-026f1702619f",
+                         "isolation_mode":  "ISOLATED",
+                         "accessible_in_current_workspace":  true,
+                         "effective_auto_maintenance_flag":  {
+                                                                 "value":  "ENABLE",
+                                                                 "inherited_from_type":  "METASTORE",
+                                                                 "inherited_from_name":  "metastore"
+                                                             },
+                         "effective_predictive_optimization_flag":  {
+                                                                        "value":  "ENABLE",
+                                                                        "inherited_from_type":  "METASTORE",
+                                                                        "inherited_from_name":  "metastore"
+                                                                    },
+                         "browse_only":  false,
+                         "id":  "126209e2-fd17-4a13-a094-026f1702619f",
+                         "full_name":  "newum_migration_test",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_STANDARD",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/126209e2-fd17-4a13-a094-026f1702619f",
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZ0Ps9Rr"
+                     },
+                     {
+                         "name":  "samples",
+                         "owner":  "System user",
+                         "comment":  "These sample datasets are made available by third party data providers as well as open data sources. You can learn more about each data set by clicking on each one.\n\nTo discover more instantly available, free data sets across a wide range of industry use cases, visit [Databricks Marketplace](/marketplace).\n\nPlease note that the third party data sets represent a reduced portion of the available data attributes, volume, and data types available from providers, and are intended for educational rather than production purposes.",
+                         "catalog_type":  "SYSTEM_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1731954981360,
+                         "created_by":  "System user",
+                         "updated_at":  1774313246778,
+                         "updated_by":  "System user",
+                         "isolation_mode":  "OPEN",
+                         "accessible_in_current_workspace":  true,
+                         "browse_only":  false,
+                         "provisioning_info":  {
+                                                   "state":  "ACTIVE"
+                                               },
+                         "id":  "0b8a2764-e9b0-4013-8217-117713dfcb56",
+                         "full_name":  "samples",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_SYSTEM",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/0b8a2764-e9b0-4013-8217-117713dfcb56",
+                         "delta_sharing_valid_through_timestamp":  1774313306724,
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZ0dT5A6"
+                     },
+                     {
+                         "name":  "system",
+                         "owner":  "System user",
+                         "comment":  "System catalog (auto-created)",
+                         "catalog_type":  "SYSTEM_CATALOG",
+                         "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+                         "created_at":  1676579368215,
+                         "created_by":  "System user",
+                         "updated_at":  1774289111845,
+                         "updated_by":  "System user",
+                         "isolation_mode":  "OPEN",
+                         "accessible_in_current_workspace":  true,
+                         "browse_only":  false,
+                         "provisioning_info":  {
+                                                   "state":  "ACTIVE"
+                                               },
+                         "id":  "cc8da3fc-4ab6-46b5-9d29-c00c950b3bfd",
+                         "full_name":  "system",
+                         "securable_type":  "CATALOG",
+                         "securable_kind":  "CATALOG_SYSTEM",
+                         "resource_name":  "/metastores/30737b7a-18b6-4e81-9016-03e2c816cc37/catalogs/cc8da3fc-4ab6-46b5-9d29-c00c950b3bfd",
+                         "delta_sharing_valid_through_timestamp":  1774289171789,
+                         "metastore_version":  -1,
+                         "cache_version_info":  {
+                                                    "metastore_version":  -1
+                                                },
+                         "etag":  "CAESCAAAAZ0b30sl"
+                     }
+                 ]
+}

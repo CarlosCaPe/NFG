@@ -1,0 +1,35 @@
+{
+    "warehouses":  [
+                       {
+                           "id":  "090a45551ae1dc50",
+                           "name":  "Starter Warehouse",
+                           "size":  "SMALL",
+                           "cluster_size":  "Small",
+                           "min_num_clusters":  1,
+                           "max_num_clusters":  1,
+                           "auto_stop_mins":  60,
+                           "auto_resume":  true,
+                           "creator_name":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+                           "creator_id":  8142368403112201,
+                           "tags":  {
+
+                                    },
+                           "spot_instance_policy":  "COST_OPTIMIZED",
+                           "enable_photon":  true,
+                           "enable_serverless_compute":  true,
+                           "warehouse_type":  "PRO",
+                           "num_clusters":  0,
+                           "state":  "STOPPED",
+                           "jdbc_url":  "jdbc:spark://adb-2393860672770324.4.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/warehouses/090a45551ae1dc50;",
+                           "odbc_params":  {
+                                               "hostname":  "adb-2393860672770324.4.azuredatabricks.net",
+                                               "path":  "/sql/1.0/warehouses/090a45551ae1dc50",
+                                               "protocol":  "https",
+                                               "port":  443
+                                           },
+                           "health":  {
+                                          "details":  "Warehouse health details are not visible to users with the CAN_USE permission on the warehouse"
+                                      }
+                       }
+                   ]
+}

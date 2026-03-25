@@ -1,0 +1,20 @@
+{
+    "metastore_id":  "30737b7a-18b6-4e81-9016-03e2c816cc37",
+    "name":  "metastore",
+    "default_data_access_config_id":  "345519af-6a52-4617-876c-2a26c09c0248",
+    "storage_root_credential_id":  "345519af-6a52-4617-876c-2a26c09c0248",
+    "cloud":  "azure",
+    "region":  "eastus2",
+    "global_metastore_id":  "azure:eastus2:30737b7a-18b6-4e81-9016-03e2c816cc37",
+    "storage_root_credential_name":  "oh-databricks-ws-da-dev",
+    "privilege_model_version":  "1.0",
+    "delta_sharing_scope":  "INTERNAL",
+    "storage_root":  "abfss://unitycatalog@ohdatabrickswssamsdev.dfs.core.windows.net/30737b7a-18b6-4e81-9016-03e2c816cc37",
+    "owner":  "metastore_admins",
+    "created_at":  1676579368199,
+    "created_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+    "updated_at":  1676579370199,
+    "updated_by":  "6f46a974-c1a5-4e9a-8f56-0563fc32f19b",
+    "external_access_enabled":  false,
+    "etag":  "CAESCAAAAYZb6vTX"
+}

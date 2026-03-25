@@ -11,9 +11,9 @@ pdf_options:
 
 > **ADO Ticket**: [#186438](https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/186438)
 > **Author**: Carlos Carrillo (`ccarrillo@oncologyanalytics.com`)
-> **Date**: 2026-03-23
-> **Status**: DRAFT — requires TEST workspace access to validate
-> **Project context**: `clients/oncohealth/knowledge.json` v1.7.0 — operational facts cited as [K].
+> **Date**: 2026-03-23 (updated 2026-03-24)
+> **Status**: VALIDATED — Iceberg REST endpoint confirmed working; UniForm enablement pending
+> **Project context**: `clients/oncohealth/knowledge.json` v1.10.0 — operational facts cited as [K].
 
 ---
 
@@ -25,13 +25,16 @@ to external services. Azure Databricks natively supports the endpoint at
 enabling Delta UniForm on target tables, configuring a service principal with
 appropriate UC privileges, and validating network connectivity.
 
-**Key Blocker**: We currently only have TEST workspace access (ticket #0035611).
+**Key Blocker**: RESOLVED — PAT validated 2026-03-24.
 DEV workspace (`adb-3806388400498653`) is BLOCKED (contains PHI) [K: `databricks.workspaces[0]`].
 TEST workspace URL: `https://adb-2393860672770324.4.azuredatabricks.net/` [K: `databricks.workspaces[1]`].
-PAT token `visualstudio-carlos` was created (exp 2027-03-22) [K: `access_inventory`] but MFA
-blocks automated validation — user must be at keyboard [K: `access_inventory.note`].
-Investigation findings below are based on official Microsoft documentation (last updated 2026-03-19)
-and must be validated against our actual workspace configuration.
+PAT token `visualstudio-carlos` (exp 2027-03-24) — validated against 12 API endpoints including
+Iceberg REST Catalog. Full UC inventory captured: 8 catalogs, ~66 schemas, ~466 tables.
+
+**Remaining Blockers** (3 items requiring UC Admin action):
+1. `external_access_enabled = false` on metastore — must be enabled by UC Admin
+2. No `EXTERNAL_USE_SCHEMA` grant on any schema — must be granted per-schema
+3. Zero tables have UniForm/IcebergCompatV2 enabled — `minReaderVersion=1`, `minWriterVersion=2` (needs ≥2/≥7)
 
 ---
 
@@ -346,26 +349,107 @@ grant_type=client_credentials
 
 ---
 
-## 5. Action Items (Blocked on Workspace Access)
+## 5. Action Items
 
 | # | Action | Owner | Status |
 |---|--------|-------|--------|
-| 1 | ~~Obtain TEST workspace URL~~ — resolved: `adb-2393860672770324.4` [K: `databricks.workspaces[1]`] | Carlos | DONE |
-| 2 | Validate PAT `visualstudio-carlos` [K] against Iceberg REST endpoint (`https://adb-2393860672770324.4.azuredatabricks.net/api/2.1/unity-catalog/iceberg-rest/v1/config`) | Carlos | PENDING (needs MFA at keyboard) |
-| 3 | List UC catalogs/schemas/tables — identify Bronze/Silver/Gold layers [K: `tech_stack.data`] | Carlos | BLOCKED |
-| 4 | Identify target tables for UniForm enablement | Michal Mucha [K: `key_contacts`] | NOT STARTED |
-| 5 | Test `DESCRIBE EXTENDED` on a target table to check current properties | Carlos | BLOCKED |
-| 6 | Enable UniForm on a non-prod test table | Carlos + Michal | NOT STARTED |
-| 7 | Validate Iceberg REST endpoint with curl + existing PAT [K] | Carlos | BLOCKED |
-| 8 | Test PyIceberg read from external network | Carlos | BLOCKED |
-| 9 | Create dedicated service principal for production use | DevOps (Luiyi Valentin [K]) | NOT STARTED |
-| 10 | Grant `EXTERNAL USE SCHEMA` on target schemas | UC Admin (escalate via Erik Hjortshoj [K]) | NOT STARTED |
-| 11 | Enable external data access on metastore | UC Admin | NOT STARTED |
-| 12 | Resolve unknowns U2 (workspace URLs) and U6 (preferred workspace) [K: `unknowns`] | Carlos / DevOps | PARTIAL — TEST URL known; UAT/PROD still unknown |
+| 1 | Identify target tables for UniForm enablement — Gold-layer candidates: `drugmaster_test.drug_master.gold_*` (5 tables), `enterprisedata_test.oneum_dwh.silver_matis_*` (3 views), `newum_migration_test.*` (90 tables). | Michal Mucha | READY — table inventory available |
+| 2 | Enable external data access on metastore — `external_access_enabled = false` confirmed via API. | UC Admin (Erik Hjortshoj) | **BLOCKER** |
+| 3 | Grant `EXTERNAL USE SCHEMA` on target schemas — only `CREATE_FUNCTION`, `CREATE_TABLE`, `MODIFY`, `SELECT`, `USE_SCHEMA` granted today. | UC Admin (Erik Hjortshoj) | **BLOCKER** |
+| 4 | Enable UniForm on a non-prod test table — `ALTER TABLE ... SET TBLPROPERTIES('delta.enableIcebergCompatV2'='true', ...)` | Carlos + Michal | NOT STARTED (needs cluster) |
+| 5 | Test PyIceberg read from external network | Carlos | BLOCKED (needs UniForm + external access) |
+| 6 | Create dedicated service principal for production use — 3 SPs exist: `databricks_airflow_sp_test`, `app-cc28t0 new-data-api`, `databricks_workspace_dev`. May reuse `new-data-api` SP. | DevOps (Luiyi Valentin) | NOT STARTED |
+| 7 | Resolve UAT/PROD workspace URLs | Carlos / DevOps | NOT STARTED |
 
 ---
 
-## 6. References
+## 6. Validated Workspace Inventory (2026-03-24)
+
+### 6.1 Metastore
+
+| Property | Value |
+|----------|-------|
+| Metastore ID | `30737b7a-18b6-4e81-9016-03e2c816cc37` |
+| Name | `metastore` |
+| Cloud / Region | Azure / `eastus2` |
+| Storage Root | `abfss://unitycatalog@ohdatabrickswssamsdev.dfs.core.windows.net/` |
+| Credential | `oh-databricks-ws-da-dev` |
+| External Access Enabled | **`false`** |
+| Delta Sharing Scope | `INTERNAL` |
+| Owner | `metastore_admins` |
+
+### 6.2 Unity Catalog Catalogs
+
+| Catalog | Comment | Isolation | Schemas | Key Schemas |
+|---------|---------|-----------|---------|-------------|
+| `drugmaster_test` | Drug Master TEST | ISOLATED | 4 | `drug_master` (35 tables: bronze/silver/gold), `public` (4), `test_drug_master` (2) |
+| `eligibility_test` | Eligibility TEST | ISOLATED | 15 | `bronze`, `config` (14), `data_tables` (21 DLT), `gold`, `silver`, `silver_demo` |
+| `enterprisedata_test` | EnterpriseData TEST | ISOLATED | 9 | `oneum_dwh` (80 tables: bronze_raw/bronze_stg/silver), `healthfortis_db` (20), `poc_cdc_dlt` (9) |
+| `inbound_ingestion_test` | Inbound Ingestion TEST | ISOLATED | 29 | `config` (32), `bronze_std`, many POC schemas |
+| `newum_migration_test` | newUM Migration TEST | ISOLATED | 5 | `drugs` (78), `eligibility` (12), `provider` (0 — empty) |
+| `main` | Auto-created | OPEN | 2 | `default` (0 tables) |
+| `samples` | System (Databricks) | OPEN | — | — |
+| `system` | System (Databricks) | OPEN | — | — |
+
+All catalogs use storage: `abfss://datafactorytest@ohdatabrickswssadftest.dfs.core.windows.net/`
+
+### 6.3 UniForm/Iceberg Readiness Assessment
+
+| Table (sampled) | Format | Reader Ver | Writer Ver | UniForm? | Iceberg REST Load? |
+|-----------------|--------|-----------|-----------|----------|--------------------|
+| `drugmaster_test.drug_master.gold_drug_master` | DELTA | 1 | 2 | **NO** | `not an Iceberg compatible table` |
+| `drugmaster_test.drug_master.gold_hcpcs` | DELTA | 1 | 2 | **NO** | — |
+| `newum_migration_test.drugs.drug` | DELTA | 1 | 2 | **NO** | `not an Iceberg compatible table` |
+| `newum_migration_test.eligibility.eligibilitydata` | DELTA | 1 | 2 | **NO** | — |
+| `enterprisedata_test.oneum_dwh.silver_matis_case` | MAT_VIEW | — | — | **NO** | N/A (materialized views not supported) |
+
+**Verdict**: `minReaderVersion` must be ≥ 2 and `minWriterVersion` ≥ 7 for UniForm. All sampled tables are at 1/2 — **protocol upgrade required on every table**.
+
+### 6.4 Service Principals
+
+| Name | Application ID | Active | Notes |
+|------|---------------|--------|-------|
+| `databricks_airflow_sp_test` | `6759a888-3038-4b05-a76b-8556aba5ad7a` | YES | Airflow orchestration |
+| `app-cc28t0 new-data-api` | `90336730-f2e6-4960-adcd-a890cf092a20` | YES | **Candidate for Iceberg REST access** |
+| `databricks_workspace_dev` | `6f46a974-c1a5-4e9a-8f56-0563fc32f19b` | YES | Workspace admin (metastore creator) |
+
+### 6.5 Permissions on `newum_migration_test.drugs`
+
+| Principal | Privileges | Inherited From |
+|-----------|-----------|----------------|
+| `NewFire Offshore DBX Users` | `CREATE_FUNCTION`, `CREATE_MATERIALIZED_VIEW`, `CREATE_TABLE`, `MODIFY`, `SELECT`, `USE_SCHEMA` | `CATALOG: newum_migration_test` |
+
+**Missing for Iceberg REST**: `EXTERNAL_USE_SCHEMA` — must be granted by UC Admin.
+
+### 6.6 Infrastructure
+
+| Component | Details |
+|-----------|--------|
+| SQL Warehouse | `Starter Warehouse` (PRO, Small, **STOPPED**) |
+| Clusters | 0 running |
+| Jobs | 0 defined |
+| DLT Pipelines | 0 active |
+| Cluster Policies | 7 (Developer Compute variants + DLT + Photon + Shared) |
+
+### 6.7 Iceberg REST Catalog Endpoint
+
+**Endpoint**: `https://adb-2393860672770324.4.azuredatabricks.net/api/2.1/unity-catalog/iceberg-rest`
+
+| Test | Status | Notes |
+|------|--------|-------|
+| `/v1/config` (no params) | **400** | `Must provide 'warehouse' parameter` |
+| `/v1/config?warehouse=drugmaster_test` | **200** | Returns endpoints list, prefix = `catalogs/drugmaster_test` |
+| `/v1/config?warehouse=newum_migration_test` | **200** | Same |
+| `/v1/catalogs/drugmaster_test/namespaces` | **200** | Returns 4 namespaces |
+| `/v1/catalogs/newum_migration_test/namespaces` | **200** | Returns 5 namespaces |
+| `/v1/catalogs/.../tables/gold_drug_master` | **400** | `Table is not an Iceberg compatible table` (expected — no UniForm) |
+
+**Supported operations** (from config response):
+`GET/POST/DELETE/HEAD` on namespaces, tables, views, credentials, metrics, plan.
+
+---
+
+## 7. References
 
 All findings sourced from official Microsoft/Databricks documentation:
 
@@ -375,4 +459,5 @@ All findings sourced from official Microsoft/Databricks documentation:
 4. [Databricks service principals](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/)
 5. [PyIceberg REST catalog configuration](https://py.iceberg.apache.org/configuration/#rest-catalog)
 6. [Iceberg REST API spec (Apache)](https://github.com/apache/iceberg/blob/master/open-api/rest-catalog-open-api.yaml)
-7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.7.0 (2026-03-23) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
+7. **[K]** Project knowledge base: `clients/oncohealth/knowledge.json` v1.10.0 (2026-03-24) — confirmed operational facts about workspaces, tokens, team contacts, access status, and tech stack
+8. **[DB]** Databricks TEST workspace API capture: `clients/oncohealth/output/databricks/` — 7 JSON files, 987 KB. Full UC inventory validated 2026-03-24.
