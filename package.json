@@ -7,6 +7,7 @@
     "pdf-parse": "^2.4.5",
     "pdfreader": "^3.0.8",
     "playwright": "^1.58.2",
+    "simple-icons": "^16.13.0",
     "xlsx": "^0.18.5"
   }
 }
