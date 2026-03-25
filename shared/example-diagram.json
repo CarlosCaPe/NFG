@@ -1,0 +1,100 @@
+[
+  {
+    "name": "diagram-example",
+    "title": "Example Architecture — Two-Lane Layout",
+    "subtitle": "Template · Config-Driven · Auto-Layout",
+    "width": 900,
+    "height": 700,
+    "nodeHeight": 100,
+    "gap": 32,
+    "padding": 20,
+    "org": "NFG",
+
+    "lanes": [
+      {
+        "x": 20,
+        "width": 400,
+        "label": "BACKEND SERVICES",
+        "number": "①",
+        "columns": [
+          {
+            "distribution": "even",
+            "arrows": true,
+            "arrowLabels": ["queries", "caches"],
+            "frame": { "label": "API Layer", "color": "#4E8EE9" },
+            "nodes": [
+              {
+                "name": "API Gateway",
+                "subtitle": "REST endpoints, rate limiting",
+                "logo": "azure",
+                "palette": "api",
+                "tag": "SERVICE"
+              },
+              {
+                "name": "PostgreSQL",
+                "subtitle": "Primary data store",
+                "logo": "mssql",
+                "palette": "postgres",
+                "tag": "SERVICE"
+              },
+              {
+                "name": "Redis Cache",
+                "subtitle": "Session + query cache",
+                "palette": "generic",
+                "tag": "SERVICE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "x": 460,
+        "width": 400,
+        "label": "DATA PIPELINE",
+        "number": "②",
+        "columns": [
+          {
+            "distribution": "even",
+            "arrows": true,
+            "arrowLabels": ["ingest", "transform"],
+            "nodes": [
+              {
+                "name": "Spark Jobs",
+                "subtitle": "Batch processing every 6 hours",
+                "logo": "spark",
+                "palette": "spark",
+                "tag": "LAYER"
+              },
+              {
+                "name": "Delta Lake",
+                "subtitle": "Medallion architecture tables",
+                "logo": "delta",
+                "palette": "delta",
+                "tag": "LAYER"
+              },
+              {
+                "name": "Databricks SQL",
+                "subtitle": "Analytics warehouse",
+                "logo": "databricks",
+                "palette": "gold",
+                "tag": "LAYER",
+                "badge": { "label": "PROD", "bg": "#2E7D32", "color": "#A5D6A7" }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+
+    "arrows": [
+      {
+        "type": "data",
+        "x1": 420,
+        "y1": 250,
+        "x2": 480,
+        "y2": 250,
+        "label": "ETL feed"
+      }
+    ]
+  }
+]
