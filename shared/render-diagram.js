@@ -509,7 +509,7 @@ function buildRadialFromConfig(diagram) {
 
     for (let i = 0; i < nodes.length; i++) {
       const n = nodes[i];
-      const angleDeg = startAngle + (sweep / nodes.length) * i;
+      const angleDeg = n.angle != null ? n.angle : (startAngle + (sweep / nodes.length) * i);
       const angleRad = angleDeg * Math.PI / 180;
 
       const nx = cx + radius * Math.cos(angleRad) - nodeW / 2;

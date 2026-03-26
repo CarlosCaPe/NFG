@@ -4,8 +4,8 @@
     "layout": "radial",
     "title": "OncoHealth — Onboarding Profile & Connected Services",
     "subtitle": "Carlos Carrillo · NFG · 2026-03-26 · Automated capture pipeline status",
-    "width": 1800,
-    "height": 1800,
+    "width": 1560,
+    "height": 1560,
     "org": "NFG",
 
     "center": {
@@ -22,13 +22,13 @@
 
     "rings": [
       {
-        "radius": 680,
+        "radius": 580,
         "nodeWidth": 290,
         "nodeHeight": 76,
         "startAngle": -90,
         "sweep": 360,
         "arrows": true,
-        "arrowStart": 105,
+        "arrowStart": 95,
         "showRing": true,
         "ringColor": "#2E7D32",
         "label": "CONNECTED SERVICES",
@@ -42,7 +42,8 @@
             "logo": "google",
             "palette": "google",
             "tag": "DOCS",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": -90
           },
           {
             "name": "Google Drive (41 files)",
@@ -50,7 +51,8 @@
             "logo": "google",
             "palette": "google",
             "tag": "DOCS",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": -48
           },
           {
             "name": "Miro (NFG + Onco)",
@@ -58,7 +60,8 @@
             "logo": "miro",
             "palette": "miro",
             "tag": "WHITEBOARD",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": -26
           },
           {
             "name": "Azure DevOps (newUM)",
@@ -66,7 +69,8 @@
             "logo": "azure",
             "palette": "ingestion",
             "tag": "DEVOPS",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 0
           },
           {
             "name": "Confluence (12 spaces)",
@@ -74,7 +78,8 @@
             "logo": "atlassian",
             "palette": "atlassian",
             "tag": "WIKI",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 26
           },
           {
             "name": "SharePoint (RAID + CR)",
@@ -82,7 +87,8 @@
             "logo": "sharepoint",
             "palette": "sharepoint",
             "tag": "DOCS",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 48
           },
           {
             "name": "Databricks (TEST)",
@@ -90,7 +96,8 @@
             "logo": "databricks",
             "palette": "spark",
             "tag": "DATA",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 90
           },
           {
             "name": "Teams (web scrape)",
@@ -98,7 +105,8 @@
             "logo": "teams",
             "palette": "teams",
             "tag": "COMMS",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 132
           },
           {
             "name": "Calendar (Outlook)",
@@ -106,7 +114,8 @@
             "logo": "azure",
             "palette": "ingestion",
             "tag": "COMMS",
-            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 154
           },
           {
             "name": "Databricks (DEV)",
@@ -114,7 +123,8 @@
             "logo": "databricks",
             "palette": "spark",
             "tag": "DATA",
-            "badge": { "label": "BLOCKED", "bg": "#B71C1C", "color": "#EF9A9A" }
+            "badge": { "label": "BLOCKED", "bg": "#B71C1C", "color": "#EF9A9A" },
+            "angle": 180
           },
           {
             "name": "Graph API (M365)",
@@ -122,15 +132,17 @@
             "logo": "azure",
             "palette": "ingestion",
             "tag": "API",
-            "badge": { "label": "BLOCKED", "bg": "#B71C1C", "color": "#EF9A9A" }
+            "badge": { "label": "BLOCKED", "bg": "#B71C1C", "color": "#EF9A9A" },
+            "angle": 206
           },
           {
             "name": "Calendar (Google/NFG)",
-            "subtitle": "NFG email calendar — not captured",
+            "subtitle": "15K chars · 46 events captured",
             "logo": "google",
             "palette": "google",
             "tag": "COMMS",
-            "badge": { "label": "NOT STARTED", "bg": "#37474F", "color": "#90A4AE" }
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" },
+            "angle": 228
           }
         ]
       }
