@@ -63,6 +63,7 @@ Scripts in `shared/` are config-driven and support `--client oncohealth`:
 - `scrape-ado-deep.js` — Azure DevOps work items, pipelines, iterations
 - `scrape-databricks.js` — Databricks API capture
 - `scrape-teams-calendar.js` — Teams + Outlook calendar
+- `scrape-gcal.js` — Google Calendar (NFG) via storageState + internal API interception
 - `scrape-sharepoint-download.js` — SharePoint file download
 - `render-diagram-2d.js` — SVG/PNG architecture diagrams
 - `miro-api.js` — Miro board capture

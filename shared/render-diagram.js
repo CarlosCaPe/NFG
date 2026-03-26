@@ -73,6 +73,11 @@ const PALETTES = {
   kafka:     { fill: '#1E1E1E', stroke: '#231F20', text: '#E0E0E0', tag: '#BDBDBD', accent: '#231F20' },
   redis:     { fill: '#1E0A0A', stroke: '#DC382D', text: '#FFCDD2', tag: '#EF9A9A', accent: '#DC382D' },
   postgres:  { fill: '#0A1A2E', stroke: '#336791', text: '#BBDEFB', tag: '#90CAF9', accent: '#336791' },
+  google:    { fill: '#1A2218', stroke: '#34A853', text: '#C8E6C9', tag: '#A5D6A7', accent: '#4285F4' },
+  atlassian: { fill: '#0A1A33', stroke: '#0052CC', text: '#BBDEFB', tag: '#90CAF9', accent: '#0052CC' },
+  miro:      { fill: '#2A2410', stroke: '#FFD02F', text: '#FFF9C4', tag: '#FFF176', accent: '#FFD02F' },
+  teams:     { fill: '#161830', stroke: '#6264A7', text: '#C5CAE9', tag: '#9FA8DA', accent: '#6264A7' },
+  sharepoint:{ fill: '#0A2020', stroke: '#038387', text: '#B2DFDB', tag: '#80CBC4', accent: '#038387' },
   generic:   { fill: '#1A1E24', stroke: '#546E7A', text: '#CFD8DC', tag: '#90A4AE', accent: '#546E7A' },
 };
 
@@ -96,6 +101,11 @@ const LOGO_MAP = {
   pat:        { file: 'key.svg',          bg: '#1a3a6e', fill: '#fff', type: 'fluent' },
   sas:        { file: 'shield.svg',       bg: '#0050a0', fill: '#fff', type: 'fluent' },
   apacheflink:{ file: 'apacheflink.svg',  bg: '#E6526F', fill: '#fff', type: 'simple' },
+  google:     { file: 'google.svg',       bg: '#4285F4', fill: '#fff', type: 'simple' },
+  atlassian:  { file: 'atlassian.svg',    bg: '#0052CC', fill: '#fff', type: 'simple' },
+  miro:       { file: 'miro.svg',         bg: '#FFD02F', fill: '#1A1A1A', type: 'simple' },
+  teams:      { file: 'teams.svg',        bg: '#6264A7', fill: '#fff', type: 'simple' },
+  sharepoint: { file: 'sharepoint.svg',   bg: '#038387', fill: '#fff', type: 'simple' },
 };
 
 let EMBEDDED = {};
@@ -442,6 +452,168 @@ function buildFromConfig(diagram) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+// RADIAL LAYOUT BUILDER — center node + ring of nodes around it
+// ═══════════════════════════════════════════════════════════════════════════
+function buildRadialFromConfig(diagram) {
+  const W = diagram.width || 1400;
+  const H = diagram.height || 1400;
+
+  const cx = W / 2;
+  const cy = H / 2;
+
+  const center = diagram.center;
+  const rings = diagram.rings || [];
+
+  let svg = '';
+  svg += `<rect width="${W}" height="${H}" fill="${T.bg}"/>`;
+  svg += `<rect width="${W}" height="${H}" fill="url(#dotGrid)"/>`;
+  svg += svgDefs();
+
+  // Title
+  if (diagram.title) {
+    svg += `<text x="${cx}" y="30" text-anchor="middle" font-family="${T.font}" font-size="24" font-weight="700" fill="${T.textPrimary}">${esc(diagram.title)}</text>`;
+  }
+  if (diagram.subtitle) {
+    svg += `<text x="${cx}" y="52" text-anchor="middle" font-family="${T.font}" font-size="15" fill="${T.textMuted}">${esc(diagram.subtitle)}</text>`;
+  }
+
+  const allRects = [];
+
+  // Draw rings (outer first for z-order — ring backgrounds behind cards)
+  for (let ri = rings.length - 1; ri >= 0; ri--) {
+    const ring = rings[ri];
+    const radius = ring.radius;
+    if (ring.showRing !== false) {
+      const ringColor = ring.ringColor || T.border;
+      svg += `<circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="${ringColor}" stroke-width="1" stroke-dasharray="8 4" opacity="0.4"/>`;
+    }
+    if (ring.label) {
+      const labelAngle = ring.labelAngle != null ? ring.labelAngle : -90;
+      const rad = labelAngle * Math.PI / 180;
+      const lx = cx + (radius + 16) * Math.cos(rad);
+      const ly = cy + (radius + 16) * Math.sin(rad);
+      const labelW = ring.label.length * 7 + 16;
+      svg += `<rect x="${lx - labelW / 2}" y="${ly - 10}" width="${labelW}" height="20" rx="4" fill="${ring.labelBg || '#111620'}" stroke="${ring.ringColor || T.border}" stroke-width="0.8"/>`;
+      svg += `<text x="${lx}" y="${ly + 5}" text-anchor="middle" font-family="${T.font}" font-size="12" font-weight="700" fill="${ring.labelColor || T.textMuted}" letter-spacing="0.8">${esc(ring.label)}</text>`;
+    }
+  }
+
+  // Draw ring nodes
+  for (const ring of rings) {
+    const radius = ring.radius;
+    const nodes = ring.nodes || [];
+    const nodeW = ring.nodeWidth || 280;
+    const nodeH = ring.nodeHeight || 80;
+    const startAngle = ring.startAngle != null ? ring.startAngle : -90;
+    const sweep = ring.sweep != null ? ring.sweep : 360;
+
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i];
+      const angleDeg = startAngle + (sweep / nodes.length) * i;
+      const angleRad = angleDeg * Math.PI / 180;
+
+      const nx = cx + radius * Math.cos(angleRad) - nodeW / 2;
+      const ny = cy + radius * Math.sin(angleRad) - nodeH / 2;
+
+      const palette = PALETTES[n.palette] || PALETTES.generic;
+      const badge = n.badge ? { label: n.badge.label, bg: n.badge.bg || '#2E7D32', color: n.badge.color || '#A5D6A7' } : null;
+      svg += nodeBox(nx, ny, nodeW, nodeH, palette, n.logo, n.name, n.subtitle, n.tag, badge);
+      allRects.push({ id: n.name, x: nx, y: ny, w: nodeW, h: nodeH });
+
+      // Arrow from center to this node
+      if (ring.arrows !== false) {
+        const arrowRadius = ring.arrowStart || 80;
+        const ax1 = cx + arrowRadius * Math.cos(angleRad);
+        const ay1 = cy + arrowRadius * Math.sin(angleRad);
+        // Arrow end: edge of the node card closest to center
+        const ax2 = cx + (radius - nodeW / 2 - 8) * Math.cos(angleRad);
+        const ay2 = cy + (radius - nodeH / 2 - 8) * Math.sin(angleRad);
+
+        const arrowType = ring.arrowType === 'auth' ? 'auth' : 'data';
+        if (arrowType === 'auth') {
+          svg += `<line x1="${ax1}" y1="${ay1}" x2="${ax2}" y2="${ay2}" stroke="${T.authArrow}" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#arrowGray)"/>`;
+        } else {
+          svg += `<line x1="${ax1}" y1="${ay1}" x2="${ax2}" y2="${ay2}" stroke="${T.dataArrow}" stroke-width="2" opacity="0.5" marker-end="url(#arrowBlue)"/>`;
+        }
+      }
+    }
+  }
+
+  // Center node (drawn last — on top)
+  if (center) {
+    const cW = center.width || 200;
+    const cH = center.height || 200;
+    const cX = cx - cW / 2;
+    const cY = cy - cH / 2;
+
+    // Glow effect
+    svg += `<circle cx="${cx}" cy="${cy}" r="${cW / 2 + 12}" fill="none" stroke="${center.glowColor || '#42A5F5'}" stroke-width="2" opacity="0.3"/>`;
+    svg += `<circle cx="${cx}" cy="${cy}" r="${cW / 2 + 6}" fill="none" stroke="${center.glowColor || '#42A5F5'}" stroke-width="1" opacity="0.5"/>`;
+
+    // Center card — circular background
+    const cPalette = PALETTES[center.palette] || PALETTES.auth;
+    svg += `<circle cx="${cx}" cy="${cy}" r="${cW / 2}" fill="${cPalette.fill}" stroke="${cPalette.stroke}" stroke-width="2.5"/>`;
+
+    // Logo + Name + Subtitle + Tag — vertically stacked to avoid overlap
+    const logoSize = center.logoSize || 56;
+    const logoDataUri = center.logo ? EMBEDDED[center.logo] : null;
+    const logoY = cy - logoSize / 2 - cH * 0.12;
+    let contentY = logoY + logoSize + 8;
+
+    if (logoDataUri) {
+      svg += `<image href="${logoDataUri}" x="${cx - logoSize / 2}" y="${logoY}" width="${logoSize}" height="${logoSize}"/>`;
+    }
+
+    // Name (baseline positioned below logo with clear gap)
+    contentY += 16;
+    svg += `<text x="${cx}" y="${contentY}" text-anchor="middle" font-family="${T.font}" font-size="18" font-weight="700" fill="${cPalette.text}">${esc(center.name)}</text>`;
+
+    // Subtitle lines
+    if (center.subtitle) {
+      const subLines = wrapText(center.subtitle, cW - 30, 7);
+      for (let li = 0; li < subLines.length; li++) {
+        contentY += 16;
+        svg += `<text x="${cx}" y="${contentY}" text-anchor="middle" font-family="${T.font}" font-size="13" fill="${T.textSecondary}">${esc(subLines[li])}</text>`;
+      }
+    }
+
+    // Tag (placed after content or near circle bottom, whichever is lower)
+    if (center.tag) {
+      const tagW = center.tag.length * 6.5 + 12;
+      const tagY = Math.max(contentY + 10, cy + cH / 2 - 30);
+      svg += `<rect x="${cx - tagW / 2}" y="${tagY}" width="${tagW}" height="16" rx="4" fill="${cPalette.stroke}" opacity="0.6"/>`;
+      svg += `<text x="${cx}" y="${tagY + 11}" text-anchor="middle" font-family="${T.font}" font-size="10" font-weight="700" fill="${cPalette.tag}" letter-spacing="0.5">${esc(center.tag)}</text>`;
+    }
+  }
+
+  // Custom arrows
+  const customArrows = diagram.arrows || [];
+  for (const a of customArrows) {
+    if (a.type === 'curved') {
+      svg += curvedArrow(a.x1, a.y1, a.x2, a.y2, a.color || T.dataArrow, a.opacity || 0.6);
+    } else if (a.type === 'auth') {
+      svg += authArrow(a.x1, a.y1, a.x2, a.y2, a.label);
+    } else {
+      svg += dataArrow(a.x1, a.y1, a.x2, a.y2, a.label);
+    }
+  }
+
+  // Overlap check
+  const overlaps = checkOverlap(allRects);
+  if (overlaps.length) {
+    console.warn(`  OVERLAP WARNING in ${diagram.name}: ${overlaps.length} overlap(s)`);
+    overlaps.forEach(e => console.warn(`    ${e}`));
+  }
+  console.log(`  Layout: ${allRects.length} ring nodes, ${overlaps.length} overlaps`);
+
+  // Footer
+  const org = diagram.org || 'NFG';
+  svg += `<text x="${W - 12}" y="${H - 6}" text-anchor="end" font-family="${T.font}" font-size="10" fill="#263238">Generated by ${esc(org)} · ${new Date().toISOString().split('T')[0]}</text>`;
+
+  return wrapSvg(W, H, svg);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // PNG EXPORT
 // ═══════════════════════════════════════════════════════════════════════════
 async function renderPNG(svgPath, pngPath, width, height) {
@@ -471,7 +643,8 @@ async function main() {
 
   for (const d of diagrams) {
     console.log(`\n  ${d.name}:`);
-    const svgStr = buildFromConfig(d);
+    const layout = d.layout || 'lanes';
+    const svgStr = layout === 'radial' ? buildRadialFromConfig(d) : buildFromConfig(d);
     const svgPath = path.join(outDir, `${d.name}.svg`);
     fs.writeFileSync(svgPath, svgStr);
     console.log(`  SVG: ${d.name}.svg (${(Buffer.byteLength(svgStr) / 1024).toFixed(1)} KB)`);

@@ -58,7 +58,7 @@ cp -r clients/_template clients/<client-name>
 - **Project**: newUM (New Utilization Management) — healthcare/oncology
 - **Purpose**: Replace end-of-life MATIS monolith with modern configurable UM case management engine
 - **Config**: `clients/oncohealth/client.yaml`
-- **Knowledge**: `clients/oncohealth/knowledge.json` (v1.12.0)
+- **Knowledge**: `clients/oncohealth/knowledge.json` (v1.15.0)
 - **Auth**: `ccarrillo@oncologyanalytics.com` / `ccarrillo@oncohealth.us` → Okta SSO
 - **VPC**: CPC-ccarr-RY8W8 via https://windows365.microsoft.com
 
@@ -83,7 +83,7 @@ cp -r clients/_template clients/<client-name>
 | Databricks (dev) | Entra ID | BLOCKED — contains PHI | — |
 | Teams | Okta SSO + MFA | COMPLETE (98K chars) | `shared/scrape-teams-calendar.js` |
 | Calendar (Outlook) | Okta SSO + MFA | COMPLETE (3.8K chars) | `shared/scrape-teams-calendar.js` |
-| Calendar (Google) | NFG Google | NOT STARTED | — |
+| Calendar (Google) | NFG Google storageState | COMPLETE (15K chars) | `shared/scrape-gcal.js` |
 | Graph API | Device code flow | BLOCKED (admin consent) | `shared/graph-api.js` |
 
 #### Key Team (from RAID + Teams + Calendar)

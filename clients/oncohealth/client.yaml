@@ -122,8 +122,9 @@ services:
 
   - name: Calendar (Google/NFG)
     type: calendar-google
-    status: not_started
-    note: "NFG email calendar not yet captured"
+    status: complete
+    chars: 15300
+    note: "NFG Google Calendar for carlos.carrillo@newfireglobal.com. 46 events captured (5 meetings, global holidays, work-location). Uses storageState pattern + internal API interception."
 
   - name: Team Access Inventory
     key: "10"

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.14.0",
-  "last_updated": "2026-03-25",
+  "version": "1.15.0",
+  "last_updated": "2026-03-26",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -354,7 +354,8 @@
       "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)",
       "Databricks TEST workspace — PAT validated (2026-03-24), 12 API endpoints, full UC inventory captured",
       "Google Drive folder — 41 files extracted, 21 text outputs, 5.5M chars (2026-03-25)",
-      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23) + NewUM1 space 50 pages, 422K chars (2026-03-25)"
+      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23) + NewUM1 space 50 pages, 422K chars (2026-03-25)",
+      "Google Calendar (NFG) — 46 events captured (5 meetings, holidays, work-location), 15K chars (2026-03-26)"
     ],
     "pending": [
       "Database access (email devopsrequest@oncologyanalytics.com)",
@@ -378,9 +379,10 @@
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
-        { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." }
+        { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." },
+        { "resource": "Google Calendar (NFG)", "status": "COMPLETE", "chars": 15300, "method": "Playwright storageState + internal API interception", "note": "NFG Google Calendar (carlos.carrillo@newfireglobal.com). 46 events: 5 meetings (Global Town Hall, Newfire-Databricks, Databricks Training Discussion, Meet, Logistics with Adhere Health), global holidays, recurring Home work-location. Uses sync.fetcheventrange/minievents/prefetcheventrange endpoints + aria-label DOM parsing. Captured 2026-03-26." }
       ],
-      "complete": 12,
+      "complete": 13,
       "partial": 0,
       "not_captured": 1,
       "pending": 0,

@@ -1,0 +1,139 @@
+[
+  {
+    "name": "diagram-onboarding-status",
+    "layout": "radial",
+    "title": "OncoHealth — Onboarding Profile & Connected Services",
+    "subtitle": "Carlos Carrillo · NFG · 2026-03-26 · Automated capture pipeline status",
+    "width": 1800,
+    "height": 1800,
+    "org": "NFG",
+
+    "center": {
+      "name": "Carlos Carrillo",
+      "subtitle": "NFG AI-Leveraged Documenter",
+      "logo": "entra",
+      "palette": "auth",
+      "tag": "OPERATOR",
+      "width": 180,
+      "height": 180,
+      "logoSize": 52,
+      "glowColor": "#5C6BC0"
+    },
+
+    "rings": [
+      {
+        "radius": 680,
+        "nodeWidth": 290,
+        "nodeHeight": 76,
+        "startAngle": -90,
+        "sweep": 360,
+        "arrows": true,
+        "arrowStart": 105,
+        "showRing": true,
+        "ringColor": "#2E7D32",
+        "label": "CONNECTED SERVICES",
+        "labelAngle": -90,
+        "labelBg": "#111620",
+        "labelColor": "#A5D6A7",
+        "nodes": [
+          {
+            "name": "Google Docs (Onboarding)",
+            "subtitle": "44.7K chars · main onboarding doc",
+            "logo": "google",
+            "palette": "google",
+            "tag": "DOCS",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Google Drive (41 files)",
+            "subtitle": "5.5M chars · PDFs, XLSX, images",
+            "logo": "google",
+            "palette": "google",
+            "tag": "DOCS",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Miro (NFG + Onco)",
+            "subtitle": "237K chars · assessment + active",
+            "logo": "miro",
+            "palette": "miro",
+            "tag": "WHITEBOARD",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Azure DevOps (newUM)",
+            "subtitle": "2.1M chars · items, pipelines, teams",
+            "logo": "azure",
+            "palette": "ingestion",
+            "tag": "DEVOPS",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Confluence (12 spaces)",
+            "subtitle": "485K chars · 171 pages, NewUM1 wiki",
+            "logo": "atlassian",
+            "palette": "atlassian",
+            "tag": "WIKI",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "SharePoint (RAID + CR)",
+            "subtitle": "68K chars · RAID, Change Request, Access",
+            "logo": "sharepoint",
+            "palette": "sharepoint",
+            "tag": "DOCS",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Databricks (TEST)",
+            "subtitle": "API 200 · PAT validated 2027-03-24",
+            "logo": "databricks",
+            "palette": "spark",
+            "tag": "DATA",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Teams (web scrape)",
+            "subtitle": "98K chars · OncoHealth_NewFire",
+            "logo": "teams",
+            "palette": "teams",
+            "tag": "COMMS",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Calendar (Outlook)",
+            "subtitle": "3.8K chars · meeting schedule",
+            "logo": "azure",
+            "palette": "ingestion",
+            "tag": "COMMS",
+            "badge": { "label": "COMPLETE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "Databricks (DEV)",
+            "subtitle": "Contains PHI — data team in TEST",
+            "logo": "databricks",
+            "palette": "spark",
+            "tag": "DATA",
+            "badge": { "label": "BLOCKED", "bg": "#B71C1C", "color": "#EF9A9A" }
+          },
+          {
+            "name": "Graph API (M365)",
+            "subtitle": "Admin consent required",
+            "logo": "azure",
+            "palette": "ingestion",
+            "tag": "API",
+            "badge": { "label": "BLOCKED", "bg": "#B71C1C", "color": "#EF9A9A" }
+          },
+          {
+            "name": "Calendar (Google/NFG)",
+            "subtitle": "NFG email calendar — not captured",
+            "logo": "google",
+            "palette": "google",
+            "tag": "COMMS",
+            "badge": { "label": "NOT STARTED", "bg": "#37474F", "color": "#90A4AE" }
+          }
+        ]
+      }
+    ]
+  }
+]

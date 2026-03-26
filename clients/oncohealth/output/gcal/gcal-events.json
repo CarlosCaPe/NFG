@@ -1,0 +1,472 @@
+{
+  "source": "google-calendar",
+  "account": "Google Account: Carlos Carrillo  \n(carlos.carrillo@newfireglobal.com)",
+  "capturedAt": "2026-03-26T16:53:28.229Z",
+  "dateRange": {
+    "start": "2026-03-12",
+    "end": "2026-04-25"
+  },
+  "daysBack": 14,
+  "daysFwd": 30,
+  "eventCount": 46,
+  "events": [
+    {
+      "title": "Global Town Hall Q1_2026",
+      "date": "2026-03-12",
+      "startTime": "8am",
+      "endTime": "9am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "8am to 9am, Global Town Hall Q1_2026 , Carlos Carrillo, Accepted, No location, March 12, 2026"
+    },
+    {
+      "title": "Newfire - Databricks",
+      "date": "2026-03-13",
+      "startTime": "7:30am",
+      "endTime": "8am",
+      "isAllDay": false,
+      "location": "https://meet.google.com/hmj-osug-nmr, https://meet.google.com/kho-vcfb-xky, https://meet.google.com/zio-ioyt-ygk",
+      "raw": "7:30am to 8am, Newfire - Databricks, Carlos Carrillo, Accepted, Location: https://meet.google.com/hmj-osug-nmr, https://meet.google.com/kho-vcfb-xky, https://meet.google.com/zio-ioyt-ygk, March 13, 2026"
+    },
+    {
+      "title": "Benito Juárez's Birthday Memorial",
+      "date": "2026-03-16",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Holidays in Mexico",
+      "raw": "All day, Benito Juárez's Birthday Memorial, Calendar: Holidays in Mexico, March 16, 2026"
+    },
+    {
+      "title": "Birthday of Benito Juárez - Mexico",
+      "date": "2026-03-16",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Birthday of Benito Juárez - Mexico, Calendar: Public Holidays (Newfire Global), No location, March 16, 2026"
+    },
+    {
+      "title": "Saint Patrick's Day - Ireland",
+      "date": "2026-03-17",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Saint Patrick's Day - Ireland, Calendar: Public Holidays (Newfire Global), No location, March 17, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-03-19",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260319",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid al-Fitr - Saudi Arabia",
+      "date": "2026-03-19",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Eid al-Fitr - Saudi Arabia, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+    },
+    {
+      "title": "Silence Day / Nyepi (Saka New Year 1948) - Indonesia",
+      "date": "2026-03-19",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Silence Day / Nyepi (Saka New Year 1948) - Indonesia, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+    },
+    {
+      "title": "St Joseph’s Day - Spain - Valencia",
+      "date": "2026-03-19",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, St Joseph’s Day - Spain - Valencia, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+    },
+    {
+      "title": "Ugadi Festival - India",
+      "date": "2026-03-19",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Ugadi Festival - India, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-03-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260320",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid al-Fitr - North Macedonia",
+      "date": "2026-03-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Eid al-Fitr - North Macedonia, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+    },
+    {
+      "title": "Eid al-Fitr - Saudi Arabia",
+      "date": "2026-03-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Eid al-Fitr - Saudi Arabia, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+    },
+    {
+      "title": "Festiival of Breaking Fast - Philippines",
+      "date": "2026-03-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Festiival of Breaking Fast - Philippines, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+    },
+    {
+      "title": "Ramadan Bayram - Bosnia and Herzegovina",
+      "date": "2026-03-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Ramadan Bayram - Bosnia and Herzegovina, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+    },
+    {
+      "title": "Databricks Training Discussion",
+      "date": "2026-03-20",
+      "startTime": "8:00 AM",
+      "endTime": "8:30 AM",
+      "isAllDay": false,
+      "location": "Microsoft Teams Meeting",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g88o30cpk85336h9j88qk8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g85242dq1691jahhp652jeh9k64skccpo850j8g9g74p44d9l6510",
+      "method": "api-sync"
+    },
+    {
+      "title": "Benito Juárez's Birthday Memorial",
+      "date": "2026-03-21",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Holidays in Mexico",
+      "raw": "All day, Benito Juárez's Birthday Memorial, Calendar: Holidays in Mexico, March 21, 2026"
+    },
+    {
+      "title": "First Day of Hari Raya Aidil Fitri - Brunei",
+      "date": "2026-03-21",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, First Day of Hari Raya Aidil Fitri - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 21, 2026"
+    },
+    {
+      "title": "Khutub-E-Ramzan - India",
+      "date": "2026-03-21",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Khutub-E-Ramzan - India, Calendar: Public Holidays (Newfire Global), No location, March 21, 2026"
+    },
+    {
+      "title": "Hari Raya Aidil Fitri Holiday - Brunei",
+      "date": "2026-03-22",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Hari Raya Aidil Fitri Holiday - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 22, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-03-23",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260323",
+      "method": "api-sync"
+    },
+    {
+      "title": "Hari Raya Aidil Fitri Holiday (Observed) - Brunei",
+      "date": "2026-03-23",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Hari Raya Aidil Fitri Holiday (Observed) - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+    },
+    {
+      "title": "Hari Raya Puasa Holiday (moved from Sat 21) - Malaysia",
+      "date": "2026-03-23",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Hari Raya Puasa Holiday (moved from Sat 21) - Malaysia, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+    },
+    {
+      "title": "Saint Joseph's Day - Colombia",
+      "date": "2026-03-23",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Saint Joseph's Day - Colombia, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+    },
+    {
+      "title": "Truth and Justice Memorial Day - Argentina",
+      "date": "2026-03-23",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Truth and Justice Memorial Day - Argentina, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+    },
+    {
+      "title": "Meet",
+      "date": "2026-03-23",
+      "startTime": "1:00 PM",
+      "endTime": "1:30 PM",
+      "isAllDay": false,
+      "location": "Microsoft Teams Meeting",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g6t1kchi36l34ah1n88rk8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g891jagpp64ojcdpj6krj2c1k60skacq48p0j4da4650jadhj692g",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-03-24",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260324",
+      "method": "api-sync"
+    },
+    {
+      "title": "Hari Raya Aidil Fitri Holiday - Brunei",
+      "date": "2026-03-24",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Hari Raya Aidil Fitri Holiday - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 24, 2026"
+    },
+    {
+      "title": "Hari Raya Puasa Holiday (moved from Sun 22) - Malaysia",
+      "date": "2026-03-24",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Hari Raya Puasa Holiday (moved from Sun 22) - Malaysia, Calendar: Public Holidays (Newfire Global), No location, March 24, 2026"
+    },
+    {
+      "title": "Truth and Justice Memorial Day - Argentina",
+      "date": "2026-03-24",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Truth and Justice Memorial Day - Argentina, Calendar: Public Holidays (Newfire Global), No location, March 24, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-03-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260325",
+      "method": "api-sync"
+    },
+    {
+      "title": "Independence Day - Greece",
+      "date": "2026-03-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Independence Day - Greece, Calendar: Public Holidays (Newfire Global), No location, March 25, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-03-26",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260326",
+      "method": "api-sync"
+    },
+    {
+      "title": "Logistics with Adhere Health",
+      "date": "2026-03-26",
+      "startTime": "1pm",
+      "endTime": "1:30pm",
+      "isAllDay": false,
+      "location": "",
+      "raw": "1pm to 1:30pm, Logistics with Adhere Health, Carlos Carrillo, Accepted, No location, March 26, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260413",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260414",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-15",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260415",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-16",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260416",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-17",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260417",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260420",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-21",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260421",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-22",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260422",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-23",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260423",
+      "method": "api-sync"
+    },
+    {
+      "title": "Working location: Home",
+      "location": "Home",
+      "date": "March 16 – 20, 2026",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "category": "working-location",
+      "raw": "Working location: Home, Carlos Carrillo, March 16 – 20, 2026"
+    },
+    {
+      "title": "Working location: Home",
+      "location": "Home",
+      "date": "March 23 – 27, 2026",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "category": "working-location",
+      "raw": "Working location: Home, Carlos Carrillo, March 23 – 27, 2026"
+    },
+    {
+      "title": "Working location: Home",
+      "location": "Home",
+      "date": "March 9 – 13, 2026",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "category": "working-location",
+      "raw": "Working location: Home, Carlos Carrillo, March 9 – 13, 2026"
+    }
+  ],
+  "rawTextLength": 4988
+}
