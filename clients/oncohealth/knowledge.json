@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "last_updated": "2026-03-26",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
@@ -267,6 +267,30 @@
       "email": "pjaman@oncohealth.us",
       "confirmed": true,
       "source": "access inventory"
+    },
+    {
+      "name": "Nick",
+      "role": "Data Architect — Silver schema designer, key voice in eligibility + provider data modeling workshops. Strong opinions on ETL patterns, versioning, business key grain. Proposed BenefitPlan junk dimension, separate override table for manual eligibility.",
+      "confirmed": true,
+      "source": "Teams chat (Eligibility workshop, Provider Discussion — March 2026)"
+    },
+    {
+      "name": "Tim",
+      "role": "Team member — raised payer inconsistency concern (member 'falling off file' ambiguity) in eligibility workshop",
+      "confirmed": true,
+      "source": "Teams chat (Eligibility workshop — March 2026)"
+    },
+    {
+      "name": "Marc Gale",
+      "role": "Team member — cc'd on eligibility payer taxonomy analysis",
+      "confirmed": true,
+      "source": "Teams chat (Eligibility - Person/Member workshop)"
+    },
+    {
+      "name": "Donato",
+      "role": "Team member — eligibility domain",
+      "confirmed": true,
+      "source": "Teams chat (Eligibility workshop — March 2026)"
     },
     {
       "name": "Bernice Nyanjui",
@@ -784,6 +808,176 @@
     ],
     "still_missing_from_oncohealth": ["Secure Development Policy", "Cryptography Policy", "Data Management Policy", "Branching Strategy"],
     "note": "These are NFG-level policies. The 4 OncoHealth-specific policy docs listed in onboarding_documents.policies are still TBD."
+  },
+
+  "workshops_week_2026_03_16": {
+    "$comment": "Knowledge extracted from Teams meeting chats for the week of March 16-20, 2026. NOTE: actual meeting transcripts/recordings were NOT accessible (scraper got DOM dumps only). Content comes from chat messages posted by participants including summaries, action items, and shared analysis.",
+    "source": "clients/oncohealth/output/teams-daily/2026-03-20/chats/",
+    "captured": "2026-03-20",
+    "transcript_access": "BLOCKED — 'You don't have access' or 'No transcript available' for all 10 meetings. Scraper needs transcript/recording permissions.",
+
+    "recurring_schedule": [
+      { "name": "Data team daily", "cadence": "Mon-Fri 9:35-10:00 AM", "organizer": "Michal Mucha" },
+      { "name": "Eligibility workshop", "cadence": "Monday 10:05-11:05 AM", "organizer": "Michal Mucha" },
+      { "name": "Sprint Demo and Planning", "cadence": "Tuesday 8:00-9:00 AM", "organizer": "Vika Nobis" },
+      { "name": "Provider Discussion", "cadence": "Tuesday 10:00-11:00 AM", "organizer": "Arben Osmani" },
+      { "name": "Databricks Lakeflow Connect", "cadence": "Wednesday 8:35-9:05 AM", "organizer": "Michal Mucha" },
+      { "name": "Payer taxonomy workshop", "cadence": "Wednesday", "organizer": "Michal Mucha" },
+      { "name": "Eligibility - Payer taxonomy v2", "cadence": "Thursday 10:05-11:00 AM", "organizer": "Michal Mucha" },
+      { "name": "Eligibility - Person/Member workshop", "cadence": "ad-hoc deep dives", "organizer": "Michal Mucha" },
+      { "name": "Claude workshop", "cadence": "one-off (Friday)", "organizer": "unknown" }
+    ],
+
+    "eligibility_workshop_monday": {
+      "date": "2026-03-16",
+      "attendees_mentioned": ["Michal Mucha", "Nick", "Jack Hall", "Tim", "Cory", "Donato"],
+      "shared_files": ["Eligibility.jpg (ER diagram draft from Onco guys)"],
+      "miro_link": "https://miro.com/app/board/uXjVGVycF3Y=/?moveToWidget=3458764661425332328&cot=14",
+      "confluence_link": "https://oncologyanalytics.atlassian.net/wiki/x/AQC1LgE",
+      "decisions": [
+        "Versioning: Hybrid SCD Type 2 — VersionCreatedAt + VersionEndAt replaces EtlStartAt/EtlEndAt. Two time dimensions: (a) version validity window, (b) coverage dates.",
+        "Soft delete: DeletedAt ≠ VersionEndAt. VersionEndAt = superseded by newer version. DeletedAt = retroactively voided by payer. Both fields can be set on same record.",
+        "API model: Custom model sanity-checked against FHIR (not pure FHIR). Provider FHIR analysis done; Eligibility FHIR mapping not started.",
+        "Column naming: Nick compiling change list. 'ODS member key' to be deleted immediately. Clean product-oriented naming, no legacy MATIS names."
+      ],
+      "open_questions": [
+        "Manual eligibility records — where do they live? Nick: separate override table (ETL will overwrite, breaks insert-only, audit issues). Jack: same table with source flag. DEFERRED.",
+        "Business Grouping ↔ ETL mapping — THE BIGGEST UNRESOLVED QUESTION. How does ETL map variable client data into admin hierarchy? Each payer has different levels/fields/grouping. Nick's Silver uses crosswalk per client. Jack: 'bronze layer problem' — seeding is config, linking is hard.",
+        "Person ID grain — What business keys for dedup? Nick: payer-scoped (member ID + payer). Jack: system GUIDs. Nick: GUIDs change every file load without business key grain definition. DEFERRED.",
+        "Eligibility ↔ case re-evaluation trigger — when new eligibility arrives mid-case, how to trigger rule set reload? Needs design.",
+        "FHIR alignment for Eligibility API — gap analysis not done (Provider is complete). Backlog item."
+      ],
+      "action_items": [
+        { "owner": "Nick", "action": "Compile column naming change list", "priority": "High" },
+        { "owner": "Nick", "action": "Write up member ID / person code / coverage ID concepts in Confluence", "priority": "Medium" },
+        { "owner": "Michal", "action": "Share data dictionary PDF with Onco team", "priority": "High", "status": "done in meeting" },
+        { "owner": "Michal + Nick", "action": "Schedule business grouping ↔ ETL mapping prototype session", "priority": "High" },
+        { "owner": "Michal", "action": "Update Miro diagram with VersionEndAt, remove EtlStartAt/EtlEndAt", "priority": "High", "status": "done in meeting" },
+        { "owner": "Michal", "action": "Add business grouping mapping risk to RAID log", "priority": "Medium" },
+        { "owner": "Cory + Nick", "action": "Create test data sets for business grouping prototype", "priority": "Medium" },
+        { "owner": "All", "action": "Next Eligibility meeting: focus on Person table deep dive + manual override pattern", "priority": "High" }
+      ],
+      "technical_detail": "Nick's BenefitPlan junk dimension proposal for consolidating variable client attributes (same pattern as Address). Jack pushed back — static junk dimension can't guarantee mapping to configuration; business grouping tables exist for dynamic linkage."
+    },
+
+    "provider_discussion_tuesday": {
+      "date": "2026-03-17",
+      "attendees_mentioned": ["Arben Osmani", "Nick", "Michal Mucha"],
+      "decisions": [
+        "Type 1 vs Type 2 NPI: Proposed separate tables for individual physicians (T1) vs facilities (T2). Nick concerned about duplicating downstream structures (networks, taxonomy). NO FINAL DECISION.",
+        "Versioning: Drop separate history tables → single table with version_start_date / version_end_date (consistent with eligibility pattern).",
+        "NPI matching V1: NPI-only matching. No probabilistic/candidate matching — too risky since auth files must return provider data exactly as received. Match score/method fields REMOVED from D1/D2 link tables.",
+        "Address: Shared address junk dimension + bridge table (consistent with eligibility pattern).",
+        "Network tables: T1 and T2 should each have INDEPENDENT network bridge tables (current combined table is wrong)."
+      ],
+      "action_items": [
+        { "owner": "Arben", "action": "Confirm versioning pattern with Michal — single table, no separate history" },
+        { "owner": "Arben", "action": "Confirm with BA whether updated_at tracking needed for provider tables" },
+        { "owner": "Michal", "action": "Follow up with app/business team on taxonomy codes needed in UM; remove if not" },
+        { "owner": "Nick", "action": "Independent gap analysis of provider diagram — columns, missing tables, corrections" },
+        { "owner": "Arben/Team", "action": "Update provider diagram: remove history tables, remove match fields, fix network tables, add address bridge, revisit T1/T2 split" },
+        { "owner": "Michal/BA", "action": "Finalize payer-side requirements (site of care, preferred facility rules)" },
+        { "owner": "Michal", "action": "Schedule payer taxonomy workshop + member/person/address meeting" },
+        { "owner": "Team", "action": "After eligibility finalized, return to finalize provider schema" }
+      ]
+    },
+
+    "sprint_demo_planning_tuesday": {
+      "date": "2026-03-17",
+      "organizer": "Vika Nobis",
+      "time": "8:00-9:00 AM",
+      "attendees_count": 79,
+      "note": "Recording and transcript access BLOCKED. No shared files. Loop component permission denied. Cannot extract content."
+    },
+
+    "payer_taxonomy_workshop_wednesday": {
+      "date": "2026-03-18",
+      "action_items": [
+        "Escalate compliance needs to executives",
+        "Discovery: how does MATIS handle dual-eligibility?",
+        "When to split eligibility records vs represent as separate major LOBs?",
+        "Extend business grain/grouping to payer level (per-payer config pointing to specific grains as major LOBs)",
+        "Escalate to executive: where is the line for phase 1 deliverables scope?"
+      ]
+    },
+
+    "databricks_lakeflow_connect_wednesday": {
+      "date": "2026-03-18",
+      "organizer": "Michal Mucha",
+      "time": "8:35-9:05 AM",
+      "attendees_count": 5,
+      "note": "No chat messages with content. Meeting notes empty. Likely a working session with screen sharing."
+    },
+
+    "eligibility_payer_taxonomy_v2_thursday": {
+      "date": "2026-03-19",
+      "organizer": "Michal Mucha",
+      "time": "10:05-11:00 AM",
+      "note": "Recording has Part 1 and Part 2. No chat content beyond the calendar entry. This was a continuation of the Tuesday/Wednesday payer taxonomy discussions."
+    },
+
+    "data_team_daily_highlights": {
+      "dates": "2026-03-16 through 2026-03-20",
+      "key_updates": [
+        "Arben updated provider diagram and data dictionary based on Tuesday meeting → added to System Design Doc",
+        "NewUM Data Team System Design Document.docx shared (OncoHealth_NewFire > Phase 1 Deliverables)",
+        "ADO repo identified: dev.azure.com/oncologyanalytics/newUM/_git/newum_data_processing_analysis"
+      ],
+      "note": "Daily standup — mostly status updates. Michal leads. Light non-work sharing (music recommendations)."
+    },
+
+    "claude_workshop_friday": {
+      "date": "2026-03-20",
+      "shared_files": ["claude-code-workshop-presentation.pptx"],
+      "key_notes": [
+        "Technical users only — Jeanette Devarie confirmed operational folks do not need to attend",
+        "Questions about MCP vs API raised",
+        "AI-generated summary available (90 items)"
+      ]
+    },
+
+    "eligibility_person_member_deep_analysis": {
+      "$comment": "Comprehensive rules & payer taxonomy analysis posted in the meeting chat — appears to be pre-meeting research/synthesis from Confluence V1 PRDs. 30KB of structured content covering all 12 rule domains.",
+      "sections_covered": [
+        "1. Grain Hierarchy & Inheritance (configurable ranking, lowest wins, effective dating, tie-breaker)",
+        "2. Configurations vs Rules (simple params vs IF-THEN logic, Tier 1/2/3 execution)",
+        "3. Member Identification & Eligibility Rules (search, coverage dates, RBAC)",
+        "4. Scope Validation Rules (6-rule sequential chain, out-of-scope for R1 but fully specified)",
+        "5. Payer Drug Configuration Rules (PDL lookup: InsProvider + MajorLOB, benefit type, crossover drugs)",
+        "6. Non-Preferred Drug Rules (deepest taxonomy touch: MajorLOB + LOB + ProductLine, mandatory vs voluntary)",
+        "7. Auto-Determination Rules (regimen auto-approve, ancillary, case-level, custom regimens always manual)",
+        "8. Case Routing & Queue Assignment Rules (30-min degradation strategy)",
+        "9. Post-Denial Pathway Rules (classification, routing, timeliness enforcement, integrity)",
+        "10. RBAC Rules (roles, states/statuses/determinations distinction)",
+        "11. TAT Configuration Rules (Payer + LOB + Delegation + RequestType + BillingMethod)",
+        "12. Standard Reports Rules (RBAC-controlled, PHI least-privilege)"
+      ],
+      "grain_level_rule_map": {
+        "oh_global": ["Default treatment start date", "Lookup management", "RBAC", "Queue config", "MDL", "UI configs", "Global determinations", "Error templates", "Rule engine degradation", "Tier classification", "Rollback policies"],
+        "payer_parent_org": ["Parent-level delegation", "Shared config defaults", "Grain hierarchy ranking config"],
+        "payer": ["Member search rules", "Eligibility config", "Delegation settings", "PDL", "Diagnosis groups", "Clinical questions", "GMTs", "Case config", "Formulary", "Provider config", "SoC", "Letters", "TAT integration", "Appeals", "Auth files", "Recipients", "Integration toggles", "Notifications", "Reporting", "Inbound files", "Treatment start date override", "Scope validation identifiers", "ASO delegation"],
+        "major_lob": ["PDL lookup grain", "NP rule matching", "Scope validation Rule 1", "TAT dimension", "Post-denial timeliness", "Finality determination", "Determination availability", "Case routing", "Reporting dimension"],
+        "lob": ["NP rule matching", "LOB-specific config (OON/OOA/pediatric/GAP)", "Scope validation Rule 2", "Post-denial pathway config", "TAT dimension", "Case state transitions", "UI rules per LOB", "Eligibility hierarchy validation"],
+        "product_line": ["NP rule matching (deepest grain)", "Scope validation Rule 2", "Product Line-specific config", "Eligibility validation", "Scope behavior (identifier chain)", "Benefit type derivation override"],
+        "employer_group": ["Lowest-grain rule override (absolute precedence)", "Scope validation Rule 4 (Insurance Group ID)", "Custom UI config", "Custom hard stops/warnings", "Custom data requirements", "Custom case routing", "Reporting dimension", "Configurable ranking position"]
+      },
+      "dominant_patterns": "PDL and scope rules key on InsuranceProvider + MajorLOB. NP rules go deeper into LOB + ProductLine. Configurable grain hierarchy (lowest wins) maps to traversing business hierarchy from leaf (Product) upward to MajorLOB."
+    },
+
+    "new_artifacts_discovered": [
+      { "name": "NewUM Data Team System Design Document.docx", "location": "OncoHealth_NewFire > Phase 1 Deliverables", "note": "Shared in Data team daily chat" },
+      { "name": "Eligibility.jpg", "location": "Shared by Michal in Eligibility workshop chat", "note": "Draft ER diagram from Onco guys" },
+      { "name": "claude-code-workshop-presentation.pptx", "location": "OncoHealth_NewFire > Phase 1 Deliverables" },
+      { "name": "newum_data_processing_analysis repo", "location": "dev.azure.com/oncologyanalytics/newUM/_git/newum_data_processing_analysis", "note": "ADO git repo for data processing" }
+    ],
+
+    "critical_design_decisions_pending": [
+      { "topic": "Business Grouping ↔ ETL mapping", "status": "UNRESOLVED — identified as biggest open question", "owners": ["Michal", "Nick"], "impact": "Blocks data model finalization for eligibility" },
+      { "topic": "Manual eligibility records storage", "status": "DEFERRED — Nick vs Jack disagree (separate table vs same table)", "impact": "Affects data exposure architecture, Databricks sync" },
+      { "topic": "Person ID grain definition", "status": "DEFERRED", "impact": "Affects daily ETL load logic, cross-version tracking" },
+      { "topic": "Type 1 vs Type 2 NPI table split", "status": "NO FINAL DECISION", "impact": "Affects provider schema, network tables, downstream structures" },
+      { "topic": "Phase 1 scope boundary", "status": "NEEDS EXECUTIVE ESCALATION", "impact": "Determines how deep payer taxonomy goes in V1" }
+    ]
   },
 
   "unknowns": {
