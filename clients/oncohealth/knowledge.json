@@ -910,20 +910,20 @@
     },
 
     "capture_gap_notice": {
-      "$comment": "GAP PARTIALLY CLOSED: April 6 captures recovered significant content. ADO data shows all decisions resolved. Teams chats captured 42K chars (5 of 8 chats). Transcripts limited (future meetings only). Channels captured 25K chars.",
+      "$comment": "GAP MOSTLY CLOSED: April 6 captures recovered significant content. ADO data shows all decisions resolved. Teams chats captured 43K chars (7 of 8 chats). Transcripts limited (future meetings only). Channels captured 25K chars. Confluence NewUM1 confirmed dead (0 CQL results). Edge version mismatch required session reset.",
       "gap_start": "2026-03-21",
       "gap_end": "2026-04-06",
       "recovery_captures": {
         "ado": "Full re-capture April 6 — 37 files, 2.4MB. 385 items changed since March 23. Key closures: #185717 (Person PK/FK), #185715 (Payer taxonomy), #186301 (CQRS). New: #187416 assigned to Carlos.",
         "teams_channels": "5 channels, 25K chars. NewUM channel has March 30 Databricks data exchange meeting discussion.",
-        "teams_chats": "5 of 8 chats captured, 42K chars. Eligibility Person/Member workshop: 30K chars (12-section rules analysis). Data team daily: 6K chars. Provider Discussion: 2.7K chars.",
+        "teams_chats": "7 of 8 chats captured, 43K chars. Eligibility Person/Member workshop: 30K chars (12-section rules analysis). Data team daily: 6K chars. Provider Discussion: 2.7K chars. Erik and Michal: 799 chars (onboarding coordination). Eligibility: 286 chars (Rx field naming, snake_case action item).",
         "teams_transcripts": "2 meeting recaps (Backlog Refinement Thursday). Future meetings not yet occurred.",
         "teams_calendar": "9 events for week of April 6-10. Michal, Inna, Pero OOO."
       },
       "still_missing": [
         "Meeting transcripts/recordings from March 21 – April 5 (not recoverable — meetings already occurred)",
-        "Confluence NewUM1 content updates since March 26 (space now 404)",
-        "3 chats not captured: Claude workshop (name mismatch), Erik and Michal (browser closed), Eligibility workshop (browser closed)"
+        "Confluence NewUM1 content updates since March 26 (space confirmed dead — 404, 0 CQL search results for 'newUM' across all spaces)",
+        "1 chat not captured: Claude workshop (not found in sidebar — may have been deleted or renamed)"
       ],
       "blocker_resolved": "Okta session re-authenticated April 6. Chat scraper fixed (added Teams navigation for standalone runs)."
     },
