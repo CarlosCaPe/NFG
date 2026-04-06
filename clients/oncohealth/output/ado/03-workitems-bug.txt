@@ -1,6 +1,13 @@
-Bugs (4)
+Bugs (11)
 ============================================================
 [Closed] #180347 BUG CHILD | Taras Badlo | P2 | pts | newUM\26.02.17 | 
 [Closed] #181917 BUG_FROM_TC_1 | Unassigned | P2 | pts | newUM\26.02.17 | 
 [Closed] #184389 [Patient Search] Date of Birth is shifted by timezone in API request payload (1990-11-04 sent as 1990-11-03T21:00:00.000Z) | Mykola Vorona | P3 | pts | newUM\26.03.03 | 
 [Closed] #185473 Member Search API returns 404 Not Found for an existing member | Iryna Lukianovets | P2 | pts | newUM\26.03.17 | 
+[Closed] #187325 Stubs for payer-specific configuration are missing | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #187326 firstName or lastName are not mandatory, when memberId is in search combination | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #187347 DOB format should be MM/DD/YYYY | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #187348 There are no validations of value of DOB field according to time restrictions | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #187413 First name and Last name could contain special characters | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Resolved] #187514 fix navigation active state + small style fixes | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
+[Active] #187693 [BE] ICD-10 Code search does not return results for multi-keyword queries (separate words) | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 

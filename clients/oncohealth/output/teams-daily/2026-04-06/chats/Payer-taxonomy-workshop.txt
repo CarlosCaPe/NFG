@@ -1,0 +1,14 @@
+=== Chat: Payer taxonomy workshop ===
+Captured: 2026-04-06T15:50:06.576Z
+
+[2 messages extracted (structured)]
+
+ : brb
+
+ : Actions:
+
+escalate compliance needs to executives
+discovery for Matis handles dual-eligibility
+when do we think we should split eligibility records, and when we should represent that as separate major lines of business?
+extend business grain/grouping to the payer level, assuming per-payer configuration pointing to specific grains as being major lines of business
+escalate to executive: where is the line for how deep we go for phase 1 deliverables?

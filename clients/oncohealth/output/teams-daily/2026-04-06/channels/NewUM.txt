@@ -1,0 +1,199 @@
+=== Channel: NewUM ===
+Captured: 2026-04-06T15:40:27.714Z
+
+[Full page text extraction (fallback)]
+
+CC
+Teams has a new URL: teams.cloud.microsoft. Same app, better security.Learn more
+Activity
+Chat
+Calendar
+Calls
+OneDrive
+Copilot
+Shifts
+Apps
+Has context menu
+Chat
+Unread
+Channels
+Chats
+Meeting chats
+Copilot
+Discover
+Mentions
+Followed threads
+Favorites
+Carlos Carrillo (You)
+Chats
+Backlog Refinement
+Data team - daily
+Providers
+Michal & Carlos 1-2-1
+Providers
+Michal Mucha
+Eligibility
+Sprint grooming & planning
+Sprint Demo and Planning
+Exchange data between Databricks and NewUM
+Vika Nobis
+Provider schema discussion
+Eligibility - Person/Member workshop
+Case Schema Explanation
+Eligibility & Provider - review after workshops
+Inna Mariienko
+Payer taxonomy workshop
+Databricks Lakeflow Connect
+Provider Discussion
+Erik and Michal
+See more
+Teams and channels
+Clinical Scheduling
+General
+NewUM
+General
+See all channels
+CRS/CRR Scheduling
+General
+IT Helpdesk Scheduling
+General
+See all your teams
+Unread message
+Last message
+Group chat
+Meeting chat
+Chat
+Personal at mention
+Everyone at mention
+Important
+Urgent
+Draft
+Draft
+Muted
+Meeting in progress
+Meet now in progress
+You can't send messages because you are not a member of the chat.
+Private
+Shared
+Has context menu
+Channel at mention
+Team at mention
+Personal at mention
+Unread
+Unread
+Meeting in progress
+Unread
+Channel
+Team
+Has pinned messages
+See more
+Community
+Temporarily shown
+Has context menu
+Badged chat
+Badged chats
+Has context menu
+Teams and channels
+Exchange data between Databricks and NewUM
+Chat
+Shared
+Recap
+Q&A
++1
+Has context menu
+Join
+14
+Bernice Nyanjui and 9 others were invited to the meeting.
+Bernice Nyanjui and 9 others were invited to the meeting.
+Michal Mucha named the meeting Exchange data between Databricks and NewUM.
+Michal Mucha named the meeting Exchange data between Databricks and NewUM.
+Matthew Emerson and 2 others were invited to the meeting.
+Matthew Emerson and 2 others were invited to the meeting.
+Friday, March 27
+Michal   Mucha , I'm in a Chronus Review me... by Matthew Emerson
+Matthew Emerson
+3/27 7:58 AM
+
+Michal Mucha, I'm in a Chronus Review meeting that overlaps with the first half of your meeting. If we can't delay half an hour, can you record this meeting please? Thanks!
+
+1 Like reaction with light skin tone.
+Everyone  moved to Monday, so we can have p... by Michal Mucha
+Michal Mucha
+3/27 8:34 AM
+
+Everyone moved to Monday, so we can have proper audience on the call.
+
+2 Like reactions with medium light and no skin tones.
+2
+Monday, March 30
+Meeting started at 3/30 9:04 AM
+3/30 9:04 AM Meeting started
+Michal Mucha started recording.
+3/30 9:07 AM Michal Mucha started recording.
+Next steps. I'd like to break down the vari... by Marc Gale
+Marc Gale
+Monday 10:00 AM
+Edited
+
+Next steps. I'd like to break down the various proposals by:
+
+Cost (NOT including the cost of hosting the data in postgres). This includes compute, i/o, storage (if any) and exgress
+Dev effort: size of effort to enable the solution
+Speed: how long it take to load, say, 1M records (and if the table would be locked during the load)
+Ongoing support effort
+Need to drop. by Tim Ursprung
+Tim Ursprung
+Monday 10:00 AM
+
+Need to drop.
+
+Meeting ended: at Monday 10:02 AM after 58 minutes 6 seconds, Exchange data between Databricks and NewUM, Monday, March 30, 2026 9:05 AM - 10:00 AM, link to view recap, This meeting contains 1 recording, 1 file, Press Enter to view more
+Monday 10:02 AM Meeting ended: 58m 6s
+Exchange data between Databricks and NewUM
+Monday, March 30, 2026 9:05 AM - 10:00 AM
+View recap
+Content
+Transcript
+Recording stopped.
+Monday 10:02 AM Recording stopped.
+Recording has been saved to Michal Mucha's OneDrive.
+Monday 10:09 AM Recording has been saved to Michal Mucha's OneDrive.
+Tuesday
+After yesterday's meeting, I feel we need t... by Michal Mucha, has an attachment.
+Michal Mucha
+Tuesday 5:01 AM
+
+After yesterday's meeting, I feel we need to carry on with investigation, at the moment we have 3 strong candidate to migrate data form Databricks to NewUM Postgress:
+
+Lakebase Synced Tables
+Databricks-native managed sync from Delta/Iceberg directly into a Lakebase-hosted PostgreSQL-compatible instance — no pipeline code to write
+ADLS Gen2 Staging + Airflow + PostgreSQL COPY
+Most mature and understood option - Databricks writes Parquet to ADLS, PostgreSQL bulk-loads via COPY, shadow table swap ensures zero reader disruption
+Apache Iceberg → PostgreSQL
+Most architecturally elegant - Databricks writes Iceberg natively (one config change), pg_lake lets PostgreSQL query it directly with no ingestion step, queries run 10x+ faster via DuckDB, Eliminates the COPY pipeline, the Airflow DAG, and the swap pattern entirely; object storage costs ~10x less per GB than Postgres block storage
+
+More details you can find here NewUM Data System Design.docx
+
+Data exchange mechanism – work in progress chapter
+
+We need to investigate more over upcoming sprint those 3 approaches.
+
+NewUM Data System Design.docx
+OncoHealth_NewFire > Phase 1 Deliverables
+1 Like reaction.
+Begin Reference, Next steps. I'd like to br... by Michal Mucha
+Michal Mucha
+Tuesday 5:01 AM
+Edited
+Marc Gale
+3/30/2026 10:00 AM
+Next steps. I'd like to break down the various proposals by: 1. Cost (NOT including the cost of hosting the data in postgres). This includes compute, i/o, storage (if any) and exgress 2. Dev effort:…
+
+Marc u can find it in document mentioned above
+
+has context menu
+
+
+
+
+has context menu

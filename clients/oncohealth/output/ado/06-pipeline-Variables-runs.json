@@ -1,41 +1,4 @@
 {
   "pipeline": "Variables",
-  "runs": [
-    {
-      "_links": {
-        "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/925/runs/327465"
-        },
-        "web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=327465"
-        },
-        "pipeline.web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=925"
-        },
-        "pipeline": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/925?revision=1"
-        }
-      },
-      "variables": {
-        "system.debug": {
-          "value": "False"
-        }
-      },
-      "templateParameters": {},
-      "pipeline": {
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/925?revision=1",
-        "id": 925,
-        "revision": 1,
-        "name": "Variables",
-        "folder": "\\DevOps"
-      },
-      "state": "completed",
-      "result": "succeeded",
-      "createdDate": "2026-03-20T15:13:09.9900069Z",
-      "finishedDate": "2026-03-20T15:13:25.1650669Z",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/925/runs/327465",
-      "id": 327465,
-      "name": "20260320.1 main"
-    }
-  ]
+  "runs": []
 }

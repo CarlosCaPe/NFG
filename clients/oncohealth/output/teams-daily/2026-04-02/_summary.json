@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-02",
+  "started": "2026-04-02T22:21:00.119Z",
+  "channels": {},
+  "chats": {
+    "Data team - daily": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Eligibility - Person/Member workshop": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Payer taxonomy workshop": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Databricks Lakeflow Connect": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Provider Discussion": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Claude workshop - how to boost our work performance": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Erik and Michal": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Eligibility workshop": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    }
+  },
+  "calendar": {},
+  "transcripts": {},
+  "total_chars": 0,
+  "completed": "2026-04-02T22:21:00.271Z"
+}

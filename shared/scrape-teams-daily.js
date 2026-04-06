@@ -438,6 +438,27 @@ async function captureChats(page) {
   const results = {};
   const priorityChats = teamsConfig.priority_chats || [];
 
+  // Ensure we're on Teams first (needed when running --target chats independently)
+  const currentUrl = page.url();
+  if (!currentUrl.includes('teams.microsoft.com')) {
+    console.log('  → Navigating to Teams...');
+    try {
+      await page.goto('https://teams.microsoft.com', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    } catch (e) {
+      console.log(`  Nav warning: ${e.message.substring(0, 60)}`);
+    }
+    await page.waitForTimeout(5000);
+
+    const authed = await handleAuth(page);
+    if (!authed) {
+      console.log('  ❌ Auth failed');
+      return results;
+    }
+
+    console.log('  ⏳ Waiting for Teams to load (20s)...');
+    await page.waitForTimeout(20000);
+  }
+
   // Navigate to Chat via sidebar button (data-tid from DOM inspector)
   try {
     const chatBtn = await page.$('button[aria-label*="Chat" i]');
@@ -445,6 +466,11 @@ async function captureChats(page) {
       console.log('  → Clicking Chat sidebar');
       await chatBtn.click();
       await page.waitForTimeout(5000);
+    } else {
+      // Fallback: try direct URL navigation to Chat
+      console.log('  → Chat button not found, navigating directly...');
+      await page.goto('https://teams.microsoft.com/_#/conversations', { waitUntil: 'domcontentloaded', timeout: 30000 });
+      await page.waitForTimeout(10000);
     }
   } catch (e) {
     console.log(`  Nav warning: ${e.message.substring(0, 60)}`);

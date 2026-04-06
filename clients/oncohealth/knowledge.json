@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.16.0",
-  "last_updated": "2026-03-26",
+  "version": "1.18.0",
+  "last_updated": "2026-04-06",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -96,7 +96,7 @@
       "newum1_space": {
         "key": "NewUM1",
         "name": "NewUM Product Team",
-        "status": "CAPTURED",
+        "status": "INACCESSIBLE — 404 since ~2026-03-26. Space deleted, archived, or permissions revoked. Last good capture: 2026-03-25 (50 pages, 422K chars).",
         "pages": 50,
         "chars": 421823,
         "captured": "2026-03-25",
@@ -173,7 +173,7 @@
 
   "communication": {
     "channels": [
-      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true, "channels": ["Clinical Scheduling", "General", "NewUM", "CRS/CRR Scheduling", "IT Helpdesk Scheduling"], "active_chats": ["Eligibility - Person/Member workshop", "Data team - daily", "Payer taxonomy workshop", "Databricks Lakeflow Connect", "Provider Discussion", "Erik and Michal", "Eligibility workshop", "Claude workshop - how to boost our work performance"], "captured_chars": 97297 },
+      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true, "channels": ["Clinical Scheduling", "General", "NewUM", "CRS/CRR Scheduling", "IT Helpdesk Scheduling"], "active_chats": ["Eligibility - Person/Member workshop", "Data team - daily", "Payer taxonomy workshop", "Databricks Lakeflow Connect", "Provider Discussion", "Erik and Michal", "Eligibility workshop", "Claude workshop - how to boost our work performance"], "captured_chars": 167000, "last_capture": "2026-04-06", "note": "April 6: 5 channels (25K), 5 chats (42K), 2 transcripts (1.6K), 1 calendar (1.9K). Total ~70K chars this capture." },
       { "tool": "Slack", "space": "Newfire Global Partners", "confirmed": true },
       { "tool": "SharePoint", "site": "OncoHealth_NewFire", "confirmed": true },
       { "tool": "Miro", "boards": [
@@ -371,7 +371,7 @@
   "access_status": {
     "completed": [
       "OncoHealth account created",
-      "Teams access (OncoHealth_NewFire) — 97K chars captured including meeting transcripts",
+      "Teams access (OncoHealth_NewFire) — 167K chars captured across 3 captures (Mar 20, Apr 2, Apr 6). Apr 6: 5 channels, 5 chats (42K), 2 transcripts, calendar.",
       "Outlook Calendar — 11 events captured for week of March 16-19",
       "SharePoint access (Okta SSO working, Excel/Word Online loaded)",
       "Miro REST API (NFG-Reader app, 130K chars from NewUM board)",
@@ -397,7 +397,7 @@
         { "resource": "Policy documents (4 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "Secure development, Cryptography, Data management, Branching strategy. Links are placeholders — never provided." },
         { "resource": "Miro NewFire board (assessment, stale)", "status": "BLOCKED", "action": "Board not found (404) — may have been moved/deleted or token expired", "note": "Previously captured 130,902 chars. Board ID uXjVIx2JdOQ= no longer accessible." },
         { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
-        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2101901, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Deep capture (2026-03-23): 33 files, 2053 KB. 13 Epics, 62 Features, 325 User Stories, 348 Tasks, 4 Bugs, 7 Pipelines with CI/CD runs, 5 Teams (QA:6, UX:3, Data:7, BE:13, FE:12), 7 Sprints, 3 Boards. No wiki exists — confirmed by Michal Mucha (2026-03-25): teams use Confluence, not ADO wiki. 0 git repos visible." },
+        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2442382, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Re-captured 2026-04-06: 37 files, 2.4MB. 13 Epics, 66 Features, 372 User Stories, 443 Tasks, 11 Bugs, 8 Pipelines. 385 items changed since Mar 23. Sprint 26.03.31 mostly Closed (142). Sprint 26.04.14 is current (130+ items). 3 items assigned to Carlos: #185594 (Closed), #186569 (Closed), #187416 (To Do)." },
         { "resource": "Atlassian Confluence (12 spaces)", "status": "COMPLETE", "chars": 485274, "method": "REST API + API token", "note": "Deep capture (2026-03-23): 12 spaces, 171 pages, 41 files, 621 KB. Key: PM (197K), AT (120K), OG (65K), IS (13K), MATIS (13K). 41 groups discovered. Auth via ccarrillo@oncohealth.us + API token." },
         { "resource": "Confluence NewUM1 space", "status": "COMPLETE", "chars": 421823, "method": "REST API + API token (ccarrillo@oncologyanalytics.com)", "note": "Captured 2026-03-25. 50 pages: PRDs (case entry, chemotherapy, work queues, post-denial, reports, rules/config), decision log (5 decisions), governance, meeting notes, templates. 422K chars. Previously blocked — fixed by using correct email identity with new unscoped token (nfg-full-access)." },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
@@ -906,7 +906,26 @@
       "organizer": "Michal Mucha",
       "time": "8:35-9:05 AM",
       "attendees_count": 5,
-      "note": "No chat messages with content. Meeting notes empty. Likely a working session with screen sharing."
+      "note": "No chat messages with content. Recording (32m 13s) saved to Michal's OneDrive. Transcript content never extracted."
+    },
+
+    "capture_gap_notice": {
+      "$comment": "GAP PARTIALLY CLOSED: April 6 captures recovered significant content. ADO data shows all decisions resolved. Teams chats captured 42K chars (5 of 8 chats). Transcripts limited (future meetings only). Channels captured 25K chars.",
+      "gap_start": "2026-03-21",
+      "gap_end": "2026-04-06",
+      "recovery_captures": {
+        "ado": "Full re-capture April 6 — 37 files, 2.4MB. 385 items changed since March 23. Key closures: #185717 (Person PK/FK), #185715 (Payer taxonomy), #186301 (CQRS). New: #187416 assigned to Carlos.",
+        "teams_channels": "5 channels, 25K chars. NewUM channel has March 30 Databricks data exchange meeting discussion.",
+        "teams_chats": "5 of 8 chats captured, 42K chars. Eligibility Person/Member workshop: 30K chars (12-section rules analysis). Data team daily: 6K chars. Provider Discussion: 2.7K chars.",
+        "teams_transcripts": "2 meeting recaps (Backlog Refinement Thursday). Future meetings not yet occurred.",
+        "teams_calendar": "9 events for week of April 6-10. Michal, Inna, Pero OOO."
+      },
+      "still_missing": [
+        "Meeting transcripts/recordings from March 21 – April 5 (not recoverable — meetings already occurred)",
+        "Confluence NewUM1 content updates since March 26 (space now 404)",
+        "3 chats not captured: Claude workshop (name mismatch), Erik and Michal (browser closed), Eligibility workshop (browser closed)"
+      ],
+      "blocker_resolved": "Okta session re-authenticated April 6. Chat scraper fixed (added Teams navigation for standalone runs)."
     },
 
     "eligibility_payer_taxonomy_v2_thursday": {
@@ -971,12 +990,60 @@
       { "name": "newum_data_processing_analysis repo", "location": "dev.azure.com/oncologyanalytics/newUM/_git/newum_data_processing_analysis", "note": "ADO git repo for data processing" }
     ],
 
+    "ado_sprint_26_03_31_eligibility_tickets": {
+      "$comment": "Eligibility-related ADO work items. Sprint 26.03.31 COMPLETED. Updated with April 6 capture data.",
+      "sprint": "26.03.31",
+      "sprint_status": "COMPLETED — 142 Closed, 4 Active remaining",
+      "items": [
+        { "id": 185717, "title": "Person/Member PK/FK", "state": "Closed", "assignee": "Michal Mucha", "created": "2026-03-17", "changed": "2026-03-31", "signal": "RESOLVED — completed Code Review and Closed during sprint" },
+        { "id": 185716, "title": "Manual eligibility storage pattern", "state": "Removed", "assignee": null, "created": "2026-03-17", "changed": "2026-03-31", "signal": "REMOVED — replaced by #187564" },
+        { "id": 185715, "title": "Payer group taxonomy", "state": "Closed", "assignee": "Cory Johnson", "created": "2026-03-17", "changed": "2026-03-31", "signal": "RESOLVED — implementation completed" },
+        { "id": 186301, "title": "Refactor Eligibility API to use CQRS approach", "state": "Closed", "assignee": "Roman Buchyn", "created": "2026-03-20", "changed": "2026-03-25", "signal": "RESOLVED — CQRS refactoring merged" },
+        { "id": 183771, "title": "Extend eligibility schema to support eligibility collections (Dual, DSNP)", "state": "New", "assignee": "Inna Mariienko", "created": "2026-02-25", "changed": "2026-02-25", "signal": "No change — still New" },
+        { "id": 183763, "title": "Display required eligibility fields (read-only) and editable Treatment Start Date", "state": "New", "assignee": "Inna Mariienko", "created": "2026-02-25" },
+        { "id": 183770, "title": "Extend eligibility validation to check coverage against Tx Start Date", "state": "New", "assignee": "Inna Mariienko", "created": "2026-02-25" },
+        { "id": 185796, "title": "Refactor Eligibility API", "state": "Active", "assignee": "Roman Buchyn", "sprint": "26.03.31", "signal": "Parent story — child #186301 Closed" }
+      ]
+    },
+
+    "ado_sprint_26_04_14": {
+      "$comment": "Current sprint as of April 6 capture. Key eligibility and Carlos-assigned items.",
+      "sprint": "26.04.14",
+      "sprint_status": "ACTIVE — 44 Active, 28 Ready, 26 New, 24 Closed, 3 To Do, 2 Code Review, 1 QA",
+      "total_items": "130+",
+      "carlos_assigned": [
+        { "id": 187416, "title": "Case utilisation of Eligibility data", "state": "To Do", "assignee": "Carlos Carrillo", "created": "2026-04-02", "type": "User Story", "description": "Implement and document how eligibility data is consumed in case workflows" }
+      ],
+      "new_eligibility_items": [
+        { "id": 187385, "title": "Eligibility final adjustment and approval", "state": "Active", "assignee": "Michal Mucha", "created": "2026-04-02", "signal": "Final eligibility schema adjustments after workshops" },
+        { "id": 187564, "title": "Manual eligibility storage pattern", "state": "New", "created": "2026-03-31", "signal": "Replacement for removed #185716 — refined scope" },
+        { "id": 187528, "title": "Testing Validate Member Eligibility", "state": "New", "assignee": "Olha Pidhorna", "created": "2026-03-31", "signal": "QA for eligibility validation" }
+      ]
+    },
+
+    "confluence_activity_march_25": {
+      "$comment": "NewUM-related Confluence pages modified on March 25, 2026.",
+      "pages": [
+        { "title": "Configuration and rules categories", "modified_by": "Pero Jaman" },
+        { "title": "SmartUM Rule Configurator", "modified_by": "Pero Jaman" },
+        { "title": "Clinical Data and Admin Portal Enhancements for NewUM", "modified_by": "Inna Mariienko" },
+        { "title": "Provider Requirements - GAP Analysis", "modified_by": "Arben Osmani" },
+        { "title": "Ordering and Servicing Provider Information", "modified_by": "Inna Mariienko" },
+        { "title": "Workflow State, Status, and Determination Definitions", "modified_by": "Colette Swenson" }
+      ]
+    },
+
     "critical_design_decisions_pending": [
-      { "topic": "Business Grouping ↔ ETL mapping", "status": "UNRESOLVED — identified as biggest open question", "owners": ["Michal", "Nick"], "impact": "Blocks data model finalization for eligibility" },
-      { "topic": "Manual eligibility records storage", "status": "DEFERRED — Nick vs Jack disagree (separate table vs same table)", "impact": "Affects data exposure architecture, Databricks sync" },
-      { "topic": "Person ID grain definition", "status": "DEFERRED", "impact": "Affects daily ETL load logic, cross-version tracking" },
-      { "topic": "Type 1 vs Type 2 NPI table split", "status": "NO FINAL DECISION", "impact": "Affects provider schema, network tables, downstream structures" },
-      { "topic": "Phase 1 scope boundary", "status": "NEEDS EXECUTIVE ESCALATION", "impact": "Determines how deep payer taxonomy goes in V1" }
+      { "topic": "Business Grouping ↔ ETL mapping", "status": "RESOLVED — ADO #185715 CLOSED March 31, 2026 by Cory Johnson. Payer group taxonomy implementation completed.", "owners": ["Cory Johnson", "Michal", "Nick"] },
+      { "topic": "Manual eligibility records storage", "status": "REMOVED (ADO #185716) then REPLACED by #187564 'Manual eligibility storage pattern' (New, March 31). Original ticket removed, new ticket created with potentially refined scope.", "impact": "Affects data exposure architecture, Databricks sync" },
+      { "topic": "Person ID grain definition", "status": "RESOLVED — ADO #185717 CLOSED March 31, 2026 by Michal Mucha. Implementation completed through Code Review in sprint 26.03.31.", "impact": "Resolved" },
+      { "topic": "Type 1 vs Type 2 NPI table split", "status": "UNDER DISCUSSION — March 17 Provider Discussion: separate tables proposed, Nick concerned about duplication. Versioning decided (single table with version dates). NPI-only matching for V1.", "impact": "Affects provider schema, network tables, downstream structures" },
+      { "topic": "Phase 1 scope boundary", "status": "NEEDS EXECUTIVE ESCALATION — Payer taxonomy workshop (2026-03-18) action item: escalate to executive", "impact": "Determines how deep payer taxonomy goes in V1" },
+      { "topic": "Dual/DSNP eligibility collections", "status": "FORMALIZED — ADO #183771 (Inna Mariienko, New). When to split records vs represent as separate MLOBs?", "impact": "Affects eligibility schema, record structure, MLOB modeling" },
+      { "topic": "Eligibility API CQRS refactoring", "status": "RESOLVED — ADO #186301 CLOSED March 25, 2026 by Roman Buchyn. CQRS approach implemented.", "impact": "Resolved" },
+      { "topic": "Databricks→PostgreSQL data exchange", "status": "IN PROGRESS — March 30 meeting evaluated 3 approaches: (1) Lakebase Synced Tables, (2) ADLS+Airflow+PostgreSQL COPY, (3) Apache Iceberg→PostgreSQL. Marc Gale requested cost/effort/speed comparison.", "owners": ["Michal Mucha", "Marc Gale"], "impact": "Determines how Databricks data gets consumed by newUM's PostgreSQL backend" },
+      { "topic": "Eligibility final adjustment", "status": "ACTIVE — ADO #187385 (Michal Mucha, April 2). New ticket for final eligibility schema adjustments after workshops.", "impact": "Final eligibility schema refinements before V1 freeze" },
+      { "topic": "Case utilisation of Eligibility data", "status": "TO DO — ADO #187416 (Carlos Carrillo, sprint 26.04.14). Implement and document how eligibility data is consumed in case workflows.", "impact": "Assigned to Carlos — first implementation ticket" }
     ]
   },
 
@@ -989,7 +1056,12 @@
       { "id": "U4", "question": "What is Erik's full name and role?", "status": "RESOLVED", "answer": "Erik Hjortshoj, SVP Engineering / Consulting CPTO (confirmed in onboarding doc)" },
       { "id": "U5", "question": "What is your exact email address?", "status": "RESOLVED", "answer": "carlos.carrillo@newfireglobal.com" },
       { "id": "U6", "question": "Which Databricks workspace do you need first (dev)?", "status": "unresolved" },
-      { "id": "U7", "question": "Is the newUM codebase in Azure DevOps repos or GitHub?", "status": "RESOLVED", "answer": "Azure DevOps (ADO) — confirmed in onboarding doc: Code repository section" }
+      { "id": "U7", "question": "Is the newUM codebase in Azure DevOps repos or GitHub?", "status": "RESOLVED", "answer": "Azure DevOps (ADO) — confirmed in onboarding doc: Code repository section" },
+      { "id": "U8", "question": "What was decided for Person ID grain (ADO #185717)? Payer-scoped composite key or system GUID?", "status": "RESOLVED", "answer": "ADO #185717 CLOSED March 31, 2026 by Michal Mucha. Implementation completed. Exact decision (payer-scoped vs GUID) captured in code — ticket moved through Code Review to Closed during sprint 26.03.31." },
+      { "id": "U9", "question": "What is the CQRS approach for Eligibility API (ADO #186301)? What replaces with-related-data endpoints?", "status": "RESOLVED", "answer": "ADO #186301 CLOSED March 25, 2026 by Roman Buchyn. CQRS refactoring completed. Implementation went through Code Review and was merged in sprint 26.03.31." },
+      { "id": "U10", "question": "How will Dual/DSNP eligibility be represented — split records or separate MLOBs (ADO #183771)?", "status": "unresolved", "note": "Payer taxonomy workshop (2026-03-18) raised this. Inna assigned." },
+      { "id": "U11", "question": "What happened to Confluence NewUM1 space? Returns 404 since ~2026-03-26.", "status": "unresolved", "note": "Space key NewUM1 returns 404 via REST API. Direct page-by-ID also fails. May be deleted, archived, or permissions revoked. Last good capture: 2026-03-25 (50 pages, 422K chars). Ask Rachel or Inna." },
+      { "id": "U12", "question": "Which Databricks→PostgreSQL data exchange approach was selected? (Lakebase Synced Tables, ADLS+Airflow+PostgreSQL COPY, or Apache Iceberg→PostgreSQL)", "status": "unresolved", "note": "March 30 meeting 'Exchange data between Databricks and NewUM' (58 min recorded). Michal posted 3 candidates. Marc Gale requested cost/effort/speed comparison. Decision expected April 2026." }
     ]
   }
 }

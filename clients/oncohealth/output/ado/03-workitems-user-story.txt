@@ -1,71 +1,21 @@
-User Storys (325)
+User Storys (372)
 ============================================================
-[Closed] #182326 Investigate Playwright capabilities paired with Claude Code | Yurii Bodnar | P2 | 5pts | newUM\26.03.03 | FE
-[Active] #182330 Audit Logging for Databricks Jobs & Notebooks | Arben Osmani | P3 | pts | newUM | 
-[New] #182420 [SPIKE] Research Logging Capabilities of Lakeflow Declarative Pipelines (DLT) | Unassigned | P4 | pts | newUM | 
-[New] #182431 Design and create watermark table schema | Unassigned | P2 | pts | newUM | Data
-[New] #182432 Build backfill notebook with date range parameters and day-by-day processing loop | Unassigned | P2 | pts | newUM | Data
-[New] #182433 Build incremental notebook with watermark-based resume logic | Unassigned | P2 | pts | newUM | Data
-[New] #182434 Ensure idempotency on both notebooks (handle re-runs without duplicates) | Unassigned | P2 | pts | newUM | Data
-[New] #182435 Integrate audit logging into both notebooks | Unassigned | P2 | pts | newUM | Data
-[New] #182436 Create Databricks Job for nightly incremental schedule | Unassigned | P2 | pts | newUM | Data
-[New] #182437 Test backfill with dev/test data | Unassigned | P2 | pts | newUM | Data
-[Active] #182479 [BE] Retrieve Diagnosis-Scoped Regimens from Regimen Library | Iryna Lukianovets | P2 | 8pts | newUM\26.03.31 | V1.R1
-[Ready] #182482 [BE] Search Existing Regimens by Drug Composition (Drug Name, Brand/Generic, or HCPCS) | Iryna Lukianovets | P2 | 8pts | newUM\26.03.31 | V1.R1
-[Active] #182503 [BE] Select Existing Regimen and Persist Regimen and Drug Records to Case | Bogdan Chachun | P2 | 13pts | newUM\26.03.31 | V1.R1
-[Ready] #182504 [BE] Allow Switching Between Equivalent Drugs Based on Shared RxCUI | Bogdan Chachun | P2 | 13pts | newUM\26.03.31 | V1.R1
-[Removed] #182506 [QA] Restrict Selection of EADL-Flagged Drugs in Regimen Drug Selection | Unassigned | P2 | pts | newUM\26.03.31 | V1.R1
-[Closed] #182553 Document Services design and strategy | Bogdan Chachun | P2 | 5pts | newUM\26.03.03 | BE Services
-[Ready] #182559 [FE] Separate Medical and Pharmacy Drugs into Distinct Dosing Tables | Unassigned | P2 | 13pts | newUM\26.04.14 | V1.R1
-[Closed] #182685 Integrate Member Information Form With Backend APIs (Replace FE Stubs) | Mykola Vorona | P2 | 5pts | newUM\26.03.17 | BE Services; core; FE
-[Removed] #182690 Integrate Eligibility With Backend APIs (Replace FE Stubs) | Unassigned | P2 | 5pts | newUM\26.03.03 | BE Services; core; FE
-[Closed] #182730 Introduce unit of work approach into DAL | Iryna Lukianovets | P2 | 5pts | newUM\26.03.03 | BE Services
-[Closed] #182753 [SPIKE] Service Bus to Databricks Integration | Arben Osmani | P2 | pts | newUM | 
-[Closed] #182771 [Spike] Cost Monitoring and Alerting in Databricks | Arben Osmani | P2 | pts | newUM | 
-[Closed] #182829 Enable Datadog for Web API | Luiyi Valentin | P2 | 3pts | newUM\26.03.03 | DevOps
-[New] #182830 Enable DataDog telemetry for SQL calls | Luiyi Valentin | P2 | 3pts | newUM | DevOps
-[Closed] #182844 [SPIKE] Databricks Asset Bundle | Arben Osmani | P2 | pts | newUM | Data
-[Closed] #182856 Create initial repository structure | Oleksandr Nykonenko | P2 | 3pts | newUM\26.03.03 | Data
-[Removed] #182858 Case engine | Unassigned | P2 | 8pts | newUM\26.03.03 | Data
-[Closed] #182859 Provider NewUM - initial investigation | Arben Osmani | P2 | 8pts | newUM\26.03.17 | Data
-[Closed] #182860 Eligibility - initial investigation | Oleksandr Nykonenko | P2 | 5pts | newUM\26.03.17 | Data
-[Removed] #182861 Case meta schema | Unassigned | P2 | 8pts | newUM\26.03.03 | Data
-[Closed] #182862 Drugs | Oleksandr Nykonenko | P2 | 8pts | newUM\26.03.03 | Data
-[Closed] #182863 CI/CD for Databricks infra | Michal Mucha | P2 | 5pts | newUM\26.03.17 | Data
-[Removed] #182866 Service principal / user to access ingress data sources | Unassigned | P2 | 2pts | newUM\26.03.03 | Data
-[New] #182872 Data quality check | Unassigned | P2 | pts | newUM | 
-[Ready] #182874 [BE] Filter ICD-10 Diagnoses by Treatment Type Applicability (GMT / XRT) | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Ready] #182876 [FE] Populate initial dosing details based on selected regimen details | Unassigned | P2 | 8pts | newUM\26.04.14 | V1.R1
-[Pending Input] #182877 [BE] Calculate Max Billing Units per Authorization (Medical Drugs) | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Pending Input] #182878 [BE] Select Drug Strength and Form for Pharmacy Drugs | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Pending Input] #182879 [BE] Calculate Allowed Dose Using Patient Height and Weight | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Ready] #182880 [FE] Allow User Edits to Dosing with Guardrails | Unassigned | P2 | 8pts | newUM\26.04.14 | V1.R1
-[Pending Input] #182881 Flag Dosing Changes Exceeding Default Medical Billing Units/Auth | Unassigned | P2 | pts | newUM | V1.R1
-[Ready] #182882 [BE] Create Custom Regimen on Case Entry | Bogdan Chachun | P2 | 13pts | newUM\26.04.14 | V1.R1
-[Groom] #182883 Enter Dosing Information for Custom Regimen | Inna Mariienko | P2 | pts | newUM | V1.R1
-[Pending Input] #182884 Restrict Custom Regimen Creation for External Users | Inna Mariienko | P2 | pts | newUM | V1.R2
-[Ready] #182885 [BE] Validate Custom Regimen Against Existing Regimens | Bogdan Chachun | P2 | 8pts | newUM\26.04.14 | V1.R1
-[Pending Input] #182886 Pend Custom Regimens for Auto-Rules | Unassigned | P2 | pts | newUM | V1.R2
-[Removed] #182887 [Custom Regimens] Save Custom Regimens for Operational Reporting Only (exclude from Regimen Library) | Unassigned | P2 | pts | newUM | 
-[New] #182888 Select Ordering and Treating Providers | Unassigned | P2 | pts | newUM | 
-[New] #182889 Select Place of Treatment | Unassigned | P2 | pts | newUM | 
-[New] #182890 View Provider Addresses During Search | Unassigned | P2 | pts | newUM | 
 [New] #182891 Enter Provider Office Contact Information | Unassigned | P2 | pts | newUM | 
 [New] #182892 Restrict Provider Selection to Health Plan–Accessible Providers | Unassigned | P2 | pts | newUM | 
 [New] #182894 Submit Case for Review (including validation and user confirmation) | Unassigned | P2 | pts | newUM | 
 [Removed] #182895 Generate and Display OH Reference Number | Unassigned | P2 | pts | newUM | 
 [New] #182897 Enter Basic Case Request Details | Unassigned | P2 | pts | newUM | 
-[Ready] #182899 [FE] Add Ancillary Drugs to Chemo | Unassigned | P2 | 5pts | newUM | V1.R1
-[Ready] #182900 [FE] Restrict Ancillary Drug Selection by Dx Group | Unassigned | P2 | 5pts | newUM | V1.R1
-[Ready] #182901 [BE] Create Ancillary-Only Chemotherapy Requests | Unassigned | P2 | 2pts | newUM | V1.R1
-[Ready] #182902 [FE] Align Ancillary Drugs Cycles/Cycles in Days with Main Regimen Drugs Cycles | Unassigned | P2 | 13pts | newUM | V1.R1
+[Ready] #182899 [FE] Add Ancillary Drugs to Chemo | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
+[Removed] #182900 [FE] Restrict Ancillary Drug Selection by Clinical Category | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
+[Ready] #182901 [BE] Create Ancillary-Only Chemotherapy Requests | Unassigned | P2 | 2pts | newUM\26.04.28 | V1.R1
+[Ready] #182902 [FE] Align Ancillary Drug Cycle Fields with Main Regimen | Unassigned | P2 | 13pts | newUM\26.04.28 | V1.R1
 [New] #182903 [Dynamic Cycle Calculations] Calculate dynamic cycles based on requested treatment end date | Unassigned | P2 | pts | newUM | 
 [New] #182904 [Dispense As Written (DAW)] Control Brand vs Generic Drug Selection During Case Entry | Unassigned | P2 | pts | newUM | 
-[Pending Input] #182931 [BE] Apply Benefit Type Configuration from PDL (Medical vs Pharmacy Drug) | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Groom] #182935 Apply status configuration from PDL during Chemo Entry (OOS, PA Required, PA Exempt, Per Formulary) | Unassigned | P2 | pts | newUM | V1.R1
-[Groom] #182937 Require Benefit Selection for Crossover Drugs | Unassigned | P2 | pts | newUM | V1.R1
-[Groom] #182938 Apply NP Drug Rules Based on Member Eligibility (incl. NP Drug Label Display at Dosing Level) | Unassigned | P2 | pts | newUM | V1.R1
-[Groom] #182939 Allow User to Change to Preferred Drug (incl. FI Reporting impact tracking) | Unassigned | P2 | pts | newUM | V1.R1
+[Ready] #182931 [BE] Apply Benefit Type Configuration from PDL (Medical vs Pharmacy Drug) | Dmytro Hridin | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Ready] #182935 [FE] Display drug benefit status (OOS, PA Required, PA Exempt) | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
+[Ready] #182937 [FE] Require Benefit Selection for Crossover Drugs | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
+[Groom] #182938 Apply NP Drug Rules | Unassigned | P2 | pts | newUM | V1.R1
+[Groom] #182939 [BE] Allow User to Change to Preferred Drug | Unassigned | P2 | pts | newUM | V1.R1
 [Groom] #182941 Capture Clinical Exception Reason for NP Drug | Unassigned | P2 | pts | newUM | V1.R1
 [Groom] #182942 Display Preferred Drug Options to User | Unassigned | P2 | pts | newUM | V1.R1
 [New] #182945 Identify and Display Non-Formulary Status, Quantity Limits, and PA Status from formulary | Unassigned | P2 | pts | newUM | 
@@ -80,53 +30,53 @@ User Storys (325)
 [Closed] #183180 Create dev data | Michal Mucha | P2 | 5pts | newUM\26.03.03 | Data
 [Closed] #183300 Redesign LetterV2 and Fax Service to Match the Template | Bogdan Chachun | P2 | 3pts | newUM\26.03.03 | BE Services
 [Closed] #183383 Create API Test Cases | Taras Badlo | P2 | pts | newUM\26.03.17 | 
-[Ready] #183405 WF: Intake - 1 Search Patient | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[Ready] #183406 WF: Intake - 2.1 Confirm Patient Info | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[Ready] #183407 WF: Intake - 3 Diagnosis | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[Active] #183408 WF: Intake - 4 Attach Clinical Notes | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[New] #183409 WF: Intake - 5 Add complete provider info & Eligibility 2 | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[Ready] #183414 WF: Intake - 2.2 Confirm Patient Eligibility 1 | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
+[Ready] #183405 WF: Intake - 1 Search Patient | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
+[Ready] #183406 WF: Intake - 2.1 Confirm Patient Info | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
+[Ready] #183407 WF: Intake - 3 Diagnosis | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
+[Active] #183408 WF: Intake - 4 Attach Clinical Notes | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
+[New] #183409 WF: Intake - 5 Add complete provider info & Eligibility 2 | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
+[Ready] #183414 WF: Intake - 2.2 Confirm Patient Eligibility 1 | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
 [Closed] #183489 Design System: Selects | Andrii Zhdan | P1 | pts | newUM\26.03.17 | 
 [Closed] #183493 Design System: Inputs | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
 [Closed] #183512 Design System: Buttons | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
 [Closed] #183515 Design System: Tooltip | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Active] #183524 WF: Treatment 1 - 3 Search, Patient Details, Auth Details | Chris Gillis | P2 | pts | newUM\26.03.17 | 
-[Active] #183525 WF: Treatment - 4 Assign Main Regimen (Just layout - not detailed interactions) | Chris Gillis | P2 | pts | newUM\26.03.17 | 
-[Ready] #183544 [BE] Apply Payer Restrictions on Diagnoses | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Ready] #183545 [BE] Select Tx Type (Chemo vs GMT vs XRT) | Jack Hall | P2 | 3pts | newUM\26.03.31 | V1.R1
-[Ready] #183546 [FE] Enter dosing information for Ancillary Drugs | Unassigned | P2 | 8pts | newUM | V1.R1
-[Pending Input] #183547 [BE] Calculate Quantity per Authorization (Pharmacy  Drugs) | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
+[Active] #183524 WF: Treatment 1 - 3 Search, Patient Details, Auth Details | Chris Gillis | P2 | pts | newUM\26.04.14 | 
+[Active] #183525 WF: Treatment - 4 Assign Main Regimen (Just layout - not detailed interactions) | Chris Gillis | P2 | pts | newUM\26.04.14 | 
+[Active] #183544 [BE] Apply Payer Restrictions on Diagnoses | Iryna Lukianovets | P2 | 3pts | newUM\26.04.14 | V1.R1
+[Active] #183545 [BE] Select Tx Type (Chemo vs GMT vs XRT) | Roman Buchyn | P2 | 3pts | newUM\26.04.14 | V1.R1
+[Ready] #183546 [FE] Enter dosing information for Ancillary Drugs | Unassigned | P2 | 8pts | newUM\26.04.28 | V1.R1
+[Active] #183547 [BE] Calculate Quantity per Authorization (Pharmacy  Drugs) | Bogdan Chachun | P2 | 13pts | newUM\26.04.14 | V1.R1
 [Pending Input] #183548 Flag Dosing Changes Exceeding Default Pharmacy Quantity | Unassigned | P2 | pts | newUM | V1.R1
 [Removed] #183549 Apply OOS Configuration from PDL During Chemo Entry | Unassigned | P2 | pts | newUM | V1.R1
-[Groom] #183550 Change Benefit Type for Crossover Drug Before Case Submission | Unassigned | P2 | pts | newUM | V1.R1
-[Active] #183668 Investigate possibility to call C# functions from typesript | Olha Pidhorna | P2 | 5pts | newUM | 
+[Ready] #183550 [FE] Change Benefit Type for Crossover Drug Before Case Submission | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
+[Closed] #183668 Investigate possibility to call C# functions from typesript | Olha Pidhorna | P2 | 5pts | newUM | 
 [Closed] #183670 Create a Select component (single select only) based on design in figma | Petro Brezitskiy | P2 | 3pts | newUM\26.03.03 | FE
-[New] #183724 Design System: Error Handling | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
+[Active] #183724 Design System: Error Handling | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
 [Closed] #183760 [FE] Search for a member using required inputs (guardrails) | Petro Brezitskiy | P2 | 5pts | newUM\26.03.17 | QA; V1.R1
 [Closed] #183762 [FE] View/Edit Member Information Form for Found Member (core eligibility data + optional eligibility attributes ) | Mykola Vorona | P2 | 8pts | newUM\26.03.17 | QA; V1.R1
-[Ready] #183768 [FE] Validate Member Eligibility at Treatment Start Date | Dmytro Petriv | P2 | 5pts | newUM\26.03.31 | QA; V1.R1
-[Active] #183773 [FE] Create Draft Case and Save Progress | Mykola Vorona | P2 | 8pts | newUM\26.03.31 | QA; V1.R1
+[Closed] #183768 [FE] Validate Member Eligibility at Treatment Start Date | Olha Pidhorna | P2 | 5pts | newUM\26.03.31 | QA; V1.R1
+[Closed] #183773 [FE] Create Draft Case and Save Progress | Mykola Vorona | P2 | 8pts | newUM\26.03.31 | QA; V1.R1
 [Closed] #183826 Set up Remote Desktop | Taras Badlo | P2 | pts | newUM\26.03.03 | 
-[Ready] #183831 Perform Onboarding | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
-[Ready] #183832 Short familiarization with AZURE tools | Olha Pidhorna | P2 | 8pts | newUM\26.03.31 | 
+[Closed] #183831 Perform Onboarding | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #183832 Short familiarization with AZURE tools | Olha Pidhorna | P2 | 8pts | newUM\26.03.31 | 
 [Removed] #183935 [Data] Spike: Admin Portal (AP) Drug API Coverage & Clinical Data Model Validation for NewUM R1 (ICD-10, Drugs, Regimens) | Oleksandr Nykonenko | P2 | 3pts | newUM\26.03.17 | V1.R1
-[Active] #183957 [FE] Select Cancer Stage for Diagnosis | Mykola Vorona | P2 | 3pts | newUM\26.03.31 | V1.R1
-[Ready] #183966 [BE] SPIKE: Investigate Payer applicability | Bogdan Chachun | P2 | 3pts | newUM\26.03.31 | V1.R1
-[Ready] #183984 [FE] Select Tx Type (Chemo vs GMT vs XRT) | Yurii Bodnar | P2 | 5pts | newUM\26.03.31 | V1.R1
-[Groom] #184064 [BE] Create Configuration Repository | Alison Stamp | P2 | pts | newUM | core; V1.R1
+[Closed] #183957 [FE] Select Cancer Stage for Diagnosis | Olha Pidhorna | P2 | 3pts | newUM\26.03.31 | V1.R1
+[Removed] #183966 [BE] SPIKE: Investigate Payer applicability | Bogdan Chachun | P2 | 3pts | newUM\26.03.31 | V1.R1
+[Closed] #183984 [FE] Select Tx Type (Chemo vs GMT vs XRT) | Yurii Bodnar | P2 | 5pts | newUM\26.03.31 | V1.R1
+[Pending Input] #184064 [BE] Create Configuration Repository | Alison Stamp | P2 | pts | newUM | core; V1.R1
 [Groom] #184065 [BE] Create Rules Repository | Alison Stamp | P2 | pts | newUM | core; V1.R1
-[New] #184067 Enable Fetching Payer Config from Admin Portal | Unassigned | P2 | pts | newUM | 
-[Ready] #184078 [FE] Search Existing Regimens by Drug Composition (Drug Name, Brand/Generic, or HCPCS) | Petro Brezitskiy | P2 | 8pts | newUM\26.03.31 | V1.R1
-[Ready] #184079 [FE] Allow Switching Between Equivalent Drugs Based on Shared RxCUI | Petro Brezitskiy | P2 | 8pts | newUM\26.03.31 | V1.R1
-[Ready] #184081 [FE] Create Custom Regimen on Case Entry | Unassigned | P2 | 8pts | newUM\26.04.14 | V1.R1
-[Ready] #184082 [FE] Validate Custom Regimen Against Existing Regimens | Unassigned | P2 | 5pts | newUM\26.04.14 | V1.R1
+[Pending Input] #184067 [FE] Enable Configuration Management | Alison Stamp | P2 | pts | newUM | 
+[Closed] #184078 [FE] Search Existing Regimens by Drug Composition (Drug Name, Brand/Generic, or HCPCS) | Petro Brezitskiy | P2 | 8pts | newUM\26.03.31 | V1.R1
+[Closed] #184079 [FE] Allow Switching Between Equivalent Drugs Based on Shared RxCUI | Petro Brezitskiy | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Ready] #184081 [FE] Create Custom Regimen on Case Entry | Unassigned | P2 | 8pts | newUM\26.04.28 | V1.R1
+[Ready] #184082 [FE] Validate Custom Regimen Against Existing Regimens | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
 [Closed] #184091 [BE] Spike: Investigate mechanism to retrieve AP Drug/Clinical Library Data | Bogdan Chachun | P2 | 5pts | newUM\26.03.17 | V1.R1
 [Closed] #184156 [BE] [Spike] Define how we can create authorization for DrugsAPI and Preferred Regimens services | Bogdan Chachun | P2 | 3pts | newUM\26.03.17 | V1.R1
-[Active] #184170 Design and implement AI-driven test case generation workflow with ADO integration | Taras Badlo | P2 | 3pts | newUM\26.03.31 | 
+[Closed] #184170 Design and implement AI-driven test case generation workflow with ADO integration | Taras Badlo | P2 | 3pts | newUM\26.03.31 | 
 [New] #184173 Error Handling | Unassigned | P2 | pts | newUM | 
 [New] #184176 TAT Timer Configurations | Unassigned | P2 | pts | newUM | 
 [New] #184177 Letters Configuration | Unassigned | P2 | pts | newUM | 
-[New] #184180 Configurations Audit | Unassigned | P2 | pts | newUM | 
+[Pending Input] #184180 [BE] Configurations Audit | Alison Stamp | P2 | pts | newUM | 
 [New] #184182 Collect Change Metadata | Unassigned | P2 | pts | newUM | 
 [New] #184183 Rules Audit | Unassigned | P2 | pts | newUM | 
 [New] #184184 Rollback Configuration | Unassigned | P2 | pts | newUM | 
@@ -139,7 +89,7 @@ User Storys (325)
 [Closed] #184294 Gap analysis review | Michal Mucha | P2 | 2pts | newUM\26.03.17 | 
 [Closed] #184295 Review technical System Design Doc | Michal Mucha | P2 | 3pts | newUM\26.03.17 | Data
 [Closed] #184304 TECH DEBT | Dmytro Petriv | P2 | 1pts | newUM\26.03.03 | 
-[Pending Input] #184315 [BE] Capture Patient Height and Weight | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
+[Pending Input] #184315 [BE] Capture Patient Height and Weight | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
 [Groom] #184319 [BE] Create Workflow Repository | Alison Stamp | P2 | pts | newUM | core; V1.R1
 [New] #184320 [BE] Create UI Configuration Repository | Unassigned | P2 | pts | newUM | 
 [Groom] #184321 [BE] Create Grain Hierarchy Configuration Repository | Alison Stamp | P2 | pts | newUM | core; V1.R1
@@ -152,54 +102,104 @@ User Storys (325)
 [Closed] #184454 Create Da datepicker based on the design | Petro Brezitskiy | P2 | 3pts | newUM\26.03.17 | 
 [Closed] #184587 Create PostgreSQL Flexible Server Database | Luiyi Valentin | P2 | 5pts | newUM\26.03.17 | DevOps
 [Closed] #184595 Case Management Engine Design Documentation | Jack Hall | P2 | 8pts | newUM\26.03.17 | core
-[New] #184648 Training for Cloude Code | Olha Pidhorna | P2 | 8pts | newUM\26.03.31 | 
-[Pending Input] #184653 Test documentation preparation | Unassigned | P2 | pts | newUM\26.03.31 | 
+[Active] #184648 Training for Cloude Code | Olha Pidhorna | P2 | 8pts | newUM\26.04.14 | 
+[Removed] #184653 Test documentation preparation | Unassigned | P2 | pts | newUM\26.03.31 | 
 [Closed] #184671 Document Services design and strategy - v2 | Dmytro Hridin | P2 | 5pts | newUM\26.03.17 | BE Services
-[Ready] #184739 Foundation: Grid System & Responsive Layout Templates | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Ready] #184783 Design System: Checkboxes | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Ready] #184784 Design System: Radio Button | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Ready] #184785 Design System: Stepper | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Active] #184786 Design System: Navigation (Primary/Main Nav) | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Ready] #184889 Design System: Additional Input States: Read Only and Helper Text | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Active] #184917 TECH | Dmytro Petriv | P2 | 8pts | newUM\26.03.31 | 
+[Ready] #184739 Foundation: Grid System & Responsive Layout Templates | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #184783 Design System: Checkboxes | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #184784 Design System: Radio Button | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #184785 Design System: Stepper | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #184786 Design System: Navigation (Primary/Main Nav) | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Active] #184889 Design System: Additional Input States: Read Only and Helper Text | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
 [Groom] #184977 Record Financial Impact (FI) for NP → Preferred Drug Change (Case Entry) | Unassigned | P2 | pts | newUM | 
-[Active] #184998 Case intake flow TECH | Petro Brezitskiy | P2 | 8pts | newUM\26.03.31 | V1.R1
-[Active] #185412 Work with Onco's DBA to meet their standards for PostgreSQL Flexible Server | Luiyi Valentin | P2 | 3pts | newUM\26.03.31 | DevOps
-[Active] #185432 Provider NewUM schema - adjustments after reviews | Arben Osmani | P2 | 8pts | newUM\26.03.31 | 
-[Active] #185444 Eligibility - adres feedback on NewUM schema | Oleksandr Nykonenko | P2 | 8pts | newUM\26.03.31 | 
-[Ready] #185445 Document ingestion from Databricks to NewUM | Michal Mucha | P2 | 2pts | newUM\26.03.31 | 
-[New] #185446 Document ingestion from NewUM to Databricks | Unassigned | P2 | pts | newUM | 
+[Closed] #184998 Case intake flow TECH | Petro Brezitskiy | P2 | 8pts | newUM\26.03.31 | V1.R1
+[Closed] #185412 Work with Onco's DBA to meet their standards for PostgreSQL Flexible Server | Luiyi Valentin | P2 | 3pts | newUM\26.03.31 | DevOps
+[Closed] #185432 Provider NewUM schema - adjustments after reviews | Arben Osmani | P2 | 8pts | newUM\26.03.31 | 
+[Closed] #185444 Eligibility - adres feedback on NewUM schema | Michal Mucha | P2 | 8pts | newUM\26.03.31 | 
+[Removed] #185445 Document ingestion from Databricks to NewUM | Michal Mucha | P2 | 2pts | newUM\26.03.31 | 
 [Closed] #185447 Checkbox component based on design in figma | Petro Brezitskiy | P2 | 2pts | newUM\26.03.31 | FE
-[Active] #185448 Radio Button component based on design in figma | Yurii Bodnar | P2 | 2pts | newUM\26.03.31 | FE
+[Closed] #185448 Radio Button component based on design in figma | Yurii Bodnar | P2 | 2pts | newUM\26.03.31 | FE
 [Removed] #185510 PostgreSQL Migration Cleanup and Code Refactoring | Vladyslav Kyrychuk | P2 | 3pts | newUM\26.03.31 | core
-[Pending Input] #185517 [BE] Populate initial dosing details based on selected regimen details | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Pending Input] #185518 [BE] Allow User Edits to Dosing with Guardrails | Bogdan Chachun | P2 | pts | newUM\26.04.14 | V1.R1
-[Ready] #185519 [FE] Capture Patient Height and Weight | Unassigned | P2 | 8pts | newUM\26.04.14 | 
+[Ready] #185517 [QA] Populate initial dosing details based on selected regimen details | Unassigned | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Ready] #185518 [QA] Allow User Edits to Dosing with Guardrails | Unassigned | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Ready] #185519 [FE] Capture Patient Height and Weight | Unassigned | P2 | 8pts | newUM\26.04.28 | 
 [Closed] #185533 Add configurations to test environment to Authorize thru swagger | Andriy Sapryka | P2 | 2pts | newUM\26.03.31 | 
-[Active] #185557 [BE] SPIKE: Cancer Stage for Diagnosis | Bogdan Chachun | P2 | 1pts | newUM\26.03.31 | V1.R1
-[Active] #185631 WF: Case Review Panel | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[New] #185644 Testing (remaining work) | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
-[Active] #185669 Document Services design and strategy - v3 | Dmytro Hridin | P2 | 5pts | newUM\26.03.31 | BE Services
-[Active] #185673 Design System: Tabs | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Active] #185674 Design System: Tables | Andrii Zhdan | P2 | pts | newUM\26.03.17 | 
-[Active] #185677 Case Management Engine Design Documentation - continuation | Jack Hall | P2 | 3pts | newUM\26.03.31 | core
+[Closed] #185557 [BE] SPIKE: Cancer Stage for Diagnosis | Bogdan Chachun | P2 | 1pts | newUM\26.03.31 | V1.R1
+[Active] #185631 WF: Case Review Panel | Paulina Phillips | P2 | pts | newUM\26.04.14 | 
+[Closed] #185644 Testing (remaining work) | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #185669 Document Services design and strategy - v3 | Dmytro Hridin | P2 | 5pts | newUM\26.03.31 | BE Services
+[Active] #185673 Design System: Tabs | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Active] #185674 Design System: Tables | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Active] #185677 Case Management Engine Design Documentation - continuation | Jack Hall | P2 | 3pts | newUM\26.04.14 | core
 [Closed] #185712 [BE] Execute rule to verify eligibility | Roman Buchyn | P2 | 3pts | newUM\26.03.17 | V1.R1
-[Active] #185749 Final review of technical doc - v1 | Unassigned | P2 | 3pts | newUM\26.03.31 | 
-[New] #185793 Cloude Code remaining work | Unassigned | P2 | pts | newUM\26.03.31 | 
-[Active] #185796 Refactor Eligibility API | Roman Buchyn | P2 | 5pts | newUM\26.03.31 | V1.R1
-[New] #185797 TECH | Unassigned | P2 | pts | newUM\26.03.31 | 
+[Closed] #185749 Final review of technical doc - v1 | Unassigned | P2 | 3pts | newUM\26.03.31 | 
+[Removed] #185793 Cloude Code remaining work | Unassigned | P2 | pts | newUM\26.03.31 | 
+[Closed] #185796 Refactor Eligibility API | Roman Buchyn | P2 | 5pts | newUM\26.03.31 | V1.R1
+[Closed] #185797 Tech Debt based on input from UI/UX and BE teams | Dmytro Petriv | P2 | 8pts | newUM\26.03.31 | 
 [Closed] #185846 Datadog integration without modifying the codebase | Luiyi Valentin | P2 | 3pts | newUM\26.03.31 | DevOps
-[New] #186045 Onboarding | Unassigned | P2 | pts | newUM\26.03.31 | 
-[New] #186049 TAF inicialization | Unassigned | P2 | pts | newUM\26.03.31 | 
-[New] #186053 Setup VDI | Unassigned | P2 | pts | newUM\26.03.31 | 
-[To Do] #186230 Integrate Postgres Flexible Server to Datadog | Luiyi Valentin | P2 | 3pts | newUM\26.03.31 | DevOps
-[Active] #186231 Provision UAT environment | Luiyi Valentin | P2 | 5pts | newUM\26.03.31 | DevOps
-[New] #186274 Queueing: Basic Layout + Table | Paulina Phillips | P2 | pts | newUM\26.03.17 | 
-[Active] #186297 Migrate Web API endpoint to use CQRS approach | Dmytro Hridin | P2 | 5pts | newUM\26.03.31 | BE Services; V1.R1
-[New] #186327 Create guide for connecting to NewUM infra services | Luiyi Valentin | P2 | pts | newUM | DevOps
-[New] #186331 UAT env infrastructure | Luiyi Valentin | P2 | pts | newUM | DevOps
-[Ready] #186359 [BE] Ancillary Drug Search & Dosing Data Support | Unassigned | P2 | 8pts | newUM | V1.R1
-[Ready] #186360 [BE] Validation for Ancillary Drug Uniqueness by Diagnosis Group | Unassigned | P2 | 3pts | newUM | V1.R1
+[Closed] #186045 Onboarding | Unassigned | P2 | pts | newUM\26.03.31 | 
+[Closed] #186049 TAF inicialization | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #186053 Setup VDI | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #186230 Integrate Postgres Flexible Server to Datadog | Luiyi Valentin | P2 | 3pts | newUM\26.04.14 | DevOps
+[Closed] #186231 Provision UAT environment | Luiyi Valentin | P2 | 5pts | newUM\26.03.31 | DevOps
+[Active] #186274 Queueing: Basic Layout + Table | Chris Gillis | P2 | pts | newUM\26.04.14 | 
+[Closed] #186297 Migrate Web API endpoint to use CQRS approach | Dmytro Hridin | P2 | 5pts | newUM\26.03.31 | BE Services; V1.R1
+[Active] #186327 Create guide for connecting to NewUM infra services | Luiyi Valentin | P2 | 2pts | newUM\26.04.14 | DevOps
+[Ready] #186359 [BE] Ancillary Drug Search & Dosing Support | Unassigned | P2 | 8pts | newUM\26.04.28 | V1.R1
+[Removed] #186360 [BE] Validation for Ancillary Drug Uniqueness by Clinical Category | Unassigned | P2 | 3pts | newUM\26.04.28 | V1.R1
+[Closed] #186506 [BE] Save selected ICD-10 and Diagnosis Group context on case | Dmytro Hridin | P2 | 2pts | newUM\26.03.31 | V1.R1
+[Closed] #186566 Update policies under repo | Michal Mucha | P2 | 2pts | newUM\26.03.31 | 
+[Closed] #186696 [BE] Add Regimen Search to newUM Api | Iryna Lukianovets | P2 | pts | newUM\26.03.31 | 
+[Ready] #186832 [BE] Calculate Allowed Dose Using Patient Height and Weight | Bogdan Chachun | P2 | 3pts | newUM\26.04.28 | V1.R1
+[Ready] #186842 [QA] Calculate Max Billing Units per Authorization (Medical Drugs) | Bogdan Chachun | P2 | 2pts | newUM\26.04.28 | V1.R1
+[Closed] #186998 Decommission SQL Server Managed Instances | Luiyi Valentin | P2 | 1pts | newUM\26.03.31 | DevOps
+[Closed] #187013 [BE] Save Cancer Stage on Case | Dmytro Hridin | P2 | 2pts | newUM\26.03.31 | V1.R1
+[New] #187022 [V2] Select Cancer Stage for Diagnosis | Unassigned | P2 | pts | newUM | V1.R2
+[QA] #187033 [BE] Save Existing Regimen and Drug Records to Case | Bogdan Chachun | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Closed] #187156 [BE] Update newUM to retrieve Diagnosis-Scoped Regimens | Iryna Lukianovets | P2 | pts | newUM\26.03.31 | 
+[Active] #187310 Design System: Modal Windows | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187311 Design System: Accordions | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187312 Design System: Multiline Text Input | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187313 Design System: Switches | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187314 Design System: Number Field | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187315 Design System: Avatars | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187316 Design System: Badge | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187317 Design System: Alerts | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Active] #187318 Design System: Data Grid Tables | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187319 Design System: Progress indicators | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[New] #187320 Design System: Cards | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187321 Design System: Pagination | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Active] #187322 Date and Time Picker (MUI-X) | Andrii Zhdan | P2 | pts | newUM\26.04.14 | 
+[Ready] #187345 [BE] Save Selected Ancillary Drug to Case | Unassigned | P2 | 2pts | newUM\26.04.28 | V1.R1
+[Active] #187385 Eligibility - final adjustment and approval | Michal Mucha | P2 | 5pts | newUM\26.04.14 | 
+[Active] #187386 Provider - final adjustments & approval | Arben Osmani | P2 | 8pts | newUM\26.04.14 | 
+[Active] #187387 Adjustments to Data design doc | Michal Mucha | P2 | 3pts | newUM\26.04.14 | 
+[New] #187390 Anonimised data with no PHI and PII that do not loose integrity | Unassigned | P2 | pts | newUM\26.03.03 | 
+[New] #187407 Create a job for QA team to seed the DB on test environment | Luiyi Valentin | P2 | 3pts | newUM\26.04.14 | DevOps
+[New] #187410 [BE] Revalidate Drug Configuration When Clinical Data Changes | Unassigned | P2 | pts | newUM\26.04.28 | V1.R1
+[New] #187411 [BE/Reporting] Identify Open Cases Impacted by Upstream Configuration Changes | Unassigned | P2 | pts | newUM\26.04.28 | V1.R1
+[New] #187412 Audit Refresh Activity and Support Supervisor Override | Unassigned | P2 | pts | newUM\26.04.28 | V1.R1
+[To Do] #187414 Document bidirectional data exchange between NewUM and Databricks | Michal Mucha | P2 | 3pts | newUM\26.04.14 | 
+[To Do] #187415 Case utilisation of Provider data | Arben Osmani | P2 | 8pts | newUM\26.04.14 | 
+[To Do] #187416 Case utilisation of Eligibility data | Carlos Carrillo | P2 | 13pts | newUM\26.04.14 | 
+[Closed] #187469 Add a common claude skill to check pull requests locally | Dmytro Petriv | P2 | 3pts | newUM\26.04.14 | 
+[New] #187515 Testing (remaining work) | Olha Pidhorna | P2 | pts | newUM\26.04.14 | 
+[Active] #187523 Define the API Contract for the /Case/Modify Endpoint | Dmytro Hridin | P2 | 5pts | newUM\26.04.14 | 
+[Active] #187601 Initial TAF setup | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
+[Closed] #187605 Add new components to story book | Yurii Bodnar | P2 | 2pts | newUM\26.04.14 | 
+[Closed] #187606 Add AutoComplete component to story book | Mykola Vorona | P2 | 2pts | newUM\26.04.14 | 
+[Closed] #187619 [FE] Update case endpoints | Mykola Vorona | P2 | 2pts | newUM\26.04.14 | 
+[Active] #187623 Low-level locking of cases | Vladyslav Kyrychuk | P2 | 3pts | newUM\26.04.14 | core; Q2 2026 Deliverable
+[Ready] #187638 Add story book docs plugin | Yurii Bodnar | P2 | 2pts | newUM\26.04.14 | 
+[Closed] #187639 Remove old redundant enpointd folder from the root of the app | Mykola Vorona | P2 | 1pts | newUM\26.04.14 | 
+[Ready] #187682 [BE] Support Case-Level Benefit Selection for Crossover Drug Lines | Unassigned | P2 | 5pts | newUM\26.04.28 | V1.R1
+[Ready] #187684 [BE] Apply and Save Applicable Benefit Status for Case Drug | Unassigned | P2 | 13pts | newUM\26.04.28 | V1.R1
+[Ready] #187686 [BE] Update Selected Benefit Type for Crossover Drug Lines in Draft | Unassigned | P2 | 8pts | newUM\26.04.28 | V1.R1
+[Active] #187698 Deploy a Admin panel for Kubernetes | Luiyi Valentin | P2 | 3pts | newUM\26.04.14 | DevOps
+[Closed] #187779 Reuse SectionContainer and remove diagnosisId from URL | Mykola Vorona | P2 | 1pts | newUM\26.04.14 | 
+[New] #187802 Implement Initial Partial Compiler for Workflow JSON to NRules | Vika Nobis | P2 | pts | newUM\26.04.14 | core; Q2 2026 Deliverable
+[Closed] #187848 Update SSL certificate | Luiyi Valentin | P2 | 1pts | newUM\26.04.14 | DevOps
+[Removed] #187850 Design for "Condition" elements in rules engine | Unassigned | P2 | pts | newUM\26.04.14 | core; Q2 2026 Deliverable
 [Closed] #179190 Provision Dev environment prerequisites for Okta authentication | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
 [Closed] #179195 Implement Okta-based login flow in NewUM frontend | Dmytro Petriv | P2 | 5pts | newUM\26.02.03 | FE
 [Closed] #179196 Integrate Okta authentication using OncoHealth UM Common API (backend) | Bogdan Chachun | P2 | pts | newUM\26.02.03 | BE Services
@@ -242,11 +242,8 @@ User Storys (325)
 [Closed] #179948 Add Typographies in theme configuration for MUI based on the design system | Petro Brezitskiy | P2 | 2pts | newUM\26.02.17 | FE
 [Closed] #179961 Fix failed build command | Petro Brezitskiy | P2 | 1pts | newUM\26.02.03 | FE
 [Closed] #179991 Initial Rules libraries research, defining good candidates | Roman Buchyn | P2 | 5pts | newUM\26.02.03 | core
-[Active] #180144 Setup testing framework repo & structure | Ivan Karpa | P2 | pts | newUM | QA
-[New] #180145 Setup linters for automation repo | Ivan Karpa | P2 | pts | newUM | 
 [Closed] #180146 Generate vitest report locally  as an html page | Petro Brezitskiy | P2 | 1pts | newUM\26.02.03 | FE
 [Closed] #180147 Add Bundle analyzer to the project | Petro Brezitskiy | P2 | 1pts | newUM\26.02.03 | FE
-[New] #180148 Setup report tool for the automation tests | Ivan Karpa | P2 | pts | newUM | QA
 [Closed] #180160 Deploy Azure DevOps self-hosted agents | Luiyi Valentin | P2 | 3pts | newUM\26.02.03 | DevOps
 [Closed] #180162 Connect NewUm Azure VNET to Onco Hub Network | Luiyi Valentin | P2 | 3pts | newUM\26.02.03 | DevOps
 [Closed] #180164 Add SonarQube static code analysis for Backend | Luiyi Valentin | P2 | 3pts | newUM\26.03.17 | DevOps
@@ -283,7 +280,7 @@ User Storys (325)
 [Closed] #181257 [BE] Search for a member using required inputs (guardrails) | Iryna Lukianovets | P2 | 5pts | newUM\26.03.17 | QA; qa_automation; V1.R1
 [Closed] #181259 [BE] View/Edit Member Information Form for Found Member (core eligibility data + optional eligibility attributes ) | Iryna Lukianovets | P2 | 5pts | newUM\26.03.17 | QA; qa_automation; V1.R1
 [Removed] #181260 Display Member Information Form When Multiple Matches Are Returned | Unassigned | P2 | pts | newUM | 
-[Active] #181261 [BE] Validate Member Eligibility at Treatment Start Date | Roman Buchyn | P2 | 8pts | newUM\26.03.31 | QA; qa_automation; V1.R1
+[Closed] #181261 [BE] Validate Member Eligibility at Treatment Start Date | Roman Buchyn | P2 | 8pts | newUM\26.03.31 | QA; qa_automation; V1.R1
 [New] #181262 Determine Member Scope (In-Scope vs Carve-Out) | Alison Stamp | P2 | pts | newUM | 
 [Closed] #181263 [BE] Create Draft Case and Save Progress | Dmytro Hridin | P2 | 8pts | newUM\26.03.17 | QA; qa_automation; V1.R1
 [Removed] #181265 View Eligibility History | Unassigned | P2 | pts | newUM | 
@@ -307,15 +304,15 @@ User Storys (325)
 [Closed] #181872 Document backend dev environment | Drazen Borota | P2 | 2pts | newUM\26.02.17 | BE Services; core
 [Removed] #182056 Testing UX User Story | Chris Gillis | P2 | 1pts | newUM\26.02.03 | 
 [Closed] #182060 Draw ERD for Regimen and Person | Jack Hall | P2 | 2pts | newUM\26.02.17 | core
-[Active] #182089 [BE] Load ICD-10 Library with Diagnosis Group | Bogdan Chachun | P2 | 5pts | newUM\26.03.31 | V1.R1
-[Active] #182090 [FE] Select ICD-10 code for Dx | Mykola Vorona | P2 | 5pts | newUM\26.03.31 | V1.R1
-[Ready] #182091 [BE] Select Cancer Stage for Diagnosis | Bogdan Chachun | P2 | 3pts | newUM\26.03.31 | V1.R1
-[New] #182301 Prototype interface between rules engine and case queuing system | Roman Buchyn | P3 | 2pts | newUM\26.03.31 | core
-[New] #182302 Prototype custom field handling in rules engine | Roman Buchyn | P3 | 3pts | newUM\26.03.31 | core
+[Closed] #182089 [BE] Load ICD-10 Library with Diagnosis Group | Bogdan Chachun | P2 | 5pts | newUM\26.03.31 | V1.R1
+[Closed] #182090 [FE] Select ICD-10 code for Dx | Taras Badlo | P2 | 5pts | newUM\26.03.31 | V1.R1
+[Closed] #182091 [BE] Select Cancer Stage for Diagnosis | Dmytro Hridin | P2 | 3pts | newUM\26.03.31 | V1.R1
+[Active] #182301 Prototype interface between rules engine and case queuing system | Roman Buchyn | P3 | 2pts | newUM\26.03.31 | core
+[Closed] #182302 Prototype custom field handling in rules engine | Roman Buchyn | P3 | 3pts | newUM\26.04.14 | core
 [Closed] #182303 Create rules engine integrated with backend | Roman Buchyn | P2 | 8pts | newUM\26.03.17 | core; V1.R1
 [Removed] #182313 AKS Ingress Controller setup | Dmytro Hridin | P2 | 5pts | newUM\26.03.03 | BE Services; DevOps
 [New] #182314 Automation for create and setup build-vm in azure | Unassigned | P2 | pts | newUM | DevOps
-[New] #182315 Build-vm docker cache cleanup | Unassigned | P2 | pts | newUM | DevOps
+[Closed] #182315 Build-vm docker cache cleanup | Luiyi Valentin | P2 | 2pts | newUM\26.04.14 | DevOps
 [New] #182316 AKS backend health probes | Unassigned | P2 | pts | newUM | DevOps
 [New] #182317 Mount helm env variables as config map in cluster | Unassigned | P2 | pts | newUM | DevOps
 [New] #182318 AKS requests/limits setup | Unassigned | P2 | pts | newUM | DevOps
@@ -325,3 +322,53 @@ User Storys (325)
 [New] #182322 Devops infra and ETL | Unassigned | P2 | pts | newUM | Data
 [New] #182323 Service principal | Unassigned | P2 | pts | newUM | Data
 [Active] #182324 Tests | Arben Osmani | P2 | pts | newUM | Data
+[Closed] #182326 Investigate Playwright capabilities paired with Claude Code | Yurii Bodnar | P2 | 5pts | newUM\26.03.03 | FE
+[Active] #182330 Audit Logging for Databricks Jobs & Notebooks | Arben Osmani | P3 | pts | newUM | 
+[New] #182420 [SPIKE] Research Logging Capabilities of Lakeflow Declarative Pipelines (DLT) | Unassigned | P4 | pts | newUM | 
+[New] #182431 Design and create watermark table schema | Unassigned | P2 | pts | newUM | Data
+[New] #182432 Build backfill notebook with date range parameters and day-by-day processing loop | Unassigned | P2 | pts | newUM | Data
+[New] #182433 Build incremental notebook with watermark-based resume logic | Unassigned | P2 | pts | newUM | Data
+[New] #182434 Ensure idempotency on both notebooks (handle re-runs without duplicates) | Unassigned | P2 | pts | newUM | Data
+[New] #182435 Integrate audit logging into both notebooks | Unassigned | P2 | pts | newUM | Data
+[New] #182436 Create Databricks Job for nightly incremental schedule | Unassigned | P2 | pts | newUM | Data
+[New] #182437 Test backfill with dev/test data | Unassigned | P2 | pts | newUM | Data
+[Closed] #182479 [BE] Retrieve Diagnosis-Scoped Regimens from Regimen Library | Iryna Lukianovets | P2 | 8pts | newUM\26.03.31 | V1.R1
+[Closed] #182482 [BE] Search Existing Regimens by Drug Composition (Drug Name, Brand/Generic, or HCPCS) | Unassigned | P2 | 8pts | newUM\26.03.31 | V1.R1
+[Closed] #182503 [BE] Select Existing Regimen | Bogdan Chachun | P2 | 13pts | newUM\26.03.31 | V1.R1
+[Closed] #182504 [BE] Allow Switching Between Equivalent Drugs Based on Shared RxCUI | Bogdan Chachun | P2 | 13pts | newUM\26.03.31 | V1.R1
+[Removed] #182506 [QA] Restrict Selection of EADL-Flagged Drugs in Regimen Drug Selection | Unassigned | P2 | pts | newUM\26.03.31 | V1.R1
+[Closed] #182553 Document Services design and strategy | Bogdan Chachun | P2 | 5pts | newUM\26.03.03 | BE Services
+[Active] #182559 [FE] Separate Medical and Pharmacy Drugs into Distinct Dosing Tables | Mykola Vorona | P2 | 13pts | newUM\26.04.14 | V1.R1
+[Closed] #182685 Integrate Member Information Form With Backend APIs (Replace FE Stubs) | Mykola Vorona | P2 | 5pts | newUM\26.03.17 | BE Services; core; FE
+[Removed] #182690 Integrate Eligibility With Backend APIs (Replace FE Stubs) | Unassigned | P2 | 5pts | newUM\26.03.03 | BE Services; core; FE
+[Closed] #182730 Introduce unit of work approach into DAL | Iryna Lukianovets | P2 | 5pts | newUM\26.03.03 | BE Services
+[Closed] #182753 [SPIKE] Service Bus to Databricks Integration | Arben Osmani | P2 | pts | newUM | 
+[Closed] #182771 [Spike] Cost Monitoring and Alerting in Databricks | Arben Osmani | P2 | pts | newUM | 
+[Closed] #182829 Enable Datadog for Web API | Luiyi Valentin | P2 | 3pts | newUM\26.03.03 | DevOps
+[New] #182830 Enable DataDog telemetry for SQL calls | Luiyi Valentin | P2 | 3pts | newUM | DevOps
+[Closed] #182844 [SPIKE] Databricks Asset Bundle | Arben Osmani | P2 | pts | newUM | Data
+[Closed] #182856 Create initial repository structure | Oleksandr Nykonenko | P2 | 3pts | newUM\26.03.03 | Data
+[Removed] #182858 Case engine | Unassigned | P2 | 8pts | newUM\26.03.03 | Data
+[Closed] #182859 Provider NewUM - initial investigation | Arben Osmani | P2 | 8pts | newUM\26.03.17 | Data
+[Closed] #182860 Eligibility - initial investigation | Oleksandr Nykonenko | P2 | 5pts | newUM\26.03.17 | Data
+[Removed] #182861 Case meta schema | Unassigned | P2 | 8pts | newUM\26.03.03 | Data
+[Closed] #182862 Drugs | Oleksandr Nykonenko | P2 | 8pts | newUM\26.03.03 | Data
+[Closed] #182863 CI/CD for Databricks infra | Michal Mucha | P2 | 5pts | newUM\26.03.17 | Data
+[Removed] #182866 Service principal / user to access ingress data sources | Unassigned | P2 | 2pts | newUM\26.03.03 | Data
+[New] #182872 Data quality check | Unassigned | P2 | pts | newUM | 
+[Ready] #182874 [FE] Filter ICD-10 Diagnoses by Treatment Type Applicability (GMT / XRT) | Mykola Vorona | P2 | 3pts | newUM\26.04.14 | V1.R1
+[Ready] #182876 [FE] Populate initial dosing details based on selected regimen details | Petro Brezitskiy | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Ready] #182877 [QA] Calculate Max Billing Units per Authorization (Medical Drugs) | Unassigned | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Ready] #182878 [QA] Select Drug Strength and Form for Pharmacy Drugs | Bogdan Chachun | P2 | 3pts | newUM\26.04.14 | V1.R1
+[Active] #182879 [BE] Calculate Allowed Dose Without Patient Height and Weight | Bogdan Chachun | P2 | 13pts | newUM\26.04.14 | V1.R1
+[Active] #182880 [FE] Allow User Edits to Dosing with Guardrails | Petro Brezitskiy | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Pending Input] #182881 Flag Dosing Changes Exceeding Default Medical Billing Units/Auth | Unassigned | P2 | pts | newUM | V1.R1
+[Ready] #182882 [BE] Create Custom Regimen on Case Entry | Bogdan Chachun | P2 | 13pts | newUM\26.04.14 | V1.R1
+[Groom] #182883 Enter Dosing Information for Custom Regimen | Inna Mariienko | P2 | pts | newUM | V1.R1
+[Pending Input] #182884 Restrict Custom Regimen Creation for External Users | Inna Mariienko | P2 | pts | newUM | V1.R2
+[Ready] #182885 [BE] Validate Custom Regimen Against Existing Regimens | Bogdan Chachun | P2 | 8pts | newUM\26.04.14 | V1.R1
+[Pending Input] #182886 Pend Custom Regimens for Auto-Rules | Unassigned | P2 | pts | newUM | V1.R2
+[Removed] #182887 [Custom Regimens] Save Custom Regimens for Operational Reporting Only (exclude from Regimen Library) | Unassigned | P2 | pts | newUM | 
+[New] #182888 Select Ordering and Treating Providers | Unassigned | P2 | pts | newUM | 
+[New] #182889 Select Place of Treatment | Unassigned | P2 | pts | newUM | 
+[New] #182890 View Provider Addresses During Search | Unassigned | P2 | pts | newUM | 

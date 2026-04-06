@@ -47,6 +47,21 @@
     },
     {
       "identity": {
+        "displayName": "Joseph Destefano",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/b66cdb9b-8de9-698a-b96a-342b78d1cd46",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YjY2Y2RiOWItOGRlOS03OThhLWI5NmEtMzQyYjc4ZDFjZDQ2"
+          }
+        },
+        "id": "b66cdb9b-8de9-698a-b96a-342b78d1cd46",
+        "uniqueName": "jdestefano@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=b66cdb9b-8de9-698a-b96a-342b78d1cd46",
+        "descriptor": "aad.YjY2Y2RiOWItOGRlOS03OThhLWI5NmEtMzQyYjc4ZDFjZDQ2"
+      }
+    },
+    {
+      "identity": {
         "displayName": "Dmytro Hridin",
         "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
         "_links": {
@@ -118,6 +133,21 @@
         "uniqueName": "ilukianovets@oncologyanalytics.com",
         "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
         "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+      }
+    },
+    {
+      "identity": {
+        "displayName": "Nazar Mashtaler",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bcef0abe-b718-6431-9e71-8efbf81c7ea4",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmNlZjBhYmUtYjcxOC03NDMxLTllNzEtOGVmYmY4MWM3ZWE0"
+          }
+        },
+        "id": "bcef0abe-b718-6431-9e71-8efbf81c7ea4",
+        "uniqueName": "nmashtaler@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_api/_common/identityImage?id=bcef0abe-b718-6431-9e71-8efbf81c7ea4",
+        "descriptor": "aad.YmNlZjBhYmUtYjcxOC03NDMxLTllNzEtOGVmYmY4MWM3ZWE0"
       }
     },
     {
@@ -197,5 +227,5 @@
       }
     }
   ],
-  "count": 13
+  "count": 15
 }

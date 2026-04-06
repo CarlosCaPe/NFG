@@ -28,6 +28,15 @@
       "projectId": "07664ca3-a7fe-4170-adca-cebdf3d8cc97"
     },
     {
+      "id": "cec7ef43-a710-4f16-a443-f02528e3afd7",
+      "name": "NewUM",
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/projects/07664ca3-a7fe-4170-adca-cebdf3d8cc97/teams/cec7ef43-a710-4f16-a443-f02528e3afd7",
+      "description": "",
+      "identityUrl": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cec7ef43-a710-4f16-a443-f02528e3afd7",
+      "projectName": "newUM",
+      "projectId": "07664ca3-a7fe-4170-adca-cebdf3d8cc97"
+    },
+    {
       "id": "d6f98e1c-5388-4f30-a46a-ee37a627874b",
       "name": "BE Team",
       "url": "https://dev.azure.com/oncologyanalytics/_apis/projects/07664ca3-a7fe-4170-adca-cebdf3d8cc97/teams/d6f98e1c-5388-4f30-a46a-ee37a627874b",
@@ -46,5 +55,5 @@
       "projectId": "07664ca3-a7fe-4170-adca-cebdf3d8cc97"
     }
   ],
-  "count": 5
+  "count": 6
 }

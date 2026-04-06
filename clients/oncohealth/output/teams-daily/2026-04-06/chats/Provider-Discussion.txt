@@ -1,0 +1,53 @@
+=== Chat: Provider Discussion ===
+Captured: 2026-04-06T15:51:21.740Z
+
+[8 messages extracted (structured)]
+
+ : I will be joining later on / catch up with, so please trigger recoring
+
+ : Arben will be driving this session.
+
+ : Summary of yesterday meeting: 
+
+Type 1 vs. Type 2 NPI Split
+
+Proposed design separates individual physicians (T1) from facilities (T2) into distinct tables. Nick raised concerns about duplicating downstream structures (networks, taxonomy). No final decision - open for revisit.
+
+History / Versioning
+
+Agreed to drop separate history tables and use a single table with version_start_date / version_end_date, consistent with the eligibility model pattern.
+
+NPI Matching (V1)
+
+Decision: NPI-only matching. No probabilistic/candidate matching for V1 - too risky since auth files must return provider data exactly as received from clients. Match score/method fields will be removed from the D1/D2 link tables.
+
+Address Handling
+
+Addresses for sole-proprietor T1 doctors need to be added. Proposal: shared address "junk dimension" + bridge table, consistent with eligibility pattern.
+
+Network Tables
+
+The current "network doctor facility" combined table is likely wrong. Type 1 and Type 2 providers should each have independent network bridge tables.
+
+ : Next steps / Action Items
+[Arben] Confirm versioning pattern with Michal - single table with version columns, no separate history tables
+[Arben] Confirm with BA whether updated_at / update tracking is needed for provider tables
+[Michal] Follow up with app/business team to confirm if taxonomy codes are needed in UM; remove if not
+[Nick] Do an independent gap analysis of the diagram - column names, missing tables, corrections
+[Arben / Team] Update the provider diagram: remove history tables, remove match fields, fix network tables, add address bridge, revisit T1/T2 split
+[Michal / BA] Finalize and share payer-side requirements (site of care, preferred facility rules)
+[Michal] Schedule payer taxonomy workshop - build business groupings/grains from bronze data
+[Michal] Schedule member/person/related-person + address meeting
+[Team] After eligibility is finalized and workshops done, return to finalize the provider schema
+
+ : Arben Osmani - I am not sure this one should be assigned to me?  I am not sure who I would follow up with to confirm this. - "[Nick] Follow up with app/business team to confirm if taxonomy codes are needed in UM; remove if not"
+
+ : I can take that one with me, it's business oriented question
+
+1 Like reaction.
+
+ : Arben please update assigments.
+
+1 Like reaction.
+
+ : We are still waiting for Inna on requirements on that thread, will keep you updated

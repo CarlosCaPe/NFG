@@ -49,6 +49,15 @@
       "hasChildren": false,
       "path": "\\newUM\\Area\\QA Team",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/QA%20Team"
+    },
+    {
+      "id": 1093,
+      "identifier": "cfc8bd9d-6d04-4751-b4b5-f3ab4db1d4b7",
+      "name": "NewUM",
+      "structureType": "area",
+      "hasChildren": false,
+      "path": "\\newUM\\Area\\NewUM",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/classificationNodes/Areas/NewUM"
     }
   ],
   "path": "\\newUM\\Area",

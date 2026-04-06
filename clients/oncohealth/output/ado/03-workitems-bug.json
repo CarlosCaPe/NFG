@@ -1,5 +1,5 @@
 {
-  "count": 4,
+  "count": 11,
   "items": [
     {
       "id": 180347,
@@ -83,7 +83,7 @@
     },
     {
       "id": 185473,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 185473,
         "System.AreaPath": "newUM\\BE Team",
@@ -104,13 +104,233 @@
           "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
         },
         "System.CreatedDate": "2026-03-13T15:52:34.083Z",
-        "System.ChangedDate": "2026-03-17T10:01:18.67Z",
+        "System.ChangedDate": "2026-04-02T11:43:04.943Z",
         "System.Parent": 181257,
         "System.Title": "Member Search API returns 404 Not Found for an existing member",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/185473"
+    },
+    {
+      "id": 187325,
+      "rev": 8,
+      "fields": {
+        "System.Id": 187325,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-27T20:30:41.553Z",
+        "System.ChangedDate": "2026-04-02T11:43:04.943Z",
+        "System.Parent": 185644,
+        "System.Title": "Stubs for payer-specific configuration are missing",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187325"
+    },
+    {
+      "id": 187326,
+      "rev": 7,
+      "fields": {
+        "System.Id": 187326,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-27T21:06:47.78Z",
+        "System.ChangedDate": "2026-04-02T11:43:04.943Z",
+        "System.Parent": 185644,
+        "System.Title": "firstName or lastName are not mandatory, when memberId is in search combination",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187326"
+    },
+    {
+      "id": 187347,
+      "rev": 7,
+      "fields": {
+        "System.Id": 187347,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-30T09:20:35.093Z",
+        "System.ChangedDate": "2026-04-02T11:43:04.943Z",
+        "System.Parent": 185644,
+        "System.Title": "DOB format should be MM/DD/YYYY",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187347"
+    },
+    {
+      "id": 187348,
+      "rev": 6,
+      "fields": {
+        "System.Id": 187348,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-30T09:24:52.187Z",
+        "System.ChangedDate": "2026-04-02T11:43:04.943Z",
+        "System.Parent": 185644,
+        "System.Title": "There are no validations of value of DOB field according to time restrictions",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187348"
+    },
+    {
+      "id": 187413,
+      "rev": 7,
+      "fields": {
+        "System.Id": 187413,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-30T12:14:26.903Z",
+        "System.ChangedDate": "2026-04-02T11:43:04.943Z",
+        "System.Parent": 185644,
+        "System.Title": "First name and Last name could contain special characters",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187413"
+    },
+    {
+      "id": 187514,
+      "rev": 7,
+      "fields": {
+        "System.Id": 187514,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Bug",
+        "System.State": "Resolved",
+        "System.AssignedTo": {
+          "displayName": "Yurii Bodnar",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/46e7028a-a371-64d8-bf7d-9fef569bbbd5",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
+            }
+          },
+          "id": "46e7028a-a371-64d8-bf7d-9fef569bbbd5",
+          "uniqueName": "ybodnar@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1",
+          "descriptor": "aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
+        },
+        "System.CreatedDate": "2026-03-31T08:45:53.743Z",
+        "System.ChangedDate": "2026-03-31T12:28:11.02Z",
+        "System.Title": "fix navigation active state + small style fixes",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20637946,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187514/comments/20637946/versions/1"
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187514"
+    },
+    {
+      "id": 187693,
+      "rev": 5,
+      "fields": {
+        "System.Id": 187693,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Bug",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-04-02T11:47:53Z",
+        "System.ChangedDate": "2026-04-06T09:22:12.26Z",
+        "System.Title": "[BE] ICD-10 Code search does not return results for multi-keyword queries (separate words)",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187693"
     }
   ]
 }

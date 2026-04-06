@@ -1,5 +1,5 @@
 {
-  "count": 62,
+  "count": 66,
   "items": [
     {
       "id": 179188,
@@ -43,11 +43,11 @@
     },
     {
       "id": 180149,
-      "rev": 8,
+      "rev": 9,
       "fields": {
         "System.Id": 180149,
         "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM",
+        "System.IterationPath": "newUM\\26.02.03",
         "System.WorkItemType": "Feature",
         "System.State": "Closed",
         "System.AssignedTo": {
@@ -64,7 +64,7 @@
           "descriptor": "aad.N2NkZTMyMzEtMjcwZC03OTY2LTkxYmEtNDJkZmFkZDNmNjcy"
         },
         "System.CreatedDate": "2026-01-22T09:24:51.34Z",
-        "System.ChangedDate": "2026-03-20T13:42:57.013Z",
+        "System.ChangedDate": "2026-03-27T08:49:59.343Z",
         "System.Parent": 181983,
         "System.Title": "FE App initial config and infra",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -107,11 +107,11 @@
     },
     {
       "id": 180325,
-      "rev": 7,
+      "rev": 9,
       "fields": {
         "System.Id": 180325,
-        "System.AreaPath": "newUM",
-        "System.IterationPath": "newUM",
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
         "System.WorkItemType": "Feature",
         "System.State": "Closed",
         "System.AssignedTo": {
@@ -128,7 +128,7 @@
           "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
         },
         "System.CreatedDate": "2026-01-26T07:03:36.49Z",
-        "System.ChangedDate": "2026-03-20T13:50:52.007Z",
+        "System.ChangedDate": "2026-03-27T08:49:20.31Z",
         "System.Parent": 181983,
         "System.Title": "Phase 1 Case Intake (POC)",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -819,10 +819,10 @@
     },
     {
       "id": 182312,
-      "rev": 14,
+      "rev": 15,
       "fields": {
         "System.Id": 182312,
-        "System.AreaPath": "newUM\\BE Team",
+        "System.AreaPath": "newUM",
         "System.IterationPath": "newUM",
         "System.WorkItemType": "Feature",
         "System.State": "Active",
@@ -840,12 +840,12 @@
           "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
         },
         "System.CreatedDate": "2026-02-11T07:56:12.083Z",
-        "System.ChangedDate": "2026-03-20T13:57:42.137Z",
+        "System.ChangedDate": "2026-03-27T09:17:36.13Z",
         "System.Parent": 181984,
         "System.Title": "Tech Debt",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Description": "<p><strong>DAL</strong> </p><ul><li><p><strike>Introduce Unit of Work pattern (Remove <code>SaveChangesAsync()</code> calls from repository methods) </strike>(done) </p> </li><li><p>Add <code>.AsNoTracking()</code> to all read-only queries </p> </li><li><p>Configure a global query filter for <code>ISoftDelete</code> entities. Remove manual soft-delete checks from repository methods </p> </li><li><p>Remove Mapper dependency from repository layer. Mapping should be done outside repository level </p> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><strike>Remove <code>IDisposable</code> from repository base class</strike> (done)<br> </div> </li><li><p>Convert <code>RepositoryBase</code> into an abstract base class and refactor entity-specific repositories (e.g., <code>CaseRepository</code>) to inherit from it, removing redundant context fields and keeping only entity-specific logic where needed </p> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">Missing CancellationToken Propagation<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">Timezone issue (Should use DateTime.UtcNow for consistency with other code that uses UTC)<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">Repositories storing _ctx again are unnecessary<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><span style=\"display:inline !important;\">Fragile casting chain in mappers&nbsp;</span><b>return (T)(IDto&lt;Case&gt;)new CaseDTO</b><br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">In-memory filtering after loading all data (check all places)<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><strike>Use </strike><b style=\"text-decoration-line:line-through;\">AddAsync()&nbsp;</b><strike>only when using value generators that access the database, 99% need to use </strike><b style=\"text-decoration-line:line-through;\">Add()</b><strike> since&nbsp;</strike><span style=\"text-decoration-line:line-through;display:inline !important;\">REAL async happens in&nbsp;</span><b style=\"text-decoration-line:line-through;\">await _ctx.SaveChangesAsync() </b>(done) </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><span><strike>Fix namespaces in DAL.Model. Screenshot attached&nbsp;</strike></span> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">agree on using fluent API or data annotation on entity models. See example of [Foreing Key] vs&nbsp;HasForeignKey(x =&gt; x.Version) OnModelCreating. In EF fluent Api has priority #1 </div> </li> </ul><br><br>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "BE Services; core; FE; Q2 2026 Deliverable"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182312"
@@ -1254,7 +1254,7 @@
     },
     {
       "id": 184063,
-      "rev": 6,
+      "rev": 8,
       "fields": {
         "System.Id": 184063,
         "System.AreaPath": "newUM",
@@ -1262,11 +1262,11 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-26T15:01:54.347Z",
-        "System.ChangedDate": "2026-03-20T14:00:45.36Z",
+        "System.ChangedDate": "2026-04-03T13:34:05.937Z",
         "System.Parent": 182837,
-        "System.Title": "Configuration and Rules Repositories",
+        "System.Title": "Configuration Management",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div>This epic contains all user stories related to setting up structures that will enable OH to store configurations and rules, fetch them from BE and manage them. </div><div><br> </div><div>Relevant documentation: </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5127569409/Rules+and+configurations+functional+specification\">Rules and configurations functional specification - NewUM Product Team - Confluence</a><br> </div><div><br> </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5140742173/DRAFT+Configuration+Guide\">[DRAFT] Configuration Guide - NewUM Product Team - Confluence</a><br> </div><div><br> </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5083987995/Configuration+Repository\">Configuration Repository - NewUM Product Team - Confluence</a><br> </div><div><br> </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5132943361/Rules+Repository\">Rules Repository - NewUM Product Team - Confluence</a><br> </div><div><br> </div>",
+        "System.Description": "<div>This epic contains all user stories related to setting up structures that will enable OH to store configurations, fetch them from BE and manage them. </div><div><br> </div><div>Relevant documentation: </div><div>PRD:&nbsp;<a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5083987995/Configuration+Management\">Configuration Management - NewUM Product Team - Confluence</a><br> </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5230428252/Configuration+and+rules+categories\">Configuration and rules categories - NewUM Product Team - Confluence</a><br> </div><div><br> </div>",
         "System.Tags": "Q2 2026 Deliverable"
       },
       "multilineFieldsFormat": {},
@@ -1480,6 +1480,78 @@
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/185935"
+    },
+    {
+      "id": 187024,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187024,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-03-26T14:11:32.68Z",
+        "System.ChangedDate": "2026-03-26T14:11:32.68Z",
+        "System.Parent": 181223,
+        "System.Title": "[V2] Diagnosis Selection & Details for Case",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187024"
+    },
+    {
+      "id": 187796,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187796,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-03T13:24:21.34Z",
+        "System.ChangedDate": "2026-04-03T13:24:21.34Z",
+        "System.Parent": 182837,
+        "System.Title": "Rules Configuration & Management",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187796"
+    },
+    {
+      "id": 187797,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187797,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-03T13:44:03.617Z",
+        "System.ChangedDate": "2026-04-03T13:44:03.617Z",
+        "System.Parent": 182837,
+        "System.Title": "TAT",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187797"
+    },
+    {
+      "id": 187798,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187798,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-03T13:44:35.093Z",
+        "System.ChangedDate": "2026-04-03T13:44:35.093Z",
+        "System.Parent": 182837,
+        "System.Title": "Letters v2 integration",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187798"
     }
   ]
 }
