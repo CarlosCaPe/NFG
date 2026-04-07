@@ -1,0 +1,161 @@
+[{
+  "name": "eligibility-scope-validation",
+  "title": "Eligibility Check & Scope Validation Pipeline",
+  "subtitle": "newUM V1 · Columns from newum_migration_test.eligibility.eligibilitydata",
+  "width": 1300,
+  "height": 1050,
+  "nodeHeight": 100,
+  "gap": 32,
+  "padding": 20,
+  "org": "OncoHealth · NewFire Global",
+
+  "lanes": [
+    {
+      "x": 20,
+      "width": 310,
+      "label": "PRE-CHECK",
+      "number": "①",
+      "headerColor": "#1565C0",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "nodes": [{
+          "name": "Eligibility Check",
+          "subtitle": "coverage_effective_date ≤ treatment_start_date ≤ coverage_expiration_date",
+          "logo": "entra",
+          "palette": "ingestion",
+          "tag": "GATE",
+          "badge": { "label": "2 COLUMNS", "bg": "#1565C0", "color": "#BBDEFB" }
+        }]
+      }]
+    },
+
+    {
+      "x": 362,
+      "width": 470,
+      "label": "SCOPE VALIDATION",
+      "number": "②",
+      "headerColor": "#C62828",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "arrows": true,
+        "arrowType": "data",
+        "arrowLabels": ["PASS", "PASS", "PASS", "NOT carved out", "PASS"],
+        "frame": {
+          "label": "6 Sequential Rules — Any FAIL → Out of Scope",
+          "color": "#C62828"
+        },
+        "nodes": [
+          {
+            "name": "Rule 1 — LOB Validation",
+            "subtitle": "lob must be active & delegated to OH",
+            "palette": "ingestion",
+            "tag": "RULE",
+            "badge": { "label": "1 COL", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 2 — Product Validation",
+            "subtitle": "product_line · product_offering",
+            "palette": "api",
+            "tag": "RULE",
+            "badge": { "label": "2 COLS", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 3 — State Restriction",
+            "subtitle": "state_of_plan_issue",
+            "palette": "spark",
+            "tag": "RULE",
+            "badge": { "label": "1 COL", "bg": "#E65100", "color": "#FFE0B2" }
+          },
+          {
+            "name": "Rule 4 — Carve-Out Check",
+            "subtitle": "carrier_id · account_id · insurance_group_id · benefit_package",
+            "palette": "mssql",
+            "tag": "RULE",
+            "badge": { "label": "4 COLS", "bg": "#B71C1C", "color": "#EF9A9A" }
+          },
+          {
+            "name": "Rule 5 — ASO Delegation",
+            "subtitle": "aso_indicator (if Yes AND excluded → OOS)",
+            "palette": "auth",
+            "tag": "RULE",
+            "badge": { "label": "1 COL", "bg": "#4A148C", "color": "#CE93D8" }
+          },
+          {
+            "name": "Rule 6 — Benefit Delegation",
+            "subtitle": "member_benefit · prescription_benefit_carveout · oon_benefit",
+            "palette": "dotnet",
+            "tag": "RULE",
+            "badge": { "label": "3 COLS", "bg": "#4A148C", "color": "#CE93D8" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 864,
+      "width": 410,
+      "label": "POST-SCOPE CONSUMERS",
+      "number": "③",
+      "headerColor": "#2E7D32",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "nodes": [
+          {
+            "name": "PDL Drug Rules",
+            "subtitle": "lob · product_line (Insurance Provider + Major LOB key)",
+            "palette": "gold",
+            "tag": "DOWNSTREAM"
+          },
+          {
+            "name": "NP Drug Rules",
+            "subtitle": "lob · product_line (deepest grain touch point)",
+            "palette": "gold",
+            "tag": "DOWNSTREAM"
+          },
+          {
+            "name": "TAT Configuration",
+            "subtitle": "lob (turnaround time by line of business)",
+            "palette": "gold",
+            "tag": "DOWNSTREAM"
+          },
+          {
+            "name": "Case Routing & Queues",
+            "subtitle": "lob · state_of_plan_issue (regulatory routing)",
+            "palette": "gold",
+            "tag": "DOWNSTREAM"
+          },
+          {
+            "name": "Auto-Determination",
+            "subtitle": "lob (auto-approve by payer delegation config)",
+            "palette": "gold",
+            "tag": "DOWNSTREAM"
+          }
+        ]
+      }]
+    }
+  ],
+
+  "arrows": [
+    {
+      "type": "data",
+      "x1": 310,
+      "y1": 168,
+      "x2": 382,
+      "y2": 168,
+      "label": "ELIGIBLE"
+    },
+    {
+      "type": "curved",
+      "x1": 812,
+      "y1": 878,
+      "x2": 884,
+      "y2": 168,
+      "color": "#2E7D32",
+      "opacity": 0.8,
+      "label": "✅ IN SCOPE"
+    }
+  ]
+}]
