@@ -1,0 +1,55 @@
+# NFG Internal — NewFire Global internal work (not a client engagement)
+# This sub-client tracks NFG's own tooling, automation, and admin tasks.
+
+client:
+  name: "NewFire Global"
+  legal_name: "NewFire Global Partners LLC"
+  alias: "nfg"
+  domain: "staffing / consulting / internal ops"
+  project: "internal"
+  project_full: "NFG Internal Operations & Tooling"
+  description: "Internal work for NewFire Global — tooling, automation, repo maintenance, shared scripts, onboarding templates, and cross-client infrastructure."
+
+auth:
+  primary_email: "carlos.carrillo@newfireglobal.com"
+  alt_email: ""
+  username: "carlos.carrillo"
+  sso_provider: "google"
+  sso_url: "https://accounts.google.com"
+  mfa: "none"
+  vpc:
+    name: ""
+    url: ""
+
+services:
+  - name: "Google Workspace"
+    key: "01"
+    type: "google"
+    url: "https://workspace.google.com"
+    status: complete
+    blocker: ""
+    chars: 0
+  - name: "Slack (NFG)"
+    key: "02"
+    type: "slack"
+    url: ""
+    status: complete
+    blocker: ""
+    chars: 0
+
+tech_stack:
+  backend:
+    - "Node.js"
+    - "Python"
+  frontend: []
+  testing:
+    - "Playwright"
+  devops:
+    - "GitHub"
+  data: []
+
+team:
+  - name: "Rachel Collier"
+    role: "PM / Onboarding Coordinator"
+
+executive_steering: []

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "NFG Internal — knowledge base for internal NewFire Global work",
+  "version": "1.0.0",
+  "last_updated": "2026-04-07",
+  "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
+
+  "identity": {
+    "project_name": "NFG Internal",
+    "project_full_name": "NewFire Global Internal Operations & Tooling",
+    "confirmed": true,
+    "source": "internal"
+  },
+
+  "contracting_chain": {
+    "your_company": { "name": "dataqbs", "role": "contractor" },
+    "staffing_partner": { "name": "NewFire Global Partners", "alias": "NFG", "role": "staffing / consulting partner" },
+    "end_client": { "name": "NewFire Global Partners", "legal_name": "NewFire Global Partners LLC", "domain": "staffing / consulting", "role": "end client (self)" },
+    "chain": "dataqbs → NFG (internal)"
+  },
+
+  "your_role": {
+    "title": "AI-Leveraged Documenter",
+    "description": "Internal tooling, shared scripts, repo maintenance, and cross-client infrastructure",
+    "tools": ["Python", "Node.js", "VS Code", "Copilot", "Claude"]
+  },
+
+  "email_identity": {
+    "nfg_email": "carlos.carrillo@newfireglobal.com",
+    "client_emails": [],
+    "client_username": "carlos.carrillo"
+  },
+
+  "environments": {},
+  "tech_stack": {
+    "languages": ["JavaScript (Node.js)", "Python"],
+    "tools": ["Playwright", "GitHub", "VS Code"],
+    "shared_scripts": "../../shared/"
+  },
+  "key_contacts": [
+    { "name": "Rachel Collier", "role": "PM / Onboarding Coordinator", "source": "Teams + Calendar" }
+  ],
+  "access_status": {
+    "completed": ["Google Workspace", "Slack", "GitHub"],
+    "partial": [],
+    "blocked": []
+  },
+  "unknowns": [],
+  "next_steps": []
+}

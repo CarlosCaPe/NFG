@@ -430,7 +430,9 @@ function buildFromConfig(diagram) {
       svg += arrowFn(a.x1, a.y1, a.x2, a.y2, a.label);
     }
     if (a.label && a.type === 'curved') {
-      svg += arrowLabel((a.x1 + a.x2) / 2, Math.min(a.y1, a.y2) - 16, a.label, a.color || T.dataArrow);
+      const lx = a.labelX != null ? a.labelX : (a.x1 + a.x2) / 2;
+      const ly = a.labelY != null ? a.labelY : Math.min(a.y1, a.y2) - 16;
+      svg += arrowLabel(lx, ly, a.label, a.color || T.dataArrow);
     }
   }
 

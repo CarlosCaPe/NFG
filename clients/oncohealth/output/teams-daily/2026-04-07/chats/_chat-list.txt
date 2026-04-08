@@ -1,0 +1,30 @@
+=== CHAT LIST SUMMARY ===
+Captured: 2026-04-07T20:35:34.330Z
+
+1. Carlos Carrillo (You)
+2. Backlog Refinement
+3. Data team - daily
+4. Providers
+5. Michal & Carlos 1-2-1
+6. Providers
+7. Michal Mucha
+8. Eligibility
+9. Sprint grooming & planning
+10. Sprint Demo and Planning
+11. Exchange data between Databricks and NewUM
+12. Vika Nobis
+13. Provider schema discussion
+14. Eligibility - Person/Member workshop
+15. Case Schema Explanation
+16. Eligibility & Provider - review after workshops
+17. Inna Mariienko
+18. Payer taxonomy workshop
+19. Databricks Lakeflow Connect
+20. Provider Discussion
+21. Erik and Michal
+22. See more
+23. Clinical Scheduling
+24. NewUM | General | See all channels
+25. General
+26. CRS/CRR Scheduling
+27. IT Helpdesk Scheduling

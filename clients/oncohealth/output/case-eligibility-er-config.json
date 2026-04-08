@@ -1,0 +1,326 @@
+[{
+  "name": "case-eligibility-er",
+  "title": "Case Utilisation of Eligibility Data — ER Proposal",
+  "subtitle": "newUM V1 · Sprint 26.04.14 · #187416 (Carlos) · Miro ER Update Draft",
+  "width": 2100,
+  "height": 1250,
+  "nodeHeight": 100,
+  "gap": 40,
+  "padding": 20,
+  "org": "OncoHealth · NewFire Global",
+
+  "lanes": [
+    {
+      "x": 20,
+      "width": 260,
+      "label": "ELIGIBILITY — PRE-CHECK",
+      "number": "①",
+      "headerColor": "#1565C0",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "arrows": true,
+        "arrowType": "data",
+        "arrowLabels": ["then"],
+        "nodes": [
+          {
+            "name": "Member Search",
+            "subtitle": "Health Plan + DOB + Member ID or Name",
+            "logo": "entra",
+            "palette": "ingestion",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Coverage Date Check",
+            "subtitle": "effective_date ≤ tx_start ≤ expiration_date",
+            "palette": "ingestion",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 340,
+      "width": 410,
+      "label": "ELIGIBILITY — SCOPE VALIDATION",
+      "number": "②",
+      "headerColor": "#C62828",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "arrows": true,
+        "arrowType": "data",
+        "arrowLabels": ["PASS", "PASS", "PASS", "PASS", "PASS"],
+        "frame": {
+          "label": "6 Sequential Rules — Any FAIL → Out of Scope",
+          "color": "#C62828"
+        },
+        "nodes": [
+          {
+            "name": "Rule 1 — LOB Validation",
+            "subtitle": "lob | delegation_status — active + delegated to OH",
+            "palette": "ingestion",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 2 — Product Validation",
+            "subtitle": "product_line | product_offering — delegated under LOB",
+            "palette": "api",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 3 — State Restriction",
+            "subtitle": "state_of_plan_issue — payer's allowed set",
+            "palette": "spark",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 4 — Carve-Out Check",
+            "subtitle": "carrier_id | account_id | group_id — also feeds Provider",
+            "palette": "mssql",
+            "tag": "ELIG → PROV",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          },
+          {
+            "name": "Rule 5 — ASO Delegation",
+            "subtitle": "aso_indicator — excluded → OOS",
+            "palette": "auth",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 6 — Benefit Delegation",
+            "subtitle": "member_benefit | rx_carveout | oon_benefit — OON → Provider",
+            "palette": "dotnet",
+            "tag": "ELIG → PROV",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 810,
+      "width": 310,
+      "label": "PROVIDER DOMAIN",
+      "number": "③",
+      "headerColor": "#E65100",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "nodes": [
+          {
+            "name": "NPI Lookup",
+            "subtitle": "Type 1 (physician) or Type 2 (facility)",
+            "palette": "spark",
+            "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
+          },
+          {
+            "name": "Network / OON Check",
+            "subtitle": "Reads oon_benefit from Elig Rule 6",
+            "palette": "spark",
+            "tag": "PROV ← ELIG",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          },
+          {
+            "name": "Product Code Check",
+            "subtitle": "carrier_id + account_id from Elig Rule 4",
+            "palette": "spark",
+            "tag": "PROV ← ELIG",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          },
+          {
+            "name": "Site of Care (SoC)",
+            "subtitle": "ELIG: benefits → SoC | PROV: facility T2 NPI",
+            "palette": "auth",
+            "badge": { "label": "BOTH", "bg": "#00695C", "color": "#80CBC4" }
+          },
+          {
+            "name": "Facility Type (T2)",
+            "subtitle": "HOPD vs standalone — affects reimbursement. CMS POS logic. V1 concern",
+            "palette": "spark",
+            "tag": "PROV-GAP-04",
+            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+          },
+          {
+            "name": "Specialty (T1 only)",
+            "subtitle": "taxonomy_code from NPPES. V1 = Type 1 individual. Type 2 facility post-V1",
+            "palette": "spark",
+            "tag": "PROV-GAP-05",
+            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+          },
+          {
+            "name": "GAP Review",
+            "subtitle": "Payer-configured provider gap analysis",
+            "palette": "spark",
+            "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 1180,
+      "width": 460,
+      "label": "CASE DOMAIN — TABLES",
+      "number": "④",
+      "headerColor": "#00695C",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "arrows": true,
+        "arrowType": "data",
+        "arrowLabels": ["FK", "FK", "snapshot", "dual-elig", "proposed", "proposed"],
+        "frame": {
+          "label": "PostgreSQL OLTP (same DB as Eligibility) — each box = 1 table",
+          "color": "#00695C"
+        },
+        "nodes": [
+          {
+            "name": "Case",
+            "subtitle": "FK: EligibilityVersionId (guid) → Eligibility | Main UM case record",
+            "palette": "postgres",
+            "badge": { "label": "TABLE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "CaseDrugElements (×3 tables)",
+            "subtitle": "Medical + Pharmacy + Radiation | Each FK: EligVersionId → Eligibility",
+            "palette": "postgres",
+            "badge": { "label": "TABLE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "KeyFieldType",
+            "subtitle": "Snapshot cols: MemberId, DOB, SSN, LOB, CovStart/End, IsEHBPlan — frozen at intake",
+            "palette": "postgres",
+            "badge": { "label": "TABLE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "PotentialEligibility",
+            "subtitle": "FK: EligVersionId + CaseId | Dual eligible = 2 rows | DSNP open #183771",
+            "palette": "postgres",
+            "badge": { "label": "TABLE", "bg": "#2E7D32", "color": "#A5D6A7" }
+          },
+          {
+            "name": "CaseOfficeContact",
+            "subtitle": "FK: CaseId | Cols: ProviderRole (Ord/Serv), Name, Phone, Fax, Email",
+            "palette": "postgres",
+            "tag": "PROV-GAP-01",
+            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+          },
+          {
+            "name": "CasePOSCode",
+            "subtitle": "FK: CaseId | Cols: POSCode VARCHAR(2), POSDescription",
+            "palette": "postgres",
+            "tag": "PROV-GAP-03",
+            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 1700,
+      "width": 380,
+      "label": "DOWNSTREAM CONSUMERS",
+      "number": "⑤",
+      "headerColor": "#2E7D32",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "nodes": [
+          {
+            "name": "PDL Drug Rules",
+            "subtitle": "LOB + effective date → Benefit Type + PA status",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "NP Drug Rules",
+            "subtitle": "LOB + Product Line + Billing Method + Dx Group",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Letter V2 / Fax Service",
+            "subtitle": "Reads Elig: FirstName, LastName, DOB, SSN, CoverageEffective/End + Office Contact fax",
+            "palette": "gold",
+            "tag": "CASE + ELIG",
+            "badge": { "label": "BOTH", "bg": "#00695C", "color": "#80CBC4" }
+          },
+          {
+            "name": "Case Routing & Queues",
+            "subtitle": "LOB + pathway type + complexity → queue assignment",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "TAT Configuration",
+            "subtitle": "LOB + delegation_level → Chronos timer config",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Mid-Case Re-evaluation",
+            "subtitle": "New eligibility arrives → trigger rule reload? Mechanism TBD. Open design question",
+            "palette": "gold",
+            "tag": "OPEN",
+            "badge": { "label": "OPEN", "bg": "#E65100", "color": "#FFE0B2" }
+          }
+        ]
+      }]
+    }
+  ],
+
+  "arrows": [
+    {
+      "type": "data",
+      "x1": 280,
+      "y1": 168,
+      "x2": 340,
+      "y2": 168,
+      "label": "ELIGIBLE"
+    },
+    {
+      "type": "curved",
+      "x1": 750,
+      "y1": 558,
+      "x2": 810,
+      "y2": 418,
+      "color": "#6A1B9A",
+      "opacity": 0.7,
+      "label": "R4",
+      "labelX": 780,
+      "labelY": 480
+    },
+    {
+      "type": "curved",
+      "x1": 750,
+      "y1": 838,
+      "x2": 810,
+      "y2": 278,
+      "color": "#6A1B9A",
+      "opacity": 0.7,
+      "label": "R6",
+      "labelX": 780,
+      "labelY": 550
+    },
+    {
+      "type": "data",
+      "x1": 1120,
+      "y1": 490,
+      "x2": 1180,
+      "y2": 490,
+      "color": "#00695C",
+      "label": "CREATES"
+    },
+    {
+      "type": "data",
+      "x1": 1640,
+      "y1": 490,
+      "x2": 1700,
+      "y2": 490,
+      "color": "#2E7D32",
+      "label": "READS"
+    }
+  ]
+}]

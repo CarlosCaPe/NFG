@@ -1,0 +1,237 @@
+[{
+  "name": "eligibility-provider-overlap",
+  "title": "Eligibility ↔ Provider Domain Overlap",
+  "subtitle": "newUM V1 · Sprint 26.04.14 · #187416 (Eligibility, Carlos) + #187415 (Provider, Arben)",
+  "width": 1830,
+  "height": 1100,
+  "nodeHeight": 100,
+  "gap": 32,
+  "padding": 20,
+  "org": "OncoHealth · NewFire Global",
+
+  "lanes": [
+    {
+      "x": 20,
+      "width": 280,
+      "label": "ELIGIBILITY — PRE-CHECK",
+      "number": "①",
+      "headerColor": "#1565C0",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "arrows": true,
+        "arrowType": "data",
+        "arrowLabels": ["then"],
+        "nodes": [
+          {
+            "name": "Member Search",
+            "subtitle": "Health Plan + DOB + Member ID or Name",
+            "logo": "entra",
+            "palette": "ingestion",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Coverage Date Check",
+            "subtitle": "effective_date ≤ tx_start ≤ expiration_date",
+            "palette": "ingestion",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 360,
+      "width": 440,
+      "label": "ELIGIBILITY — SCOPE VALIDATION",
+      "number": "②",
+      "headerColor": "#C62828",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "arrows": true,
+        "arrowType": "data",
+        "arrowLabels": ["PASS", "PASS", "PASS", "PASS", "PASS"],
+        "frame": {
+          "label": "6 Sequential Rules — Any FAIL → Out of Scope",
+          "color": "#C62828"
+        },
+        "nodes": [
+          {
+            "name": "Rule 1 — LOB Validation",
+            "subtitle": "lob | delegation_status \u2014 must be active + delegated to OH",
+            "palette": "ingestion",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 2 — Product Validation",
+            "subtitle": "product_line | product_offering \u2014 active + delegated under matched LOB",
+            "palette": "api",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 3 — State Restriction",
+            "subtitle": "state_of_plan_issue \u2014 must be in payer's allowed set",
+            "palette": "spark",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 4 — Carve-Out Check",
+            "subtitle": "carrier_id | account_id | group_id \u2014 carve-out IDs, also feed Provider",
+            "palette": "mssql",
+            "tag": "ELIG → PROV",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          },
+          {
+            "name": "Rule 5 — ASO Delegation",
+            "subtitle": "aso_indicator \u2014 if excluded from delegation \u2192 OOS",
+            "palette": "auth",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Rule 6 — Benefit Delegation",
+            "subtitle": "member_benefit | rx_carveout | oon_benefit \u2014 OON feeds Provider network check",
+            "palette": "dotnet",
+            "tag": "ELIG → PROV",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 990,
+      "width": 320,
+      "label": "PROVIDER DOMAIN",
+      "number": "③",
+      "headerColor": "#E65100",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "nodes": [
+          {
+            "name": "NPI Lookup",
+            "subtitle": "Type 1 (physician) or Type 2 (facility)",
+            "palette": "spark",
+            "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
+          },
+          {
+            "name": "Network / OON Check",
+            "subtitle": "In-network? Reads oon_benefit from eligibility Rule 6",
+            "palette": "spark",
+            "tag": "PROV ← ELIG",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          },
+          {
+            "name": "Product Code Check",
+            "subtitle": "Uses carrier_id + account_id from eligibility Rule 4",
+            "palette": "spark",
+            "tag": "PROV ← ELIG",
+            "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
+          },
+          {
+            "name": "Site of Care (SoC)",
+            "subtitle": "ELIG: benefits determine SoC | PROV: facility T2 NPI type",
+            "palette": "auth",
+            "badge": { "label": "BOTH", "bg": "#00695C", "color": "#80CBC4" }
+          },
+          {
+            "name": "GAP Review",
+            "subtitle": "Payer-configured provider gap analysis requirement",
+            "palette": "spark",
+            "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
+          }
+        ]
+      }]
+    },
+
+    {
+      "x": 1370,
+      "width": 400,
+      "label": "DOWNSTREAM CONSUMERS",
+      "number": "④",
+      "headerColor": "#2E7D32",
+
+      "columns": [{
+        "distribution": "compact-top",
+        "nodes": [
+          {
+            "name": "PDL Drug Rules",
+            "subtitle": "LOB + effective date → Benefit Type + PA status",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "NP Drug Rules",
+            "subtitle": "LOB + Product Line + Billing Method + Diagnosis Group",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "Site of Care Decision",
+            "subtitle": "ELIG: benefits → SoC relevance | PROV: facility type T2 NPI",
+            "palette": "gold",
+            "badge": { "label": "BOTH", "bg": "#00695C", "color": "#80CBC4" }
+          },
+          {
+            "name": "Case Routing & Queues",
+            "subtitle": "LOB + pathway type + complexity → queue assignment",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          },
+          {
+            "name": "TAT Configuration",
+            "subtitle": "lob + delegation_level — eligibility data only",
+            "palette": "gold",
+            "badge": { "label": "ELIG", "bg": "#1565C0", "color": "#BBDEFB" }
+          }
+        ]
+      }]
+    }
+  ],
+
+  "arrows": [
+    {
+      "type": "data",
+      "x1": 300,
+      "y1": 168,
+      "x2": 360,
+      "y2": 168,
+      "label": "ELIGIBLE"
+    },
+    {
+      "type": "curved",
+      "x1": 800,
+      "y1": 630,
+      "x2": 990,
+      "y2": 446,
+      "color": "#6A1B9A",
+      "opacity": 0.8,
+      "label": "R4: carrier_id → Product Code",
+      "labelX": 895,
+      "labelY": 420
+    },
+    {
+      "type": "curved",
+      "x1": 800,
+      "y1": 894,
+      "x2": 990,
+      "y2": 314,
+      "color": "#6A1B9A",
+      "opacity": 0.8,
+      "label": "R6: oon_benefit → OON Check",
+      "labelX": 895,
+      "labelY": 298
+    },
+    {
+      "type": "curved",
+      "x1": 1310,
+      "y1": 578,
+      "x2": 1370,
+      "y2": 446,
+      "color": "#2E7D32",
+      "opacity": 0.6,
+      "label": "SoC LINK"
+    }
+  ]
+}]

@@ -1,0 +1,20 @@
+=== Chat: Eligibility ===
+Captured: 2026-04-07T20:35:34.328Z
+
+[6 messages extracted (structured)]
+
+ : Action Item: Ask app devs about snake case vs camel case, keeping SQL case insensitivity in mind.
+
+ : brb
+
+ : RxCarrierId
+
+RxAccountId
+
+RxGroupId
+
+ : Cory strings
+
+ : correct
+
+ : back

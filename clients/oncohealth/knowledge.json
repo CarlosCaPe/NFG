@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.18.0",
-  "last_updated": "2026-04-06",
+  "version": "1.24.0",
+  "last_updated": "2026-04-08",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -132,14 +132,48 @@
         ],
         "note": "Previously hidden from old API token (ccarrillo@oncohealth.us). Accessed 2026-03-25 using ccarrillo@oncologyanalytics.com + unscoped token. Contains all active PRDs, functional specs, decision log, and configuration guides for newUM V1.0."
       },
-      "note": "40 global spaces visible (was 12 before token fix). NewUM1 space now CAPTURED (50 pages, 422K chars). Confluence is the primary wiki for all teams — ADO wiki not used (confirmed Michal Mucha 2026-03-25).",
+      "newum_space": {
+        "key": "NewUM",
+        "name": "NewUM Engineering",
+        "status": "ACTIVE — discovered 2026-04-07. Separate from NewUM1 (Product). Engineering/tech wiki.",
+        "pages": 50,
+        "chars": 260082,
+        "captured": "2026-04-07",
+        "auth": "ccarrillo@oncologyanalytics.com + API token nfg-full-access",
+        "homepage": "NewUM",
+        "page_tree": {
+          "root": "NewUM",
+          "sections": [
+            "BE team docs (Rules Engine, Microsoft RulesEngine, Dynamic LINQ, PoC, JobMonitor, Fax Integration, Letter V2, Document Management, Okta Swagger auth, Infrastructure)",
+            "DevOps Best Practices (Deployment Process, Branching Strategy, AKS Best Practices/Architecture/Naming/Iris/Pipelines, Storage Accounts)",
+            "FE team docs (File Structure, Monarch UX Designs)",
+            "QA team docs (Testing Strategy v24, DoD, DoR, Defect Creation/Tracking/Prioritization, Test Case Process, Useful Links)",
+            "Data team docs (Terminology, Drugs DB schema — v44 with 4 tables: Drugs, DrugCode, AdditionalDrugCode, DrugFormularyData)",
+            "Configuration Team docs (Assumptions to confirm)",
+            "Scrum docs (Sprint goals: 26.02.03, 26.02.17, 26.03.03)",
+            "Meeting notes (Technical Architecture Review, Rules Engine & State Machine, Case Intake/Eligibility Deep Dive, Product & BA Daily, Rules Prototyping, Member/Eligibility Sync, Monarch UX)",
+            "Questions & Assumptions Log",
+            "Templates (Project plan, Decision documentation, Meeting notes)"
+          ]
+        },
+        "key_content": {
+          "drugs_data_model": "Full schema for DrugsMS (MS-SQL): Drugs (22 cols), DrugCode (30+ cols incl HCPCS/NDC/RxCUI/BillingUnit), AdditionalDrugCode (GPI/NDC/strength/route), DrugFormularyData (PA/StepTherapy/Tier/Preferred/QuantityLimits per payer+LOB). Version 44 — most heavily edited page.",
+          "case_intake_eligibility": "Comprehensive workflow spec: 7 epics (Intake→Entry→Assignment→Processing→Finalization→Outbound→Reporting). Confirms scope validation, carve-out handling, dual eligibility, SoC program, network checks. 15 open design decisions.",
+          "rules_engine": "Prototyping complete. Supports workflow logic + granular validation. Async operations needed (eligibility searches, payer APIs). Combinatorial explosion concern (LOB × client × employer group hierarchy). Event-based architecture with case rollback.",
+          "member_eligibility_sync": "Case-centric 'Manila folder' model. Write-only schemas with version linking. Person identifier strategy (use when available, GUID when not). DSNP splitting. Drug MS stays single source of truth with separate NewUM config tables.",
+          "testing_strategy": "Version 24 — heavily iterated. NUnit (BE), Vitest+RTL (FE), Playwright (E2E).",
+          "assumptions": "Workflow steps are NOT configurable per client. SoC is payer opt-in program. Determination states configurable per health plan + LOB. Default configs exist but not for all fields (e.g., member ID format)."
+        },
+        "note": "Discovered 2026-04-07 when user reported Confluence access re-activated. NewUM space was not in the 12 original spaces — it required direct space key fetch. Different from NewUM1 (Product team space, 404 since Mar 26). This is the engineering/technical space."
+      },
+      "note": "40 global spaces visible (was 12 before token fix). NewUM1 (Product, 422K chars, 404 since Mar 26) + NewUM (Engineering, 260K chars, captured Apr 7). Confluence is the primary wiki for all teams — ADO wiki not used (confirmed Michal Mucha 2026-03-25).",
       "auth": "ccarrillo@oncologyanalytics.com + API token (nfg-full-access, created 2026-03-25)",
       "spaces_count": 40,
-      "pages_count_total": 221,
-      "total_chars_total": 907097,
-      "captured": "2026-03-25",
+      "pages_count_total": 271,
+      "total_chars_total": 1167179,
+      "captured": "2026-04-07",
       "confirmed": true,
-      "source": "onboarding doc + REST API capture (2026-03-23 for 12 spaces, 2026-03-25 for NewUM1)"
+      "source": "onboarding doc + REST API capture (2026-03-23 for 12 spaces, 2026-03-25 for NewUM1, 2026-04-07 for NewUM)"
     },
     "databricks": {
       "workspaces": [
@@ -378,7 +412,7 @@
       "Miro Onco board PDF export — 87 pages, 106K chars extracted (03-miro-newum-board.txt)",
       "Databricks TEST workspace — PAT validated (2026-03-24), 12 API endpoints, full UC inventory captured",
       "Google Drive folder — 41 files extracted, 21 text outputs, 5.5M chars (2026-03-25)",
-      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23) + NewUM1 space 50 pages, 422K chars (2026-03-25)",
+      "Atlassian Confluence — 12 spaces, 171 pages, 485K chars (2026-03-23) + NewUM1 space 50 pages, 422K chars (2026-03-25) + NewUM space 50 pages, 260K chars (2026-04-07)",
       "Google Calendar (NFG) — 46 events captured (5 meetings, holidays, work-location), 15K chars (2026-03-26)"
     ],
     "pending": [
@@ -400,18 +434,19 @@
         { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2442382, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Re-captured 2026-04-06: 37 files, 2.4MB. 13 Epics, 66 Features, 372 User Stories, 443 Tasks, 11 Bugs, 8 Pipelines. 385 items changed since Mar 23. Sprint 26.03.31 mostly Closed (142). Sprint 26.04.14 is current (130+ items). 3 items assigned to Carlos: #185594 (Closed), #186569 (Closed), #187416 (To Do)." },
         { "resource": "Atlassian Confluence (12 spaces)", "status": "COMPLETE", "chars": 485274, "method": "REST API + API token", "note": "Deep capture (2026-03-23): 12 spaces, 171 pages, 41 files, 621 KB. Key: PM (197K), AT (120K), OG (65K), IS (13K), MATIS (13K). 41 groups discovered. Auth via ccarrillo@oncohealth.us + API token." },
         { "resource": "Confluence NewUM1 space", "status": "COMPLETE", "chars": 421823, "method": "REST API + API token (ccarrillo@oncologyanalytics.com)", "note": "Captured 2026-03-25. 50 pages: PRDs (case entry, chemotherapy, work queues, post-denial, reports, rules/config), decision log (5 decisions), governance, meeting notes, templates. 422K chars. Previously blocked — fixed by using correct email identity with new unscoped token (nfg-full-access)." },
+        { "resource": "Confluence NewUM space (Engineering)", "status": "COMPLETE", "chars": 260082, "method": "REST API + API token (ccarrillo@oncologyanalytics.com)", "note": "Discovered and captured 2026-04-07. 50 pages: BE docs (Rules Engine, Fax, Letter V2, Document Mgmt, JobMonitor), DevOps (AKS, branching, deployment), QA (Testing Strategy v24, DoD/DoR, defects), Data team (Drugs DB schema v44 — 4 tables), FE (file structure, Monarch UX), sprint planning (3 sprints), 7 meeting notes, assumptions log. SEPARATE from NewUM1 (Product team, 404 since Mar 26)." },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
         { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." },
         { "resource": "Google Calendar (NFG)", "status": "COMPLETE", "chars": 15300, "method": "Playwright storageState + internal API interception", "note": "NFG Google Calendar (carlos.carrillo@newfireglobal.com). 46 events: 5 meetings (Global Town Hall, Newfire-Databricks, Databricks Training Discussion, Meet, Logistics with Adhere Health), global holidays, recurring Home work-location. Uses sync.fetcheventrange/minievents/prefetcheventrange endpoints + aria-label DOM parsing. Captured 2026-03-26." }
       ],
-      "complete": 13,
+      "complete": 14,
       "partial": 0,
       "not_captured": 1,
       "pending": 0,
       "blocked": 0,
-      "total_chars_captured": 8756678,
+      "total_chars_captured": 9016760,
       "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
     },
     "confirmed": true,
@@ -507,7 +542,8 @@
       "count": 30,
       "priority": "HIGH",
       "origin": "Feb 2026 Gap Analysis",
-      "open_question": "Which of the 30 HIGH-priority gaps are resolved before V1.0?"
+      "open_question": "Which of the 30 HIGH-priority gaps are resolved before V1.0?",
+      "provider_domain_additions_april_2026": "4 additional gaps identified in provider business requirements review (April 2026). See provider_business_requirement_gaps section."
     },
 
     "disaster_recovery": {
@@ -1047,6 +1083,141 @@
     ]
   },
 
+  "provider_business_requirement_gaps": {
+    "$comment": "Gaps spotted after provider-domain business requirements delivery. Reported April 8, 2026. Confluence refs: Ordering and Servicing Provider Information PRD, Rules and configurations functional specification.",
+    "source": "Business requirements gap analysis email (April 8, 2026) — reviewed by product team",
+    "captured": "2026-04-08",
+    "product_team_comment": "Office contact information should be treated as the case-level source for follow-up communication including letters/faxes. Potentially configurable — in some scenarios (expert review/non-delegated, true post-service cases) outreach to ordering provider may not be appropriate. Intent: capture most appropriate current contact details for that specific case, not treat it as source of truth for provider demographic data overall. Address should come from provider data.",
+    "gaps": [
+      {
+        "id": "PROV-GAP-01",
+        "title": "No Office Contact Entity",
+        "severity": "High",
+        "domain": "Case",
+        "what_is_missing": "No entity exists to store case-level office contact information (Name, Phone, Fax, Email). These are manually entered per case per provider role — not derived from provider master data and must not update it.",
+        "scope": "Required for Ordering Provider and Servicing/Treating Provider only. Place of Treatment fax is derived from provider master data (separate concept).",
+        "downstream_uses": {
+          "name_phone": "Provider outreach; clarification follow-up (calling provider office during case processing)",
+          "fax": "Fax/notification routing (outbound fax letters and PA notifications)",
+          "email": "Provider outreach; notification backup (when fax unavailable or as secondary channel)"
+        },
+        "configurability": "Section is configurable (default ON). Can be disabled per payer or case context. Missing rows = section disabled, not a data error.",
+        "cases_that_fail": "All standard PA cases where fax letter, outbound notification, or provider-office follow-up is required (when Office Contact is enabled).",
+        "fix": {
+          "table": "CaseOfficeContact",
+          "domain": "Case",
+          "columns": {
+            "CaseId": "FK",
+            "ProviderRole": "enum (Ordering, Servicing — POT excluded)",
+            "ContactName": "VARCHAR(100) NOT NULL",
+            "ContactPhone": "VARCHAR(20) NOT NULL",
+            "ContactFax": "VARCHAR(20) NOT NULL",
+            "ContactEmail": "VARCHAR(255) NULL"
+          },
+          "notes": "Format validation (phone/fax/email) at application layer. No row = section disabled. Sibling to CaseProviderSelection. Neither belongs in provider master data."
+        },
+        "confluence_ref": "Ordering and Servicing Provider Information — FR + Data Dictionary (Ordering Provider + Servicing Provider sections)"
+      },
+      {
+        "id": "PROV-GAP-02",
+        "title": "Organization Affiliation Not Modelled as First-Class Search Result Unit",
+        "severity": "High",
+        "domain": "Provider schema / Data team",
+        "what_is_missing": "Requirements define search result row as: Provider (Type 1) + Organization (affiliated practice) + Organization NPI (Type 2) + Organization TIN + Service Address. T1T2Link connects DoctorT1 to FacilityT2 but unclear if it produces the required denormalized queryable unit. Organization NPI and Organization TIN must be resolvable from a single provider selection.",
+        "why_it_matters": "If a provider is affiliated with multiple organizations at different addresses (across different health plans), each affiliation must display as a distinct row. This is the core disambiguation mechanism for provider selection. Without this, the search UX cannot be built correctly.",
+        "fix": {
+          "entity": "ProviderAffiliation or ProviderOrganizationLocation (view or table)",
+          "columns": {
+            "DoctorNPI": "Type 1 NPI",
+            "OrgNPI": "Type 2 NPI",
+            "OrgName": "Organization name",
+            "OrgTIN": "Organization TIN",
+            "ServiceAddress": "Service location address",
+            "HealthPlanId": "FK",
+            "EffectiveFrom": "date",
+            "EffectiveTo": "date"
+          },
+          "notes": "Denormalizes DoctorT1 → T1T2Link → FacilityT2 → Location path"
+        },
+        "confluence_ref": "Ordering and Servicing Provider Information — Consolidated Search Requirements + Data Dictionary"
+      },
+      {
+        "id": "PROV-GAP-03",
+        "title": "Place of Service (POS) Code Has No Home",
+        "severity": "High",
+        "domain": "Case + Payer configuration",
+        "what_is_missing": "POS code (CMS two-digit code, e.g. '11 - Office', '22 - Outpatient Hospital') is required case-level field, conditional on payer configuration. No entity or field in the provider schema captures POS codes.",
+        "why_it_matters": "POS code drives auth/claims accuracy and is part of Level of Care section in V1. Multi-POS handling is still an open design question.",
+        "open_items": ["Multi-POS handling still open", "Medical vs pharmacy POS handling not closed", "CAR-T / site-of-care scenarios remain unresolved"],
+        "cases_that_fail": "All payer configurations that require POS codes (e.g. BlueKC for Pharmacy). Cases without correct POS may produce mismatched authorizations.",
+        "fix": {
+          "table": "CasePOSCode",
+          "domain": "Case",
+          "columns": {
+            "CaseId": "FK",
+            "POSCode": "VARCHAR(2)",
+            "POSDescription": "text",
+            "IsActive": "BOOL",
+            "CreatedAt": "timestamp"
+          },
+          "notes": "POS values should come from a payer-configurable lookup, not a hardcoded global list."
+        },
+        "confluence_ref": "Ordering and Servicing Provider Information — Data Dictionary: POS Code, Level of Care section; Rules and configurations functional specification"
+      },
+      {
+        "id": "PROV-GAP-04",
+        "title": "Facility Type Has No Payer-Configurable Lookup",
+        "severity": "Medium",
+        "domain": "Payer configuration",
+        "what_is_missing": "FacilityT2 has a type field (CHECK constraint with values '1', '2'). V1 requires a payer-configurable Facility Type (e.g. Critical Access Hospital, Rural Health Clinic, Center of Excellence) that is distinct from the structural entity type (T1/T2). This is a regulatory/contractual classification, not a structural NPI type.",
+        "why_it_matters": "V1 states: Facility Type is driven by payer contracts/regulatory rules, not a universal list. Facility Type data is often missing/inconsistent in provider files. Behavior should be configurable per payer. Current EntityType CHECK constraint only captures NPI entity type.",
+        "fix": {
+          "table": "FacilityTypeConfig",
+          "domain": "Payer configuration",
+          "columns": {
+            "FacilityTypeId": "PK",
+            "PayerId": "FK",
+            "FacilityTypeCode": "code",
+            "FacilityTypeLabel": "display name",
+            "IsActive": "BOOL"
+          },
+          "notes": "Store selected FacilityTypeId on case-level POT selection. Do not rely on provider file data as sole source of truth."
+        },
+        "confluence_ref": "Ordering and Servicing Provider Information — Data Dictionary: Facility Type; Rules and configurations functional specification"
+      },
+      {
+        "id": "PROV-GAP-05",
+        "title": "Specialty Representation Ambiguous for Backend Use",
+        "severity": "Low",
+        "domain": "Provider schema",
+        "scope_clarification": {
+          "applies_to": "Type 1 NPI only (Ordering Provider, Servicing/Treating Provider)",
+          "does_not_apply_to": "Type 2 NPI (Place of Treatment / Facility) — no specialty or taxonomy field in V1 PRD",
+          "evidence": {
+            "data_dictionary": {
+              "ordering_provider_type1": "Has Provider Specialty — backend value, derived, not user-editable, no UI display. Source: Provider Specialty table. Used for: provider key, claims/provider matching.",
+              "servicing_provider_type1": "Same definition as Ordering Provider.",
+              "place_of_treatment_type2": "Fields: Facility, Facility NPI, Facility TIN, Facility Address, Fax, Facility Type, POS Code. NO specialty or taxonomy field present."
+            },
+            "search_results": {
+              "provider_search_type1": "Name | Specialty | NPI | TIN | Org | Address — specialty explicitly included",
+              "facility_search_type2": "Facility | NPI | TIN | Address — specialty explicitly absent"
+            }
+          },
+          "implication": "V1 PRD does not require taxonomy/specialty for Type 2 facilities. Schema does not need to support it for facilities in V1. If data team wants to store taxonomy for Type 2 as future-proofing, that requires a separate product decision — out of scope per current requirements."
+        },
+        "what_is_missing": "V1 requires specialty as a backend-only field for network determination and outbound files (no UI display) on Type 1 providers only. Schema has TaxonomyLink + TaxonomyReference (full NUCC taxonomy codes), but requirements reference 'Provider Specialty' as a single human-readable value (e.g. 'Medical Oncology', 'Hematology/Oncology') while taxonomy codes are more granular and structured differently.",
+        "why_it_matters": "Specialty is part of the key (location + specialty + tax ID + NPI) that ties to a single provider ID used for correct network determination and claims payment. If specialty is only available as raw NUCC taxonomy code, consumer domains (Case, Rules Engine) must perform taxonomy → specialty mapping themselves, risking inconsistency.",
+        "fix": {
+          "option_a": "Add SpecialtyCode field to DoctorT1 derived from primary taxonomy code at ETL time",
+          "option_b": "Designate one TaxonomyLink row as primary specialty via IsPrimary BOOL and document NUCC taxonomy → human-readable specialty label mapping",
+          "notes": "Either approach resolves the ambiguity. Option (a) is simpler for consumers; option (b) preserves full taxonomy granularity. Applies to DoctorT1 only — FacilityT2 does not need specialty per V1 PRD."
+        },
+        "confluence_ref": "Ordering and Servicing Provider Information — Data Dictionary: Provider Specialty; open item resolution on specialty as network determination key"
+      }
+    ]
+  },
+
   "unknowns": {
     "$comment": "Items that need vendor or user confirmation before they can be used.",
     "items": [
@@ -1061,7 +1232,7 @@
       { "id": "U9", "question": "What is the CQRS approach for Eligibility API (ADO #186301)? What replaces with-related-data endpoints?", "status": "RESOLVED", "answer": "ADO #186301 CLOSED March 25, 2026 by Roman Buchyn. CQRS refactoring completed. Implementation went through Code Review and was merged in sprint 26.03.31." },
       { "id": "U10", "question": "How will Dual/DSNP eligibility be represented — split records or separate MLOBs (ADO #183771)?", "status": "unresolved", "note": "Payer taxonomy workshop (2026-03-18) raised this. Inna assigned." },
       { "id": "U11", "question": "What happened to Confluence NewUM1 space? Returns 404 since ~2026-03-26.", "status": "unresolved", "note": "Re-confirmed April 6: still 404. CQL search for 'newUM' returned 0 results across all 12 accessible spaces. Content completely gone. Last good capture: 2026-03-25 (50 pages, 422K chars). Ask Rachel or Inna." },
-      { "id": "U12", "question": "Which Databricks→PostgreSQL data exchange approach was selected? (Lakebase Synced Tables, ADLS+Airflow+PostgreSQL COPY, or Apache Iceberg→PostgreSQL)", "status": "IN_PROGRESS", "note": "Carlos building Iceberg→PostgreSQL POC (ADO #187526, parent #186438 closed). DevOps request submitted April 6 for 3 Databricks prereqs (metastore external_access, EXTERNAL_USE_SCHEMA grant, UniForm enablement) + PostgreSQL TEST credentials. Target table: drugmaster_test.drug_master.gold_denorm_view. Cory will follow up with DevOps." }
+      { "id": "U12", "question": "Which Databricks→PostgreSQL data exchange approach was selected?", "status": "IN_PROGRESS", "note": "DECISION April 8: Alex (DevOps lead) ruled Option A (REST Catalog API) out — security will not enable external_access_enabled. Approved Option B: Direct ADLS storage access with UniForm. Key facts from Alex: (1) No new Service Principal needed — each workspace already has its own SP for storage access. (2) If storage account not in list, just add a new external location using same SP. (3) Michal fine with Option B scope change. Carlos accepted and will build Option B. This pivots the POC away from the spike (#186438) path — REST API code not reusable, need new ADLS reader code. ADO #187526 active. Storage account: ohdatabrickswssadftest. Open questions for Alex: (Q1) which auth method for external ADLS reads? (Q2) which SP client_id to use? (Q3) external location registration needed? (Q4) is storage account on private endpoint? UniForm enablement (prereq #3) still needed — same for both options." }
     ]
   }
 }

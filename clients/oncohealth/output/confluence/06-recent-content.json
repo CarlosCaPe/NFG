@@ -1,5 +1,33 @@
 [
   {
+    "id": "5294391309",
+    "title": "Multiple HCPCS Decoupling Plan",
+    "space": "PM",
+    "modified": "2026-04-07T15:01:46.097Z",
+    "modifiedBy": "Nataliia Piatkevych"
+  },
+  {
+    "id": "4886069362",
+    "title": "Post MVP Gold Carding",
+    "space": "PM",
+    "modified": "2026-04-07T13:35:07.167Z",
+    "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "5321228290",
+    "title": "NewUM and Databricks Data Integration",
+    "space": "NewUM",
+    "modified": "2026-04-07T13:15:22.102Z",
+    "modifiedBy": "Oleksandr Nykonenko"
+  },
+  {
+    "id": "5312577544",
+    "title": "Retro - April 2nd",
+    "space": "NewUM",
+    "modified": "2026-04-06T07:43:08.385Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
     "id": "5311987713",
     "title": "Current Report Inventory and EDP Migration Readiness",
     "space": "AT",
@@ -14,11 +42,46 @@
     "modifiedBy": "Vishwas Vishakanta"
   },
   {
-    "id": "5294391309",
-    "title": "Multiple HCPCS Decoupling Plan",
-    "space": "PM",
-    "modified": "2026-04-01T11:15:13.240Z",
-    "modifiedBy": "Nataliia Piatkevych"
+    "id": "5153357849",
+    "title": "Eligibility",
+    "space": "NewUM",
+    "modified": "2026-04-01T13:59:20.229Z",
+    "modifiedBy": "Oleksandr Nykonenko"
+  },
+  {
+    "id": "5283545119",
+    "title": "Provider Requirements - GAP Analysis",
+    "space": "NewUM",
+    "modified": "2026-04-01T09:10:43.570Z",
+    "modifiedBy": "Arben Osmani"
+  },
+  {
+    "id": "5184192521",
+    "title": "26.03.31 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-04-01T06:21:03.760Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5239930933",
+    "title": "Design Documents for Review",
+    "space": "NewUM",
+    "modified": "2026-03-31T12:22:23.768Z",
+    "modifiedBy": "Rachel Collier"
+  },
+  {
+    "id": "5294587905",
+    "title": "26.04.14 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-03-31T10:46:50.165Z",
+    "modifiedBy": "Michal Mucha"
+  },
+  {
+    "id": "5300551690",
+    "title": "Case Lock research",
+    "space": "NewUM",
+    "modified": "2026-03-30T20:58:47.595Z",
+    "modifiedBy": "Vladyslav Kyrychuk"
   },
   {
     "id": "4797890582",
@@ -33,6 +96,13 @@
     "space": "PM",
     "modified": "2026-03-27T03:02:54.589Z",
     "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "5288493057",
+    "title": "[POC] Iceberg REST Catalog",
+    "space": "NewUM",
+    "modified": "2026-03-25T23:44:29.005Z",
+    "modifiedBy": "Carlos Carrillo"
   },
   {
     "id": "3776020499",
@@ -56,6 +126,20 @@
     "modifiedBy": "Sandy Gress"
   },
   {
+    "id": "5283053582",
+    "title": "API Library Structure and Naming Conventions",
+    "space": "NewUM",
+    "modified": "2026-03-25T11:18:45.370Z",
+    "modifiedBy": "Petro Brezitskiy"
+  },
+  {
+    "id": "5256773633",
+    "title": "Claude QA Pipeline: Step-by-Step Commands for Automation Workflow",
+    "space": "NewUM",
+    "modified": "2026-03-25T09:20:52.937Z",
+    "modifiedBy": "Taras Badlo"
+  },
+  {
     "id": "5281873924",
     "title": "Prescription Benefit Carveout",
     "space": "PM",
@@ -70,11 +154,39 @@
     "modifiedBy": "Sara Heideman"
   },
   {
+    "id": "5279121409",
+    "title": "[POC] UC Data API",
+    "space": "NewUM",
+    "modified": "2026-03-24T14:49:57.322Z",
+    "modifiedBy": "Oleksandr Nykonenko"
+  },
+  {
+    "id": "5270896646",
+    "title": "[POC] Blob API",
+    "space": "NewUM",
+    "modified": "2026-03-24T12:11:00.769Z",
+    "modifiedBy": "Arben Osmani"
+  },
+  {
     "id": "5274632193",
     "title": "New Reporting Layer Model",
     "space": "AT",
     "modified": "2026-03-23T16:37:06.366Z",
     "modifiedBy": "Elise Klein"
+  },
+  {
+    "id": "5128192002",
+    "title": "Useful Links",
+    "space": "NewUM",
+    "modified": "2026-03-23T16:33:11.877Z",
+    "modifiedBy": "Taras Badlo"
+  },
+  {
+    "id": "5163188275",
+    "title": "Complete AI QA Testing System Structure",
+    "space": "NewUM",
+    "modified": "2026-03-23T13:14:11.521Z",
+    "modifiedBy": "Taras Badlo"
   },
   {
     "id": "5052006411",
@@ -84,11 +196,74 @@
     "modifiedBy": "Lauren Smith (Unlicensed)"
   },
   {
-    "id": "4886069362",
-    "title": "Post MVP Gold Carding",
-    "space": "PM",
-    "modified": "2026-03-09T13:54:20.972Z",
-    "modifiedBy": "Chelsea Sabbato"
+    "id": "5101453313",
+    "title": "26.02.17 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-03-13T10:30:25.314Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5183963137",
+    "title": "26.03.17 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-03-13T10:30:17.390Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5053906959",
+    "title": "Testing Strategy",
+    "space": "NewUM",
+    "modified": "2026-03-11T13:23:21.886Z",
+    "modifiedBy": "Olha Pidhorna"
+  },
+  {
+    "id": "5224300562",
+    "title": "NewUM: Reporting Data Needs",
+    "space": "NewUM",
+    "modified": "2026-03-11T09:10:12.238Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5148147739",
+    "title": "File Structure",
+    "space": "NewUM",
+    "modified": "2026-03-10T23:41:35.659Z",
+    "modifiedBy": "Dmytro Petriv"
+  },
+  {
+    "id": "5204377611",
+    "title": "NewUM Services — Integration Overview",
+    "space": "NewUM",
+    "modified": "2026-03-05T17:45:29.981Z",
+    "modifiedBy": "Bogdan Chachun"
+  },
+  {
+    "id": "5205950479",
+    "title": "Drugs API",
+    "space": "NewUM",
+    "modified": "2026-03-05T16:44:48.588Z",
+    "modifiedBy": "Bogdan Chachun"
+  },
+  {
+    "id": "5201133594",
+    "title": "Provider - GAP Analysis",
+    "space": "NewUM",
+    "modified": "2026-03-04T23:22:43.555Z",
+    "modifiedBy": "Arben Osmani"
+  },
+  {
+    "id": "5196644414",
+    "title": "Claude Code tests generation reports",
+    "space": "NewUM",
+    "modified": "2026-03-04T16:10:13.825Z",
+    "modifiedBy": "Yurii Bodnar"
+  },
+  {
+    "id": "5183504390",
+    "title": "Provider",
+    "space": "NewUM",
+    "modified": "2026-03-03T07:04:44.566Z",
+    "modifiedBy": "Arben Osmani"
   },
   {
     "id": "5186355206",
@@ -126,6 +301,41 @@
     "modifiedBy": "Lauren Smith (Unlicensed)"
   },
   {
+    "id": "5048729601",
+    "title": "26.02.03 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-02-27T14:29:32.045Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5140905985",
+    "title": "26.03.03 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-02-27T14:28:54.398Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5170167809",
+    "title": "PI Planning V1R1",
+    "space": "NewUM",
+    "modified": "2026-02-25T15:35:37.059Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5169610798",
+    "title": "The Payer Hierarchy Chain — Deep Explanation",
+    "space": "NewUM",
+    "modified": "2026-02-24T17:13:58.412Z",
+    "modifiedBy": "Michal Mucha"
+  },
+  {
+    "id": "5148442722",
+    "title": "Drugs",
+    "space": "NewUM",
+    "modified": "2026-02-24T08:17:58.938Z",
+    "modifiedBy": "Arben Osmani"
+  },
+  {
     "id": "5157158955",
     "title": "ITOps Managed Tools Catalog",
     "space": "ITOPS",
@@ -133,220 +343,10 @@
     "modifiedBy": "Brett Rimato"
   },
   {
-    "id": "4642144267",
-    "title": "AP Integration Backlog Tracking",
-    "space": "PM",
-    "modified": "2026-02-06T17:42:13.141Z",
-    "modifiedBy": "Nichole Cole"
-  },
-  {
-    "id": "5093916730",
-    "title": "Reopens-  2025 Reporting Escalation for Devoted",
-    "space": "PM",
-    "modified": "2026-02-02T16:57:26.925Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "5076221956",
-    "title": "BCBSMI Gold Carding Requirements",
-    "space": "PM",
-    "modified": "2026-01-29T15:02:08.148Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "3294625793",
-    "title": "Site of Care",
-    "space": "PM",
-    "modified": "2026-01-27T21:38:28.717Z",
-    "modifiedBy": "Alison Stamp"
-  },
-  {
-    "id": "3190489100",
-    "title": "EPIC - Full Delegation: Reconsiderations, Appeals, Reopens Module - ARCHIVED",
-    "space": "PM",
-    "modified": "2026-01-20T17:48:54.978Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "3396632579",
-    "title": "ITOps/InfoSec/DevOps Software Onboarding Process",
-    "space": "IS",
-    "modified": "2026-01-15T19:08:11.146Z",
-    "modifiedBy": "Brett Rimato"
-  },
-  {
-    "id": "4976607233",
-    "title": "Retrospective & Concurrent Reviews",
-    "space": "PM",
-    "modified": "2026-01-15T03:07:35.717Z",
-    "modifiedBy": "Alison Stamp"
-  },
-  {
-    "id": "4541644827",
-    "title": "CMS Ruling 2025 - CMS Interoperability and Prior Authorization Final Rule (CMS-0057-F)",
-    "space": "PM",
-    "modified": "2025-12-29T17:24:30.157Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "4982800402",
-    "title": "Devoted | Automate OON Process | Discovery",
-    "space": "PM",
-    "modified": "2025-12-26T15:49:52.924Z",
-    "modifiedBy": "Jisha James"
-  },
-  {
-    "id": "4982702123",
-    "title": "Devoted | Automate OON Process | Discovery | GMT Proprietary Codes",
-    "space": "PM",
-    "modified": "2025-12-26T15:49:41.408Z",
-    "modifiedBy": "Jisha James"
-  },
-  {
-    "id": "4411916304",
-    "title": "Gold Carding",
-    "space": "PM",
-    "modified": "2025-12-18T18:16:26.942Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4780654612",
-    "title": "Interoperability Report Business Requirements",
-    "space": "AT",
-    "modified": "2025-12-04T14:58:47.176Z",
-    "modifiedBy": "Elise Klein"
-  },
-  {
-    "id": "4589715474",
-    "title": "Client Report Suite",
-    "space": "AT",
-    "modified": "2025-12-03T04:01:12.075Z",
-    "modifiedBy": "Heta Singh"
-  },
-  {
-    "id": "4911366148",
-    "title": "Cambia Notifications",
-    "space": "PM",
-    "modified": "2025-12-02T23:04:44.170Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "3776577567",
-    "title": "Agile Ceremonies Schedule",
-    "space": "AT",
-    "modified": "2025-12-02T15:16:13.592Z",
-    "modifiedBy": "Heta Singh"
-  },
-  {
-    "id": "4911529986",
-    "title": "Cambia",
-    "space": "PM",
-    "modified": "2025-11-26T16:15:08.035Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4817223731",
-    "title": "No-Touch Automation for Case Determations (Auto-Approvals, OOS, PA Exempt)",
-    "space": "PM",
-    "modified": "2025-11-24T21:34:01.643Z",
-    "modifiedBy": "Alison Stamp"
-  },
-  {
-    "id": "4881350674",
-    "title": "Excellus Site of Care",
-    "space": "PM",
-    "modified": "2025-11-24T21:16:59.877Z",
-    "modifiedBy": "Alison Stamp"
-  },
-  {
-    "id": "4886331397",
-    "title": "MVP Gold Carding (Cambia Go-Live 1/1/2026)",
-    "space": "PM",
-    "modified": "2025-11-18T14:43:03.495Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4866932804",
-    "title": "Blue KC Formulary Mapping",
-    "space": "PM",
-    "modified": "2025-11-11T20:21:17.570Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4868177934",
-    "title": "Formulary Files",
-    "space": "PM",
-    "modified": "2025-11-11T20:14:38.097Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4868472874",
-    "title": "Blue Cross Blue Shield of Kansas City",
-    "space": "PM",
-    "modified": "2025-11-11T20:13:41.788Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4830953474",
-    "title": "Technical suggestions for TAT frameworks",
-    "space": "PM",
-    "modified": "2025-10-31T12:32:11.124Z",
-    "modifiedBy": "Vasyl Sikoryn"
-  },
-  {
-    "id": "4825382924",
-    "title": "Business Rule Engine Description for TAT timers",
-    "space": "PM",
-    "modified": "2025-10-30T09:24:05.591Z",
-    "modifiedBy": "Vasyl Sikoryn"
-  },
-  {
-    "id": "4822794262",
-    "title": "Delegated Medicare Appeals",
-    "space": "AT",
-    "modified": "2025-10-29T17:03:59.616Z",
-    "modifiedBy": "Michael Sparace"
-  },
-  {
-    "id": "4473552961",
-    "title": "Discovery: Consolidated TAT Framework",
-    "space": "PM",
-    "modified": "2025-10-27T17:58:38.964Z",
-    "modifiedBy": "Sofia Panfilova"
-  },
-  {
-    "id": "4348084507",
-    "title": "MATIS Deemed Approval Phase 2",
-    "space": "PM",
-    "modified": "2025-10-24T17:46:09.866Z",
-    "modifiedBy": "Anastasia Khmelovska"
-  },
-  {
-    "id": "4673404944",
-    "title": "Code, Outputs & Change Log",
-    "space": "AT",
-    "modified": "2025-09-30T21:15:58.697Z",
-    "modifiedBy": "mgarcia"
-  },
-  {
-    "id": "4745953336",
-    "title": "P32 Workflow Update: External End User-Access",
-    "space": "PM",
-    "modified": "2025-09-29T20:32:41.903Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4745887824",
-    "title": "9/29/2025 Meeting Notes",
-    "space": "PM",
-    "modified": "2025-09-29T20:25:36.185Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "4746543212",
-    "title": "Client Implementations - MATIS",
-    "space": "PM",
-    "modified": "2025-09-29T18:41:52.428Z",
-    "modifiedBy": "Chelsea Sabbato"
+    "id": "5148409926",
+    "title": "Terminology",
+    "space": "NewUM",
+    "modified": "2026-02-23T11:55:58.042Z",
+    "modifiedBy": "Michal Mucha"
   }
 ]

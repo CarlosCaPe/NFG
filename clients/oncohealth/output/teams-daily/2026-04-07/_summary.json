@@ -1,0 +1,50 @@
+{
+  "date": "2026-04-07",
+  "started": "2026-04-07T20:30:38.358Z",
+  "channels": {},
+  "chats": {
+    "Data team - daily": {
+      "chars": 5890,
+      "messages": 23,
+      "file": "Data-team---daily.txt"
+    },
+    "Eligibility - Person/Member workshop": {
+      "chars": 30440,
+      "messages": 12,
+      "file": "Eligibility---Person-Member-workshop.txt"
+    },
+    "Payer taxonomy workshop": {
+      "chars": 573,
+      "messages": 2,
+      "file": "Payer-taxonomy-workshop.txt"
+    },
+    "Databricks Lakeflow Connect": {
+      "chars": 2667,
+      "messages": "(fallback)",
+      "file": "Databricks-Lakeflow-Connect.txt"
+    },
+    "Provider Discussion": {
+      "chars": 2660,
+      "messages": 8,
+      "file": "Provider-Discussion.txt"
+    },
+    "Claude": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Erik and Michal": {
+      "chars": 799,
+      "messages": 10,
+      "file": "Erik-and-Michal.txt"
+    },
+    "Eligibility": {
+      "chars": 286,
+      "messages": 6,
+      "file": "Eligibility.txt"
+    }
+  },
+  "calendar": {},
+  "transcripts": {},
+  "total_chars": 43315,
+  "completed": "2026-04-07T20:35:34.333Z"
+}
