@@ -1,0 +1,1002 @@
+{
+  "table": "newum_migration_test.eligibility.eligibilitydata",
+  "captured": "2026-04-08T21:32:09.024Z",
+  "mode": "sql",
+  "warehouse": "Starter Warehouse",
+  "columns": [
+    {
+      "name": "EligibilityDataID",
+      "type": "LONG"
+    },
+    {
+      "name": "CreatedOn",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "CreatedBy",
+      "type": "STRING"
+    },
+    {
+      "name": "ModifiedOn",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "ModifiedBy",
+      "type": "STRING"
+    },
+    {
+      "name": "InsuranceProviderID",
+      "type": "INT"
+    },
+    {
+      "name": "PlatformCode",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupID",
+      "type": "STRING"
+    },
+    {
+      "name": "LegacySystemSourceCustomerCoverageKey",
+      "type": "STRING"
+    },
+    {
+      "name": "MemberID",
+      "type": "STRING"
+    },
+    {
+      "name": "SubscriberSSN",
+      "type": "STRING"
+    },
+    {
+      "name": "DependentSSN",
+      "type": "STRING"
+    },
+    {
+      "name": "MedicaidNumber",
+      "type": "STRING"
+    },
+    {
+      "name": "ODSMemberGeneratedKey",
+      "type": "STRING"
+    },
+    {
+      "name": "LastName",
+      "type": "STRING"
+    },
+    {
+      "name": "FirstName",
+      "type": "STRING"
+    },
+    {
+      "name": "MiddleInitial",
+      "type": "STRING"
+    },
+    {
+      "name": "Gender",
+      "type": "STRING"
+    },
+    {
+      "name": "BirthDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "CoverageEffectiveDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "CoverageEndDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "AddressLine1",
+      "type": "STRING"
+    },
+    {
+      "name": "AddressLine2",
+      "type": "STRING"
+    },
+    {
+      "name": "City",
+      "type": "STRING"
+    },
+    {
+      "name": "State",
+      "type": "STRING"
+    },
+    {
+      "name": "ZipCode",
+      "type": "STRING"
+    },
+    {
+      "name": "ZipPlusCode",
+      "type": "STRING"
+    },
+    {
+      "name": "Phone",
+      "type": "STRING"
+    },
+    {
+      "name": "RelationshipCodeID",
+      "type": "INT"
+    },
+    {
+      "name": "CoverageTypeID",
+      "type": "INT"
+    },
+    {
+      "name": "LegacySystemSourceProdPlanKey",
+      "type": "STRING"
+    },
+    {
+      "name": "MajorLineOfBusiness",
+      "type": "STRING"
+    },
+    {
+      "name": "PlanDescription",
+      "type": "STRING"
+    },
+    {
+      "name": "SellingLedger",
+      "type": "STRING"
+    },
+    {
+      "name": "ASOIndicator",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "GroupName",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupAddressLine1",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupAddressLine2",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupCity",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupState",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupZip",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupZipPlusCode",
+      "type": "STRING"
+    },
+    {
+      "name": "GroupContractEffectiveDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "GroupContractEndDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "PCPName",
+      "type": "STRING"
+    },
+    {
+      "name": "PCPID",
+      "type": "STRING"
+    },
+    {
+      "name": "PCPEffectiveDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "LeasedNetworkCode",
+      "type": "STRING"
+    },
+    {
+      "name": "ServiceFundPCPCenterLedger",
+      "type": "STRING"
+    },
+    {
+      "name": "ConsolidatedMarketNumber",
+      "type": "STRING"
+    },
+    {
+      "name": "RadiologyMktName",
+      "type": "STRING"
+    },
+    {
+      "name": "PCPGrouperNumber",
+      "type": "STRING"
+    },
+    {
+      "name": "PsychCode",
+      "type": "STRING"
+    },
+    {
+      "name": "CountyCode",
+      "type": "STRING"
+    },
+    {
+      "name": "ServFundLOBCode",
+      "type": "STRING"
+    },
+    {
+      "name": "ActionIndicator",
+      "type": "STRING"
+    },
+    {
+      "name": "ContractNumber",
+      "type": "STRING"
+    },
+    {
+      "name": "PBPID",
+      "type": "STRING"
+    },
+    {
+      "name": "SegID",
+      "type": "STRING"
+    },
+    {
+      "name": "RiskArrangement",
+      "type": "STRING"
+    },
+    {
+      "name": "RiskIndicator",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "StateOfIssue",
+      "type": "STRING"
+    },
+    {
+      "name": "ExchangeIdentifier",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "SpecialtyIndicator",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "FinProdCode",
+      "type": "STRING"
+    },
+    {
+      "name": "FinSubCode",
+      "type": "STRING"
+    },
+    {
+      "name": "WorkPhone",
+      "type": "STRING"
+    },
+    {
+      "name": "WorkPhoneExtension",
+      "type": "STRING"
+    },
+    {
+      "name": "MobilePhone",
+      "type": "STRING"
+    },
+    {
+      "name": "AppointmentOfRepresentative",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "RepresentativeFirstName",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeLastName",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeAddressLine1",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeAddressLine2",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeCity",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeState",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeZipCode",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeZipPlusCode",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeRelationshipCodeID",
+      "type": "INT"
+    },
+    {
+      "name": "RepresentativeHomePhone",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeWorkPhone",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeWorkPhoneExtension",
+      "type": "STRING"
+    },
+    {
+      "name": "RepresentativeMobilePhone",
+      "type": "STRING"
+    },
+    {
+      "name": "OutOfNetworkBenefit",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "PreferredLanguageCodeID",
+      "type": "INT"
+    },
+    {
+      "name": "CarrierID",
+      "type": "STRING"
+    },
+    {
+      "name": "AccountID",
+      "type": "STRING"
+    },
+    {
+      "name": "PharmacyGroupID",
+      "type": "STRING"
+    },
+    {
+      "name": "OutOfArea",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "ProductOfferCode",
+      "type": "STRING"
+    },
+    {
+      "name": "LegalEntity",
+      "type": "STRING"
+    },
+    {
+      "name": "Division",
+      "type": "STRING"
+    },
+    {
+      "name": "ProductLine",
+      "type": "STRING"
+    },
+    {
+      "name": "MedicareBeneficiaryID",
+      "type": "STRING"
+    },
+    {
+      "name": "Deleted",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "DeletedBy",
+      "type": "STRING"
+    },
+    {
+      "name": "DeletedOn",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "Checksum",
+      "type": "INT"
+    },
+    {
+      "name": "DualEligibilityStatus",
+      "type": "STRING"
+    },
+    {
+      "name": "ProductType",
+      "type": "STRING"
+    },
+    {
+      "name": "FormularyName",
+      "type": "STRING"
+    },
+    {
+      "name": "HashValue",
+      "type": "STRING"
+    },
+    {
+      "name": "OutOfAreaCategory",
+      "type": "STRING"
+    },
+    {
+      "name": "AccessibilityPreference",
+      "type": "STRING"
+    },
+    {
+      "name": "HasMedicalBenefits",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "HasPharmacyBenefits",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "PrescriptionBenefitCarveOutIndicator",
+      "type": "BOOLEAN"
+    },
+    {
+      "name": "PrescriptionBenefitCarveOutEffectiveStartDate",
+      "type": "TIMESTAMP"
+    },
+    {
+      "name": "PrescriptionBenefitCarveOutEffectiveEndDate",
+      "type": "TIMESTAMP"
+    }
+  ],
+  "row_count": 5,
+  "sample_rows": [
+    {
+      "EligibilityDataID": "1",
+      "CreatedOn": "2023-02-10T15:12:07.763Z",
+      "CreatedBy": "adf-interop",
+      "ModifiedOn": null,
+      "ModifiedBy": null,
+      "InsuranceProviderID": "12",
+      "PlatformCode": null,
+      "GroupID": "051470",
+      "LegacySystemSourceCustomerCoverageKey": null,
+      "MemberID": "OAD9AF66B660",
+      "SubscriberSSN": null,
+      "DependentSSN": null,
+      "MedicaidNumber": null,
+      "ODSMemberGeneratedKey": "Redacted",
+      "LastName": "Mohr",
+      "FirstName": "Cesar",
+      "MiddleInitial": "R",
+      "Gender": "M",
+      "BirthDate": "1991-05-02T00:00:00.000Z",
+      "CoverageEffectiveDate": "2022-01-01T00:00:00.000Z",
+      "CoverageEndDate": null,
+      "AddressLine1": "62986 Marvin Prairie",
+      "AddressLine2": "Suite 158",
+      "City": "Port Lisaview",
+      "State": "NC",
+      "ZipCode": "27765",
+      "ZipPlusCode": null,
+      "Phone": "5555406028",
+      "RelationshipCodeID": "1",
+      "CoverageTypeID": null,
+      "LegacySystemSourceProdPlanKey": null,
+      "MajorLineOfBusiness": "SHMO",
+      "PlanDescription": "HMO Small Group",
+      "SellingLedger": null,
+      "ASOIndicator": "true",
+      "GroupName": "Company 003637",
+      "GroupAddressLine1": null,
+      "GroupAddressLine2": null,
+      "GroupCity": "North Lurline",
+      "GroupState": "WV",
+      "GroupZip": "18461",
+      "GroupZipPlusCode": null,
+      "GroupContractEffectiveDate": "2021-01-01T00:00:00.000Z",
+      "GroupContractEndDate": null,
+      "PCPName": null,
+      "PCPID": null,
+      "PCPEffectiveDate": null,
+      "LeasedNetworkCode": null,
+      "ServiceFundPCPCenterLedger": null,
+      "ConsolidatedMarketNumber": null,
+      "RadiologyMktName": null,
+      "PCPGrouperNumber": null,
+      "PsychCode": null,
+      "CountyCode": null,
+      "ServFundLOBCode": null,
+      "ActionIndicator": null,
+      "ContractNumber": null,
+      "PBPID": null,
+      "SegID": null,
+      "RiskArrangement": null,
+      "RiskIndicator": "true",
+      "StateOfIssue": "TX",
+      "ExchangeIdentifier": "false",
+      "SpecialtyIndicator": "false",
+      "FinProdCode": null,
+      "FinSubCode": null,
+      "WorkPhone": null,
+      "WorkPhoneExtension": null,
+      "MobilePhone": null,
+      "AppointmentOfRepresentative": null,
+      "RepresentativeFirstName": null,
+      "RepresentativeLastName": null,
+      "RepresentativeAddressLine1": null,
+      "RepresentativeAddressLine2": null,
+      "RepresentativeCity": null,
+      "RepresentativeState": null,
+      "RepresentativeZipCode": null,
+      "RepresentativeZipPlusCode": null,
+      "RepresentativeRelationshipCodeID": null,
+      "RepresentativeHomePhone": null,
+      "RepresentativeWorkPhone": null,
+      "RepresentativeWorkPhoneExtension": null,
+      "RepresentativeMobilePhone": null,
+      "OutOfNetworkBenefit": "false",
+      "PreferredLanguageCodeID": null,
+      "CarrierID": null,
+      "AccountID": null,
+      "PharmacyGroupID": null,
+      "OutOfArea": null,
+      "ProductOfferCode": "BSW Preferred HMO",
+      "LegalEntity": null,
+      "Division": null,
+      "ProductLine": "SWHP",
+      "MedicareBeneficiaryID": null,
+      "Deleted": "false",
+      "DeletedBy": null,
+      "DeletedOn": null,
+      "Checksum": null,
+      "DualEligibilityStatus": null,
+      "ProductType": null,
+      "FormularyName": null,
+      "HashValue": null,
+      "OutOfAreaCategory": null,
+      "AccessibilityPreference": null,
+      "HasMedicalBenefits": null,
+      "HasPharmacyBenefits": null,
+      "PrescriptionBenefitCarveOutIndicator": null,
+      "PrescriptionBenefitCarveOutEffectiveStartDate": null,
+      "PrescriptionBenefitCarveOutEffectiveEndDate": null
+    },
+    {
+      "EligibilityDataID": "2",
+      "CreatedOn": "2023-02-10T15:12:07.763Z",
+      "CreatedBy": "adf-interop",
+      "ModifiedOn": null,
+      "ModifiedBy": null,
+      "InsuranceProviderID": "12",
+      "PlatformCode": null,
+      "GroupID": "051470",
+      "LegacySystemSourceCustomerCoverageKey": null,
+      "MemberID": "OAD9AF66B660",
+      "SubscriberSSN": null,
+      "DependentSSN": null,
+      "MedicaidNumber": null,
+      "ODSMemberGeneratedKey": "Redacted",
+      "LastName": "Wilkinson",
+      "FirstName": "Neil",
+      "MiddleInitial": "R",
+      "Gender": "M",
+      "BirthDate": "1995-01-15T00:00:00.000Z",
+      "CoverageEffectiveDate": "2022-01-01T00:00:00.000Z",
+      "CoverageEndDate": "2023-01-01T00:00:00.000Z",
+      "AddressLine1": "558 Mohammed Fields",
+      "AddressLine2": "Suite 236",
+      "City": "South Jaquanhaven",
+      "State": "MD",
+      "ZipCode": "31954",
+      "ZipPlusCode": null,
+      "Phone": "5551051480",
+      "RelationshipCodeID": "1",
+      "CoverageTypeID": null,
+      "LegacySystemSourceProdPlanKey": null,
+      "MajorLineOfBusiness": "SHMO",
+      "PlanDescription": "HMO Small Group",
+      "SellingLedger": null,
+      "ASOIndicator": "true",
+      "GroupName": "Company 003637",
+      "GroupAddressLine1": null,
+      "GroupAddressLine2": null,
+      "GroupCity": "North Lurline",
+      "GroupState": "WV",
+      "GroupZip": "18461",
+      "GroupZipPlusCode": null,
+      "GroupContractEffectiveDate": "2021-01-01T00:00:00.000Z",
+      "GroupContractEndDate": null,
+      "PCPName": null,
+      "PCPID": null,
+      "PCPEffectiveDate": null,
+      "LeasedNetworkCode": null,
+      "ServiceFundPCPCenterLedger": null,
+      "ConsolidatedMarketNumber": null,
+      "RadiologyMktName": null,
+      "PCPGrouperNumber": null,
+      "PsychCode": null,
+      "CountyCode": null,
+      "ServFundLOBCode": null,
+      "ActionIndicator": null,
+      "ContractNumber": null,
+      "PBPID": null,
+      "SegID": null,
+      "RiskArrangement": null,
+      "RiskIndicator": "true",
+      "StateOfIssue": "TX",
+      "ExchangeIdentifier": "false",
+      "SpecialtyIndicator": "false",
+      "FinProdCode": null,
+      "FinSubCode": null,
+      "WorkPhone": null,
+      "WorkPhoneExtension": null,
+      "MobilePhone": null,
+      "AppointmentOfRepresentative": null,
+      "RepresentativeFirstName": null,
+      "RepresentativeLastName": null,
+      "RepresentativeAddressLine1": null,
+      "RepresentativeAddressLine2": null,
+      "RepresentativeCity": null,
+      "RepresentativeState": null,
+      "RepresentativeZipCode": null,
+      "RepresentativeZipPlusCode": null,
+      "RepresentativeRelationshipCodeID": null,
+      "RepresentativeHomePhone": null,
+      "RepresentativeWorkPhone": null,
+      "RepresentativeWorkPhoneExtension": null,
+      "RepresentativeMobilePhone": null,
+      "OutOfNetworkBenefit": "false",
+      "PreferredLanguageCodeID": null,
+      "CarrierID": null,
+      "AccountID": null,
+      "PharmacyGroupID": null,
+      "OutOfArea": null,
+      "ProductOfferCode": "BSW Preferred HMO",
+      "LegalEntity": null,
+      "Division": null,
+      "ProductLine": "SWHP",
+      "MedicareBeneficiaryID": null,
+      "Deleted": "false",
+      "DeletedBy": null,
+      "DeletedOn": null,
+      "Checksum": null,
+      "DualEligibilityStatus": null,
+      "ProductType": null,
+      "FormularyName": null,
+      "HashValue": null,
+      "OutOfAreaCategory": null,
+      "AccessibilityPreference": null,
+      "HasMedicalBenefits": null,
+      "HasPharmacyBenefits": null,
+      "PrescriptionBenefitCarveOutIndicator": null,
+      "PrescriptionBenefitCarveOutEffectiveStartDate": null,
+      "PrescriptionBenefitCarveOutEffectiveEndDate": null
+    },
+    {
+      "EligibilityDataID": "3",
+      "CreatedOn": "2023-02-10T15:12:07.763Z",
+      "CreatedBy": "adf-interop",
+      "ModifiedOn": null,
+      "ModifiedBy": null,
+      "InsuranceProviderID": "12",
+      "PlatformCode": null,
+      "GroupID": "051590",
+      "LegacySystemSourceCustomerCoverageKey": null,
+      "MemberID": "OAB660983928",
+      "SubscriberSSN": null,
+      "DependentSSN": null,
+      "MedicaidNumber": null,
+      "ODSMemberGeneratedKey": "Redacted",
+      "LastName": "Kovacek",
+      "FirstName": "Jill",
+      "MiddleInitial": "S",
+      "Gender": "M",
+      "BirthDate": "1965-10-06T00:00:00.000Z",
+      "CoverageEffectiveDate": "2022-01-01T00:00:00.000Z",
+      "CoverageEndDate": "2023-01-01T00:00:00.000Z",
+      "AddressLine1": "3857 Veda Lake",
+      "AddressLine2": "Suite 400",
+      "City": "South Kevinview",
+      "State": "WI",
+      "ZipCode": "13217",
+      "ZipPlusCode": null,
+      "Phone": "5557028096",
+      "RelationshipCodeID": "1",
+      "CoverageTypeID": null,
+      "LegacySystemSourceProdPlanKey": null,
+      "MajorLineOfBusiness": "SHMO",
+      "PlanDescription": "HMO Small Group",
+      "SellingLedger": null,
+      "ASOIndicator": "false",
+      "GroupName": "Company 018902",
+      "GroupAddressLine1": null,
+      "GroupAddressLine2": null,
+      "GroupCity": "Lake Josefastad",
+      "GroupState": "TN",
+      "GroupZip": "51861",
+      "GroupZipPlusCode": null,
+      "GroupContractEffectiveDate": "2021-01-01T00:00:00.000Z",
+      "GroupContractEndDate": null,
+      "PCPName": null,
+      "PCPID": null,
+      "PCPEffectiveDate": null,
+      "LeasedNetworkCode": null,
+      "ServiceFundPCPCenterLedger": null,
+      "ConsolidatedMarketNumber": null,
+      "RadiologyMktName": null,
+      "PCPGrouperNumber": null,
+      "PsychCode": null,
+      "CountyCode": null,
+      "ServFundLOBCode": null,
+      "ActionIndicator": null,
+      "ContractNumber": null,
+      "PBPID": null,
+      "SegID": null,
+      "RiskArrangement": null,
+      "RiskIndicator": "true",
+      "StateOfIssue": "TX",
+      "ExchangeIdentifier": "false",
+      "SpecialtyIndicator": "false",
+      "FinProdCode": null,
+      "FinSubCode": null,
+      "WorkPhone": null,
+      "WorkPhoneExtension": null,
+      "MobilePhone": null,
+      "AppointmentOfRepresentative": null,
+      "RepresentativeFirstName": null,
+      "RepresentativeLastName": null,
+      "RepresentativeAddressLine1": null,
+      "RepresentativeAddressLine2": null,
+      "RepresentativeCity": null,
+      "RepresentativeState": null,
+      "RepresentativeZipCode": null,
+      "RepresentativeZipPlusCode": null,
+      "RepresentativeRelationshipCodeID": null,
+      "RepresentativeHomePhone": null,
+      "RepresentativeWorkPhone": null,
+      "RepresentativeWorkPhoneExtension": null,
+      "RepresentativeMobilePhone": null,
+      "OutOfNetworkBenefit": "false",
+      "PreferredLanguageCodeID": null,
+      "CarrierID": null,
+      "AccountID": null,
+      "PharmacyGroupID": null,
+      "OutOfArea": null,
+      "ProductOfferCode": "BSW Preferred HMO",
+      "LegalEntity": null,
+      "Division": null,
+      "ProductLine": "SWHP",
+      "MedicareBeneficiaryID": null,
+      "Deleted": "false",
+      "DeletedBy": null,
+      "DeletedOn": null,
+      "Checksum": null,
+      "DualEligibilityStatus": null,
+      "ProductType": null,
+      "FormularyName": null,
+      "HashValue": null,
+      "OutOfAreaCategory": null,
+      "AccessibilityPreference": null,
+      "HasMedicalBenefits": null,
+      "HasPharmacyBenefits": null,
+      "PrescriptionBenefitCarveOutIndicator": null,
+      "PrescriptionBenefitCarveOutEffectiveStartDate": null,
+      "PrescriptionBenefitCarveOutEffectiveEndDate": null
+    },
+    {
+      "EligibilityDataID": "4",
+      "CreatedOn": "2023-02-10T15:12:07.763Z",
+      "CreatedBy": "adf-interop",
+      "ModifiedOn": null,
+      "ModifiedBy": null,
+      "InsuranceProviderID": "12",
+      "PlatformCode": null,
+      "GroupID": "053580",
+      "LegacySystemSourceCustomerCoverageKey": null,
+      "MemberID": "OA280A71C5A5",
+      "SubscriberSSN": null,
+      "DependentSSN": null,
+      "MedicaidNumber": null,
+      "ODSMemberGeneratedKey": "Redacted",
+      "LastName": "Greenfelder",
+      "FirstName": "Frances",
+      "MiddleInitial": "A",
+      "Gender": "F",
+      "BirthDate": "1975-09-12T00:00:00.000Z",
+      "CoverageEffectiveDate": "2022-01-01T00:00:00.000Z",
+      "CoverageEndDate": null,
+      "AddressLine1": "1909 Durgan Course",
+      "AddressLine2": "Apt. 807",
+      "City": "Lake Brant",
+      "State": "DE",
+      "ZipCode": "51277",
+      "ZipPlusCode": null,
+      "Phone": "5553874397",
+      "RelationshipCodeID": "2",
+      "CoverageTypeID": null,
+      "LegacySystemSourceProdPlanKey": null,
+      "MajorLineOfBusiness": "SHMO",
+      "PlanDescription": "POS Small Group",
+      "SellingLedger": null,
+      "ASOIndicator": "false",
+      "GroupName": "Company 045264",
+      "GroupAddressLine1": null,
+      "GroupAddressLine2": null,
+      "GroupCity": "MacGyverton",
+      "GroupState": "FL",
+      "GroupZip": "71573",
+      "GroupZipPlusCode": null,
+      "GroupContractEffectiveDate": "2021-01-01T00:00:00.000Z",
+      "GroupContractEndDate": null,
+      "PCPName": null,
+      "PCPID": null,
+      "PCPEffectiveDate": null,
+      "LeasedNetworkCode": null,
+      "ServiceFundPCPCenterLedger": null,
+      "ConsolidatedMarketNumber": null,
+      "RadiologyMktName": null,
+      "PCPGrouperNumber": null,
+      "PsychCode": null,
+      "CountyCode": null,
+      "ServFundLOBCode": null,
+      "ActionIndicator": null,
+      "ContractNumber": null,
+      "PBPID": null,
+      "SegID": null,
+      "RiskArrangement": null,
+      "RiskIndicator": "true",
+      "StateOfIssue": "TX",
+      "ExchangeIdentifier": "false",
+      "SpecialtyIndicator": "false",
+      "FinProdCode": null,
+      "FinSubCode": null,
+      "WorkPhone": null,
+      "WorkPhoneExtension": null,
+      "MobilePhone": null,
+      "AppointmentOfRepresentative": null,
+      "RepresentativeFirstName": null,
+      "RepresentativeLastName": null,
+      "RepresentativeAddressLine1": null,
+      "RepresentativeAddressLine2": null,
+      "RepresentativeCity": null,
+      "RepresentativeState": null,
+      "RepresentativeZipCode": null,
+      "RepresentativeZipPlusCode": null,
+      "RepresentativeRelationshipCodeID": null,
+      "RepresentativeHomePhone": null,
+      "RepresentativeWorkPhone": null,
+      "RepresentativeWorkPhoneExtension": null,
+      "RepresentativeMobilePhone": null,
+      "OutOfNetworkBenefit": "false",
+      "PreferredLanguageCodeID": null,
+      "CarrierID": null,
+      "AccountID": null,
+      "PharmacyGroupID": null,
+      "OutOfArea": null,
+      "ProductOfferCode": "BSW Plus HMO",
+      "LegalEntity": null,
+      "Division": null,
+      "ProductLine": "SWHP",
+      "MedicareBeneficiaryID": null,
+      "Deleted": "false",
+      "DeletedBy": null,
+      "DeletedOn": null,
+      "Checksum": null,
+      "DualEligibilityStatus": null,
+      "ProductType": null,
+      "FormularyName": null,
+      "HashValue": null,
+      "OutOfAreaCategory": null,
+      "AccessibilityPreference": null,
+      "HasMedicalBenefits": null,
+      "HasPharmacyBenefits": null,
+      "PrescriptionBenefitCarveOutIndicator": null,
+      "PrescriptionBenefitCarveOutEffectiveStartDate": null,
+      "PrescriptionBenefitCarveOutEffectiveEndDate": null
+    },
+    {
+      "EligibilityDataID": "5",
+      "CreatedOn": "2023-02-10T15:12:07.763Z",
+      "CreatedBy": "adf-interop",
+      "ModifiedOn": null,
+      "ModifiedBy": null,
+      "InsuranceProviderID": "12",
+      "PlatformCode": null,
+      "GroupID": "051590",
+      "LegacySystemSourceCustomerCoverageKey": null,
+      "MemberID": "OAB660983928",
+      "SubscriberSSN": null,
+      "DependentSSN": null,
+      "MedicaidNumber": null,
+      "ODSMemberGeneratedKey": "Redacted",
+      "LastName": "Prohaska",
+      "FirstName": "Kent",
+      "MiddleInitial": "S",
+      "Gender": "M",
+      "BirthDate": "1954-04-17T00:00:00.000Z",
+      "CoverageEffectiveDate": "2022-01-01T00:00:00.000Z",
+      "CoverageEndDate": null,
+      "AddressLine1": "5082 Heidenreich Run",
+      "AddressLine2": "Apt. 464",
+      "City": "South Amosbury",
+      "State": "TX",
+      "ZipCode": "34630",
+      "ZipPlusCode": null,
+      "Phone": "5551392679",
+      "RelationshipCodeID": "1",
+      "CoverageTypeID": null,
+      "LegacySystemSourceProdPlanKey": null,
+      "MajorLineOfBusiness": "SHMO",
+      "PlanDescription": "HMO Small Group",
+      "SellingLedger": null,
+      "ASOIndicator": "false",
+      "GroupName": "Company 018902",
+      "GroupAddressLine1": null,
+      "GroupAddressLine2": null,
+      "GroupCity": "Lake Josefastad",
+      "GroupState": "TN",
+      "GroupZip": "51861",
+      "GroupZipPlusCode": null,
+      "GroupContractEffectiveDate": "2021-01-01T00:00:00.000Z",
+      "GroupContractEndDate": null,
+      "PCPName": null,
+      "PCPID": null,
+      "PCPEffectiveDate": null,
+      "LeasedNetworkCode": null,
+      "ServiceFundPCPCenterLedger": null,
+      "ConsolidatedMarketNumber": null,
+      "RadiologyMktName": null,
+      "PCPGrouperNumber": null,
+      "PsychCode": null,
+      "CountyCode": null,
+      "ServFundLOBCode": null,
+      "ActionIndicator": null,
+      "ContractNumber": null,
+      "PBPID": null,
+      "SegID": null,
+      "RiskArrangement": null,
+      "RiskIndicator": "true",
+      "StateOfIssue": "TX",
+      "ExchangeIdentifier": "false",
+      "SpecialtyIndicator": "false",
+      "FinProdCode": null,
+      "FinSubCode": null,
+      "WorkPhone": null,
+      "WorkPhoneExtension": null,
+      "MobilePhone": null,
+      "AppointmentOfRepresentative": null,
+      "RepresentativeFirstName": null,
+      "RepresentativeLastName": null,
+      "RepresentativeAddressLine1": null,
+      "RepresentativeAddressLine2": null,
+      "RepresentativeCity": null,
+      "RepresentativeState": null,
+      "RepresentativeZipCode": null,
+      "RepresentativeZipPlusCode": null,
+      "RepresentativeRelationshipCodeID": null,
+      "RepresentativeHomePhone": null,
+      "RepresentativeWorkPhone": null,
+      "RepresentativeWorkPhoneExtension": null,
+      "RepresentativeMobilePhone": null,
+      "OutOfNetworkBenefit": "false",
+      "PreferredLanguageCodeID": null,
+      "CarrierID": null,
+      "AccountID": null,
+      "PharmacyGroupID": null,
+      "OutOfArea": null,
+      "ProductOfferCode": "BSW Preferred HMO",
+      "LegalEntity": null,
+      "Division": null,
+      "ProductLine": "SWHP",
+      "MedicareBeneficiaryID": null,
+      "Deleted": "false",
+      "DeletedBy": null,
+      "DeletedOn": null,
+      "Checksum": null,
+      "DualEligibilityStatus": null,
+      "ProductType": null,
+      "FormularyName": null,
+      "HashValue": null,
+      "OutOfAreaCategory": null,
+      "AccessibilityPreference": null,
+      "HasMedicalBenefits": null,
+      "HasPharmacyBenefits": null,
+      "PrescriptionBenefitCarveOutIndicator": null,
+      "PrescriptionBenefitCarveOutEffectiveStartDate": null,
+      "PrescriptionBenefitCarveOutEffectiveEndDate": null
+    }
+  ]
+}

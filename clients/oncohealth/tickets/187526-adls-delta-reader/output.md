@@ -134,30 +134,50 @@ node shared/read-delta-adls.js --client oncohealth --mode sql --verbose
 | app-cc28t0 new-data-api | 90336730-f2e6-4960-adcd-a890cf092a20 | Data API access |
 | databricks_workspace_dev | 6f46a974-c1a5-4e9a-8f56-0563fc32f19b | Dev workspace |
 
-## POC Validation (Dry-Run)
+## POC Validation
 
-Dry-run executed successfully on April 9, 2026:
+### SQL Statement API — SUCCEEDED (April 8, 2026)
+
+Query executed successfully via Databricks SQL Statement API using existing PAT:
 
 ```
 === Databricks → ADLS → PostgreSQL POC ===
-Client: oncohealth
 Table: newum_migration_test.eligibility.eligibilitydata
-Mode: adls
-Limit: 100 rows
+Mode: sql | Warehouse: Starter Warehouse (RUNNING) | Limit: 5
 
-[1/5] Fetching table metadata → MANAGED / DELTA, 109 columns
-      UniForm/Iceberg: NOT ENABLED
-      Storage Account: ohdatabrickswssadftest
-      Container: datafactorytest
+HTTP: 200 | State: SUCCEEDED
+Columns: 109 | Rows: 5
 
-[2/5] Azure SP credentials: MISSING → falls back to dry-run plan
+Sample row 1:
+  EligibilityDataID: 1
+  CreatedOn: 2023-02-10T15:12:07.763Z
+  CreatedBy: adf-interop
+  InsuranceProviderID: 12
+  GroupID: 051470
+  MemberID: OAD9AF66B660
 
-Prerequisites status:
-  [ ] UniForm enabled on table
-  [ ] Azure SP credentials configured
-  [ ] PostgreSQL TEST credentials
-  [ ] Storage account network access verified
+Saved to: clients/oncohealth/output/databricks/poc-eligibility-sample.json
 ```
+
+**Result**: Full schema (109 columns) and data (238K rows available) readable via SQL Statement API.
+No Azure SP credentials needed for this path — only the existing Databricks PAT.
+
+### ADLS Direct Read — BLOCKED
+
+Azure SP authentication failed:
+- `UsernamePasswordCredential` (ROPC) blocked by MFA policy
+- `DeviceCodeCredential` timed out (device code flow unreliable from terminal)
+- No Azure CLI installed on local machine
+- Waiting on Alex (Q1-Q4) for proper SP credentials
+
+### Approach Decision
+
+| Approach | Auth | Status | Pros | Cons |
+|----------|------|--------|------|------|
+| **SQL Statement API** | Databricks PAT | **WORKING** | No extra auth, uses existing token, full SQL power | Warehouse must be running (costs DBUs), 50s timeout per query |
+| **Direct ADLS read** | Azure SP | BLOCKED | No warehouse needed, direct file access | Needs SP credentials, complex Delta log parsing |
+
+**Recommendation**: Use SQL Statement API for the POC. It's working now, requires no additional credentials, and provides full SQL query capability including JOINs, aggregations, and schema inspection.
 
 ## Next Steps
 

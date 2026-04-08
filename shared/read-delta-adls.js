@@ -148,44 +148,57 @@ async function modeADLS() {
   console.log(`  Storage Account: ${storageAccount}`);
   console.log(`  Table Path: ${tablePath}`);
 
-  // Step 2: Check Azure credentials
-  console.log('\n[2/5] Checking Azure credentials...');
+  // Step 2: Build Azure credential
+  console.log('\n[2/5] Resolving Azure credentials...');
+  const { BlobServiceClient } = require('@azure/storage-blob');
+  const { ClientSecretCredential, InteractiveBrowserCredential, DeviceCodeCredential, UsernamePasswordCredential } = require('@azure/identity');
+
   const tenantId = process.env.AZURE_TENANT_ID;
   const clientId = process.env.AZURE_CLIENT_ID;
   const clientSecret = process.env.AZURE_CLIENT_SECRET;
 
-  if (!tenantId || !clientId || !clientSecret) {
-    console.log('  MISSING — Azure SP credentials not configured.');
-    console.log('  Required env vars: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET');
-    console.log('  Waiting for Alex (DevOps) to provide:');
-    console.log('    Q1: Which auth method for external ADLS reads?');
-    console.log('    Q2: Which SP client_id to use?');
-    console.log('    Q3: External location registration needed?');
-    console.log('    Q4: Is storage account on private endpoint?');
-    console.log('');
-    console.log('  Known SPs in workspace:');
-    console.log('    - databricks_airflow_sp_test (6759a888-3038-4b05-a76b-8556aba5ad7a)');
-    console.log('    - app-cc28t0 new-data-api (90336730-f2e6-4960-adcd-a890cf092a20)');
-    console.log('    - databricks_workspace_dev (6f46a974-c1a5-4e9a-8f56-0563fc32f19b)');
+  let credential;
+  if (tenantId && clientId && clientSecret) {
+    console.log('  Using Service Principal (env vars)');
+    credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
+  } else {
+    const loginHint = process.env.MS_USERNAME || 'ccarrillo@oncologyanalytics.com';
 
     if (DRY_RUN) {
-      console.log('\n--- DRY RUN: Would read Delta table from ADLS ---');
+      console.log('  Would authenticate via Device Code flow');
       showPlan(t, container, storageAccount, tablePath);
       return;
     }
 
-    console.log('\n  Falling back to SQL Statement API...');
-    return modeSQL();
+    // Device Code flow — MFA-compatible, no browser redirect needed
+    console.log('  Using Device Code flow (MFA-compatible)...');
+    console.log('  >> Go to the URL below and enter the code when prompted. <<\n');
+    credential = new DeviceCodeCredential({
+      tenantId: 'organizations',
+      userPromptCallback: (info) => {
+        console.log('  ┌────────────────────────────────────────────────────┐');
+        console.log(`  │  Open: ${info.verificationUri}`);
+        console.log(`  │  Code: ${info.userCode}`);
+        console.log(`  │  Log in with: ${loginHint}`);
+        console.log('  └────────────────────────────────────────────────────┘\n');
+      },
+    });
+
+    // Pre-validate token to get the device code prompt out of the way
+    console.log('  Acquiring token...');
+    try {
+      const token = await credential.getToken('https://storage.azure.com/.default');
+      console.log(`  ✓ Authenticated — token expires ${new Date(token.expiresOnTimestamp).toISOString()}`);
+    } catch (e) {
+      console.error('  ✗ Auth failed:', e.message?.split('\n')[0] || String(e));
+      process.exit(1);
+    }
   }
 
   // Step 3: Connect to ADLS and list Delta log
   console.log('\n[3/5] Connecting to ADLS...');
-  const { BlobServiceClient } = require('@azure/storage-blob');
-  const { ClientSecretCredential } = require('@azure/identity');
-
-  const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
   const blobService = new BlobServiceClient(
-    `https://${storageAccount}.dfs.core.windows.net`,
+    `https://${storageAccount}.blob.core.windows.net`,
     credential
   );
   const containerClient = blobService.getContainerClient(container);
@@ -343,7 +356,7 @@ async function modeSQL() {
   const stmt = await dbPost('/api/2.0/sql/statements/', {
     warehouse_id: warehouse.id,
     statement: sql,
-    wait_timeout: '120s',
+    wait_timeout: '50s',
     disposition: 'INLINE',
     format: 'JSON_ARRAY'
   });
@@ -353,11 +366,28 @@ async function modeSQL() {
     process.exit(1);
   }
 
-  const result = stmt.data;
+  let result = stmt.data;
   console.log(`  Status: ${result.status?.state}`);
+
+  // Poll if PENDING or RUNNING
+  const stmtId = result.statement_id;
+  let pollAttempts = 0;
+  while (['PENDING', 'RUNNING'].includes(result.status?.state) && pollAttempts < 60) {
+    await sleep(3000);
+    pollAttempts++;
+    const poll = await dbGet(`/api/2.0/sql/statements/${stmtId}`);
+    result = poll.data;
+    process.stdout.write(`  Waiting... ${result.status?.state} (${pollAttempts * 3}s)\r`);
+  }
+  if (result.status?.state !== 'SUCCEEDED') console.log('');
 
   if (result.status?.state === 'FAILED') {
     console.error('  Error:', result.status.error?.message);
+    process.exit(1);
+  }
+
+  if (result.status?.state !== 'SUCCEEDED') {
+    console.error(`  Unexpected state: ${result.status?.state}`);
     process.exit(1);
   }
 
