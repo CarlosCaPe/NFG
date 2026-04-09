@@ -12,10 +12,12 @@
  *   node shared/daily-refresh.js --client oncohealth --skip ado    (skip one)
  *
  * Services (in execution order):
- *   gcal       — Google Calendar (NFG)           ~30s
- *   teams-cal  — Teams + Outlook Calendar         ~45s
- *   ado        — Azure DevOps work items          ~60s
- *   confluence — Confluence spaces                ~90s
+ *   gcal            — Google Calendar (NFG)           ~30s
+ *   teams-cal       — Teams + Outlook Calendar         ~45s
+ *   teams-channels  — Teams Channels (NoPHI + General) ~60s
+ *   teams-chats     — Teams Chats (priority threads)   ~60s
+ *   ado             — Azure DevOps work items          ~60s
+ *   confluence      — Confluence spaces                ~90s
  *
  * Constraints:
  *   - Requires Playwright with headless=false (Okta SSO, Google login)
@@ -56,6 +58,18 @@ const SERVICES = [
     id: 'teams-cal',
     name: 'Teams + Outlook Calendar',
     cmd: 'node shared/scrape-teams-calendar.js --client {CLIENT}',
+    output: 'teams-daily/',
+  },
+  {
+    id: 'teams-channels',
+    name: 'Teams Channels (NoPHI + General)',
+    cmd: 'node shared/scrape-teams-daily.js --client {CLIENT} --target channels',
+    output: 'teams-daily/',
+  },
+  {
+    id: 'teams-chats',
+    name: 'Teams Chats (priority threads)',
+    cmd: 'node shared/scrape-teams-daily.js --client {CLIENT} --target chats',
     output: 'teams-daily/',
   },
   {
