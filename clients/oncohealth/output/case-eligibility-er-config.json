@@ -111,13 +111,13 @@
         "nodes": [
           {
             "name": "NPI Lookup",
-            "subtitle": "Type 1 (physician) or Type 2 (facility)",
+            "subtitle": "Practitioner (T1) or Organization (T2)",
             "palette": "spark",
             "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
           },
           {
             "name": "Network / OON Check",
-            "subtitle": "Reads oon_benefit from Elig Rule 6",
+            "subtitle": "Reads oon_benefit from Elig Rule 6 · OON determination = R2",
             "palette": "spark",
             "tag": "PROV ← ELIG",
             "badge": { "label": "OVERLAP", "bg": "#6A1B9A", "color": "#CE93D8" }
@@ -140,14 +140,14 @@
             "subtitle": "HOPD vs standalone — affects reimbursement. CMS POS logic. V1 concern",
             "palette": "spark",
             "tag": "PROV-GAP-04",
-            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
           },
           {
             "name": "Specialty (T1 only)",
-            "subtitle": "taxonomy_code from NPPES. V1 = Type 1 individual. Type 2 facility post-V1",
+            "subtitle": "taxonomy_code from NPPES. V1 = Practitioner (T1). Organization (T2) post-V1",
             "palette": "spark",
             "tag": "PROV-GAP-05",
-            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
           },
           {
             "name": "GAP Review",
@@ -205,14 +205,14 @@
             "subtitle": "FK: CaseId | Cols: ProviderRole (Ord/Serv), Name, Phone, Fax, Email",
             "palette": "postgres",
             "tag": "PROV-GAP-01",
-            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
           },
           {
             "name": "CasePOSCode",
             "subtitle": "FK: CaseId | Cols: POSCode VARCHAR(2), POSDescription",
             "palette": "postgres",
             "tag": "PROV-GAP-03",
-            "badge": { "label": "GAP", "bg": "#B71C1C", "color": "#EF9A9A" }
+            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
           }
         ]
       }]

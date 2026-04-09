@@ -1,16 +1,8 @@
 {
-  "captured": "2026-04-06T14:56:23.254Z",
+  "captured": "2026-04-09T15:40:23.304Z",
   "org": "oncologyanalytics",
   "project": "newUM",
-  "files": 37,
-  "totalBytes": 2442382,
-  "errors": [
-    {
-      "section": "repos",
-      "error": {
-        "_error": true,
-        "message": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
-      }
-    }
-  ]
+  "files": 39,
+  "totalBytes": 2776999,
+  "errors": []
 }

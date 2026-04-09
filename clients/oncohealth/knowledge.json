@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.24.0",
-  "last_updated": "2026-04-08",
+  "version": "1.25.0",
+  "last_updated": "2026-04-09",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -316,15 +316,15 @@
     },
     {
       "name": "Marc Gale",
-      "role": "Team member — cc'd on eligibility payer taxonomy analysis",
+      "role": "Onco Data Team lead — owns data quality checklist, DR planning, eligibility/payer column validation. Evaluation criteria owner for Databricks→PostgreSQL exchange decision (Cost, Dev Effort, Speed, Ongoing Support).",
       "confirmed": true,
-      "source": "Teams chat (Eligibility - Person/Member workshop)"
+      "source": "NoPHI - Data channel (3/30-4/2), Exchange data meeting (3/30)"
     },
     {
-      "name": "Donato",
-      "role": "Team member — eligibility domain",
+      "name": "Donato Buccella",
+      "role": "ARB participant — Data System Design review. Eligibility domain.",
       "confirmed": true,
-      "source": "Teams chat (Eligibility workshop — March 2026)"
+      "source": "NoPHI - Data channel (4/2 ARB summary, 4/9 cc)"
     },
     {
       "name": "Bernice Nyanjui",
@@ -334,7 +334,7 @@
     },
     {
       "name": "Inna Mariienko",
-      "role": "BA / Admin — Shared team, access provisioning (Confluence)",
+      "role": "BA / Admin — Shared team. Product-side decision authority for provider domain questions (OON behavior, sole proprietor flag, manual entry scope, retro case, NUCC fields, address purpose, TIN vs NPI). Access provisioning.",
       "email": "imariienko@oncologyanalytics.com",
       "confirmed": true,
       "source": "Teams async daily + access inventory"
@@ -390,15 +390,69 @@
     },
     {
       "name": "Jason King",
-      "role": "Drugs API team",
+      "role": "Drugs API team + Okta/auth mapping participant",
       "confirmed": true,
-      "source": "Confluence NewUM1 space (2026-03-25)"
+      "source": "Confluence NewUM1 space (2026-03-25) + NoPHI - Data channel (4/9)"
     },
     {
       "name": "Caitlin Bowler",
       "role": "UX Designer",
       "confirmed": true,
       "source": "Confluence NewUM1 space (2026-03-25)"
+    },
+    {
+      "name": "Venky Subramaniam",
+      "role": "Architecture review authority — provides feedback on System Design Doc. Reviewed Eligibility + Provider sections. Raised data migration ownership concern. Key voice in ARB.",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (3/18, 3/31, 4/9)"
+    },
+    {
+      "name": "Salin Gabriel",
+      "role": "DevOps team — must weigh in on data exchange mechanism final decision + DR planning",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (3/31 Venky's message, 4/2 ARB summary)"
+    },
+    {
+      "name": "Kim Jewell",
+      "role": "Configuration team — payer-configurable items routing (POS Code, Facility Type)",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 Michal's Provider decisions)"
+    },
+    {
+      "name": "Keeley Peck",
+      "role": "Configuration team (NewFire side)",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 Michal's Provider decisions)"
+    },
+    {
+      "name": "Evan Pankey",
+      "role": "Configuration team (NewFire side)",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 Michal's Provider decisions)"
+    },
+    {
+      "name": "Bogdan Chachun",
+      "role": "Okta/auth mapping participant",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 user access meeting)"
+    },
+    {
+      "name": "Michael Sparace",
+      "role": "Okta/auth mapping participant",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 user access meeting)"
+    },
+    {
+      "name": "Joseph Destefano",
+      "role": "Auditability pattern discussion lead — CaseOfficeContact table",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 Michal's Provider decisions)"
+    },
+    {
+      "name": "Dmytro Hridin",
+      "role": "Okta/auth mapping participant",
+      "confirmed": true,
+      "source": "NoPHI - Data channel (4/9 user access meeting)"
     }
   ],
 
@@ -422,7 +476,7 @@
       "MATIS access — separate request to clientsupport@oncohealth.us"
     ],
     "access_inventory": {
-      "scan_date": "2026-03-23",
+      "scan_date": "2026-04-09",
       "results": [
         { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 38191, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "25 pages. Doc ID: 1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew" },
         { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 1689, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "2 pages template. Doc ID: 19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno" },
@@ -431,23 +485,21 @@
         { "resource": "Policy documents (4 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "Secure development, Cryptography, Data management, Branching strategy. Links are placeholders — never provided." },
         { "resource": "Miro NewFire board (assessment, stale)", "status": "BLOCKED", "action": "Board not found (404) — may have been moved/deleted or token expired", "note": "Previously captured 130,902 chars. Board ID uXjVIx2JdOQ= no longer accessible." },
         { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
-        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2442382, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Re-captured 2026-04-06: 37 files, 2.4MB. 13 Epics, 66 Features, 372 User Stories, 443 Tasks, 11 Bugs, 8 Pipelines. 385 items changed since Mar 23. Sprint 26.03.31 mostly Closed (142). Sprint 26.04.14 is current (130+ items). 3 items assigned to Carlos: #185594 (Closed), #186569 (Closed), #187416 (To Do)." },
-        { "resource": "Atlassian Confluence (12 spaces)", "status": "COMPLETE", "chars": 485274, "method": "REST API + API token", "note": "Deep capture (2026-03-23): 12 spaces, 171 pages, 41 files, 621 KB. Key: PM (197K), AT (120K), OG (65K), IS (13K), MATIS (13K). 41 groups discovered. Auth via ccarrillo@oncohealth.us + API token." },
-        { "resource": "Confluence NewUM1 space", "status": "COMPLETE", "chars": 421823, "method": "REST API + API token (ccarrillo@oncologyanalytics.com)", "note": "Captured 2026-03-25. 50 pages: PRDs (case entry, chemotherapy, work queues, post-denial, reports, rules/config), decision log (5 decisions), governance, meeting notes, templates. 422K chars. Previously blocked — fixed by using correct email identity with new unscoped token (nfg-full-access)." },
-        { "resource": "Confluence NewUM space (Engineering)", "status": "COMPLETE", "chars": 260082, "method": "REST API + API token (ccarrillo@oncologyanalytics.com)", "note": "Discovered and captured 2026-04-07. 50 pages: BE docs (Rules Engine, Fax, Letter V2, Document Mgmt, JobMonitor), DevOps (AKS, branching, deployment), QA (Testing Strategy v24, DoD/DoR, defects), Data team (Drugs DB schema v44 — 4 tables), FE (file structure, Monarch UX), sprint planning (3 sprints), 7 meeting notes, assumptions log. SEPARATE from NewUM1 (Product team, 404 since Mar 26)." },
+        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2777000, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Re-captured 2026-04-09: 39 files, 2.7MB. 13 Epics, 66 Features, 394 User Stories, 466 Tasks, 16 Bugs, 10 Pipelines. Wiki now has 1 page (newUM.wiki). 6 teams: QA(6), UX(3), Data(7), NewUM(1), BE(15), FE(12)." },
+        { "resource": "Atlassian Confluence (13 spaces)", "status": "COMPLETE", "chars": 969810, "method": "REST API + API token", "note": "Re-captured 2026-04-09: 13 spaces, 221 pages, 48 files, 1.4MB. Key spaces: NewUM1/Product (487K — PRDs, decision log, governance), PM (197K), AT (120K), OG (65K), CA/Impact Analysis (28K), ITOPS (19K), IS (13K), MATIS (13K). Also includes: AL, AP, BND, HUM, MCS. 41 groups. Includes Engineering docs (Rules Engine, Fax, Letter V2, DevOps, QA, Data, FE). Auth via ccarrillo@oncologyanalytics.com + API token (nfg-full-access)." },
         { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
         { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
         { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
         { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." },
-        { "resource": "Google Calendar (NFG)", "status": "COMPLETE", "chars": 15300, "method": "Playwright storageState + internal API interception", "note": "NFG Google Calendar (carlos.carrillo@newfireglobal.com). 46 events: 5 meetings (Global Town Hall, Newfire-Databricks, Databricks Training Discussion, Meet, Logistics with Adhere Health), global holidays, recurring Home work-location. Uses sync.fetcheventrange/minievents/prefetcheventrange endpoints + aria-label DOM parsing. Captured 2026-03-26." }
+        { "resource": "Google Calendar (NFG)", "status": "COMPLETE", "chars": 66700, "method": "Playwright storageState + internal API interception", "note": "Re-captured 2026-04-09: 203 events (80 chips, 166 api). Range 2026-04-02 → 2026-04-23. NFG Google Calendar (carlos.carrillo@newfireglobal.com). Uses sync.fetcheventrange/minievents/prefetcheventrange endpoints + aria-label DOM parsing." }
       ],
-      "complete": 14,
+      "complete": 12,
       "partial": 0,
       "not_captured": 1,
       "pending": 0,
       "blocked": 0,
-      "total_chars_captured": 9016760,
-      "note": "Okta SSO auto-login working for Azure DevOps + SharePoint. Atlassian has separate SSO. Databricks needs Entra ID button click."
+      "total_chars_captured": 9587101,
+      "note": "Full refresh 2026-04-09: 4/4 scrapers succeeded (gcal 75.7s, teams 6.4s, ado 50.7s, confluence 18.5s). Okta SSO auto-login working. Confluence now unified into single 13-space capture."
     },
     "confirmed": true,
     "source": "user confirmation + automated scan 2026-03-18"
@@ -900,7 +952,7 @@
       "date": "2026-03-17",
       "attendees_mentioned": ["Arben Osmani", "Nick", "Michal Mucha"],
       "decisions": [
-        "Type 1 vs Type 2 NPI: Proposed separate tables for individual physicians (T1) vs facilities (T2). Nick concerned about duplicating downstream structures (networks, taxonomy). NO FINAL DECISION.",
+        "Type 1 vs Type 2 NPI: DECIDED — rename to FHIR standard: Practitioner (T1) + Organization (T2). CMS mandate moving toward FHIR APIs. Separate tables confirmed.",
         "Versioning: Drop separate history tables → single table with version_start_date / version_end_date (consistent with eligibility pattern).",
         "NPI matching V1: NPI-only matching. No probabilistic/candidate matching — too risky since auth files must return provider data exactly as received. Match score/method fields REMOVED from D1/D2 link tables.",
         "Address: Shared address junk dimension + bridge table (consistent with eligibility pattern).",
@@ -962,6 +1014,166 @@
         "1 chat not captured: Claude workshop (not found in sidebar — may have been deleted or renamed)"
       ],
       "blocker_resolved": "Okta session re-authenticated April 6. Chat scraper fixed (added Teams navigation for standalone runs)."
+    },
+
+    "nophi_data_channel": {
+      "$comment": "NoPHI - Data is the primary data team channel under NewUM team in Teams. Contains all provider domain decisions, ARB follow-ups, and data exchange discussions. Previously unknown — discovered April 9 via Teams channel listing.",
+      "discovered": "2026-04-09",
+      "source": "Teams NoPHI - Data channel (manual paste — scraper got nav chrome only, full content user-pasted)",
+      "captured_file": "clients/oncohealth/output/teams-daily/2026-04-09/channels/NoPHI---Data-full.txt",
+      "date_range": "2026-03-16 to 2026-04-09",
+      "message_count": "30+",
+
+      "decisions_confirmed": [
+        {
+          "id": "NOPHI-D01",
+          "date": "2026-04-09",
+          "decision": "T1/T2 renamed to FHIR standard: Practitioner (T1) and Organization (T2). CMS mandate moving toward FHIR APIs.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D02",
+          "date": "2026-04-09",
+          "decision": "Two separate network bridge tables — one for Practitioners (T1), one for Organizations (T2). Network status is independent. Network tier = V2.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D03",
+          "date": "2026-04-09",
+          "decision": "Case-level snapshots for provider data (AGREED DIRECTION). Snapshot taken when provider assigned to case. Source tables = read-only (ETL only). Snapshot NOT overwritten by subsequent ETL.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D04",
+          "date": "2026-04-09",
+          "decision": "Case-level data NEVER written back to provider master tables — firm principle in V1 and R2.",
+          "who": "Michal Mucha",
+          "source_doc": "Ordering and Servicing Provider Information — Data Dictionary"
+        },
+        {
+          "id": "NOPHI-D05",
+          "date": "2026-04-09",
+          "decision": "Address model = append-only shared dimension. Addresses never updated/deleted, only new records added. Preserves historical data + auditability.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D06",
+          "date": "2026-03-18",
+          "decision": "Official product decision: OH will use terminology 'patient' (not 'member').",
+          "who": "Michal Mucha (relaying product team decision)"
+        },
+        {
+          "id": "NOPHI-D07",
+          "date": "2026-04-09",
+          "decision": "Taxonomy/specialty IS needed. Standardize on taxonomy. Applies to Practitioners (T1) only, NOT Organizations (T2).",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D08",
+          "date": "2026-04-09",
+          "decision": "Out-of-network: OON check/determination, manual provider entry, provider network data ingestion = all OUT OF SCOPE R2. V1: cross-health-plan search only.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D09",
+          "date": "2026-03-19",
+          "decision": "Working hypothesis: batch approach for data ingestion. NewUM raw data to Databricks Bronze as-is (no transformations). Onco Data team handles analytical processing.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D10",
+          "date": "2026-03-31",
+          "decision": "Data migration ownership is NOT the DE team. NewUM owns the migration pipelines. Must match newUM transactional schema design.",
+          "who": "Venky Subramaniam + Marc Gale (in agreement)"
+        },
+        {
+          "id": "NOPHI-D11",
+          "date": "2026-04-09",
+          "decision": "Provider address: Path 1 (regular) = T1→T1T2_Link→T2→Address. Path 2 (sole proprietor) = T1→Address directly.",
+          "who": "Michal Mucha"
+        },
+        {
+          "id": "NOPHI-D12",
+          "date": "2026-04-09",
+          "decision": "Office contact at case level: two records per case (ordering + treating), provider_type enum. Address pre-populated from provider data, contacts manually entered.",
+          "who": "Michal Mucha"
+        }
+      ],
+
+      "open_questions": [
+        { "id": "NOPHI-Q01", "question": "When VerifyIfProviderIsInNetwork=True fires and servicing provider is OON, what is the expected V1 case behavior?", "owner": "Inna/Alison", "domain": "Provider" },
+        { "id": "NOPHI-Q02", "question": "Sole proprietor flag — how determined at ingestion time?", "owner": "Inna/Alison", "domain": "Provider" },
+        { "id": "NOPHI-Q03", "question": "CaseOfficeContact auditability pattern", "owner": "Joseph Destefano/Jack Hall", "domain": "Case" },
+        { "id": "NOPHI-Q04", "question": "Place of Service Code — is this on configuration team's radar?", "owner": "Kim Jewell", "domain": "Config" },
+        { "id": "NOPHI-Q05", "question": "Facility Type — payer config team ownership", "owner": "Kim Jewell", "domain": "Config" },
+        { "id": "NOPHI-Q06", "question": "Where should payer configuration live? Feels like Payer domain, close to taxonomy.", "owner": "Kim Jewell", "domain": "Payer" },
+        { "id": "NOPHI-Q07", "question": "Manual provider entry — how often is a manually entered provider truly new vs. office staff conflated with provider?", "owner": "Inna/Alison", "domain": "Provider" },
+        { "id": "NOPHI-Q08", "question": "Retro case time travel — can the system process it exactly as it would have at service date? V1 or V2?", "owner": "Alison/Inna", "domain": "Case" },
+        { "id": "NOPHI-Q09", "question": "Snapshot granularity — whole provider record? Just case fields? Only at first assignment?", "owner": "Team", "domain": "Provider" },
+        { "id": "NOPHI-Q10", "question": "NUCC taxonomy — which fields to store and display (Code, Classification, Specialization, Definition)?", "owner": "Inna/Alison", "domain": "Provider" },
+        { "id": "NOPHI-Q11", "question": "Okta user ID → provider mapping. How does it work?", "owner": "Marc/Joseph/Dmytro/Jason/Bogdan/Michael/Matthew", "domain": "Auth" },
+        { "id": "NOPHI-Q12", "question": "Billing address purpose — is it truly billing, mailing, or something else?", "owner": "Inna/Alison", "domain": "Provider" },
+        { "id": "NOPHI-Q13", "question": "TIN vs NPI as central identifier — current Mattis requires TIN, team believes NPI is better.", "owner": "Product team", "domain": "Provider" }
+      ],
+
+      "arb_follow_up_items": {
+        "date": "2026-04-02",
+        "meeting": "ARB Session: NewUM Data System Design",
+        "items": [
+          { "item": "Eligibility & Payer column validation", "owner": "Marc Gale (Onco Data Team)" },
+          { "item": "Provider domain workshops (finalize ER model)", "owner": "Michal Mucha" },
+          { "item": "Provider auditability pattern", "owner": "Michal Mucha" },
+          { "item": "NPPES/NUCC scope (product input needed)", "owner": "Inna/Alison" },
+          { "item": "Domain overlap validation workshops", "owner": "Michal Mucha" },
+          { "item": "Data exchange mechanism decision (3+2 candidates)", "owner": "Michal Mucha" },
+          { "item": "Disaster recovery planning", "owner": "Marc Gale + Salin Gabriel + Michal Mucha" },
+          { "item": "Data migration requirements definition", "owner": "Michal Mucha" },
+          { "item": "Data quality checklist", "owner": "Marc Gale" }
+        ],
+        "exchange_candidates_databricks_to_newum": [
+          "Unity Catalog → Lakebase Synced Tables → PostgreSQL",
+          "Unity Catalog → ADLS Gen2 Staging + Airflow + PostgreSQL COPY",
+          "Unity Catalog → Apache Iceberg → PostgreSQL"
+        ],
+        "exchange_candidates_newum_to_databricks": [
+          "PostgreSQL → Lakeflow Connect → Databricks Unity Catalog",
+          "PostgreSQL → Lakehouse Federation → Databricks Unity Catalog"
+        ]
+      },
+
+      "venky_system_design_feedback": {
+        "date": "2026-03-18",
+        "key_points": [
+          "3 systems: EDP, Transactional (EligMS/ProviderMS/DrugsMS), Case Management (newUM)",
+          "EDP → ProviderMS → newUM → EDP (data flow cycle)",
+          "Not redesigning Eligibility/Drug Services. Provider Service = re-design of ProviderMS schema + API",
+          "Event sourcing is NOT implemented — Marc Gale says significant lift if attempted",
+          "Payer file inconsistency → NOT a newUM problem, handled by DE Pipeline"
+        ]
+      },
+
+      "michal_response_to_venky": {
+        "date": "2026-03-19",
+        "key_points": [
+          "NewUM → Bronze: raw data, no transformations, as-is",
+          "Exchange mechanisms: investigating CDC, Event Hub, Structured Streaming, batch",
+          "Office Staff Management: open question, requires Core Services team + Okta roles",
+          "Manual Provider Entry: in progress, must align with chosen exchange mechanism",
+          "Eligibility model: tailored to Case Management + Rules Engine. Working hypothesis: golden data crafted by Onco Data team",
+          "Updated Payer Hierarchy to include Parent Payer Org concept",
+          "Plan↔Network↔Provider junction: updated diagram"
+        ]
+      },
+
+      "provider_identity_scenarios": {
+        "$comment": "Arben Osmani shared 3 NPPES identity reconciliation scenarios on 3/16",
+        "scenarios": [
+          "Scenario 1: NPI missing from payer data → fallback to name+specialty+ZIP search with scoring",
+          "Scenario 2: NPI typo in payer record → exact lookup fails → fallback name search finds match",
+          "Scenario 3: Name variation (maiden/married) → NPI matches but name doesn't → flags for review"
+        ],
+        "team_response": "Cory Johnson confirmed: network checks use payer's file info in today's world. Inna: identity reconciliation against NPPES = separate provider identity validation rule, not standard network-status check."
+      }
     },
 
     "eligibility_payer_taxonomy_v2_thursday": {
@@ -1093,6 +1305,7 @@
         "id": "PROV-GAP-01",
         "title": "No Office Contact Entity",
         "severity": "High",
+        "nophi_status": "CONFIRMED — Michal 4/9: case-level office contact, two records (ordering+treating), provider_type enum, NOT overwritten by ETL. Auditability TBD (Joseph/Jack).",
         "domain": "Case",
         "what_is_missing": "No entity exists to store case-level office contact information (Name, Phone, Fax, Email). These are manually entered per case per provider role — not derived from provider master data and must not update it.",
         "scope": "Required for Ordering Provider and Servicing/Treating Provider only. Place of Treatment fax is derived from provider master data (separate concept).",
@@ -1122,6 +1335,7 @@
         "id": "PROV-GAP-02",
         "title": "Organization Affiliation Not Modelled as First-Class Search Result Unit",
         "severity": "High",
+        "nophi_status": "CONFIRMED \u2014 Michal 4/9: T1-T2 linkage acknowledged as 'not working in Mattis'. Users make independent selections for ordering, treating, place of service.",
         "domain": "Provider schema / Data team",
         "what_is_missing": "Requirements define search result row as: Provider (Type 1) + Organization (affiliated practice) + Organization NPI (Type 2) + Organization TIN + Service Address. T1T2Link connects DoctorT1 to FacilityT2 but unclear if it produces the required denormalized queryable unit. Organization NPI and Organization TIN must be resolvable from a single provider selection.",
         "why_it_matters": "If a provider is affiliated with multiple organizations at different addresses (across different health plans), each affiliation must display as a distinct row. This is the core disambiguation mechanism for provider selection. Without this, the search UX cannot be built correctly.",
@@ -1145,6 +1359,7 @@
         "id": "PROV-GAP-03",
         "title": "Place of Service (POS) Code Has No Home",
         "severity": "High",
+        "nophi_status": "CONFIRMED — Michal 4/9: payer-configurable, CMS 2-digit code, captured at case level. Routed to Kim Jewell (config team).",
         "domain": "Case + Payer configuration",
         "what_is_missing": "POS code (CMS two-digit code, e.g. '11 - Office', '22 - Outpatient Hospital') is required case-level field, conditional on payer configuration. No entity or field in the provider schema captures POS codes.",
         "why_it_matters": "POS code drives auth/claims accuracy and is part of Level of Care section in V1. Multi-POS handling is still an open design question.",
@@ -1168,6 +1383,7 @@
         "id": "PROV-GAP-04",
         "title": "Facility Type Has No Payer-Configurable Lookup",
         "severity": "Medium",
+        "nophi_status": "CONFIRMED — Michal 4/9: payer-specific configurable dropdown, NOT global list. Routed to config team (Pero, Keeley, Kim, Evan).",
         "domain": "Payer configuration",
         "what_is_missing": "FacilityT2 has a type field (CHECK constraint with values '1', '2'). V1 requires a payer-configurable Facility Type (e.g. Critical Access Hospital, Rural Health Clinic, Center of Excellence) that is distinct from the structural entity type (T1/T2). This is a regulatory/contractual classification, not a structural NPI type.",
         "why_it_matters": "V1 states: Facility Type is driven by payer contracts/regulatory rules, not a universal list. Facility Type data is often missing/inconsistent in provider files. Behavior should be configurable per payer. Current EntityType CHECK constraint only captures NPI entity type.",
@@ -1189,6 +1405,7 @@
         "id": "PROV-GAP-05",
         "title": "Specialty Representation Ambiguous for Backend Use",
         "severity": "Low",
+        "nophi_status": "CONFIRMED \u2014 Michal 4/9: taxonomy/specialty IS needed, standardize on taxonomy, T1 only. NUCC fields to store TBD (Inna/Alison).",
         "domain": "Provider schema",
         "scope_clarification": {
           "applies_to": "Type 1 NPI only (Ordering Provider, Servicing/Treating Provider)",

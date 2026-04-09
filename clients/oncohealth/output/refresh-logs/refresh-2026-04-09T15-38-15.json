@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-09T15:40:47.112Z",
+  "client": "oncohealth",
+  "mode": "live",
+  "results": [
+    {
+      "id": "gcal",
+      "name": "Google Calendar (NFG)",
+      "status": "success",
+      "elapsed": 75.7,
+      "outputBytes": 68260
+    },
+    {
+      "id": "teams-cal",
+      "name": "Teams + Outlook Calendar",
+      "status": "success",
+      "elapsed": 6.4,
+      "outputBytes": 0
+    },
+    {
+      "id": "ado",
+      "name": "Azure DevOps",
+      "status": "success",
+      "elapsed": 50.7,
+      "outputBytes": 152
+    },
+    {
+      "id": "confluence",
+      "name": "Confluence",
+      "status": "success",
+      "elapsed": 18.5,
+      "outputBytes": 226
+    }
+  ],
+  "totalElapsed": 151.3,
+  "successCount": 4,
+  "errorCount": 0
+}

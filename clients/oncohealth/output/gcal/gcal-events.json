@@ -1,472 +1,2040 @@
 {
   "source": "google-calendar",
   "account": "Google Account: Carlos Carrillo  \n(carlos.carrillo@newfireglobal.com)",
-  "capturedAt": "2026-03-26T16:53:28.229Z",
+  "capturedAt": "2026-04-09T15:39:31.004Z",
   "dateRange": {
-    "start": "2026-03-12",
-    "end": "2026-04-25"
+    "start": "2026-04-02",
+    "end": "2026-04-23"
   },
-  "daysBack": 14,
-  "daysFwd": 30,
-  "eventCount": 46,
+  "daysBack": 7,
+  "daysFwd": 14,
+  "eventCount": 203,
   "events": [
     {
-      "title": "Global Town Hall Q1_2026",
-      "date": "2026-03-12",
-      "startTime": "8am",
+      "title": "Free",
+      "date": "2026-03-30",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g6t348dq26ss38d1m85148gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6so3cd1h6gpjeea374ok6h1k74sk4d9p8oqk4hho8l0jadq2612g",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260402",
+      "method": "api-sync"
+    },
+    {
+      "title": "Maundy Thursday",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Holidays in Mexico",
+      "raw": "All day, Maundy Thursday, Calendar: Holidays in Mexico, April 2, 2026"
+    },
+    {
+      "title": "Holy Thursday (Easter Week) - Costa Rica",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Holy Thursday (Easter Week) - Costa Rica, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Holy Thursday (Easter Week) - Peru",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Holy Thursday (Easter Week) - Peru, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Holy Thursday - Colombia",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Holy Thursday - Colombia, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Holy Thursday - El Salvador",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Holy Thursday - El Salvador, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Holy Thursday - Spain - Basque",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Holy Thursday - Spain - Basque, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Holy Thursday - Spain - Seville",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Holy Thursday - Spain - Seville, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Maundy Thursday - Philippines",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Maundy Thursday - Philippines, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Maundy Thursday - Spain - Madrid",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Maundy Thursday - Spain - Madrid, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Maundy Thursday / Malvinas Day - Argentina",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Maundy Thursday / Malvinas Day  - Argentina, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "Tourism Week - Uruguay",
+      "date": "2026-04-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Tourism Week - Uruguay, Calendar: Public Holidays (Newfire Global), No location, April 2, 2026"
+    },
+    {
+      "title": "busy, Calendar: carlos.carrillo@dataqbs.com",
+      "date": "2026-04-02",
+      "startTime": "2:30pm",
+      "endTime": "3pm",
+      "isAllDay": false,
+      "location": "",
+      "raw": "2:30pm to 3pm, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 2, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-02",
+      "startTime": "8:30am",
+      "endTime": "9:30am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "8:30am to 9:30am, Tentative, Calendar: Calendar, No location, April 2, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-02",
+      "startTime": "8:35am",
       "endTime": "9am",
       "isAllDay": false,
       "location": "",
-      "raw": "8am to 9am, Global Town Hall Q1_2026 , Carlos Carrillo, Accepted, No location, March 12, 2026"
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 2, 2026"
     },
     {
-      "title": "Newfire - Databricks",
-      "date": "2026-03-13",
-      "startTime": "7:30am",
-      "endTime": "8am",
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-02",
+      "startTime": "8am",
+      "endTime": "8:30am",
       "isAllDay": false,
-      "location": "https://meet.google.com/hmj-osug-nmr, https://meet.google.com/kho-vcfb-xky, https://meet.google.com/zio-ioyt-ygk",
-      "raw": "7:30am to 8am, Newfire - Databricks, Carlos Carrillo, Accepted, Location: https://meet.google.com/hmj-osug-nmr, https://meet.google.com/kho-vcfb-xky, https://meet.google.com/zio-ioyt-ygk, March 13, 2026"
+      "location": "",
+      "raw": "8am to 8:30am, Tentative, Calendar: Calendar, No location, April 2, 2026"
     },
     {
-      "title": "Benito Juárez's Birthday Memorial",
-      "date": "2026-03-16",
+      "title": "Home",
+      "date": "2026-04-03",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260403",
+      "method": "api-sync"
+    },
+    {
+      "title": "Away",
+      "date": "2026-04-03",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Calendar",
+      "raw": "All day, Away, Calendar: Calendar, No location, April 3, 2026"
+    },
+    {
+      "title": "Free",
+      "date": "2026-04-03",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Calendar",
+      "raw": "All day, Free, Calendar: Calendar, No location, April 3, 2026"
+    },
+    {
+      "title": "Good Friday",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Holidays in Mexico",
-      "raw": "All day, Benito Juárez's Birthday Memorial, Calendar: Holidays in Mexico, March 16, 2026"
+      "raw": "All day, Good Friday, Calendar: Holidays in Mexico, April 3, 2026"
     },
     {
-      "title": "Birthday of Benito Juárez - Mexico",
-      "date": "2026-03-16",
+      "title": "Good Friday (Easter Week) - Peru",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Birthday of Benito Juárez - Mexico, Calendar: Public Holidays (Newfire Global), No location, March 16, 2026"
+      "raw": "All day, Good Friday (Easter Week) - Peru, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Saint Patrick's Day - Ireland",
-      "date": "2026-03-17",
+      "title": "Good Friday (Holy Week) - Costa Rica",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Saint Patrick's Day - Ireland, Calendar: Public Holidays (Newfire Global), No location, March 17, 2026"
+      "raw": "All day, Good Friday (Holy Week) - Costa Rica, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Home",
-      "date": "2026-03-19",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260319",
-      "method": "api-sync"
-    },
-    {
-      "title": "Eid al-Fitr - Saudi Arabia",
-      "date": "2026-03-19",
+      "title": "Good Friday (Holy Week) - Ecuador",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Eid al-Fitr - Saudi Arabia, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+      "raw": "All day, Good Friday (Holy Week) - Ecuador, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Silence Day / Nyepi (Saka New Year 1948) - Indonesia",
-      "date": "2026-03-19",
+      "title": "Good Friday - Argentina",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Silence Day / Nyepi (Saka New Year 1948) - Indonesia, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+      "raw": "All day, Good Friday - Argentina, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "St Joseph’s Day - Spain - Valencia",
-      "date": "2026-03-19",
+      "title": "Good Friday - Bolivia",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, St Joseph’s Day - Spain - Valencia, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+      "raw": "All day, Good Friday - Bolivia, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Ugadi Festival - India",
-      "date": "2026-03-19",
+      "title": "Good Friday - Brazil",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Ugadi Festival - India, Calendar: Public Holidays (Newfire Global), No location, March 19, 2026"
+      "raw": "All day, Good Friday - Brazil, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Home",
-      "date": "2026-03-20",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "7diq1iibve41mpbstsguoim7hs_20260320",
-      "method": "api-sync"
-    },
-    {
-      "title": "Eid al-Fitr - North Macedonia",
-      "date": "2026-03-20",
+      "title": "Good Friday - Canada",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Eid al-Fitr - North Macedonia, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+      "raw": "All day, Good Friday - Canada, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Eid al-Fitr - Saudi Arabia",
-      "date": "2026-03-20",
+      "title": "Good Friday - Chile",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Eid al-Fitr - Saudi Arabia, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+      "raw": "All day, Good Friday - Chile, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Festiival of Breaking Fast - Philippines",
-      "date": "2026-03-20",
+      "title": "Good Friday - Colombia",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Festiival of Breaking Fast - Philippines, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+      "raw": "All day, Good Friday - Colombia, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Ramadan Bayram - Bosnia and Herzegovina",
-      "date": "2026-03-20",
+      "title": "Good Friday - Dominican Republic",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Ramadan Bayram - Bosnia and Herzegovina, Calendar: Public Holidays (Newfire Global), No location, March 20, 2026"
+      "raw": "All day, Good Friday - Dominican Republic, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Databricks Training Discussion",
-      "date": "2026-03-20",
-      "startTime": "8:00 AM",
-      "endTime": "8:30 AM",
-      "isAllDay": false,
-      "location": "Microsoft Teams Meeting",
-      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g88o30cpk85336h9j88qk8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g85242dq1691jahhp652jeh9k64skccpo850j8g9g74p44d9l6510",
-      "method": "api-sync"
-    },
-    {
-      "title": "Benito Juárez's Birthday Memorial",
-      "date": "2026-03-21",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Holidays in Mexico",
-      "raw": "All day, Benito Juárez's Birthday Memorial, Calendar: Holidays in Mexico, March 21, 2026"
-    },
-    {
-      "title": "First Day of Hari Raya Aidil Fitri - Brunei",
-      "date": "2026-03-21",
+      "title": "Good Friday - El Salvador",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, First Day of Hari Raya Aidil Fitri - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 21, 2026"
+      "raw": "All day, Good Friday - El Salvador, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Khutub-E-Ramzan - India",
-      "date": "2026-03-21",
+      "title": "Good Friday - India",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Khutub-E-Ramzan - India, Calendar: Public Holidays (Newfire Global), No location, March 21, 2026"
+      "raw": "All day, Good Friday - India, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Hari Raya Aidil Fitri Holiday - Brunei",
-      "date": "2026-03-22",
+      "title": "Good Friday - Indonesia",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Hari Raya Aidil Fitri Holiday - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 22, 2026"
+      "raw": "All day, Good Friday - Indonesia, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Home",
-      "date": "2026-03-23",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260323",
-      "method": "api-sync"
-    },
-    {
-      "title": "Hari Raya Aidil Fitri Holiday (Observed) - Brunei",
-      "date": "2026-03-23",
+      "title": "Good Friday - Philippines",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Hari Raya Aidil Fitri Holiday (Observed) - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+      "raw": "All day, Good Friday - Philippines, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Hari Raya Puasa Holiday (moved from Sat 21) - Malaysia",
-      "date": "2026-03-23",
+      "title": "Good Friday - Portugal",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Hari Raya Puasa Holiday (moved from Sat 21) - Malaysia, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+      "raw": "All day, Good Friday - Portugal, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Saint Joseph's Day - Colombia",
-      "date": "2026-03-23",
+      "title": "Good Friday - Singapore",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Saint Joseph's Day - Colombia, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+      "raw": "All day, Good Friday - Singapore, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Truth and Justice Memorial Day - Argentina",
-      "date": "2026-03-23",
+      "title": "Good Friday - Spain",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Truth and Justice Memorial Day - Argentina, Calendar: Public Holidays (Newfire Global), No location, March 23, 2026"
+      "raw": "All day, Good Friday - Spain, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Meet",
-      "date": "2026-03-23",
-      "startTime": "1:00 PM",
-      "endTime": "1:30 PM",
-      "isAllDay": false,
-      "location": "Microsoft Teams Meeting",
-      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g6t1kchi36l34ah1n88rk8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g891jagpp64ojcdpj6krj2c1k60skacq48p0j4da4650jadhj692g",
-      "method": "api-sync"
-    },
-    {
-      "title": "Home",
-      "date": "2026-03-24",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260324",
-      "method": "api-sync"
-    },
-    {
-      "title": "Hari Raya Aidil Fitri Holiday - Brunei",
-      "date": "2026-03-24",
+      "title": "Good Friday - Sri Lanka",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Hari Raya Aidil Fitri Holiday - Brunei, Calendar: Public Holidays (Newfire Global), No location, March 24, 2026"
+      "raw": "All day, Good Friday - Sri Lanka, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Hari Raya Puasa Holiday (moved from Sun 22) - Malaysia",
-      "date": "2026-03-24",
+      "title": "Tourism Week - Uruguay",
+      "date": "2026-04-03",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Hari Raya Puasa Holiday (moved from Sun 22) - Malaysia, Calendar: Public Holidays (Newfire Global), No location, March 24, 2026"
+      "raw": "All day, Tourism Week - Uruguay, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
     },
     {
-      "title": "Truth and Justice Memorial Day - Argentina",
-      "date": "2026-03-24",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Truth and Justice Memorial Day - Argentina, Calendar: Public Holidays (Newfire Global), No location, March 24, 2026"
-    },
-    {
-      "title": "Home",
-      "date": "2026-03-25",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "i34ger1apsasi7q2m6ued5scas_20260325",
-      "method": "api-sync"
-    },
-    {
-      "title": "Independence Day - Greece",
-      "date": "2026-03-25",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Independence Day - Greece, Calendar: Public Holidays (Newfire Global), No location, March 25, 2026"
-    },
-    {
-      "title": "Home",
-      "date": "2026-03-26",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260326",
-      "method": "api-sync"
-    },
-    {
-      "title": "Logistics with Adhere Health",
-      "date": "2026-03-26",
-      "startTime": "1pm",
-      "endTime": "1:30pm",
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-03",
+      "startTime": "8:35am",
+      "endTime": "9am",
       "isAllDay": false,
       "location": "",
-      "raw": "1pm to 1:30pm, Logistics with Adhere Health, Carlos Carrillo, Accepted, No location, March 26, 2026"
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 3, 2026"
     },
     {
       "title": "Home",
+      "date": "2026-04-06",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260406",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-07",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260407",
+      "method": "api-sync"
+    },
+    {
+      "title": "Interview with Rafael B. | Senior/Lead Python Engineer",
+      "date": "2026-04-07",
+      "startTime": "2:00 PM",
+      "endTime": "2:30 PM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "3e4pi2bqsb4a3aoqt5p84appb8",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-08",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260408",
+      "method": "api-sync"
+    },
+    {
+      "title": "Interview with David C. | Senior/Lead Python Engineer",
+      "date": "2026-04-08",
+      "startTime": "1:30 PM",
+      "endTime": "2:00 PM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "7ejaq8rlpface1gbsj8r6sl316",
+      "method": "api-sync"
+    },
+    {
+      "title": "Lunch & Learn: How LLMs Actually Work",
+      "date": "2026-04-08",
+      "startTime": "7:00 AM",
+      "endTime": "7:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "7as8qnqj3jpctc4uiohjlgcavt",
+      "method": "api-sync"
+    },
+    {
+      "title": "Free",
+      "date": "2026-04-09",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g750j0d1o68oj4c9j89248gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g68q3cd228ko42ci3610k2d1k6p134e1o6h246e2588ojce1p852g_20260409",
+      "method": "api-sync"
+    },
+    {
+      "title": "Araw ng Kagitingan - Philippines",
+      "date": "2026-04-09",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk74qm4p35cko3ichgckqj4p9gcgs38dr2chj36c3460qj2db16kpg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-09",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260409",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-09",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260409T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-09",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260409T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Orthodox Good Friday - Bosnia and Herzegovina",
+      "date": "2026-04-10",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk70o68opn6srjao9lcks3ioj4cgpmaob161h3ad9ic9gm8pj46cpg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Orthodox Good Friday - Greece",
+      "date": "2026-04-10",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc5j64c3374q3id1k75imco9gckpm6cplclijcc1h6grjachj70o0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-10",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260410T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Juan Santamaría Day - Costa Rica",
+      "date": "2026-04-11",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk65gm4p9hckpjap35c9gjcp35c4o6adb36ko30p1mcopjcd1l6kr0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Free",
       "date": "2026-04-13",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260413",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g6p24aea46gs44dho8crk8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g64rj2ca2651j6d1i6csk8hhk6t148d9m85242c9o74qj2h1j8930",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Easter Monday (Orthodox) - North Macedonia",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6gp62p1ic8o3echm6grm2cr5c5ijcdph70om6pj2ccp64d1gcgsg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Easter (moved from Sun, 12) - Ukraine",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc4o64eb1c9i30e9kc8o64ohmclj38c9p69hmacj261ijac1occsg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Orthodox Easter Monday - Bosnia and Herzegovina",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc8oj2ohl6goj0dpp6dhmcp3161im2cj5c5gj2dhmc4rm4db36ko0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Orthodox Easter Monday - Greece",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcksjccj270rj6d32c4s3gdpo68o36opn6lgjcp9hc8s3iopk71hg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Day prior to Sinhala & Tamil New Year Day - Sri Lanka",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcor3ed9l69hj8c9l74sjcp326grmcc1lc8sj2e9m61h62chk70s0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-13",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260413T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Dr. B.R. Ambedkar Jayanthi - India",
       "date": "2026-04-14",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260414",
+      "eventId": "_8d9lcgrfdpr6asjk69j6ac9p68q36phjc9gjacj371j62d1n75i38chg64pjgpb36oog",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Sinhala & Tamil New Year Day - Sri Lanka",
+      "date": "2026-04-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6so64dr269j64ob5c4o3ie9oc4pj2dr669i34eb5cor3ee366sr0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-14",
+      "startTime": "7:00 AM",
+      "endTime": "8:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8gsk2hhm8cq4cci574ok8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6grj8ea58ook8dph64rjec9k7113cdpk850j2h1n8l1k4ea28cs0_20260414T130000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-14",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260414T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
       "date": "2026-04-15",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
       "location": "",
-      "eventId": "i34ger1apsasi7q2m6ued5scas_20260415",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260415T143500Z",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Tentative",
       "date": "2026-04-16",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
       "location": "",
-      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260416",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260416T143000Z",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Tentative",
+      "date": "2026-04-16",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260416T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
       "date": "2026-04-17",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
       "location": "",
-      "eventId": "7diq1iibve41mpbstsguoim7hs_20260417",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260417T143500Z",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Basava Jayanthi, Akshaya Tritiya - India",
       "date": "2026-04-20",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260420",
+      "eventId": "_8d9lcgrfdpr6asjk6krj6ob570rj2phlchhj6dj269j6adhpcdh3ee1m68q3ge3360sg",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Tentative",
+      "date": "2026-04-20",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260420T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tiradentes Day - Brazil",
       "date": "2026-04-21",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260421",
+      "eventId": "_8d9lcgrfdpr6asjkckp66cj56spm6oho6ph38ohnc8rj8eb2cdi38dr265im4e9kc9hg",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Tentative",
+      "date": "2026-04-21",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260421T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "April Fair - Spain - Seville",
       "date": "2026-04-22",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "i34ger1apsasi7q2m6ued5scas_20260422",
+      "eventId": "_8d9lcgrfdpr6asjk6orjecj6c8pjie1o70s3idhmckpm4pb671i3go9h60sjaor1c5j0",
       "method": "api-sync"
     },
     {
-      "title": "Home",
+      "title": "Tentative",
+      "date": "2026-04-22",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260422T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
       "date": "2026-04-23",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260423T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-23",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260423T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-24",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260424T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-27",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260427T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-28",
+      "startTime": "7:00 AM",
+      "endTime": "8:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8gsk2hhm8cq4cci574ok8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6grj8ea58ook8dph64rjec9k7113cdpk850j2h1n8l1k4ea28cs0_20260428T130000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-28",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260428T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-29",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260429T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-30",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260430T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-04-30",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260430T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Singapore",
+      "date": "2026-05-01",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260423",
+      "eventId": "_8d9lcgrfdpr6asjk68omaoj164o30d9oc9hm2cphclh36ob4cli64e1p6lgj0d9k6os0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Bosnia and Herzegovina",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6gr6co9ocgsjcd9k6sojicpm70omad3361hj2dj36cr32pj369i0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Ecuador",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6ksm4p1j6gpjiohlccs6ce9n6dim6c1kchi3edj46osjee9l6cpg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - North Macedonia",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6lgjip9hcorm2e366dh3echn64pm8d1m6gpm2ob469hjad1l6srg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Colombia",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6lgmad9k6som4opm65i68ophcdgm2cb4cgq3cdpkcpim8dhm68p0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labour Day - Portugal",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6lh6co9p60p38c9o64sj8ohh74oj6d1o6dijgp1o74rm6d9mc8qg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Argentina",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6li32dhh61h3ephjcgp30pb674sm2dpn6hhm4o9n6ksmcdj66oqg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Dominican Republic",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6ph3ip3475gmcp9m6th30cr268s62cr66ssjec9jcgrm2opl6gr0",
+      "method": "api-sync"
+    },
+    {
+      "title": "May Day - India",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6pijicb46tj3idb5cgoj8oj4ccsjgp356tj62cj26thm4ob5cgrg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor day - Mexico",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6sqjap1lc4p3cd1n6hh3geb46cq68e1jccr38cb364s62cj1chi0",
+      "method": "api-sync"
+    },
+    {
+      "title": "International Labor Day - Indonesia",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6sr36e9p74p3eohhcgpjicr5c4o32pj56kp6ae9g65h3cp9o6phg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Peru",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6srm2dpo6lh3edr5cgrjcpj2c4o3cphn6cq62dppclij2phjcdgg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Costa Rica",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6ti3cob46oom2p9k6thm4e9p64o32d1jc5gjgeb56hj6ccpj60og",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labour Day - Malaysia",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk75hjcchk6oqj2or5c5imaoph6com6c9l6kq3ae33chi3ic1lccog",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Bolivia",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk75hm2dhm6ssm8c1g6hgm6p9ickpjec9i64qm8pb2ckoj0ob3cop0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Philippines",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc4sj0ohhc4r34or6c8rjephlcos36pb5c8sm6d1h69ij6p346lj0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day Holiday - Ukraine",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc8p6ce1j6spj8dr4coojae1mcdgm6pj1ccq32c31chi3idhhclh0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labour Day - Spain",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc9hmacpo60r6cc1pc4r32o9mc9i6ao9o65i3aphl74s30p1i74p0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labour Day - Croatia",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcdi36cpn6ks3ad9p70p3ac1m60qmcc9pcko32e9m70sj0or470r0",
+      "method": "api-sync"
+    },
+    {
+      "title": "May Day (International Workers' Day) & Vesak Full Moon Poya Day - Sri Lanka",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcgp6cp1ic8r6acb66him8p9n6oq66dj265i3iob164pj0ob570o0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Uruguay",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcgsm6pj1cdh3ap1j65h38or261hj4cpkcdgmcdj161hjaphhcks0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labour Day - Greece",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkchimce9l6csm6oj66kpj0or460r62e9mcks38c31c9gj6dr5cpi0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labour Day - Poland",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkckq3cc9o6gsmac9lcoqj4c31clhj4oj270r3ap9kcpgm8e9p75hg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Chile",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkckq64cj26lij6dj360s3acpp65i30ohl68qjadhk6cq3idj1c8sg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Brazil",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcosm8c1k64rj8db4c8omcphn6th3gdhn6hh62e1j61ij4chkc4og",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - El Salvador",
+      "date": "2026-05-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcpj34p9ichj3ac9p61gj6e1j6csj0ob3cks34c9g6gs34ob661hg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-01",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260501T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Labor Day - Bosnia and Herzegovina",
+      "date": "2026-05-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcoo3gc356cr3cc1j69j3ge9mclj3ed1p6co3ep32ccp38c9p6gqg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Constitution Day - Poland",
+      "date": "2026-05-03",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6kojed34clij4p366tij4cpg6crjadj5c8r64e1kcpgjgor2copg",
+      "method": "api-sync"
+    },
+    {
+      "title": "May Day - Ireland",
+      "date": "2026-05-04",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk71h3gpb26tj36opnc8sj8c9g75hm6e1n61j3eor36gp32eb6c5gg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-04",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260504",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-04",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260504T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-05",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260505",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-05",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260505T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-06",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260506",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-06",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260506T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-07",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260507",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-07",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260507T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-07",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260507T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Memorial Day and Victory over Nazism - Ukraine",
+      "date": "2026-05-08",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkccom2cj5chhmcdhjcoo62dph6kpjae1pcgo36e3275h34p1p6cog",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-08",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260508T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Victory Day - Bosnia and Herzegovina",
+      "date": "2026-05-09",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6sqmapj46sr6ac1j6hi3gob2cgp6acpkc9i30c9m6li68phjc8q0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-11",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260511",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-11",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260511T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-12",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260512",
+      "method": "api-sync"
+    },
+    {
+      "title": "Guillermo León Dueñas (Leo)'s birthday",
+      "date": "2026-05-12",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "o4o3lddo352s080oam72dlctps_20260512",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-12",
+      "startTime": "7:00 AM",
+      "endTime": "8:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8gsk2hhm8cq4cci574ok8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6grj8ea58ook8dph64rjec9k7113cdpk850j2h1n8l1k4ea28cs0_20260512T130000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-12",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260512T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260513",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-13",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260513T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260514",
+      "method": "api-sync"
+    },
+    {
+      "title": "Ascension Day of Jesus Christ - Indonesia",
+      "date": "2026-05-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk64r30c9m68s3cdr46thjcdpjcopm8p3469j36e9p70rmaeb4cgpg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-14",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260514T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-14",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260514T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-15",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260515",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-15",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260515T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-18",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260518",
+      "method": "api-sync"
+    },
+    {
+      "title": "Ascension Day - Colombia",
+      "date": "2026-05-18",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk74p68dr269h3gcpnccqj6opg6oo62or26kr3echlclh68c1l6crg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Victoria Day - Canada",
+      "date": "2026-05-18",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc4qm6opnckrm8ohj6phjcphj70s30cb26dij6cj368sj8c1g6hhg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Battle of the Stones - Uruguay",
+      "date": "2026-05-18",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc5hm4dr4ccrj2cj370om2dr264r3idj6cgrmap9ocos6achpc4qg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-18",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260518T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-19",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260519",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-19",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260519T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-20",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260520",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-20",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260520T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-21",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260521",
+      "method": "api-sync"
+    },
+    {
+      "title": "Naval Glories Day - Chile",
+      "date": "2026-05-21",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk65i36o9ocpgmap9m6kr3ge1gcgq34chk6ksjgc1m70q6cdj565gg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-21",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260521T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-21",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260521T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-22",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260522",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-22",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260522T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Saints Cyril and Methodius' Day - North Macedonia",
+      "date": "2026-05-24",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6os3goph6pi64c9hccq34cho74r3ie9ic5i30p9g60o3aor6cgqg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Whit Sunday - Poland",
+      "date": "2026-05-24",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk70p3cob36kqjacj271h66chgclh3ce1g68r3ee9n6ksjge3270pg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260525",
+      "method": "api-sync"
+    },
+    {
+      "title": "Memorial Day - USA",
+      "date": "2026-05-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk61j3epj474pm6pb1clij2c35c8o3cpj2c4pmad1g60sjepj66osg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Battle of Pichincha - Ecuador",
+      "date": "2026-05-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6kqm4cpgclim6e9jc8pjichg74o30chg74pjce9k68r32p9h74rg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Saints Cyril and Methodius' Day observed - North Macedonia",
+      "date": "2026-05-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk71hjeopm6hi34oj66ks6co9nc8r3ce1n6lj64e9j70q6cc9ic9i0",
+      "method": "api-sync"
+    },
+    {
+      "title": "May Revolution / First Government Day - Argentina",
+      "date": "2026-05-25",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkc8qm8e9j6hgjad1i65j68choc4rmcdpg75gj8d9hchh3ccr36hhg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-25",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260525T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-26",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260526",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid al-Adha - Saudi Arabia",
+      "date": "2026-05-26",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk70pjed1mcos68c9gcpi32e34c4ojgopgcosm4or46so38c9m6tj0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid Adha - Philippines",
+      "date": "2026-05-26",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcpi3ce356gpm2d3468p3go9ncpimcpb56ss3gcb3cdgm8d9g6ksg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-26",
+      "startTime": "7:00 AM",
+      "endTime": "8:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8gsk2hhm8cq4cci574ok8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6grj8ea58ook8dph64rjec9k7113cdpk850j2h1n8l1k4ea28cs0_20260526T130000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-26",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260526T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-27",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260527",
+      "method": "api-sync"
+    },
+    {
+      "title": "Kurban Bayram - Bosnia and Herzegovina",
+      "date": "2026-05-27",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "3vt8hv1qn8f73pk92rtnpmftdp",
+      "method": "api-sync"
+    },
+    {
+      "title": "Hari Raya Aidil Adha - Brunei",
+      "date": "2026-05-27",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6or34cphc8sjep9h6com8cpgchj34phpcli68dr375h62pb46gp0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Hari Raya Haji Holiday - Malaysia",
+      "date": "2026-05-27",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6ph3ccb6chhm4cr36ti3ccr4coo34e9gc4sjcd9gclj3ae9pc9j0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Hari Raya Haji - Singapore",
+      "date": "2026-05-27",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk70r3ge1ocpi68opi6hi3cdb468q68phh6ti3ccj4clhmap9g75hg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid al-Adha - Saudi Arabia",
+      "date": "2026-05-27",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcoq68dpmckpjgohjcpj3ae9j6ksm2pb56lj62e1i74r38db3cpj0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-27",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260527T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-28",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260528",
+      "method": "api-sync"
+    },
+    {
+      "title": "Feast of the Sacrifice - Indonesia",
+      "date": "2026-05-28",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk65i3ecj4c8o64cpn6krmacb56sr3idhp61ijgchh64p3adpk75h0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Bakrid - India",
+      "date": "2026-05-28",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk68rj2db2chi36opnccs6ccpmc4o64c9o74smcdj570p3cchp6kq0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid al-Adha - Saudi Arabia",
+      "date": "2026-05-28",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6lhjgdb56kp6co9p6hgm4eb16li62dpkcpi62pb264o32dhm71j0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Id-Ul-Alha (Hadji Festival Day) - Sri Lanka",
+      "date": "2026-05-28",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcgsjee9o70q6acj270rjepj5ccsj0cj36sp34db26th68dr5cpig",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-28",
+      "startTime": "8:30 AM",
+      "endTime": "9:30 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g84s4cc2589348h1o890k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g69332e1l6coj0e9g6h1jad1k61138c2574r48hi68crjeghp710g_20260528T143000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-28",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260528T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-05-29",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260529",
+      "method": "api-sync"
+    },
+    {
+      "title": "Eid al-Adha - Saudi Arabia",
+      "date": "2026-05-29",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6thj6pb56gsj2cb3cco3adhn71ijie9n6phjie32chhm8c9i6gog",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-05-29",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260529T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Statehood Day - Croatia",
+      "date": "2026-05-30",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk64p38pj6cgpjcc9n6kqm6c1p6oo3ac1kcoq3cc9m74p36dhj71hg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Royal Brunei Armed Forces Day - Brunei",
+      "date": "2026-05-31",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk64pm6d1k6pim4p35ckq64e346cs38phjclj3ecj36lh62chp65h0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260601",
+      "method": "api-sync"
+    },
+    {
+      "title": "Pancasila Day - Indonesia",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk60s64opgcko3ep316tij4p9n68sjeor261i6ae9j6gq3echkc4og",
+      "method": "api-sync"
+    },
+    {
+      "title": "Vesak Day - Singapore",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk69j3id9o74s3apb66cpj0c1mckoj0p3471j3ae9ic8q6ap1ic4pg",
+      "method": "api-sync"
+    },
+    {
+      "title": "Royal Brunei Armed Forces Day Holiday (Observed) - Brunei",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6gs3ior174p6ap9ncli32c356ko3gcr36gpj2chjc5hmaeb6chi0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Orthodox Whit Monday - Greece",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6kom4e9i6tj3gchgc9j3cd9k70r66p1o68p6cdppc9hmaphhchgg",
+      "method": "api-sync"
+    },
+    {
+      "title": "June Bank Holiday - Ireland",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6kp66cr265h34c9l69gmap9h6kqjiphn70oj4e9kcdgm8ohh74q0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Whit Sunday (moved from Sun, May 31) - Ukraine",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk6phjgcpg65j68cr4cdgjgdb670om6or26comccpj6lij8o9o68o0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Wesak Day (moved from Sun, May 31) - Malaysia",
+      "date": "2026-06-01",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjkcorjco9hc5i6ccj5cdj38dj46li64c9lc8s3ep9l69j36c1ochi0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-06-01",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260601T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-06-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260602",
+      "method": "api-sync"
+    },
+    {
+      "title": "HM The Supreme Monarch (Yang Di-Pertuan Agong) Birthday (moved from Mon 1) - Malaysia",
+      "date": "2026-06-02",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "_8d9lcgrfdpr6asjk74r6acpic8q3icj4ckp38o9gc4ojgp9k61h6cob469gjcc3260s0",
+      "method": "api-sync"
+    },
+    {
+      "title": "Tentative",
+      "date": "2026-06-02",
+      "startTime": "8:35 AM",
+      "endTime": "9:00 AM",
+      "isAllDay": false,
+      "location": "",
+      "eventId": "_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g60s30c1g60o30c1g8csj8hho6soj4hhk850k8gpg64o30c1g60o30c1g60o30c1g60o32c1g60o30c1g6sq46h1i8l132d2268sk6c9k6914aci46crj6chh6l0jae2574qg_20260602T143500Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Home",
+      "date": "2026-06-03",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260603",
       "method": "api-sync"
     },
     {
       "title": "Working location: Home",
       "location": "Home",
-      "date": "March 16 – 20, 2026",
+      "date": "March 30 – April 3, 2026",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "category": "working-location",
-      "raw": "Working location: Home, Carlos Carrillo, March 16 – 20, 2026"
-    },
-    {
-      "title": "Working location: Home",
-      "location": "Home",
-      "date": "March 23 – 27, 2026",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "category": "working-location",
-      "raw": "Working location: Home, Carlos Carrillo, March 23 – 27, 2026"
-    },
-    {
-      "title": "Working location: Home",
-      "location": "Home",
-      "date": "March 9 – 13, 2026",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "category": "working-location",
-      "raw": "Working location: Home, Carlos Carrillo, March 9 – 13, 2026"
+      "raw": "Working location: Home, Carlos Carrillo, March 30 – April 3, 2026"
     }
   ],
-  "rawTextLength": 4988
+  "rawTextLength": 5352
 }

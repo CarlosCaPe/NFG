@@ -1,5 +1,5 @@
 {
-  "count": 8,
+  "count": 10,
   "value": [
     {
       "_links": {
@@ -503,6 +503,134 @@
       "queueStatus": "enabled",
       "revision": 3,
       "createdDate": "2026-04-01T18:11:59.26Z",
+      "project": {
+        "id": "07664ca3-a7fe-4170-adca-cebdf3d8cc97",
+        "name": "newUM",
+        "url": "https://dev.azure.com/oncologyanalytics/_apis/projects/07664ca3-a7fe-4170-adca-cebdf3d8cc97",
+        "state": "wellFormed",
+        "revision": 318,
+        "visibility": "private",
+        "lastUpdateTime": "2026-03-31T12:33:55.833Z"
+      }
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/936?revision=2"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=936"
+        },
+        "editor": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/designer?id=936&_a=edit-build-definition"
+        },
+        "badge": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/status/936"
+        }
+      },
+      "quality": "definition",
+      "authoredBy": {
+        "displayName": "Luiyi Valentin",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+          }
+        },
+        "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+        "uniqueName": "lvalentin@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+        "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+      },
+      "drafts": [],
+      "queue": {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/build/Queues/240"
+          }
+        },
+        "id": 240,
+        "name": "Azure Pipelines",
+        "url": "https://dev.azure.com/oncologyanalytics/_apis/build/Queues/240",
+        "pool": {
+          "id": 24,
+          "name": "Azure Pipelines",
+          "isHosted": true
+        }
+      },
+      "id": 936,
+      "name": "headlamp-cd",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/936?revision=2",
+      "uri": "vstfs:///Build/Definition/936",
+      "path": "\\DevOps",
+      "type": "build",
+      "queueStatus": "enabled",
+      "revision": 2,
+      "createdDate": "2026-04-07T14:37:37.683Z",
+      "project": {
+        "id": "07664ca3-a7fe-4170-adca-cebdf3d8cc97",
+        "name": "newUM",
+        "url": "https://dev.azure.com/oncologyanalytics/_apis/projects/07664ca3-a7fe-4170-adca-cebdf3d8cc97",
+        "state": "wellFormed",
+        "revision": 318,
+        "visibility": "private",
+        "lastUpdateTime": "2026-03-31T12:33:55.833Z"
+      }
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/937?revision=1"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=937"
+        },
+        "editor": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/designer?id=937&_a=edit-build-definition"
+        },
+        "badge": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/status/937"
+        }
+      },
+      "quality": "definition",
+      "authoredBy": {
+        "displayName": "Michal Kochanski",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/b12dc92e-d61d-6743-87e5-0a7ffea3614b",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YjEyZGM5MmUtZDYxZC03NzQzLTg3ZTUtMGE3ZmZlYTM2MTRi"
+          }
+        },
+        "id": "b12dc92e-d61d-6743-87e5-0a7ffea3614b",
+        "uniqueName": "mkochanski@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YjEyZGM5MmUtZDYxZC03NzQzLTg3ZTUtMGE3ZmZlYTM2MTRi",
+        "descriptor": "aad.YjEyZGM5MmUtZDYxZC03NzQzLTg3ZTUtMGE3ZmZlYTM2MTRi"
+      },
+      "drafts": [],
+      "queue": {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/build/Queues/240"
+          }
+        },
+        "id": 240,
+        "name": "Azure Pipelines",
+        "url": "https://dev.azure.com/oncologyanalytics/_apis/build/Queues/240",
+        "pool": {
+          "id": 24,
+          "name": "Azure Pipelines",
+          "isHosted": true
+        }
+      },
+      "id": 937,
+      "name": "newum_aqa",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/937?revision=1",
+      "uri": "vstfs:///Build/Definition/937",
+      "path": "\\",
+      "type": "build",
+      "queueStatus": "enabled",
+      "revision": 1,
+      "createdDate": "2026-04-08T10:59:30.537Z",
       "project": {
         "id": "07664ca3-a7fe-4170-adca-cebdf3d8cc97",
         "name": "newUM",

@@ -3,7 +3,7 @@ Features (66)
 [Closed] #179188 Okta Authentication Foundation | Unassigned | P2 | pts | newUM | Q2 2026 Deliverable
 [New] #179706 Specify NewUM bulk ingest API | Unassigned | P2 | 2pts | newUM | Data; Q2 2026 Deliverable
 [Closed] #180149 FE App initial config and infra | Dmytro Petriv | P2 | pts | newUM\26.02.03 | FE; Q2 2026 Deliverable
-[New] #180229 Setup Test Infrastructure | Ivan Karpa | P2 | pts | newUM | Q2 2026 Deliverable; QA
+[Closed] #180229 Setup Test Infrastructure | Ivan Karpa | P2 | pts | newUM | Q2 2026 Deliverable; QA
 [Closed] #180325 Phase 1 Case Intake (POC) | Vika Nobis | P2 | pts | newUM\26.02.03 | Q2 2026 Deliverable
 [Closed] #180449 Initial Azure Infrastructure for BE (core and Services) | Luiyi Valentin | P2 | pts | newUM\26.02.03 | DevOps; Q2 2026 Deliverable
 [New] #180450 Initial Data Set up | Unassigned | P2 | pts | newUM\26.03.03 | Data; Q2 2026 Deliverable

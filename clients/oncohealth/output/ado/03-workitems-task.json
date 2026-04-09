@@ -1,700 +1,6 @@
 {
-  "count": 443,
+  "count": 466,
   "items": [
-    {
-      "id": 184642,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184642,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Jack Hall",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-            }
-          },
-          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "uniqueName": "jhall@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
-          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-        },
-        "System.CreatedDate": "2026-03-05T02:53:35.1Z",
-        "System.ChangedDate": "2026-03-05T05:55:28.08Z",
-        "System.Parent": 184595,
-        "System.Title": "Describe workflow abstractions",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184642"
-    },
-    {
-      "id": 184643,
-      "rev": 3,
-      "fields": {
-        "System.Id": 184643,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Vladyslav Kyrychuk",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
-            }
-          },
-          "id": "e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
-          "uniqueName": "vkyrychuk@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz",
-          "descriptor": "aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
-        },
-        "System.CreatedDate": "2026-03-05T02:54:28.333Z",
-        "System.ChangedDate": "2026-03-06T07:15:58.633Z",
-        "System.Parent": 184595,
-        "System.Title": "Describe case data model",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184643"
-    },
-    {
-      "id": 184644,
-      "rev": 3,
-      "fields": {
-        "System.Id": 184644,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Vladyslav Kyrychuk",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
-            }
-          },
-          "id": "e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
-          "uniqueName": "vkyrychuk@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz",
-          "descriptor": "aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
-        },
-        "System.CreatedDate": "2026-03-05T02:55:04.087Z",
-        "System.ChangedDate": "2026-03-06T07:16:03.04Z",
-        "System.Parent": 184595,
-        "System.Title": "Explain audit and case reconstruction",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184644"
-    },
-    {
-      "id": 184649,
-      "rev": 7,
-      "fields": {
-        "System.Id": 184649,
-        "System.AreaPath": "newUM\\QA Team",
-        "System.IterationPath": "newUM\\26.04.14",
-        "System.WorkItemType": "Task",
-        "System.State": "Active",
-        "System.AssignedTo": {
-          "displayName": "Olha Pidhorna",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
-            }
-          },
-          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
-          "uniqueName": "opidhorna@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
-          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
-        },
-        "System.CreatedDate": "2026-03-05T10:01:23.007Z",
-        "System.ChangedDate": "2026-03-31T09:16:15.35Z",
-        "System.Parent": 184648,
-        "System.Title": "Training Cloude Code Taras Badlo",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184649"
-    },
-    {
-      "id": 184650,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184650,
-        "System.AreaPath": "newUM\\QA Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Ivan Karpa",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cb973a1f-df07-6a97-bb3a-03d7581b7862",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
-            }
-          },
-          "id": "cb973a1f-df07-6a97-bb3a-03d7581b7862",
-          "uniqueName": "ikarpa@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy",
-          "descriptor": "aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
-        },
-        "System.CreatedDate": "2026-03-05T10:02:07.057Z",
-        "System.ChangedDate": "2026-03-18T09:33:19.96Z",
-        "System.Parent": 184648,
-        "System.Title": "Training Cloude Code Ivan Karpа",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184650"
-    },
-    {
-      "id": 184651,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184651,
-        "System.AreaPath": "newUM\\QA Team",
-        "System.IterationPath": "newUM\\26.03.31",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Andriy Sapryka",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/5f305299-8a60-62be-94f6-5c14f45f421c",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
-            }
-          },
-          "id": "5f305299-8a60-62be-94f6-5c14f45f421c",
-          "uniqueName": "asapryka@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj",
-          "descriptor": "aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
-        },
-        "System.CreatedDate": "2026-03-05T10:03:07.6Z",
-        "System.ChangedDate": "2026-03-23T07:39:46.787Z",
-        "System.Parent": 184648,
-        "System.Title": "Training Cloude Code Andriy Sapryka",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184651"
-    },
-    {
-      "id": 184652,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184652,
-        "System.AreaPath": "newUM\\QA Team",
-        "System.IterationPath": "newUM\\26.04.14",
-        "System.WorkItemType": "Task",
-        "System.State": "Active",
-        "System.AssignedTo": {
-          "displayName": "Olha Pidhorna",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
-            }
-          },
-          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
-          "uniqueName": "opidhorna@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
-          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
-        },
-        "System.CreatedDate": "2026-03-05T10:03:26.29Z",
-        "System.ChangedDate": "2026-03-31T09:16:21.223Z",
-        "System.Parent": 184648,
-        "System.Title": "Training Cloude Code Olha Pidhorna",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184652"
-    },
-    {
-      "id": 184654,
-      "rev": 3,
-      "fields": {
-        "System.Id": 184654,
-        "System.AreaPath": "newUM\\QA Team",
-        "System.IterationPath": "newUM\\26.03.31",
-        "System.WorkItemType": "Task",
-        "System.State": "Removed",
-        "System.CreatedDate": "2026-03-05T10:15:28.02Z",
-        "System.ChangedDate": "2026-03-31T09:15:40.817Z",
-        "System.Parent": 184653,
-        "System.Title": "Prepare BE -> UI mapping",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184654"
-    },
-    {
-      "id": 184660,
-      "rev": 6,
-      "fields": {
-        "System.Id": 184660,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Roman Buchyn",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/11bad899-c6dc-6fd8-bd27-cc9378e298b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
-            }
-          },
-          "id": "11bad899-c6dc-6fd8-bd27-cc9378e298b1",
-          "uniqueName": "rbuchyn@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx",
-          "descriptor": "aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
-        },
-        "System.CreatedDate": "2026-03-05T11:42:53.92Z",
-        "System.ChangedDate": "2026-03-19T16:02:47.933Z",
-        "System.Parent": 185712,
-        "System.Title": "Create a Rule for Validate Member Eligibility at Treatment",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "commentVersionRef": {
-        "commentId": 20551320,
-        "version": 1,
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/184660/comments/20551320/versions/1"
-      },
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184660"
-    },
-    {
-      "id": 184718,
-      "rev": 2,
-      "fields": {
-        "System.Id": 184718,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.CreatedDate": "2026-03-05T16:27:26.79Z",
-        "System.ChangedDate": "2026-03-09T15:48:02.313Z",
-        "System.Parent": 182863,
-        "System.Title": "repo strategy",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184718"
-    },
-    {
-      "id": 184722,
-      "rev": 12,
-      "fields": {
-        "System.Id": 184722,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Michal Mucha",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6dc7713d-f90b-6870-86f3-0747d519c7ab",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
-            }
-          },
-          "id": "6dc7713d-f90b-6870-86f3-0747d519c7ab",
-          "uniqueName": "mmucha@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi",
-          "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
-        },
-        "System.CreatedDate": "2026-03-05T16:33:01.2Z",
-        "System.ChangedDate": "2026-03-17T15:19:40.643Z",
-        "System.Parent": 182860,
-        "System.Title": "Separation audatibility records from snapshot data",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184722"
-    },
-    {
-      "id": 184741,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184741,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Jack Hall",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-            }
-          },
-          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "uniqueName": "jhall@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
-          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-        },
-        "System.CreatedDate": "2026-03-06T07:16:30.797Z",
-        "System.ChangedDate": "2026-03-10T04:07:08.177Z",
-        "System.Parent": 184595,
-        "System.Title": "Solicit review for Case Engine doc",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184741"
-    },
-    {
-      "id": 184742,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184742,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Jack Hall",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-            }
-          },
-          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "uniqueName": "jhall@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
-          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-        },
-        "System.CreatedDate": "2026-03-06T07:17:00.507Z",
-        "System.ChangedDate": "2026-03-10T12:30:18.087Z",
-        "System.Parent": 184595,
-        "System.Title": "Polish Case Engine doc",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184742"
-    },
-    {
-      "id": 184743,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184743,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Dmytro Hridin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-            }
-          },
-          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "uniqueName": "dhridin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
-          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-        },
-        "System.CreatedDate": "2026-03-06T08:00:02.657Z",
-        "System.ChangedDate": "2026-03-10T10:38:28.073Z",
-        "System.Parent": 184671,
-        "System.Title": "Document functional and non functional requirements",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184743"
-    },
-    {
-      "id": 184744,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184744,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Dmytro Hridin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-            }
-          },
-          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "uniqueName": "dhridin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
-          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-        },
-        "System.CreatedDate": "2026-03-06T08:00:29.5Z",
-        "System.ChangedDate": "2026-03-13T12:59:21.557Z",
-        "System.Parent": 184671,
-        "System.Title": "Document summary per service integration",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184744"
-    },
-    {
-      "id": 184751,
-      "rev": 9,
-      "fields": {
-        "System.Id": 184751,
-        "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Mykola Vorona",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
-            }
-          },
-          "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
-          "uniqueName": "mvorona@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
-          "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
-        },
-        "System.CreatedDate": "2026-03-06T12:18:16.193Z",
-        "System.ChangedDate": "2026-03-16T14:05:15.453Z",
-        "System.Parent": 183762,
-        "System.Title": "Separate member info and diagnosis forms",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div>Split diagnosis and member info for separate forms.<br>Add rest fields to member information form.<br> </div>"
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184751"
-    },
-    {
-      "id": 184759,
-      "rev": 9,
-      "fields": {
-        "System.Id": 184759,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Arben Osmani",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
-            }
-          },
-          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
-          "uniqueName": "aosmani@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
-          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
-        },
-        "System.CreatedDate": "2026-03-06T15:17:38.887Z",
-        "System.ChangedDate": "2026-03-17T17:13:32.257Z",
-        "System.Parent": 182859,
-        "System.Title": "Data dictionary",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184759"
-    },
-    {
-      "id": 184760,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184760,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Oleksandr Nykonenko",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
-            }
-          },
-          "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
-          "uniqueName": "onykonenko@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy",
-          "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
-        },
-        "System.CreatedDate": "2026-03-06T15:18:32.033Z",
-        "System.ChangedDate": "2026-03-09T15:44:03.163Z",
-        "System.Parent": 182860,
-        "System.Title": "Data dictionary",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184760"
-    },
-    {
-      "id": 184761,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184761,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Oleksandr Nykonenko",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
-            }
-          },
-          "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
-          "uniqueName": "onykonenko@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy",
-          "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
-        },
-        "System.CreatedDate": "2026-03-06T15:19:28.88Z",
-        "System.ChangedDate": "2026-03-09T15:44:16.213Z",
-        "System.Parent": 182860,
-        "System.Title": "System design doc",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184761"
-    },
-    {
-      "id": 184782,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184782,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Jack Hall",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-            }
-          },
-          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
-          "uniqueName": "jhall@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
-          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
-        },
-        "System.CreatedDate": "2026-03-06T19:53:22.9Z",
-        "System.ChangedDate": "2026-03-10T12:33:27.91Z",
-        "System.Parent": 184595,
-        "System.Title": "Add Design Doc template structure",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184782"
-    },
-    {
-      "id": 184801,
-      "rev": 9,
-      "fields": {
-        "System.Id": 184801,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Arben Osmani",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
-            }
-          },
-          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
-          "uniqueName": "aosmani@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
-          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
-        },
-        "System.CreatedDate": "2026-03-09T11:50:44.773Z",
-        "System.ChangedDate": "2026-03-17T17:13:35.86Z",
-        "System.Parent": 182859,
-        "System.Title": "NUCC - NPESS",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184801"
-    },
-    {
-      "id": 184822,
-      "rev": 5,
-      "fields": {
-        "System.Id": 184822,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Oleksandr Nykonenko",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
-            }
-          },
-          "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
-          "uniqueName": "onykonenko@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy",
-          "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
-        },
-        "System.CreatedDate": "2026-03-09T15:48:12.59Z",
-        "System.ChangedDate": "2026-03-12T15:55:55.017Z",
-        "System.Parent": 182863,
-        "System.Title": "create a new monorepo under devops",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184822"
-    },
-    {
-      "id": 184842,
-      "rev": 4,
-      "fields": {
-        "System.Id": 184842,
-        "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM\\26.03.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-03-09T19:22:44.573Z",
-        "System.ChangedDate": "2026-03-12T20:30:55.527Z",
-        "System.Parent": 180270,
-        "System.Title": "Add coverage support",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "DevOps"
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184842"
-    },
     {
       "id": 184886,
       "rev": 5,
@@ -4684,13 +3990,13 @@
     },
     {
       "id": 187516,
-      "rev": 4,
+      "rev": 9,
       "fields": {
         "System.Id": 187516,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Taras Badlo",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
@@ -4705,13 +4011,18 @@
           "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
         },
         "System.CreatedDate": "2026-03-31T09:07:39.087Z",
-        "System.ChangedDate": "2026-04-01T12:36:49.933Z",
+        "System.ChangedDate": "2026-04-09T11:07:23.537Z",
         "System.Parent": 187515,
         "System.Title": "Testing Load ICD-10 Library with Diagnosis Group (182089 and 182090)",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Description": "<div>Perform testing remaining work for the ICD-10 <br><br><a href=\"https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/182089\">https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/182089</a><br><a href=\"https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/182090\">https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/182090</a><br> </div>"
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20690887,
+        "version": 3,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187516/comments/20690887/versions/3"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187516"
     },
     {
@@ -4748,13 +4059,13 @@
     },
     {
       "id": 187528,
-      "rev": 1,
+      "rev": 2,
       "fields": {
         "System.Id": 187528,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Olha Pidhorna",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
@@ -4769,7 +4080,7 @@
           "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
         },
         "System.CreatedDate": "2026-03-31T11:02:21.14Z",
-        "System.ChangedDate": "2026-03-31T11:02:21.14Z",
+        "System.ChangedDate": "2026-04-09T12:37:17.873Z",
         "System.Parent": 187515,
         "System.Title": "Testing Validate Member Eligibility at Treatment Start Date",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -4780,13 +4091,13 @@
     },
     {
       "id": 187529,
-      "rev": 5,
+      "rev": 21,
       "fields": {
         "System.Id": 187529,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Andriy Sapryka",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/5f305299-8a60-62be-94f6-5c14f45f421c",
@@ -4801,7 +4112,7 @@
           "descriptor": "aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
         },
         "System.CreatedDate": "2026-03-31T11:04:25.08Z",
-        "System.ChangedDate": "2026-04-03T10:08:55.04Z",
+        "System.ChangedDate": "2026-04-09T12:54:06.82Z",
         "System.Parent": 187515,
         "System.Title": "Testing search existing regiments by drug composition",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -4809,21 +4120,21 @@
       },
       "multilineFieldsFormat": {},
       "commentVersionRef": {
-        "commentId": 20667945,
+        "commentId": 20708589,
         "version": 1,
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187529/comments/20667945/versions/1"
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187529/comments/20708589/versions/1"
       },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187529"
     },
     {
       "id": 187530,
-      "rev": 3,
+      "rev": 9,
       "fields": {
         "System.Id": 187530,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Taras Badlo",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
@@ -4838,7 +4149,7 @@
           "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
         },
         "System.CreatedDate": "2026-03-31T11:06:02.97Z",
-        "System.ChangedDate": "2026-04-01T12:35:58.56Z",
+        "System.ChangedDate": "2026-04-09T10:51:02.327Z",
         "System.Parent": 187515,
         "System.Title": "Define the scope of testing for existing endpoints",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -5044,15 +4355,28 @@
     },
     {
       "id": 187564,
-      "rev": 1,
+      "rev": 2,
       "fields": {
         "System.Id": 187564,
         "System.AreaPath": "newUM\\Data Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Michal Mucha",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
+            }
+          },
+          "id": "6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "uniqueName": "mmucha@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi",
+          "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
+        },
         "System.CreatedDate": "2026-03-31T14:05:15.953Z",
-        "System.ChangedDate": "2026-03-31T14:05:15.953Z",
+        "System.ChangedDate": "2026-04-07T14:33:09.757Z",
         "System.Parent": 187385,
         "System.Title": "Manual eligibility storage pattern",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5155,13 +4479,13 @@
     },
     {
       "id": 187603,
-      "rev": 3,
+      "rev": 6,
       "fields": {
         "System.Id": 187603,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Taras Badlo",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
@@ -5176,7 +4500,7 @@
           "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
         },
         "System.CreatedDate": "2026-04-01T07:59:13.117Z",
-        "System.ChangedDate": "2026-04-01T11:52:50.923Z",
+        "System.ChangedDate": "2026-04-08T08:21:06.303Z",
         "System.Parent": 187515,
         "System.Title": "Testing saving ICD-10 code and Diagnosis group context",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -5187,13 +4511,13 @@
     },
     {
       "id": 187607,
-      "rev": 1,
+      "rev": 3,
       "fields": {
         "System.Id": 187607,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Olha Pidhorna",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
@@ -5208,7 +4532,7 @@
           "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
         },
         "System.CreatedDate": "2026-04-01T09:38:12.69Z",
-        "System.ChangedDate": "2026-04-01T09:38:12.69Z",
+        "System.ChangedDate": "2026-04-08T15:12:39.023Z",
         "System.Parent": 187515,
         "System.Title": "Testing Save cancer stage",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -5314,13 +4638,13 @@
     },
     {
       "id": 187677,
-      "rev": 3,
+      "rev": 4,
       "fields": {
         "System.Id": 187677,
         "System.AreaPath": "newUM\\QA Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Code Review",
         "System.AssignedTo": {
           "displayName": "Michal Kochanski",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/b12dc92e-d61d-6743-87e5-0a7ffea3614b",
@@ -5335,7 +4659,7 @@
           "descriptor": "aad.YjEyZGM5MmUtZDYxZC03NzQzLTg3ZTUtMGE3ZmZlYTM2MTRi"
         },
         "System.CreatedDate": "2026-04-02T08:13:50.75Z",
-        "System.ChangedDate": "2026-04-03T08:33:23.787Z",
+        "System.ChangedDate": "2026-04-08T08:36:33.017Z",
         "System.Parent": 187601,
         "System.Title": "Change structure of already existing framework",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5417,13 +4741,13 @@
     },
     {
       "id": 187691,
-      "rev": 3,
+      "rev": 7,
       "fields": {
         "System.Id": 187691,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Mykola Vorona",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
@@ -5438,7 +4762,7 @@
           "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
         },
         "System.CreatedDate": "2026-04-02T11:45:09.647Z",
-        "System.ChangedDate": "2026-04-06T10:40:33.637Z",
+        "System.ChangedDate": "2026-04-07T10:57:10.94Z",
         "System.Parent": 182559,
         "System.Title": "Separate Drugs into separate beneficial types [PHARMACY/MEDICAL]",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5448,13 +4772,13 @@
     },
     {
       "id": 187692,
-      "rev": 3,
+      "rev": 7,
       "fields": {
         "System.Id": 187692,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Mykola Vorona",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
@@ -5469,7 +4793,7 @@
           "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
         },
         "System.CreatedDate": "2026-04-02T11:46:01.267Z",
-        "System.ChangedDate": "2026-04-06T11:55:20.913Z",
+        "System.ChangedDate": "2026-04-07T10:57:13.627Z",
         "System.Parent": 182559,
         "System.Title": "Add all the required columns for drug tables [READ_ONLY]",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5479,31 +4803,49 @@
     },
     {
       "id": 187694,
-      "rev": 1,
+      "rev": 6,
       "fields": {
         "System.Id": 187694,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Yurii Bodnar",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/46e7028a-a371-64d8-bf7d-9fef569bbbd5",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
+            }
+          },
+          "id": "46e7028a-a371-64d8-bf7d-9fef569bbbd5",
+          "uniqueName": "ybodnar@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1",
+          "descriptor": "aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
+        },
         "System.CreatedDate": "2026-04-02T12:18:32.017Z",
-        "System.ChangedDate": "2026-04-02T12:18:32.017Z",
+        "System.ChangedDate": "2026-04-07T14:50:49.87Z",
         "System.Parent": 182876,
         "System.Title": "Handle different column-demanded cells [TEXT INPUT, SELECT, ACTIONS, etc...]",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20690053,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187694/comments/20690053/versions/1"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187694"
     },
     {
       "id": 187695,
-      "rev": 3,
+      "rev": 6,
       "fields": {
         "System.Id": 187695,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Petro Brezitskiy",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
@@ -5518,53 +4860,94 @@
           "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
         },
         "System.CreatedDate": "2026-04-02T12:25:18.153Z",
-        "System.ChangedDate": "2026-04-06T07:43:01.21Z",
+        "System.ChangedDate": "2026-04-08T11:50:55.823Z",
         "System.Parent": 182880,
         "System.Title": "Create global DRUGS context [state & data handling]",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20697420,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187695/comments/20697420/versions/1"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187695"
     },
     {
       "id": 187696,
-      "rev": 1,
+      "rev": 7,
       "fields": {
         "System.Id": 187696,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Petro Brezitskiy",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+            }
+          },
+          "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "uniqueName": "pbrezitskiy@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy",
+          "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+        },
         "System.CreatedDate": "2026-04-02T12:25:51.377Z",
-        "System.ChangedDate": "2026-04-02T12:25:51.377Z",
+        "System.ChangedDate": "2026-04-09T08:09:31.877Z",
         "System.Parent": 182880,
         "System.Title": "Describe validation logic [per row]",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20706330,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187696/comments/20706330/versions/1"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187696"
     },
     {
       "id": 187697,
-      "rev": 1,
+      "rev": 5,
       "fields": {
         "System.Id": 187697,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Petro Brezitskiy",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+            }
+          },
+          "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "uniqueName": "pbrezitskiy@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy",
+          "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+        },
         "System.CreatedDate": "2026-04-02T12:26:11.363Z",
-        "System.ChangedDate": "2026-04-02T12:26:11.363Z",
+        "System.ChangedDate": "2026-04-09T12:22:01.543Z",
         "System.Parent": 182880,
         "System.Title": "Handle inline row values calculations",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20708201,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187697/comments/20708201/versions/1"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187697"
     },
     {
       "id": 187728,
-      "rev": 2,
+      "rev": 4,
       "fields": {
         "System.Id": 187728,
         "System.AreaPath": "newUM\\Data Team",
@@ -5585,7 +4968,7 @@
           "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
         },
         "System.CreatedDate": "2026-04-02T14:51:05.267Z",
-        "System.ChangedDate": "2026-04-02T14:51:18.71Z",
+        "System.ChangedDate": "2026-04-09T14:41:01.657Z",
         "System.Parent": 187388,
         "System.Title": "Figure out the mechanism to bring this data to NewUM",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5595,7 +4978,7 @@
     },
     {
       "id": 187731,
-      "rev": 3,
+      "rev": 5,
       "fields": {
         "System.Id": 187731,
         "System.AreaPath": "newUM\\Data Team",
@@ -5616,7 +4999,7 @@
           "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
         },
         "System.CreatedDate": "2026-04-02T14:56:16.97Z",
-        "System.ChangedDate": "2026-04-02T14:56:20.997Z",
+        "System.ChangedDate": "2026-04-09T14:41:01.027Z",
         "System.Parent": 187389,
         "System.Title": "Figure out the mechanism to bring this data to NewUM",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5842,13 +5225,13 @@
     },
     {
       "id": 187771,
-      "rev": 2,
+      "rev": 4,
       "fields": {
         "System.Id": 187771,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Jack Hall",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
@@ -5863,7 +5246,7 @@
           "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
         },
         "System.CreatedDate": "2026-04-03T02:26:46.667Z",
-        "System.ChangedDate": "2026-04-03T02:26:49.23Z",
+        "System.ChangedDate": "2026-04-09T05:42:03.05Z",
         "System.Parent": 184327,
         "System.Title": "Draft Action base class",
         "Microsoft.VSTS.Common.Priority": 2
@@ -5873,13 +5256,13 @@
     },
     {
       "id": 187772,
-      "rev": 2,
+      "rev": 4,
       "fields": {
         "System.Id": 187772,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Removed",
         "System.AssignedTo": {
           "displayName": "Jack Hall",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
@@ -5894,7 +5277,7 @@
           "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
         },
         "System.CreatedDate": "2026-04-03T02:27:35.26Z",
-        "System.ChangedDate": "2026-04-03T02:27:40.59Z",
+        "System.ChangedDate": "2026-04-09T05:41:57.647Z",
         "System.Parent": 184327,
         "System.Title": "Add C# predicates to example workflow definition",
         "Microsoft.VSTS.Common.Priority": 2
@@ -6002,13 +5385,13 @@
     },
     {
       "id": 187816,
-      "rev": 1,
+      "rev": 2,
       "fields": {
         "System.Id": 187816,
         "System.AreaPath": "newUM\\Data Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Arben Osmani",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
@@ -6023,7 +5406,7 @@
           "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
         },
         "System.CreatedDate": "2026-04-06T11:11:02.673Z",
-        "System.ChangedDate": "2026-04-06T11:11:02.673Z",
+        "System.ChangedDate": "2026-04-07T14:27:43.01Z",
         "System.Parent": 187386,
         "System.Title": "Billing Address",
         "Microsoft.VSTS.Common.Priority": 2
@@ -6033,13 +5416,13 @@
     },
     {
       "id": 187817,
-      "rev": 1,
+      "rev": 2,
       "fields": {
         "System.Id": 187817,
         "System.AreaPath": "newUM\\Data Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Arben Osmani",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
@@ -6054,7 +5437,7 @@
           "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
         },
         "System.CreatedDate": "2026-04-06T11:11:27.45Z",
-        "System.ChangedDate": "2026-04-06T11:11:27.45Z",
+        "System.ChangedDate": "2026-04-07T14:27:43.823Z",
         "System.Parent": 187386,
         "System.Title": "Taxonomy Codes",
         "Microsoft.VSTS.Common.Priority": 2
@@ -6064,13 +5447,13 @@
     },
     {
       "id": 187818,
-      "rev": 1,
+      "rev": 2,
       "fields": {
         "System.Id": 187818,
         "System.AreaPath": "newUM\\Data Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Arben Osmani",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
@@ -6085,7 +5468,7 @@
           "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
         },
         "System.CreatedDate": "2026-04-06T11:11:48.887Z",
-        "System.ChangedDate": "2026-04-06T11:11:48.887Z",
+        "System.ChangedDate": "2026-04-07T14:27:44.63Z",
         "System.Parent": 187386,
         "System.Title": "TIN",
         "Microsoft.VSTS.Common.Priority": 2
@@ -6095,13 +5478,13 @@
     },
     {
       "id": 187820,
-      "rev": 4,
+      "rev": 7,
       "fields": {
         "System.Id": 187820,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Bogdan Chachun",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
@@ -6116,23 +5499,28 @@
           "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
         },
         "System.CreatedDate": "2026-04-06T11:25:56.433Z",
-        "System.ChangedDate": "2026-04-06T11:28:11.187Z",
+        "System.ChangedDate": "2026-04-08T10:21:07.317Z",
         "System.Parent": 182879,
         "System.Title": "Investigate how to properly handle calculations on both the backend and frontend",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20696793,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187820/comments/20696793/versions/1"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187820"
     },
     {
       "id": 187821,
-      "rev": 2,
+      "rev": 5,
       "fields": {
         "System.Id": 187821,
         "System.AreaPath": "newUM\\BE Team",
         "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Active",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Bogdan Chachun",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
@@ -6147,21 +5535,213 @@
           "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
         },
         "System.CreatedDate": "2026-04-06T11:28:19.247Z",
-        "System.ChangedDate": "2026-04-06T11:28:20.49Z",
+        "System.ChangedDate": "2026-04-07T11:59:20.387Z",
         "System.Parent": 183547,
         "System.Title": "Investigate how to properly handle calculations on both the backend and frontend",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20687548,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187821/comments/20687548/versions/1"
+      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187821"
     },
     {
-      "id": 180863,
+      "id": 187936,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187936,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Ivan Karpa",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+            }
+          },
+          "id": "cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "uniqueName": "ikarpa@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy",
+          "descriptor": "aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+        },
+        "System.CreatedDate": "2026-04-07T10:53:04.43Z",
+        "System.ChangedDate": "2026-04-07T10:53:04.43Z",
+        "System.Parent": 182876,
+        "System.Title": "Testing Populate initial Dosing details",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187936"
+    },
+    {
+      "id": 187941,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187941,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Ivan Karpa",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+            }
+          },
+          "id": "cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "uniqueName": "ikarpa@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy",
+          "descriptor": "aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+        },
+        "System.CreatedDate": "2026-04-07T11:31:45.41Z",
+        "System.ChangedDate": "2026-04-07T11:31:45.41Z",
+        "System.Parent": 185517,
+        "System.Title": "Testing initial dosing details",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187941"
+    },
+    {
+      "id": 187942,
+      "rev": 2,
+      "fields": {
+        "System.Id": 187942,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Ivan Karpa",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+            }
+          },
+          "id": "cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "uniqueName": "ikarpa@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy",
+          "descriptor": "aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+        },
+        "System.CreatedDate": "2026-04-07T11:34:05.717Z",
+        "System.ChangedDate": "2026-04-07T12:03:45.807Z",
+        "System.Parent": 182878,
+        "System.Title": "Testing forms and strengths",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<div>testing of this ticket should include only the testing, that backend returns all the possible values for both options and saves the two valid selected options. </div>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187942"
+    },
+    {
+      "id": 187943,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187943,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Taras Badlo",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
+            }
+          },
+          "id": "3090f017-4f2d-6e26-9906-4d41973369f3",
+          "uniqueName": "tbadlo@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz",
+          "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
+        },
+        "System.CreatedDate": "2026-04-07T11:34:56.673Z",
+        "System.ChangedDate": "2026-04-07T11:34:56.673Z",
+        "System.Parent": 185518,
+        "System.Title": "Testing edits",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187943"
+    },
+    {
+      "id": 187944,
+      "rev": 1,
+      "fields": {
+        "System.Id": 187944,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Andriy Sapryka",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/5f305299-8a60-62be-94f6-5c14f45f421c",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
+            }
+          },
+          "id": "5f305299-8a60-62be-94f6-5c14f45f421c",
+          "uniqueName": "asapryka@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj",
+          "descriptor": "aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
+        },
+        "System.CreatedDate": "2026-04-07T11:59:04.417Z",
+        "System.ChangedDate": "2026-04-07T11:59:04.417Z",
+        "System.Parent": 187033,
+        "System.Title": "Test Existing regiment",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187944"
+    },
+    {
+      "id": 187945,
       "rev": 5,
       "fields": {
-        "System.Id": 180863,
+        "System.Id": 187945,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Hridin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+            }
+          },
+          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "uniqueName": "dhridin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
+          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+        },
+        "System.CreatedDate": "2026-04-07T12:01:18.077Z",
+        "System.ChangedDate": "2026-04-09T10:25:32.34Z",
+        "System.Parent": 182931,
+        "System.Title": "add tests",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187945"
+    },
+    {
+      "id": 187946,
+      "rev": 4,
+      "fields": {
+        "System.Id": 187946,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
         "System.State": "Closed",
         "System.AssignedTo": {
@@ -6177,195 +5757,23 @@
           "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
           "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
         },
-        "System.CreatedDate": "2026-01-29T12:47:48.603Z",
-        "System.ChangedDate": "2026-01-29T16:04:28.247Z",
-        "System.Parent": 180515,
-        "System.Title": "Create Database and user for Dev",
-        "Microsoft.VSTS.Common.Priority": 2
+        "System.CreatedDate": "2026-04-07T12:30:21.47Z",
+        "System.ChangedDate": "2026-04-07T12:30:38.477Z",
+        "System.Parent": 187698,
+        "System.Title": "Deploy portainer (POC)",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180863"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187946"
     },
     {
-      "id": 180864,
-      "rev": 5,
-      "fields": {
-        "System.Id": 180864,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-29T12:47:59.463Z",
-        "System.ChangedDate": "2026-01-29T16:04:29.967Z",
-        "System.Parent": 180515,
-        "System.Title": "Create Database and user for QA",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180864"
-    },
-    {
-      "id": 180865,
-      "rev": 5,
-      "fields": {
-        "System.Id": 180865,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-29T12:48:22.783Z",
-        "System.ChangedDate": "2026-02-02T20:48:25.817Z",
-        "System.Parent": 180515,
-        "System.Title": "Store credentials inside the AKS Keyvault",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180865"
-    },
-    {
-      "id": 180866,
-      "rev": 5,
-      "fields": {
-        "System.Id": 180866,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-29T12:48:45.197Z",
-        "System.ChangedDate": "2026-01-30T13:09:36.593Z",
-        "System.Parent": 180515,
-        "System.Title": "Establish connection between SQLMI and AKS networks",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180866"
-    },
-    {
-      "id": 180867,
+      "id": 187947,
       "rev": 3,
       "fields": {
-        "System.Id": 180867,
+        "System.Id": 187947,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.CreatedDate": "2026-01-29T12:49:18.71Z",
-        "System.ChangedDate": "2026-02-05T12:48:07.87Z",
-        "System.Parent": 179902,
-        "System.Title": "Create Dockerfile",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180867"
-    },
-    {
-      "id": 180868,
-      "rev": 4,
-      "fields": {
-        "System.Id": 180868,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Dmytro Hridin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-            }
-          },
-          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "uniqueName": "dhridin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
-          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-        },
-        "System.CreatedDate": "2026-01-29T12:49:28.843Z",
-        "System.ChangedDate": "2026-02-05T12:48:10.12Z",
-        "System.Parent": 179902,
-        "System.Title": "Create Helm charts or k8s manifests",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180868"
-    },
-    {
-      "id": 180869,
-      "rev": 4,
-      "fields": {
-        "System.Id": 180869,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Dmytro Hridin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-            }
-          },
-          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
-          "uniqueName": "dhridin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
-          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
-        },
-        "System.CreatedDate": "2026-01-29T12:49:41.333Z",
-        "System.ChangedDate": "2026-02-05T12:48:20.68Z",
-        "System.Parent": 179902,
-        "System.Title": "Create CD pipeline's steps",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180869"
-    },
-    {
-      "id": 180870,
-      "rev": 6,
-      "fields": {
-        "System.Id": 180870,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
         "System.State": "Closed",
         "System.AssignedTo": {
@@ -6381,23 +5789,23 @@
           "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
           "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
         },
-        "System.CreatedDate": "2026-01-29T12:50:23.367Z",
-        "System.ChangedDate": "2026-02-04T12:51:42.563Z",
-        "System.Parent": 180857,
-        "System.Title": "Deploy external secrets plugin in AKS",
+        "System.CreatedDate": "2026-04-07T12:30:59.2Z",
+        "System.ChangedDate": "2026-04-07T14:41:34.23Z",
+        "System.Parent": 187698,
+        "System.Title": "Deploy Headlamp (POC)",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Tags": "DevOps"
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180870"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187947"
     },
     {
-      "id": 180871,
+      "id": 187948,
       "rev": 5,
       "fields": {
-        "System.Id": 180871,
+        "System.Id": 187948,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
         "System.State": "Closed",
         "System.AssignedTo": {
@@ -6413,182 +5821,190 @@
           "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
           "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
         },
-        "System.CreatedDate": "2026-01-29T12:50:42.25Z",
-        "System.ChangedDate": "2026-02-04T12:51:47.54Z",
-        "System.Parent": 180857,
-        "System.Title": "Test the connection with dump secrets",
+        "System.CreatedDate": "2026-04-07T12:31:50.517Z",
+        "System.ChangedDate": "2026-04-09T12:30:28.953Z",
+        "System.Parent": 187698,
+        "System.Title": "Request DNS setup",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Tags": "DevOps"
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180871"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187948"
     },
     {
-      "id": 180872,
-      "rev": 9,
+      "id": 187949,
+      "rev": 5,
       "fields": {
-        "System.Id": 180872,
+        "System.Id": 187949,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
         "System.State": "Closed",
         "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "displayName": "Roman Buchyn",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/11bad899-c6dc-6fd8-bd27-cc9378e298b1",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
             }
           },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+          "id": "11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "uniqueName": "rbuchyn@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx",
+          "descriptor": "aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
         },
-        "System.CreatedDate": "2026-01-29T12:51:42.13Z",
-        "System.ChangedDate": "2026-02-12T13:49:11.003Z",
-        "System.Parent": 180861,
-        "System.Title": "Work with Onco's DevOps team to create DNS records",
+        "System.CreatedDate": "2026-04-07T12:44:27.237Z",
+        "System.ChangedDate": "2026-04-08T14:23:52.837Z",
+        "System.Parent": 183545,
+        "System.Title": "Return Treatment Types for Payer",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "DevOps"
+        "System.Description": "<div>We need to store Treatment Types in PayerConfig. There is still open questions how data will be migrated from legacy system, but for unblock workflow we will seed the data with currently supported &quot;Treatment types&quot;. </div>"
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180872"
-    },
-    {
-      "id": 180873,
-      "rev": 6,
-      "fields": {
-        "System.Id": 180873,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-29T12:51:56.167Z",
-        "System.ChangedDate": "2026-02-09T13:41:28.793Z",
-        "System.Parent": 180861,
-        "System.Title": "Deploy external DNS plugin to AKS",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "DevOps"
+      "commentVersionRef": {
+        "commentId": 20699484,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187949/comments/20699484/versions/1"
       },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180873"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187949"
     },
     {
-      "id": 180874,
-      "rev": 8,
+      "id": 187954,
+      "rev": 5,
       "fields": {
-        "System.Id": 180874,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
+        "System.Id": 187954,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Closed",
+        "System.State": "Code Review",
         "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "displayName": "Michal Mucha",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6dc7713d-f90b-6870-86f3-0747d519c7ab",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
             }
           },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+          "id": "6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "uniqueName": "mmucha@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi",
+          "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
         },
-        "System.CreatedDate": "2026-01-29T12:52:16.27Z",
-        "System.ChangedDate": "2026-02-09T13:42:54.78Z",
-        "System.Parent": 180861,
-        "System.Title": "Deploy service type LoadBalancers",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "DevOps"
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180874"
-    },
-    {
-      "id": 180875,
-      "rev": 8,
-      "fields": {
-        "System.Id": 180875,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.17",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-29T12:52:57.973Z",
-        "System.ChangedDate": "2026-02-10T14:00:23.373Z",
-        "System.Parent": 180861,
-        "System.Title": "Create Application Gateway rules to redirect traffic to the apps",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "DevOps"
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180875"
-    },
-    {
-      "id": 180876,
-      "rev": 9,
-      "fields": {
-        "System.Id": 180876,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-29T12:54:02.707Z",
-        "System.ChangedDate": "2026-01-29T16:04:34.277Z",
-        "System.Parent": 180515,
-        "System.Title": "Establish connection between SQLMI and VDI networks",
+        "System.CreatedDate": "2026-04-07T13:15:45.763Z",
+        "System.ChangedDate": "2026-04-08T14:33:09.607Z",
+        "System.Parent": 187563,
+        "System.Title": "Confluence documentation",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180876"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187954"
     },
     {
-      "id": 180919,
-      "rev": 11,
+      "id": 187970,
+      "rev": 2,
       "fields": {
-        "System.Id": 180919,
+        "System.Id": 187970,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Michal Mucha",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
+            }
+          },
+          "id": "6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "uniqueName": "mmucha@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi",
+          "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
+        },
+        "System.CreatedDate": "2026-04-07T14:27:22.63Z",
+        "System.ChangedDate": "2026-04-07T14:27:24.957Z",
+        "System.Parent": 187385,
+        "System.Title": "Review of Eligibility by Onco Data team",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187970"
+    },
+    {
+      "id": 187972,
+      "rev": 3,
+      "fields": {
+        "System.Id": 187972,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Cory Johnson",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d4cb1e88-a932-6b3e-9605-9832b457d525",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDRjYjFlODgtYTkzMi03YjNlLTk2MDUtOTgzMmI0NTdkNTI1"
+            }
+          },
+          "id": "d4cb1e88-a932-6b3e-9605-9832b457d525",
+          "uniqueName": "cjohnson@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDRjYjFlODgtYTkzMi03YjNlLTk2MDUtOTgzMmI0NTdkNTI1",
+          "descriptor": "aad.ZDRjYjFlODgtYTkzMi03YjNlLTk2MDUtOTgzMmI0NTdkNTI1"
+        },
+        "System.CreatedDate": "2026-04-07T14:44:59.45Z",
+        "System.ChangedDate": "2026-04-07T14:45:03.14Z",
+        "System.Parent": 187388,
+        "System.Title": "Bring flat files from Matis to Blob storage",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187972"
+    },
+    {
+      "id": 188056,
+      "rev": 7,
+      "fields": {
+        "System.Id": 188056,
         "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM\\26.02.17",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Yurii Bodnar",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/46e7028a-a371-64d8-bf7d-9fef569bbbd5",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
+            }
+          },
+          "id": "46e7028a-a371-64d8-bf7d-9fef569bbbd5",
+          "uniqueName": "ybodnar@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1",
+          "descriptor": "aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
+        },
+        "System.CreatedDate": "2026-04-08T09:09:27.38Z",
+        "System.ChangedDate": "2026-04-08T14:32:26.863Z",
+        "System.Parent": 182880,
+        "System.Title": "Describe regimen API callbacks",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<img src=\"https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/attachments/400020d0-ea86-4f52-a317-77064ea6152a?fileName=image.png\" alt=Image><br><br><div><ul><li>Create hooks in coresponding api folder<br> </li><li>Handle types </li> </ul> </div>"
+      },
+      "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20699627,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/188056/comments/20699627/versions/1"
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188056"
+    },
+    {
+      "id": 188057,
+      "rev": 8,
+      "fields": {
+        "System.Id": 188057,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
         "System.State": "Closed",
         "System.AssignedTo": {
@@ -6604,75 +6020,25 @@
           "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
           "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
         },
-        "System.CreatedDate": "2026-01-29T14:34:20.48Z",
-        "System.ChangedDate": "2026-02-16T10:00:35.443Z",
-        "System.Parent": 180837,
-        "System.Title": "[FE] Implement Diagnosis & Clinical Indication Capture UI (Mock-Driven)",
+        "System.CreatedDate": "2026-04-08T09:23:44.09Z",
+        "System.ChangedDate": "2026-04-08T13:33:04.333Z",
+        "System.Parent": 182876,
+        "System.Title": "Handle options mapping for PHARMACY DRUGS",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "Add Diagnosis and ICD-10 fields based on parent story description.&nbsp;<br><div>These fields should be selects with auto complete </div><div>For now it should be a separate mocked request that gets list of diagnosis data&nbsp;<br><br>For more info check the parent story or contact <a href=\"#\" data-vss-mention=\"version:2.0,e921eb32-d55a-6ecb-a7fa-f1c12cf85383\">@Inna Mariienko</a> </div>"
+        "System.Description": "<div>API response code example:<br><br><pre><code><span>representativeNdcOptions: [<br></span><div>&nbsp; {<br></div><div>&nbsp; &nbsp; strength: '250 mg',<br></div><div>&nbsp; &nbsp; rxnDoseForm: 'Oral Tablet',<br></div><div>&nbsp; &nbsp; ...</div><div>&nbsp; &nbsp; numeratorValue: 250,<br></div><div>&nbsp; },</div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; {<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; strength: '250 mg',<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; rxnDoseForm: 'Infusion',<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; ...</div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; numeratorValue: 250,<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; },</div><div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; {<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; strength: '300 mg',<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; rxnDoseForm: '<span style=\"display:inline !important;\">DoseForm 300</span>',<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; ...</div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; numeratorValue: 300,<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; },</div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; {<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; strength: '300 mg',<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; rxnDoseForm: 'Alternative <span style=\"display:inline !important;\">DoseForm 300</span>,<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; ...</div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; &nbsp; numeratorValue: 300,<br style=\"box-sizing:border-box;\"></div><div style=\"box-sizing:border-box;\">&nbsp; &nbsp; &nbsp; },</div></div><span>],</span><br></code></pre><br>Handle lists of options for two columns: </div><div><ul><li><span style=\"\">strength: options list should be all the unique&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">strength</span> values [<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">250 mg,&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">300 mg</span></span>]<br></span> </li><li><span style=\"\">doseForm: depends on what <span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">strength</span> is selected - should include all possible forms for the currently selected <span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">strength</span>:<br>- no&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">strength</span> selected: []<br>-&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">250 mg</span> selected: [<span style=\"font-family:monospace;background-color:rgb(234, 234, 234);display:inline !important;\">Oral Tablet,&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">Infusion</span></span>]<br>-&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">300 mg</span> selected: [<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">DoseForm 300,&nbsp;<span style=\"background-color:rgb(234, 234, 234);display:inline !important;\">Alternative </span><span style=\"box-sizing:border-box;background-color:rgb(234, 234, 234);display:inline !important;\">DoseForm 300</span></span>]</span> </li> </ul> </div>"
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180919"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188057"
     },
     {
-      "id": 180920,
-      "rev": 2,
-      "fields": {
-        "System.Id": 180920,
-        "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM",
-        "System.WorkItemType": "Task",
-        "System.State": "New",
-        "System.CreatedDate": "2026-01-29T14:34:41.363Z",
-        "System.ChangedDate": "2026-02-02T14:34:30.527Z",
-        "System.Title": "Task 1",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180920"
-    },
-    {
-      "id": 180931,
-      "rev": 6,
-      "fields": {
-        "System.Id": 180931,
-        "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM\\26.02.03",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Petro Brezitskiy",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
-            }
-          },
-          "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
-          "uniqueName": "pbrezitskiy@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy",
-          "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
-        },
-        "System.CreatedDate": "2026-01-29T14:56:06.477Z",
-        "System.ChangedDate": "2026-02-03T10:34:41.28Z",
-        "System.Parent": 179195,
-        "System.Title": "Cover all protected routes with a okta security",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "This tasks populates security that is currently implemented in the dashboard route across all of the protected routes<br><br>TODO:<br><ul><li>Add okta auth security for all routes in the protected folder </li><li>Move Dashboard inner contents inside to the home page&nbsp; </li><li>remove secure folder and all it's mentionings </li><li>Double check that when user is not logged in and tried to access a protected page he should be navigated to okta auth and after successful auth he should be navigated back to the original page </li><li>on the sigin page afterr success full login user should be redirected to the home page </li> </ul>",
-        "System.Tags": "FE"
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180931"
-    },
-    {
-      "id": 180997,
+      "id": 188065,
       "rev": 4,
       "fields": {
-        "System.Id": 180997,
+        "System.Id": 188065,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Closed",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Bogdan Chachun",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
@@ -6686,138 +6052,232 @@
           "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
           "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
         },
-        "System.CreatedDate": "2026-01-29T21:48:51.023Z",
-        "System.ChangedDate": "2026-01-29T21:53:37.553Z",
-        "System.Parent": 179794,
-        "System.Title": "[NewUM] OKTA provider logic for Notification Service",
+        "System.CreatedDate": "2026-04-08T11:15:52.04Z",
+        "System.ChangedDate": "2026-04-08T11:23:15.917Z",
+        "System.Parent": 183547,
+        "System.Title": "Add ComputeStrength calculation in case of Pack form",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180997"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188065"
     },
     {
-      "id": 180998,
+      "id": 188109,
       "rev": 3,
       "fields": {
-        "System.Id": 180998,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
+        "System.Id": 188109,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Closed",
+        "System.State": "Active",
         "System.AssignedTo": {
-          "displayName": "Bogdan Chachun",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "displayName": "Carlos Carrillo",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6bd2b7f2-a2a0-64b4-a5a2-214e3278810f",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmJkMmI3ZjItYTJhMC03NGI0LWE1YTItMjE0ZTMyNzg4MTBm"
             }
           },
-          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
-          "uniqueName": "bchachun@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
-          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+          "id": "6bd2b7f2-a2a0-64b4-a5a2-214e3278810f",
+          "uniqueName": "ccarrillo@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmJkMmI3ZjItYTJhMC03NGI0LWE1YTItMjE0ZTMyNzg4MTBm",
+          "descriptor": "aad.NmJkMmI3ZjItYTJhMC03NGI0LWE1YTItMjE0ZTMyNzg4MTBm"
         },
-        "System.CreatedDate": "2026-01-29T21:50:11.353Z",
-        "System.ChangedDate": "2026-01-29T21:53:42.06Z",
-        "System.Parent": 179794,
-        "System.Title": "[NewUM] Proxy Client logic",
+        "System.CreatedDate": "2026-04-08T14:33:29.797Z",
+        "System.ChangedDate": "2026-04-08T14:33:33.953Z",
+        "System.Parent": 187416,
+        "System.Title": "Investigation",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180998"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188109"
     },
     {
-      "id": 180999,
+      "id": 188112,
       "rev": 3,
       "fields": {
-        "System.Id": 180999,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
+        "System.Id": 188112,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Closed",
+        "System.State": "Active",
         "System.AssignedTo": {
-          "displayName": "Bogdan Chachun",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "displayName": "Arben Osmani",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
             }
           },
-          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
-          "uniqueName": "bchachun@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
-          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "uniqueName": "aosmani@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
+          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
         },
-        "System.CreatedDate": "2026-01-29T21:51:06.61Z",
-        "System.ChangedDate": "2026-02-02T10:17:20.793Z",
-        "System.Parent": 179794,
-        "System.Title": "[NewUM] Integration with Notification service",
+        "System.CreatedDate": "2026-04-08T14:39:01.27Z",
+        "System.ChangedDate": "2026-04-08T14:39:08.36Z",
+        "System.Parent": 187525,
+        "System.Title": "Writing data to prostgress",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180999"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188112"
     },
     {
-      "id": 181000,
+      "id": 188116,
       "rev": 3,
       "fields": {
-        "System.Id": 181000,
-        "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
+        "System.Id": 188116,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "Closed",
+        "System.State": "Active",
         "System.AssignedTo": {
-          "displayName": "Bogdan Chachun",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "displayName": "Carlos Carrillo",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6bd2b7f2-a2a0-64b4-a5a2-214e3278810f",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmJkMmI3ZjItYTJhMC03NGI0LWE1YTItMjE0ZTMyNzg4MTBm"
             }
           },
-          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
-          "uniqueName": "bchachun@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
-          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+          "id": "6bd2b7f2-a2a0-64b4-a5a2-214e3278810f",
+          "uniqueName": "ccarrillo@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmJkMmI3ZjItYTJhMC03NGI0LWE1YTItMjE0ZTMyNzg4MTBm",
+          "descriptor": "aad.NmJkMmI3ZjItYTJhMC03NGI0LWE1YTItMjE0ZTMyNzg4MTBm"
         },
-        "System.CreatedDate": "2026-01-29T21:51:46.21Z",
-        "System.ChangedDate": "2026-01-29T21:53:45.197Z",
-        "System.Parent": 179794,
-        "System.Title": "[NewUM] Stub for sending letter",
+        "System.CreatedDate": "2026-04-08T14:41:59.98Z",
+        "System.ChangedDate": "2026-04-08T14:42:06.52Z",
+        "System.Parent": 187526,
+        "System.Title": "lack of access",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181000"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188116"
     },
     {
-      "id": 181001,
-      "rev": 3,
+      "id": 188133,
+      "rev": 2,
       "fields": {
-        "System.Id": 181001,
+        "System.Id": 188133,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.02.03",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-04-08T15:13:27.21Z",
+        "System.ChangedDate": "2026-04-08T15:13:42.873Z",
+        "System.Parent": 187698,
+        "System.Title": "Add Okta authentication for Headlamp",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188133"
+    },
+    {
+      "id": 188353,
+      "rev": 4,
+      "fields": {
+        "System.Id": 188353,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
         "System.State": "Closed",
         "System.AssignedTo": {
-          "displayName": "Bogdan Chachun",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "displayName": "Roman Buchyn",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/11bad899-c6dc-6fd8-bd27-cc9378e298b1",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
             }
           },
-          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
-          "uniqueName": "bchachun@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
-          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+          "id": "11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "uniqueName": "rbuchyn@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx",
+          "descriptor": "aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
         },
-        "System.CreatedDate": "2026-01-29T21:52:52.55Z",
-        "System.ChangedDate": "2026-02-02T10:17:23.877Z",
-        "System.Parent": 179794,
-        "System.Title": "Verify getting token logic and sending letter",
+        "System.CreatedDate": "2026-04-09T12:07:37.483Z",
+        "System.ChangedDate": "2026-04-09T14:45:13.67Z",
+        "System.Parent": 187852,
+        "System.Title": "Rule Condition Validation Research",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181001"
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188353"
+    },
+    {
+      "id": 188398,
+      "rev": 2,
+      "fields": {
+        "System.Id": 188398,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Arben Osmani",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+            }
+          },
+          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "uniqueName": "aosmani@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
+          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+        },
+        "System.CreatedDate": "2026-04-09T14:13:15.417Z",
+        "System.ChangedDate": "2026-04-09T14:13:20.977Z",
+        "System.Parent": 187525,
+        "System.Title": "Document the approach",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188398"
+    },
+    {
+      "id": 188400,
+      "rev": 2,
+      "fields": {
+        "System.Id": 188400,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Arben Osmani",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+            }
+          },
+          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "uniqueName": "aosmani@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
+          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+        },
+        "System.CreatedDate": "2026-04-09T14:14:13.977Z",
+        "System.ChangedDate": "2026-04-09T14:14:30.24Z",
+        "System.Parent": 187525,
+        "System.Title": "Implement the python script to read data from ADLS",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188400"
     },
     {
       "id": 181121,
@@ -6880,37 +6340,6 @@
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181122"
-    },
-    {
-      "id": 181123,
-      "rev": 4,
-      "fields": {
-        "System.Id": 181123,
-        "System.AreaPath": "newUM\\FE Team",
-        "System.IterationPath": "newUM\\26.02.03",
-        "System.WorkItemType": "Task",
-        "System.State": "Closed",
-        "System.AssignedTo": {
-          "displayName": "Luiyi Valentin",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "_links": {
-            "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-            }
-          },
-          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
-          "uniqueName": "lvalentin@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
-          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
-        },
-        "System.CreatedDate": "2026-01-30T13:12:13.207Z",
-        "System.ChangedDate": "2026-02-03T13:40:12.53Z",
-        "System.Parent": 181124,
-        "System.Title": "Create CD pipeline's steps",
-        "Microsoft.VSTS.Common.Priority": 2
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181123"
     },
     {
       "id": 181299,
@@ -11131,15 +10560,28 @@
     },
     {
       "id": 183985,
-      "rev": 1,
+      "rev": 6,
       "fields": {
         "System.Id": 183985,
-        "System.AreaPath": "newUM",
-        "System.IterationPath": "newUM",
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.14",
         "System.WorkItemType": "Task",
-        "System.State": "New",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Roman Buchyn",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
+            }
+          },
+          "id": "11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "uniqueName": "rbuchyn@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx",
+          "descriptor": "aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
+        },
         "System.CreatedDate": "2026-02-26T10:33:46.33Z",
-        "System.ChangedDate": "2026-02-26T10:33:46.33Z",
+        "System.ChangedDate": "2026-04-09T11:04:33.9Z",
         "System.Parent": 183545,
         "System.Title": "Implement Treatment Type on Case",
         "Microsoft.VSTS.Common.Priority": 2
@@ -12245,6 +11687,700 @@
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184641"
+    },
+    {
+      "id": 184642,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184642,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Jack Hall",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+            }
+          },
+          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "uniqueName": "jhall@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
+          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+        },
+        "System.CreatedDate": "2026-03-05T02:53:35.1Z",
+        "System.ChangedDate": "2026-03-05T05:55:28.08Z",
+        "System.Parent": 184595,
+        "System.Title": "Describe workflow abstractions",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184642"
+    },
+    {
+      "id": 184643,
+      "rev": 3,
+      "fields": {
+        "System.Id": 184643,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Vladyslav Kyrychuk",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
+            }
+          },
+          "id": "e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
+          "uniqueName": "vkyrychuk@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz",
+          "descriptor": "aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
+        },
+        "System.CreatedDate": "2026-03-05T02:54:28.333Z",
+        "System.ChangedDate": "2026-03-06T07:15:58.633Z",
+        "System.Parent": 184595,
+        "System.Title": "Describe case data model",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184643"
+    },
+    {
+      "id": 184644,
+      "rev": 3,
+      "fields": {
+        "System.Id": 184644,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Vladyslav Kyrychuk",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
+            }
+          },
+          "id": "e57c12b6-d012-6e3c-9d55-c9b7cd2cd433",
+          "uniqueName": "vkyrychuk@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz",
+          "descriptor": "aad.ZTU3YzEyYjYtZDAxMi03ZTNjLTlkNTUtYzliN2NkMmNkNDMz"
+        },
+        "System.CreatedDate": "2026-03-05T02:55:04.087Z",
+        "System.ChangedDate": "2026-03-06T07:16:03.04Z",
+        "System.Parent": 184595,
+        "System.Title": "Explain audit and case reconstruction",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184644"
+    },
+    {
+      "id": 184649,
+      "rev": 7,
+      "fields": {
+        "System.Id": 184649,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-05T10:01:23.007Z",
+        "System.ChangedDate": "2026-03-31T09:16:15.35Z",
+        "System.Parent": 184648,
+        "System.Title": "Training Cloude Code Taras Badlo",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184649"
+    },
+    {
+      "id": 184650,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184650,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Ivan Karpa",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+            }
+          },
+          "id": "cb973a1f-df07-6a97-bb3a-03d7581b7862",
+          "uniqueName": "ikarpa@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy",
+          "descriptor": "aad.Y2I5NzNhMWYtZGYwNy03YTk3LWJiM2EtMDNkNzU4MWI3ODYy"
+        },
+        "System.CreatedDate": "2026-03-05T10:02:07.057Z",
+        "System.ChangedDate": "2026-03-18T09:33:19.96Z",
+        "System.Parent": 184648,
+        "System.Title": "Training Cloude Code Ivan Karpа",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184650"
+    },
+    {
+      "id": 184651,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184651,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Andriy Sapryka",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/5f305299-8a60-62be-94f6-5c14f45f421c",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
+            }
+          },
+          "id": "5f305299-8a60-62be-94f6-5c14f45f421c",
+          "uniqueName": "asapryka@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj",
+          "descriptor": "aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
+        },
+        "System.CreatedDate": "2026-03-05T10:03:07.6Z",
+        "System.ChangedDate": "2026-03-23T07:39:46.787Z",
+        "System.Parent": 184648,
+        "System.Title": "Training Cloude Code Andriy Sapryka",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184651"
+    },
+    {
+      "id": 184652,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184652,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Task",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-03-05T10:03:26.29Z",
+        "System.ChangedDate": "2026-03-31T09:16:21.223Z",
+        "System.Parent": 184648,
+        "System.Title": "Training Cloude Code Olha Pidhorna",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184652"
+    },
+    {
+      "id": 184654,
+      "rev": 3,
+      "fields": {
+        "System.Id": 184654,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM\\26.03.31",
+        "System.WorkItemType": "Task",
+        "System.State": "Removed",
+        "System.CreatedDate": "2026-03-05T10:15:28.02Z",
+        "System.ChangedDate": "2026-03-31T09:15:40.817Z",
+        "System.Parent": 184653,
+        "System.Title": "Prepare BE -> UI mapping",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184654"
+    },
+    {
+      "id": 184660,
+      "rev": 6,
+      "fields": {
+        "System.Id": 184660,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Roman Buchyn",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
+            }
+          },
+          "id": "11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "uniqueName": "rbuchyn@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx",
+          "descriptor": "aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
+        },
+        "System.CreatedDate": "2026-03-05T11:42:53.92Z",
+        "System.ChangedDate": "2026-03-19T16:02:47.933Z",
+        "System.Parent": 185712,
+        "System.Title": "Create a Rule for Validate Member Eligibility at Treatment",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20551320,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/184660/comments/20551320/versions/1"
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184660"
+    },
+    {
+      "id": 184718,
+      "rev": 2,
+      "fields": {
+        "System.Id": 184718,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.CreatedDate": "2026-03-05T16:27:26.79Z",
+        "System.ChangedDate": "2026-03-09T15:48:02.313Z",
+        "System.Parent": 182863,
+        "System.Title": "repo strategy",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184718"
+    },
+    {
+      "id": 184722,
+      "rev": 12,
+      "fields": {
+        "System.Id": 184722,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Michal Mucha",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
+            }
+          },
+          "id": "6dc7713d-f90b-6870-86f3-0747d519c7ab",
+          "uniqueName": "mmucha@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi",
+          "descriptor": "aad.NmRjNzcxM2QtZjkwYi03ODcwLTg2ZjMtMDc0N2Q1MTljN2Fi"
+        },
+        "System.CreatedDate": "2026-03-05T16:33:01.2Z",
+        "System.ChangedDate": "2026-03-17T15:19:40.643Z",
+        "System.Parent": 182860,
+        "System.Title": "Separation audatibility records from snapshot data",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184722"
+    },
+    {
+      "id": 184741,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184741,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Jack Hall",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+            }
+          },
+          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "uniqueName": "jhall@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
+          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+        },
+        "System.CreatedDate": "2026-03-06T07:16:30.797Z",
+        "System.ChangedDate": "2026-03-10T04:07:08.177Z",
+        "System.Parent": 184595,
+        "System.Title": "Solicit review for Case Engine doc",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184741"
+    },
+    {
+      "id": 184742,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184742,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Jack Hall",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+            }
+          },
+          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "uniqueName": "jhall@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
+          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+        },
+        "System.CreatedDate": "2026-03-06T07:17:00.507Z",
+        "System.ChangedDate": "2026-03-10T12:30:18.087Z",
+        "System.Parent": 184595,
+        "System.Title": "Polish Case Engine doc",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184742"
+    },
+    {
+      "id": 184743,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184743,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Hridin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+            }
+          },
+          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "uniqueName": "dhridin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
+          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+        },
+        "System.CreatedDate": "2026-03-06T08:00:02.657Z",
+        "System.ChangedDate": "2026-03-10T10:38:28.073Z",
+        "System.Parent": 184671,
+        "System.Title": "Document functional and non functional requirements",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184743"
+    },
+    {
+      "id": 184744,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184744,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Hridin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+            }
+          },
+          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "uniqueName": "dhridin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
+          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+        },
+        "System.CreatedDate": "2026-03-06T08:00:29.5Z",
+        "System.ChangedDate": "2026-03-13T12:59:21.557Z",
+        "System.Parent": 184671,
+        "System.Title": "Document summary per service integration",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184744"
+    },
+    {
+      "id": 184751,
+      "rev": 9,
+      "fields": {
+        "System.Id": 184751,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Mykola Vorona",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+            }
+          },
+          "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "uniqueName": "mvorona@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
+          "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+        },
+        "System.CreatedDate": "2026-03-06T12:18:16.193Z",
+        "System.ChangedDate": "2026-03-16T14:05:15.453Z",
+        "System.Parent": 183762,
+        "System.Title": "Separate member info and diagnosis forms",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<div>Split diagnosis and member info for separate forms.<br>Add rest fields to member information form.<br> </div>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184751"
+    },
+    {
+      "id": 184759,
+      "rev": 9,
+      "fields": {
+        "System.Id": 184759,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Arben Osmani",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+            }
+          },
+          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "uniqueName": "aosmani@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
+          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+        },
+        "System.CreatedDate": "2026-03-06T15:17:38.887Z",
+        "System.ChangedDate": "2026-03-17T17:13:32.257Z",
+        "System.Parent": 182859,
+        "System.Title": "Data dictionary",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184759"
+    },
+    {
+      "id": 184760,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184760,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Oleksandr Nykonenko",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+            }
+          },
+          "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
+          "uniqueName": "onykonenko@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy",
+          "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+        },
+        "System.CreatedDate": "2026-03-06T15:18:32.033Z",
+        "System.ChangedDate": "2026-03-09T15:44:03.163Z",
+        "System.Parent": 182860,
+        "System.Title": "Data dictionary",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184760"
+    },
+    {
+      "id": 184761,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184761,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Oleksandr Nykonenko",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+            }
+          },
+          "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
+          "uniqueName": "onykonenko@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy",
+          "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+        },
+        "System.CreatedDate": "2026-03-06T15:19:28.88Z",
+        "System.ChangedDate": "2026-03-09T15:44:16.213Z",
+        "System.Parent": 182860,
+        "System.Title": "System design doc",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184761"
+    },
+    {
+      "id": 184782,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184782,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Jack Hall",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+            }
+          },
+          "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
+          "uniqueName": "jhall@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
+          "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
+        },
+        "System.CreatedDate": "2026-03-06T19:53:22.9Z",
+        "System.ChangedDate": "2026-03-10T12:33:27.91Z",
+        "System.Parent": 184595,
+        "System.Title": "Add Design Doc template structure",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184782"
+    },
+    {
+      "id": 184801,
+      "rev": 9,
+      "fields": {
+        "System.Id": 184801,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Arben Osmani",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+            }
+          },
+          "id": "e8764c4c-a5d4-60b2-abba-6476d29d2c2c",
+          "uniqueName": "aosmani@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj",
+          "descriptor": "aad.ZTg3NjRjNGMtYTVkNC03MGIyLWFiYmEtNjQ3NmQyOWQyYzJj"
+        },
+        "System.CreatedDate": "2026-03-09T11:50:44.773Z",
+        "System.ChangedDate": "2026-03-17T17:13:35.86Z",
+        "System.Parent": 182859,
+        "System.Title": "NUCC - NPESS",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184801"
+    },
+    {
+      "id": 184822,
+      "rev": 5,
+      "fields": {
+        "System.Id": 184822,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Oleksandr Nykonenko",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/12960cbb-32f2-6064-95d1-7b98b06dbad2",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+            }
+          },
+          "id": "12960cbb-32f2-6064-95d1-7b98b06dbad2",
+          "uniqueName": "onykonenko@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy",
+          "descriptor": "aad.MTI5NjBjYmItMzJmMi03MDY0LTk1ZDEtN2I5OGIwNmRiYWQy"
+        },
+        "System.CreatedDate": "2026-03-09T15:48:12.59Z",
+        "System.ChangedDate": "2026-03-12T15:55:55.017Z",
+        "System.Parent": 182863,
+        "System.Title": "create a new monorepo under devops",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184822"
+    },
+    {
+      "id": 184842,
+      "rev": 4,
+      "fields": {
+        "System.Id": 184842,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.03.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-03-09T19:22:44.573Z",
+        "System.ChangedDate": "2026-03-12T20:30:55.527Z",
+        "System.Parent": 180270,
+        "System.Title": "Add coverage support",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184842"
     },
     {
       "id": 180143,
@@ -13399,6 +13535,701 @@
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180862"
+    },
+    {
+      "id": 180863,
+      "rev": 5,
+      "fields": {
+        "System.Id": 180863,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:47:48.603Z",
+        "System.ChangedDate": "2026-01-29T16:04:28.247Z",
+        "System.Parent": 180515,
+        "System.Title": "Create Database and user for Dev",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180863"
+    },
+    {
+      "id": 180864,
+      "rev": 5,
+      "fields": {
+        "System.Id": 180864,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:47:59.463Z",
+        "System.ChangedDate": "2026-01-29T16:04:29.967Z",
+        "System.Parent": 180515,
+        "System.Title": "Create Database and user for QA",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180864"
+    },
+    {
+      "id": 180865,
+      "rev": 5,
+      "fields": {
+        "System.Id": 180865,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:48:22.783Z",
+        "System.ChangedDate": "2026-02-02T20:48:25.817Z",
+        "System.Parent": 180515,
+        "System.Title": "Store credentials inside the AKS Keyvault",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180865"
+    },
+    {
+      "id": 180866,
+      "rev": 5,
+      "fields": {
+        "System.Id": 180866,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:48:45.197Z",
+        "System.ChangedDate": "2026-01-30T13:09:36.593Z",
+        "System.Parent": 180515,
+        "System.Title": "Establish connection between SQLMI and AKS networks",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180866"
+    },
+    {
+      "id": 180867,
+      "rev": 3,
+      "fields": {
+        "System.Id": 180867,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.CreatedDate": "2026-01-29T12:49:18.71Z",
+        "System.ChangedDate": "2026-02-05T12:48:07.87Z",
+        "System.Parent": 179902,
+        "System.Title": "Create Dockerfile",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180867"
+    },
+    {
+      "id": 180868,
+      "rev": 4,
+      "fields": {
+        "System.Id": 180868,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Hridin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+            }
+          },
+          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "uniqueName": "dhridin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
+          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+        },
+        "System.CreatedDate": "2026-01-29T12:49:28.843Z",
+        "System.ChangedDate": "2026-02-05T12:48:10.12Z",
+        "System.Parent": 179902,
+        "System.Title": "Create Helm charts or k8s manifests",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180868"
+    },
+    {
+      "id": 180869,
+      "rev": 4,
+      "fields": {
+        "System.Id": 180869,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Hridin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+            }
+          },
+          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "uniqueName": "dhridin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
+          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+        },
+        "System.CreatedDate": "2026-01-29T12:49:41.333Z",
+        "System.ChangedDate": "2026-02-05T12:48:20.68Z",
+        "System.Parent": 179902,
+        "System.Title": "Create CD pipeline's steps",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180869"
+    },
+    {
+      "id": 180870,
+      "rev": 6,
+      "fields": {
+        "System.Id": 180870,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:50:23.367Z",
+        "System.ChangedDate": "2026-02-04T12:51:42.563Z",
+        "System.Parent": 180857,
+        "System.Title": "Deploy external secrets plugin in AKS",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180870"
+    },
+    {
+      "id": 180871,
+      "rev": 5,
+      "fields": {
+        "System.Id": 180871,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:50:42.25Z",
+        "System.ChangedDate": "2026-02-04T12:51:47.54Z",
+        "System.Parent": 180857,
+        "System.Title": "Test the connection with dump secrets",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180871"
+    },
+    {
+      "id": 180872,
+      "rev": 9,
+      "fields": {
+        "System.Id": 180872,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:51:42.13Z",
+        "System.ChangedDate": "2026-02-12T13:49:11.003Z",
+        "System.Parent": 180861,
+        "System.Title": "Work with Onco's DevOps team to create DNS records",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180872"
+    },
+    {
+      "id": 180873,
+      "rev": 6,
+      "fields": {
+        "System.Id": 180873,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:51:56.167Z",
+        "System.ChangedDate": "2026-02-09T13:41:28.793Z",
+        "System.Parent": 180861,
+        "System.Title": "Deploy external DNS plugin to AKS",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180873"
+    },
+    {
+      "id": 180874,
+      "rev": 8,
+      "fields": {
+        "System.Id": 180874,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:52:16.27Z",
+        "System.ChangedDate": "2026-02-09T13:42:54.78Z",
+        "System.Parent": 180861,
+        "System.Title": "Deploy service type LoadBalancers",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180874"
+    },
+    {
+      "id": 180875,
+      "rev": 8,
+      "fields": {
+        "System.Id": 180875,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:52:57.973Z",
+        "System.ChangedDate": "2026-02-10T14:00:23.373Z",
+        "System.Parent": 180861,
+        "System.Title": "Create Application Gateway rules to redirect traffic to the apps",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "DevOps"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180875"
+    },
+    {
+      "id": 180876,
+      "rev": 9,
+      "fields": {
+        "System.Id": 180876,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-29T12:54:02.707Z",
+        "System.ChangedDate": "2026-01-29T16:04:34.277Z",
+        "System.Parent": 180515,
+        "System.Title": "Establish connection between SQLMI and VDI networks",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180876"
+    },
+    {
+      "id": 180919,
+      "rev": 11,
+      "fields": {
+        "System.Id": 180919,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.02.17",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Mykola Vorona",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+            }
+          },
+          "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "uniqueName": "mvorona@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
+          "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+        },
+        "System.CreatedDate": "2026-01-29T14:34:20.48Z",
+        "System.ChangedDate": "2026-02-16T10:00:35.443Z",
+        "System.Parent": 180837,
+        "System.Title": "[FE] Implement Diagnosis & Clinical Indication Capture UI (Mock-Driven)",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "Add Diagnosis and ICD-10 fields based on parent story description.&nbsp;<br><div>These fields should be selects with auto complete </div><div>For now it should be a separate mocked request that gets list of diagnosis data&nbsp;<br><br>For more info check the parent story or contact <a href=\"#\" data-vss-mention=\"version:2.0,e921eb32-d55a-6ecb-a7fa-f1c12cf85383\">@Inna Mariienko</a> </div>"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180919"
+    },
+    {
+      "id": 180920,
+      "rev": 2,
+      "fields": {
+        "System.Id": 180920,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Task",
+        "System.State": "New",
+        "System.CreatedDate": "2026-01-29T14:34:41.363Z",
+        "System.ChangedDate": "2026-02-02T14:34:30.527Z",
+        "System.Title": "Task 1",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180920"
+    },
+    {
+      "id": 180931,
+      "rev": 6,
+      "fields": {
+        "System.Id": 180931,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Petro Brezitskiy",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+            }
+          },
+          "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "uniqueName": "pbrezitskiy@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy",
+          "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+        },
+        "System.CreatedDate": "2026-01-29T14:56:06.477Z",
+        "System.ChangedDate": "2026-02-03T10:34:41.28Z",
+        "System.Parent": 179195,
+        "System.Title": "Cover all protected routes with a okta security",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "This tasks populates security that is currently implemented in the dashboard route across all of the protected routes<br><br>TODO:<br><ul><li>Add okta auth security for all routes in the protected folder </li><li>Move Dashboard inner contents inside to the home page&nbsp; </li><li>remove secure folder and all it's mentionings </li><li>Double check that when user is not logged in and tried to access a protected page he should be navigated to okta auth and after successful auth he should be navigated back to the original page </li><li>on the sigin page afterr success full login user should be redirected to the home page </li> </ul>",
+        "System.Tags": "FE"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180931"
+    },
+    {
+      "id": 180997,
+      "rev": 4,
+      "fields": {
+        "System.Id": 180997,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-01-29T21:48:51.023Z",
+        "System.ChangedDate": "2026-01-29T21:53:37.553Z",
+        "System.Parent": 179794,
+        "System.Title": "[NewUM] OKTA provider logic for Notification Service",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180997"
+    },
+    {
+      "id": 180998,
+      "rev": 3,
+      "fields": {
+        "System.Id": 180998,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-01-29T21:50:11.353Z",
+        "System.ChangedDate": "2026-01-29T21:53:42.06Z",
+        "System.Parent": 179794,
+        "System.Title": "[NewUM] Proxy Client logic",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180998"
+    },
+    {
+      "id": 180999,
+      "rev": 3,
+      "fields": {
+        "System.Id": 180999,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-01-29T21:51:06.61Z",
+        "System.ChangedDate": "2026-02-02T10:17:20.793Z",
+        "System.Parent": 179794,
+        "System.Title": "[NewUM] Integration with Notification service",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/180999"
+    },
+    {
+      "id": 181000,
+      "rev": 3,
+      "fields": {
+        "System.Id": 181000,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-01-29T21:51:46.21Z",
+        "System.ChangedDate": "2026-01-29T21:53:45.197Z",
+        "System.Parent": 179794,
+        "System.Title": "[NewUM] Stub for sending letter",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181000"
+    },
+    {
+      "id": 181001,
+      "rev": 3,
+      "fields": {
+        "System.Id": 181001,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-01-29T21:52:52.55Z",
+        "System.ChangedDate": "2026-02-02T10:17:23.877Z",
+        "System.Parent": 179794,
+        "System.Title": "Verify getting token logic and sending letter",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181001"
+    },
+    {
+      "id": 181123,
+      "rev": 4,
+      "fields": {
+        "System.Id": 181123,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.02.03",
+        "System.WorkItemType": "Task",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Luiyi Valentin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+            }
+          },
+          "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+          "uniqueName": "lvalentin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+          "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+        },
+        "System.CreatedDate": "2026-01-30T13:12:13.207Z",
+        "System.ChangedDate": "2026-02-03T13:40:12.53Z",
+        "System.Parent": 181124,
+        "System.Title": "Create CD pipeline's steps",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181123"
     }
   ]
 }

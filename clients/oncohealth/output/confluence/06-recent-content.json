@@ -3,8 +3,85 @@
     "id": "5294391309",
     "title": "Multiple HCPCS Decoupling Plan",
     "space": "PM",
-    "modified": "2026-04-07T15:01:46.097Z",
+    "modified": "2026-04-09T15:09:57.707Z",
     "modifiedBy": "Nataliia Piatkevych"
+  },
+  {
+    "id": "5330108418",
+    "title": "Rule Condition Validation",
+    "space": "NewUM",
+    "modified": "2026-04-09T14:46:25.996Z",
+    "modifiedBy": "Roman Buchyn"
+  },
+  {
+    "id": "5154537605",
+    "title": "Apply Payer Drug Configurations",
+    "space": "NewUM1",
+    "modified": "2026-04-09T12:39:30.433Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5128192002",
+    "title": "Useful Links",
+    "space": "NewUM",
+    "modified": "2026-04-09T10:45:46.570Z",
+    "modifiedBy": "Taras Badlo"
+  },
+  {
+    "id": "5154537473",
+    "title": "Allow Custom Regimens",
+    "space": "NewUM1",
+    "modified": "2026-04-09T10:13:33.924Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5083987995",
+    "title": "Configuration Management",
+    "space": "NewUM1",
+    "modified": "2026-04-09T09:41:04.104Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5318377473",
+    "title": "4/7 - NewUM Product Team - Weekly Sync",
+    "space": "NewUM1",
+    "modified": "2026-04-08T16:26:54.826Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5078908937",
+    "title": "Ordering and Servicing Provider Information",
+    "space": "NewUM1",
+    "modified": "2026-04-08T14:09:12.496Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5148737537",
+    "title": "Capture Basic Dosing Details",
+    "space": "NewUM1",
+    "modified": "2026-04-08T12:35:31.846Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5156700161",
+    "title": "Apply Payer Non-Preferred Drug Rules",
+    "space": "NewUM1",
+    "modified": "2026-04-08T12:34:03.210Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5301108737",
+    "title": "16.0 Historical Case Data & Access in NewUM",
+    "space": "NewUM1",
+    "modified": "2026-04-07T20:00:38.620Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5141397546",
+    "title": "1.0 Member on the Fly",
+    "space": "NewUM1",
+    "modified": "2026-04-07T15:41:41.282Z",
+    "modifiedBy": "Alison Stamp"
   },
   {
     "id": "4886069362",
@@ -19,6 +96,13 @@
     "space": "NewUM",
     "modified": "2026-04-07T13:15:22.102Z",
     "modifiedBy": "Oleksandr Nykonenko"
+  },
+  {
+    "id": "5302583322",
+    "title": "V1. NewUM Case Model: Authoritative Reference for Operations, Clinical Review, and Compliance",
+    "space": "NewUM1",
+    "modified": "2026-04-06T18:04:22.717Z",
+    "modifiedBy": "Alison Stamp"
   },
   {
     "id": "5312577544",
@@ -42,11 +126,53 @@
     "modifiedBy": "Vishwas Vishakanta"
   },
   {
+    "id": "5308776449",
+    "title": "LOB-Specific Drug/Code-Level Determinations & Case Level Determinations for Reporting",
+    "space": "NewUM1",
+    "modified": "2026-04-02T17:15:58.700Z",
+    "modifiedBy": "Colette Swenson"
+  },
+  {
+    "id": "5193498653",
+    "title": "V1. UM States, Statuses & Determinations",
+    "space": "NewUM1",
+    "modified": "2026-04-02T15:47:25.164Z",
+    "modifiedBy": "Colette Swenson"
+  },
+  {
+    "id": "5309366273",
+    "title": "V1. UM RBAC (Role Based Access Control) & Permissions",
+    "space": "NewUM1",
+    "modified": "2026-04-01T20:58:56.613Z",
+    "modifiedBy": "Colette Swenson"
+  },
+  {
+    "id": "5182619649",
+    "title": "Work Queues Product Requirements Document",
+    "space": "NewUM1",
+    "modified": "2026-04-01T15:41:11.612Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5302714382",
+    "title": "4/1 - NewUM Product Team - Weekly Sync",
+    "space": "NewUM1",
+    "modified": "2026-04-01T15:34:47.551Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
     "id": "5153357849",
     "title": "Eligibility",
     "space": "NewUM",
     "modified": "2026-04-01T13:59:20.229Z",
     "modifiedBy": "Oleksandr Nykonenko"
+  },
+  {
+    "id": "5211586561",
+    "title": "UI Configurations",
+    "space": "NewUM1",
+    "modified": "2026-04-01T13:24:18.549Z",
+    "modifiedBy": "Pero Jaman"
   },
   {
     "id": "5283545119",
@@ -56,11 +182,25 @@
     "modifiedBy": "Arben Osmani"
   },
   {
+    "id": "5154537539",
+    "title": "Select Ancillary Drugs",
+    "space": "NewUM1",
+    "modified": "2026-04-01T06:36:51.882Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
     "id": "5184192521",
     "title": "26.03.31 Sprint Planning - NewUM",
     "space": "NewUM",
     "modified": "2026-04-01T06:21:03.760Z",
     "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5138972902",
+    "title": "Decision log",
+    "space": "NewUM1",
+    "modified": "2026-03-31T21:15:43.007Z",
+    "modifiedBy": "Alison Stamp"
   },
   {
     "id": "5239930933",
@@ -84,6 +224,48 @@
     "modifiedBy": "Vladyslav Kyrychuk"
   },
   {
+    "id": "5141135410",
+    "title": "6.0 Discontinuation of Auth (DCoA ): Should we continue to offer in NewUM?",
+    "space": "NewUM1",
+    "modified": "2026-03-30T18:09:29.777Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5142937601",
+    "title": "8.0 Servicing/Treating Provider AND Place of Treatment?",
+    "space": "NewUM1",
+    "modified": "2026-03-30T18:08:47.989Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5127569409",
+    "title": "Rules and configurations functional specification",
+    "space": "NewUM1",
+    "modified": "2026-03-30T14:40:09.843Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5295079442",
+    "title": "SmartUM Support Dictionaries",
+    "space": "NewUM1",
+    "modified": "2026-03-30T14:06:28.637Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5294719185",
+    "title": "SmartUM Configurations Features",
+    "space": "NewUM1",
+    "modified": "2026-03-30T13:57:48.141Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5078745089",
+    "title": "Diagnosis Selection & Details for Case",
+    "space": "NewUM1",
+    "modified": "2026-03-30T07:04:31.991Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
     "id": "4797890582",
     "title": "Decouple Grouped Drugs to Support Accurate End to End UM Processes",
     "space": "PM",
@@ -96,6 +278,20 @@
     "space": "PM",
     "modified": "2026-03-27T03:02:54.589Z",
     "modifiedBy": "Chelsea Sabbato"
+  },
+  {
+    "id": "5172854797",
+    "title": "[DRAFT] Qronos integration and TAT configuration",
+    "space": "NewUM1",
+    "modified": "2026-03-26T13:17:35.696Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5288788004",
+    "title": "PRD Review - Ordering and Servicing Provider Information",
+    "space": "NewUM1",
+    "modified": "2026-03-26T12:40:20.311Z",
+    "modifiedBy": "Inna Mariienko"
   },
   {
     "id": "5288493057",
@@ -119,6 +315,20 @@
     "modifiedBy": "Sara Heideman"
   },
   {
+    "id": "5230428252",
+    "title": "Configuration and rules categories",
+    "space": "NewUM1",
+    "modified": "2026-03-25T16:17:28.824Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5242060816",
+    "title": "SmartUM Rule Configurator",
+    "space": "NewUM1",
+    "modified": "2026-03-25T16:15:13.156Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
     "id": "3143204918",
     "title": "Feature Template",
     "space": "PM",
@@ -138,215 +348,5 @@
     "space": "NewUM",
     "modified": "2026-03-25T09:20:52.937Z",
     "modifiedBy": "Taras Badlo"
-  },
-  {
-    "id": "5281873924",
-    "title": "Prescription Benefit Carveout",
-    "space": "PM",
-    "modified": "2026-03-24T20:58:09.020Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "5281120258",
-    "title": "2026 High Impact Analytics Initiatives Hub",
-    "space": "AT",
-    "modified": "2026-03-24T17:28:02.775Z",
-    "modifiedBy": "Sara Heideman"
-  },
-  {
-    "id": "5279121409",
-    "title": "[POC] UC Data API",
-    "space": "NewUM",
-    "modified": "2026-03-24T14:49:57.322Z",
-    "modifiedBy": "Oleksandr Nykonenko"
-  },
-  {
-    "id": "5270896646",
-    "title": "[POC] Blob API",
-    "space": "NewUM",
-    "modified": "2026-03-24T12:11:00.769Z",
-    "modifiedBy": "Arben Osmani"
-  },
-  {
-    "id": "5274632193",
-    "title": "New Reporting Layer Model",
-    "space": "AT",
-    "modified": "2026-03-23T16:37:06.366Z",
-    "modifiedBy": "Elise Klein"
-  },
-  {
-    "id": "5128192002",
-    "title": "Useful Links",
-    "space": "NewUM",
-    "modified": "2026-03-23T16:33:11.877Z",
-    "modifiedBy": "Taras Badlo"
-  },
-  {
-    "id": "5163188275",
-    "title": "Complete AI QA Testing System Structure",
-    "space": "NewUM",
-    "modified": "2026-03-23T13:14:11.521Z",
-    "modifiedBy": "Taras Badlo"
-  },
-  {
-    "id": "5052006411",
-    "title": "NewFire Partnership: UM Appeals Requirements (Archive)",
-    "space": "PM",
-    "modified": "2026-03-16T12:47:43.075Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "5101453313",
-    "title": "26.02.17 Sprint Planning - NewUM",
-    "space": "NewUM",
-    "modified": "2026-03-13T10:30:25.314Z",
-    "modifiedBy": "Vika Nobis"
-  },
-  {
-    "id": "5183963137",
-    "title": "26.03.17 Sprint Planning - NewUM",
-    "space": "NewUM",
-    "modified": "2026-03-13T10:30:17.390Z",
-    "modifiedBy": "Vika Nobis"
-  },
-  {
-    "id": "5053906959",
-    "title": "Testing Strategy",
-    "space": "NewUM",
-    "modified": "2026-03-11T13:23:21.886Z",
-    "modifiedBy": "Olha Pidhorna"
-  },
-  {
-    "id": "5224300562",
-    "title": "NewUM: Reporting Data Needs",
-    "space": "NewUM",
-    "modified": "2026-03-11T09:10:12.238Z",
-    "modifiedBy": "Inna Mariienko"
-  },
-  {
-    "id": "5148147739",
-    "title": "File Structure",
-    "space": "NewUM",
-    "modified": "2026-03-10T23:41:35.659Z",
-    "modifiedBy": "Dmytro Petriv"
-  },
-  {
-    "id": "5204377611",
-    "title": "NewUM Services — Integration Overview",
-    "space": "NewUM",
-    "modified": "2026-03-05T17:45:29.981Z",
-    "modifiedBy": "Bogdan Chachun"
-  },
-  {
-    "id": "5205950479",
-    "title": "Drugs API",
-    "space": "NewUM",
-    "modified": "2026-03-05T16:44:48.588Z",
-    "modifiedBy": "Bogdan Chachun"
-  },
-  {
-    "id": "5201133594",
-    "title": "Provider - GAP Analysis",
-    "space": "NewUM",
-    "modified": "2026-03-04T23:22:43.555Z",
-    "modifiedBy": "Arben Osmani"
-  },
-  {
-    "id": "5196644414",
-    "title": "Claude Code tests generation reports",
-    "space": "NewUM",
-    "modified": "2026-03-04T16:10:13.825Z",
-    "modifiedBy": "Yurii Bodnar"
-  },
-  {
-    "id": "5183504390",
-    "title": "Provider",
-    "space": "NewUM",
-    "modified": "2026-03-03T07:04:44.566Z",
-    "modifiedBy": "Arben Osmani"
-  },
-  {
-    "id": "5186355206",
-    "title": "Interoperability 2026 - Technical Project",
-    "space": "PM",
-    "modified": "2026-02-27T20:56:24.357Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "5027561495",
-    "title": "PA Metrics Annual Reports",
-    "space": "PM",
-    "modified": "2026-02-27T19:24:05.936Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "5100371970",
-    "title": "BlueKC Notes",
-    "space": "PM",
-    "modified": "2026-02-27T19:19:41.544Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "5026709509",
-    "title": "Interoperability 2025 Operations Project",
-    "space": "PM",
-    "modified": "2026-02-27T19:19:09.235Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "4982931474",
-    "title": "Interoperability",
-    "space": "PM",
-    "modified": "2026-02-27T19:16:16.698Z",
-    "modifiedBy": "Lauren Smith (Unlicensed)"
-  },
-  {
-    "id": "5048729601",
-    "title": "26.02.03 Sprint Planning - NewUM",
-    "space": "NewUM",
-    "modified": "2026-02-27T14:29:32.045Z",
-    "modifiedBy": "Vika Nobis"
-  },
-  {
-    "id": "5140905985",
-    "title": "26.03.03 Sprint Planning - NewUM",
-    "space": "NewUM",
-    "modified": "2026-02-27T14:28:54.398Z",
-    "modifiedBy": "Vika Nobis"
-  },
-  {
-    "id": "5170167809",
-    "title": "PI Planning V1R1",
-    "space": "NewUM",
-    "modified": "2026-02-25T15:35:37.059Z",
-    "modifiedBy": "Vika Nobis"
-  },
-  {
-    "id": "5169610798",
-    "title": "The Payer Hierarchy Chain — Deep Explanation",
-    "space": "NewUM",
-    "modified": "2026-02-24T17:13:58.412Z",
-    "modifiedBy": "Michal Mucha"
-  },
-  {
-    "id": "5148442722",
-    "title": "Drugs",
-    "space": "NewUM",
-    "modified": "2026-02-24T08:17:58.938Z",
-    "modifiedBy": "Arben Osmani"
-  },
-  {
-    "id": "5157158955",
-    "title": "ITOps Managed Tools Catalog",
-    "space": "ITOPS",
-    "modified": "2026-02-23T15:38:09.932Z",
-    "modifiedBy": "Brett Rimato"
-  },
-  {
-    "id": "5148409926",
-    "title": "Terminology",
-    "space": "NewUM",
-    "modified": "2026-02-23T11:55:58.042Z",
-    "modifiedBy": "Michal Mucha"
   }
 ]

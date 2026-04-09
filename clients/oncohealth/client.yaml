@@ -57,16 +57,16 @@ services:
     type: azure-devops
     url: https://dev.azure.com/oncologyanalytics/newUM
     status: complete
-    chars: 2101901
-    note: "No wiki exists — teams use Confluence (confirmed Michal Mucha 2026-03-25)"
+    chars: 2777000
+    note: "Re-captured 2026-04-09. 394 User Stories, 466 Tasks, 16 Bugs, 10 Pipelines. No wiki exists — teams use Confluence (confirmed Michal Mucha 2026-03-25)"
 
   - name: Atlassian Confluence
     key: "06"
     type: atlassian
     url: https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM/pages/5140905985/2+Sprint+Planning+-+NewUM
     status: complete
-    chars: 485274
-    note: "Primary wiki for all teams. 12 spaces, 171 pages (2026-03-23)"
+    chars: 969810
+    note: "Primary wiki for all teams. 13 spaces, 221 pages (2026-04-09)"
 
   - name: SharePoint RAID
     key: "07"
@@ -123,8 +123,8 @@ services:
   - name: Calendar (Google/NFG)
     type: calendar-google
     status: complete
-    chars: 15300
-    note: "NFG Google Calendar for carlos.carrillo@newfireglobal.com. 46 events captured (5 meetings, global holidays, work-location). Uses storageState pattern + internal API interception."
+    chars: 66700
+    note: "Re-captured 2026-04-09. 203 events (80 chips, 166 api). NFG Google Calendar (carlos.carrillo@newfireglobal.com). Uses storageState pattern + internal API interception."
 
   - name: Team Access Inventory
     key: "10"
@@ -401,8 +401,15 @@ executive_steering:
 teams_capture:
   team_name: OncoHealth_NewFire
   channels:
+    - "NoPHI - Data"
     - General
-    - NewUM
+    - "NewUM - AMA"
+    - "NewUM Announcements"
+    - "NoPHI - Back End"
+    - "NoPHI - Backend API"
+    - "NoPHI - Front End"
+    - "NoPHI - OneUM Integration"
+    - "NoPHI - Rules and Configuration"
     - Clinical Scheduling
     - CRS/CRR Scheduling
     - IT Helpdesk Scheduling
@@ -415,5 +422,5 @@ teams_capture:
     - "Claude"
     - "Erik and Michal"
     - "Eligibility"
-  scroll_depth: 15          # deep scroll for full history (reduce to 3 for daily)
+  scroll_depth: 5          # reduced from 15 — deep scroll crashes Teams SPA
   capture_transcripts: true

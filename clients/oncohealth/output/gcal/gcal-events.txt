@@ -1,102 +1,319 @@
 Google Calendar — Google Account: Carlos Carrillo  
 (carlos.carrillo@newfireglobal.com)
-Captured: 2026-03-26T16:53:28.231Z
-Range: 2026-03-12 → 2026-04-25
-Events: 46
+Captured: 2026-04-09T15:39:31.008Z
+Range: 2026-04-02 → 2026-04-23
+Events: 203
 
 ════════════════════════════════════════════════════════════
 
 
-── 2026-03-12 ────────────────────────────────────────
-  8am – 9am  Global Town Hall Q1_2026
+── 2026-03-30 ────────────────────────────────────────
+  (all day)  Free
 
-── 2026-03-13 ────────────────────────────────────────
-  7:30am – 8am  Newfire - Databricks
-
-── 2026-03-16 ────────────────────────────────────────
-  (all day)  Benito Juárez's Birthday Memorial
-  (all day)  Birthday of Benito Juárez - Mexico
-
-── 2026-03-17 ────────────────────────────────────────
-  (all day)  Saint Patrick's Day - Ireland
-
-── 2026-03-19 ────────────────────────────────────────
+── 2026-04-02 ────────────────────────────────────────
   (all day)  Home
-  (all day)  Eid al-Fitr - Saudi Arabia
-  (all day)  Silence Day / Nyepi (Saka New Year 1948) - Indonesia
-  (all day)  St Joseph’s Day - Spain - Valencia
-  (all day)  Ugadi Festival - India
+  (all day)  Maundy Thursday
+  (all day)  Holy Thursday (Easter Week) - Costa Rica
+  (all day)  Holy Thursday (Easter Week) - Peru
+  (all day)  Holy Thursday - Colombia
+  (all day)  Holy Thursday - El Salvador
+  (all day)  Holy Thursday - Spain - Basque
+  (all day)  Holy Thursday - Spain - Seville
+  (all day)  Maundy Thursday - Philippines
+  (all day)  Maundy Thursday - Spain - Madrid
+  (all day)  Maundy Thursday / Malvinas Day - Argentina
+  (all day)  Tourism Week - Uruguay
+  2:30pm – 3pm  busy, Calendar: carlos.carrillo@dataqbs.com
+  8:30am – 9:30am  Tentative, Calendar: Calendar
+  8:35am – 9am  Tentative, Calendar: Calendar
+  8am – 8:30am  Tentative, Calendar: Calendar
 
-── 2026-03-20 ────────────────────────────────────────
+── 2026-04-03 ────────────────────────────────────────
   (all day)  Home
-  (all day)  Eid al-Fitr - North Macedonia
-  (all day)  Eid al-Fitr - Saudi Arabia
-  (all day)  Festiival of Breaking Fast - Philippines
-  (all day)  Ramadan Bayram - Bosnia and Herzegovina
-  8:00 AM – 8:30 AM  Databricks Training Discussion
+  (all day)  Away
+  (all day)  Free
+  (all day)  Good Friday
+  (all day)  Good Friday (Easter Week) - Peru
+  (all day)  Good Friday (Holy Week) - Costa Rica
+  (all day)  Good Friday (Holy Week) - Ecuador
+  (all day)  Good Friday - Argentina
+  (all day)  Good Friday - Bolivia
+  (all day)  Good Friday - Brazil
+  (all day)  Good Friday - Canada
+  (all day)  Good Friday - Chile
+  (all day)  Good Friday - Colombia
+  (all day)  Good Friday - Dominican Republic
+  (all day)  Good Friday - El Salvador
+  (all day)  Good Friday - India
+  (all day)  Good Friday - Indonesia
+  (all day)  Good Friday - Philippines
+  (all day)  Good Friday - Portugal
+  (all day)  Good Friday - Singapore
+  (all day)  Good Friday - Spain
+  (all day)  Good Friday - Sri Lanka
+  (all day)  Tourism Week - Uruguay
+  8:35am – 9am  Tentative, Calendar: Calendar
 
-── 2026-03-21 ────────────────────────────────────────
-  (all day)  Benito Juárez's Birthday Memorial
-  (all day)  First Day of Hari Raya Aidil Fitri - Brunei
-  (all day)  Khutub-E-Ramzan - India
-
-── 2026-03-22 ────────────────────────────────────────
-  (all day)  Hari Raya Aidil Fitri Holiday - Brunei
-
-── 2026-03-23 ────────────────────────────────────────
+── 2026-04-06 ────────────────────────────────────────
   (all day)  Home
-  (all day)  Hari Raya Aidil Fitri Holiday (Observed) - Brunei
-  (all day)  Hari Raya Puasa Holiday (moved from Sat 21) - Malaysia
-  (all day)  Saint Joseph's Day - Colombia
-  (all day)  Truth and Justice Memorial Day - Argentina
-  1:00 PM – 1:30 PM  Meet
 
-── 2026-03-24 ────────────────────────────────────────
+── 2026-04-07 ────────────────────────────────────────
   (all day)  Home
-  (all day)  Hari Raya Aidil Fitri Holiday - Brunei
-  (all day)  Hari Raya Puasa Holiday (moved from Sun 22) - Malaysia
-  (all day)  Truth and Justice Memorial Day - Argentina
+  2:00 PM – 2:30 PM  Interview with Rafael B. | Senior/Lead Python Engineer
 
-── 2026-03-25 ────────────────────────────────────────
+── 2026-04-08 ────────────────────────────────────────
   (all day)  Home
-  (all day)  Independence Day - Greece
+  1:30 PM – 2:00 PM  Interview with David C. | Senior/Lead Python Engineer
+  7:00 AM – 7:30 AM  Lunch & Learn: How LLMs Actually Work
 
-── 2026-03-26 ────────────────────────────────────────
+── 2026-04-09 ────────────────────────────────────────
+  (all day)  Free
+  (all day)  Araw ng Kagitingan - Philippines
   (all day)  Home
-  1pm – 1:30pm  Logistics with Adhere Health
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-10 ────────────────────────────────────────
+  (all day)  Orthodox Good Friday - Bosnia and Herzegovina
+  (all day)  Orthodox Good Friday - Greece
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-11 ────────────────────────────────────────
+  (all day)  Juan Santamaría Day - Costa Rica
 
 ── 2026-04-13 ────────────────────────────────────────
-  (all day)  Home
+  (all day)  Free
+  (all day)  Easter Monday (Orthodox) - North Macedonia
+  (all day)  Easter (moved from Sun, 12) - Ukraine
+  (all day)  Orthodox Easter Monday - Bosnia and Herzegovina
+  (all day)  Orthodox Easter Monday - Greece
+  (all day)  Day prior to Sinhala & Tamil New Year Day - Sri Lanka
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-14 ────────────────────────────────────────
-  (all day)  Home
+  (all day)  Dr. B.R. Ambedkar Jayanthi - India
+  (all day)  Sinhala & Tamil New Year Day - Sri Lanka
+  7:00 AM – 8:00 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-15 ────────────────────────────────────────
-  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-16 ────────────────────────────────────────
-  (all day)  Home
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-17 ────────────────────────────────────────
-  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-20 ────────────────────────────────────────
-  (all day)  Home
+  (all day)  Basava Jayanthi, Akshaya Tritiya - India
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-21 ────────────────────────────────────────
-  (all day)  Home
+  (all day)  Tiradentes Day - Brazil
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-22 ────────────────────────────────────────
-  (all day)  Home
+  (all day)  April Fair - Spain - Seville
+  8:35 AM – 9:00 AM  Tentative
 
 ── 2026-04-23 ────────────────────────────────────────
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-24 ────────────────────────────────────────
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-27 ────────────────────────────────────────
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-28 ────────────────────────────────────────
+  7:00 AM – 8:00 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-29 ────────────────────────────────────────
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-04-30 ────────────────────────────────────────
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-01 ────────────────────────────────────────
+  (all day)  Labor Day - Singapore
+  (all day)  Labor Day - Bosnia and Herzegovina
+  (all day)  Labor Day - Ecuador
+  (all day)  Labor Day - North Macedonia
+  (all day)  Labor Day - Colombia
+  (all day)  Labour Day - Portugal
+  (all day)  Labor Day - Argentina
+  (all day)  Labor Day - Dominican Republic
+  (all day)  May Day - India
+  (all day)  Labor day - Mexico
+  (all day)  International Labor Day - Indonesia
+  (all day)  Labor Day - Peru
+  (all day)  Labor Day - Costa Rica
+  (all day)  Labour Day - Malaysia
+  (all day)  Labor Day - Bolivia
+  (all day)  Labor Day - Philippines
+  (all day)  Labor Day Holiday - Ukraine
+  (all day)  Labour Day - Spain
+  (all day)  Labour Day - Croatia
+  (all day)  May Day (International Workers' Day) & Vesak Full Moon Poya Day - Sri Lanka
+  (all day)  Labor Day - Uruguay
+  (all day)  Labour Day - Greece
+  (all day)  Labour Day - Poland
+  (all day)  Labor Day - Chile
+  (all day)  Labor Day - Brazil
+  (all day)  Labor Day - El Salvador
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-02 ────────────────────────────────────────
+  (all day)  Labor Day - Bosnia and Herzegovina
+
+── 2026-05-03 ────────────────────────────────────────
+  (all day)  Constitution Day - Poland
+
+── 2026-05-04 ────────────────────────────────────────
+  (all day)  May Day - Ireland
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-05 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-06 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-07 ────────────────────────────────────────
+  (all day)  Home
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-08 ────────────────────────────────────────
+  (all day)  Memorial Day and Victory over Nazism - Ukraine
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-09 ────────────────────────────────────────
+  (all day)  Victory Day - Bosnia and Herzegovina
+
+── 2026-05-11 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-12 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Guillermo León Dueñas (Leo)'s birthday
+  7:00 AM – 8:00 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-13 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-14 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Ascension Day of Jesus Christ - Indonesia
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-15 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-18 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Ascension Day - Colombia
+  (all day)  Victoria Day - Canada
+  (all day)  Battle of the Stones - Uruguay
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-19 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-20 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-21 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Naval Glories Day - Chile
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-22 ────────────────────────────────────────
+  (all day)  Home
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-24 ────────────────────────────────────────
+  (all day)  Saints Cyril and Methodius' Day - North Macedonia
+  (all day)  Whit Sunday - Poland
+
+── 2026-05-25 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Memorial Day - USA
+  (all day)  Battle of Pichincha - Ecuador
+  (all day)  Saints Cyril and Methodius' Day observed - North Macedonia
+  (all day)  May Revolution / First Government Day - Argentina
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-26 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Eid al-Adha - Saudi Arabia
+  (all day)  Eid Adha - Philippines
+  7:00 AM – 8:00 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-27 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Kurban Bayram - Bosnia and Herzegovina
+  (all day)  Hari Raya Aidil Adha - Brunei
+  (all day)  Hari Raya Haji Holiday - Malaysia
+  (all day)  Hari Raya Haji - Singapore
+  (all day)  Eid al-Adha - Saudi Arabia
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-28 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Feast of the Sacrifice - Indonesia
+  (all day)  Bakrid - India
+  (all day)  Eid al-Adha - Saudi Arabia
+  (all day)  Id-Ul-Alha (Hadji Festival Day) - Sri Lanka
+  8:30 AM – 9:30 AM  Tentative
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-29 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Eid al-Adha - Saudi Arabia
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-05-30 ────────────────────────────────────────
+  (all day)  Statehood Day - Croatia
+
+── 2026-05-31 ────────────────────────────────────────
+  (all day)  Royal Brunei Armed Forces Day - Brunei
+
+── 2026-06-01 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Pancasila Day - Indonesia
+  (all day)  Vesak Day - Singapore
+  (all day)  Royal Brunei Armed Forces Day Holiday (Observed) - Brunei
+  (all day)  Orthodox Whit Monday - Greece
+  (all day)  June Bank Holiday - Ireland
+  (all day)  Whit Sunday (moved from Sun, May 31) - Ukraine
+  (all day)  Wesak Day (moved from Sun, May 31) - Malaysia
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-06-02 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  HM The Supreme Monarch (Yang Di-Pertuan Agong) Birthday (moved from Mon 1) - Malaysia
+  8:35 AM – 9:00 AM  Tentative
+
+── 2026-06-03 ────────────────────────────────────────
   (all day)  Home
 
-── March 16 – 20, 2026 ────────────────────────────────────────
-  (all day)  Working location: Home
-
-── March 23 – 27, 2026 ────────────────────────────────────────
-  (all day)  Working location: Home
-
-── March 9 – 13, 2026 ────────────────────────────────────────
+── March 30 – April 3, 2026 ────────────────────────────────────────
   (all day)  Working location: Home

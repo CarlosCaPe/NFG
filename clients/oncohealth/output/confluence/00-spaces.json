@@ -370,6 +370,43 @@
     }
   },
   {
+    "id": 5067374602,
+    "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/5067374602",
+    "key": "NewUM1",
+    "alias": "NewUM1",
+    "name": "NewUM Product Team",
+    "description": {
+      "plain": {
+        "value": "",
+        "representation": "plain",
+        "embeddedContent": []
+      },
+      "_expandable": {
+        "view": ""
+      }
+    },
+    "type": "global",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/NewUM1/settings",
+      "metadata": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=NewUM1",
+      "identifiers": "",
+      "permissions": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "theme": "/rest/api/space/NewUM1/theme",
+      "history": "",
+      "homepage": "/rest/api/content/5067375081"
+    },
+    "_links": {
+      "webui": "/spaces/NewUM1",
+      "self": "https://oncologyanalytics.atlassian.net/wiki/rest/api/space/NewUM1"
+    }
+  },
+  {
     "id": 61079564,
     "ari": "ari:cloud:confluence:eecb52a1-414a-465c-b474-192a8d9fb818:space/61079564",
     "key": "OG",

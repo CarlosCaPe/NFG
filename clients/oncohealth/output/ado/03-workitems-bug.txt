@@ -1,4 +1,4 @@
-Bugs (11)
+Bugs (16)
 ============================================================
 [Closed] #180347 BUG CHILD | Taras Badlo | P2 | pts | newUM\26.02.17 | 
 [Closed] #181917 BUG_FROM_TC_1 | Unassigned | P2 | pts | newUM\26.02.17 | 
@@ -10,4 +10,9 @@ Bugs (11)
 [Closed] #187348 There are no validations of value of DOB field according to time restrictions | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
 [Closed] #187413 First name and Last name could contain special characters | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
 [Resolved] #187514 fix navigation active state + small style fixes | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
-[Active] #187693 [BE] ICD-10 Code search does not return results for multi-keyword queries (separate words) | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
+[Closed] #187693 [BE] ICD-10 Code search does not return results for multi-keyword queries (separate words) | Taras Badlo | P2 | pts | newUM\26.04.14 | 
+[Closed] #187884 [FE] ICD-10 Code search does not return results for multi-keyword queries (separate words) | Taras Badlo | P2 | pts | newUM\26.04.14 | 
+[New] #187951 Search for existing regimen does not take into account effective date | Iryna Lukianovets | P2 | pts | newUM | 
+[New] #188096 Regimen with a drug of ancillary type appears in search results | Iryna Lukianovets | P2 | pts | newUM | 
+[New] #188108 diagnosisId should be a required field for search regimens API | Iryna Lukianovets | P2 | pts | newUM | 
+[New] #188393 500 error when treatment start date has wrong format | Roman Buchyn | P3 | pts | newUM\26.04.14 | 

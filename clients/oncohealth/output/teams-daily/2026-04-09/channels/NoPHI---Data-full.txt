@@ -1,0 +1,394 @@
+=== Channel: NoPHI - Data ===
+Captured: 2026-04-09T17:10:00.000Z (manual paste — full channel content)
+
+[Full channel content — user-pasted from Teams browser]
+
+--- Message: Michal Mucha, 3/16 5:30 AM ---
+Hello NoPHI - Data say hallo to our new team member Carlos Carrillo!
+[1 reply, last 3/17]
+
+--- Message: Michal Mucha, 3/16 5:30 AM ---
+[The Office Party Hard GIF]
+[2 Beaming face reactions]
+
+--- Message: Cory Johnson, 3/16 7:04 AM ---
+Welcome Carlos!
+[1 reply, last 3/17]
+
+--- Message: Arben Osmani, 3/16 7:31 AM ---
+Cory Johnson, how's it going, man? quick question, we noticed that the project has its own subscription. just wanted to confirm: will the blobs be in the project's subscription [8], or will we be referencing the Databricks subscription?
+[image attached]
+[3 replies, last 3/16]
+
+--- Message: Arben Osmani, 3/16 7:32 AM ---
+Welcome Carlos 🎉
+[1 reply, last 3/17]
+
+--- Message: Arben Osmani, 3/16 9:22 AM ---
+Hi Inna Mariienko Cory Johnson Michal Mucha,
+Not sure if it makes sense, but wanted to clarify. During the network check for a provider, should there be an additional check to verify whether the payer's provider record matches the provider's government data?
+EG "Is the payer's internal record of Dr. Jane the SAME PERSON as the NPPES record of Dr. Jane?"
+[3 replies, last 3/16]
+
+--- Message: Inna Mariienko, 3/16 9:28 AM ---
+Arben Osmani, I think the question is whether provider network validation should rely only on the payer's provider/network file, or whether we also want an identity reconciliation step against NPPES to confirm the payer's provider record represents the same real provider before using it for INN/OON determination. That feels like a separate provider identity validation rule rather than a standard network-status check. Let me validate if it is the expectation for NewUM and get back to you
+[1 Hands celebrating reaction]
+
+--- Message: Arben Osmani, 3/16 9:49 AM ---
+Thank you Inna Mariienko
+
+--- Message: Michal Mucha, 3/16 9:57 AM ---
+Cory for analytic system this is what I have so far:
+[image - architecture diagram]
+As a base line for our diagraming
+[1 reply, last 3/16]
+
+--- Message: Cory Johnson, 3/16 9:58 AM ---
+Fundamentally the network checks are done using the payer's file information in today's world Arben
+[1 Hands celebrating reaction]
+
+--- Message: Arben Osmani, 3/16 11:14 AM ---
+Thanks Inna Mariienko and Cory Johnson, for your help and apologies if I may be mistaken. I'm sharing a few scenarios below to provide additional context for the question above
+
+Scenario 1 - NPI Missing from Payer Data
+Payer data has:
+Name     : Ana Kovač
+Specialty: Cardiology
+ZIP      : 10001
+NPI      : NULL   <- never captured
+Cannot do exact NPI lookup.
+Must search NPPES by name + specialty + ZIP.
+Returns 3 candidates with scores:
+Candidate 1: Ana Kovač, Cardiology, ZIP 10001 -> score 95
+Candidate 2: Ana Kovač, Internal Medicine, ZIP 10001 -> score 72
+Candidate 3: Ana Kovac, Cardiology, ZIP 10002 -> score 68
+Score decides which candidate to pick or whether to escalate to human review.
+
+Scenario 2: NPI Wrong in Payer Record
+Payer data has:
+NPI      : 1234567980   <- typo (transposed digits)
+Name     : Ana Kovač
+Exact NPI lookup -> 0 results in NPPES.
+Fallback to name search:
+Finds Ana Kovač with NPI 1234567890
+Score: 99 (name exact, NPI 1 digit off)
+-> High confidence this is the same person
+
+Scenario 3: Name Variation
+Payer data has:  "Ana Smith"    <- maiden name
+NPPES has:       "Ana Kovač"   <- married name
+NPI matches exactly -> 100
+But name does not match at all -> flags for review
+Without the score comparison: You would either auto-approve a name mismatch or auto-reject a valid provider. The score + human review resolves it correctly.
+
+[Table image attached]
+
+--- Message: Michal Mucha, 3/17 4:31 AM ---
+Inna got a question:
+Person (Member) table in Eligibility business key annotation — want to clarify, is cross-payer patient matching is explicitly out of scope?
+[4 replies, last 3/17]
+
+--- Message: Michal Mucha, 3/18 4:45 AM ---
+NoPHI - Data please remember that review of System design doc is top priority now.
+
+--- Message: Michal Mucha, 3/18 4:48 AM ---
+Inna quick questions do we have requirements around providers?
+[2 replies, last 3/18]
+
+--- Message: Michal Mucha, 3/18 7:25 AM ---
+Cory can we have a call on Databricks Lakeflow Connect before daily?
+[2 replies, last 3/18]
+
+--- Message: Michal Mucha, 3/18 7:31 AM ---
+Carlos give me a call once u will be online
+
+--- Message: Michal Mucha, 3/18 8:18 AM ---
+FYI: The product team had an "official" decision yesterday that OH will use the terminology patient and not member.
+
+--- Message: Cory Johnson, 3/18 9:36 AM ---
+be right there
+
+--- Message: Venky Subramaniam, 3/18 11:01 AM ---
+Initial Feedback - System Design Document (Data Team)
+
+I am going to share some initial feedback on the System design document based on my review of the Eligibility and Provider sections. I will review the Case Schema once I that has been published.
+
+High-level data flow: I want to make sure that we all have a clear understanding of high-level data flow
+
+There are 3 main systems - Enterprise Data Platform (EDP), Transactional System Repository (EligibilityMS, ProviderMS, Drugs MS etc), Provider Data in Case Management (newUM).
+- The Client Data flows into EDP.
+- EDP owns the pipeline to populate the Provider data to be used for Case Management into ProviderMS.
+- newUM queries ProviderMS to get the Provider Data that needs to be attached as Ordering and Requesting Providers when creating a case.
+- newUM sends the case data along with the provider information to EDP.
+- EDP is responsible for merging newUM data along with MATIS data and SmartUM data into data warehouse tables that feed Analytics Services.
+
+[Provider data flow diagram image]
+
+This above understanding will be crucial to the re-use of the existing Services - we are not redesigning Eligibility Service, Drug Service etc. Provider Service will be a re-design of the transactional repository schema (ProviderMS) and the API to search / retrieve Provider data as a part of Case creation and execute network checks.
+
+Common understanding on the foundational topics:
+- Socialize the Data Flow design above.
+- Discuss the section - "Data Exchange: NewUM → Databricks Bronze"
+  - Why do we need a medallion layer architecture for newUM Data?
+  - The DE team will be integrating the newUM data with MATIS and SmartUM for Analytics Services.
+- Discuss how the Unity Catalog structure will be used to provide clarity on newUM Schema in Databricks.
+  - The decision on using Event Hubs and how to make sure that the JSON schema is well defined and controlled for the DE team to consume these events and recreate the transactional data will be crucial.
+- Marc Gale - We have not implemented event sourcing data exchange strategy and this will be a significant lift for the data team. Unless we learn otherwise in the design discussions.
+- The sections on - Metrics, Monitoring & Alerting and Deployment, Integration and Rollout Sections - can be follow up discussions.
+
+Provider Feedback:
+- Payer-Specific Network Status by Specialty – How is the data model answering - "Provider X is in Network Y under Payer Z for Specialty S."
+- Location-Specific Participation: How is this model answering "Provider participates in Payer A's network at Location B with Specialty C."
+- Office Staff Management – How do we model the relationship between Office Staff (users of Provider portal and newUM) and the Providers (ordering / servicing)? Should this be managed outside the core provider data model. If so, how? This will be crucial to SSO and direct web user access management.
+- Manual Provider Data Entry & Merge – How are we accounting for having manual data entry be captured, and merged into the main data tables?
+- This data model represents ProviderMS (the repository of all providers that are Payer-sourced or manually entered). Where is the Provider Data Model attached to a case (Ordering Provider / Servicing Provider)?
+- Why is this model very different compared to the data model shared by the Data Engineering team? What challenges are addressed by this new data model that was a gap in the DE data model?
+
+Eligibility Feedback:
+- Why are these tables very different from EligibilityMS? Is this the Data model for the Case Management System to handle Eligibility and the configurability of the system using Payer hierarchy?
+- Payer Hierarchy Chain --> Why do we not have the concept of "Parent Payer Org"
+- Plan <> Network <> Provider junction — crucial for Member Eligibility Check, Provider Network Check, Formulary Benefit Checks
+- What is the "grain" of the Eligibility table — Typically, MemberID, PayerID, Group+PlanID, Effective Date is the grain.
+- "Payer file inconsistency creates ambiguous member status" → why is this a newUM Problem? Should be handled by DE Pipeline.
+
+Marc Gale / Cory Johnson / Tim Ursprung Please make sure to review this document ahead of the Architecture Review Board.
+[1 Eyes reaction, 6 replies last 3/18]
+
+--- Message: Michal Mucha, 3/19 7:50 AM ---
+Hi Venky, appreciate your feedback - responses to each point below:
+
+Data Exchange: NewUM → Databricks Bronze
+- Align with Marc's view: NewUM Data team provides raw data to Bronze layer, Onco Data team handles analytical processing through medallion architecture.
+- No transformations on raw NewUM data - brought into EDP as-is.
+- Currently investigating data exchange mechanisms in both directions.
+- CDC, Event Hub, and Structured Streaming could offer flexibility.
+- Also exploring batch approach in pull/push scenarios.
+- Working hypothesis: batch approach for data ingestion.
+
+Provider:
+- Payer-Specific Network Status & Location-Specific Participation: Added connection between Eligibility and Providers, question should now be answerable.
+- Office Staff Management: Open question, requires Core Services team. Utilizing Okta roles mapped to NewUM entities.
+- Manual Provider Data Entry & Merge: Investigation in progress. Needs to align with chosen data exchange mechanism.
+- Provider Data Model attached to case: Case schema lives in separate document owned by Coder Backend team working on rule engine.
+- Why model is different from DE model: Work in progress, recent diagram can be found [link].
+
+Eligibility:
+- Model is tailored to Case Management System and Rules Engine configurability. Not intended to replace EligibilityMS schema.
+- Working hypothesis: NewUM golden data crafted by Onco Data team, EligibilityMS schema adjusted in parallel.
+- Payer Hierarchy: Updated model after workshop to include Parent Payer Organization concept.
+- Plan ↔ Network ↔ Provider junction: Critical relationship, updated diagram.
+- Grain of Eligibility table: MemberID, PayerID, Group+PlanID, Effective Date — noted.
+- "Payer file inconsistency": Agreed — not a NewUM problem. DE pipeline handles Term By Absence.
+[2 replies, last 3/19]
+
+--- Message: Michal Mucha, 3/24 2:19 AM ---
+Hello NoPHI - Data, I got doc appointment with my kid ~11 CET time, will be back in ~1.5h, will work late to cover missing hours.
+
+--- Message: Michal Mucha, 3/26 5:17 AM ---
+NoPHI - Data I need to drop offline ~1.5 h for doc appointment, will work missing hours this evening
+
+--- Message: Michal Mucha, 3/31 6:33 AM ---
+Hi NoPHI - Data for today's demo, we will go first, order of demo:
+- me, painting big picture
+- Cory - lakehouse
+- Oleksandr - Databricks App
+- Arben - Fast API reads from blob
+- Carlos - we will skip demo for u, as we do not have anything yet build for that one that can be demoed
+[1 Like reaction]
+
+--- Message: Michal Mucha, 3/31 6:47 AM ---
+Venky just to keep you in a loop, after yesterday's meeting, I feel we need to carry on with investigation, at the moment we have 3 strong candidate to migrate data form Databricks to NewUM Postgress:
+
+1. Lakebase Synced Tables — Databricks-native managed sync from Delta/Iceberg directly into a Lakebase-hosted PostgreSQL-compatible instance — no pipeline code to write
+2. ADLS Gen2 Staging + Airflow + PostgreSQL COPY — Most mature and understood option - Databricks writes Parquet to ADLS, PostgreSQL bulk-loads via COPY, shadow table swap ensures zero reader disruption
+3. Apache Iceberg → PostgreSQL — Most architecturally elegant - Databricks writes Iceberg natively (one config change), pg_lake lets PostgreSQL query it directly with no ingestion step, queries run 10x+ faster via DuckDB, Eliminates the COPY pipeline, the Airflow DAG, and the swap pattern entirely; object storage costs ~10x less per GB than Postgres block storage
+
+More details you can find here NewUM Data System Design.docx
+Data exchange mechanism – work in progress chapter
+We need to investigate more over upcoming sprint those 3 approaches.
+[NewUM Data System Design.docx - OncoHealth_NewFire > Phase 1 Deliverables]
+
+--- Message: Michal Mucha, 3/31 6:47 AM ---
+Today we going to show results of recent investigation and spikes.
+
+--- Message: Michal Mucha, 3/31 6:48 AM ---
+We are working closely with Marc to ensure we hit all the requirements and address potential issues.
+
+--- Message: Venky Subramaniam, 3/31 6:49 AM ---
+Acknowledging the progress above and will be very curious to know the outcome. We need to balance, speed, architectural elegance and future operational support.
+Marc Gale please make sure Salin Gabriel and the DevOps team have weighed in on the final decision.
+[1 Like reaction]
+
+--- Message: Michal Mucha, 3/31 6:51 AM ---
+Makes sense, over upcoming sprint we will dive deeper into 3 mentioned solution candidate, we will have some workshops/demos that will follow Spikes, final decision requires thumbs up, from NewUM team, Onco Data Team, DevOps
+
+--- Message: Michal Mucha, 3/31 6:53 AM ---
+I keep Data System design doc in sync with recent findings and discussions.
+
+--- Message: Michal Mucha, 3/31 7:17 AM ---
+We might need to skip ur demos, Oleksandr, Arben. we had those demoed yesterday, and I will make sure that you will have enough space next demo.
+[1 Like reaction]
+
+--- Message: Venky Subramaniam, 3/31 6:54 PM ---
+Michal Mucha and Donato Buccella: I will miss the Data System Design ARB call. I have already provided feedback on Eligibility. Provider domain is the biggest gap and I am not comfortable calling our Data Systems design complete till we have addressed that domain.
+
+I also see an entry in the design document:
+"Data Migration - Open Cases and Manual Provider — Onco Data team owns with collaboration with NewUM team"
+
+This is not my understanding and the ownership is definitely not the Data Engineering team. I agree that there needs to be partnership to understand what is being migrated over, but the ultimate data and migration pipelines have to match the newUM transactional Schema design.
+
+Marc Gale and I have exchanged notes on this and we both are in agreement on the ownership. If this cannot be resolved in the call tomorrow, I suggest we leave this as yet another open topic to be resolved before anyone can sign off on the Data Systems Design ARB.
+[1 reply, last 4/1]
+
+--- Message: Michal Mucha, 4/2 5:35 AM ---
+Hello NoPHI - Data, yesterday we had ARB Session: NewUM Data System Design meeting, please find below a summary of the open follow-up items.
+
+Summary: The Data Team System Design Review covered eligibility, provider, and cases domains, with eligibility most advanced and providers requiring further workshops. Bidirectional data exchange candidates between NewUM and Databricks still in evaluation. Data quality, disaster recovery, and data migration flagged as open topics.
+
+Follow-up Items:
+1. Eligibility & Payer — Onco Data Team (Marc Gale) to review and validate columns for Payer and Eligibility ER tables.
+2. Provider Domain Finalization — Michal Mucha to organize workshops between NewUM and Oncodata teams.
+   - Auditability pattern to be discussed.
+   - NPPES and NUCC scope requires product input (Inna, Alison).
+3. Domain Overlap Validation — workshops to validate cross-domain relationships.
+4. Data Exchange Mechanism Decision — all evaluation spikes to be completed:
+   Databricks → NewUM:
+   a. Unity Catalog → Lakebase Synced Tables → PostgreSQL
+   b. Unity Catalog → ADLS Gen2 Staging + Airflow + PostgreSQL COPY
+   c. Unity Catalog → Apache Iceberg → PostgreSQL
+   NewUM → Databricks:
+   a. PostgreSQL → Lakeflow Connect → Databricks Unity Catalog
+   b. PostgreSQL → Lakehouse Federation → Databricks Unity Catalog
+5. Disaster Recovery — Marc Gale, Salin Gabriel, Michal Mucha. Schedule after ER modelling complete.
+6. Data Migration — requirements to be defined, dedicated discussion needed.
+7. Data Quality — Marc Gale to establish checklist (unit tests, validation rules, thresholds).
+[3 replies, last 4/2]
+
+--- Message: Arben Osmani, 4/2 8:30 AM ---
+Hi Inna Mariienko Alison Stamp, questions requiring product info:
+- Billing address purpose — Is it truly billing, mailing, or something else?
+- TIN vs NPI as central identifier — Current Mattis requires TIN. Team believes NPI is better primary key.
+- Taxonomy/specialty — currently unused in Mattis UI. Product to confirm if needed.
+[3 Eyes reactions]
+
+--- Message: Michal Mucha, 4/2 8:33 AM ---
+For everyone on the team - please keep questions like this here in the main data chat rather than in separate conversations. We need full visibility into what's being discussed, what questions are open, and what direction we're heading. The same goes for any blockers you're running into.
+
+--- Message: Carlos Carrillo, 4/2 8:56 AM ---
+hey Cory Johnson, could you help unblocking the Apache Iceberg → PostgreSQL spike (#187526)?
+
+I completed the feasibility investigation last sprint (#186438) — the Iceberg REST Catalog API is viable and validated. Now I need to build the end-to-end POC but I'm stuck on 3 prerequisites that require UC Admin access:
+1. Metastore setting: external_access_enabled = false → needs true on TEST metastore
+2. Schema grant: need EXTERNAL_USE_SCHEMA on at least one Gold-layer schema
+3. UniForm enablement: need delta.enableIcebergCompatV2 = true on at least one table
+
+On PostgreSQL side: Luiyi Valentin already provisioned Flexible Server (#184587, #184589 closed), postgresql-cd pipeline is active. Need connection details/credentials for TEST environment.
+[10 replies, last Monday]
+
+--- Message: Michal Mucha, Monday (4/7) 12:12 AM ---
+Hey Data team, please make sure that we progress on ER part of this sprint, I will be back tomorrow, and would like to carry on with:
+- Providers
+- Overlap with cases
+[2 replies, last Tuesday]
+
+--- Message: Michal Mucha, 4/9 6:15 AM (TODAY) ---
+Providers Domain — Recent Decisions & Open Questions
+
+Network Participation
+- Two separate bridge tables: one for Practitioners (T1), one for Organizations (T2).
+- Practitioner's network status is independent of organization's network status.
+- Network tier is V2 item — not required for V1.
+
+Out of Network:
+- Search is cross-health-plan in V1.
+- No provider-on-the-fly in V1.
+- OON network check/determination: Out of scope — R2.
+- Manual provider entry: Out of scope — R2.
+- Provider network data ingested into NewUM: Out of scope — R2.
+- Rules engine receives INN/OON as input: Planned but null/unavailable in V1.
+- No V1 requirements define the OON workflow.
+
+[QUESTION] Inna/Alison: When VerifyIfProviderIsInNetwork = True fires and servicing provider is OON, what is the expected case behavior in V1?
+
+Provider Address Model
+- Shared Address dimension table, append-only (never updated/deleted).
+- Path 1 (Regular Providers): T1 → T1T2_Link → T2 → Address
+- Path 2 (Sole Proprietors): T1 → Address directly
+- Address types (mailing, practice, billing) via bridge table field.
+- Case-level address captured at assignment time, decoupled from future changes.
+
+[QUESTION] Inna/Alison: Sole proprietor flag — how determined at ingestion time?
+
+Office Contact at Case Level
+- Office contact (phone, fax, email, address) lives at case level, not provider level.
+- Address pre-populated from provider data; contacts manually entered per case.
+- Two records per case (ordering + treating) with provider_type enum.
+- Case-level copy must NOT be overwritten by subsequent ETL updates.
+
+[QUESTION] Joseph Destefano, Jack Hall: Auditability to be discussed for this table.
+
+Organization Affiliation in Search Results
+- Product requires org affiliation name display. Refers to T2 entity.
+- T1–T2 linkage currently not working in Mattis.
+- Users make independent selections for ordering, treating, place of service.
+
+Place of Service Code
+- 2-digit CMS-standard code captured at case level.
+- Payer-configurable (different payers restrict available values).
+
+[QUESTION] Kim Jewell: Is this on configuration team's radar?
+
+Facility Type
+- Payer-specific configurable dropdown, NOT global hardcoded list.
+- Another item for configuration team.
+
+Provider Schema — T1/T2 Renaming
+- DECISION: Adopting FHIR standard terminology: Practitioner (T1), Organization (T2).
+- CMS mandate moving toward FHIR APIs for provider data.
+
+[QUESTION] Kim Jewell: Where should payer configuration live? Feels like Payer domain.
+
+Manual Provider Entry and Out-of-Network Providers
+Three use cases:
+1. Provider found in ETL, used as-is.
+2. Provider found but requires corrections — override at case level.
+3. Provider not found — created from scratch.
+
+AGREED DIRECTION: Case-level snapshots.
+- Snapshot taken when provider assigned to case.
+- Snapshot can be modified independently of source.
+- Source provider tables remain read-only (ETL only writes).
+- Once snapshot taken, NOT overwritten by subsequent ETL updates.
+
+[QUESTION] Inna/Alison: How often is manually entered provider truly new vs. office staff conflated with provider?
+
+Case-Level Data Never Written Back to Provider Master Tables — FIRM design principle in V1 and R2.
+
+Retro Case / Time Travel Problem
+- Cases sometimes submitted retroactively.
+- System must evaluate against data valid at original service date, not today's.
+- No clear mechanism currently exists for this.
+
+[QUESTION] Alison/Inna: Can the system process retro cases as if time-traveled?
+
+Auditability Pattern
+- FAVORED DIRECTION: Snapshot approach (copy provider data at case level).
+- Remaining gap: retro network checks (network participation data changes over time).
+
+[QUESTION] What Still Needs Resolution:
+- Retro network checks scope — V1 or V2?
+- Snapshot granularity — whole record? Just case fields? Only at first assignment?
+- Cross-functional alignment meeting needed (product + data + compliance + legal).
+
+Taxonomy/Specialty
+- DECISION: Taxonomy is needed. Standardize on taxonomy going forward.
+- Applies to Practitioners (T1) only, not Organizations (T2).
+
+[QUESTION] Inna/Alison: Which NUCC fields to store (Code, Classification, Specialization, Definition)?
+
+User Access / Okta Mapping
+- How does Okta user ID map to provider? Services team handling but data team must be in loop.
+- Meeting needed: Marc, Joseph, Dmytro, Jason, Bogdan, Michael, Matthew.
+
+--- Message: Michal Mucha, 4/9 6:16 AM ---
+cc Venky, Marc, Donato, Vika
