@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.25.0",
-  "last_updated": "2026-04-09",
+  "version": "1.30.0",
+  "last_updated": "2026-04-14",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -207,7 +207,7 @@
 
   "communication": {
     "channels": [
-      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true, "channels": ["Clinical Scheduling", "General", "NewUM", "CRS/CRR Scheduling", "IT Helpdesk Scheduling"], "active_chats": ["Eligibility - Person/Member workshop", "Data team - daily", "Payer taxonomy workshop", "Databricks Lakeflow Connect", "Provider Discussion", "Erik and Michal", "Eligibility workshop", "Claude workshop - how to boost our work performance"], "captured_chars": 167000, "last_capture": "2026-04-06", "note": "April 6: 5 channels (25K), 5 chats (42K), 2 transcripts (1.6K), 1 calendar (1.9K). Total ~70K chars this capture." },
+      { "tool": "Microsoft Teams", "space": "OncoHealth_NewFire", "confirmed": true, "channels": ["Clinical Scheduling", "General", "NewUM", "NoPHI - Data", "CRS/CRR Scheduling", "IT Helpdesk Scheduling"], "active_chats": ["Eligibility - Person/Member workshop", "Data team - daily", "Payer taxonomy workshop", "Databricks Lakeflow Connect", "Provider Discussion", "Erik and Michal", "Eligibility workshop", "Claude workshop - how to boost our work performance", "Case Schema Explanation", "Eligibility & Provider - review after workshops", "Providers", "Michal & Carlos 1-2-1", "Exchange data between Databricks and NewUM", "Provider schema discussion", "Sprint grooming & planning", "Sprint Demo and Planning", "Backlog Refinement", "Inna Mariienko", "Vika Nobis"], "captured_chars": 167000, "last_capture": "2026-04-07", "note": "April 7: 7 chats captured (Data team, Eligibility, Provider Discussion, Erik+Michal, Databricks Lakeflow, Payer taxonomy, Eligibility Person/Member). April 10 capture FAILED (all chats 'not found in sidebar' — session issue). 11 new chats discovered in sidebar not yet in priority list — added to scraper config 2026-04-13." },
       { "tool": "Slack", "space": "Newfire Global Partners", "confirmed": true },
       { "tool": "SharePoint", "site": "OncoHealth_NewFire", "confirmed": true },
       { "tool": "Miro", "boards": [
@@ -269,10 +269,11 @@
     },
     {
       "name": "Jack Hall",
-      "role": "Architecture Lead / Engineer — Backend",
+      "role": "Architecture Lead / Engineer — Backend. DEPARTED April 10, 2026 (last day). Said 'the news didn't filter down in the OncoHealth side very quickly, but your leadership knows.'",
       "email": "jhall@oncohealth.us",
+      "departure_date": "2026-04-10",
       "confirmed": true,
-      "source": "Teams meeting invite + access inventory"
+      "source": "Teams meeting invite + access inventory + Sprint Demo April 10 farewell"
     },
     {
       "name": "Jakub Chabik",
@@ -303,16 +304,16 @@
       "source": "access inventory"
     },
     {
-      "name": "Nick",
+      "name": "Nick Foreyt",
       "role": "Data Architect — Silver schema designer, key voice in eligibility + provider data modeling workshops. Strong opinions on ETL patterns, versioning, business key grain. Proposed BenefitPlan junk dimension, separate override table for manual eligibility.",
       "confirmed": true,
-      "source": "Teams chat (Eligibility workshop, Provider Discussion — March 2026)"
+      "source": "Teams chat (Eligibility workshop, Provider Discussion — March 2026) + Sprint Demo April 10 (full name confirmed)"
     },
     {
-      "name": "Tim",
-      "role": "Team member — raised payer inconsistency concern (member 'falling off file' ambiguity) in eligibility workshop",
+      "name": "Tim Ursprung",
+      "role": "Team member — raised payer inconsistency concern (member 'falling off file' ambiguity) in eligibility workshop. Nearing retirement ('within months', April 2026).",
       "confirmed": true,
-      "source": "Teams chat (Eligibility workshop — March 2026)"
+      "source": "Teams chat (Eligibility workshop — March 2026) + Sprint Demo April 10 (full name + retirement note)"
     },
     {
       "name": "Marc Gale",
@@ -459,7 +460,7 @@
   "access_status": {
     "completed": [
       "OncoHealth account created",
-      "Teams access (OncoHealth_NewFire) — 167K chars captured across 3 captures (Mar 20, Apr 2, Apr 6). Apr 6: 5 channels, 5 chats (42K), 2 transcripts, calendar.",
+      "Teams access (OncoHealth_NewFire) — 167K+ chars captured across 4 captures (Mar 20, Apr 2, Apr 6, Apr 7). Apr 10 failed (session issue). NoPHI-Data channel manually captured (Apr 9). 11 new chats discovered, added to scraper.",
       "Outlook Calendar — 11 events captured for week of March 16-19",
       "SharePoint access (Okta SSO working, Excel/Word Online loaded)",
       "Miro REST API (NFG-Reader app, 130K chars from NewUM board)",
@@ -536,9 +537,9 @@
   },
 
   "system_design_doc": {
-    "$comment": "Facts extracted from NewUM Data System Design Document — reviewed in ticket #185594.",
-    "source": "clients/oncohealth/tickets/185594-review-the-doc/extracted-text.txt",
-    "captured": "2026-03-24",
+    "$comment": "Facts extracted from NewUM Data System Design Document. Initial review ticket #185594. Expanded analysis from full Word doc (NewUM Data System Design.docx) captured 2026-04-14.",
+    "source": ["clients/oncohealth/tickets/185594-review-the-doc/extracted-text.txt", "clients/oncohealth/output/downloads/NewUM-Data-System-Design.docx"],
+    "captured": "2026-04-14",
 
     "medallion_architecture": {
       "bronze": "Raw ingestion; full-fidelity, append-only. Schema valid, no transforms, PII tokenized at write.",
@@ -586,8 +587,188 @@
 
     "cases_domain": {
       "ownership": "NewUM application layer exclusively owns the Case schema in PostgreSQL",
-      "scope": "Out of Scope in System Design Doc (ownership TBD separately)",
-      "integration": "Operational case data pushed to Databricks Bronze on daily batch cadence via Data Team REST API. NewUM never reads from Databricks for case processing."
+      "scope": "Out of Scope in System Design Doc (included for integration context and data contract definition; ownership remains with NewUM app team)",
+      "integration": "Operational case data pushed to Databricks Bronze on daily batch cadence via Data Team REST API. NewUM never reads from Databricks for case processing.",
+      "ado_task": "#186617 'Make a data dictionary for Case Schema' — assigned to Jack Hall, sprint 26.04.14 (Active)",
+      "architecture_notes": "Partially denormalized — core tables normalized, blue/orange tables link to other domains. Case Meta Schema in OLTP DB. Write-locked. Sources: UI via API gateway, bulk ingest from migration pipeline, rules inference. Separate from normalized Case Meta and Eligibility schemas.",
+      "case_schema_explanation_chat": "CAPTURED — transcript provided 2026-04-14, Jack Hall presenter. Key topics: CaseHistory audit, drug element pattern, PotentialEligibility as possible VIEW, prior_case_id for appeals.",
+      "case_history_table": {
+        "purpose": "Audit table recording every change to a Case",
+        "structure": "Enum of table/column, from/to values",
+        "changed_for": "Distinguishes human-initiated vs service-principal-initiated changes",
+        "changed_by": "Identifies the docker image or binary that applied the change",
+        "service_principal_tracking": "Each rule set gets its own service principal — audit tells WHICH automated process changed the case",
+        "source": "Jack Hall Case Schema Explanation transcript 2026-04-14"
+      },
+      "drug_element_pattern": {
+        "purpose": "Flattened snapshot of drug data from Drugs API, stored per case",
+        "coding": "RxNorm for drugs, CPT for radiation/GMT",
+        "snapshot_behavior": "New snapshot created on drug update — never deletes old snapshots",
+        "element_independence": "Each drug element has independent status (one can be approved while another denied)",
+        "soft_delete": "Uses created_at/deleted_at pattern (no physical deletes)",
+        "source": "Jack Hall Case Schema Explanation transcript 2026-04-14"
+      },
+      "prior_case_id": {
+        "purpose": "Self-referential FK on Case table for appeals/reopening chain",
+        "v1_status": "NOT in V1 — but socket (column) left open for future use",
+        "source": "Jack Hall Case Schema Explanation transcript 2026-04-14"
+      },
+      "eligibility_linking_approach": {
+        "potential_eligibility_as_view": "Jack hopes PotentialEligibility can be a VIEW rather than physical table — still uncertain",
+        "rationale": "Eligibility data already exists in Eligibility domain; duplicating it as a physical table in Case domain adds maintenance burden",
+        "status": "OPEN — design decision pending",
+        "source": "Jack Hall Case Schema Explanation transcript 2026-04-14"
+      },
+      "data_dictionary_sharepoint": {
+        "author": "Jack Hall",
+        "format": "Word document (WIP)",
+        "sharepoint_id": "065C88EC-6F0F-4DDB-929E-3E76F2222D5C",
+        "ado_task": "#186617",
+        "status": "IN PROGRESS — not yet accessed (Okta SSO required)"
+      }
+    },
+
+    "eligibility_rules_taxonomy": {
+      "$comment": "Comprehensive rules analysis from Eligibility Person/Member workshop chat (captured 2026-04-07). 12-section analysis of how payer taxonomy permeates the entire NewUM V1 system.",
+      "source": "clients/oncohealth/output/teams-daily/2026-04-07/chats/Eligibility---Person-Member-workshop.txt",
+      "captured": "2026-04-07",
+      "grain_hierarchy": {
+        "levels_highest_to_lowest": ["OH Global", "Payer Parent Org", "Payer", "Major LOB", "LOB", "Product Line", "Employer Group"],
+        "resolution_rule": "Lowest-level grain always wins. Engine walks from Product (leaf) upward to MajorLineOfBusiness.",
+        "configurable": true,
+        "note": "Grain ranking is configurable per payer — one payer might rank Employer Group above Product Line."
+      },
+      "configs_vs_rules": {
+        "configurations": "Simple parameters — letter templates, Member ID formats, UI settings, TAT, booleans. Change infrequently.",
+        "rules": "IF-THEN conditional logic at runtime. Support branching, prioritization, chaining, nesting. Triggered at workflow steps & events.",
+        "rule_tiers": {
+          "tier_1": "Result required — failure = hard stop, case blocked",
+          "tier_2": "Result not required — failure shown to user, confirmation to proceed",
+          "tier_3": "Result not required — failure logged silently"
+        }
+      },
+      "scope_validation_chain": {
+        "note": "6 sequential rules after eligibility = 'Eligible'. Out of scope R1 but fully specified in PRD.",
+        "rules": [
+          "Rule 1: LOB Validation — member LOB active and delegated under Health Plan",
+          "Rule 2: Product Line / Product Offering — active and delegated under matched LOB",
+          "Rule 3: State of Plan Issue Restriction — member state in payer allowed set",
+          "Rule 4: Identifier-Based (CarrierID, AccountID, InsGroupID, BenefitPackage) — carve-out check",
+          "Rule 5: ASO Delegation — ASO excluded from delegation = Out of Scope",
+          "Rule 6: Benefit-Level Delegation — Medical/Pharmacy/PrescriptionCarveOut/OON benefits"
+        ],
+        "fail_behavior": "Any rule fail = Out of Scope, blocks case creation"
+      },
+      "payer_taxonomy_consumption_matrix": {
+        "eligibility_verification": "Health Plan + Coverage dates (simple lookup)",
+        "scope_validation": "LOB → Product Line → Product Offering → Carrier/Account/Group/Package + ASO + Benefits (sequential chain)",
+        "pdl_drug_config": "Insurance Provider + Major LOB (direct lookup)",
+        "np_drug_rules": "Major LOB + LOB + Product Line + Billing Method + Diagnosis Group (multi-attribute match at Product Line depth)",
+        "auto_determination": "Regimen + Indication (payer-configured flags, NP/formulary override)",
+        "case_routing": "LOB + client rules + queue config",
+        "tat": "Payer + LOB + Delegation Level + Request Type + Billing Method",
+        "post_denial": "Denial type + LOB + finality",
+        "rbac_determinations": "Health Plan + LOB (determines available determinations)",
+        "reporting": "Payer + LOB (filtering/tenancy)"
+      },
+      "key_insight": "PDL and scope rules key on Insurance Provider + Major LOB. NP rules go deeper into LOB + Product Line. The configurable grain hierarchy resolution (lowest wins) maps directly to traversing the business hierarchy from Product (leaf) upward to MajorLineOfBusiness.",
+      "eligibility_naming_action_item": "Ask app devs about snake_case vs camelCase, keeping SQL case insensitivity in mind. Fields: RxCarrierId, RxAccountId, RxGroupId (confirmed as 'Cory strings')."
+    },
+
+    "eligibility_silver_mapping": {
+      "$comment": "Column-level mapping from MATIS PascalCase to NewFire snake_case for the Eligibility Silver layer. Source: Nick Foreyt Excel spreadsheet shared via Teams/SharePoint.",
+      "source": "clients/oncohealth/output/downloads/NewFire-Eligibility-Silver-Mapping.xlsx",
+      "author": "Nick Foreyt",
+      "captured": "2026-04-14",
+      "entities": {
+        "eligibility": {
+          "key": "eligibility_key",
+          "field_count": 43,
+          "scd_type_2": true,
+          "scd_fields": ["__is_deleted", "__start_at", "__end_at"],
+          "address_fks": ["mailing_address_key", "physical_address_key", "privacy_address_key"],
+          "related_person_fks": ["member_representative_key", "subscriber_key"],
+          "group_fk": "group_key",
+          "benefit_package_fk": "benefit_package_key",
+          "notable_fields": ["eligibility_key", "payer_id", "patient_id", "member_id", "insurance_card_id", "medicaid_id", "medicare_beneficiary_id", "coverage_start_date", "coverage_end_date", "state_of_issue", "rx_carrier", "rx_account", "rx_group", "medicare_part_c_pbp_number", "medicare_part_c_contract_number", "formulary_id", "network_id", "plan_id", "plan_name", "custom_fields"]
+        },
+        "related_person": {
+          "key": "related_person_key",
+          "field_count": 10,
+          "fields": ["first_name", "last_name", "middle_name", "gender_code", "address_key", "phone_1_number", "phone_1_type", "phone_2_number", "phone_2_type", "relationship_code", "__insert_time"]
+        },
+        "address": {
+          "key": "address_key",
+          "field_count": 7,
+          "fields": ["address_line_1", "address_line_2", "city", "state", "zip_code", "zip_extension", "__insert_time"],
+          "typo_in_source": "zip_cope should be zip_code (Row 23)"
+        },
+        "group": {
+          "key": "group_key",
+          "field_count": 10,
+          "fields": ["organization_id", "organization_name", "group_id", "group_name", "sub_group_id", "sub_group_name", "contract_start_date", "contract_end_date", "custom_fields", "__insert_time"]
+        },
+        "benefit_package": {
+          "key": "benefit_package_key",
+          "field_count": 13,
+          "fields": ["major_lob", "product_type", "aso_indicator", "medical_benefit_indicator", "rx_benefit_indicator", "out_of_network_benefit_indicator", "out_of_area_benefit_indicator", "out_of_area_benefit_description", "rx_benefit_carve_out_indicator", "rx_benefit_carve_out_start_date", "rx_benefit_carve_out_end_date", "dual_eligibility_indicator", "__insert_time"]
+        }
+      },
+      "join_structure": {
+        "eligibility_to_related_person": "member_representative_key + subscriber_key → related_person.related_person_key",
+        "eligibility_to_address": "mailing_address_key + physical_address_key + privacy_address_key → address.address_key",
+        "eligibility_to_group": "group_key → group.group_key",
+        "eligibility_to_benefit_package": "benefit_package_key → benefit_package.benefit_package_key",
+        "related_person_to_address": "address_key → address.address_key"
+      },
+      "confirmations_vs_knowledge": [
+        "state_of_issue confirms Scope Rule 3 (StateOfPlanIssue)",
+        "rx_carrier + rx_account + rx_group confirms Scope Rule 4 + Cory strings",
+        "benefit_package.major_lob confirms grain_hierarchy level 4",
+        "benefit_package.aso_indicator confirms Scope Rule 5",
+        "benefit_package.medical/rx/oon_benefit confirms Scope Rule 6",
+        "benefit_package.dual_eligibility_indicator confirms PotentialEligibility + DSNP #183771"
+      ],
+      "excluded_fields_with_reasoning": {
+        "RelationType": "member_representative_key & subscriber_key join to related_person",
+        "RelatedPersonId": "we don't get / need this",
+        "RelatedPerson_DateOfBirth": "We don't get it today",
+        "SSN": "We don't want this",
+        "PatientSSN": "We don't want this",
+        "RelatedPersonAddrKey": "Duplicate. On RelatedPerson also",
+        "PayerKey": "Do we need the key on elig for anything?",
+        "EligibilitySource": "Source is DBX ETL only",
+        "EmployerGroupAddressKey": "group has own table, we also don't get group address",
+        "HasRepresentative": "just look for existence of RelatedPerson?",
+        "LineOfBusinessVersion": "Not sure what this is intended to be used for",
+        "MemberReportingId": "think we have what we need with member_id & insurance_card_id",
+        "PatientAddressVersion": "duplicate?",
+        "InsuranceGroupId": "Not sure if this is different than GroupID?",
+        "PrescriptionCarveoutType": "Duplicate w/ RxBenefitCarveOutIndicator?",
+        "RiskPatient": "No idea what this is",
+        "CoverageTypeCode": "We have Coverage Tier Cd / Description but its not used",
+        "SpanType": "No idea what this is",
+        "Name": "No idea what this is",
+        "SupressLetters": "Are we going to start asking for this? Do we need it?",
+        "LetterSupressionDate": "Are we going to start asking for this? Do we need it?",
+        "IsERISA": "Are we going to start asking for this? Do we need it?",
+        "IsFEHBPlan": "Are we going to start asking for this? Do we need it?",
+        "IsErisa_Group": "Duplicated here & Eligibility. We do not get this today. Is this new?",
+        "ExternalGroupId": "not mapped",
+        "AddressKey_Group": "not mapped"
+      },
+      "open_questions_from_nick": [
+        "Do we need PayerKey on eligibility for anything?",
+        "Is InsuranceGroupId different than GroupID?",
+        "Is PrescriptionCarveoutType duplicate with RxBenefitCarveOutIndicator?",
+        "What is RiskPatient?",
+        "What is SpanType?",
+        "What is Name (on eligibility)?",
+        "Should we start asking for SupressLetters / LetterSupressionDate?",
+        "Should we start asking for IsERISA / IsFEHBPlan?",
+        "Is IsErisa on Group new? We don't get it today and it's duplicated on Eligibility.",
+        "What is LineOfBusinessVersion intended to be used for?"
+      ]
     },
 
     "schema_gaps": {
@@ -614,6 +795,265 @@
         "airflow_scheduler": "99.9%/month"
       },
       "testing": "DR runbook tested quarterly (tabletop). Live failover to DR workspace annually."
+    },
+
+    "data_volumes": {
+      "$comment": "Data volume estimates from the System Design Document — key for capacity planning and architecture decisions.",
+      "provider": {
+        "active_records": 83372042,
+        "note": "83M+ active provider data records"
+      },
+      "cases": {
+        "archive_total": 846322,
+        "active_concurrent": 1000,
+        "note": "~846K archived cases, ~1K active at any time"
+      },
+      "network_bridge": {
+        "estimated_records": "80M+",
+        "risk": "Each provider can link to hundreds of networks across clients. Separate T1 and T2 bridge tables double the infrastructure."
+      }
+    },
+
+    "case_schema_detail": {
+      "$comment": "Detailed Case schema structure from System Design Document. Expands on cases_domain section.",
+      "core_tables": [
+        { "table": "Case", "purpose": "Root record. Holds live workflow state: status, priority, disposition" },
+        { "table": "CaseHistory", "purpose": "Immutable field-level audit log across all mutable tables" },
+        { "table": "CaseAction", "purpose": "Pending work queue for the rules engine. Records discrete blocking/non-blocking actions" },
+        { "table": "CaseMessage", "purpose": "Append-only log of all inbound and outbound communications (fax, letter, call)" },
+        { "table": "CaseDocument", "purpose": "Append-only log of documents (lab results, auth letters, referrals)" },
+        { "table": "CaseMedicalDrugElement", "purpose": "Medical drugs attached to a case (administered in a facility, billed under medical benefit)" },
+        { "table": "CasePharmacyDrugElement", "purpose": "Pharmacy drugs dispensed directly to a patient. Handled separately from medical drugs" },
+        { "table": "CaseRadiationElement", "purpose": "Radiation therapies on a case, identified by CPT code. Mutable" },
+        { "table": "CaseGeneticMolecularTestingElement", "purpose": "Genetic/molecular tests requiring PA, identified by CPT code" },
+        { "table": "PotentialEligibility", "purpose": "Eligibility candidates surfaced during patient search, before case assignment" }
+      ],
+      "schema_layers": {
+        "core": { "color": "White", "pattern": "Mutable records; CaseHistory provides field-level audit" },
+        "auxiliary_views": { "color": "Blue", "pattern": "Flattened, soft-versioned lookups from Provider and Eligibility domains" },
+        "auxiliary_snapshots": { "color": "Orange", "pattern": "Versioned, append-only reference data from Drug/Radiation/GMT" }
+      },
+      "audit_mechanisms": [
+        "CaseHistory: old/new value per column — full field-level trail on all mutable tables",
+        "CreatedAt + DeletedAt on element tables — history of clinical elements added and removed",
+        "Snapshot versioning: Drugs, Radiation, GMT snapshots stored immutably with the case",
+        "Immutable CaseMessage / CaseDocument — communications and documents cannot be retroactively altered",
+        "CaseAction with ResolvedAt — full log of what blocked or triggered action on a case"
+      ],
+      "auxiliary_records_note": "Provider (HumanProvider, Place) and Eligibility records are flattened into the case schema to avoid spanning the full database during rules engine fact-loading.",
+      "databricks_integration": "NewUM pushes operational records to Databricks Bronze on daily batch cadence via Data Team REST API. NewUM never reads from Databricks at query time for case processing."
+    },
+
+    "provider_domain_detail": {
+      "$comment": "Provider domain details from System Design Document — expands on provider_model section.",
+      "payer_submitted_provider_data": {
+        "description": "Provider data that payers send in their files. Includes payer's own proprietary client provider ID, name, specialty, and address.",
+        "requirement": "Must be stored verbatim and returned on authorization files — payers expect exact round-trip fidelity.",
+        "implication": "Payer-submitted data is a separate concept from the master provider record"
+      },
+      "manual_provider_entry": {
+        "use_cases": [
+          "Provider found in ETL data, used as-is — no modifications",
+          "Provider found in ETL data, but requires corrections — user overrides specific fields at case level without modifying source record",
+          "Provider not found — created from scratch (e.g. out-of-network provider)"
+        ]
+      },
+      "retrospective_case_processing": {
+        "description": "Retro case: created today but clinical event occurred in the past (weeks or months prior).",
+        "requirement": "System must reconstruct provider data state as of the historical service date, not as it appears today.",
+        "solution": "SCD2 versioning in ETL-ingested source tables. Every change produces new version row with effective_from/effective_to.",
+        "case_mix": { "pre_auth": "87%", "concurrent": "12%", "retro": "remainder" },
+        "immutability_rule": "Once a case is created against a specific provider version, that reference must not be updated even if newer version is ingested."
+      },
+      "office_contact_at_case_level": {
+        "description": "Office contact info (phone, fax, email, address) lives at case level, not provider level. Stored separately for ordering and treating provider.",
+        "address_source": "Pre-populated from provider data; contact details manually entered per case.",
+        "records": "Two records stored — one per provider type (ordering, treating)"
+      },
+      "organization_affiliation_in_search": {
+        "requirement": "Provider search results should display organizational affiliation name (T2 entity).",
+        "status": "T1-T2 linkage was intended to support this but is currently not working in MATIS."
+      },
+      "network_participation": {
+        "design": "Two separate bridge tables — one for Practitioners (T1), one for Organizations (T2).",
+        "rationale": "Practitioner network status is independent of affiliated organization network status.",
+        "open_question": "Whether two tables are needed vs. a single table with entity_type discriminator."
+      },
+      "risks": [
+        "NPI-absent handling — structural blocker to Silver schema finalization",
+        "Network bridge scalability — 80M+ records across separate T1/T2 tables",
+        "Unconfirmed versioning — structural blocker"
+      ]
+    },
+
+    "data_exchange_gold_to_newum": {
+      "$comment": "Three options evaluated for moving Databricks Gold data into NewUM PostgreSQL. From System Design Document.",
+      "options": [
+        {
+          "name": "Lakebase Synced Tables",
+          "approach": "Databricks-native managed sync from Delta/Iceberg into Lakebase-hosted PostgreSQL-compatible instance",
+          "cost": "$600-$1000+/month base (always-on instance + storage DSUs at 10x ADLS rate)",
+          "dev_effort": "Very low — UI wizard, no code. IaC gap with Terraform.",
+          "speed_15m_rows": "Provisioned Snapshot: feasible with 2 CUs (~2-3h). Autoscaling Continuous: too slow (150 rows/s/CU).",
+          "ongoing_support": "Very low ops burden. Non-additive schema changes require table recreation.",
+          "critical_limitation": "Only works with Databricks-managed Lakebase Postgres — NOT the existing Azure Database for PostgreSQL.",
+          "key_limitations": [
+            "Synced tables are read-only in Postgres — all DDL denied",
+            "No logical replication out of Lakebase",
+            "UC row filters/column masks bypassed via direct Postgres connection",
+            "FK constraints cannot be declared or enforced",
+            "Null bytes in Delta STRING columns cause UTF-8 failures",
+            "Max 20 synced tables per source table",
+            "Max 2TB (recommended 1TB) per instance",
+            "Full refresh temporarily doubles logical size usage"
+          ]
+        },
+        {
+          "name": "ADLS Gen2 Staging + Airflow + PostgreSQL COPY",
+          "approach": "Spark writes Parquet to ADLS, Airflow DAG on AKS orchestrates parallel download + COPY to PostgreSQL with staging table rename-swap",
+          "cost": "~$3/month compute + $1-$16/month storage (depends on retention). PostgreSQL and Airflow are existing shared costs.",
+          "dev_effort": "Phase 1 (core pipeline): ~2 weeks. Phase 2 (per table onboarding): 1.5-5 days per table.",
+          "speed_15m_rows": "Benchmarked: 237s (~4 min) locally, 80-125s expected on AKS. COPY at 85K rows/s.",
+          "load_modes": ["replace (rename-swap, ms downtime)", "append (pure insert)", "upsert (ON CONFLICT, row-level locking)"],
+          "schema_drift": "Auto-detected at startup: new column = abort, removed column = warn (loads as NULL).",
+          "recommendation": "Safe baseline if a production decision is needed in the near term."
+        }
+      ],
+      "note": "Apache Iceberg (Option C/D) also under evaluation — see tickets/187526-adls-delta-reader/ and option-d-gold-push-jdbc/"
+    },
+
+    "data_exchange_newum_to_bronze": {
+      "$comment": "Two options evaluated for moving NewUM PostgreSQL data into Databricks Bronze. From System Design Document.",
+      "options": [
+        {
+          "name": "Lakeflow Connect",
+          "approach": "Managed CDC via PostgreSQL logical replication (WAL) into Unity Catalog Delta tables",
+          "cost": "Serverless DBUs + ADLS storage. No egress within same Azure region.",
+          "dev_effort": "1-2 days total including network validation. Requires wal_level=logical + replication user on NewUM PostgreSQL.",
+          "speed": "Initial 1M row snapshot: 10-20 min. After initial load, incremental changes land within minutes (near real-time).",
+          "ongoing_support": "Low but not zero — replication slot needs monitoring. WAL bloat risk if pipeline doesn't run.",
+          "limitations": ["Public Preview — subject to breaking changes", "Only additive schema changes auto-supported", "Replication slot must be manually dropped when pipeline deleted"]
+        },
+        {
+          "name": "Lakehouse Federation",
+          "approach": "No data movement — NewUM PostgreSQL tables appear directly in Databricks catalog via JDBC. Read-only.",
+          "cost": "Minimal — compute cost only for query duration. No storage, no egress within same region.",
+          "dev_effort": "Few hours once connectivity is in place.",
+          "speed": "1M rows: 1-5 min depending on row width and predicate pushdown. Latency grows linearly with volume.",
+          "ongoing_support": "Near zero. Only credential rotation.",
+          "best_use": "Fast connectivity validation step, on-demand reporting, exploratory phase before committing to Lakeflow Connect.",
+          "limitations": ["Not suitable for large scans or heavy transformations", "If PostgreSQL is unavailable, all queries fail — no cached copy"]
+        }
+      ]
+    },
+
+    "matis_migration": {
+      "$comment": "MATIS to NewUM migration strategy from System Design Document.",
+      "scope": "Only active and open cases migrated at cutover. Closed/historical cases remain in MATIS for direct reference.",
+      "legacy_identifiers": {
+        "legacy_case_id": "Original MATIS identifier carried on every migrated record",
+        "legacy_source_system": "Set to 'MATIS'; designed to accommodate future sources like SmartUM"
+      },
+      "reopened_cases": "Re-opened cases (appeals, renewals) after cutover create a shell case record in NewUM linked to original Legacy Case ID.",
+      "post_cutover": "NewUM is the sole system of record for all case activity.",
+      "reporting_continuity": "Legacy identifiers leveraged by reporting ETL and data warehouse to link NewUM records back to MATIS history.",
+      "out_of_scope": ["Closed/finalized MATIS cases", "Historical documents not attached to active cases", "SmartUM records (future phase)"]
+    },
+
+    "operational_practices": {
+      "$comment": "Operational and engineering practices from System Design Document — CI/CD, testing, retention, monitoring, constraints.",
+      "schema_evolution": {
+        "pattern": "Expand-Contract: new columns added as nullable (no default) first. After all consumers migrate, NOT NULL constraints added and old columns dropped.",
+        "bronze_schema": "Captured in Avro Schema Registry. Compatible changes auto-applied via Auto Loader with mergeSchema=true. Breaking changes require migration scripts."
+      },
+      "cicd": {
+        "branching": "Trunk-based development with short-lived feature branches. Main branch protected.",
+        "promotion": "main → staging (automatic on merge) → prod (manual approval gate)",
+        "review_gates": {
+          "standard": "1 Data Engineer approval",
+          "elevated": "2 approvals for schema-breaking, Gold restructure, or security changes"
+        },
+        "automated_checks": ["pytest unit tests (80% coverage gate)", "Databricks integration tests (synthetic data)", "dbt relational tests", "Great Expectations dry-run (production data via Delta Sharing)", "Schema evolution tests (Auto Loader compatibility)", "Data contract tests (JSON/Avro schema validation)", "Idempotency tests (re-run produces identical output)", "Linting (ruff/black)", "Schema diff posted as PR comment"],
+        "deployment": "PR merge → ADO pipeline + Airflow CI → tests → DAB deploy to Staging + smoke tests → manual approval → databricks bundle deploy --target prod → post-deploy smoke test",
+        "rollback": "Delta Time Travel (30 days). Job definition rollback via prior Git-stored JSON snapshot. Hotfix branches bypass staging but require 2-engineer approval + same-day post-incident review."
+      },
+      "data_retention": {
+        "bronze": { "retention": "7 years", "mechanism": "ADLS Gen2 lifecycle + Delta VACUUM", "driver": "HIPAA minimum" },
+        "silver": { "retention": "7 years", "mechanism": "Delta VACUUM (retain 7yr history)", "driver": "HIPAA + payer contracts" },
+        "gold": { "retention": "3 years", "mechanism": "Partition drop + VACUUM", "driver": "Business analytics policy" },
+        "compliance_audit_trail": { "retention": "10 years", "mechanism": "ADLS Gen2 immutable (WORM) + append-only Delta", "driver": "HIPAA regulatory audit" },
+        "quarantine": { "retention": "90 days", "mechanism": "Automated partition drop job", "driver": "Operational" }
+      },
+      "quarantine_alerting": {
+        "thresholds": [
+          { "level": "P3", "trigger": ">1% quarantined", "channel": "Slack" },
+          { "level": "P2", "trigger": ">5% quarantined", "channel": "PagerDuty" },
+          { "level": "P1", "trigger": ">10% or PII-sensitive failure", "channel": "PagerDuty + incident creation" }
+        ],
+        "quarantine_retention": "90 days; owning engineer triages"
+      },
+      "pipeline_tiers": [
+        { "tier": "Critical (CDC, Billing, Clinical Ops)", "retries": 3, "delay": "5 min (exponential)", "on_exhaustion": "P1 PagerDuty + incident + SLA breach" },
+        { "tier": "Standard (Gold refresh, Payer exports)", "retries": 2, "delay": "10 min", "on_exhaustion": "P2 PagerDuty + Slack" },
+        { "tier": "Low-priority (ML features, DQ trending)", "retries": 1, "delay": "30 min", "on_exhaustion": "P3 Slack only" }
+      ],
+      "airflow": {
+        "principles": "One DAG per logical pipeline. Composable DAGs linked via TriggerDagRunOperator or Datasets API. Owner tag + Slack channel on every DAG.",
+        "databricks_integration": "DatabricksRunNowOperator with PAT or OAuth M2M. Run IDs persisted in XCom for audit.",
+        "monitoring": "Metrics exported to Prometheus → Grafana. Dead-letter monitoring alerts on tasks stuck >15 min. DAG run history 90 days; logs to Azure Monitor."
+      },
+      "data_contracts": "Every ingestion source must have a documented, owner-confirmed contract before production onboarding. Formats: NewUM CDC = JSON event envelope (Git-versioned); DrugsMS = OpenAPI spec; Payer Eligibility = payer-specific flat file specs.",
+      "security_compliance": {
+        "context": "HIPAA-regulated healthcare prior-authorization. PHI tokenized at Bronze write layer.",
+        "tokenization_latency": "Must support <5-minute CDC latency target.",
+        "baa_requirement": "HIPAA BAA coverage is mandatory filter for all third-party tooling (Fivetran, Airbyte, etc.).",
+        "audit_trail": "gold.compliance.case_audit_trail stored in ADLS Gen2 immutable storage (WORM), append-only Delta, retained 10 years.",
+        "phi_classification": "PHI field classification (beyond SSN, DOB, name) requires data-classification review with Legal/Compliance before Silver schema finalized."
+      },
+      "constraints": [
+        "No analytic queries against operational databases — all analytics from Databricks Gold/Silver",
+        "Direct SQL/JDBC to NewUM operational DB is excluded as anti-pattern",
+        "Airflow is sole orchestration layer — ADF introduces redundant orchestration surface",
+        "HIPAA/BAA compliance is first-class filter for all third-party tooling",
+        "Event Hub schema changes must be backward-compatible for zero-downtime ingestion"
+      ]
+    },
+
+    "eligibility_domain_tables": {
+      "$comment": "Eligibility domain table definitions from System Design Document — 9 core tables.",
+      "tables": [
+        { "table": "Payer", "purpose": "Master record for an insurance payer (e.g. Medicare, Medicaid)" },
+        { "table": "BusinessGrouping", "purpose": "Logical grouping of plans/products under a payer, organized hierarchically" },
+        { "table": "BusinessGrain", "purpose": "Lowest-level classification unit within a payer's business hierarchy" },
+        { "table": "BenefitPlan", "purpose": "A specific insurance product/plan tied to a line of business" },
+        { "table": "LineOfBusiness", "purpose": "Mid-tier classification between MLOB and Product" },
+        { "table": "Eligibility", "purpose": "Core transaction table. Member coverage span with dates, payer, plan" },
+        { "table": "Person", "purpose": "Crosswalk table maintaining relationship between stable person ID and payer-scoped member ID" },
+        { "table": "RelatedPerson", "purpose": "Demographic record for person related to member (subscriber, representative)" },
+        { "table": "Address", "purpose": "Normalized address entity. Referenced by Person and RelatedPerson" },
+        { "table": "EmployerGroup", "purpose": "Employer group sponsoring coverage. Linked to Payer" }
+      ],
+      "employer_group_vs_business_grouping": {
+        "business_grouping": { "models": "Payer's internal product taxonomy", "defined_by": "The payer (plan design)", "cardinality": "Fixed hierarchy — few records, stable", "changes_when": "Payer restructures their LOB hierarchy", "purpose": "Classify what kind of plan this is" },
+        "employer_group": { "models": "A specific employer's contract with the payer", "defined_by": "The employer (contract negotiation)", "cardinality": "One per employer client — potentially thousands", "changes_when": "Employer renews, terminates, or changes groups", "purpose": "Identify who is sponsoring this coverage" }
+      },
+      "note": "BusinessGrouping and EmployerGroup are complementary but orthogonal constructs."
+    },
+
+    "oon_v1_scope": {
+      "$comment": "Out-of-Network scope matrix from System Design Document — V1 boundaries.",
+      "in_v1": [
+        "OON provider selectable if present in any health plan's data (cross-health-plan search)",
+        "Payer config has OON messages (gap review) — but gap review workflow not defined in any V1 PRD",
+        "Rules engine receives INN/OON as input — but null/unavailable in V1"
+      ],
+      "out_of_scope_v1": [
+        "OON provider selectable if absent from all health plan data — no provider-on-the-fly in V1",
+        "OON network check/determination — deferred to R2",
+        "Manual provider entry path — deferred to R2",
+        "Provider network data ingested into NewUM — deferred to R2"
+      ],
+      "constraint": "Case-level data is never written back to provider master/network tables — by design"
     }
   },
 
@@ -713,11 +1153,14 @@
     },
 
     "provider_model": {
-      "ordering": "Type 1 NPI (individual prescribing physician)",
+      "ordering": "Practitioner — Type 1 NPI (individual prescribing physician). Renamed to FHIR standard April 2026.",
       "servicing": "Treating clinician (may be 'Same as Ordering')",
-      "place_of_treatment": "Type 2 NPI (facility/organization)",
+      "place_of_treatment": "Organization — Type 2 NPI (facility). Renamed to FHIR standard April 2026.",
       "search_scope": "Provider search crosses all Health Plans (not restricted to case's plan)",
-      "pos": "Place of Service code is payer-configurable"
+      "pos": "Place of Service code — 2-digit CMS-standard, payer-configurable dropdown",
+      "case_level_snapshot": "AGREED DIRECTION (Apr 9): snapshot taken at case assignment, NOT overwritten by subsequent ETL. Source tables read-only.",
+      "network": "Separate bridge tables per Practitioner/Organization. Network tier = V2. OON workflow = OUT OF SCOPE V1.",
+      "v1_scope_exclusions": ["OON check/determination", "manual provider entry", "provider network data ingestion", "provider-on-the-fly", "network tier"]
     },
 
     "tat_chronos": {
@@ -1011,7 +1454,8 @@
       "still_missing": [
         "Meeting transcripts/recordings from March 21 – April 5 (not recoverable — meetings already occurred)",
         "Confluence NewUM1 content updates since March 26 (space confirmed dead — 404, 0 CQL search results for 'newUM' across all spaces)",
-        "1 chat not captured: Claude workshop (not found in sidebar — may have been deleted or renamed)"
+        "1 chat not captured: Claude workshop (not found in sidebar — may have been deleted or renamed)",
+        "11 new chats discovered in sidebar (Apr 7) not yet captured: Case Schema Explanation, Eligibility & Provider - review after workshops, Providers, Michal & Carlos 1-2-1, Exchange data between Databricks and NewUM, Provider schema discussion, Sprint grooming & planning, Sprint Demo and Planning, Backlog Refinement, Inna Mariienko, Vika Nobis"
       ],
       "blocker_resolved": "Okta session re-authenticated April 6. Chat scraper fixed (added Teams navigation for standalone runs)."
     },
@@ -1203,6 +1647,73 @@
       ]
     },
 
+    "sprint_demo_april_10": {
+      "$comment": "Sprint Demo — Arben Osmani ADLS→PostgreSQL pipeline POC + Jack Hall farewell.",
+      "date": "2026-04-10",
+      "meeting": "Sprint Demo and Planning",
+      "source": "Teams transcript (AI-generated, Michal started transcription)",
+      "attendees_confirmed": ["Arben Osmani", "Michal Mucha", "Jack Hall", "Cory Johnson", "Tim Ursprung", "Nick Foreyt"],
+
+      "arben_adls_postgres_demo": {
+        "title": "ADLS → PostgreSQL Pipeline POC",
+        "presenter": "Arben Osmani",
+        "status": "Working — live demo ran during call",
+        "language": "Python (manual execution, intended for Airflow)",
+        "implements": "Candidate #2: ADLS Gen2 + Airflow + PostgreSQL COPY",
+        "data_format": "Parquet (not Delta/Iceberg — 'can also be Delta but for POC using Parquet')",
+        "architecture": {
+          "step_1_fetch": "Parallel ADLS fetch — 32 threads, 52 files in ~60s (vs ~500s sequential). Files loaded directly into server memory, no disk I/O or temp files.",
+          "step_2_batch": "Process in batches of 500K records to cap memory usage regardless of table size.",
+          "step_3_staging": "Stream batches into UNLOGGED staging tables in PostgreSQL. Unlogged tables skip WAL, faster writes. Invisible to application queries — completely isolated from live table.",
+          "step_4_validate": "Row count validation against ADLS source before proceeding.",
+          "step_5_swap": "Rename-swap (atomic, <1ms): rename live→archive, rename staging→live. If anything failed earlier (missing file, row mismatch, connection error), swap never executes."
+        },
+        "performance": {
+          "fetch": "52 files, 60s (32 threads parallel) vs 500s sequential",
+          "load": "15M records in 3 min at 85K records/sec using COPY command",
+          "swap": "<1ms (two ALTER TABLE RENAME operations)",
+          "copy_vs_insert": "COPY sends all data in one stream; INSERT sends one SQL statement per row. Millions of inserts = hours; COPY = minutes."
+        },
+        "load_modes": {
+          "append": "Fastest — pure insert, no conflict checks",
+          "replace": "Bulk COPY to staging + atomic rename-swap (demo'd)",
+          "upsert": "Slower — conflict detection per row",
+          "merge": "Slowest — full match + update/insert logic"
+        },
+        "key_design_decisions": [
+          "COPY command over INSERT — orders of magnitude faster for bulk loads",
+          "Unlogged tables for staging — skip WAL overhead, acceptable since staging is ephemeral",
+          "Rename-swap over TRUNCATE+INSERT — if insert fails mid-way, TRUNCATE leaves table empty; rename-swap is atomic, no partial state",
+          "Parallel ADLS fetch — saturate network bandwidth instead of waiting sequentially",
+          "Memory batching (500K) — prevents OOM on multi-million row tables"
+        ],
+        "open_questions": [
+          "ADLS auth method — how does the Python script authenticate to ADLS? Same SP credentials that blocked our Option B?",
+          "How does the script discover which Parquet files to fetch? (Delta log? Fixed path? Databricks writes to known partition?)",
+          "What about schema evolution — if Databricks adds/removes columns between runs?"
+        ]
+      },
+
+      "jack_hall_departure": {
+        "event": "Jack Hall's last day at OncoHealth",
+        "date": "2026-04-10",
+        "jack_quote": "Today is my last day. I think the news didn't filter down in the OncoHealth side very quickly, but your leadership knows.",
+        "context": "Farewell exchange at end of Sprint Demo. Jack, Cory, Tim, Nick all participated.",
+        "impact": [
+          "Jack was Architecture Lead / Backend — key voice in provider schema, CaseOfficeContact auditability (NOPHI-Q03), staging table DDL",
+          "PROV-GAP-01 auditability was pending Joseph Destefano + Jack Hall → now only Joseph",
+          "Option D prerequisite #5 (staging table DDL) listed Jack as owner — needs reassignment",
+          "Tim Ursprung also nearing retirement ('within months') — two senior departures"
+        ]
+      },
+
+      "tim_retirement_note": {
+        "who": "Tim Ursprung",
+        "quote": "I'm probably within months of retirement, like a few months.",
+        "context": "Casual exchange during Jack's farewell"
+      }
+    },
+
     "eligibility_person_member_deep_analysis": {
       "$comment": "Comprehensive rules & payer taxonomy analysis posted in the meeting chat — appears to be pre-meeting research/synthesis from Confluence V1 PRDs. 30KB of structured content covering all 12 rule domains.",
       "sections_covered": [
@@ -1289,7 +1800,7 @@
       { "topic": "Phase 1 scope boundary", "status": "NEEDS EXECUTIVE ESCALATION — Payer taxonomy workshop (2026-03-18) action item: escalate to executive", "impact": "Determines how deep payer taxonomy goes in V1" },
       { "topic": "Dual/DSNP eligibility collections", "status": "FORMALIZED — ADO #183771 (Inna Mariienko, New). When to split records vs represent as separate MLOBs?", "impact": "Affects eligibility schema, record structure, MLOB modeling" },
       { "topic": "Eligibility API CQRS refactoring", "status": "RESOLVED — ADO #186301 CLOSED March 25, 2026 by Roman Buchyn. CQRS approach implemented.", "impact": "Resolved" },
-      { "topic": "Databricks→PostgreSQL data exchange", "status": "IN PROGRESS — March 30 meeting evaluated 3 approaches: (1) Lakebase Synced Tables, (2) ADLS+Airflow+PostgreSQL COPY, (3) Apache Iceberg→PostgreSQL. Marc Gale requested cost/effort/speed comparison.", "owners": ["Michal Mucha", "Marc Gale"], "impact": "Determines how Databricks data gets consumed by newUM's PostgreSQL backend" },
+      { "topic": "Databricks→PostgreSQL data exchange", "status": "STRONG SIGNAL — April 10 Sprint Demo: Arben Osmani demoed working Python POC implementing Candidate #2 (ADLS+Airflow+PostgreSQL COPY). Parallel ADLS fetch (32 threads, 60s for 52 files), COPY command (85K rows/sec, 15M rows in 3 min), unlogged staging tables, atomic rename-swap. 4 modes: append/replace/upsert/merge. Intended for Airflow orchestration. Option D (Spark JDBC push, our proposal) not yet presented.", "owners": ["Michal Mucha", "Marc Gale", "Arben Osmani"], "impact": "Determines how Databricks data gets consumed by newUM's PostgreSQL backend" },
       { "topic": "Eligibility final adjustment", "status": "ACTIVE — ADO #187385 (Michal Mucha, April 2). New ticket for final eligibility schema adjustments after workshops.", "impact": "Final eligibility schema refinements before V1 freeze" },
       { "topic": "Case utilisation of Eligibility data", "status": "TO DO — ADO #187416 (Carlos Carrillo, sprint 26.04.14). Implement and document how eligibility data is consumed in case workflows.", "impact": "Assigned to Carlos — first implementation ticket" }
     ]
@@ -1449,7 +1960,7 @@
       { "id": "U9", "question": "What is the CQRS approach for Eligibility API (ADO #186301)? What replaces with-related-data endpoints?", "status": "RESOLVED", "answer": "ADO #186301 CLOSED March 25, 2026 by Roman Buchyn. CQRS refactoring completed. Implementation went through Code Review and was merged in sprint 26.03.31." },
       { "id": "U10", "question": "How will Dual/DSNP eligibility be represented — split records or separate MLOBs (ADO #183771)?", "status": "unresolved", "note": "Payer taxonomy workshop (2026-03-18) raised this. Inna assigned." },
       { "id": "U11", "question": "What happened to Confluence NewUM1 space? Returns 404 since ~2026-03-26.", "status": "unresolved", "note": "Re-confirmed April 6: still 404. CQL search for 'newUM' returned 0 results across all 12 accessible spaces. Content completely gone. Last good capture: 2026-03-25 (50 pages, 422K chars). Ask Rachel or Inna." },
-      { "id": "U12", "question": "Which Databricks→PostgreSQL data exchange approach was selected?", "status": "IN_PROGRESS", "note": "DECISION April 8: Alex (DevOps lead) ruled Option A (REST Catalog API) out — security will not enable external_access_enabled. Approved Option B: Direct ADLS storage access with UniForm. Key facts from Alex: (1) No new Service Principal needed — each workspace already has its own SP for storage access. (2) If storage account not in list, just add a new external location using same SP. (3) Michal fine with Option B scope change. Carlos accepted and will build Option B. This pivots the POC away from the spike (#186438) path — REST API code not reusable, need new ADLS reader code. ADO #187526 active. Storage account: ohdatabrickswssadftest. Open questions for Alex: (Q1) which auth method for external ADLS reads? (Q2) which SP client_id to use? (Q3) external location registration needed? (Q4) is storage account on private endpoint? UniForm enablement (prereq #3) still needed — same for both options." }
+      { "id": "U12", "question": "Which Databricks→PostgreSQL data exchange approach was selected?", "status": "IN_PROGRESS", "note": "April 10 update: Arben Osmani demoed working Python POC at Sprint Demo — implements Candidate #2 (ADLS Gen2 + Airflow + PostgreSQL COPY). Reads Parquet from ADLS (not Delta log), parallel fetch 32 threads, COPY command, unlogged staging tables, atomic rename-swap. 4 load modes. Intended for Airflow. This may be THE selected approach — demoed at official Sprint Demo with Jack Hall, Tim Ursprung, Cory Johnson, Nick Foreyt present. Previous context: April 8 Alex blocked Options A+B. Option D (Spark JDBC push, Carlos proposal) not yet discussed with team. Key question: does Arben's POC use the same ADLS SP credentials that blocked our Option B, or a different auth path?" }
     ]
   }
 }

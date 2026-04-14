@@ -54,3 +54,4 @@ Tracking folder for ADO work items assigned to Carlos Carrillo (`ccarrillo@oncol
 | 185594 | review the doc | 26.03.31 | Active |
 | 186438 | Iceberg REST Catalog investigation | TBD | COMPLETE (security blocked Option A) |
 | 187526 | Direct ADLS Delta reader (Option B) | TBD | Active — blocked on SP credentials |
+| — | Option D: Gold Push via Spark JDBC | TBD | PROPOSAL — pending team review |
