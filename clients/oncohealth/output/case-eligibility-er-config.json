@@ -139,15 +139,13 @@
             "name": "Facility Type (T2)",
             "subtitle": "HOPD vs standalone — affects reimbursement. CMS POS logic. V1 concern",
             "palette": "spark",
-            "tag": "PROV-GAP-04",
-            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
           },
           {
             "name": "Specialty (T1 only)",
             "subtitle": "taxonomy_code from NPPES. V1 = Practitioner (T1). Organization (T2) post-V1",
             "palette": "spark",
-            "tag": "PROV-GAP-05",
-            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "PROV", "bg": "#E65100", "color": "#FFE0B2" }
           },
           {
             "name": "GAP Review",
@@ -204,15 +202,13 @@
             "name": "CaseOfficeContact",
             "subtitle": "FK: CaseId | Cols: ProviderRole (Ord/Serv), Name, Phone, Fax, Email",
             "palette": "postgres",
-            "tag": "PROV-GAP-01",
-            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "TABLE", "bg": "#2E7D32", "color": "#A5D6A7" }
           },
           {
             "name": "CasePOSCode",
             "subtitle": "FK: CaseId | Cols: POSCode VARCHAR(2), POSDescription",
             "palette": "postgres",
-            "tag": "PROV-GAP-03",
-            "badge": { "label": "CONFIRMED", "bg": "#2E7D32", "color": "#A5D6A7" }
+            "badge": { "label": "TABLE", "bg": "#2E7D32", "color": "#A5D6A7" }
           }
         ]
       }]

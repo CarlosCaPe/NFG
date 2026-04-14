@@ -27,6 +27,7 @@ function getArg(name) {
 const configPath = getArg('config');
 const RENDER_PNG = args.includes('--png');
 const OUT_DIR = getArg('out') || '.';
+const LIGHT_MODE = args.includes('--light');
 
 if (!configPath) {
   console.error('Usage: node shared/render-diagram.js --config <diagram.json> [--png] [--out <dir>]');
@@ -35,9 +36,9 @@ if (!configPath) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// DESIGN TOKENS (dark theme)
+// DESIGN TOKENS
 // ═══════════════════════════════════════════════════════════════════════════
-const T = {
+const T_DARK = {
   bg:            '#0F1318',
   swimlaneBg:    ['#1A1520', '#1A1D24', '#1A2024', '#1A2418', '#1A1828', '#1E1A20'],
   swimlaneHd:    ['#C62828', '#E65100', '#1565C0', '#2E7D32', '#6A1B9A', '#F57F17'],
@@ -49,6 +50,21 @@ const T = {
   authArrow:     '#78909C',
   font:          "'Segoe UI','Inter','Helvetica Neue',system-ui,sans-serif",
 };
+
+const T_LIGHT = {
+  bg:            '#FFFFFF',
+  swimlaneBg:    ['#F3E5F5', '#E3F2FD', '#FFF3E0', '#E8F5E9', '#EDE7F6', '#FFFDE7'],
+  swimlaneHd:    ['#C62828', '#E65100', '#1565C0', '#2E7D32', '#6A1B9A', '#F57F17'],
+  border:        '#CFD8DC',
+  textPrimary:   '#212121',
+  textSecondary: '#546E7A',
+  textMuted:     '#78909C',
+  dataArrow:     '#1565C0',
+  authArrow:     '#78909C',
+  font:          "'Segoe UI','Inter','Helvetica Neue',system-ui,sans-serif",
+};
+
+const T = LIGHT_MODE ? T_LIGHT : T_DARK;
 
 // Card color palettes — extensible via config
 const PALETTES = {
@@ -80,6 +96,25 @@ const PALETTES = {
   sharepoint:{ fill: '#0A2020', stroke: '#038387', text: '#B2DFDB', tag: '#80CBC4', accent: '#038387' },
   generic:   { fill: '#1A1E24', stroke: '#546E7A', text: '#CFD8DC', tag: '#90A4AE', accent: '#546E7A' },
 };
+
+// Light-mode palette overrides — same keys, Miro-friendly colors
+const PALETTES_LIGHT = {
+  mssql:     { fill: '#FFF3F3', stroke: '#CC2927', text: '#B71C1C', tag: '#C62828', accent: '#CC2927' },
+  ingestion: { fill: '#E3F2FD', stroke: '#0078D4', text: '#0D47A1', tag: '#1565C0', accent: '#0078D4' },
+  bronze:    { fill: '#FFF8E1', stroke: '#CD7F32', text: '#5D4037', tag: '#8D6E63', accent: '#CD7F32' },
+  silver:    { fill: '#ECEFF1', stroke: '#607D8B', text: '#37474F', tag: '#546E7A', accent: '#90A4AE' },
+  gold:      { fill: '#FFFDE7', stroke: '#F9A825', text: '#5D4037', tag: '#F57F17', accent: '#DAA520' },
+  delta:     { fill: '#E0F7FA', stroke: '#00838F', text: '#004D40', tag: '#00695C', accent: '#00ADD8' },
+  uniform:   { fill: '#E0F2F1', stroke: '#00838F', text: '#004D40', tag: '#00695C', accent: '#00BCD4' },
+  api:       { fill: '#E8EAF6', stroke: '#3F51B5', text: '#1A237E', tag: '#283593', accent: '#4E8EE9' },
+  auth:      { fill: '#E8EAF6', stroke: '#5C6BC0', text: '#1A237E', tag: '#3949AB', accent: '#5C6BC0' },
+  spark:     { fill: '#FBE9E7', stroke: '#E25A1C', text: '#BF360C', tag: '#D84315', accent: '#E25A1C' },
+  dotnet:    { fill: '#EDE7F6', stroke: '#512BD4', text: '#311B92', tag: '#4527A0', accent: '#512BD4' },
+  postgres:  { fill: '#E3F2FD', stroke: '#336791', text: '#0D47A1', tag: '#1565C0', accent: '#336791' },
+  generic:   { fill: '#F5F5F5', stroke: '#78909C', text: '#37474F', tag: '#546E7A', accent: '#78909C' },
+};
+
+if (LIGHT_MODE) Object.assign(PALETTES, PALETTES_LIGHT);
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LOGO LOADING
@@ -290,7 +325,7 @@ function sectionFrame(x, y, w, h, label, borderColor) {
 
 function svgDefs() {
   return `<defs>
-    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.5" fill="#1E2830"/></pattern>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.5" fill="${LIGHT_MODE ? '#CFD8DC' : '#1E2830'}"/></pattern>
     <marker id="arrowBlue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="${T.dataArrow}"/></marker>
     <marker id="arrowGray" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="${T.authArrow}"/></marker>
   </defs>`;
@@ -298,7 +333,7 @@ function svgDefs() {
 
 function legendBlock(lx, ly, lw) {
   const lh = 96;
-  let svg = `<rect x="${lx}" y="${ly}" width="${lw}" height="${lh}" rx="8" fill="#111620" stroke="${T.border}" stroke-width="1"/>`;
+  let svg = `<rect x="${lx}" y="${ly}" width="${lw}" height="${lh}" rx="8" fill="${LIGHT_MODE ? '#F5F5F5' : '#111620'}" stroke="${T.border}" stroke-width="1"/>`;
   svg += `<text x="${lx + 14}" y="${ly + 18}" font-family="${T.font}" font-size="13" font-weight="700" fill="${T.textMuted}" letter-spacing="1">LEGEND</text>`;
   const r1y = ly + 38;
   svg += `<line x1="${lx + 14}" y1="${r1y}" x2="${lx + 56}" y2="${r1y}" stroke="${T.dataArrow}" stroke-width="2.5" marker-end="url(#arrowBlue)"/>`;
@@ -495,7 +530,7 @@ function buildRadialFromConfig(diagram) {
       const lx = cx + (radius + 16) * Math.cos(rad);
       const ly = cy + (radius + 16) * Math.sin(rad);
       const labelW = ring.label.length * 7 + 16;
-      svg += `<rect x="${lx - labelW / 2}" y="${ly - 10}" width="${labelW}" height="20" rx="4" fill="${ring.labelBg || '#111620'}" stroke="${ring.ringColor || T.border}" stroke-width="0.8"/>`;
+      svg += `<rect x="${lx - labelW / 2}" y="${ly - 10}" width="${labelW}" height="20" rx="4" fill="${ring.labelBg || (LIGHT_MODE ? '#F5F5F5' : '#111620')}" stroke="${ring.ringColor || T.border}" stroke-width="0.8"/>`;
       svg += `<text x="${lx}" y="${ly + 5}" text-anchor="middle" font-family="${T.font}" font-size="12" font-weight="700" fill="${ring.labelColor || T.textMuted}" letter-spacing="0.8">${esc(ring.label)}</text>`;
     }
   }
@@ -647,13 +682,14 @@ async function main() {
     console.log(`\n  ${d.name}:`);
     const layout = d.layout || 'lanes';
     const svgStr = layout === 'radial' ? buildRadialFromConfig(d) : buildFromConfig(d);
-    const svgPath = path.join(outDir, `${d.name}.svg`);
+    const suffix = LIGHT_MODE ? '-light' : '';
+    const svgPath = path.join(outDir, `${d.name}${suffix}.svg`);
     fs.writeFileSync(svgPath, svgStr);
-    console.log(`  SVG: ${d.name}.svg (${(Buffer.byteLength(svgStr) / 1024).toFixed(1)} KB)`);
+    console.log(`  SVG: ${d.name}${suffix}.svg (${(Buffer.byteLength(svgStr) / 1024).toFixed(1)} KB)`);
 
     if (RENDER_PNG) {
       try {
-        await renderPNG(svgPath, path.join(outDir, `${d.name}.png`), d.width || 1600, d.height || 1100);
+        await renderPNG(svgPath, path.join(outDir, `${d.name}${suffix}.png`), d.width || 1600, d.height || 1100);
       } catch (err) {
         console.error(`  PNG failed: ${err.message}`);
       }
