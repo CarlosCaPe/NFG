@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-04-10T17:25:03.049Z",
+  "client": "oncohealth",
+  "mode": "dry-run",
+  "results": [
+    {
+      "id": "gcal",
+      "name": "Google Calendar (NFG)",
+      "status": "dry-run"
+    },
+    {
+      "id": "teams-cal",
+      "name": "Teams + Outlook Calendar",
+      "status": "dry-run"
+    },
+    {
+      "id": "teams-channels",
+      "name": "Teams Channels (NoPHI + General)",
+      "status": "dry-run"
+    },
+    {
+      "id": "teams-chats",
+      "name": "Teams Chats (priority threads)",
+      "status": "dry-run"
+    },
+    {
+      "id": "ado",
+      "name": "Azure DevOps",
+      "status": "dry-run"
+    },
+    {
+      "id": "confluence",
+      "name": "Confluence",
+      "status": "dry-run"
+    }
+  ],
+  "totalElapsed": 0,
+  "successCount": 0,
+  "errorCount": 0
+}

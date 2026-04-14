@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-04-10T17:31:46.274Z",
+  "client": "oncohealth",
+  "mode": "live",
+  "results": [
+    {
+      "id": "gcal",
+      "name": "Google Calendar (NFG)",
+      "status": "success",
+      "elapsed": 39.6,
+      "outputBytes": 16783
+    },
+    {
+      "id": "teams-cal",
+      "name": "Teams + Outlook Calendar",
+      "status": "success",
+      "elapsed": 6.5,
+      "outputBytes": 0
+    },
+    {
+      "id": "teams-channels",
+      "name": "Teams Channels (NoPHI + General)",
+      "status": "success",
+      "elapsed": 107.2,
+      "outputBytes": 0
+    },
+    {
+      "id": "teams-chats",
+      "name": "Teams Chats (priority threads)",
+      "status": "success",
+      "elapsed": 39.8,
+      "outputBytes": 0
+    },
+    {
+      "id": "ado",
+      "name": "Azure DevOps",
+      "status": "error",
+      "elapsed": 183.3,
+      "error": "Command failed: node shared/scrape-ado-deep.js --client oncohealth"
+    },
+    {
+      "id": "confluence",
+      "name": "Confluence",
+      "status": "success",
+      "elapsed": 19.1,
+      "outputBytes": 226
+    }
+  ],
+  "totalElapsed": 395.50000000000006,
+  "successCount": 5,
+  "errorCount": 1
+}

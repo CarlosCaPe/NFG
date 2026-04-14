@@ -1,13 +1,13 @@
 {
   "source": "google-calendar",
   "client": "oncohealth",
-  "capturedAt": "2026-04-09T15:39:31.012Z",
+  "capturedAt": "2026-04-10T17:25:49.683Z",
   "dateRange": {
-    "start": "2026-04-02",
-    "end": "2026-04-23"
+    "start": "2026-04-03",
+    "end": "2026-04-24"
   },
-  "eventCount": 203,
-  "totalChars": 5352,
+  "eventCount": 52,
+  "totalChars": 5317,
   "files": [
     "gcal-events.json",
     "gcal-events.txt",

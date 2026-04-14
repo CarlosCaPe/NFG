@@ -3,7 +3,7 @@ Keyboard shortcuts
 Accessibility Feedback
 Calendar
 Today
-Thursday, April 9
+Friday, April 10
 Previous day
 Next day
 April 2026
@@ -159,7 +159,7 @@ Time Insights
 Time Insights
 keyboard_arrow_up
 More insights
-APR 2 – 3, 2026
+APR 3 – 6, 2026
 0 hr in meetings
 More insights
 Calendar list
@@ -175,80 +175,7 @@ Calendar
 carlos.carrillo@dataqbs.com
 Holidays in Mexico
 Public Holidays (Newfire Global)
-Schedule starting Thursday, April 2, 2026, 45 events
-2
-APR, THU
-All day
-Home
-Carlos Carrillo, Accepted
-Thursday, April 2
-All day
-Free (Day 4/17)
-Calendar: Calendar, Accepted
-Thursday, April 2
-All day
-Free (Day 4/5)
-Calendar: Calendar, Accepted
-Thursday, April 2
-All day
-Maundy Thursday
-Calendar: Holidays in Mexico, Accepted
-Thursday, April 2
-All day
-Holy Thursday (Easter Week) - Costa Rica
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Holy Thursday (Easter Week) - Peru
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Holy Thursday - Colombia
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Holy Thursday - El Salvador
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Holy Thursday - Spain - Basque
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Holy Thursday - Spain - Seville
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Maundy Thursday - Philippines
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Maundy Thursday - Spain - Madrid
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Maundy Thursday / Malvinas Day - Argentina
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-All day
-Tourism Week - Uruguay
-Calendar: Public Holidays (Newfire Global), Accepted
-Thursday, April 2
-8 – 8:30am
-Tentative
-Calendar: Calendar, Accepted
-Thursday, April 2
-8:30 – 9:30am
-Tentative
-Calendar: Calendar, Accepted
-Thursday, April 2
-8:35 – 9am
-Tentative
-Calendar: Calendar, Accepted
-Thursday, April 2
-2:30 – 3pm
-busy
-Calendar: carlos.carrillo@dataqbs.com, Accepted
+Schedule starting Friday, April 3, 2026, 47 events
 3
 APR, FRI
 All day
@@ -358,3 +285,86 @@ Friday, April 3
 8:35 – 9am
 Tentative
 Calendar: Calendar, Accepted
+4
+APR, SAT
+All day
+Free (Day 6/17)
+Calendar: Calendar, Accepted
+Saturday, April 4
+All day
+Free (Day 2/4)
+Calendar: Calendar, Accepted
+Saturday, April 4
+All day
+Holy Saturday
+Calendar: Holidays in Mexico, Accepted
+Saturday, April 4
+All day
+Tourism Week - Uruguay
+Calendar: Public Holidays (Newfire Global), Accepted
+5
+APR, SUN
+All day
+Free (Day 7/17)
+Calendar: Calendar, Accepted
+Sunday, April 5
+All day
+Free (Day 3/4)
+Calendar: Calendar, Accepted
+Sunday, April 5
+All day
+Easter Sunday
+Calendar: Holidays in Mexico, Accepted
+Sunday, April 5
+All day
+Easter Sunday - Poland
+Calendar: Public Holidays (Newfire Global), Accepted
+6
+APR, MON
+All day
+Home
+Carlos Carrillo, Accepted
+Monday, April 6
+All day
+Free (Day 8/17)
+Calendar: Calendar, Accepted
+Monday, April 6
+All day
+Free (Day 4/4)
+Calendar: Calendar, Accepted
+Monday, April 6
+All day
+Tentative
+Calendar: Calendar, Accepted
+Monday, April 6
+All day
+Easter Monday - Canada
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 6
+All day
+Easter Monday - Croatia
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 6
+All day
+Easter Monday - Ireland
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 6
+All day
+Easter Monday - Poland
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 6
+All day
+Easter Monday - Spain - Basque
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 6
+All day
+Easter Monday - Spain - Valencia
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 6
+8:35 – 9am
+Tentative
+Calendar: Calendar, Accepted
+Monday, April 6
+1 – 1:30pm
+busy
+Calendar: carlos.carrillo@dataqbs.com, Accepted

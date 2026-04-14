@@ -1,10 +1,59 @@
 [
   {
+    "id": "5321228290",
+    "title": "NewUM and Databricks Data Integration",
+    "space": "NewUM",
+    "modified": "2026-04-10T13:50:27.303Z",
+    "modifiedBy": "Oleksandr Nykonenko"
+  },
+  {
+    "id": "5067375081",
+    "title": "NewUM Product Roadmap",
+    "space": "NewUM1",
+    "modified": "2026-04-10T13:37:15.540Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5334499329",
+    "title": "Draft of 26.04.28 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-04-10T10:40:08.019Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
     "id": "5294391309",
     "title": "Multiple HCPCS Decoupling Plan",
     "space": "PM",
-    "modified": "2026-04-09T15:09:57.707Z",
+    "modified": "2026-04-10T08:06:57.391Z",
     "modifiedBy": "Nataliia Piatkevych"
+  },
+  {
+    "id": "5083987995",
+    "title": "Configuration Management",
+    "space": "NewUM1",
+    "modified": "2026-04-10T08:04:48.168Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
+    "id": "5330960405",
+    "title": "POC: Databricks → PostgreSQL Gold Push via Spark JDBC",
+    "space": "NewUM",
+    "modified": "2026-04-09T22:36:11.200Z",
+    "modifiedBy": "Carlos Carrillo"
+  },
+  {
+    "id": "5332238344",
+    "title": "MATIS → NewUM Architecture & Interoperability Assessment",
+    "space": "NewUM",
+    "modified": "2026-04-09T22:00:30.075Z",
+    "modifiedBy": "Ganesh Ananthu"
+  },
+  {
+    "id": "5332434946",
+    "title": "Financial Impact",
+    "space": "AT",
+    "modified": "2026-04-09T16:43:47.321Z",
+    "modifiedBy": "Stephen Baillio"
   },
   {
     "id": "5330108418",
@@ -33,13 +82,6 @@
     "space": "NewUM1",
     "modified": "2026-04-09T10:13:33.924Z",
     "modifiedBy": "Inna Mariienko"
-  },
-  {
-    "id": "5083987995",
-    "title": "Configuration Management",
-    "space": "NewUM1",
-    "modified": "2026-04-09T09:41:04.104Z",
-    "modifiedBy": "Pero Jaman"
   },
   {
     "id": "5318377473",
@@ -89,13 +131,6 @@
     "space": "PM",
     "modified": "2026-04-07T13:35:07.167Z",
     "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "5321228290",
-    "title": "NewUM and Databricks Data Integration",
-    "space": "NewUM",
-    "modified": "2026-04-07T13:15:22.102Z",
-    "modifiedBy": "Oleksandr Nykonenko"
   },
   {
     "id": "5302583322",
@@ -313,40 +348,5 @@
     "space": "AT",
     "modified": "2026-03-25T23:29:47.239Z",
     "modifiedBy": "Sara Heideman"
-  },
-  {
-    "id": "5230428252",
-    "title": "Configuration and rules categories",
-    "space": "NewUM1",
-    "modified": "2026-03-25T16:17:28.824Z",
-    "modifiedBy": "Pero Jaman"
-  },
-  {
-    "id": "5242060816",
-    "title": "SmartUM Rule Configurator",
-    "space": "NewUM1",
-    "modified": "2026-03-25T16:15:13.156Z",
-    "modifiedBy": "Pero Jaman"
-  },
-  {
-    "id": "3143204918",
-    "title": "Feature Template",
-    "space": "PM",
-    "modified": "2026-03-25T15:02:54.905Z",
-    "modifiedBy": "Sandy Gress"
-  },
-  {
-    "id": "5283053582",
-    "title": "API Library Structure and Naming Conventions",
-    "space": "NewUM",
-    "modified": "2026-03-25T11:18:45.370Z",
-    "modifiedBy": "Petro Brezitskiy"
-  },
-  {
-    "id": "5256773633",
-    "title": "Claude QA Pipeline: Step-by-Step Commands for Automation Workflow",
-    "space": "NewUM",
-    "modified": "2026-03-25T09:20:52.937Z",
-    "modifiedBy": "Taras Badlo"
   }
 ]

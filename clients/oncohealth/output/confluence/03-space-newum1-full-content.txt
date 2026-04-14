@@ -1,5 +1,5 @@
 # NewUM Product Team — Full Content Export
-Exported: 2026-04-09T15:40:42.341Z
+Exported: 2026-04-10T17:31:41.642Z
 Pages: 50
 
 
@@ -9243,17 +9243,17 @@ Initially extracted from
 
 DRAFT_Payer_Configuration_Form.docx
 
-MATIS Payer Configuration Reference Guide - Copy.docx
+MATIS Payer Configuration Reference Guide - Copy
 
-Standard Configuration Guide - Copy.xlsx
+Standard Configuration Guide - Copy
 
-Client Implementation Guide_ Draft_082025 - Copy.xlsm
+Client Implementation Guide_ Draft_082025 - Copy 
 
 Add / Edit Payer Configuration Communication - Product Management - Confluence
 
-https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/_layouts/15/Doc.aspx?sourcedoc=%7BA6FE31D6-306C-40E5-B5D9-8929A42964F3%7D&file=Behavior-Change%20Library%20(Draft).xlsx&action=default&mobileredirect=true&DefaultItemOpen=1 
+Behavior-Change Library (Draft) 
 
-https://oncologyanalyticsinc.sharepoint.com/:x:/r/sites/OncoHealth_NewFire/Shared%20Documents/Product%20Documentation/Sentara%20Configuration%20Guide.xlsx?d=w8accf57d5f594a46bfd4431826c682ad&csf=1&web=1&e=k48apF 
+Sentara Configuration Guide 
 
 Geisinger configurations760User Stories (TBD)
 

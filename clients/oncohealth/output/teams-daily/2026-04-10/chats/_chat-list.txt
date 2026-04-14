@@ -1,0 +1,8 @@
+=== CHAT LIST SUMMARY ===
+Captured: 2026-04-10T17:28:18.464Z
+
+1. Clinical Scheduling
+2. NewUM | General | See all channels
+3. General
+4. CRS/CRR Scheduling
+5. IT Helpdesk Scheduling
