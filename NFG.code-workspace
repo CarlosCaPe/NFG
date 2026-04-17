@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": "/home/carloscarrillo/.claude",
+            "name": "brain (~/.claude)"
+        },
+        {
+            "path": ".",
+            "name": "NFG"
+        }
+    ],
+    "settings": {
+        "python.analysis.autoImportCompletions": true,
+        "python.defaultInterpreterPath": "python",
+        "python.terminal.activateEnvironment": true,
+        "python.terminal.useEnvFile": true
+    }
+}

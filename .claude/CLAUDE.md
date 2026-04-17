@@ -45,7 +45,7 @@ cp -r clients/_template clients/<client-name>
 ```
 
 ## Conventions
-- Follow patterns established in sibling repos (dataqbs_IA, FSH, memo, HXW)
+- Follow brain skills in `~/.claude/skills/` for reusable patterns
 - Config-first: behavior in YAML, wired in code
 - Idempotent scripts, dry-run by default
 - Per-client `.env` files — never committed
