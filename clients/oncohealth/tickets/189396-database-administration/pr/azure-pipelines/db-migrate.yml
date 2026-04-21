@@ -1,0 +1,122 @@
+# azure-pipelines/db-migrate.yml
+# Flyway migration pipeline for newUM PostgreSQL (ADO ticket #189396)
+#
+# SETUP REQUIRED (DevOps - Luiyi):
+#   1. Create ADO Library variable groups:
+#        'newum-db-dev'  with: DB_HOST, DB_NAME, DB_MIGRATIONS_USER, DB_MIGRATIONS_PASSWORD
+#        'newum-db-test' with: same keys, test values
+#        'newum-db-prod' with: same keys, prod values (locked)
+#   2. Create ADO Environments:
+#        'newum-dev-db'  (no approval required)
+#        'newum-test-db' (no approval required)
+#        'newum-prod-db' (manual approval required — Zaki Mohammed + DBA sign-off)
+#   3. Grant pipeline service connection access to the variable groups.
+#
+# TRIGGER: runs on merge to main when db/migrations/** changes.
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - db/migrations/**
+      - db/flyway.conf
+
+pr:
+  paths:
+    include:
+      - db/migrations/**
+
+parameters:
+  - name: environment
+    displayName: Target Environment
+    type: string
+    default: dev
+    values:
+      - dev
+      - test
+      - prod
+
+variables:
+  - group: newum-db-${{ parameters.environment }}
+  - name: FLYWAY_VERSION
+    value: '10.10.0'
+
+stages:
+
+  # ------------------------------------------------------------------
+  # Stage 1: Validate — runs on every PR and every merge.
+  # Checks that migration files are syntactically valid and checksums
+  # match what is already recorded in flyway_schema_history.
+  # ------------------------------------------------------------------
+  - stage: Validate
+    displayName: Validate migrations
+    pool:
+      vmImage: ubuntu-latest
+    jobs:
+      - job: FlywayValidate
+        displayName: flyway validate
+        steps:
+          - bash: |
+              curl -sL \
+                "https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/$(FLYWAY_VERSION)/flyway-commandline-$(FLYWAY_VERSION)-linux-x64.tar.gz" \
+                | tar xz -C /tmp
+              sudo ln -sf "/tmp/flyway-$(FLYWAY_VERSION)/flyway" /usr/local/bin/flyway
+              flyway --version
+            displayName: Install Flyway CLI
+
+          - bash: |
+              flyway validate \
+                -url="jdbc:postgresql://$(DB_HOST):5432/$(DB_NAME)" \
+                -user="$(DB_MIGRATIONS_USER)" \
+                -password="$(DB_MIGRATIONS_PASSWORD)" \
+                -configFiles="db/flyway.conf" \
+                -locations="filesystem:db/migrations"
+            displayName: Validate migration checksums
+
+  # ------------------------------------------------------------------
+  # Stage 2: Migrate — runs on merge to main only.
+  # Uses a deployment job so ADO Environments can gate with approvals.
+  # Prod environment requires manual approval from Onco DBA (Zaki).
+  # ------------------------------------------------------------------
+  - stage: Migrate
+    displayName: Apply migrations (${{ parameters.environment }})
+    dependsOn: Validate
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    pool:
+      vmImage: ubuntu-latest
+    jobs:
+      - deployment: FlywayMigrate
+        displayName: flyway migrate
+        environment: newum-${{ parameters.environment }}-db
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+
+                - bash: |
+                    curl -sL \
+                      "https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/$(FLYWAY_VERSION)/flyway-commandline-$(FLYWAY_VERSION)-linux-x64.tar.gz" \
+                      | tar xz -C /tmp
+                    sudo ln -sf "/tmp/flyway-$(FLYWAY_VERSION)/flyway" /usr/local/bin/flyway
+                  displayName: Install Flyway CLI
+
+                - bash: |
+                    flyway info \
+                      -url="jdbc:postgresql://$(DB_HOST):5432/$(DB_NAME)" \
+                      -user="$(DB_MIGRATIONS_USER)" \
+                      -password="$(DB_MIGRATIONS_PASSWORD)" \
+                      -configFiles="db/flyway.conf" \
+                      -locations="filesystem:db/migrations"
+                  displayName: Show pending migrations (info)
+
+                - bash: |
+                    flyway migrate \
+                      -url="jdbc:postgresql://$(DB_HOST):5432/$(DB_NAME)" \
+                      -user="$(DB_MIGRATIONS_USER)" \
+                      -password="$(DB_MIGRATIONS_PASSWORD)" \
+                      -configFiles="db/flyway.conf" \
+                      -locations="filesystem:db/migrations"
+                  displayName: Apply pending migrations

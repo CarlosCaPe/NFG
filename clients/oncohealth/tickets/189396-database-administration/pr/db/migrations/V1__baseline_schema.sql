@@ -1,0 +1,40 @@
+-- =============================================================================
+-- V1__baseline_schema.sql
+-- Flyway baseline: full newUM OLTP schema as of the point Flyway was introduced.
+-- =============================================================================
+--
+-- STATUS: PLACEHOLDER - must be filled before this PR is merged.
+--
+-- HOW TO FILL THIS FILE:
+--   1. Log into windows365 CPC (only machine with privatelink access).
+--   2. Run:
+--        pg_dump \
+--          --host=fcc9bae56d16.privatelink.postgres.database.azure.com \
+--          --port=5432 \
+--          --username=newum_dev \
+--          --dbname=newum_dev \
+--          --schema-only \
+--          --no-owner \
+--          --no-acl \
+--          --file=V1__baseline_schema.sql
+--   3. Strip the pg_dump header block (lines starting with --) and paste the
+--      DDL here. Keep CREATE TABLE, CREATE INDEX, CREATE SEQUENCE, etc.
+--   4. Remove any GRANT statements (those live in V2__roles_and_permissions.sql).
+--
+-- IMPORTANT - if the DB already has data in it when Flyway is introduced:
+--   Do NOT run this file against the existing database. Instead, run:
+--        flyway baseline -baselineVersion=1
+--   This tells Flyway "pretend V1 already ran" and only apply V2+.
+--   V1 is only used when spinning up a brand-new empty database.
+--
+-- Domains confirmed from Miro + schema workshops (2026-04-21):
+--   - eligibility: EligibilityFlat (view), Eligibility, BenefitPackage, Group,
+--                  RelatedPerson, Address
+--   - case:        Case, CaseDrug, CaseOfficeContact, CaseProviderSelection
+--   - provider:    Provider, ProviderVersion, NPI
+--   - payer:       Payer, BusinessGroup, BenefitPlan, PDL
+--   - supporting:  ICD codes, supporting reference tables
+-- =============================================================================
+
+-- PLACEHOLDER: replace with pg_dump --schema-only output
+SELECT 1; -- no-op until filled
