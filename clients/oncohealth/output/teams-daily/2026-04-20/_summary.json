@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-20",
+  "started": "2026-04-20T15:45:28.898Z",
+  "channels": {},
+  "chats": {
+    "Data team - daily": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Eligibility - Person/Member workshop": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Payer taxonomy workshop": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Databricks Lakeflow Connect": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Provider Discussion": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Claude": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Erik and Michal": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    },
+    "Eligibility": {
+      "chars": 0,
+      "error": "not found in sidebar"
+    }
+  },
+  "calendar": {},
+  "transcripts": {},
+  "total_chars": 0,
+  "completed": "2026-04-20T15:46:01.487Z"
+}

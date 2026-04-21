@@ -124,68 +124,6 @@
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912/runs/327722",
       "id": 327722,
       "name": "20260323.1"
-    },
-    {
-      "_links": {
-        "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912/runs/327113"
-        },
-        "web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=327113"
-        },
-        "pipeline.web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=912"
-        },
-        "pipeline": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912?revision=2"
-        }
-      },
-      "templateParameters": {},
-      "pipeline": {
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912?revision=2",
-        "id": 912,
-        "revision": 2,
-        "name": "postgresql-cd",
-        "folder": "\\DevOps"
-      },
-      "state": "completed",
-      "result": "succeeded",
-      "createdDate": "2026-03-19T12:27:43.8930439Z",
-      "finishedDate": "2026-03-19T12:30:43.3078543Z",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912/runs/327113",
-      "id": 327113,
-      "name": "20260319.1"
-    },
-    {
-      "_links": {
-        "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912/runs/325896"
-        },
-        "web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=325896"
-        },
-        "pipeline.web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=912"
-        },
-        "pipeline": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912?revision=2"
-        }
-      },
-      "templateParameters": {},
-      "pipeline": {
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912?revision=2",
-        "id": 912,
-        "revision": 2,
-        "name": "postgresql-cd",
-        "folder": "\\DevOps"
-      },
-      "state": "completed",
-      "result": "succeeded",
-      "createdDate": "2026-03-13T12:24:30.6654149Z",
-      "finishedDate": "2026-03-13T20:50:44.8103168Z",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/912/runs/325896",
-      "id": 325896,
-      "name": "20260313.1"
     }
   ]
 }

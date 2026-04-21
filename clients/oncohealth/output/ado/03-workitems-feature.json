@@ -1,5 +1,5 @@
 {
-  "count": 66,
+  "count": 74,
   "items": [
     {
       "id": 179188,
@@ -19,27 +19,6 @@
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/179188"
-    },
-    {
-      "id": 179706,
-      "rev": 16,
-      "fields": {
-        "System.Id": 179706,
-        "System.AreaPath": "newUM\\Data Team",
-        "System.IterationPath": "newUM",
-        "System.WorkItemType": "Feature",
-        "System.State": "New",
-        "System.CreatedDate": "2026-01-15T23:31:26.017Z",
-        "System.ChangedDate": "2026-03-20T13:50:26.363Z",
-        "System.Title": "Specify NewUM bulk ingest API",
-        "Microsoft.VSTS.Scheduling.StoryPoints": 2,
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div>Negotiate this with the Core Backend Lead and a SME from OncoHealth. It's not important to specify the API in full detail, just figure out enough to support the Thin Vertical Slice of NewUM in Phase 1, with an eye towards the future.&nbsp; </div>",
-        "Microsoft.VSTS.Common.AcceptanceCriteria": "<div><ul><li>The broad outline of the bulk ingest API is documented and agreed upon by architectural stakeholders.&nbsp; </li><li>Eligibility bulk ingest supported </li> </ul> </div>",
-        "System.Tags": "Data; Q2 2026 Deliverable"
-      },
-      "multilineFieldsFormat": {},
-      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/179706"
     },
     {
       "id": 180149,
@@ -172,15 +151,15 @@
     },
     {
       "id": 180450,
-      "rev": 9,
+      "rev": 11,
       "fields": {
         "System.Id": 180450,
         "System.AreaPath": "newUM\\Data Team",
         "System.IterationPath": "newUM\\26.03.03",
         "System.WorkItemType": "Feature",
-        "System.State": "New",
+        "System.State": "Closed",
         "System.CreatedDate": "2026-01-27T07:43:15.273Z",
-        "System.ChangedDate": "2026-03-20T13:51:03.277Z",
+        "System.ChangedDate": "2026-04-21T08:46:54.443Z",
         "System.Parent": 181983,
         "System.Title": "Initial Data Set up",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -274,13 +253,13 @@
     },
     {
       "id": 181221,
-      "rev": 6,
+      "rev": 7,
       "fields": {
         "System.Id": 181221,
         "System.AreaPath": "newUM\\QA Team",
         "System.IterationPath": "newUM",
         "System.WorkItemType": "Feature",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Taras Badlo",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/3090f017-4f2d-6e26-9906-4d41973369f3",
@@ -295,7 +274,7 @@
           "descriptor": "aad.MzA5MGYwMTctNGYyZC03ZTI2LTk5MDYtNGQ0MTk3MzM2OWYz"
         },
         "System.CreatedDate": "2026-02-02T08:22:06.08Z",
-        "System.ChangedDate": "2026-03-20T13:51:44.147Z",
+        "System.ChangedDate": "2026-04-21T11:59:05.543Z",
         "System.Parent": 180140,
         "System.Title": "QA Manual work initial set up",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -306,7 +285,7 @@
     },
     {
       "id": 181228,
-      "rev": 11,
+      "rev": 13,
       "fields": {
         "System.Id": 181228,
         "System.AreaPath": "newUM",
@@ -327,7 +306,7 @@
           "descriptor": "aad.ZTkyMWViMzItZDU1YS03ZWNiLWE3ZmEtZjFjMTJjZjg1Mzgz"
         },
         "System.CreatedDate": "2026-02-02T08:52:41.197Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:27:50.18Z",
         "System.Parent": 181223,
         "System.Title": "[V1.R1.] Member Search, Selection, & Coverage Determination, including Draft Case",
         "Microsoft.VSTS.Common.Priority": 2,
@@ -410,7 +389,7 @@
     },
     {
       "id": 181233,
-      "rev": 8,
+      "rev": 9,
       "fields": {
         "System.Id": 181233,
         "System.AreaPath": "newUM",
@@ -418,11 +397,11 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T08:53:47.827Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:28:07.99Z",
         "System.Parent": 181223,
         "System.Title": "[V1.R2.]  Patient Clinical Information and Supporting Details",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R2"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181233"
@@ -448,7 +427,7 @@
     },
     {
       "id": 181235,
-      "rev": 5,
+      "rev": 7,
       "fields": {
         "System.Id": 181235,
         "System.AreaPath": "newUM",
@@ -456,18 +435,18 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T08:55:18.907Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:37:10.457Z",
         "System.Parent": 181222,
         "System.Title": "[V1.R2.] Fax Queue Integration",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R2"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181235"
     },
     {
       "id": 181236,
-      "rev": 6,
+      "rev": 7,
       "fields": {
         "System.Id": 181236,
         "System.AreaPath": "newUM",
@@ -475,19 +454,18 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T08:56:20.063Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:13.08Z",
         "System.Parent": 181224,
         "System.Title": "Auto-Determination Logic",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div>Evaluates a submitted case to determine whether it qualifies for full system auto-determination based on OH auto-approval logic, payer drug configurations (AP/PDL),&nbsp; and health plan business rules. This evaluation establishes whether the case can be completed without manual clinical or operational intervention.<br> </div>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Description": "<div>Evaluates a submitted case to determine whether it qualifies for full system auto-determination based on OH auto-approval logic, payer drug configurations (AP/PDL),&nbsp; and health plan business rules. This evaluation establishes whether the case can be completed without manual clinical or operational intervention.<br> </div>"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181236"
     },
     {
       "id": 181238,
-      "rev": 5,
+      "rev": 6,
       "fields": {
         "System.Id": 181238,
         "System.AreaPath": "newUM",
@@ -495,19 +473,18 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T08:57:40.543Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:08.65Z",
         "System.Parent": 181224,
         "System.Title": "Queues Management",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div>Routes cases requiring manual review to the appropriate operational queue (CRS, Nursing, PharmD, MD) based on OncoHealth workqueue rules, clinical complexity, and payer-specific assignment logic, ensuring workload visibility and auditability.<br> </div>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Description": "<div>Routes cases requiring manual review to the appropriate operational queue (CRS, Nursing, PharmD, MD) based on OncoHealth workqueue rules, clinical complexity, and payer-specific assignment logic, ensuring workload visibility and auditability.<br> </div>"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181238"
     },
     {
       "id": 181239,
-      "rev": 5,
+      "rev": 6,
       "fields": {
         "System.Id": 181239,
         "System.AreaPath": "newUM",
@@ -515,19 +492,18 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T08:59:32.55Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:19.137Z",
         "System.Parent": 181225,
         "System.Title": "NMI for Clinical Data & Medical Records",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<ul><li>Send NMI for Clinical Data and Medical Records </li><li>Track NMI Status and Due Dates </li><li>Receive and Associate Clinical Documents to Case </li><li>Resume Case Review After NMI Response </li> </ul><br><br>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Description": "<ul><li>Send NMI for Clinical Data and Medical Records </li><li>Track NMI Status and Due Dates </li><li>Receive and Associate Clinical Documents to Case </li><li>Resume Case Review After NMI Response </li> </ul><br><br>"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181239"
     },
     {
       "id": 181240,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181240,
         "System.AreaPath": "newUM",
@@ -535,12 +511,11 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:04:36.593Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:23.76Z",
         "System.Parent": 181225,
         "System.Title": "Provider Intervention (P2P / CCF)",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<ul><li>Initiate and Manage Provider Intervention (P2P / CCF) </li><li>Capture Provider Response and Outcome </li><li>Update Case and Complete Clinical Determination </li> </ul><br><br>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Description": "<ul><li>Initiate and Manage Provider Intervention (P2P / CCF) </li><li>Capture Provider Response and Outcome </li><li>Update Case and Complete Clinical Determination </li> </ul><br><br>"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181240"
@@ -566,7 +541,7 @@
     },
     {
       "id": 181243,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181243,
         "System.AreaPath": "newUM",
@@ -574,18 +549,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:07:36.177Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:44.55Z",
         "System.Parent": 181226,
         "System.Title": "Denial - Lack of Medical Necessity",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181243"
     },
     {
       "id": 181244,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181244,
         "System.AreaPath": "newUM",
@@ -593,18 +567,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:07:53.71Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:49.22Z",
         "System.Parent": 181226,
         "System.Title": "Denial - Lack of Information",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181244"
     },
     {
       "id": 181245,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181245,
         "System.AreaPath": "newUM",
@@ -612,18 +585,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:08:05.11Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:54.503Z",
         "System.Parent": 181226,
         "System.Title": "Withdrawal",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181245"
     },
     {
       "id": 181246,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181246,
         "System.AreaPath": "newUM",
@@ -631,18 +603,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:08:19.227Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:31:59.847Z",
         "System.Parent": 181226,
         "System.Title": "Out of Scope",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181246"
     },
     {
       "id": 181247,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181247,
         "System.AreaPath": "newUM",
@@ -650,18 +621,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:08:29.763Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:03.62Z",
         "System.Parent": 181226,
         "System.Title": "PA Exempt",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181247"
     },
     {
       "id": 181248,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181248,
         "System.AreaPath": "newUM",
@@ -669,18 +639,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:09:59.303Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:09.13Z",
         "System.Parent": 181226,
         "System.Title": "Generate and Send Notification Package",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181248"
     },
     {
       "id": 181249,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181249,
         "System.AreaPath": "newUM",
@@ -688,18 +657,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:10:58.053Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:13.407Z",
         "System.Parent": 181226,
         "System.Title": "Complete Case",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181249"
     },
     {
       "id": 181250,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181250,
         "System.AreaPath": "newUM",
@@ -707,18 +675,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:13:30.65Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:18.51Z",
         "System.Parent": 181227,
         "System.Title": "Pharmacy Drug Authorization Outbound (PBM Integration)",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181250"
     },
     {
       "id": 181251,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181251,
         "System.AreaPath": "newUM",
@@ -726,18 +693,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:13:40.43Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:22.35Z",
         "System.Parent": 181227,
         "System.Title": "Medical Drug Authorization Outbound (Health Plan Integration)",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181251"
     },
     {
       "id": 181252,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 181252,
         "System.AreaPath": "newUM",
@@ -745,11 +711,10 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-02T09:13:50.777Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:26.933Z",
         "System.Parent": 181227,
         "System.Title": "Standard Outbound Reporting & Feeds",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/181252"
@@ -787,7 +752,7 @@
     },
     {
       "id": 182311,
-      "rev": 4,
+      "rev": 5,
       "fields": {
         "System.Id": 182311,
         "System.AreaPath": "newUM\\BE Team",
@@ -808,18 +773,18 @@
           "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
         },
         "System.CreatedDate": "2026-02-11T07:55:10.19Z",
-        "System.ChangedDate": "2026-03-20T13:57:30.11Z",
+        "System.ChangedDate": "2026-04-21T09:32:33.337Z",
         "System.Parent": 181984,
         "System.Title": "Infrastructure V2",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182311"
     },
     {
       "id": 182312,
-      "rev": 16,
+      "rev": 17,
       "fields": {
         "System.Id": 182312,
         "System.AreaPath": "newUM",
@@ -840,12 +805,12 @@
           "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
         },
         "System.CreatedDate": "2026-02-11T07:56:12.083Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:41.653Z",
         "System.Parent": 181984,
         "System.Title": "Tech Debt",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Description": "<p><strong>DAL</strong> </p><ul><li><p><strike>Introduce Unit of Work pattern (Remove <code>SaveChangesAsync()</code> calls from repository methods) </strike>(done) </p> </li><li><p>Add <code>.AsNoTracking()</code> to all read-only queries </p> </li><li><p>Configure a global query filter for <code>ISoftDelete</code> entities. Remove manual soft-delete checks from repository methods </p> </li><li><p>Remove Mapper dependency from repository layer. Mapping should be done outside repository level </p> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><strike>Remove <code>IDisposable</code> from repository base class</strike> (done)<br> </div> </li><li><p>Convert <code>RepositoryBase</code> into an abstract base class and refactor entity-specific repositories (e.g., <code>CaseRepository</code>) to inherit from it, removing redundant context fields and keeping only entity-specific logic where needed </p> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">Missing CancellationToken Propagation<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">Timezone issue (Should use DateTime.UtcNow for consistency with other code that uses UTC)<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">Repositories storing _ctx again are unnecessary<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><span style=\"display:inline !important;\">Fragile casting chain in mappers&nbsp;</span><b>return (T)(IDto&lt;Case&gt;)new CaseDTO</b><br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">In-memory filtering after loading all data (check all places)<br> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><strike>Use </strike><b style=\"text-decoration-line:line-through;\">AddAsync()&nbsp;</b><strike>only when using value generators that access the database, 99% need to use </strike><b style=\"text-decoration-line:line-through;\">Add()</b><strike> since&nbsp;</strike><span style=\"text-decoration-line:line-through;display:inline !important;\">REAL async happens in&nbsp;</span><b style=\"text-decoration-line:line-through;\">await _ctx.SaveChangesAsync() </b>(done) </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\"><span><strike>Fix namespaces in DAL.Model. Screenshot attached&nbsp;</strike></span> </div> </li><li><div style=\"margin-top:14px;margin-bottom:14px;\">agree on using fluent API or data annotation on entity models. See example of [Foreing Key] vs&nbsp;HasForeignKey(x =&gt; x.Version) OnModelCreating. In EF fluent Api has priority #1 </div> </li> </ul><br><br>",
-        "System.Tags": "BE Services; core; FE; Q2 2026 Deliverable"
+        "System.Tags": "BE Services; core; FE; Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182312"
@@ -916,7 +881,7 @@
     },
     {
       "id": 182421,
-      "rev": 6,
+      "rev": 10,
       "fields": {
         "System.Id": 182421,
         "System.AreaPath": "newUM\\Data Team",
@@ -924,19 +889,19 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-11T23:39:36.653Z",
-        "System.ChangedDate": "2026-03-20T13:58:31.483Z",
+        "System.ChangedDate": "2026-04-21T14:00:57.15Z",
         "System.Parent": 181983,
-        "System.Title": "Data Migration Pipeline - Backfill & Incremental Notebooks",
+        "System.Title": "Data Migration",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div><p>We need two separate notebooks/jobs to handle data migration: </p><p><strong>1. Backfill Notebook (one-off, reusable)</strong>\nHandles the initial historical data load. Instead of reading the entire source dataset at once (which may be risky given unknown production data volumes), it processes data day-by-day in batch mode. It starts from the earliest available record date, migrates that full day, then moves to the next day, and so on. This approach is safer for large datasets and avoids memory issues. </p><p>This notebook is designed as a one-off migration but is reusable, if we ever need to re-migrate specific date ranges in the future (eg, gap filling), we can run it again with custom start/end parameters. </p><p><strong>2. Incremental Notebook (nightly scheduled)</strong>\nHandles ongoing daily data migration. Uses a watermark table to track the last successfully migrated date and resumes from that point. This runs on a nightly batch schedule and only processes new/recent data (eg, yesterday's records). </p><p><strong>Why this approach:</strong>\nWe currently only have access to dev/test environments with a small dataset. Production may contain a significantly larger volume of data. Processing the entire history in a single run is risky without visibility into prod data volumes. The day-by-day backfill approach lets us migrate safely regardless of data size. </p><h3>Acceptance Criteria </h3><ul><li>Backfill notebook created -&nbsp; accepts start date and end date parameters </li><li>Backfill notebook processes data one day at a time in a loop, committing each day before moving to the next </li><li>Backfill notebook logs progress (current date being processed, record count per day) </li><li>Backfill notebook is idempotent - re-running for the same date does not create duplicates </li><li>Incremental notebook created - reads the last migrated date from a watermark table and processes from that point </li><li>Watermark table created to store: table name, last migrated date, last run timestamp, status </li><li>Incremental notebook updates the watermark table after each successful run </li><li>Incremental notebook configured as a nightly scheduled Job </li><li>Both notebooks integrate with the audit logging framework </li><li>Tested in dev/test environment before production deployment </li> </ul><h3>Stories: </h3><ol><li>Design and create watermark table schema </li><li>Build backfill notebook with date range parameters and day-by-day processing loop </li><li>Build incremental notebook with watermark-based resume logic </li><li>Ensure idempotency on both notebooks (handle re-runs without duplicates) </li><li>Integrate audit logging into both notebooks </li><li>Create Databricks Job for nightly incremental schedule </li><li>Test backfill with dev/test data </li><li>Write documentation (usage, parameters, re-run instructions) </li> </ol><br> </div>",
-        "System.Tags": "Data; Q2 2026 Deliverable"
+        "System.Description": "<div><p><br> </p> </div>",
+        "System.Tags": "Data; Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182421"
     },
     {
       "id": 182836,
-      "rev": 5,
+      "rev": 6,
       "fields": {
         "System.Id": 182836,
         "System.AreaPath": "newUM",
@@ -944,11 +909,11 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-16T09:44:08.2Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:28:13.913Z",
         "System.Parent": 181223,
         "System.Title": "[V1.R2.] Member Identification and Coverage",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable; V1.R1"
+        "System.Tags": "Q2 2026 Deliverable; V1.R2"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/182836"
@@ -1254,7 +1219,7 @@
     },
     {
       "id": 184063,
-      "rev": 9,
+      "rev": 10,
       "fields": {
         "System.Id": 184063,
         "System.AreaPath": "newUM",
@@ -1262,12 +1227,11 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-26T15:01:54.347Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:32:54.117Z",
         "System.Parent": 182837,
         "System.Title": "Configuration Management",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Description": "<div>This epic contains all user stories related to setting up structures that will enable OH to store configurations, fetch them from BE and manage them. </div><div><br> </div><div>Relevant documentation: </div><div>PRD:&nbsp;<a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5083987995/Configuration+Management\">Configuration Management - NewUM Product Team - Confluence</a><br> </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5230428252/Configuration+and+rules+categories\">Configuration and rules categories - NewUM Product Team - Confluence</a><br> </div><div><br> </div>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Description": "<div>This epic contains all user stories related to setting up structures that will enable OH to store configurations, fetch them from BE and manage them. </div><div><br> </div><div>Relevant documentation: </div><div>PRD:&nbsp;<a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5083987995/Configuration+Management\">Configuration Management - NewUM Product Team - Confluence</a><br> </div><div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5230428252/Configuration+and+rules+categories\">Configuration and rules categories - NewUM Product Team - Confluence</a><br> </div><div><br> </div>"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184063"
@@ -1311,7 +1275,7 @@
     },
     {
       "id": 184144,
-      "rev": 5,
+      "rev": 6,
       "fields": {
         "System.Id": 184144,
         "System.AreaPath": "newUM",
@@ -1332,19 +1296,19 @@
           "descriptor": "aad.NzIxMDgxOWUtYWYxYS03NDc0LTkyNDktOWFiNjFiODFlZGY0"
         },
         "System.CreatedDate": "2026-02-27T09:50:18.117Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:33:05.053Z",
         "System.Parent": 182837,
         "System.Title": "Rules Engine",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Description": "<div><ul><li>When evaluating rules, consult values from Grain Hierarchy Repository&nbsp;<a href=\"https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/184321\">User Story 184321 Create Grain Hierarchy Configuration Repository</a> </li><ul><li>If there is not setup for current payer, use default </li> </ul> </ul> </div>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184144"
     },
     {
       "id": 184178,
-      "rev": 3,
+      "rev": 4,
       "fields": {
         "System.Id": 184178,
         "System.AreaPath": "newUM",
@@ -1352,18 +1316,18 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-27T13:36:41.89Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:33:09.75Z",
         "System.Parent": 182837,
         "System.Title": "Audit",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184178"
     },
     {
       "id": 184179,
-      "rev": 3,
+      "rev": 4,
       "fields": {
         "System.Id": 184179,
         "System.AreaPath": "newUM",
@@ -1371,18 +1335,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-27T13:37:02.75Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:33:17.437Z",
         "System.Parent": 182837,
         "System.Title": "Rollback",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184179"
     },
     {
       "id": 184188,
-      "rev": 3,
+      "rev": 4,
       "fields": {
         "System.Id": 184188,
         "System.AreaPath": "newUM",
@@ -1390,18 +1353,17 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-02-27T13:48:01.993Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:33:22.01Z",
         "System.Parent": 182837,
         "System.Title": "Testing & Validation",
-        "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184188"
     },
     {
       "id": 184800,
-      "rev": 3,
+      "rev": 4,
       "fields": {
         "System.Id": 184800,
         "System.AreaPath": "newUM",
@@ -1409,19 +1371,19 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-03-09T11:48:35.74Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:33:26.933Z",
         "System.Parent": 182837,
         "System.Title": "UI Configuration",
         "Microsoft.VSTS.Common.Priority": 2,
         "System.Description": "<div><a href=\"https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/edit-v2/5211586561\">Edit - UI Configurations - NewUM Product Team - Confluence</a>&nbsp;<br> </div>",
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/184800"
     },
     {
       "id": 185934,
-      "rev": 3,
+      "rev": 4,
       "fields": {
         "System.Id": 185934,
         "System.AreaPath": "newUM\\BE Team",
@@ -1439,13 +1401,15 @@
           "id": "a3e0adbc-d0f8-69c4-838d-85ebc9be8781",
           "uniqueName": "jhall@oncologyanalytics.com",
           "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx",
+          "inactive": true,
           "descriptor": "aad.YTNlMGFkYmMtZDBmOC03OWM0LTgzOGQtODVlYmM5YmU4Nzgx"
         },
         "System.CreatedDate": "2026-03-19T07:33:44.803Z",
-        "System.ChangedDate": "2026-03-20T13:53:38.617Z",
+        "System.ChangedDate": "2026-04-21T09:34:09.927Z",
+        "System.Parent": 181983,
         "System.Title": "Phase 1 documentation deliverable",
         "Microsoft.VSTS.Common.Priority": 2,
-        "System.Tags": "Q2 2026 Deliverable"
+        "System.Tags": "Q2 2026 Deliverable; V1.R1"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/185934"
@@ -1483,7 +1447,7 @@
     },
     {
       "id": 187024,
-      "rev": 2,
+      "rev": 3,
       "fields": {
         "System.Id": 187024,
         "System.AreaPath": "newUM",
@@ -1491,10 +1455,11 @@
         "System.WorkItemType": "Feature",
         "System.State": "New",
         "System.CreatedDate": "2026-03-26T14:11:32.68Z",
-        "System.ChangedDate": "2026-04-06T14:56:20.027Z",
+        "System.ChangedDate": "2026-04-21T09:28:38.43Z",
         "System.Parent": 181223,
         "System.Title": "[V2] Diagnosis Selection & Details for Case",
-        "Microsoft.VSTS.Common.Priority": 2
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "V2"
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187024"
@@ -1552,6 +1517,216 @@
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187798"
+    },
+    {
+      "id": 188613,
+      "rev": 3,
+      "fields": {
+        "System.Id": 188613,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.14",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-10T12:48:39.893Z",
+        "System.ChangedDate": "2026-04-21T08:46:22.053Z",
+        "System.Title": "User Authorisation",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188613"
+    },
+    {
+      "id": 188857,
+      "rev": 4,
+      "fields": {
+        "System.Id": 188857,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Inna Mariienko",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/e921eb32-d55a-6ecb-a7fa-f1c12cf85383",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTkyMWViMzItZDU1YS03ZWNiLWE3ZmEtZjFjMTJjZjg1Mzgz"
+            }
+          },
+          "id": "e921eb32-d55a-6ecb-a7fa-f1c12cf85383",
+          "uniqueName": "imariienko@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZTkyMWViMzItZDU1YS03ZWNiLWE3ZmEtZjFjMTJjZjg1Mzgz",
+          "descriptor": "aad.ZTkyMWViMzItZDU1YS03ZWNiLWE3ZmEtZjFjMTJjZjg1Mzgz"
+        },
+        "System.CreatedDate": "2026-04-14T15:17:56.213Z",
+        "System.ChangedDate": "2026-04-21T11:32:34.393Z",
+        "System.Parent": 181983,
+        "System.Title": "Case API",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "Q2 2026 Deliverable; V1.R1"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188857"
+    },
+    {
+      "id": 188859,
+      "rev": 2,
+      "fields": {
+        "System.Id": 188859,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-14T15:18:28.993Z",
+        "System.ChangedDate": "2026-04-21T09:27:02.35Z",
+        "System.Parent": 181983,
+        "System.Title": "Case Audit",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Tags": "V1.R1"
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188859"
+    },
+    {
+      "id": 189375,
+      "rev": 3,
+      "fields": {
+        "System.Id": 189375,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-21T08:40:34.823Z",
+        "System.ChangedDate": "2026-04-21T08:40:39.24Z",
+        "System.Title": "Test data on lower env",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189375"
+    },
+    {
+      "id": 189376,
+      "rev": 4,
+      "fields": {
+        "System.Id": 189376,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-21T08:41:28.577Z",
+        "System.ChangedDate": "2026-04-21T08:41:35.563Z",
+        "System.Title": "Disaster recovery",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189376"
+    },
+    {
+      "id": 189396,
+      "rev": 7,
+      "fields": {
+        "System.Id": 189396,
+        "System.AreaPath": "newUM\\Data Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Feature",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-21T11:44:02.953Z",
+        "System.ChangedDate": "2026-04-21T14:52:08.02Z",
+        "System.Title": "Database Administration",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "System.Description": "<p><strong></strong> </p><p><strong>Instance &amp; Configuration</strong> </p><ul><li>Install and configure PostgreSQL instance on Azure </li><li>Define and document postgresql.conf baseline settings (memory, connections, WAL, autovacuum) </li><li>Configure pg_hba.conf for client authentication </li><li>Set up and configure PgBouncer for connection pooling </li><li>Define and enforce naming conventions across schemas, tables, and columns </li> </ul><p><strong>Schema &amp; Object Management</strong> </p><ul><li>Create domain schemas (eligibility, provider, payer, cases) </li><li>Set up Alembic / SQLAlchemy as the migration tool </li><li>Define migration review and approval process </li><li>[ Deveops team ] Build Azure Devops for gated migration execution </li><li>Revoke DDL privileges from application user in production </li><li>Create and document schema change request process for backend team </li> </ul><div><p><strong>Security</strong> </p><ul><li>Define and implement role and privilege model (app user, migrations user, read-only user, admin) </li><li>Configure SSL/TLS for all connections </li><li>Set up pgAudit for access and change auditing </li><li>Implement secrets management for database credentials (Azure Key Vault or similar) </li><li>Define and schedule access review process </li><li>Configure row-level security where needed </li> </ul><p><strong>Backup &amp; Recovery</strong> </p><ul><li>Define RPO and RTO targets </li><li>Implement backup strategy (pg_basebackup + WAL archiving via pgBackRest or WAL-G) </li><li>Schedule and automate backups via Airflow </li><li>Document and test restore procedures </li><li>Set up backup verification checks as Airflow DAGs </li> </ul><div><p><strong>High Availability &amp; Replication</strong> </p><ul><li>Configure streaming replication (primary + standby) </li><li>Set up automatic failover (Patroni or Azure-managed HA) </li><li>Document planned failover and switchover runbooks </li><li>Monitor replication lag via alerting </li> </ul><ul> </ul><p><strong>Performance Monitoring &amp; Tuning</strong> </p><ul><li>Enable and configure pg_stat_statements </li><li>Set up slow query logging and alerting </li><li>Define autovacuum tuning baseline </li><li>Build index review process in coordination with backend team </li><li>Schedule regular bloat monitoring (table and index bloat) </li><li>Set up lock contention monitoring and alerting </li> </ul><p><strong>Capacity Planning</strong> </p><ul><li>Define disk, CPU, memory, and connection usage baselines </li><li>Set up alerting thresholds for all key metrics </li><li>Build capacity forecasting process as data grows across clinical, eligibility, and provider domains </li> </ul><p><strong>Tooling &amp; Stack</strong> </p><ul><li>Set up SQLAlchemy Core as standard Python database access library </li><li>Agree and document Dapper as backend team's data access layer (no EF ORM) </li><li>Integrate Liquibase or Alembic into CI/CD pipeline </li><li>Configure Airflow connections and variables for all database environments </li><li>Set up database monitoring tooling (pgAdmin, pgBadger, or Datadog Postgres integration) </li> </ul><p><strong>Documentation &amp; Governance</strong> </p><ul><li>Maintain data dictionary for all schemas and tables </li><li>Document all runbooks for common operational tasks (failover, restore, slot cleanup, VACUUM) </li><li>Define and document change management process for DDL changes </li><li>Define SLAs for database availability and query performance </li><li>Schedule and document regular access review audits </li> </ul><p><strong>Incident Response</strong> </p><ul><li>Define on-call ownership and escalation path for database incidents </li><li>Document common incident runbooks (connection exhaustion, deadlocks, disk full, WAL bloat) </li><li>Define post-incident review process </li> </ul> </div> </div> "
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189396"
+    },
+    {
+      "id": 189400,
+      "rev": 4,
+      "fields": {
+        "System.Id": 189400,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-04-21T11:58:26.61Z",
+        "System.ChangedDate": "2026-04-21T11:58:55.753Z",
+        "System.Title": "TAF initial setup",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189400"
+    },
+    {
+      "id": 189401,
+      "rev": 3,
+      "fields": {
+        "System.Id": 189401,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-04-21T11:59:51.497Z",
+        "System.ChangedDate": "2026-04-21T12:00:00.523Z",
+        "System.Title": "QA team onboarding",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189401"
+    },
+    {
+      "id": 189404,
+      "rev": 3,
+      "fields": {
+        "System.Id": 189404,
+        "System.AreaPath": "newUM\\QA Team",
+        "System.IterationPath": "newUM",
+        "System.WorkItemType": "Feature",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-04-21T12:03:59.88Z",
+        "System.ChangedDate": "2026-04-21T12:04:06.377Z",
+        "System.Title": "Manual testing",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189404"
     }
   ]
 }

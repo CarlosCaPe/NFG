@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="4116"
+     viewBox="0 0 1060 4116" font-family="Consolas, 'Courier New', monospace" font-size="12">
+<defs><style>
+  text { dominant-baseline:middle; }
+  .keep   { fill:#212121; }
+  .fk     { fill:#1565c0;      font-size:10px; font-weight:700; }
+  .add    { fill:#e65100;     font-weight:600; }
+  .rev    { fill:#6a1b9a;  font-style:italic; }
+  .reorder{ fill:#b45309; font-weight:700; }
+  .typ    { fill:#546e7a;    font-size:11px; font-style:italic; }
+  .nt     { fill:#78909c;    font-size:10px; }
+  .pk     { fill:#f57f17;      font-size:10px; font-weight:700; }
+  .grp    { fill:#4527a0;     font-size:11px; font-weight:600; letter-spacing:.3px; }
+  .sc     { font-size:10px; fill:#37474f; }
+</style></defs>
+<rect x="0" y="0" width="1060" height="4116" rx="8" fill="#f9fbe7" stroke="#9fa8da" stroke-width="1.5"/>
+<path d="M8,0 h1044 a8,8 0 0,1 8,8 v68 h-1060 v-68 a8,8 0 0,1 8,-8 z" fill="#1a237e"/>
+<text x="14" y="22" style="font-size:14px;font-weight:700;fill:#e8eaf6;">EligibilityFlat - UPDATED 2026-04-21 (103 cols, synced from Miro)</text>
+<text x="14" y="40" style="font-size:10px;fill:#9fa8da;">Source: case domain svg.txt (Miro export)  |  Silver: Eligibility / BenefitPackage / Group / RelatedPerson / Address</text>
+<text x="14" y="58" style="font-size:10px;fill:#9fa8da;">KEEP=92  FK=8  REVIEW=1  |  Silver: OK=61  WARN=38  EXCL=4</text>
+<rect x="0" y="76" width="1060" height="28" fill="#283593"/>
+<text x="8"       y="90" style="font-size:11px;font-weight:700;fill:#e8eaf6;">Key</text>
+<text x="40" y="90" style="font-size:11px;font-weight:700;fill:#e8eaf6;">Column Name</text>
+<text x="260" y="90" style="font-size:11px;font-weight:700;fill:#e8eaf6;">Type</text>
+<text x="370" y="90" style="font-size:11px;font-weight:700;fill:#e8eaf6;">Silver / Databricks</text>
+<text x="650" y="90" style="font-size:11px;font-weight:700;fill:#e8eaf6;">Status / Notes</text>
+<line x1="32" y1="76" x2="32" y2="104" stroke="#9fa8da" stroke-width="1"/>
+<line x1="252" y1="76" x2="252" y2="104" stroke="#9fa8da" stroke-width="1"/>
+<line x1="362" y1="76" x2="362" y2="104" stroke="#9fa8da" stroke-width="1"/>
+<line x1="642" y1="76" x2="642" y2="104" stroke="#9fa8da" stroke-width="1"/>
+<line x1="0" y1="104" x2="1060" y2="104" stroke="#c5cae9" stroke-width="1.5"/>
+<rect x="1" y="104" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="121" class="grp">-- SYSTEM --</text>
+<line x1="0" y1="138" x2="1060" y2="138" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="138" width="1058" height="34" fill="#fff9c4"/>
+<text x="8" y="155" class="pk">PK</text>
+<text x="40" y="155" class="keep">Key</text>
+<text x="260" y="155" class="typ">guid</text>
+<rect x="370" y="146" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="155" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="155" class="sc">eligibility_key</text>
+<rect x="650" y="146" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="155" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="155" class="nt">&lt;- eligibility_key</text>
+<line x1="32" y1="138" x2="32" y2="172" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="138" x2="252" y2="172" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="138" x2="362" y2="172" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="138" x2="642" y2="172" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="172" x2="1060" y2="172" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="172" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="189" class="keep">IsDeleted</text>
+<text x="260" y="189" class="typ">bool</text>
+<rect x="370" y="180" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="189" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<rect x="412" y="180" width="28" height="18" rx="3" fill="#388e3c"/>
+<text x="426" y="189" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">NEW</text>
+<text x="446" y="189" class="sc">__is_deleted</text>
+<rect x="650" y="180" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="189" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="189" class="nt">&lt;- __is_deleted / Deleted</text>
+<line x1="32" y1="172" x2="32" y2="206" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="172" x2="252" y2="206" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="172" x2="362" y2="206" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="172" x2="642" y2="206" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="206" x2="1060" y2="206" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="206" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="223" class="keep">DeletedBy</text>
+<text x="260" y="223" class="typ">string</text>
+<rect x="370" y="214" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="223" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="223" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="214" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="223" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="223" class="nt">&lt;- DeletedBy (soft-delete audit)</text>
+<line x1="32" y1="206" x2="32" y2="240" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="206" x2="252" y2="240" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="206" x2="362" y2="240" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="206" x2="642" y2="240" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="240" x2="1060" y2="240" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="240" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="257" class="keep">DeletedOn</text>
+<text x="260" y="257" class="typ">dt</text>
+<rect x="370" y="248" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="257" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="257" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="248" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="257" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="257" class="nt">&lt;- DeletedOn (soft-delete audit)</text>
+<line x1="32" y1="240" x2="32" y2="274" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="240" x2="252" y2="274" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="240" x2="362" y2="274" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="240" x2="642" y2="274" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="274" x2="1060" y2="274" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="274" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="291" class="keep">StartAt</text>
+<text x="260" y="291" class="typ">dt</text>
+<rect x="370" y="282" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="291" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<rect x="412" y="282" width="28" height="18" rx="3" fill="#388e3c"/>
+<text x="426" y="291" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">NEW</text>
+<text x="446" y="291" class="sc">__start_at</text>
+<rect x="650" y="282" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="291" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="291" class="nt">&lt;- __start_at (Delta SCD)</text>
+<line x1="32" y1="274" x2="32" y2="308" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="274" x2="252" y2="308" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="274" x2="362" y2="308" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="274" x2="642" y2="308" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="308" x2="1060" y2="308" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="308" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="325" class="keep">EndAt</text>
+<text x="260" y="325" class="typ">nullable dt</text>
+<rect x="370" y="316" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="325" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<rect x="412" y="316" width="28" height="18" rx="3" fill="#388e3c"/>
+<text x="426" y="325" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">NEW</text>
+<text x="446" y="325" class="sc">__end_at</text>
+<rect x="650" y="316" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="325" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="325" class="nt">&lt;- __end_at (Delta SCD)</text>
+<line x1="32" y1="308" x2="32" y2="342" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="308" x2="252" y2="342" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="308" x2="362" y2="342" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="308" x2="642" y2="342" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="342" x2="1060" y2="342" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="342" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="359" class="grp">-- MEMBER --</text>
+<line x1="0" y1="376" x2="1060" y2="376" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="376" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="393" class="fk">FK</text>
+<text x="40" y="393" class="fk">RelatedPersonKey</text>
+<text x="260" y="393" class="typ">FK</text>
+<rect x="370" y="384" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="393" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="393" class="sc">member_representative_key</text>
+<rect x="650" y="384" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="393" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="393" class="nt">-&gt; RelatedPerson entity</text>
+<line x1="32" y1="376" x2="32" y2="410" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="376" x2="252" y2="410" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="376" x2="362" y2="410" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="376" x2="642" y2="410" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="410" x2="1060" y2="410" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="410" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="427" class="fk">FK</text>
+<text x="40" y="427" class="fk">RelatedPersonAdressKey</text>
+<text x="260" y="427" class="typ">FK</text>
+<rect x="370" y="418" width="28" height="18" rx="3" fill="#f57f17"/>
+<text x="384" y="427" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">EXCL</text>
+<text x="404" y="427" class="sc" style="fill:#bf360c;">EXCL: dup of RelatedPerson.addr_key</text>
+<rect x="650" y="418" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="427" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="427" class="nt">-&gt; RelatedPerson address [typo in Miro]</text>
+<line x1="32" y1="410" x2="32" y2="444" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="410" x2="252" y2="444" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="410" x2="362" y2="444" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="410" x2="642" y2="444" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="444" x2="1060" y2="444" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="444" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="461" class="keep">MemberId</text>
+<text x="260" y="461" class="typ">string</text>
+<rect x="370" y="452" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="461" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="461" class="sc">member_id</text>
+<rect x="650" y="452" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="461" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="461" class="nt">&lt;- MemberID</text>
+<line x1="32" y1="444" x2="32" y2="478" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="444" x2="252" y2="478" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="444" x2="362" y2="478" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="444" x2="642" y2="478" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="478" x2="1060" y2="478" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="478" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="495" class="keep">PatientFirstName</text>
+<text x="260" y="495" class="typ">string</text>
+<rect x="370" y="486" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="495" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="495" class="sc">first_name</text>
+<rect x="650" y="486" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="495" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="495" class="nt">&lt;- FirstName</text>
+<line x1="32" y1="478" x2="32" y2="512" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="478" x2="252" y2="512" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="478" x2="362" y2="512" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="478" x2="642" y2="512" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="512" x2="1060" y2="512" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="512" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="529" class="keep">PatientLastName</text>
+<text x="260" y="529" class="typ">string</text>
+<rect x="370" y="520" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="529" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="529" class="sc">last_name</text>
+<rect x="650" y="520" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="529" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="529" class="nt">&lt;- LastName</text>
+<line x1="32" y1="512" x2="32" y2="546" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="512" x2="252" y2="546" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="512" x2="362" y2="546" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="512" x2="642" y2="546" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="546" x2="1060" y2="546" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="546" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="563" class="keep">PatientMiddleInitial</text>
+<text x="260" y="563" class="typ">string</text>
+<rect x="370" y="554" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="563" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="563" class="sc">middle_name</text>
+<rect x="650" y="554" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="563" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="563" class="nt">&lt;- MiddleInitial</text>
+<line x1="32" y1="546" x2="32" y2="580" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="546" x2="252" y2="580" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="546" x2="362" y2="580" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="546" x2="642" y2="580" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="580" x2="1060" y2="580" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="580" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="597" class="keep">PatientGender</text>
+<text x="260" y="597" class="typ">enum</text>
+<rect x="370" y="588" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="597" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="597" class="sc">gender_code</text>
+<rect x="650" y="588" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="597" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="597" class="nt">&lt;- Gender</text>
+<line x1="32" y1="580" x2="32" y2="614" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="580" x2="252" y2="614" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="580" x2="362" y2="614" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="580" x2="642" y2="614" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="614" x2="1060" y2="614" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="614" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="631" class="keep">PatientDateOfBirth</text>
+<text x="260" y="631" class="typ">dt</text>
+<rect x="370" y="622" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="631" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="631" class="sc">date_of_birth</text>
+<rect x="650" y="622" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="631" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="631" class="nt">&lt;- BirthDate</text>
+<line x1="32" y1="614" x2="32" y2="648" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="614" x2="252" y2="648" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="614" x2="362" y2="648" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="614" x2="642" y2="648" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="648" x2="1060" y2="648" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="648" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="665" class="keep">PatientSSN</text>
+<text x="260" y="665" class="typ">nullable string</text>
+<rect x="370" y="656" width="28" height="18" rx="3" fill="#f57f17"/>
+<text x="384" y="665" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">EXCL</text>
+<text x="404" y="665" class="sc" style="fill:#bf360c;">EXCL: PHI — dropped</text>
+<rect x="650" y="656" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="665" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="665" class="nt">&lt;- SubscriberSSN (PII)</text>
+<line x1="32" y1="648" x2="32" y2="682" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="648" x2="252" y2="682" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="648" x2="362" y2="682" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="648" x2="642" y2="682" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="682" x2="1060" y2="682" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="682" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="699" class="keep">DependentSSN</text>
+<text x="260" y="699" class="typ">nullable string</text>
+<rect x="370" y="690" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="699" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="699" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="690" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="699" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="699" class="nt">&lt;- DependentSSN (PII)</text>
+<line x1="32" y1="682" x2="32" y2="716" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="682" x2="252" y2="716" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="682" x2="362" y2="716" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="682" x2="642" y2="716" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="716" x2="1060" y2="716" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="716" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="733" class="fk">FK</text>
+<text x="40" y="733" class="fk">PatientAddressKey</text>
+<text x="260" y="733" class="typ">FK</text>
+<rect x="370" y="724" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="733" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="733" class="sc">mailing_address_key</text>
+<rect x="650" y="724" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="733" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="733" class="nt">-&gt; address entity</text>
+<line x1="32" y1="716" x2="32" y2="750" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="716" x2="252" y2="750" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="716" x2="362" y2="750" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="716" x2="642" y2="750" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="750" x2="1060" y2="750" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="750" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="767" class="keep">MemberReportingId</text>
+<text x="260" y="767" class="typ">string</text>
+<rect x="370" y="758" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="767" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="767" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="758" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="767" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="767" class="nt">&lt;- ODSMemberGeneratedKey</text>
+<line x1="32" y1="750" x2="32" y2="784" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="750" x2="252" y2="784" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="750" x2="362" y2="784" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="750" x2="642" y2="784" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="784" x2="1060" y2="784" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="784" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="801" class="keep">MedicaidNumber</text>
+<text x="260" y="801" class="typ">string</text>
+<rect x="370" y="792" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="801" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="801" class="sc">medicaid_id</text>
+<rect x="650" y="792" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="801" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="801" class="nt">&lt;- MedicaidNumber</text>
+<line x1="32" y1="784" x2="32" y2="818" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="784" x2="252" y2="818" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="784" x2="362" y2="818" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="784" x2="642" y2="818" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="818" x2="1060" y2="818" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="818" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="835" class="keep">MedicareBeneficiaryId</text>
+<text x="260" y="835" class="typ">string</text>
+<rect x="370" y="826" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="835" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="835" class="sc">medicare_beneficiary_id</text>
+<rect x="650" y="826" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="835" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="835" class="nt">&lt;- MedicareBeneficiaryID</text>
+<line x1="32" y1="818" x2="32" y2="852" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="818" x2="252" y2="852" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="818" x2="362" y2="852" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="818" x2="642" y2="852" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="852" x2="1060" y2="852" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="852" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="869" class="grp">-- CONTACT --</text>
+<line x1="0" y1="886" x2="1060" y2="886" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="886" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="903" class="keep">PatientHomePhone</text>
+<text x="260" y="903" class="typ">string</text>
+<rect x="370" y="894" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="903" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="903" class="sc">phone_1_number</text>
+<rect x="650" y="894" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="903" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="903" class="nt">&lt;- Phone</text>
+<line x1="32" y1="886" x2="32" y2="920" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="886" x2="252" y2="920" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="886" x2="362" y2="920" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="886" x2="642" y2="920" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="920" x2="1060" y2="920" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="920" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="937" class="keep">PatientWorkPhone</text>
+<text x="260" y="937" class="typ">string</text>
+<rect x="370" y="928" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="937" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="937" class="sc">phone_2_number</text>
+<rect x="650" y="928" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="937" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="937" class="nt">&lt;- WorkPhone</text>
+<line x1="32" y1="920" x2="32" y2="954" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="920" x2="252" y2="954" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="920" x2="362" y2="954" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="920" x2="642" y2="954" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="954" x2="1060" y2="954" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="954" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="971" class="keep">PatientWorkPhoneExt</text>
+<text x="260" y="971" class="typ">string</text>
+<rect x="370" y="962" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="971" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="971" class="sc">phone_2_extension</text>
+<rect x="650" y="962" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="971" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="971" class="nt">&lt;- WorkPhoneExtension</text>
+<line x1="32" y1="954" x2="32" y2="988" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="954" x2="252" y2="988" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="954" x2="362" y2="988" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="954" x2="642" y2="988" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="988" x2="1060" y2="988" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="988" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1005" class="keep">PatientMobilePhone</text>
+<text x="260" y="1005" class="typ">string</text>
+<rect x="370" y="996" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1005" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1005" class="sc">phone_arrays</text>
+<rect x="650" y="996" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1005" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1005" class="nt">&lt;- MobilePhone</text>
+<line x1="32" y1="988" x2="32" y2="1022" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="988" x2="252" y2="1022" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="988" x2="362" y2="1022" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="988" x2="642" y2="1022" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1022" x2="1060" y2="1022" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1022" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1039" class="keep">PatientPreferredLanguageCode</text>
+<text x="260" y="1039" class="typ">int</text>
+<rect x="370" y="1030" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1039" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1039" class="sc">preferred_language_code</text>
+<rect x="650" y="1030" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1039" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1039" class="nt">&lt;- PreferredLanguageCodeID</text>
+<line x1="32" y1="1022" x2="32" y2="1056" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1022" x2="252" y2="1056" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1022" x2="362" y2="1056" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1022" x2="642" y2="1056" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1056" x2="1060" y2="1056" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1056" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="1073" class="grp">-- PAYER --</text>
+<line x1="0" y1="1090" x2="1060" y2="1090" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1090" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="1107" class="fk">FK</text>
+<text x="40" y="1107" class="fk">PayerKey</text>
+<text x="260" y="1107" class="typ">FK</text>
+<rect x="370" y="1098" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1107" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1107" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1098" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="1107" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="1107" class="nt">-&gt; Payer entity</text>
+<line x1="32" y1="1090" x2="32" y2="1124" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1090" x2="252" y2="1124" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1090" x2="362" y2="1124" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1090" x2="642" y2="1124" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1124" x2="1060" y2="1124" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1124" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1141" class="keep">PayerId</text>
+<text x="260" y="1141" class="typ">int</text>
+<rect x="370" y="1132" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1141" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1141" class="sc">payer_id</text>
+<rect x="650" y="1132" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1141" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1141" class="nt">&lt;- InsuranceProviderID</text>
+<line x1="32" y1="1124" x2="32" y2="1158" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1124" x2="252" y2="1158" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1124" x2="362" y2="1158" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1124" x2="642" y2="1158" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1158" x2="1060" y2="1158" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1158" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1175" class="keep">CarrierId</text>
+<text x="260" y="1175" class="typ">string</text>
+<rect x="370" y="1166" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1175" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1175" class="sc">rx_carrier</text>
+<rect x="650" y="1166" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1175" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1175" class="nt">&lt;- CarrierID</text>
+<line x1="32" y1="1158" x2="32" y2="1192" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1158" x2="252" y2="1192" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1158" x2="362" y2="1192" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1158" x2="642" y2="1192" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1192" x2="1060" y2="1192" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1192" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1209" class="keep">AccountId</text>
+<text x="260" y="1209" class="typ">string</text>
+<rect x="370" y="1200" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1209" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1209" class="sc">rx_account</text>
+<rect x="650" y="1200" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1209" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1209" class="nt">&lt;- AccountID</text>
+<line x1="32" y1="1192" x2="32" y2="1226" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1192" x2="252" y2="1226" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1192" x2="362" y2="1226" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1192" x2="642" y2="1226" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1226" x2="1060" y2="1226" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1226" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1243" class="keep">InsuranceGroupId</text>
+<text x="260" y="1243" class="typ">string</text>
+<rect x="370" y="1234" width="29" height="18" rx="3" fill="#00695c"/>
+<text x="384.5" y="1243" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Grp</text>
+<text x="405" y="1243" class="sc">group_id</text>
+<rect x="650" y="1234" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1243" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1243" class="nt">&lt;- GroupID</text>
+<line x1="32" y1="1226" x2="32" y2="1260" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1226" x2="252" y2="1260" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1226" x2="362" y2="1260" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1226" x2="642" y2="1260" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1260" x2="1060" y2="1260" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1260" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1277" class="keep">EligibilitySource</text>
+<text x="260" y="1277" class="typ">enum: NewUM, ETL</text>
+<rect x="370" y="1268" width="28" height="18" rx="3" fill="#f57f17"/>
+<text x="384" y="1277" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">EXCL</text>
+<text x="404" y="1277" class="sc" style="fill:#bf360c;">EXCL: ETL metadata only</text>
+<rect x="650" y="1268" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1277" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1277" class="nt">&lt;- EligibilitySource</text>
+<line x1="32" y1="1260" x2="32" y2="1294" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1260" x2="252" y2="1294" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1260" x2="362" y2="1294" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1260" x2="642" y2="1294" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1294" x2="1060" y2="1294" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1294" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1311" class="keep">PlatformCode</text>
+<text x="260" y="1311" class="typ">string</text>
+<rect x="370" y="1302" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1311" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1311" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1302" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1311" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1311" class="nt">&lt;- PlatformCode</text>
+<line x1="32" y1="1294" x2="32" y2="1328" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1294" x2="252" y2="1328" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1294" x2="362" y2="1328" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1294" x2="642" y2="1328" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1328" x2="1060" y2="1328" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1328" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1345" class="keep">LegacySystemSourceCustomerCoverageKey</text>
+<text x="260" y="1345" class="typ">string</text>
+<rect x="370" y="1336" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1345" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1345" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1336" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1345" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1345" class="nt">&lt;- LegacySystemSourceCustomerCoverageKey</text>
+<line x1="32" y1="1328" x2="32" y2="1362" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1328" x2="252" y2="1362" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1328" x2="362" y2="1362" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1328" x2="642" y2="1362" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1362" x2="1060" y2="1362" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1362" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="1379" class="grp">-- PLAN --</text>
+<line x1="0" y1="1396" x2="1060" y2="1396" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1396" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1413" class="keep">PlanDescription</text>
+<text x="260" y="1413" class="typ">string</text>
+<rect x="370" y="1404" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1413" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1413" class="sc">plan_name</text>
+<rect x="650" y="1404" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1413" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1413" class="nt">&lt;- PlanDescription</text>
+<line x1="32" y1="1396" x2="32" y2="1430" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1396" x2="252" y2="1430" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1396" x2="362" y2="1430" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1396" x2="642" y2="1430" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1430" x2="1060" y2="1430" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1430" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1447" class="keep">AsoIndicator</text>
+<text x="260" y="1447" class="typ">bool</text>
+<rect x="370" y="1438" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="1447" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="1447" class="sc">aso_indicator</text>
+<rect x="650" y="1438" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1447" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1447" class="nt">&lt;- ASOIndicator</text>
+<line x1="32" y1="1430" x2="32" y2="1464" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1430" x2="252" y2="1464" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1430" x2="362" y2="1464" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1430" x2="642" y2="1464" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1464" x2="1060" y2="1464" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1464" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1481" class="keep">LegacySystemSourceProdPlanKey</text>
+<text x="260" y="1481" class="typ">string</text>
+<rect x="370" y="1472" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1481" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1481" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1472" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1481" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1481" class="nt">&lt;- LegacySystemSourceProdPlanKey</text>
+<line x1="32" y1="1464" x2="32" y2="1498" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1464" x2="252" y2="1498" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1464" x2="362" y2="1498" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1464" x2="642" y2="1498" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1498" x2="1060" y2="1498" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1498" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1515" class="keep">SellingLedger</text>
+<text x="260" y="1515" class="typ">string</text>
+<rect x="370" y="1506" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1515" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1515" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1506" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1515" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1515" class="nt">&lt;- SellingLedger</text>
+<line x1="32" y1="1498" x2="32" y2="1532" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1498" x2="252" y2="1532" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1498" x2="362" y2="1532" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1498" x2="642" y2="1532" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1532" x2="1060" y2="1532" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1532" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1549" class="keep">FormularyName</text>
+<text x="260" y="1549" class="typ">string</text>
+<rect x="370" y="1540" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1549" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1549" class="sc">formulary_id</text>
+<rect x="650" y="1540" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1549" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1549" class="nt">&lt;- FormularyName</text>
+<line x1="32" y1="1532" x2="32" y2="1566" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1532" x2="252" y2="1566" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1532" x2="362" y2="1566" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1532" x2="642" y2="1566" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1566" x2="1060" y2="1566" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1566" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="1583" class="grp">-- PRODUCT --</text>
+<line x1="0" y1="1600" x2="1060" y2="1600" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1600" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="1617" class="fk">FK</text>
+<text x="40" y="1617" class="fk">ProductKey</text>
+<text x="260" y="1617" class="typ">FK</text>
+<rect x="370" y="1608" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1617" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1617" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1608" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="1617" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="1617" class="nt">-&gt; Product entity</text>
+<line x1="32" y1="1600" x2="32" y2="1634" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1600" x2="252" y2="1634" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1600" x2="362" y2="1634" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1600" x2="642" y2="1634" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1634" x2="1060" y2="1634" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1634" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1651" class="keep">PharmacyGroupId</text>
+<text x="260" y="1651" class="typ">string</text>
+<rect x="370" y="1642" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1651" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1651" class="sc">rx_group</text>
+<rect x="650" y="1642" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1651" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1651" class="nt">&lt;- PharmacyGroupID</text>
+<line x1="32" y1="1634" x2="32" y2="1668" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1634" x2="252" y2="1668" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1634" x2="362" y2="1668" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1634" x2="642" y2="1668" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1668" x2="1060" y2="1668" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1668" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1685" class="keep">SpanType</text>
+<text x="260" y="1685" class="typ">enum</text>
+<rect x="370" y="1676" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1685" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1685" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1676" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1685" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1685" class="nt">&lt;- SegID</text>
+<line x1="32" y1="1668" x2="32" y2="1702" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1668" x2="252" y2="1702" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1668" x2="362" y2="1702" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1668" x2="642" y2="1702" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1702" x2="1060" y2="1702" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1702" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1719" class="keep">ProductType</text>
+<text x="260" y="1719" class="typ">string</text>
+<rect x="370" y="1710" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="1719" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="1719" class="sc">product_type</text>
+<rect x="650" y="1710" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1719" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1719" class="nt">&lt;- ProductType</text>
+<line x1="32" y1="1702" x2="32" y2="1736" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1702" x2="252" y2="1736" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1702" x2="362" y2="1736" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1702" x2="642" y2="1736" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1736" x2="1060" y2="1736" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1736" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1753" class="keep">PBPID</text>
+<text x="260" y="1753" class="typ">string</text>
+<rect x="370" y="1744" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1753" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1753" class="sc">medicare_part_c_pbp_number</text>
+<rect x="650" y="1744" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1753" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1753" class="nt">&lt;- PBPID</text>
+<line x1="32" y1="1736" x2="32" y2="1770" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1736" x2="252" y2="1770" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1736" x2="362" y2="1770" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1736" x2="642" y2="1770" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1770" x2="1060" y2="1770" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1770" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1787" class="keep">RiskArrangement</text>
+<text x="260" y="1787" class="typ">string</text>
+<rect x="370" y="1778" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1787" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1787" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1778" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1787" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1787" class="nt">&lt;- RiskArrangement</text>
+<line x1="32" y1="1770" x2="32" y2="1804" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1770" x2="252" y2="1804" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1770" x2="362" y2="1804" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1770" x2="642" y2="1804" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1804" x2="1060" y2="1804" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1804" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1821" class="keep">ExchangeIdentifier</text>
+<text x="260" y="1821" class="typ">bool</text>
+<rect x="370" y="1812" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1821" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1821" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1812" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1821" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1821" class="nt">&lt;- ExchangeIdentifier (ACA flag)</text>
+<line x1="32" y1="1804" x2="32" y2="1838" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1804" x2="252" y2="1838" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1804" x2="362" y2="1838" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1804" x2="642" y2="1838" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1838" x2="1060" y2="1838" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1838" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1855" class="keep">SpecialtyIndicator</text>
+<text x="260" y="1855" class="typ">bool</text>
+<rect x="370" y="1846" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1855" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1855" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1846" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1855" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1855" class="nt">&lt;- SpecialtyIndicator</text>
+<line x1="32" y1="1838" x2="32" y2="1872" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1838" x2="252" y2="1872" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1838" x2="362" y2="1872" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1838" x2="642" y2="1872" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1872" x2="1060" y2="1872" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1872" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1889" class="keep">ProductOfferCode</text>
+<text x="260" y="1889" class="typ">string</text>
+<rect x="370" y="1880" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1889" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1889" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1880" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1889" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1889" class="nt">&lt;- ProductOfferCode</text>
+<line x1="32" y1="1872" x2="32" y2="1906" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1872" x2="252" y2="1906" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1872" x2="362" y2="1906" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1872" x2="642" y2="1906" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1906" x2="1060" y2="1906" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1906" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1923" class="keep">ProductLine</text>
+<text x="260" y="1923" class="typ">string</text>
+<rect x="370" y="1914" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="1923" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="1923" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="1914" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1923" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1923" class="nt">&lt;- ProductLine</text>
+<line x1="32" y1="1906" x2="32" y2="1940" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1906" x2="252" y2="1940" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1906" x2="362" y2="1940" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1906" x2="642" y2="1940" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="1940" x2="1060" y2="1940" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1940" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="1957" class="grp">-- COVERAGE --</text>
+<line x1="0" y1="1974" x2="1060" y2="1974" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="1974" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="1991" class="keep">RelationshipCode</text>
+<text x="260" y="1991" class="typ">string</text>
+<rect x="370" y="1982" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="1991" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="1991" class="sc">relationship_code</text>
+<rect x="650" y="1982" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="1991" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="1991" class="nt">&lt;- RelationshipCodeID</text>
+<line x1="32" y1="1974" x2="32" y2="2008" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="1974" x2="252" y2="2008" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="1974" x2="362" y2="2008" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="1974" x2="642" y2="2008" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2008" x2="1060" y2="2008" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2008" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2025" class="keep">CoverageTypeCode</text>
+<text x="260" y="2025" class="typ">string</text>
+<rect x="370" y="2016" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2025" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2025" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2016" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2025" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2025" class="nt">&lt;- CoverageTypeID</text>
+<line x1="32" y1="2008" x2="32" y2="2042" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2008" x2="252" y2="2042" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2008" x2="362" y2="2042" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2008" x2="642" y2="2042" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2042" x2="1060" y2="2042" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2042" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2059" class="keep">CoverageStart</text>
+<text x="260" y="2059" class="typ">date</text>
+<rect x="370" y="2050" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="2059" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="2059" class="sc">coverage_start_date</text>
+<rect x="650" y="2050" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2059" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2059" class="nt">&lt;- CoverageEffectiveDate</text>
+<line x1="32" y1="2042" x2="32" y2="2076" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2042" x2="252" y2="2076" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2042" x2="362" y2="2076" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2042" x2="642" y2="2076" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2076" x2="1060" y2="2076" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2076" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2093" class="keep">CoverageEnd</text>
+<text x="260" y="2093" class="typ">date</text>
+<rect x="370" y="2084" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="2093" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="2093" class="sc">coverage_end_date</text>
+<rect x="650" y="2084" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2093" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2093" class="nt">&lt;- CoverageEndDate</text>
+<line x1="32" y1="2076" x2="32" y2="2110" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2076" x2="252" y2="2110" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2076" x2="362" y2="2110" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2076" x2="642" y2="2110" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2110" x2="1060" y2="2110" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2110" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="2127" class="grp">-- BENEFITS --</text>
+<line x1="0" y1="2144" x2="1060" y2="2144" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2144" width="1058" height="34" fill="#f3e5f5"/>
+<text x="40" y="2161" class="rev">MemberBenefit</text>
+<text x="260" y="2161" class="typ">enum</text>
+<rect x="370" y="2152" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2161" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2161" class="sc" style="fill:#b71c1c;">BPkg/medical_benefit_indicator + rx_benefit_indicator</text>
+<rect x="650" y="2152" width="52" height="18" rx="3" fill="#6a1b9a"/>
+<text x="676" y="2161" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">REVIEW</text>
+<text x="710" y="2161" class="nt">REVIEW: Miro=enum(Medical,Pharmacy,MedicalAndPharmacy). Silver=2 bools (medical_benefit_indicator + rx_benefit_indicator). Nick: functionally equivalent, prefers split.</text>
+<line x1="32" y1="2144" x2="32" y2="2178" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2144" x2="252" y2="2178" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2144" x2="362" y2="2178" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2144" x2="642" y2="2178" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2178" x2="1060" y2="2178" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2178" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2195" class="keep">HasOutOfNetworkBenefit</text>
+<text x="260" y="2195" class="typ">bool</text>
+<rect x="370" y="2186" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2195" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2195" class="sc">out_of_network_benefit_indicator</text>
+<rect x="650" y="2186" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2195" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2195" class="nt">&lt;- OutOfNetworkBenefit</text>
+<line x1="32" y1="2178" x2="32" y2="2212" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2178" x2="252" y2="2212" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2178" x2="362" y2="2212" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2178" x2="642" y2="2212" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2212" x2="1060" y2="2212" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2212" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2229" class="keep">IsRxCarvedOut</text>
+<text x="260" y="2229" class="typ">bool</text>
+<rect x="370" y="2220" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2229" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2229" class="sc">rx_benefit_carve_out_indicator</text>
+<rect x="650" y="2220" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2229" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2229" class="nt">&lt;- PrescriptionBenefitCarveOutIndicator</text>
+<line x1="32" y1="2212" x2="32" y2="2246" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2212" x2="252" y2="2246" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2212" x2="362" y2="2246" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2212" x2="642" y2="2246" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2246" x2="1060" y2="2246" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2246" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2263" class="keep">RxCarveOutStartDate</text>
+<text x="260" y="2263" class="typ">date</text>
+<rect x="370" y="2254" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2263" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2263" class="sc">rx_benefit_carve_out_start_date</text>
+<rect x="650" y="2254" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2263" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2263" class="nt">&lt;- PrescriptionBenefitCarveOutEffectiveStartDate</text>
+<line x1="32" y1="2246" x2="32" y2="2280" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2246" x2="252" y2="2280" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2246" x2="362" y2="2280" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2246" x2="642" y2="2280" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2280" x2="1060" y2="2280" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2280" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2297" class="keep">RxCarveOutEndDate</text>
+<text x="260" y="2297" class="typ">date</text>
+<rect x="370" y="2288" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2297" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2297" class="sc">rx_benefit_carve_out_end_date</text>
+<rect x="650" y="2288" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2297" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2297" class="nt">&lt;- PrescriptionBenefitCarveOutEffectiveEndDate</text>
+<line x1="32" y1="2280" x2="32" y2="2314" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2280" x2="252" y2="2314" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2280" x2="362" y2="2314" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2280" x2="642" y2="2314" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2314" x2="1060" y2="2314" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2314" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2331" class="keep">RiskPatient</text>
+<text x="260" y="2331" class="typ">bool</text>
+<rect x="370" y="2322" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2331" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2331" class="sc">is_medicare_advantage_risk_patient</text>
+<rect x="650" y="2322" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2331" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2331" class="nt">&lt;- is_medicare_advantage_risk_patient | Medicare Advantage enrollment flag</text>
+<line x1="32" y1="2314" x2="32" y2="2348" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2314" x2="252" y2="2348" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2314" x2="362" y2="2348" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2314" x2="642" y2="2348" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2348" x2="1060" y2="2348" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2348" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2365" class="keep">DualEligibilityStatus</text>
+<text x="260" y="2365" class="typ">string</text>
+<rect x="370" y="2356" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2365" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2365" class="sc">dual_eligibility_indicator</text>
+<rect x="650" y="2356" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2365" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2365" class="nt">&lt;- dual_eligibility_indicator | NOTE: Silver=bool, Miro=string — type mismatch</text>
+<line x1="32" y1="2348" x2="32" y2="2382" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2348" x2="252" y2="2382" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2348" x2="362" y2="2382" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2348" x2="642" y2="2382" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2382" x2="1060" y2="2382" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2382" width="1058" height="34" fill="#fff3e0"/>
+<text x="40" y="2399" class="add">IsErisa</text>
+<text x="260" y="2399" class="typ">bool</text>
+<rect x="370" y="2390" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2399" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2399" class="sc">is_erisa</text>
+<rect x="650" y="2390" width="31" height="18" rx="3" fill="#e65100"/>
+<text x="665.5" y="2399" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">ADD</text>
+<text x="689" y="2399" class="nt">&lt;- is_erisa (BenefitPackage) | ERISA plan flag</text>
+<line x1="32" y1="2382" x2="32" y2="2416" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2382" x2="252" y2="2416" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2382" x2="362" y2="2416" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2382" x2="642" y2="2416" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2416" x2="1060" y2="2416" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2416" width="1058" height="34" fill="#fff3e0"/>
+<text x="40" y="2433" class="add">IsFehbPlan</text>
+<text x="260" y="2433" class="typ">bool</text>
+<rect x="370" y="2424" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2433" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2433" class="sc">is_fehb_plan</text>
+<rect x="650" y="2424" width="31" height="18" rx="3" fill="#e65100"/>
+<text x="665.5" y="2433" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">ADD</text>
+<text x="689" y="2433" class="nt">&lt;- is_fehb_plan (BenefitPackage) | Federal Employee Health Benefit flag</text>
+<line x1="32" y1="2416" x2="32" y2="2450" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2416" x2="252" y2="2450" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2416" x2="362" y2="2450" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2416" x2="642" y2="2450" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2450" x2="1060" y2="2450" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2450" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="2467" class="grp">-- LOB --</text>
+<line x1="0" y1="2484" x2="1060" y2="2484" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2484" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2501" class="keep">MajorLineOfBusiness</text>
+<text x="260" y="2501" class="typ">string</text>
+<rect x="370" y="2492" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2501" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2501" class="sc">major_lob</text>
+<rect x="650" y="2492" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2501" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2501" class="nt">&lt;- MajorLineOfBusiness</text>
+<line x1="32" y1="2484" x2="32" y2="2518" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2484" x2="252" y2="2518" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2484" x2="362" y2="2518" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2484" x2="642" y2="2518" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2518" x2="1060" y2="2518" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2518" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2535" class="keep">AccessibilityPreference</text>
+<text x="260" y="2535" class="typ">string</text>
+<rect x="370" y="2526" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="2535" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="2535" class="sc">letter_accommodation_code</text>
+<rect x="650" y="2526" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2535" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2535" class="nt">&lt;- AccessibilityPreference</text>
+<line x1="32" y1="2518" x2="32" y2="2552" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2518" x2="252" y2="2552" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2518" x2="362" y2="2552" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2518" x2="642" y2="2552" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2552" x2="1060" y2="2552" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2552" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="2569" class="grp">-- NETWORK --</text>
+<line x1="0" y1="2586" x2="1060" y2="2586" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2586" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2603" class="keep">StateOfPlanIssue</text>
+<text x="260" y="2603" class="typ">string</text>
+<rect x="370" y="2594" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="2603" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="2603" class="sc">state_of_issue</text>
+<rect x="650" y="2594" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2603" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2603" class="nt">&lt;- StateOfIssue</text>
+<line x1="32" y1="2586" x2="32" y2="2620" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2586" x2="252" y2="2620" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2586" x2="362" y2="2620" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2586" x2="642" y2="2620" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2620" x2="1060" y2="2620" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2620" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2637" class="keep">IsOutOfArea</text>
+<text x="260" y="2637" class="typ">bool</text>
+<rect x="370" y="2628" width="36" height="18" rx="3" fill="#4527a0"/>
+<text x="388" y="2637" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">BPkg</text>
+<text x="412" y="2637" class="sc">out_of_area_benefit_indicator</text>
+<rect x="650" y="2628" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2637" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2637" class="nt">&lt;- OutOfArea</text>
+<line x1="32" y1="2620" x2="32" y2="2654" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2620" x2="252" y2="2654" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2620" x2="362" y2="2654" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2620" x2="642" y2="2654" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2654" x2="1060" y2="2654" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2654" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2671" class="keep">OutOfAreaCategory</text>
+<text x="260" y="2671" class="typ">string</text>
+<rect x="370" y="2662" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2671" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2671" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2662" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2671" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2671" class="nt">&lt;- OutOfAreaCategory</text>
+<line x1="32" y1="2654" x2="32" y2="2688" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2654" x2="252" y2="2688" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2654" x2="362" y2="2688" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2654" x2="642" y2="2688" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2688" x2="1060" y2="2688" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2688" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2705" class="keep">LeasedNetworkCode</text>
+<text x="260" y="2705" class="typ">string</text>
+<rect x="370" y="2696" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2705" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2705" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2696" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2705" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2705" class="nt">&lt;- LeasedNetworkCode</text>
+<line x1="32" y1="2688" x2="32" y2="2722" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2688" x2="252" y2="2722" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2688" x2="362" y2="2722" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2688" x2="642" y2="2722" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2722" x2="1060" y2="2722" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2722" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2739" class="keep">ServiceFundPCPCenterLedger</text>
+<text x="260" y="2739" class="typ">string</text>
+<rect x="370" y="2730" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2739" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2739" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2730" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2739" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2739" class="nt">&lt;- ServiceFundPCPCenterLedger</text>
+<line x1="32" y1="2722" x2="32" y2="2756" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2722" x2="252" y2="2756" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2722" x2="362" y2="2756" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2722" x2="642" y2="2756" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2756" x2="1060" y2="2756" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2756" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2773" class="keep">ConsolidatedMarketNumber</text>
+<text x="260" y="2773" class="typ">string</text>
+<rect x="370" y="2764" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2773" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2773" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2764" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2773" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2773" class="nt">&lt;- ConsolidatedMarketNumber</text>
+<line x1="32" y1="2756" x2="32" y2="2790" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2756" x2="252" y2="2790" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2756" x2="362" y2="2790" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2756" x2="642" y2="2790" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2790" x2="1060" y2="2790" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2790" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2807" class="keep">RadiologyMktName</text>
+<text x="260" y="2807" class="typ">string</text>
+<rect x="370" y="2798" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2807" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2807" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2798" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2807" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2807" class="nt">&lt;- RadiologyMktName</text>
+<line x1="32" y1="2790" x2="32" y2="2824" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2790" x2="252" y2="2824" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2790" x2="362" y2="2824" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2790" x2="642" y2="2824" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2824" x2="1060" y2="2824" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2824" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2841" class="keep">PCPGrouperNumber</text>
+<text x="260" y="2841" class="typ">string</text>
+<rect x="370" y="2832" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2841" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2841" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2832" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2841" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2841" class="nt">&lt;- PCPGrouperNumber</text>
+<line x1="32" y1="2824" x2="32" y2="2858" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2824" x2="252" y2="2858" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2824" x2="362" y2="2858" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2824" x2="642" y2="2858" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2858" x2="1060" y2="2858" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2858" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2875" class="keep">PsychCode</text>
+<text x="260" y="2875" class="typ">string</text>
+<rect x="370" y="2866" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2875" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2875" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2866" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2875" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2875" class="nt">&lt;- PsychCode</text>
+<line x1="32" y1="2858" x2="32" y2="2892" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2858" x2="252" y2="2892" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2858" x2="362" y2="2892" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2858" x2="642" y2="2892" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2892" x2="1060" y2="2892" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2892" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2909" class="keep">CountyCode</text>
+<text x="260" y="2909" class="typ">string</text>
+<rect x="370" y="2900" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2909" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2909" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2900" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2909" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2909" class="nt">&lt;- CountyCode</text>
+<line x1="32" y1="2892" x2="32" y2="2926" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2892" x2="252" y2="2926" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2892" x2="362" y2="2926" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2892" x2="642" y2="2926" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2926" x2="1060" y2="2926" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2926" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="2943" class="keep">ServFundLOBCode</text>
+<text x="260" y="2943" class="typ">string</text>
+<rect x="370" y="2934" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="2943" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="2943" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="2934" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="2943" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="2943" class="nt">&lt;- ServFundLOBCode</text>
+<line x1="32" y1="2926" x2="32" y2="2960" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2926" x2="252" y2="2960" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2926" x2="362" y2="2960" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2926" x2="642" y2="2960" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="2960" x2="1060" y2="2960" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2960" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="2977" class="grp">-- GROUP --</text>
+<line x1="0" y1="2994" x2="1060" y2="2994" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="2994" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="3011" class="fk">FK</text>
+<text x="40" y="3011" class="fk">EmployerGroupKey</text>
+<text x="260" y="3011" class="typ">FK</text>
+<rect x="370" y="3002" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="3011" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="3011" class="sc">group_key</text>
+<rect x="650" y="3002" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="3011" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="3011" class="nt">-&gt; Group entity</text>
+<line x1="32" y1="2994" x2="32" y2="3028" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="2994" x2="252" y2="3028" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="2994" x2="362" y2="3028" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="2994" x2="642" y2="3028" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3028" x2="1060" y2="3028" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3028" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="3045" class="fk">FK</text>
+<text x="40" y="3045" class="fk">EmployerGroupAddressKey</text>
+<text x="260" y="3045" class="typ">FK</text>
+<rect x="370" y="3036" width="28" height="18" rx="3" fill="#f57f17"/>
+<text x="384" y="3045" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">EXCL</text>
+<text x="404" y="3045" class="sc" style="fill:#bf360c;">EXCL: addr not in feed</text>
+<rect x="650" y="3036" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="3045" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="3045" class="nt">-&gt; Group address entity</text>
+<line x1="32" y1="3028" x2="32" y2="3062" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3028" x2="252" y2="3062" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3028" x2="362" y2="3062" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3028" x2="642" y2="3062" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3062" x2="1060" y2="3062" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3062" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3079" class="keep">ContractNumber</text>
+<text x="260" y="3079" class="typ">string</text>
+<rect x="370" y="3070" width="36" height="18" rx="3" fill="#1565c0"/>
+<text x="388" y="3079" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Elig</text>
+<text x="412" y="3079" class="sc">medicare_part_c_contract_number</text>
+<rect x="650" y="3070" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3079" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3079" class="nt">&lt;- ContractNumber</text>
+<line x1="32" y1="3062" x2="32" y2="3096" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3062" x2="252" y2="3096" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3062" x2="362" y2="3096" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3062" x2="642" y2="3096" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3096" x2="1060" y2="3096" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3096" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3113" class="keep">EmployerGroupName</text>
+<text x="260" y="3113" class="typ">string</text>
+<rect x="370" y="3104" width="29" height="18" rx="3" fill="#00695c"/>
+<text x="384.5" y="3113" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Grp</text>
+<text x="405" y="3113" class="sc">group_name</text>
+<rect x="650" y="3104" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3113" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3113" class="nt">&lt;- GroupName</text>
+<line x1="32" y1="3096" x2="32" y2="3130" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3096" x2="252" y2="3130" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3096" x2="362" y2="3130" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3096" x2="642" y2="3130" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3130" x2="1060" y2="3130" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3130" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3147" class="keep">ContractEffectiveDate</text>
+<text x="260" y="3147" class="typ">dt</text>
+<rect x="370" y="3138" width="29" height="18" rx="3" fill="#00695c"/>
+<text x="384.5" y="3147" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Grp</text>
+<text x="405" y="3147" class="sc">contract_start_date</text>
+<rect x="650" y="3138" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3147" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3147" class="nt">&lt;- GroupContractEffectiveDate</text>
+<line x1="32" y1="3130" x2="32" y2="3164" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3130" x2="252" y2="3164" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3130" x2="362" y2="3164" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3130" x2="642" y2="3164" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3164" x2="1060" y2="3164" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3164" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3181" class="keep">ContractTerminationDate</text>
+<text x="260" y="3181" class="typ">dt</text>
+<rect x="370" y="3172" width="29" height="18" rx="3" fill="#00695c"/>
+<text x="384.5" y="3181" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Grp</text>
+<text x="405" y="3181" class="sc">contract_end_date</text>
+<rect x="650" y="3172" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3181" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3181" class="nt">&lt;- GroupContractEndDate</text>
+<line x1="32" y1="3164" x2="32" y2="3198" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3164" x2="252" y2="3198" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3164" x2="362" y2="3198" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3164" x2="642" y2="3198" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3198" x2="1060" y2="3198" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3198" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3215" class="keep">ActionIndicator</text>
+<text x="260" y="3215" class="typ">string</text>
+<rect x="370" y="3206" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3215" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3215" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3206" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3215" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3215" class="nt">&lt;- ActionIndicator (CDC/delta flag)</text>
+<line x1="32" y1="3198" x2="32" y2="3232" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3198" x2="252" y2="3232" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3198" x2="362" y2="3232" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3198" x2="642" y2="3232" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3232" x2="1060" y2="3232" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3232" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="3249" class="grp">-- FINANCIAL --</text>
+<line x1="0" y1="3266" x2="1060" y2="3266" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3266" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3283" class="keep">FinProdCode</text>
+<text x="260" y="3283" class="typ">string</text>
+<rect x="370" y="3274" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3283" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3283" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3274" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3283" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3283" class="nt">&lt;- FinProdCode</text>
+<line x1="32" y1="3266" x2="32" y2="3300" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3266" x2="252" y2="3300" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3266" x2="362" y2="3300" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3266" x2="642" y2="3300" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3300" x2="1060" y2="3300" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3300" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3317" class="keep">FinSubCode</text>
+<text x="260" y="3317" class="typ">string</text>
+<rect x="370" y="3308" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3317" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3317" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3308" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3317" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3317" class="nt">&lt;- FinSubCode</text>
+<line x1="32" y1="3300" x2="32" y2="3334" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3300" x2="252" y2="3334" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3300" x2="362" y2="3334" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3300" x2="642" y2="3334" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3334" x2="1060" y2="3334" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3334" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3351" class="keep">LegalEntity</text>
+<text x="260" y="3351" class="typ">string</text>
+<rect x="370" y="3342" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3351" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3351" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3342" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3351" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3351" class="nt">&lt;- LegalEntity</text>
+<line x1="32" y1="3334" x2="32" y2="3368" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3334" x2="252" y2="3368" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3334" x2="362" y2="3368" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3334" x2="642" y2="3368" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3368" x2="1060" y2="3368" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3368" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3385" class="keep">Division</text>
+<text x="260" y="3385" class="typ">string</text>
+<rect x="370" y="3376" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3385" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3385" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3376" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3385" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3385" class="nt">&lt;- Division</text>
+<line x1="32" y1="3368" x2="32" y2="3402" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3368" x2="252" y2="3402" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3368" x2="362" y2="3402" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3368" x2="642" y2="3402" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3402" x2="1060" y2="3402" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3402" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="3419" class="grp">-- PCP --</text>
+<line x1="0" y1="3436" x2="1060" y2="3436" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3436" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3453" class="keep">PCPName</text>
+<text x="260" y="3453" class="typ">string</text>
+<rect x="370" y="3444" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3453" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3453" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3444" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3453" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3453" class="nt">&lt;- PCPName</text>
+<line x1="32" y1="3436" x2="32" y2="3470" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3436" x2="252" y2="3470" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3436" x2="362" y2="3470" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3436" x2="642" y2="3470" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3470" x2="1060" y2="3470" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3470" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3487" class="keep">PCPID</text>
+<text x="260" y="3487" class="typ">string</text>
+<rect x="370" y="3478" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3487" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3487" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3478" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3487" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3487" class="nt">&lt;- PCPID</text>
+<line x1="32" y1="3470" x2="32" y2="3504" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3470" x2="252" y2="3504" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3470" x2="362" y2="3504" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3470" x2="642" y2="3504" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3504" x2="1060" y2="3504" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3504" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3521" class="keep">PCPEffectiveDate</text>
+<text x="260" y="3521" class="typ">dt</text>
+<rect x="370" y="3512" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3521" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3521" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3512" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3521" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3521" class="nt">&lt;- PCPEffectiveDate</text>
+<line x1="32" y1="3504" x2="32" y2="3538" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3504" x2="252" y2="3538" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3504" x2="362" y2="3538" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3504" x2="642" y2="3538" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3538" x2="1060" y2="3538" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3538" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="3555" class="grp">-- REPRESENTATIVE --</text>
+<line x1="0" y1="3572" x2="1060" y2="3572" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3572" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3589" class="keep">HasRepresentative</text>
+<text x="260" y="3589" class="typ">bool</text>
+<rect x="370" y="3580" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="3589" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="3589" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="3580" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3589" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3589" class="nt">&lt;- AppointmentOfRepresentative</text>
+<line x1="32" y1="3572" x2="32" y2="3606" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3572" x2="252" y2="3606" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3572" x2="362" y2="3606" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3572" x2="642" y2="3606" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3606" x2="1060" y2="3606" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3606" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3623" class="keep">RepresentativeFirstName</text>
+<text x="260" y="3623" class="typ">string</text>
+<rect x="370" y="3614" width="36" height="18" rx="3" fill="#6d4c41"/>
+<text x="388" y="3623" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">RelP</text>
+<text x="412" y="3623" class="sc">first_name</text>
+<rect x="650" y="3614" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3623" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3623" class="nt">&lt;- RepresentativeFirstName</text>
+<line x1="32" y1="3606" x2="32" y2="3640" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3606" x2="252" y2="3640" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3606" x2="362" y2="3640" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3606" x2="642" y2="3640" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3640" x2="1060" y2="3640" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3640" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3657" class="keep">RepresentativeLastName</text>
+<text x="260" y="3657" class="typ">string</text>
+<rect x="370" y="3648" width="36" height="18" rx="3" fill="#6d4c41"/>
+<text x="388" y="3657" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">RelP</text>
+<text x="412" y="3657" class="sc">last_name</text>
+<rect x="650" y="3648" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3657" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3657" class="nt">&lt;- RepresentativeLastName</text>
+<line x1="32" y1="3640" x2="32" y2="3674" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3640" x2="252" y2="3674" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3640" x2="362" y2="3674" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3640" x2="642" y2="3674" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3674" x2="1060" y2="3674" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3674" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3691" class="keep">RepresentativeAddressLine1</text>
+<text x="260" y="3691" class="typ">string</text>
+<rect x="370" y="3682" width="36" height="18" rx="3" fill="#37474f"/>
+<text x="388" y="3691" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Addr</text>
+<text x="412" y="3691" class="sc">address_line_1</text>
+<rect x="650" y="3682" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3691" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3691" class="nt">&lt;- RepresentativeAddressLine1</text>
+<line x1="32" y1="3674" x2="32" y2="3708" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3674" x2="252" y2="3708" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3674" x2="362" y2="3708" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3674" x2="642" y2="3708" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3708" x2="1060" y2="3708" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3708" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3725" class="keep">RepresentativeAddressLine2</text>
+<text x="260" y="3725" class="typ">string</text>
+<rect x="370" y="3716" width="36" height="18" rx="3" fill="#37474f"/>
+<text x="388" y="3725" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Addr</text>
+<text x="412" y="3725" class="sc">address_line_2</text>
+<rect x="650" y="3716" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3725" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3725" class="nt">&lt;- RepresentativeAddressLine2</text>
+<line x1="32" y1="3708" x2="32" y2="3742" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3708" x2="252" y2="3742" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3708" x2="362" y2="3742" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3708" x2="642" y2="3742" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3742" x2="1060" y2="3742" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3742" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3759" class="keep">RepresentativeCity</text>
+<text x="260" y="3759" class="typ">string</text>
+<rect x="370" y="3750" width="36" height="18" rx="3" fill="#37474f"/>
+<text x="388" y="3759" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Addr</text>
+<text x="412" y="3759" class="sc">city</text>
+<rect x="650" y="3750" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3759" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3759" class="nt">&lt;- RepresentativeCity</text>
+<line x1="32" y1="3742" x2="32" y2="3776" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3742" x2="252" y2="3776" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3742" x2="362" y2="3776" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3742" x2="642" y2="3776" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3776" x2="1060" y2="3776" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3776" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3793" class="keep">RepresentativeState</text>
+<text x="260" y="3793" class="typ">string</text>
+<rect x="370" y="3784" width="36" height="18" rx="3" fill="#37474f"/>
+<text x="388" y="3793" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Addr</text>
+<text x="412" y="3793" class="sc">state</text>
+<rect x="650" y="3784" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3793" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3793" class="nt">&lt;- RepresentativeState</text>
+<line x1="32" y1="3776" x2="32" y2="3810" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3776" x2="252" y2="3810" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3776" x2="362" y2="3810" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3776" x2="642" y2="3810" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3810" x2="1060" y2="3810" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3810" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3827" class="keep">RepresentativeZipCode</text>
+<text x="260" y="3827" class="typ">string</text>
+<rect x="370" y="3818" width="36" height="18" rx="3" fill="#37474f"/>
+<text x="388" y="3827" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Addr</text>
+<text x="412" y="3827" class="sc">zip_code</text>
+<rect x="650" y="3818" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3827" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3827" class="nt">&lt;- RepresentativeZipCode</text>
+<line x1="32" y1="3810" x2="32" y2="3844" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3810" x2="252" y2="3844" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3810" x2="362" y2="3844" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3810" x2="642" y2="3844" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3844" x2="1060" y2="3844" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3844" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3861" class="keep">RepresentativeZipPlusCode</text>
+<text x="260" y="3861" class="typ">string</text>
+<rect x="370" y="3852" width="36" height="18" rx="3" fill="#37474f"/>
+<text x="388" y="3861" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">Addr</text>
+<text x="412" y="3861" class="sc">zip_extension</text>
+<rect x="650" y="3852" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3861" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3861" class="nt">&lt;- RepresentativeZipPlusCode</text>
+<line x1="32" y1="3844" x2="32" y2="3878" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3844" x2="252" y2="3878" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3844" x2="362" y2="3878" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3844" x2="642" y2="3878" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3878" x2="1060" y2="3878" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3878" width="1058" height="34" fill="#e3f2fd"/>
+<text x="8" y="3895" class="fk">FK</text>
+<text x="40" y="3895" class="fk">RepresentativeRelationshipCodeID</text>
+<text x="260" y="3895" class="typ">int</text>
+<rect x="370" y="3886" width="36" height="18" rx="3" fill="#6d4c41"/>
+<text x="388" y="3895" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">RelP</text>
+<text x="412" y="3895" class="sc">relationship_code</text>
+<rect x="650" y="3886" width="24" height="18" rx="3" fill="#1565c0"/>
+<text x="662" y="3895" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">FK</text>
+<text x="682" y="3895" class="nt">&lt;- RepresentativeRelationshipCodeID (FK -&gt; ref)</text>
+<line x1="32" y1="3878" x2="32" y2="3912" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3878" x2="252" y2="3912" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3878" x2="362" y2="3912" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3878" x2="642" y2="3912" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3912" x2="1060" y2="3912" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3912" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3929" class="keep">RepresentativeHomePhone</text>
+<text x="260" y="3929" class="typ">string</text>
+<rect x="370" y="3920" width="36" height="18" rx="3" fill="#6d4c41"/>
+<text x="388" y="3929" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">RelP</text>
+<text x="412" y="3929" class="sc">phone_1_number</text>
+<rect x="650" y="3920" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3929" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3929" class="nt">&lt;- RepresentativeHomePhone</text>
+<line x1="32" y1="3912" x2="32" y2="3946" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3912" x2="252" y2="3946" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3912" x2="362" y2="3946" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3912" x2="642" y2="3946" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3946" x2="1060" y2="3946" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3946" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3963" class="keep">RepresentativeWorkPhone</text>
+<text x="260" y="3963" class="typ">string</text>
+<rect x="370" y="3954" width="36" height="18" rx="3" fill="#6d4c41"/>
+<text x="388" y="3963" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">RelP</text>
+<text x="412" y="3963" class="sc">phone_2_number</text>
+<rect x="650" y="3954" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3963" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3963" class="nt">&lt;- RepresentativeWorkPhone</text>
+<line x1="32" y1="3946" x2="32" y2="3980" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3946" x2="252" y2="3980" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3946" x2="362" y2="3980" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3946" x2="642" y2="3980" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="3980" x2="1060" y2="3980" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="3980" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="3997" class="keep">RepresentativeWorkPhoneExtension</text>
+<text x="260" y="3997" class="typ">string</text>
+<rect x="370" y="3988" width="36" height="18" rx="3" fill="#6d4c41"/>
+<text x="388" y="3997" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">RelP</text>
+<text x="412" y="3997" class="sc">phone_2_extension</text>
+<rect x="650" y="3988" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="3997" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="3997" class="nt">&lt;- RepresentativeWorkPhoneExtension</text>
+<line x1="32" y1="3980" x2="32" y2="4014" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="3980" x2="252" y2="4014" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="3980" x2="362" y2="4014" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="3980" x2="642" y2="4014" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="4014" x2="1060" y2="4014" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="4014" width="1058" height="34" fill="#ede7f6"/>
+<text x="40" y="4031" class="grp">-- AUDIT --</text>
+<line x1="0" y1="4048" x2="1060" y2="4048" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="4048" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="4065" class="keep">Checksum</text>
+<text x="260" y="4065" class="typ">int</text>
+<rect x="370" y="4056" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="4065" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="4065" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="4056" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="4065" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="4065" class="nt">&lt;- Checksum (change-detection)</text>
+<line x1="32" y1="4048" x2="32" y2="4082" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="4048" x2="252" y2="4082" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="4048" x2="362" y2="4082" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="4048" x2="642" y2="4082" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="4082" x2="1060" y2="4082" stroke="#c5cae9" stroke-width="0.5"/>
+<rect x="1" y="4082" width="1058" height="34" fill="#f9fbe7"/>
+<text x="40" y="4099" class="keep">HashValue</text>
+<text x="260" y="4099" class="typ">string</text>
+<rect x="370" y="4090" width="30" height="18" rx="3" fill="#e65100"/>
+<text x="385" y="4099" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">WARN</text>
+<text x="406" y="4099" class="sc" style="fill:#b71c1c;">? not mapped</text>
+<rect x="650" y="4090" width="38" height="18" rx="3" fill="#388e3c"/>
+<text x="669" y="4099" style="fill:#fff;font-size:9px;font-weight:700;text-anchor:middle;">KEEP</text>
+<text x="696" y="4099" class="nt">&lt;- HashValue (row dedup hash)</text>
+<line x1="32" y1="4082" x2="32" y2="4116" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="252" y1="4082" x2="252" y2="4116" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="362" y1="4082" x2="362" y2="4116" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="642" y1="4082" x2="642" y2="4116" stroke="#c5cae9" stroke-width="0.5"/>
+<line x1="0" y1="4116" x2="1060" y2="4116" stroke="#c5cae9" stroke-width="0.5"/>
+</svg>

@@ -1,5 +1,5 @@
 {
-  "count": 10,
+  "count": 11,
   "value": [
     {
       "_links": {
@@ -49,30 +49,45 @@
     {
       "_links": {
         "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/937?revision=1"
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/937?revision=3"
         },
         "web": {
           "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=937"
         }
       },
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/937?revision=1",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/937?revision=3",
       "id": 937,
-      "revision": 1,
+      "revision": 3,
       "name": "newum_aqa",
       "folder": "\\"
     },
     {
       "_links": {
         "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/897?revision=2"
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/897?revision=6"
         },
         "web": {
           "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=897"
         }
       },
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/897?revision=2",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/897?revision=6",
       "id": 897,
-      "revision": 2,
+      "revision": 6,
+      "name": "newum_services (CD) (Legacy)",
+      "folder": "\\"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/938?revision=4"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=938"
+        }
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/938?revision=4",
+      "id": 938,
+      "revision": 4,
       "name": "newum_services (CD)",
       "folder": "\\"
     },

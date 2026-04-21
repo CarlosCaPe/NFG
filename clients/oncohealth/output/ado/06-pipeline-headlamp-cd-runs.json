@@ -1,4 +1,98 @@
 {
   "pipeline": "headlamp-cd",
-  "runs": []
+  "runs": [
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936/runs/335107"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=335107"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=936"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936?revision=2"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936?revision=2",
+        "id": 936,
+        "revision": 2,
+        "name": "headlamp-cd",
+        "folder": "\\DevOps"
+      },
+      "state": "completed",
+      "result": "succeeded",
+      "createdDate": "2026-04-21T18:30:27.4435839Z",
+      "finishedDate": "2026-04-21T18:30:57.7689009Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936/runs/335107",
+      "id": 335107,
+      "name": "20260421.3"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936/runs/335105"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=335105"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=936"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936?revision=2"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936?revision=2",
+        "id": 936,
+        "revision": 2,
+        "name": "headlamp-cd",
+        "folder": "\\DevOps"
+      },
+      "state": "completed",
+      "result": "succeeded",
+      "createdDate": "2026-04-21T18:29:40.7358324Z",
+      "finishedDate": "2026-04-21T18:29:58.0949176Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936/runs/335105",
+      "id": 335105,
+      "name": "20260421.2"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936/runs/335098"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=335098"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=936"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936?revision=2"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936?revision=2",
+        "id": 936,
+        "revision": 2,
+        "name": "headlamp-cd",
+        "folder": "\\DevOps"
+      },
+      "state": "completed",
+      "result": "succeeded",
+      "createdDate": "2026-04-21T17:50:14.1242625Z",
+      "finishedDate": "2026-04-21T17:50:57.9521997Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/936/runs/335098",
+      "id": 335098,
+      "name": "20260421.1"
+    }
+  ]
 }

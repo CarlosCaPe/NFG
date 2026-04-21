@@ -4,6 +4,238 @@
     {
       "_links": {
         "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334754"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=334754"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-20T09:49:40.485503Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334754",
+      "id": 334754,
+      "name": "20260420.1"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334502"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=334502"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-17T14:12:05.3926875Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334502",
+      "id": 334502,
+      "name": "20260417.2"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334369"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=334369"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-17T08:42:42.7448762Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334369",
+      "id": 334369,
+      "name": "20260417.1"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334102"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=334102"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-16T09:15:34.6261013Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/334102",
+      "id": 334102,
+      "name": "20260416.1"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333659"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=333659"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-14T12:41:36.1673155Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333659",
+      "id": 333659,
+      "name": "20260414.3"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333650"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=333650"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-14T12:25:10.9266888Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333650",
+      "id": 333650,
+      "name": "20260414.2"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333624"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=333624"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-14T07:42:28.9223034Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333624",
+      "id": 333624,
+      "name": "20260414.1"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333280"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=333280"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
+        "id": 896,
+        "revision": 3,
+        "name": "newum_ui (CD)",
+        "folder": "\\"
+      },
+      "state": "inProgress",
+      "createdDate": "2026-04-10T16:05:56.7601492Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/333280",
+      "id": 333280,
+      "name": "20260410.1"
+    },
+    {
+      "_links": {
+        "self": {
           "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/332836"
         },
         "web": {
@@ -985,8 +1217,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-20T10:41:20.0277987Z",
+      "finishedDate": "2026-04-19T10:42:41.2183185Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/327388",
       "id": 327388,
       "name": "20260320.1"
@@ -1014,8 +1248,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-19T10:49:37.9178933Z",
+      "finishedDate": "2026-04-18T10:51:51.384358Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/327094",
       "id": 327094,
       "name": "20260319.1"
@@ -1043,8 +1279,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-18T15:35:21.4633487Z",
+      "finishedDate": "2026-04-17T15:37:17.1603613Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326899",
       "id": 326899,
       "name": "20260318.1"
@@ -1072,8 +1310,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-17T12:36:30.4265881Z",
+      "finishedDate": "2026-04-16T12:38:21.8548233Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326443",
       "id": 326443,
       "name": "20260317.3"
@@ -1101,8 +1341,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-17T10:24:05.5052336Z",
+      "finishedDate": "2026-04-16T10:25:35.6738296Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326426",
       "id": 326426,
       "name": "20260317.2"
@@ -1130,8 +1372,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-17T09:33:34.4172098Z",
+      "finishedDate": "2026-04-16T09:35:05.2067477Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326411",
       "id": 326411,
       "name": "20260317.1"
@@ -1159,8 +1403,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-16T15:17:53.568944Z",
+      "finishedDate": "2026-04-15T15:19:47.3948301Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326208",
       "id": 326208,
       "name": "20260316.4"
@@ -1188,8 +1434,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-16T14:42:58.3927572Z",
+      "finishedDate": "2026-04-15T14:44:30.422731Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326187",
       "id": 326187,
       "name": "20260316.3"
@@ -1217,8 +1465,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-16T14:01:41.9543716Z",
+      "finishedDate": "2026-04-15T14:03:13.481904Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326162",
       "id": 326162,
       "name": "20260316.2"
@@ -1246,8 +1496,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-16T09:32:35.1914574Z",
+      "finishedDate": "2026-04-15T09:34:13.7121478Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/326118",
       "id": 326118,
       "name": "20260316.1"
@@ -1275,8 +1527,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-13T17:39:54.2002986Z",
+      "finishedDate": "2026-04-12T17:41:15.0894704Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/325982",
       "id": 325982,
       "name": "20260313.2"
@@ -1304,8 +1558,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-13T15:50:53.1403401Z",
+      "finishedDate": "2026-04-12T15:52:17.4503863Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/325949",
       "id": 325949,
       "name": "20260313.1"
@@ -1333,8 +1589,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-12T14:33:31.723581Z",
+      "finishedDate": "2026-04-11T14:34:58.7983942Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/325697",
       "id": 325697,
       "name": "20260312.1"
@@ -1362,8 +1620,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-11T10:36:13.4932788Z",
+      "finishedDate": "2026-04-10T10:37:33.9917154Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/325442",
       "id": 325442,
       "name": "20260311.2"
@@ -1391,8 +1651,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-11T08:35:32.7847845Z",
+      "finishedDate": "2026-04-10T08:37:34.0814978Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/325432",
       "id": 325432,
       "name": "20260311.1"
@@ -1420,8 +1682,10 @@
         "name": "newum_ui (CD)",
         "folder": "\\"
       },
-      "state": "inProgress",
+      "state": "completed",
+      "result": "succeeded",
       "createdDate": "2026-03-10T19:03:19.8467816Z",
+      "finishedDate": "2026-04-09T19:04:49.2217756Z",
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/325351",
       "id": 325351,
       "name": "20260310.2"
@@ -1642,68 +1906,6 @@
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/323657",
       "id": 323657,
       "name": "20260226.1"
-    },
-    {
-      "_links": {
-        "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/322912"
-        },
-        "web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=322912"
-        },
-        "pipeline.web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
-        },
-        "pipeline": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
-        }
-      },
-      "templateParameters": {},
-      "pipeline": {
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
-        "id": 896,
-        "revision": 3,
-        "name": "newum_ui (CD)",
-        "folder": "\\"
-      },
-      "state": "completed",
-      "result": "succeeded",
-      "createdDate": "2026-02-20T11:00:26.4420151Z",
-      "finishedDate": "2026-03-22T11:01:58.1575841Z",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/322912",
-      "id": 322912,
-      "name": "20260220.1"
-    },
-    {
-      "_links": {
-        "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/322793"
-        },
-        "web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=322793"
-        },
-        "pipeline.web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=896"
-        },
-        "pipeline": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3"
-        }
-      },
-      "templateParameters": {},
-      "pipeline": {
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896?revision=3",
-        "id": 896,
-        "revision": 3,
-        "name": "newum_ui (CD)",
-        "folder": "\\"
-      },
-      "state": "completed",
-      "result": "succeeded",
-      "createdDate": "2026-02-19T16:12:34.3475964Z",
-      "finishedDate": "2026-03-21T16:14:19.2945364Z",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/896/runs/322793",
-      "id": 322793,
-      "name": "20260219.4"
     }
   ]
 }

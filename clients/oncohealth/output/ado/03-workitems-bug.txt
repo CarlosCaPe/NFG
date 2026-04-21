@@ -1,4 +1,4 @@
-Bugs (16)
+Bugs (28)
 ============================================================
 [Closed] #180347 BUG CHILD | Taras Badlo | P2 | pts | newUM\26.02.17 | 
 [Closed] #181917 BUG_FROM_TC_1 | Unassigned | P2 | pts | newUM\26.02.17 | 
@@ -9,10 +9,22 @@ Bugs (16)
 [Closed] #187347 DOB format should be MM/DD/YYYY | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
 [Closed] #187348 There are no validations of value of DOB field according to time restrictions | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
 [Closed] #187413 First name and Last name could contain special characters | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
-[Resolved] #187514 fix navigation active state + small style fixes | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
+[Closed] #187514 fix navigation active state + small style fixes | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
 [Closed] #187693 [BE] ICD-10 Code search does not return results for multi-keyword queries (separate words) | Taras Badlo | P2 | pts | newUM\26.04.14 | 
 [Closed] #187884 [FE] ICD-10 Code search does not return results for multi-keyword queries (separate words) | Taras Badlo | P2 | pts | newUM\26.04.14 | 
-[New] #187951 Search for existing regimen does not take into account effective date | Iryna Lukianovets | P2 | pts | newUM | 
-[New] #188096 Regimen with a drug of ancillary type appears in search results | Iryna Lukianovets | P2 | pts | newUM | 
-[New] #188108 diagnosisId should be a required field for search regimens API | Iryna Lukianovets | P2 | pts | newUM | 
-[New] #188393 500 error when treatment start date has wrong format | Roman Buchyn | P3 | pts | newUM\26.04.14 | 
+[Closed] #187951 Search for existing regimen does not take into account effective date | Andriy Sapryka | P2 | pts | newUM\26.04.28 | 
+[Closed] #188096 Regimen with a drug of ancillary type appears in search results | Andriy Sapryka | P2 | pts | newUM\26.04.28 | 
+[Active] #188108 diagnosisId should be a required field for search regimens API | Iryna Lukianovets | P2 | pts | newUM\26.04.28 | 
+[Resolved] #188393 500 error when treatment start date has wrong format | Olha Pidhorna | P3 | pts | newUM\26.04.28 | 
+[Resolved] #188561 Update of the case fails with 500, when eligibilityVersion does not exist | Olha Pidhorna | P3 | pts | newUM\26.04.28 | 
+[Resolved] #188781 Only date should be taken into account while comparing treatmentStartDate with coverageEffectiveDate and coverageEndDate | Olha Pidhorna | P2 | pts | newUM\26.04.28 | 
+[Closed] #188856 Select existing regimen - payerId and treatmentStartDate are not taken into account | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Resolved] #188918 PUT /cases/{id} accepts treatmentType: null — no server-side validation enforced | Dmytro Hridin | P2 | pts | newUM\26.04.28 | 
+[Closed] #189199 Save regimen and drugs to a case - not user friendly messages for a case with variantGuid validation error | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Active] #189201 Regimen in Draft status is available for selection in the Search Regimens field | Iryna Lukianovets | P2 | pts | newUM\26.04.28 | 
+[New] #189205 Loading spinner appears and 4 GET requests are sent when Diagnosis & Provider Information page is opened or reloaded for the first time | Mykola Vorona | P2 | pts | newUM\26.04.28 | 
+[New] #189208 GET request is sent when Assign Main Regimen page is opened or reloaded for the first time | Petro Brezitskiy | P2 | pts | newUM\26.04.28 | 
+[New] #189209 ICD-10 search returns description matches instead of code matches when entering a single letter | Unassigned | P2 | pts | newUM\26.04.28 | 
+[New] #189278 Brand name is not displayed in the HCPCS Code dropdown | Petro Brezitskiy | P2 | pts | newUM\26.04.28 | 
+[Closed] #189279 Selected treatment type is not retained after clicking [Next Section] and returning to Authorization Details | Mykola Vorona | P2 | pts | newUM\26.04.28 | 
+[New] #189340 Treatment Start Date is sent with a time component in the POST request causing an error | Dmytro Petriv | P2 | pts | newUM\26.04.28 | 

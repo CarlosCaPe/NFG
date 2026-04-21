@@ -93,37 +93,6 @@
       "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906/runs/326946",
       "id": 326946,
       "name": "20260318.2"
-    },
-    {
-      "_links": {
-        "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906/runs/326945"
-        },
-        "web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=326945"
-        },
-        "pipeline.web": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=906"
-        },
-        "pipeline": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906?revision=2"
-        }
-      },
-      "templateParameters": {},
-      "pipeline": {
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906?revision=2",
-        "id": 906,
-        "revision": 2,
-        "name": "datadog-cd",
-        "folder": "\\DevOps"
-      },
-      "state": "completed",
-      "result": "succeeded",
-      "createdDate": "2026-03-18T16:45:40.6665364Z",
-      "finishedDate": "2026-03-18T16:46:26.9865506Z",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/906/runs/326945",
-      "id": 326945,
-      "name": "20260318.1"
     }
   ]
 }

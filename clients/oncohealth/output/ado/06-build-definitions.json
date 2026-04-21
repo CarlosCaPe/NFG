@@ -1,5 +1,5 @@
 {
-  "count": 10,
+  "count": 11,
   "value": [
     {
       "_links": {
@@ -68,7 +68,7 @@
     {
       "_links": {
         "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/897?revision=2"
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/897?revision=6"
         },
         "web": {
           "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=897"
@@ -111,14 +111,14 @@
         }
       },
       "id": 897,
-      "name": "newum_services (CD)",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/897?revision=2",
+      "name": "newum_services (CD) (Legacy)",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/897?revision=6",
       "uri": "vstfs:///Build/Definition/897",
       "path": "\\",
       "type": "build",
-      "queueStatus": "enabled",
-      "revision": 2,
-      "createdDate": "2026-03-10T19:21:26Z",
+      "queueStatus": "disabled",
+      "revision": 6,
+      "createdDate": "2026-04-20T20:14:15.303Z",
       "project": {
         "id": "07664ca3-a7fe-4170-adca-cebdf3d8cc97",
         "name": "newUM",
@@ -580,7 +580,7 @@
     {
       "_links": {
         "self": {
-          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/937?revision=1"
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/937?revision=3"
         },
         "web": {
           "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=937"
@@ -624,13 +624,77 @@
       },
       "id": 937,
       "name": "newum_aqa",
-      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/937?revision=1",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/937?revision=3",
       "uri": "vstfs:///Build/Definition/937",
       "path": "\\",
       "type": "build",
       "queueStatus": "enabled",
-      "revision": 1,
-      "createdDate": "2026-04-08T10:59:30.537Z",
+      "revision": 3,
+      "createdDate": "2026-04-15T15:54:43.08Z",
+      "project": {
+        "id": "07664ca3-a7fe-4170-adca-cebdf3d8cc97",
+        "name": "newUM",
+        "url": "https://dev.azure.com/oncologyanalytics/_apis/projects/07664ca3-a7fe-4170-adca-cebdf3d8cc97",
+        "state": "wellFormed",
+        "revision": 318,
+        "visibility": "private",
+        "lastUpdateTime": "2026-03-31T12:33:55.833Z"
+      }
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/938?revision=4"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=938"
+        },
+        "editor": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/designer?id=938&_a=edit-build-definition"
+        },
+        "badge": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/status/938"
+        }
+      },
+      "quality": "definition",
+      "authoredBy": {
+        "displayName": "Luiyi Valentin",
+        "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+          }
+        },
+        "id": "d050a4c7-290c-6c3e-88cc-7a78c92647b1",
+        "uniqueName": "lvalentin@oncologyanalytics.com",
+        "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix",
+        "descriptor": "aad.ZDA1MGE0YzctMjkwYy03YzNlLTg4Y2MtN2E3OGM5MjY0N2Ix"
+      },
+      "drafts": [],
+      "queue": {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/oncologyanalytics/_apis/build/Queues/240"
+          }
+        },
+        "id": 240,
+        "name": "Azure Pipelines",
+        "url": "https://dev.azure.com/oncologyanalytics/_apis/build/Queues/240",
+        "pool": {
+          "id": 24,
+          "name": "Azure Pipelines",
+          "isHosted": true
+        }
+      },
+      "id": 938,
+      "name": "newum_services (CD)",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/build/Definitions/938?revision=4",
+      "uri": "vstfs:///Build/Definition/938",
+      "path": "\\",
+      "type": "build",
+      "queueStatus": "enabled",
+      "revision": 4,
+      "createdDate": "2026-04-10T12:01:26.423Z",
       "project": {
         "id": "07664ca3-a7fe-4170-adca-cebdf3d8cc97",
         "name": "newUM",

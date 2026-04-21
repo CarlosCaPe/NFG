@@ -1,5 +1,138 @@
 [
   {
+    "id": "5343870979",
+    "title": "“Change From / Change To” Medicare Process - Product Decision Document",
+    "space": "PM",
+    "modified": "2026-04-20T14:58:06.135Z",
+    "modifiedBy": "Alison Stamp"
+  },
+  {
+    "id": "5148737537",
+    "title": "Capture Basic Dosing Details",
+    "space": "NewUM1",
+    "modified": "2026-04-20T09:05:20.811Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5078908929",
+    "title": "Intake Method Case Entry Updates & Enter Basic Case Details",
+    "space": "NewUM1",
+    "modified": "2026-04-20T08:58:09.579Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5348130819",
+    "title": "UX Figma Links",
+    "space": "NewUM",
+    "modified": "2026-04-16T18:15:40.467Z",
+    "modifiedBy": "Caitlin Bowler"
+  },
+  {
+    "id": "5154537473",
+    "title": "Allow Custom Regimens",
+    "space": "NewUM1",
+    "modified": "2026-04-16T12:56:20.831Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5352456193",
+    "title": "Default Drug in Regimens",
+    "space": "NewUM1",
+    "modified": "2026-04-16T11:24:08.050Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5349539843",
+    "title": "Connect to the DB with the Official Microsoft PostgreSQL VS Code Extension",
+    "space": "NewUM",
+    "modified": "2026-04-15T19:35:14.651Z",
+    "modifiedBy": "Luiyi Valentin"
+  },
+  {
+    "id": "5342855186",
+    "title": "newUM Environments URLs, Databases, and Tools Access Information",
+    "space": "NewUM",
+    "modified": "2026-04-15T19:34:56.625Z",
+    "modifiedBy": "Luiyi Valentin"
+  },
+  {
+    "id": "5338923052",
+    "title": "NewUM AQA — Test Automation Framework",
+    "space": "NewUM",
+    "modified": "2026-04-15T12:04:07.941Z",
+    "modifiedBy": "mkochanski"
+  },
+  {
+    "id": "5078908937",
+    "title": "Ordering and Servicing Provider Information",
+    "space": "NewUM1",
+    "modified": "2026-04-15T11:28:40.158Z",
+    "modifiedBy": "Inna Mariienko"
+  },
+  {
+    "id": "5053906959",
+    "title": "Testing Strategy",
+    "space": "NewUM",
+    "modified": "2026-04-14T19:10:41.961Z",
+    "modifiedBy": "Olha Pidhorna"
+  },
+  {
+    "id": "5302583322",
+    "title": "V1. NewUM Case Model: Authoritative Reference for Operations, Clinical Review, and Compliance",
+    "space": "NewUM1",
+    "modified": "2026-04-14T16:41:55.819Z",
+    "modifiedBy": "Colette Swenson"
+  },
+  {
+    "id": "5036998657",
+    "title": "DevOps Docs",
+    "space": "NewUM",
+    "modified": "2026-04-14T16:23:53.085Z",
+    "modifiedBy": "Luiyi Valentin"
+  },
+  {
+    "id": "5308776449",
+    "title": "LOB-Specific Drug/Code-Level Determinations & Case Level Determinations for Reporting",
+    "space": "NewUM1",
+    "modified": "2026-04-14T14:49:29.080Z",
+    "modifiedBy": "Colette Swenson"
+  },
+  {
+    "id": "5334499329",
+    "title": "Draft of 26.04.28 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-04-14T14:35:52.688Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5294587905",
+    "title": "26.04.14 Sprint Planning - NewUM",
+    "space": "NewUM",
+    "modified": "2026-04-14T14:35:42.313Z",
+    "modifiedBy": "Vika Nobis"
+  },
+  {
+    "id": "5301108737",
+    "title": "16.0 Historical Case Data & Access in NewUM",
+    "space": "NewUM1",
+    "modified": "2026-04-14T13:39:38.438Z",
+    "modifiedBy": "Colette Swenson"
+  },
+  {
+    "id": "5294391309",
+    "title": "Multiple HCPCS Decoupling Plan",
+    "space": "PM",
+    "modified": "2026-04-14T12:48:29.114Z",
+    "modifiedBy": "Nataliia Piatkevych"
+  },
+  {
+    "id": "5083987995",
+    "title": "Configuration Management",
+    "space": "NewUM1",
+    "modified": "2026-04-13T15:29:40.508Z",
+    "modifiedBy": "Pero Jaman"
+  },
+  {
     "id": "5321228290",
     "title": "NewUM and Databricks Data Integration",
     "space": "NewUM",
@@ -12,27 +145,6 @@
     "space": "NewUM1",
     "modified": "2026-04-10T13:37:15.540Z",
     "modifiedBy": "Alison Stamp"
-  },
-  {
-    "id": "5334499329",
-    "title": "Draft of 26.04.28 Sprint Planning - NewUM",
-    "space": "NewUM",
-    "modified": "2026-04-10T10:40:08.019Z",
-    "modifiedBy": "Vika Nobis"
-  },
-  {
-    "id": "5294391309",
-    "title": "Multiple HCPCS Decoupling Plan",
-    "space": "PM",
-    "modified": "2026-04-10T08:06:57.391Z",
-    "modifiedBy": "Nataliia Piatkevych"
-  },
-  {
-    "id": "5083987995",
-    "title": "Configuration Management",
-    "space": "NewUM1",
-    "modified": "2026-04-10T08:04:48.168Z",
-    "modifiedBy": "Pero Jaman"
   },
   {
     "id": "5330960405",
@@ -77,13 +189,6 @@
     "modifiedBy": "Taras Badlo"
   },
   {
-    "id": "5154537473",
-    "title": "Allow Custom Regimens",
-    "space": "NewUM1",
-    "modified": "2026-04-09T10:13:33.924Z",
-    "modifiedBy": "Inna Mariienko"
-  },
-  {
     "id": "5318377473",
     "title": "4/7 - NewUM Product Team - Weekly Sync",
     "space": "NewUM1",
@@ -91,32 +196,11 @@
     "modifiedBy": "Alison Stamp"
   },
   {
-    "id": "5078908937",
-    "title": "Ordering and Servicing Provider Information",
-    "space": "NewUM1",
-    "modified": "2026-04-08T14:09:12.496Z",
-    "modifiedBy": "Inna Mariienko"
-  },
-  {
-    "id": "5148737537",
-    "title": "Capture Basic Dosing Details",
-    "space": "NewUM1",
-    "modified": "2026-04-08T12:35:31.846Z",
-    "modifiedBy": "Inna Mariienko"
-  },
-  {
     "id": "5156700161",
     "title": "Apply Payer Non-Preferred Drug Rules",
     "space": "NewUM1",
     "modified": "2026-04-08T12:34:03.210Z",
     "modifiedBy": "Inna Mariienko"
-  },
-  {
-    "id": "5301108737",
-    "title": "16.0 Historical Case Data & Access in NewUM",
-    "space": "NewUM1",
-    "modified": "2026-04-07T20:00:38.620Z",
-    "modifiedBy": "Alison Stamp"
   },
   {
     "id": "5141397546",
@@ -131,13 +215,6 @@
     "space": "PM",
     "modified": "2026-04-07T13:35:07.167Z",
     "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "5302583322",
-    "title": "V1. NewUM Case Model: Authoritative Reference for Operations, Clinical Review, and Compliance",
-    "space": "NewUM1",
-    "modified": "2026-04-06T18:04:22.717Z",
-    "modifiedBy": "Alison Stamp"
   },
   {
     "id": "5312577544",
@@ -159,13 +236,6 @@
     "space": "AT",
     "modified": "2026-04-02T19:42:53.622Z",
     "modifiedBy": "Vishwas Vishakanta"
-  },
-  {
-    "id": "5308776449",
-    "title": "LOB-Specific Drug/Code-Level Determinations & Case Level Determinations for Reporting",
-    "space": "NewUM1",
-    "modified": "2026-04-02T17:15:58.700Z",
-    "modifiedBy": "Colette Swenson"
   },
   {
     "id": "5193498653",
@@ -245,13 +315,6 @@
     "modifiedBy": "Rachel Collier"
   },
   {
-    "id": "5294587905",
-    "title": "26.04.14 Sprint Planning - NewUM",
-    "space": "NewUM",
-    "modified": "2026-03-31T10:46:50.165Z",
-    "modifiedBy": "Michal Mucha"
-  },
-  {
     "id": "5300551690",
     "title": "Case Lock research",
     "space": "NewUM",
@@ -285,68 +348,5 @@
     "space": "NewUM1",
     "modified": "2026-03-30T14:06:28.637Z",
     "modifiedBy": "Pero Jaman"
-  },
-  {
-    "id": "5294719185",
-    "title": "SmartUM Configurations Features",
-    "space": "NewUM1",
-    "modified": "2026-03-30T13:57:48.141Z",
-    "modifiedBy": "Pero Jaman"
-  },
-  {
-    "id": "5078745089",
-    "title": "Diagnosis Selection & Details for Case",
-    "space": "NewUM1",
-    "modified": "2026-03-30T07:04:31.991Z",
-    "modifiedBy": "Inna Mariienko"
-  },
-  {
-    "id": "4797890582",
-    "title": "Decouple Grouped Drugs to Support Accurate End to End UM Processes",
-    "space": "PM",
-    "modified": "2026-03-27T19:19:49.080Z",
-    "modifiedBy": "Alison Stamp"
-  },
-  {
-    "id": "3553329157",
-    "title": "Add / Edit Payer Configuration Communication",
-    "space": "PM",
-    "modified": "2026-03-27T03:02:54.589Z",
-    "modifiedBy": "Chelsea Sabbato"
-  },
-  {
-    "id": "5172854797",
-    "title": "[DRAFT] Qronos integration and TAT configuration",
-    "space": "NewUM1",
-    "modified": "2026-03-26T13:17:35.696Z",
-    "modifiedBy": "Pero Jaman"
-  },
-  {
-    "id": "5288788004",
-    "title": "PRD Review - Ordering and Servicing Provider Information",
-    "space": "NewUM1",
-    "modified": "2026-03-26T12:40:20.311Z",
-    "modifiedBy": "Inna Mariienko"
-  },
-  {
-    "id": "5288493057",
-    "title": "[POC] Iceberg REST Catalog",
-    "space": "NewUM",
-    "modified": "2026-03-25T23:44:29.005Z",
-    "modifiedBy": "Carlos Carrillo"
-  },
-  {
-    "id": "3776020499",
-    "title": "General Information",
-    "space": "AT",
-    "modified": "2026-03-25T23:32:08.352Z",
-    "modifiedBy": "Sara Heideman"
-  },
-  {
-    "id": "5288624129",
-    "title": "Technical Requirements",
-    "space": "AT",
-    "modified": "2026-03-25T23:29:47.239Z",
-    "modifiedBy": "Sara Heideman"
   }
 ]

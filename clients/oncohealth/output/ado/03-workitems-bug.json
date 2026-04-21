@@ -1,5 +1,5 @@
 {
-  "count": 16,
+  "count": 28,
   "items": [
     {
       "id": 180347,
@@ -269,13 +269,13 @@
     },
     {
       "id": 187514,
-      "rev": 7,
+      "rev": 8,
       "fields": {
         "System.Id": 187514,
         "System.AreaPath": "newUM\\FE Team",
         "System.IterationPath": "newUM\\26.03.31",
         "System.WorkItemType": "Bug",
-        "System.State": "Resolved",
+        "System.State": "Closed",
         "System.AssignedTo": {
           "displayName": "Yurii Bodnar",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/46e7028a-a371-64d8-bf7d-9fef569bbbd5",
@@ -290,16 +290,12 @@
           "descriptor": "aad.NDZlNzAyOGEtYTM3MS03NGQ4LWJmN2QtOWZlZjU2OWJiYmQ1"
         },
         "System.CreatedDate": "2026-03-31T08:45:53.743Z",
-        "System.ChangedDate": "2026-03-31T12:28:11.02Z",
+        "System.ChangedDate": "2026-04-21T11:33:42.88Z",
+        "System.Parent": 182312,
         "System.Title": "fix navigation active state + small style fixes",
         "Microsoft.VSTS.Common.Priority": 2
       },
       "multilineFieldsFormat": {},
-      "commentVersionRef": {
-        "commentId": 20637946,
-        "version": 1,
-        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/187514/comments/20637946/versions/1"
-      },
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/187514"
     },
     {
@@ -364,28 +360,28 @@
     },
     {
       "id": 187951,
-      "rev": 4,
+      "rev": 11,
       "fields": {
         "System.Id": 187951,
         "System.AreaPath": "newUM",
-        "System.IterationPath": "newUM",
+        "System.IterationPath": "newUM\\26.04.28",
         "System.WorkItemType": "Bug",
-        "System.State": "New",
+        "System.State": "Closed",
         "System.AssignedTo": {
-          "displayName": "Iryna Lukianovets",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
+          "displayName": "Andriy Sapryka",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/5f305299-8a60-62be-94f6-5c14f45f421c",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
             }
           },
-          "id": "8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
-          "uniqueName": "ilukianovets@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx",
-          "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+          "id": "5f305299-8a60-62be-94f6-5c14f45f421c",
+          "uniqueName": "asapryka@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj",
+          "descriptor": "aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
         },
         "System.CreatedDate": "2026-04-07T12:55:20.467Z",
-        "System.ChangedDate": "2026-04-08T07:33:58.717Z",
+        "System.ChangedDate": "2026-04-16T12:17:22.75Z",
         "System.Title": "Search for existing regimen does not take into account effective date",
         "Microsoft.VSTS.Common.Priority": 2
       },
@@ -394,28 +390,28 @@
     },
     {
       "id": 188096,
-      "rev": 2,
+      "rev": 9,
       "fields": {
         "System.Id": 188096,
         "System.AreaPath": "newUM",
-        "System.IterationPath": "newUM",
+        "System.IterationPath": "newUM\\26.04.28",
         "System.WorkItemType": "Bug",
-        "System.State": "New",
+        "System.State": "Closed",
         "System.AssignedTo": {
-          "displayName": "Iryna Lukianovets",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
+          "displayName": "Andriy Sapryka",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/5f305299-8a60-62be-94f6-5c14f45f421c",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
             }
           },
-          "id": "8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
-          "uniqueName": "ilukianovets@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx",
-          "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+          "id": "5f305299-8a60-62be-94f6-5c14f45f421c",
+          "uniqueName": "asapryka@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj",
+          "descriptor": "aad.NWYzMDUyOTktOGE2MC03MmJlLTk0ZjYtNWMxNGY0NWY0MjFj"
         },
         "System.CreatedDate": "2026-04-08T14:10:12.94Z",
-        "System.ChangedDate": "2026-04-08T14:11:04.547Z",
+        "System.ChangedDate": "2026-04-17T09:48:30.72Z",
         "System.Title": "Regimen with a drug of ancillary type appears in search results",
         "Microsoft.VSTS.Common.Priority": 2
       },
@@ -424,13 +420,13 @@
     },
     {
       "id": 188108,
-      "rev": 1,
+      "rev": 4,
       "fields": {
         "System.Id": 188108,
         "System.AreaPath": "newUM",
-        "System.IterationPath": "newUM",
+        "System.IterationPath": "newUM\\26.04.28",
         "System.WorkItemType": "Bug",
-        "System.State": "New",
+        "System.State": "Active",
         "System.AssignedTo": {
           "displayName": "Iryna Lukianovets",
           "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
@@ -445,7 +441,7 @@
           "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
         },
         "System.CreatedDate": "2026-04-08T14:32:04.073Z",
-        "System.ChangedDate": "2026-04-08T14:32:04.073Z",
+        "System.ChangedDate": "2026-04-15T10:11:40.263Z",
         "System.Title": "diagnosisId should be a required field for search regimens API",
         "Microsoft.VSTS.Common.Priority": 2
       },
@@ -454,33 +450,386 @@
     },
     {
       "id": 188393,
-      "rev": 2,
+      "rev": 6,
       "fields": {
         "System.Id": 188393,
         "System.AreaPath": "newUM\\BE Team",
-        "System.IterationPath": "newUM\\26.04.14",
+        "System.IterationPath": "newUM\\26.04.28",
         "System.WorkItemType": "Bug",
-        "System.State": "New",
+        "System.State": "Resolved",
         "System.AssignedTo": {
-          "displayName": "Roman Buchyn",
-          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/11bad899-c6dc-6fd8-bd27-cc9378e298b1",
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
           "_links": {
             "avatar": {
-              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
             }
           },
-          "id": "11bad899-c6dc-6fd8-bd27-cc9378e298b1",
-          "uniqueName": "rbuchyn@oncologyanalytics.com",
-          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx",
-          "descriptor": "aad.MTFiYWQ4OTktYzZkYy03ZmQ4LWJkMjctY2M5Mzc4ZTI5OGIx"
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
         },
         "System.CreatedDate": "2026-04-09T14:07:43.533Z",
-        "System.ChangedDate": "2026-04-09T14:07:44.1Z",
+        "System.ChangedDate": "2026-04-21T12:48:23.803Z",
         "System.Title": "500 error when treatment start date has wrong format",
         "Microsoft.VSTS.Common.Priority": 3
       },
       "multilineFieldsFormat": {},
       "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188393"
+    },
+    {
+      "id": 188561,
+      "rev": 12,
+      "fields": {
+        "System.Id": 188561,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Resolved",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-04-10T08:23:36.92Z",
+        "System.ChangedDate": "2026-04-21T12:48:08.353Z",
+        "System.Title": "Update of the case fails with 500, when eligibilityVersion does not exist",
+        "Microsoft.VSTS.Common.Priority": 3
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188561"
+    },
+    {
+      "id": 188781,
+      "rev": 6,
+      "fields": {
+        "System.Id": 188781,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Resolved",
+        "System.AssignedTo": {
+          "displayName": "Olha Pidhorna",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+            }
+          },
+          "id": "f38381e3-196e-68ad-90b5-6bcc37e85447",
+          "uniqueName": "opidhorna@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3",
+          "descriptor": "aad.ZjM4MzgxZTMtMTk2ZS03OGFkLTkwYjUtNmJjYzM3ZTg1NDQ3"
+        },
+        "System.CreatedDate": "2026-04-14T10:57:11.027Z",
+        "System.ChangedDate": "2026-04-21T12:48:33.86Z",
+        "System.Title": "Only date should be taken into account while comparing treatmentStartDate with coverageEffectiveDate and coverageEndDate",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188781"
+    },
+    {
+      "id": 188856,
+      "rev": 5,
+      "fields": {
+        "System.Id": 188856,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-04-14T15:17:37.91Z",
+        "System.ChangedDate": "2026-04-20T10:20:20.76Z",
+        "System.Title": "Select existing regimen - payerId and treatmentStartDate are not taken into account",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188856"
+    },
+    {
+      "id": 188918,
+      "rev": 8,
+      "fields": {
+        "System.Id": 188918,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Resolved",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Hridin",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+            }
+          },
+          "id": "c17b9803-47bf-609b-a9b4-4aeb6a8bb5eb",
+          "uniqueName": "dhridin@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi",
+          "descriptor": "aad.YzE3Yjk4MDMtNDdiZi03MDliLWE5YjQtNGFlYjZhOGJiNWVi"
+        },
+        "System.CreatedDate": "2026-04-14T21:12:28.39Z",
+        "System.ChangedDate": "2026-04-17T13:02:40.663Z",
+        "System.Title": "PUT /cases/{id} accepts treatmentType: null — no server-side validation enforced",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/188918"
+    },
+    {
+      "id": 189199,
+      "rev": 7,
+      "fields": {
+        "System.Id": 189199,
+        "System.AreaPath": "newUM",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Bogdan Chachun",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+            }
+          },
+          "id": "cecc7f45-f385-6409-8161-11a488ecdd2d",
+          "uniqueName": "bchachun@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk",
+          "descriptor": "aad.Y2VjYzdmNDUtZjM4NS03NDA5LTgxNjEtMTFhNDg4ZWNkZDJk"
+        },
+        "System.CreatedDate": "2026-04-17T12:57:28.56Z",
+        "System.ChangedDate": "2026-04-20T16:51:26.323Z",
+        "System.Title": "Save regimen and drugs to a case - not user friendly messages for a case with variantGuid validation error",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189199"
+    },
+    {
+      "id": 189201,
+      "rev": 3,
+      "fields": {
+        "System.Id": 189201,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Active",
+        "System.AssignedTo": {
+          "displayName": "Iryna Lukianovets",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+            }
+          },
+          "id": "8b66b49e-199e-6e4f-bd5e-8acd8ca914d1",
+          "uniqueName": "ilukianovets@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx",
+          "descriptor": "aad.OGI2NmI0OWUtMTk5ZS03ZTRmLWJkNWUtOGFjZDhjYTkxNGQx"
+        },
+        "System.CreatedDate": "2026-04-17T13:07:12.55Z",
+        "System.ChangedDate": "2026-04-17T14:11:53.913Z",
+        "System.Title": "Regimen in Draft status is available for selection in the Search Regimens field",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189201"
+    },
+    {
+      "id": 189205,
+      "rev": 4,
+      "fields": {
+        "System.Id": 189205,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Mykola Vorona",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+            }
+          },
+          "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "uniqueName": "mvorona@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
+          "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+        },
+        "System.CreatedDate": "2026-04-17T13:45:10.827Z",
+        "System.ChangedDate": "2026-04-20T08:04:30.64Z",
+        "System.Title": "Loading spinner appears and 4 GET requests are sent when Diagnosis & Provider Information page is opened or reloaded for the first time",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189205"
+    },
+    {
+      "id": 189208,
+      "rev": 6,
+      "fields": {
+        "System.Id": 189208,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Petro Brezitskiy",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+            }
+          },
+          "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "uniqueName": "pbrezitskiy@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy",
+          "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+        },
+        "System.CreatedDate": "2026-04-17T13:50:13.543Z",
+        "System.ChangedDate": "2026-04-20T12:50:10.857Z",
+        "System.Title": "GET request is sent when Assign Main Regimen page is opened or reloaded for the first time",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189208"
+    },
+    {
+      "id": 189209,
+      "rev": 4,
+      "fields": {
+        "System.Id": 189209,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "New",
+        "System.CreatedDate": "2026-04-17T13:52:36.093Z",
+        "System.ChangedDate": "2026-04-21T06:37:07.923Z",
+        "System.Title": "ICD-10 search returns description matches instead of code matches when entering a single letter",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "commentVersionRef": {
+        "commentId": 20791678,
+        "version": 1,
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/wit/workItems/189209/comments/20791678/versions/1"
+      },
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189209"
+    },
+    {
+      "id": 189278,
+      "rev": 2,
+      "fields": {
+        "System.Id": 189278,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Petro Brezitskiy",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+            }
+          },
+          "id": "a8a86b43-2aad-6047-8d5b-d146ec643602",
+          "uniqueName": "pbrezitskiy@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy",
+          "descriptor": "aad.YThhODZiNDMtMmFhZC03MDQ3LThkNWItZDE0NmVjNjQzNjAy"
+        },
+        "System.CreatedDate": "2026-04-20T10:12:57.1Z",
+        "System.ChangedDate": "2026-04-20T10:12:57.617Z",
+        "System.Parent": 182880,
+        "System.Title": "Brand name is not displayed in the HCPCS Code dropdown",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189278"
+    },
+    {
+      "id": 189279,
+      "rev": 5,
+      "fields": {
+        "System.Id": 189279,
+        "System.AreaPath": "newUM\\FE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "Closed",
+        "System.AssignedTo": {
+          "displayName": "Mykola Vorona",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+            }
+          },
+          "id": "bf5ae742-7ff0-6848-a304-eb6e527da460",
+          "uniqueName": "mvorona@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw",
+          "descriptor": "aad.YmY1YWU3NDItN2ZmMC03ODQ4LWEzMDQtZWI2ZTUyN2RhNDYw"
+        },
+        "System.CreatedDate": "2026-04-20T10:18:39.323Z",
+        "System.ChangedDate": "2026-04-20T12:55:58.31Z",
+        "System.Title": "Selected treatment type is not retained after clicking [Next Section] and returning to Authorization Details",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189279"
+    },
+    {
+      "id": 189340,
+      "rev": 5,
+      "fields": {
+        "System.Id": 189340,
+        "System.AreaPath": "newUM\\BE Team",
+        "System.IterationPath": "newUM\\26.04.28",
+        "System.WorkItemType": "Bug",
+        "System.State": "New",
+        "System.AssignedTo": {
+          "displayName": "Dmytro Petriv",
+          "url": "https://spsprodcus1.vssps.visualstudio.com/Aab1c039e-a854-48b9-85a3-b414cf4e5d50/_apis/Identities/7cde3231-270d-6966-91ba-42dfadd3f672",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.N2NkZTMyMzEtMjcwZC03OTY2LTkxYmEtNDJkZmFkZDNmNjcy"
+            }
+          },
+          "id": "7cde3231-270d-6966-91ba-42dfadd3f672",
+          "uniqueName": "dpetriv@oncologyanalytics.com",
+          "imageUrl": "https://dev.azure.com/oncologyanalytics/_apis/GraphProfile/MemberAvatars/aad.N2NkZTMyMzEtMjcwZC03OTY2LTkxYmEtNDJkZmFkZDNmNjcy",
+          "descriptor": "aad.N2NkZTMyMzEtMjcwZC03OTY2LTkxYmEtNDJkZmFkZDNmNjcy"
+        },
+        "System.CreatedDate": "2026-04-20T17:10:13.147Z",
+        "System.ChangedDate": "2026-04-21T15:27:28.23Z",
+        "System.Title": "Treatment Start Date is sent with a time component in the POST request causing an error",
+        "Microsoft.VSTS.Common.Priority": 2
+      },
+      "multilineFieldsFormat": {},
+      "url": "https://dev.azure.com/oncologyanalytics/_apis/wit/workItems/189340"
     }
   ]
 }

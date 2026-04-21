@@ -1,532 +1,427 @@
 {
   "source": "google-calendar",
   "account": "Google Account: Carlos Carrillo  \n(carlos.carrillo@newfireglobal.com)",
-  "capturedAt": "2026-04-10T17:25:49.677Z",
+  "capturedAt": "2026-04-20T15:40:14.122Z",
   "dateRange": {
-    "start": "2026-04-03",
-    "end": "2026-04-24"
+    "start": "2026-04-13",
+    "end": "2026-05-04"
   },
   "daysBack": 7,
   "daysFwd": 14,
-  "eventCount": 52,
+  "eventCount": 43,
   "events": [
     {
       "title": "Home",
-      "date": "2026-04-03",
+      "date": "2026-04-13",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "7diq1iibve41mpbstsguoim7hs_20260403",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260413",
+      "method": "api-sync"
+    },
+    {
+      "title": "Free",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Calendar",
+      "raw": "All day, Free, Calendar: Calendar, No location, April 13, 2026"
+    },
+    {
+      "title": "Day prior to Sinhala & Tamil New Year Day - Sri Lanka",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Day prior to Sinhala & Tamil New Year Day - Sri Lanka, Calendar: Public Holidays (Newfire Global), No location, April 13, 2026"
+    },
+    {
+      "title": "Easter (moved from Sun, 12) - Ukraine",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Easter (moved from Sun, 12) - Ukraine, Calendar: Public Holidays (Newfire Global), No location, April 13, 2026"
+    },
+    {
+      "title": "Easter Monday (Orthodox) - North Macedonia",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Easter Monday (Orthodox) - North Macedonia, Calendar: Public Holidays (Newfire Global), No location, April 13, 2026"
+    },
+    {
+      "title": "Orthodox Easter Monday - Bosnia and Herzegovina",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Orthodox Easter Monday - Bosnia and Herzegovina, Calendar: Public Holidays (Newfire Global), No location, April 13, 2026"
+    },
+    {
+      "title": "Orthodox Easter Monday - Greece",
+      "date": "2026-04-13",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Orthodox Easter Monday - Greece, Calendar: Public Holidays (Newfire Global), No location, April 13, 2026"
+    },
+    {
+      "title": "busy, Calendar: carlos.carrillo@dataqbs.com",
+      "date": "2026-04-13",
+      "startTime": "10am",
+      "endTime": "10:30am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "10am to 10:30am, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 13, 2026"
+    },
+    {
+      "title": "busy, Calendar: carlos.carrillo@dataqbs.com",
+      "date": "2026-04-13",
+      "startTime": "3pm",
+      "endTime": "3:30pm",
+      "isAllDay": false,
+      "location": "",
+      "raw": "3pm to 3:30pm, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 13, 2026"
+    },
+    {
+      "title": "busy, Calendar: carlos.carrillo@dataqbs.com",
+      "date": "2026-04-13",
+      "startTime": "4:30pm",
+      "endTime": "5:30pm",
+      "isAllDay": false,
+      "location": "",
+      "raw": "4:30pm to 5:30pm, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 13, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-13",
+      "startTime": "8:35am",
+      "endTime": "9am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 13, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260414",
+      "method": "api-sync"
+    },
+    {
+      "title": "Dr. B.R. Ambedkar Jayanthi - India",
+      "date": "2026-04-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Dr. B.R. Ambedkar Jayanthi - India, Calendar: Public Holidays (Newfire Global), No location, April 14, 2026"
+    },
+    {
+      "title": "Sinhala & Tamil New Year Day - Sri Lanka",
+      "date": "2026-04-14",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Sinhala & Tamil New Year Day - Sri Lanka, Calendar: Public Holidays (Newfire Global), No location, April 14, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-14",
+      "startTime": "7am",
+      "endTime": "8am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "7am to 8am, Tentative, Calendar: Calendar, No location, April 14, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-14",
+      "startTime": "8:35am",
+      "endTime": "9am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 14, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-15",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260415",
+      "method": "api-sync"
+    },
+    {
+      "title": "busy, Calendar: carlos.carrillo@dataqbs.com",
+      "date": "2026-04-15",
+      "startTime": "7:30am",
+      "endTime": "8am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "7:30am to 8am, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 15, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-15",
+      "startTime": "8:35am",
+      "endTime": "9am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 15, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-15",
+      "startTime": "9am",
+      "endTime": "9:30am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "9am to 9:30am, Tentative, Calendar: Calendar, No location, April 15, 2026"
+    },
+    {
+      "title": "Home",
+      "date": "2026-04-16",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260416",
       "method": "api-sync"
     },
     {
       "title": "Away",
-      "date": "2026-04-03",
+      "date": "2026-04-16",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
       "calendar": "Calendar",
-      "raw": "All day, Away, Calendar: Calendar, No location, April 3, 2026"
-    },
-    {
-      "title": "Free",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Calendar",
-      "raw": "All day, Free, Calendar: Calendar, No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Holidays in Mexico",
-      "raw": "All day, Good Friday, Calendar: Holidays in Mexico, April 3, 2026"
-    },
-    {
-      "title": "Good Friday (Easter Week) - Peru",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday (Easter Week) - Peru, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday (Holy Week) - Costa Rica",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday (Holy Week) - Costa Rica, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday (Holy Week) - Ecuador",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday (Holy Week) - Ecuador, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Argentina",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Argentina, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Bolivia",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Bolivia, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Brazil",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Brazil, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Canada",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Canada, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Chile",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Chile, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Colombia",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Colombia, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Dominican Republic",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Dominican Republic, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - El Salvador",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - El Salvador, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - India",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - India, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Indonesia",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Indonesia, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Philippines",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Philippines, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Portugal",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Portugal, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Singapore",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Singapore, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Spain",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Spain, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Good Friday - Sri Lanka",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Good Friday - Sri Lanka, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Tourism Week - Uruguay",
-      "date": "2026-04-03",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Tourism Week - Uruguay, Calendar: Public Holidays (Newfire Global), No location, April 3, 2026"
-    },
-    {
-      "title": "Tentative, Calendar: Calendar",
-      "date": "2026-04-03",
-      "startTime": "8:35am",
-      "endTime": "9am",
-      "isAllDay": false,
-      "location": "",
-      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 3, 2026"
-    },
-    {
-      "title": "Holy Saturday",
-      "date": "2026-04-04",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Holidays in Mexico",
-      "raw": "All day, Holy Saturday, Calendar: Holidays in Mexico, April 4, 2026"
-    },
-    {
-      "title": "Tourism Week - Uruguay",
-      "date": "2026-04-04",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Tourism Week - Uruguay, Calendar: Public Holidays (Newfire Global), No location, April 4, 2026"
-    },
-    {
-      "title": "Easter Sunday",
-      "date": "2026-04-05",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Holidays in Mexico",
-      "raw": "All day, Easter Sunday, Calendar: Holidays in Mexico, April 5, 2026"
-    },
-    {
-      "title": "Easter Sunday - Poland",
-      "date": "2026-04-05",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Sunday - Poland, Calendar: Public Holidays (Newfire Global), No location, April 5, 2026"
-    },
-    {
-      "title": "Home",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260406",
-      "method": "api-sync"
-    },
-    {
-      "title": "Tentative",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Calendar",
-      "raw": "All day, Tentative, Calendar: Calendar, No location, April 6, 2026"
-    },
-    {
-      "title": "Easter Monday - Canada",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Monday - Canada, Calendar: Public Holidays (Newfire Global), No location, April 6, 2026"
-    },
-    {
-      "title": "Easter Monday - Croatia",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Monday - Croatia, Calendar: Public Holidays (Newfire Global), No location, April 6, 2026"
-    },
-    {
-      "title": "Easter Monday - Ireland",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Monday - Ireland, Calendar: Public Holidays (Newfire Global), No location, April 6, 2026"
-    },
-    {
-      "title": "Easter Monday - Poland",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Monday - Poland, Calendar: Public Holidays (Newfire Global), No location, April 6, 2026"
-    },
-    {
-      "title": "Easter Monday - Spain - Basque",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Monday - Spain - Basque, Calendar: Public Holidays (Newfire Global), No location, April 6, 2026"
-    },
-    {
-      "title": "Easter Monday - Spain - Valencia",
-      "date": "2026-04-06",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "calendar": "Public Holidays (Newfire Global)",
-      "raw": "All day, Easter Monday - Spain - Valencia, Calendar: Public Holidays (Newfire Global), No location, April 6, 2026"
+      "raw": "All day, Away, Calendar: Calendar, No location, April 16, 2026"
     },
     {
       "title": "busy, Calendar: carlos.carrillo@dataqbs.com",
-      "date": "2026-04-06",
-      "startTime": "1pm",
-      "endTime": "1:30pm",
+      "date": "2026-04-16",
+      "startTime": "4pm",
+      "endTime": "5pm",
       "isAllDay": false,
       "location": "",
-      "raw": "1pm to 1:30pm, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 6, 2026"
+      "raw": "4pm to 5pm, busy, Calendar: carlos.carrillo@dataqbs.com, Accepted, No location, April 16, 2026"
+    },
+    {
+      "title": "Drop-In with the CEO (Open Mic)",
+      "date": "2026-04-16",
+      "startTime": "6:00 AM",
+      "endTime": "6:50 AM",
+      "isAllDay": false,
+      "location": "https://us06web.zoom.us/j/85676018288?pwd=Zq1cjqbIeoBPfF80U0OGHjF7gHpCQZ.1&jst=3",
+      "eventId": "1megikp2to0dl3l1au5srtq1b5_20260416T120000Z",
+      "method": "api-sync"
+    },
+    {
+      "title": "Drop-In with the CEO (Open Mic), Carlos Carrillo, Needs RSVP",
+      "date": "2026-04-16",
+      "startTime": "6am",
+      "endTime": "6:50am",
+      "isAllDay": false,
+      "location": "https://us06web.zoom.us/j/85676018288?pwd=Zq1cjqbIeoBPfF80U0OGHjF7gHpCQZ.1&jst=3",
+      "raw": "6am to 6:50am, Drop-In with the CEO (Open Mic), Carlos Carrillo, Needs RSVP, Location: https://us06web.zoom.us/j/85676018288?pwd=Zq1cjqbIeoBPfF80U0OGHjF7gHpCQZ.1&jst=3, April 16, 2026"
     },
     {
       "title": "Tentative, Calendar: Calendar",
-      "date": "2026-04-06",
+      "date": "2026-04-16",
       "startTime": "8:35am",
       "endTime": "9am",
       "isAllDay": false,
       "location": "",
-      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 6, 2026"
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 16, 2026"
     },
     {
-      "title": "Home",
-      "date": "2026-04-07",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260407",
-      "method": "api-sync"
-    },
-    {
-      "title": "Interview with Rafael B. | Senior/Lead Python Engineer",
-      "date": "2026-04-07",
-      "startTime": "2:00 PM",
-      "endTime": "2:30 PM",
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-16",
+      "startTime": "9:05am",
+      "endTime": "10am",
       "isAllDay": false,
       "location": "",
-      "eventId": "3e4pi2bqsb4a3aoqt5p84appb8",
-      "method": "api-sync"
+      "raw": "9:05am to 10am, Tentative, Calendar: Calendar, No location, April 16, 2026"
     },
     {
       "title": "Home",
-      "date": "2026-04-08",
+      "date": "2026-04-17",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "i34ger1apsasi7q2m6ued5scas_20260408",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260417",
       "method": "api-sync"
     },
     {
-      "title": "Interview with David C. | Senior/Lead Python Engineer",
-      "date": "2026-04-08",
-      "startTime": "1:30 PM",
-      "endTime": "2:00 PM",
+      "title": "Away",
+      "date": "2026-04-17",
+      "startTime": "(all day)",
+      "endTime": "",
+      "isAllDay": true,
+      "location": "",
+      "calendar": "Calendar",
+      "raw": "All day, Away, Calendar: Calendar, No location, April 17, 2026"
+    },
+    {
+      "title": "Free, Calendar: Calendar",
+      "date": "2026-04-17",
+      "startTime": "6am",
+      "endTime": "2:30pm",
       "isAllDay": false,
       "location": "",
-      "eventId": "7ejaq8rlpface1gbsj8r6sl316",
-      "method": "api-sync"
+      "raw": "6am to 2:30pm, Free, Calendar: Calendar, No location, April 17, 2026"
     },
     {
-      "title": "Lunch & Learn: How LLMs Actually Work",
-      "date": "2026-04-08",
-      "startTime": "7:00 AM",
-      "endTime": "7:30 AM",
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-17",
+      "startTime": "8:35am",
+      "endTime": "9am",
       "isAllDay": false,
       "location": "",
-      "eventId": "7as8qnqj3jpctc4uiohjlgcavt",
-      "method": "api-sync"
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 17, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-17",
+      "startTime": "9:05am",
+      "endTime": "10am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "9:05am to 10am, Tentative, Calendar: Calendar, No location, April 17, 2026"
     },
     {
       "title": "Home",
-      "date": "2026-04-09",
+      "date": "2026-04-20",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260409",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260420",
       "method": "api-sync"
     },
     {
-      "title": "Home",
-      "date": "2026-04-10",
+      "title": "Basava Jayanthi, Akshaya Tritiya - India",
+      "date": "2026-04-20",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "7diq1iibve41mpbstsguoim7hs_20260410",
-      "method": "api-sync"
+      "calendar": "Public Holidays (Newfire Global)",
+      "raw": "All day, Basava Jayanthi, Akshaya Tritiya - India, Calendar: Public Holidays (Newfire Global), No location, April 20, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-20",
+      "startTime": "8:35am",
+      "endTime": "9am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "8:35am to 9am, Tentative, Calendar: Calendar, No location, April 20, 2026"
+    },
+    {
+      "title": "Tentative, Calendar: Calendar",
+      "date": "2026-04-20",
+      "startTime": "9:05am",
+      "endTime": "10am",
+      "isAllDay": false,
+      "location": "",
+      "raw": "9:05am to 10am, Tentative, Calendar: Calendar, No location, April 20, 2026"
     },
     {
       "title": "Home",
-      "date": "2026-05-04",
+      "date": "2026-05-13",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260504",
+      "eventId": "i34ger1apsasi7q2m6ued5scas_20260513",
       "method": "api-sync"
     },
     {
       "title": "Home",
-      "date": "2026-05-05",
+      "date": "2026-05-14",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "mnaun98dfq4j7kvrrkvf0aro4g_20260505",
+      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260514",
+      "method": "api-sync"
+    },
+    {
+      "title": "Drop-In with the CEO (Open Mic)",
+      "date": "2026-05-14",
+      "startTime": "6:00 AM",
+      "endTime": "6:50 AM",
+      "isAllDay": false,
+      "location": "https://us06web.zoom.us/j/85676018288?pwd=Zq1cjqbIeoBPfF80U0OGHjF7gHpCQZ.1&jst=3",
+      "eventId": "1megikp2to0dl3l1au5srtq1b5_20260514T120000Z",
       "method": "api-sync"
     },
     {
       "title": "Home",
-      "date": "2026-05-06",
+      "date": "2026-05-15",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "i34ger1apsasi7q2m6ued5scas_20260506",
+      "eventId": "7diq1iibve41mpbstsguoim7hs_20260515",
       "method": "api-sync"
     },
     {
       "title": "Home",
-      "date": "2026-05-07",
+      "date": "2026-05-18",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "location": "",
-      "eventId": "9ppupni0fpnuc1n98c5f1ob7q8_20260507",
-      "method": "api-sync"
-    },
-    {
-      "title": "Home",
-      "date": "2026-05-08",
-      "startTime": "(all day)",
-      "endTime": "",
-      "isAllDay": true,
-      "location": "",
-      "eventId": "7diq1iibve41mpbstsguoim7hs_20260508",
+      "eventId": "ghrvjeehju3tnu5q35e242l41s_20260518",
       "method": "api-sync"
     },
     {
       "title": "Working location: Home",
       "location": "Home",
-      "date": "April 6 – 10, 2026",
+      "date": "April 13 – 17, 2026",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "category": "working-location",
-      "raw": "Working location: Home, Carlos Carrillo, April 6 – 10, 2026"
+      "raw": "Working location: Home, Carlos Carrillo, April 13 – 17, 2026"
     },
     {
       "title": "Working location: Home",
       "location": "Home",
-      "date": "March 30 – April 3, 2026",
+      "date": "April 20 – 24, 2026",
       "startTime": "(all day)",
       "endTime": "",
       "isAllDay": true,
       "category": "working-location",
-      "raw": "Working location: Home, Carlos Carrillo, March 30 – April 3, 2026"
+      "raw": "Working location: Home, Carlos Carrillo, April 20 – 24, 2026"
     }
   ],
-  "rawTextLength": 5317
+  "rawTextLength": 4422
 }

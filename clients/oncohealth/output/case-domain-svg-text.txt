@@ -1,0 +1,386 @@
+Total unique text elements: 384
+
+    0  OLD DRAFT Provider Schema
+    1  MS-​SQL
+    2  (from OncoHealth)
+    3  OLD DRAFT Eligibility Schema 2/10/26
+    4  BusinessGrain
+    5  PK
+    6  Id
+    7  guid
+    8  FK
+    9  PayerId
+   10  Type
+   11  ParentGrain
+   12  nullable guid
+   13  Name
+   14  string
+   15  ...
+   16  EmployerGroup
+   17  DrugSnapshot
+   18  Version
+   19  VersionCreated
+   20  int
+   21  VersionFor
+   22  RxCui
+   23  Hcpcs
+   24  Ndc
+   25  nullable string
+   26  RxNormVersion
+   27  str
+   28  Scope
+   29  enum
+   30  Note that history needs to be
+   31  tracked across the case table
+   32  and the element tables.
+   33  RecordId may match the
+   34  CaseId if the case record
+   35  itself is being modified.
+   36  Used by the rules engine
+   37  request external action or to
+   38  block the progress of a case
+   39  until e.g. errors are corrected
+   40  or more data becomes
+   41  available. Records should
+   42  likely have unique RuleIds,
+   43  maybe RuleId should be PK.
+   44  Provider Schema currently
+   45  being designed, just make
+   46  placeholders for now.
+   47  GeneticMolecularTestSnapshot
+   48  CptCode
+   49  TestName
+   50  CodeListVersion
+   51  CasePharmacyDrugElement
+   52  CreatedAt
+   53  dt
+   54  DeletedAt
+   55  nullable dt
+   56  CaseId
+   57  DrugVersion
+   58  Determination
+   59  EligibilityKey
+   60  AllowedDose
+   61  ?
+   62  MaxBillingUnits
+   63  QuantityPerAuth
+   64  CycleCount
+   65  ClinicalReason
+   66  CURRENT DRAFT: Case Schema (partially denormalized)
+   67  Case = exactly 2 rows
+   68  Row 1: ProviderRole =
+   69  Ordering
+   70  Row 2: ProviderRole =
+   71  Servicing/Treating
+   72  Not 1:N — the 2-​row
+   73  constraint is intentional.
+   74  Missing rows = section
+   75  disabled for this payer
+   76  config (not a data error).
+   77  as of Phase 1 (3/30/26 deliverable)
+   78  CasePOSCode
+   79  POSCode
+   80  varchar(2)
+   81  POSDescription
+   82  varchar(100)
+   83  IsActive
+   84  bool
+   85  Case tables
+   86  Flattened Views of Auxiliary Records
+   87  Snapshots of Auxiliary Records
+   88  CasePatch (immutable)
+   89  Payload
+   90  json
+   91  ChangedFor
+   92  ChangedBy
+   93  ChangedAt
+   94  CaseDocument (immutable)
+   95  DocumentId
+   96  guid?
+   97  SentReceived
+   98  From
+   99  DocumentType
+  100  Medium
+  101  CaseNote
+  102  Content
+  103  UpdatedAt
+  104  CreatedBy
+  105  Case
+  106  PriorCaseId
+  107  TimeDue
+  108  PrimaryEligibilityKey
+  109  OrderingProviderIKey
+  110  TreatingProviderKey
+  111  TreatingProviderType
+  112  PlaceOfTreatmentKey
+  113  PrimaryRegimenKey
+  114  AncillaryRegimenKey
+  115  ClinicalProgramType
+  116  DiagnosisGroup
+  117  Icd10Code
+  118  DiagnosisStage
+  119  TreatmentStart
+  120  TreatmentEnd
+  121  LockedBy
+  122  WorkflowStep
+  123  Priority
+  124  Commit
+  125  CaseAction
+  126  ActionType
+  127  RulesetId
+  128  ResolvedAt
+  129  CaseRadiationElement
+  130  TherapyVersion
+  131  Clinical Reason
+  132  CaseMedicalDrugElement
+  133  CaseGeneticMolecularTestingElement
+  134  TestVersion
+  135  PotentialEligibility
+  136  PK, FK
+  137  FK, FK
+  138  SearchTerms
+  139  These are the Eligibility records that could potentially
+  140  be relevant to this case. If a patient is dual eligibility,
+  141  for instance, this table would have two records for
+  142  that case.
+  143  CaseMessage and
+  144  CaseDocument are already
+  145  immutable, and thus don&#39;t
+  146  need versioning.
+  147  ICD 10 is used to code diagnoses.
+  148  DocumentId is what
+  149  DocumentManager uses.
+  150  RadiationTherapySnapshot
+  151  CaseMessage (immutable)
+  152  To
+  153  Text
+  154  MessageType
+  155  NotificationTrigger
+  156  DeliveryStatus
+  157  CaseOfficeContact
+  158  ProviderRole
+  159  ContactName
+  160  ContactPhone
+  161  varchar(20)
+  162  ContactFax
+  163  ContactEmail
+  164  varchar(255)
+  165  nullable
+  166  VW_ClinicianFlat
+  167  ClinicianKey
+  168  VersionBy
+  169  FacilityKey
+  170  FacilityName
+  171  NPI
+  172  Tin
+  173  FirstName
+  174  LastName
+  175  Specialty
+  176  Title
+  177  IsSoleProprietor
+  178  Phone
+  179  Fax
+  180  Email
+  181  AddressLine1
+  182  AddressLine2
+  183  City
+  184  State
+  185  Zip
+  186  VW_TreatingFacilityFlat
+  187  TIN
+  188  Address
+  189  String
+  190  String(10)
+  191  EligibilityFlat
+  192  Key
+  193  IsDeleted
+  194  DeletedBy
+  195  DeletedOn
+  196  StartAt
+  197  EndAt
+  198  RelatedPersonKey
+  199  RelatedPersonAdressKey
+  200  MemberId
+  201  PatientFirstName
+  202  PatientLastName
+  203  PatientMiddleInitial
+  204  PatientGender
+  205  PatientDateOfBirth
+  206  PatientSSN
+  207  DependentSSN
+  208  PatientAddressKey
+  209  PatientHomePhone
+  210  PatientHomePhoneExt
+  211  PatientWorkPhone
+  212  PatientWorkPhoneExt
+  213  PatientMobilePhone
+  214  PatientMobilePhoneExt
+  215  PatientPreferredLanguageCode
+  216  PayerKey
+  217  PlatformCode
+  218  LegacySystemSourceCustomerCoverageKey
+  219  EligibilitySource
+  220  enum: NewUM, ETL
+  221  EmployerGroupKey
+  222  EmployerGroupAdressKey
+  223  AccessibilityPreference
+  224  MajorLineOfBusiness
+  225  HasRepresentative
+  226  LineOfBusinessVersion
+  227  CardId
+  228  MemberReportingId
+  229  sting
+  230  MedicaidNumber
+  231  MedicareBeneficiaryId
+  232  CoverageStart
+  233  date
+  234  CoverageEnd
+  235  PlanDescription
+  236  AsoIndicator
+  237  PatientAdressVersion
+  238  MemberBenefit
+  239  enum: Medical, Pharmacy,
+  240  MedicalAndPharmacy
+  241  StateOfPlanIssue
+  242  CarrierId
+  243  AccountId
+  244  BenefitPackageVersion
+  245  InsuranceGroupId
+  246  HasOutOfNetworkBenefit
+  247  IsRxCarvedOut
+  248  IsERISA
+  249  IsFEHBPlan
+  250  PrescriptionCarveoutType
+  251  enum: Yes, No, NotApplicable,
+  252  RxCarveOutStartDate
+  253  RxCarveOutEndDate
+  254  RiskPatient
+  255  DualEligibilityStatus
+  256  IsOutOfArea
+  257  ProductType
+  258  RelationshipCode
+  259  CoverageTypeCode
+  260  ContractNumber
+  261  PharmacyGroupId
+  262  SpanType
+  263  SuppressLetters
+  264  LetterSuppressionDate
+  265  CustomFields
+  266  jsonb
+  267  EmployerGroupName
+  268  EmployerGroupAddressKey
+  269  ContractEffectiveDate
+  270  ContractTerminationDate
+  271  PROPOSED DRAFT: Payer
+  272  group
+  273  group_key
+  274  organization_id
+  275  organization_name
+  276  group_id
+  277  group_name
+  278  sub_group_id
+  279  sub_group_name
+  280  contract_start_date
+  281  contract_end_date
+  282  custom_fields
+  283  __insert_time
+  284  payer_organisation_link
+  285  payer_organisation_link_
+  286  key
+  287  organisation_id
+  288  payer_id
+  289  is_deleted
+  290  __start_at
+  291  __end_at
+  292  business_grain
+  293  business_grain_key
+  294  payer_key
+  295  parent_grain_key
+  296  name
+  297  business_grouping
+  298  business_grouping_key
+  299  major_lob
+  300  parent_grouping_key
+  301  payer
+  302  parent_payer_id
+  303  description
+  304  service_method
+  305  real_time_auth_method
+  306  max_member_id_length
+  307  member_id_pattern
+  308  string: RegExp
+  309  member_id_validation_message
+  310  is_employer_group_required
+  311  __updated_time
+  312  benefit_package
+  313  benefit_package_key
+  314  product_type
+  315  aso_indicator
+  316  medical_benefit_indicator
+  317  rx_benefit_indicator
+  318  out_of_network_benefit_indicator
+  319  out_of_area_benefit_indicator
+  320  out_of_area_benefit_description
+  321  rx_benefit_carve_out_indicator
+  322  rx_benefit_carve_out_start_date
+  323  rx_benefit_carve_out_end_date
+  324  dual_eligibility_indicator
+  325  parrent_bussiness_grouping_key
+  326  is_medicare_advantage_risk_patient
+  327  is_erisa
+  328  is_fehb_plan
+  329  Driven by NewUM application
+  330  PROPOSED DRAFT: Eligibility Schema
+  331  person
+  332  person_id
+  333  member_id
+  334  __is_deleted
+  335  related_person
+  336  related_person_key
+  337  first_name
+  338  last_name
+  339  middle_name
+  340  gender_code
+  341  phone_1_number
+  342  number
+  343  phone_1_type
+  344  phone_2_number
+  345  phone_2_type
+  346  relationship_code
+  347  address_key
+  348  address_line_1
+  349  address_line_2
+  350  city
+  351  state
+  352  zip_cope
+  353  zip_extension
+  354  eligibility
+  355  eligibility_key
+  356  patient_id
+  357  insurance_card_id
+  358  medicaid_id
+  359  medicare_beneficiary_id
+  360  coverage_start_date
+  361  coverage_end_date
+  362  nullable date
+  363  date_of_birth
+  364  preferred_language_code
+  365  letter_accomodation_code
+  366  phone_1_extension
+  367  phone_2_extension
+  368  state_of_issue
+  369  plan_id
+  370  plan_key
+  371  plan_name
+  372  rx_carrier
+  373  rx_account
+  374  rx_group
+  375  medicare_part_c_pbp_number
+  376  medicare_part_c_contract_number
+  377  formulary_id
+  378  network_id
+  379  mailing_address_key
+  380  physical_address_key
+  381  privacy_address_key
+  382  member_representative_key
+  383  subscriber_key

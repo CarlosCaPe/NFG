@@ -1,90 +1,75 @@
 Google Calendar — Google Account: Carlos Carrillo  
 (carlos.carrillo@newfireglobal.com)
-Captured: 2026-04-10T17:25:49.679Z
-Range: 2026-04-03 → 2026-04-24
-Events: 52
+Captured: 2026-04-20T15:40:14.125Z
+Range: 2026-04-13 → 2026-05-04
+Events: 43
 
 ════════════════════════════════════════════════════════════
 
 
-── 2026-04-03 ────────────────────────────────────────
+── 2026-04-13 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Free
+  (all day)  Day prior to Sinhala & Tamil New Year Day - Sri Lanka
+  (all day)  Easter (moved from Sun, 12) - Ukraine
+  (all day)  Easter Monday (Orthodox) - North Macedonia
+  (all day)  Orthodox Easter Monday - Bosnia and Herzegovina
+  (all day)  Orthodox Easter Monday - Greece
+  10am – 10:30am  busy, Calendar: carlos.carrillo@dataqbs.com
+  3pm – 3:30pm  busy, Calendar: carlos.carrillo@dataqbs.com
+  4:30pm – 5:30pm  busy, Calendar: carlos.carrillo@dataqbs.com
+  8:35am – 9am  Tentative, Calendar: Calendar
+
+── 2026-04-14 ────────────────────────────────────────
+  (all day)  Home
+  (all day)  Dr. B.R. Ambedkar Jayanthi - India
+  (all day)  Sinhala & Tamil New Year Day - Sri Lanka
+  7am – 8am  Tentative, Calendar: Calendar
+  8:35am – 9am  Tentative, Calendar: Calendar
+
+── 2026-04-15 ────────────────────────────────────────
+  (all day)  Home
+  7:30am – 8am  busy, Calendar: carlos.carrillo@dataqbs.com
+  8:35am – 9am  Tentative, Calendar: Calendar
+  9am – 9:30am  Tentative, Calendar: Calendar
+
+── 2026-04-16 ────────────────────────────────────────
   (all day)  Home
   (all day)  Away
-  (all day)  Free
-  (all day)  Good Friday
-  (all day)  Good Friday (Easter Week) - Peru
-  (all day)  Good Friday (Holy Week) - Costa Rica
-  (all day)  Good Friday (Holy Week) - Ecuador
-  (all day)  Good Friday - Argentina
-  (all day)  Good Friday - Bolivia
-  (all day)  Good Friday - Brazil
-  (all day)  Good Friday - Canada
-  (all day)  Good Friday - Chile
-  (all day)  Good Friday - Colombia
-  (all day)  Good Friday - Dominican Republic
-  (all day)  Good Friday - El Salvador
-  (all day)  Good Friday - India
-  (all day)  Good Friday - Indonesia
-  (all day)  Good Friday - Philippines
-  (all day)  Good Friday - Portugal
-  (all day)  Good Friday - Singapore
-  (all day)  Good Friday - Spain
-  (all day)  Good Friday - Sri Lanka
-  (all day)  Tourism Week - Uruguay
+  4pm – 5pm  busy, Calendar: carlos.carrillo@dataqbs.com
+  6:00 AM – 6:50 AM  Drop-In with the CEO (Open Mic)
+  6am – 6:50am  Drop-In with the CEO (Open Mic), Carlos Carrillo, Needs RSVP
   8:35am – 9am  Tentative, Calendar: Calendar
+  9:05am – 10am  Tentative, Calendar: Calendar
 
-── 2026-04-04 ────────────────────────────────────────
-  (all day)  Holy Saturday
-  (all day)  Tourism Week - Uruguay
-
-── 2026-04-05 ────────────────────────────────────────
-  (all day)  Easter Sunday
-  (all day)  Easter Sunday - Poland
-
-── 2026-04-06 ────────────────────────────────────────
+── 2026-04-17 ────────────────────────────────────────
   (all day)  Home
-  (all day)  Tentative
-  (all day)  Easter Monday - Canada
-  (all day)  Easter Monday - Croatia
-  (all day)  Easter Monday - Ireland
-  (all day)  Easter Monday - Poland
-  (all day)  Easter Monday - Spain - Basque
-  (all day)  Easter Monday - Spain - Valencia
-  1pm – 1:30pm  busy, Calendar: carlos.carrillo@dataqbs.com
+  (all day)  Away
+  6am – 2:30pm  Free, Calendar: Calendar
   8:35am – 9am  Tentative, Calendar: Calendar
+  9:05am – 10am  Tentative, Calendar: Calendar
 
-── 2026-04-07 ────────────────────────────────────────
+── 2026-04-20 ────────────────────────────────────────
   (all day)  Home
-  2:00 PM – 2:30 PM  Interview with Rafael B. | Senior/Lead Python Engineer
+  (all day)  Basava Jayanthi, Akshaya Tritiya - India
+  8:35am – 9am  Tentative, Calendar: Calendar
+  9:05am – 10am  Tentative, Calendar: Calendar
 
-── 2026-04-08 ────────────────────────────────────────
-  (all day)  Home
-  1:30 PM – 2:00 PM  Interview with David C. | Senior/Lead Python Engineer
-  7:00 AM – 7:30 AM  Lunch & Learn: How LLMs Actually Work
-
-── 2026-04-09 ────────────────────────────────────────
+── 2026-05-13 ────────────────────────────────────────
   (all day)  Home
 
-── 2026-04-10 ────────────────────────────────────────
+── 2026-05-14 ────────────────────────────────────────
+  (all day)  Home
+  6:00 AM – 6:50 AM  Drop-In with the CEO (Open Mic)
+
+── 2026-05-15 ────────────────────────────────────────
   (all day)  Home
 
-── 2026-05-04 ────────────────────────────────────────
+── 2026-05-18 ────────────────────────────────────────
   (all day)  Home
 
-── 2026-05-05 ────────────────────────────────────────
-  (all day)  Home
-
-── 2026-05-06 ────────────────────────────────────────
-  (all day)  Home
-
-── 2026-05-07 ────────────────────────────────────────
-  (all day)  Home
-
-── 2026-05-08 ────────────────────────────────────────
-  (all day)  Home
-
-── April 6 – 10, 2026 ────────────────────────────────────────
+── April 13 – 17, 2026 ────────────────────────────────────────
   (all day)  Working location: Home
 
-── March 30 – April 3, 2026 ────────────────────────────────────────
+── April 20 – 24, 2026 ────────────────────────────────────────
   (all day)  Working location: Home

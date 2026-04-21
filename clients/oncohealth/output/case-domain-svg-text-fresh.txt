@@ -1,0 +1,385 @@
+﻿OLD DRAFT Provider Schema
+MS-â€‹SQL
+(from OncoHealth)
+OLD DRAFT Eligibility Schema 2/10/26
+BusinessGrain
+PK
+Id
+guid
+FK
+PayerId
+Type
+ParentGrain
+nullable guid
+Name
+string
+...
+EmployerGroup
+DrugSnapshot
+Version
+VersionCreated
+int
+VersionFor
+RxCui
+Hcpcs
+Ndc
+nullable string
+RxNormVersion
+str
+Scope
+enum
+Note that history needs to be
+tracked across the case tableÂ
+and the element tables.
+RecordId may match theÂ
+CaseId if the case recordÂ
+itself is being modified.
+Used by the rules engineÂ
+request external action or toÂ
+block the progress of a caseÂ
+until e.g. errors are correctedÂ
+or more data becomesÂ
+available. Records shouldÂ
+likely have unique RuleIds,Â
+maybe RuleId should be PK.
+Provider Schema currently
+being designed, just makeÂ
+placeholders for now.
+GeneticMolecularTestSnapshot
+CptCode
+TestName
+CodeListVersion
+CasePharmacyDrugElement
+CreatedAt
+dt
+DeletedAt
+nullable dt
+CaseId
+DrugVersion
+Determination
+EligibilityKey
+AllowedDose
+?
+MaxBillingUnits
+QuantityPerAuth
+CycleCount
+ClinicalReason
+CURRENT DRAFT: Case Schema (partially denormalized)
+Case = exactly 2 rows
+Row 1: ProviderRole =Â
+Ordering
+Row 2: ProviderRole =Â
+Servicing/Treating
+Not 1:N â€” the 2-â€‹rowÂ
+constraint is intentional.
+Missing rows = sectionÂ
+disabled for this payerÂ
+config (not a data error).
+as of Phase 1 (3/30/26 deliverable)
+CasePOSCode
+POSCode
+varchar(2)
+POSDescription
+varchar(100)
+IsActive
+bool
+Case tables
+Flattened Views of Auxiliary Records
+Snapshots of Auxiliary Records
+CasePatch (immutable)
+Payload
+json
+ChangedFor
+ChangedBy
+ChangedAt
+CaseDocument (immutable)
+DocumentId
+guid?
+SentReceived
+From
+DocumentType
+Medium
+CaseNote
+Content
+UpdatedAt
+CreatedBy
+Case
+PriorCaseId
+TimeDue
+PrimaryEligibilityKey
+OrderingProviderIKey
+TreatingProviderKey
+TreatingProviderType
+PlaceOfTreatmentKey
+PrimaryRegimenKey
+AncillaryRegimenKey
+ClinicalProgramType
+DiagnosisGroup
+Icd10Code
+DiagnosisStage
+TreatmentStart
+TreatmentEnd
+LockedBy
+WorkflowStep
+Priority
+Commit
+CaseAction
+ActionType
+RulesetId
+ResolvedAt
+CaseRadiationElement
+TherapyVersion
+Clinical Reason
+CaseMedicalDrugElement
+CaseGeneticMolecularTestingElement
+TestVersion
+PotentialEligibility
+PK, FK
+FK, FK
+SearchTerms
+These are the Eligibility records that could potentially
+be relevant to this case. If a patient is dual eligibility,Â
+for instance, this table would have two records forÂ
+that case.
+CaseMessage andÂ
+CaseDocument are already
+immutable, and thus don&#39;tÂ
+need versioning.
+ICD 10 is used to code diagnoses.
+DocumentId is whatÂ
+DocumentManager uses.
+RadiationTherapySnapshot
+CaseMessage (immutable)
+To
+Text
+MessageType
+NotificationTrigger
+DeliveryStatus
+CaseOfficeContact
+ProviderRole
+ContactName
+ContactPhone
+varchar(20)
+ContactFax
+ContactEmail
+varchar(255)Â
+nullable
+VW_ClinicianFlat
+ClinicianKey
+VersionBy
+FacilityKey
+FacilityName
+NPI
+Tin
+FirstName
+LastName
+Specialty
+Title
+IsSoleProprietor
+Phone
+Fax
+Email
+AddressLine1
+AddressLine2
+City
+State
+Zip
+VW_TreatingFacilityFlat
+TIN
+Address
+String
+String(10)
+EligibilityFlat
+Key
+IsDeleted
+DeletedBy
+DeletedOn
+StartAt
+EndAt
+RelatedPersonKey
+RelatedPersonAdressKey
+MemberId
+PatientFirstName
+PatientLastName
+PatientMiddleInitial
+PatientGender
+PatientDateOfBirth
+PatientSSN
+DependentSSN
+PatientAddressKey
+guidÂ
+PatientHomePhone
+PatientHomePhoneExt
+PatientWorkPhone
+PatientWorkPhoneExt
+PatientMobilePhone
+PatientMobilePhoneExt
+PatientPreferredLanguageCode
+PayerKey
+PlatformCode
+LegacySystemSourceCustomerCoverageKey
+EligibilitySource
+enum: NewUM, ETL
+EmployerGroupKey
+EmployerGroupAdressKey
+AccessibilityPreference
+MajorLineOfBusiness
+HasRepresentative
+LineOfBusinessVersion
+CardId
+MemberReportingId
+sting
+MedicaidNumber
+MedicareBeneficiaryId
+CoverageStart
+date
+CoverageEnd
+PlanDescription
+AsoIndicator
+PatientAdressVersion
+MemberBenefit
+enum: Medical, Pharmacy,Â
+MedicalAndPharmacy
+StateOfPlanIssue
+CarrierId
+AccountId
+BenefitPackageVersion
+InsuranceGroupId
+HasOutOfNetworkBenefit
+IsRxCarvedOut
+IsERISAÂ
+IsFEHBPlanÂ
+PrescriptionCarveoutType
+enum: Yes, No, NotApplicable,Â
+RxCarveOutStartDate
+RxCarveOutEndDate
+RiskPatient
+DualEligibilityStatus
+IsOutOfArea
+ProductType
+RelationshipCode
+CoverageTypeCode
+ContractNumber
+PharmacyGroupId
+SpanType
+SuppressLetters
+LetterSuppressionDate
+CustomFields
+jsonb
+EmployerGroupName
+EmployerGroupAddressKey
+ContractEffectiveDate
+ContractTerminationDate
+PROPOSED DRAFT: Payer
+group
+group_key
+organization_id
+organization_name
+group_id
+group_name
+sub_group_id
+sub_group_name
+contract_start_date
+contract_end_date
+custom_fields
+__insert_time
+payer_organisation_link
+payer_organisation_link_
+key
+organisation_id
+payer_id
+is_deleted
+__start_at
+__end_at
+business_grain
+business_grain_key
+payer_key
+parent_grain_key
+name
+business_grouping
+business_grouping_key
+major_lob
+parent_grouping_key
+payer
+parent_payer_id
+description
+service_method
+real_time_auth_method
+max_member_id_length
+member_id_pattern
+string: RegExp
+member_id_validation_message
+is_employer_group_required
+__updated_time
+benefit_package
+benefit_package_key
+product_type
+aso_indicator
+medical_benefit_indicator
+rx_benefit_indicator
+out_of_network_benefit_indicator
+out_of_area_benefit_indicator
+out_of_area_benefit_description
+rx_benefit_carve_out_indicator
+rx_benefit_carve_out_start_date
+rx_benefit_carve_out_end_date
+dual_eligibility_indicator
+parrent_bussiness_grouping_key
+is_medicare_advantage_risk_patient
+is_erisa
+is_fehb_planÂ
+Driven by NewUM application
+PROPOSED DRAFT: Eligibility Schema
+person
+person_id
+member_id
+__is_deleted
+related_person
+related_person_key
+first_name
+last_name
+middle_name
+gender_code
+phone_1_number
+number
+phone_1_type
+phone_2_number
+phone_2_type
+relationship_code
+address_key
+address_line_1
+address_line_2
+city
+state
+zip_cope
+zip_extension
+eligibility
+eligibility_key
+patient_id
+insurance_card_id
+medicaid_id
+medicare_beneficiary_id
+coverage_start_date
+coverage_end_date
+nullable date
+date_of_birth
+preferred_language_code
+letter_accomodation_code
+phone_1_extension
+phone_2_extension
+state_of_issue
+plan_id
+plan_key
+plan_name
+rx_carrier
+rx_account
+rx_group
+medicare_part_c_pbp_number
+medicare_part_c_contract_number
+formulary_id
+network_id
+mailing_address_key
+physical_address_key
+privacy_address_key
+member_representative_key
+subscriber_key

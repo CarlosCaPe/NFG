@@ -3,7 +3,7 @@ Keyboard shortcuts
 Accessibility Feedback
 Calendar
 Today
-Friday, April 10
+Monday, April 20
 Previous day
 Next day
 April 2026
@@ -159,7 +159,7 @@ Time Insights
 Time Insights
 keyboard_arrow_up
 More insights
-APR 3 – 6, 2026
+APR 13 – 20, 2026
 0 hr in meetings
 More insights
 Calendar list
@@ -175,196 +175,171 @@ Calendar
 carlos.carrillo@dataqbs.com
 Holidays in Mexico
 Public Holidays (Newfire Global)
-Schedule starting Friday, April 3, 2026, 47 events
-3
-APR, FRI
-All day
-Home
-Carlos Carrillo, Accepted
-Friday, April 3
-All day
-Free (Day 5/17)
-Calendar: Calendar, Accepted
-Friday, April 3
-All day
-Free (Day 5/5)
-Calendar: Calendar, Accepted
-Friday, April 3
-All day
-Free (Day 1/4)
-Calendar: Calendar, Accepted
-Friday, April 3
-All day
-Away
-Calendar: Calendar, Accepted
-Friday, April 3
-All day
-Free
-Calendar: Calendar, Accepted
-Friday, April 3
-All day
-Good Friday
-Calendar: Holidays in Mexico, Accepted
-Friday, April 3
-All day
-Good Friday (Easter Week) - Peru
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday (Holy Week) - Costa Rica
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday (Holy Week) - Ecuador
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Argentina
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Bolivia
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Brazil
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Canada
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Chile
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Colombia
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Dominican Republic
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - El Salvador
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - India
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Indonesia
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Philippines
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Portugal
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Singapore
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Spain
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Good Friday - Sri Lanka
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-All day
-Tourism Week - Uruguay
-Calendar: Public Holidays (Newfire Global), Accepted
-Friday, April 3
-8:35 – 9am
-Tentative
-Calendar: Calendar, Accepted
-4
-APR, SAT
-All day
-Free (Day 6/17)
-Calendar: Calendar, Accepted
-Saturday, April 4
-All day
-Free (Day 2/4)
-Calendar: Calendar, Accepted
-Saturday, April 4
-All day
-Holy Saturday
-Calendar: Holidays in Mexico, Accepted
-Saturday, April 4
-All day
-Tourism Week - Uruguay
-Calendar: Public Holidays (Newfire Global), Accepted
-5
-APR, SUN
-All day
-Free (Day 7/17)
-Calendar: Calendar, Accepted
-Sunday, April 5
-All day
-Free (Day 3/4)
-Calendar: Calendar, Accepted
-Sunday, April 5
-All day
-Easter Sunday
-Calendar: Holidays in Mexico, Accepted
-Sunday, April 5
-All day
-Easter Sunday - Poland
-Calendar: Public Holidays (Newfire Global), Accepted
-6
+Schedule starting Monday, April 13, 2026, 40 events
+13
 APR, MON
 All day
 Home
 Carlos Carrillo, Accepted
-Monday, April 6
+Monday, April 13
 All day
-Free (Day 8/17)
+Free (Day 15/17)
 Calendar: Calendar, Accepted
-Monday, April 6
+Monday, April 13
 All day
-Free (Day 4/4)
+Free
 Calendar: Calendar, Accepted
-Monday, April 6
+Monday, April 13
 All day
-Tentative
+Free
 Calendar: Calendar, Accepted
-Monday, April 6
+Monday, April 13
 All day
-Easter Monday - Canada
-Calendar: Public Holidays (Newfire Global), Accepted
-Monday, April 6
+Free
+Calendar: Calendar, Accepted
+Monday, April 13
 All day
-Easter Monday - Croatia
+Day prior to Sinhala & Tamil New Year Day - Sri Lanka
 Calendar: Public Holidays (Newfire Global), Accepted
-Monday, April 6
+Monday, April 13
 All day
-Easter Monday - Ireland
+Easter (moved from Sun, 12) - Ukraine
 Calendar: Public Holidays (Newfire Global), Accepted
-Monday, April 6
+Monday, April 13
 All day
-Easter Monday - Poland
+Easter Monday (Orthodox) - North Macedonia
 Calendar: Public Holidays (Newfire Global), Accepted
-Monday, April 6
+Monday, April 13
 All day
-Easter Monday - Spain - Basque
+Orthodox Easter Monday - Bosnia and Herzegovina
 Calendar: Public Holidays (Newfire Global), Accepted
-Monday, April 6
+Monday, April 13
 All day
-Easter Monday - Spain - Valencia
+Orthodox Easter Monday - Greece
 Calendar: Public Holidays (Newfire Global), Accepted
-Monday, April 6
+Monday, April 13
 8:35 – 9am
 Tentative
 Calendar: Calendar, Accepted
-Monday, April 6
-1 – 1:30pm
+Monday, April 13
+10 – 10:30am
 busy
 Calendar: carlos.carrillo@dataqbs.com, Accepted
+Monday, April 13
+3 – 3:30pm
+busy
+Calendar: carlos.carrillo@dataqbs.com, Accepted
+Monday, April 13
+4:30 – 5:30pm
+busy
+Calendar: carlos.carrillo@dataqbs.com, Accepted
+14
+APR, TUE
+All day
+Home
+Carlos Carrillo, Accepted
+Tuesday, April 14
+All day
+Free (Day 16/17)
+Calendar: Calendar, Accepted
+Tuesday, April 14
+All day
+Dr. B.R. Ambedkar Jayanthi - India
+Calendar: Public Holidays (Newfire Global), Accepted
+Tuesday, April 14
+All day
+Sinhala & Tamil New Year Day - Sri Lanka
+Calendar: Public Holidays (Newfire Global), Accepted
+Tuesday, April 14
+7 – 8am
+Tentative
+Calendar: Calendar, Accepted
+Tuesday, April 14
+8:35 – 9am
+Tentative
+Calendar: Calendar, Accepted
+15
+APR, WED
+All day
+Home
+Carlos Carrillo, Accepted
+Wednesday, April 15
+All day
+Free (Day 17/17)
+Calendar: Calendar, Accepted
+Wednesday, April 15
+7:30 – 8am
+busy
+Calendar: carlos.carrillo@dataqbs.com, Accepted
+Wednesday, April 15
+8:35 – 9am
+Tentative
+Calendar: Calendar, Accepted
+Wednesday, April 15
+9 – 9:30am
+Tentative
+Calendar: Calendar, Accepted
+16
+APR, THU
+All day
+Home
+Carlos Carrillo, Accepted
+Thursday, April 16
+All day
+Away
+Calendar: Calendar, Accepted
+Thursday, April 16
+6 – 6:50am
+Drop-In with the CEO (Open Mic)
+https://us06web.zoom.us/j/85676018288?pwd=Zq1cjqbIeoBPfF80U0OGHjF7gHpCQZ.1&jst=3
+Carlos Carrillo, Needs RSVP
+Thursday, April 16
+8:35 – 9am
+Tentative
+Calendar: Calendar, Accepted
+Thursday, April 16
+9:05 – 10am
+Tentative
+Calendar: Calendar, Accepted
+Thursday, April 16
+4 – 5pm
+busy
+Calendar: carlos.carrillo@dataqbs.com, Accepted
+17
+APR, FRI
+All day
+Home
+Carlos Carrillo, Accepted
+Friday, April 17
+All day
+Away
+Calendar: Calendar, Accepted
+Friday, April 17
+6am – 2:30pm
+Free
+Calendar: Calendar, Accepted
+Friday, April 17
+8:35 – 9am
+Tentative
+Calendar: Calendar, Accepted
+Friday, April 17
+9:05 – 10am
+Tentative
+Calendar: Calendar, Accepted
+20
+APR, MON
+All day
+Home
+Carlos Carrillo, Accepted
+Monday, April 20, today
+All day
+Basava Jayanthi, Akshaya Tritiya - India
+Calendar: Public Holidays (Newfire Global), Accepted
+Monday, April 20, today
+8:35 – 9am
+Tentative
+Calendar: Calendar, Accepted
+Monday, April 20, today
+9:05 – 10am
+Tentative
+Calendar: Calendar, Accepted

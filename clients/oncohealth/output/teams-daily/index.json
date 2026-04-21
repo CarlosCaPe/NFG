@@ -1,5 +1,5 @@
 {
-  "last_capture": "2026-04-10T17:28:18.466Z",
+  "last_capture": "2026-04-20T15:46:01.487Z",
   "captures": [
     {
       "date": "2026-03-20",
@@ -195,6 +195,22 @@
     },
     {
       "date": "2026-04-10",
+      "channels": 0,
+      "chats": 8,
+      "transcripts": 0,
+      "calendar_chars": 0,
+      "total_chars": 0
+    },
+    {
+      "date": "2026-04-20",
+      "channels": 12,
+      "chats": 0,
+      "transcripts": 0,
+      "calendar_chars": 0,
+      "total_chars": 5069
+    },
+    {
+      "date": "2026-04-20",
       "channels": 0,
       "chats": 8,
       "transcripts": 0,

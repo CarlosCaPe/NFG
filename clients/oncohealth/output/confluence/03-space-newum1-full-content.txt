@@ -1,5 +1,5 @@
 # NewUM Product Team — Full Content Export
-Exported: 2026-04-10T17:31:41.642Z
+Exported: 2026-04-20T15:37:36.774Z
 Pages: 50
 
 
@@ -6114,7 +6114,7 @@ pharmacyBlue
 
  | RequiredRed
 
- | User selects drug via ancillary drug add/search from Master Drug Library. Selected HCPCS added as a row in dosing table. 
+ | User selects drug via drug add/search from Master Drug Library. Selected HCPCS added as a row in dosing table. 
 Editable via selecting alternative drugs, if available.
 
  | Changing HCPCS for either Medical or Pharmacy table: 
@@ -6192,8 +6192,6 @@ Editable. Drop Down Logic:
 3. The Units dropdown should always include &ldquo;Unknown&rdquo; as a selectable option.
 
  | Unit selection determines whether Allowed Dose is calculated (mg/kg, mg/m&sup2;, etc.) or equals Dosage (fixed units).
-
-tbdRed validate if this mapping logic applies to Ancillary drugs as well/
 
 Source of allowed Units values: should be determined based on the drug&rsquo;s associated Billable Unit of Measure (Billable UOM).
 
@@ -6441,10 +6439,7 @@ pharmacyBlue
 
  | RequiredRed
 
- | 
-Displayed for ancillary drugs; editable as permitted.
-
- | 
+ |  | 
 Depends on PDL configuration and user selection permissions.
 
  | 
@@ -7628,115 +7623,6 @@ Out of Scope
 
 Tracking any specific items that are out of scope for this feature
 
-#### Basic Request Information
-
-Project Specifics
-
-Target Release
-
- |  | 
-Document Status
-
- | not started in progressYellow blockedRed pending sign offPurple completedGreen 
-
- | 
-Document Owner
-
- |  | 
-Designer
-
- |  | 
-ADO Epic
-
- |  | 
-ADO Feature
-
- |  | 
-Stakeholders / SMEs
-
- |  | 
-Goals & Business Objectives
-
-<>
-
-Background & Current State
-
-What are the standards in the UM industry?
-
-What are the current pain points? What is working well?
-
-Links to any initial research documentations
-
-Functional Requirements
-
-Define what the system must do, specifying behavior, data processing needs, and business rules - no technical specifications
-
-Requirement
-
- | Priority
-
- | Description (Use Case Format)
-
- | Notes
-
- | 
- |  |  |  | 
-Data Dictionary
-
-Defines the business meaning, usage, and validation expectations for data elements used by this feature (-s).  This section provides a common reference for field definitions.
-
-Field Name
-
- | Description
-
- | Data Type
-
- | Validation Rules
-
- | 
- |  |  |  | 
-Rules Catalog
-
-Identifies the business rules applicable to this feature(-s) and links to the centralized Rules Inventory where rule definitions are maintained. This section enables traceability while avoiding duplication of rule logic within the PRD.
-
-User Stories
-
-User Stories
-
-User Story Title
-
- | Brief Description
-
- | Priority
-
- | Notes
-
- | 
-1 |  |  | must haveRed should haveYellow nice to haveBlue 
-
- |  | 
-2 |  |  |  |  | 
-UX
-
-<>
-
-Open Items
-
-Item / Question
-
- | Owner
-
- | Resolution & Notes
-
- | Status
-
- | 
- |  |  |  | 
- |  |  |  | 
-Out of Scope
-
-Tracking any specific items that are out of scope for this feature
-
 #### Capture Basic Dosing Details
 
 Project Specifics
@@ -7804,7 +7690,7 @@ Display only fields applicable to each benefit type
 
 Medical table includes Allowed Dose and Max Billing Units/Auth 
 
-Pharmacy table includes Strength, Form, and Quantity per Auth 
+Pharmacy table includes Strength, Form, and Quantity per Cycle
 
 Dynamically re-render table if Billing Method changes
 
@@ -7815,7 +7701,7 @@ Calculate Medical Billing Units/Auth and Pharmacy Quantity/Cycle
 
  | For Medical drugs, calculate Max Billing Units/Auth using Allowed Dose, frequency, cycle values, and CMU BU 
 
-For Pharmacy drugs, calculate Quantity per Auth using Dosage, Strength, and cycle values 
+For Pharmacy drugs, calculate Quantity per Cycle using Dosage, Strength, and cycle values 
 
 Apply defined rounding rules (2 decimals) 
 
@@ -7882,7 +7768,7 @@ Enforce validation rules on dropdown selections
  | 
 Indicate when a dosing change pushes Billing Unit/Auth or Quantity/Auth above default
 
- | Detect when recalculated Max Billing Units/Auth or Quantity/Auth exceeds configured default thresholds 
+ | Detect when recalculated Max Billing Units/Auth or Quantity/Cycle exceeds configured default thresholds 
 
 Display visual indicator or alert 
 
@@ -7936,7 +7822,7 @@ drives table placement
 
  | Defaulted to the configuration set in the Payer Drug Library for the drug. If set to Crossover, after regimen selection the user is prompted to select the billing method for each crossover drug. User may change billing method during and post case entry. System flags when default value is changed
 
- | Controls whether the row is rendered in the Medical or Pharmacy dosing table. Impacts which fields are required (e.g., Allowed Dose vs Strength/Form) and which calculation logic applies (Max Billing Units/Auth vs Quantity per Auth).
+ | Controls whether the row is rendered in the Medical or Pharmacy dosing table. Impacts which fields are required (e.g., Allowed Dose vs Strength/Form) and which calculation logic applies (Max Billing Units/Auth vs Quantity per Cycle).
 
  | 
 HCPCS Code
@@ -8008,7 +7894,7 @@ Should allow for Numeric entry with format validation (#,###.0#).
 
 The system should flag the dosage field when user entered value exceeds the default value.
 
- | Drives Allowed Dose (Medical), Max Billing Units/Auth (Medical), and Quantity per Auth (Pharmacy).
+ | Drives Allowed Dose (Medical), Max Billing Units/Auth (Medical), and Quantity per Cycle (Pharmacy).
 
  | 
 Units
@@ -8148,7 +8034,7 @@ Editable. Allowed values  sourced from RxNorm Dose Form values on Representative
  | Interdependent with Strength: selecting Form filters Strength options; selecting Strength filters Form options. If only one valid value remains (on load or after selection), auto-populate. If user changes one, update the other accordingly. Strength+Form combination determines which RxCUI tied to NDC, Representative NDC, and GPI are saved for the drug. 
 
  | 
-Quantity per Auth
+Quantity per Cycle
 
  | Calculated pharmacy authorization quantity based on dose, strength, and administration schedule.
 
@@ -8192,7 +8078,7 @@ Editable . Allowed values: One Time, Twice, Every Other Day (QOD), Once a day (Q
 
 Example: If the drug is given twice on Day 1, Adm. Per Day = 2.
 
-Impacts Max Billing Units/Auth and Quantity per Auth calculations.
+Impacts Max Billing Units/Auth and Quantity per Cycle calculations.
 
  | 
 Adm. Days Per Cycle
@@ -8222,7 +8108,7 @@ Examples:
 
 Example: If the drug is given on Days 1, 8, and 15 of a 28-day cycle, Adm. Days Per Cycle = 3.
 
-Impacts Max Billing Units/Auth and Quantity per Auth calculations.
+Impacts Max Billing Units/Auth and Quantity per Cyclecalculations.
 
  | 
 Cycles in Days
@@ -8276,7 +8162,7 @@ Editable. Allowed values: whole positive number, min 1 max 100. Not allowed: dec
 
 Example: If treatment is planned for 6 cycles, Cycles = 6.
 
-Impacts Max Billing Units/Auth and Quantity per Auth calculations.
+Impacts Max Billing Units/Auth and Quantity per Cyclecalculations.
 
  | 
 Status
@@ -8499,7 +8385,7 @@ After a valid Strength and Dose Form combination is selected, the system shall i
 
 If the user changes Strength or Dose Form after identifiers were persisted, the system shall re-select the matching Representative NDC row and update the persisted RxCUI tied to NDC, Representative NDC, and GPI accordingly.
 
-Quantity per Authorization calculation shall not execute for Pharmacy drugs until Strength is selected and the persisted identifiers are available for the selected Strength and Dose Form combination.- part of user story https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Calculate-Pharmacy-Quantity-per-Auth 
+Quantity per Cycle calculation shall not execute for Pharmacy drugs until Strength is selected and the persisted identifiers are available for the selected Strength and Dose Form combination.- part of user story https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Calculate-Pharmacy-Quantity-per-Auth 
 
  | Source mapping is based on the Master Drug Library &ldquo;Additional Drug Codes&rdquo; grid, where each Representative NDC row includes RxCUI tied to NDC, NDC, Representative NDC flag, GPI, RxNorm Dose Form, and Strength.
 
@@ -8554,13 +8440,7 @@ Prior logic removed: Old behavior &ldquo;use dosage when H&W missing&rdquo; is d
 
 Release 1: Default values to be provided by Nichole and included in Release 1 ( confirm whether these default values should be configurable in future)
 
- | assumptionRed Height and Weight are mandatory fields
-
-notedb9b54e0-8fa3-4e30-a94e-d57d65e2196bMeasurement conversion logic (height and weight normalization) is owned by NewUM and must be implemented within NewUM regardless of which system owns the dosing calculation engine
-
-Measurement conversion logic (height and weight normalization) is owned by NewUM and must be implemented within NewUM regardless of which system owns the dosing calculation engine
-
- | 
+ |  | 
 4 | Calculate Allowed Dose Using Height and Weight
 
  | must haveRed  v1.r1.Green  
@@ -8602,7 +8482,7 @@ If weight or height is updated, then Patient Specific dose should be re-calculat
 
 Required inputs shall include Allowed Dose, Adm. Per Day, Adm. Days Per Cycle, Cycle in Days, Duration per Authorization, and CMU BU configuration.
 
-The system shall derive Cycles as Duration per Authorization divided by Cycle in Days, rounded up to the next whole number. in accordance with Cycles logic in DD
+The system shall derive Cycles in accordance with Cycles logic in DD
 
 The system shall calculate Max Billing Units/Auth as
 Allowed Dose &times; Adm. Per Day &times; Adm. Days Per Cycle &times; Cycles divided by CMU BU.
@@ -8626,23 +8506,23 @@ Assumption: The Cycles value used for Max Billing Units/Auth is not the same as 
 validatedGreen  yes. Assumption: Billing unit size is defined in the Master Drug Library by the combination of Billable Unit and Billable UOM. Example: Billable Unit = 1 and Billable UOM = mg means one billing unit equals 1 mg.
 
  | 
-6 | Calculate Pharmacy Quantity per Auth
+6 | Calculate Pharmacy Quantity per Cycle
 
  | must haveRed  v1.r1.Green   
 
- | The system shall calculate Quantity per Auth for all Pharmacy drugs, including Existing Regimen, Custom Regimen, and Ancillary drugs.
+ | The system shall calculate Quantity per Cycle for all Pharmacy drugs, including Existing Regimen, Custom Regimen, and Ancillary drugs.
 
 Required inputs shall include Dosage, Strength, Adm. Per Day, Adm. Days Per Cycle, Cycle in Days, and Duration per Authorization.
 
-The system shall derive Cycles as Duration per Authorization divided by Cycle in Days, rounded up to the next whole number. in accordance with Cycles logic in DD
+The system shall derive Cycles  in accordance with Cycles logic in DD
 
-The system shall calculate Quantity per Auth as Dosage divided by Strength multiplied by Adm. Per Day multiplied by Adm. Days Per Cycle multiplied by Cycles.
+The system shall calculate Quantity per Cycle as Dosage divided by Strength multiplied by Adm. Per Day multiplied by Adm. Days Per Cycle multiplied by Cycles.
 
 The result shall be rounded to two decimal places using standard rounding rules.
 
 If any required input is missing, the system shall display "--".
 
-Quantity per Auth shall be system-calculated and read-only.
+Quantity per Cycle shall be system-calculated and read-only.
 
  | Duration per Authorization must be sourced from Admin configuration.
 
@@ -8697,7 +8577,7 @@ Strength &ndash; blank by default; dropdown options sourced from Master Drug Lib
 
 Form &ndash; blank by default; dropdown options sourced from Master Drug Library (Representative NDC rows &rarr; RxNorm Dose Form).
 
-Quantity per Auth &ndash; system calculated once required inputs are available.
+Quantity per Cycle &ndash; system calculated once required inputs are available.
 
 Status from the Payer Drug Library  - out of scope for this story
 
@@ -8722,7 +8602,7 @@ For Medical drugs, the system shall allow editing of Dosage, Units, Adm. Per Day
 
 For Pharmacy drugs, the system shall allow editing of Dosage, Adm. Per Day, Adm. Days Per Cycle, Cycles in Days, and Cycles, and shall require user selection of Strength and Dose Form.
 
-The system shall keep the following fields read-only because they are system-calculated: Patient Specific Dose or Allowed Dose (as applicable), Max Billing Units/Auth, and Quantity per Auth.
+The system shall keep the following fields read-only because they are system-calculated: Patient Specific Dose or Allowed Dose (as applicable), Max Billing Units/Auth, and Quantity per Cycle.
 
 The system shall enforce required-field rules before the user can proceed or submit:
 
@@ -8753,52 +8633,53 @@ If a user changes an input such that an already-selected dependent value becomes
 
  | must haveRed  v1.r1.Green  
 
- | The system should compare the recalculated Max Billing Units/Auth value for each Medical drug row against the configured Default Max Billing Units per Duration for that drug.
+ | The system should calculate and retain a Default Max Billing Units/Auth value  for each Medical drug row populated from an Existing Regimen using the regimen default dosing values initially loaded for that row (as per https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Max-Billing-Units%2FAuth )
 
-The system should mark the row as Exceeds Default when:
-Calculated Max Billing Units/Auth > Configured Default Max Billing Units per Duration.
+The system should recalculate the Current Max Billing Units/Auth value for the drug row when user edits change any input used in the calculation, namely:
 
-The system should display a row-level visual indicator on the Medical drug row when the row is in Exceeds Default status.
+Allowed Dose (https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Allowed-Dose )
 
-The system should re-evaluate the Exceeds Default status immediately after recalculation completes whenever any input affecting Max Billing Units/Auth changes, including:
+Adm. Per Day (https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Adm.-Per-Day )
 
-Allowed Dose
+Adm. Days Per Cycle (https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Adm.-Days-Per-Cycle )
 
-Adm. Per Day
+Cycles in Days (https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Cycles-in-Days )
 
-Adm. Days Per Cycle
+Cycles (https://oncologyanalytics.atlassian.net/wiki/spaces/NewUM1/pages/5148737537/Capture+Basic+Dosing+Details#Cycles )
 
-Cycles in Days
+The system should compare the Current Max Billing Units/Auth value to the retained Default Max Billing Units/Auth value for the same drug row and mark the drug row as Exceeds Default when   Current Max Billing Units/Auth >  Default Max Billing Units/Auth.:
 
-Cycles
+the system should indicate when Calculated Medical Billing Units Exceed Default
 
-Duration per Authorization
+the system should display both values available for the affected drug row:
 
-The system should remove the indicator automatically when the recalculated Max Billing Units/Auth is less than or equal to the configured default.
+Default Max Billing Units/Auth
 
-The system should apply this logic to Medical drugs added through Existing Regimen, Custom Regimen, and Ancillary Drug workflows.
+Current Max Billing Units/Auth
 
-The indicator should be informational only and should not block save, progression, or submission unless a separate business rule explicitly requires workflow gating.
+The system should allow the user to enter an exceed reason (optional):
 
-The evaluated Exceeds Default result should be tied to the individual case-drug row and should not affect other drug rows on the case.
+The system should store the exceed reason at the individual case-drug-row level.
 
- | validateRed  Nichole
+The system should remove the Exceeds Default status automatically when the Current Max Billing Units/Auth value becomes less than or equal to the Default Max Billing Units/Auth value.
 
-revisit user story
+The Exceeds Default evaluation should be performed independently for each drug row and should not affect other drug rows on the case.
 
- | 
+If either the Default Max Billing Units/Auth value or the Current Max Billing Units/Auth value cannot be calculated, the system should not evaluate Exceeds Default for that row.
+
+ |  | 
 10 | Indicate When Calculated Pharmacy Quantity Exceeds Default
 
  | must haveRed  v1.r1.Green  
 
- | The system should compare the recalculated Quantity per Auth value for each Pharmacy drug row against the configured Default Quantity per Duration for that drug.
+ | The system should compare the recalculated Quantity per Cyclevalue for each Pharmacy drug row against the configured Default Quantity per Duration for that drug.
 
 The system should mark the row as Exceeds Default when:
-Calculated Quantity per Auth > Configured Default Quantity per Duration.
+Calculated Quantity per Cycle > Configured Default Quantity per Duration.
 
 The system should display a row-level visual indicator on the Pharmacy drug row when the row is in Exceeds Default status.
 
-The system should re-evaluate the Exceeds Default status immediately after recalculation completes whenever any input affecting Quantity per Auth changes, including:
+The system should re-evaluate the Exceeds Default status immediately after recalculation completes whenever any input affecting Quantity per Cycle changes, including:
 
 Dosage
 
@@ -8814,7 +8695,7 @@ Cycles
 
 Duration per Authorization
 
-The system should remove the indicator automatically when the recalculated Quantity per Auth is less than or equal to the configured default.
+The system should remove the indicator automatically when the recalculated Quantity per Cycle is less than or equal to the configured default.
 
 The system should apply this logic to Pharmacy drugs added through Existing Regimen, Custom Regimen, and Ancillary Drug workflows.
 
@@ -8842,31 +8723,28 @@ Item / Question
  | Status
 
  | 
-Flag Dosing Changes Exceeding Default Medical Billing Units / Default Pharmacy Quantity: 
+Flag Dosing Changes Exceeding Default Medical Billing Units / Default Pharmacy Quantity:
 
-Which Admin Portal field or fields store the Default Medical Billing Units Limit and Default Pharmacy Quantity Limit : 
+applies to Existing regimen drugs and Ancillary Drugs
 
-AssumptionRed  : the limits are stored in Admin Portal and can be retrieved per drug, but the exact field or field combination is still TBD.
+does not apply to Custom Regimen drugs
 
-Are these limits global per drug, or payer/LOB-specific (and if payer/LOB-specific, what context is required to resolve the correct limit)?
-
-When should the system evaluate and update the flag: on edit, on save, on submit, or a defined combination?
-
-AssumptionRed  : the flag updates during edit and is checked again on save and submit.
-
-What should happen if no default limit is set in Admin Portal? 
-
-AssumptionRed  : if the limit is missing, or if the calculated value is over the threshold, the case can still move forward, but no auto-determination logic should be applied.
-
-What audit details should be saved when the flag changes?
-
-AssumptionRed  : save user, timestamp, old flag value, new flag value, calculated value, and limit value.
-
- | Alison
+ | Nichole
 
  |  | Open
 
  | 
+Default Ht and Wt:
+
+does the Fax Unknown action applies to both fields together or can be used for Height and Weight independently
+
+do age-based default values are planned in addition to gender-based defaults, since that was mentioned but not defined here
+
+confirm expected behavior when Gender is unavailable in eligibility data, since no default rule is defined for that scenario.
+
+ | Nichole
+
+ |  |  | 
 Persistence of User Preferences Across Devices:
 
 Does NewUM need to support persistence of user-specific preferences or other user-specific unstructured information across browsers and/or devices?
@@ -8974,10 +8852,12 @@ Designer
  | 
 ADO Epic
 
- |  | 
+ | Epic 182837: Configuration & Rules Engine
+
+ | 
 ADO Feature
 
- |  
+ |  Feature 184063: Configuration Management
 
  | 
 Stakeholders / SMEs
@@ -9315,7 +9195,9 @@ Item / Question
 
  |  
 
- |  OPEN 
+UI should be (&ldquo;live&rdquo;) in the admin portal, but only configuration explicitly marked as configurable by OH Configuration Admin should be surfaced. 
+
+ |  ResolvedGreen 
 
  | 
  
@@ -10104,6 +9986,351 @@ Item / Question
  | 
  |  |  |  | 
  |  |  |  | 
+Out of Scope
+
+Tracking any specific items that are out of scope for this feature
+
+#### Intake Method Case Entry Updates & Enter Basic Case Details
+
+Project Specifics
+
+Target Release
+
+ |  | 
+Document Status
+
+ |  in progressYellow    
+
+ | 
+Document Owner
+
+ |  
+
+ | 
+Designer
+
+ |  | 
+ADO Epic
+
+ | https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/181223/
+
+ | 
+ADO Feature
+
+ | https://oncologyanalytics.visualstudio.com/newUM/_workitems/edit/181231/
+
+ | 
+Stakeholders / SMEs
+
+ |  | 
+Goals & Business Objectives
+
+Standardize intake-related case entry
+
+Support compliant timing capture
+
+Improve reporting accuracy
+
+Minimize unnecessary manual entry
+
+Background & Current State
+
+Three supported intake methods : Fax, Phone, and Web
+
+Current case-entry UI includes: Request Initiation Date, Payer Receipt Date, Assignment Source, Assignment Origin, Method of ordering medications
+
+Current UI appears to rely on manual Assignment Source selection, but target behavior is to derive intake method from the entry workflow
+
+For Fax intake, the business intent is for the payer receipt timestamp to align to the fax receipt date/time
+
+Inbound fax integration is not yet available, so fax receipt date/time must initially support manual entry
+
+Functional Requirements
+
+Define what the system must do, specifying behavior, data processing needs, and business rules - no technical specifications
+
+Requirement
+
+ | Priority
+
+ | Description 
+
+ | Notes
+
+ | 
+Capture Intake Method
+
+ | must haveRed  
+
+ | The system should be able to derive Intake Method as Fax, Phone, or Web based on the case entry workflow - Intake  field (auto-populated based on the case entry workflow, not editable, required):
+
+if the case is submitted through the provider portal, then Intake Method = Web
+
+if the case is created via fax integration, then Intake Method = Fax
+
+if the case creation is initiated by internal user from NewUM, then Intake Method = Phone
+
+The system should be able to store the derived Intake Method on the case.
+
+The system should be able to populate Intake Method without requiring manual user selection in the standard flow.
+
+The system should be able to retain Intake Method for reporting, volume tracking, and downstream workflow logic.
+
+The system should be able to preserve the stored Intake Method throughout the case lifecycle.
+
+note01f48de3-fdb0-4a98-9adc-5e1fadb2b321Note: Until fax integration is implemented, manual entry of Intake Method may be required. Once fax integration is available, the system-populated logic should be used.
+
+Note: Until fax integration is implemented, manual entry of Intake Method may be required. Once fax integration is available, the system-populated logic should be used.
+
+ |  | 
+Capture Basic Request Details
+
+ | must haveRed  
+
+ | The system should be able to capture:
+
+Assignment Origin (always available, managed list, user entered)
+
+Payer Receipt Date (configuration, off by default, user entered):
+
+ If enabled, then should be required and should be used  as the anchor for TAT calculations
+
+Applies to Fax and Phone Intake Only tbdRed  
+
+Request Initiation Date (always available, date/time, no future dates allowed):
+
+if Payer Receipt Date is off, then Request Initiation Date should be required and should be used  as the anchor for TAT calculations 
+
+Method of Ordering Medications (always available, managed list) - tbdRed  Should we keep this field? How does it used downstream?
+
+notec9b418d6a4cbPayer Receipt Date:
+
+near term: the system should be able to support manual entry of Payer Receipt Date for Fax intake until inbound fax integration is available.
+
+future: automatic population of Payer Receipt Date from fax integration
+
+Payer Receipt Date:
+
+near term: the system should be able to support manual entry of Payer Receipt Date for Fax intake until inbound fax integration is available.
+
+future: automatic population of Payer Receipt Date from fax integration
+
+ |  | 
+Data Dictionary
+
+Defines the business meaning, usage, and validation expectations for data elements used by this feature (-s).  This section provides a common reference for field definitions.
+
+Field Name
+
+ | Description
+
+ | Standard Development vs Configuration  
+
+ | Config Type
+
+ | Mechanism
+
+ | Population Logic and Values
+
+ | Validation Rules
+
+ | Notes
+
+ | 
+Intake Method
+
+ | Stores the case intake channel used to create the case entry record. 
+
+ | Standard Development +  Configuration  
+
+ | Managed List (Drop-down Values)
+
+ | Data Definition (If user-visible but read-only > View Definition)
+
+ |  UI fieldGreen System-populated. Expected values:
+
+Fax = case created through fax intake workflow
+
+Web = case created through web intake workflow
+
+Phone = case created through phone/manual intake workflow 
+
+ | Value must be one of the supported intake methods
+
+In target state, field should be system-derived from entry workflow rather than manually selected
+
+Stored value must persist on the case
+
+ | Auto-derivation from workflow is platform behavior / standard development. 
+
+ | 
+Assignment Origin
+
+ | Identifies who initiated or originated the authorization request.
+
+ | Configuration
+
+ | Managed List (Drop-down Values) + Guardrails (Required)
+
+ | Data Definition + Rule
+
+ | UI fieldGreen  User-entered. Expected values (configurable): 
+
+Health Plan, Member, Member Representative, NP, OA, Oncologist, Pharmacy, Primary Care Physician ( tbdRed 
+
+default for Web intake)
+
+ | Value must match a configured dropdown option
+
+ |  | 
+Request Initiation Date
+
+ | Captures when the authorization request was first initiated in the intake channel.
+
+ | Standard Development
+
+ | N/A
+
+ | N/A
+
+ | UI fieldGreen   System-populated depending on intake method:
+
+Fax: 
+
+before fax integration: user entered based on the fax info
+
+after inbound fax integration: system-populated using the fax received timestamp recorded by the fax intake system once the fax is successfully received.   
+
+Web:  system-populated from web submission timestamp  
+
+Phone: system-populated from case submission timestamp
+
+ | Must be a valid date/time value
+
+ | For Fax Intake, the Fax Received Timestamp recorded by the fax intake system (fax server or fax gateway) should be used as the Request Initiation Date.
+
+ | 
+Payer Receipt Date
+
+ | Captures when the payer or delegated review entity officially received the request for processing.
+
+ | Standard Development +  Configuration  
+
+ | Parameter + Guardrails ( Required)
+
+ | Inputs (Yes/No, Date) + Rule
+
+ | UI fieldGreen  User entered
+
+displayed for Fax and Phone Intake only TBDRed 
+
+ | Must be a valid date/time value
+
+Required when payer config Require Payer Receipt Date = ON
+
+Applies to Fax and Phone Intake
+
+When present, acts as the regulatory TAT anchor
+
+ | Field visibility and the required flag belongs in configuration;
+
+TAT anchor behavior is system logic tied to that config.
+
+ | 
+Method of Ordering Medications
+
+ | Captures how the medication is intended to be ordered or supplied for the request.
+
+ | Configuration
+
+ | Managed List (Drop-down Values)
+
+ | Data Definition
+
+ | UI fieldGreen  User-entered . Expected values (configurable):
+
+Not Specified
+
+Buy and Bill
+
+Commercial Pharmacy
+
+Drug Replacement
+
+Hospital Based Practice
+
+etc
+
+ | Value must match a configured dropdown option
+
+If optional, blank may be allowed
+
+If later made mandatory, field entry should be enforced through rule / guardrail
+
+ | TBDRed  Clarify the field logic and the way how it is used downstream
+
+ | 
+Rules Catalog
+
+Identifies the business rules applicable to this feature(-s) and links to the centralized Rules Inventory where rule definitions are maintained. This section enables traceability while avoiding duplication of rule logic within the PRD.
+
+User Stories
+
+User Stories
+
+User Story Title
+
+ | Brief Description
+
+ | Priority
+
+ | Notes
+
+ | 
+1 |  |  | must haveRed should haveYellow nice to haveBlue 
+
+ |  | 
+2 |  |  |  |  | 
+UX
+
+<>
+
+Open Items
+
+Item / Question
+
+ | Owner
+
+ | Resolution & Notes
+
+ | Status
+
+ | 
+Confirm default value for Assignment Origin if intake=web:
+
+Health Plan, Member, Member Representative, NP, OA, Oncologist, Pharmacy, Primary Care Physician ( tbdRed 
+
+default for Web intake)
+
+ | Alison
+
+ |  |  | 
+Define Payer Receipt Date and Request Initiation date fields logic:
+
+applicable intake methods
+
+population logic
+
+interdependency etc
+
+ | Alison
+
+ |  |  | 
+Method of Ordering Medications: logic and downstream uasage
+
+ | Alison
+
+ |  |  | 
 Out of Scope
 
 Tracking any specific items that are out of scope for this feature

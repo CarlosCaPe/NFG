@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.30.0",
-  "last_updated": "2026-04-14",
+  "version": "1.34.0",
+  "last_updated": "2026-04-21",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -477,33 +477,35 @@
       "MATIS access — separate request to clientsupport@oncohealth.us"
     ],
     "access_inventory": {
-      "scan_date": "2026-04-09",
+      "scan_date": "2026-04-20",
       "results": [
-        { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 38191, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "25 pages. Doc ID: 1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew" },
-        { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 1689, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "2 pages template. Doc ID: 19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno" },
+        { "resource": "Google Doc (main onboarding)", "status": "COMPLETE", "chars": 44611, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "Re-captured 2026-04-20. 25 pages. Doc ID: 1yOj0K7cbgGXVp7ppfmhT7Mel2QPTXRgfGlQvy9jy4ew" },
+        { "resource": "Google Doc (design template)", "status": "COMPLETE", "chars": 2791, "method": "PDF export + pdfreader + spaced-char cleanup", "note": "Re-captured 2026-04-20. 2 pages template. Doc ID: 19XfMtEVeuVDQ1aRLS88SpBYKTyRBWRQS628KL4lOpno" },
         { "resource": "Google Drive folder", "status": "COMPLETE", "chars": 5500000, "method": "ZIP download + pdfreader + xlsx + mammoth", "note": "41 files extracted (19 PDFs, 5 XLSX, 2 DOCX, images, SVG). 21 text files produced. Includes assessments, architecture diagrams, data dictionaries, eligibility ADO analysis, staffing plan. 6 PDFs are image-only (diagrams). Captured 2026-03-25." },
         { "resource": "Assessment PDFs (3 files)", "status": "COMPLETE", "chars": 83000, "method": "pdfreader text extraction", "note": "OncoHealth Assessment Final (60K), Interim 12-09-2025, Second Interim 01-10-2025. All extracted. Final covers MATIS monolith analysis, service tiers, cost scenarios." },
         { "resource": "Policy documents (4 files)", "status": "NOT_CAPTURED", "chars": 0, "note": "Secure development, Cryptography, Data management, Branching strategy. Links are placeholders — never provided." },
         { "resource": "Miro NewFire board (assessment, stale)", "status": "BLOCKED", "action": "Board not found (404) — may have been moved/deleted or token expired", "note": "Previously captured 130,902 chars. Board ID uXjVIx2JdOQ= no longer accessible." },
         { "resource": "Miro Onco board (active)", "status": "COMPLETE", "chars": 106271, "method": "PDF export (manual) + pdfreader text extraction", "note": "87 pages, 97K text items. Browser SSO and REST API still blocked (AADSTS7000112), but user exported PDF from desktop app. Full text extracted to 03-miro-newum-board.txt. Board ID: uXjVJUOanb0=" },
-        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2777000, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Re-captured 2026-04-09: 39 files, 2.7MB. 13 Epics, 66 Features, 394 User Stories, 466 Tasks, 16 Bugs, 10 Pipelines. Wiki now has 1 page (newUM.wiki). 6 teams: QA(6), UX(3), Data(7), NewUM(1), BE(15), FE(12)." },
-        { "resource": "Atlassian Confluence (13 spaces)", "status": "COMPLETE", "chars": 969810, "method": "REST API + API token", "note": "Re-captured 2026-04-09: 13 spaces, 221 pages, 48 files, 1.4MB. Key spaces: NewUM1/Product (487K — PRDs, decision log, governance), PM (197K), AT (120K), OG (65K), CA/Impact Analysis (28K), ITOPS (19K), IS (13K), MATIS (13K). Also includes: AL, AP, BND, HUM, MCS. 41 groups. Includes Engineering docs (Rules Engine, Fax, Letter V2, DevOps, QA, Data, FE). Auth via ccarrillo@oncologyanalytics.com + API token (nfg-full-access)." },
-        { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 29886, "method": "Playwright + Okta SSO + exceljs", "note": "Downloaded via in-browser fetch. Full RAID + CR log extracted." },
-        { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1351, "method": "Playwright + Okta SSO + mammoth", "note": "Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
-        { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 37283, "method": "Playwright + Okta SSO + exceljs", "note": "46 team members, 46 columns. Carlos's row is blank — needs filling in. Shared by Rachel, admin privilege." },
-        { "resource": "Databricks test", "status": "COMPLETE", "note": "TEST workspace access GRANTED and VALIDATED (2026-03-24). PAT 'visualstudio-carlos' (expires 2027-03-24) tested — /api/2.0/clusters/list returned HTTP 200. Token saved in .env. Dev workspace (adb-3806388400498653) BLOCKED — contains PHI." },
-        { "resource": "Google Calendar (NFG)", "status": "COMPLETE", "chars": 66700, "method": "Playwright storageState + internal API interception", "note": "Re-captured 2026-04-09: 203 events (80 chips, 166 api). Range 2026-04-02 → 2026-04-23. NFG Google Calendar (carlos.carrillo@newfireglobal.com). Uses sync.fetcheventrange/minievents/prefetcheventrange endpoints + aria-label DOM parsing." }
+        { "resource": "Azure DevOps", "status": "COMPLETE", "chars": 2777000, "method": "REST API via Playwright + Okta SSO auto-login", "note": "Re-captured 2026-04-20: 40 files, 2.8MB. 13 Epics, 69 Features, 427 User Stories, 521 Tasks, 27 Bugs (count/items schema), total 1057 work items. 6 teams: QA(6), UX(3), Data(7), NewUM(1), BE(16), FE(12)." },
+        { "resource": "Atlassian Confluence (13 spaces)", "status": "COMPLETE", "chars": 976100, "method": "REST API + API token", "note": "Re-captured 2026-04-20: 13 spaces, 221 pages, 47 files, 1.4MB. Key spaces remain NewUM1/Product, PM, AT, OG, CA, ITOPS, IS, MATIS. 41 groups." },
+        { "resource": "SharePoint RAID xlsx", "status": "COMPLETE", "chars": 39803, "method": "Playwright + Okta SSO + exceljs", "note": "Re-captured 2026-04-20. Downloaded via fetch fallback. Full RAID + CR log extracted." },
+        { "resource": "SharePoint Change Request", "status": "COMPLETE", "chars": 1343, "method": "Playwright + Okta SSO + mammoth", "note": "Re-captured 2026-04-20. Downloaded via in-browser fetch. Template doc (Rev 1/20/2026)." },
+        { "resource": "Team Access Inventory", "status": "COMPLETE", "chars": 42307, "method": "Playwright + Okta SSO + exceljs", "note": "Re-captured 2026-04-20. 46 team members, 46 columns. Carlos's row is blank — needs filling in." },
+        { "resource": "Databricks test", "status": "PARTIAL", "chars": 276, "method": "Browser auth + API probes", "note": "Re-tested 2026-04-20. Authentication succeeds, but clusters/jobs/sql warehouses/unity catalog endpoints return HTTP 401 (4 errors). Workspace page text captured." },
+        { "resource": "Google Calendar (NFG)", "status": "COMPLETE", "chars": 3867, "method": "Playwright storageState + internal API interception", "note": "Re-captured 2026-04-20: 43 events. Range 2026-04-13 → 2026-05-04. NFG Google Calendar (carlos.carrillo@newfireglobal.com)." },
+        { "resource": "Teams Daily Capture", "status": "PARTIAL", "chars": 5069, "method": "Playwright + Okta SSO", "note": "Re-captured 2026-04-20. Channels captured (12), but configured priority chats not found in sidebar and chat text capture returned 0 chars." },
+        { "resource": "Graph API", "status": "BLOCKED", "chars": 0, "method": "Device code flow", "note": "Re-tested 2026-04-20. No valid token. Login requires manual device-code approval and tenant/admin authorization." }
       ],
-      "complete": 12,
-      "partial": 0,
+      "complete": 11,
+      "partial": 2,
       "not_captured": 1,
       "pending": 0,
-      "blocked": 0,
-      "total_chars_captured": 9587101,
-      "note": "Full refresh 2026-04-09: 4/4 scrapers succeeded (gcal 75.7s, teams 6.4s, ado 50.7s, confluence 18.5s). Okta SSO auto-login working. Confluence now unified into single 13-space capture."
+      "blocked": 2,
+      "total_chars_captured": 9582438,
+      "note": "Full refresh 2026-04-20: Confluence, GCal, ADO, Google Docs, and SharePoint succeeded. Teams is partial (channels only). Databricks is partial (auth ok, API 401). Miro API lists 0 boards with current token scope. Graph API still blocked pending device-code/admin approval."
     },
     "confirmed": true,
-    "source": "user confirmation + automated scan 2026-03-18"
+    "source": "user confirmation + automated scan 2026-04-20"
   },
 
   "onboarding_documents": {
@@ -679,7 +681,7 @@
       "$comment": "Column-level mapping from MATIS PascalCase to NewFire snake_case for the Eligibility Silver layer. Source: Nick Foreyt Excel spreadsheet shared via Teams/SharePoint.",
       "source": "clients/oncohealth/output/downloads/NewFire-Eligibility-Silver-Mapping.xlsx",
       "author": "Nick Foreyt",
-      "captured": "2026-04-14",
+      "captured": "2026-04-20",
       "entities": {
         "eligibility": {
           "key": "eligibility_key",
@@ -739,35 +741,137 @@
         "PayerKey": "Do we need the key on elig for anything?",
         "EligibilitySource": "Source is DBX ETL only",
         "EmployerGroupAddressKey": "group has own table, we also don't get group address",
-        "HasRepresentative": "just look for existence of RelatedPerson?",
+        "HasRepresentative": "RESOLVED: Michal proposed following isDeleted pattern but Nick disagrees — isDeleted is for indexing/query filtering, HasRepresentative doesn't serve same purpose. No strong opinion from Michal but prefers without.",
         "LineOfBusinessVersion": "Not sure what this is intended to be used for",
-        "MemberReportingId": "think we have what we need with member_id & insurance_card_id",
+        "MemberReportingId": "RESOLVED: Nick confirms member_id + insurance_card_id sufficient. Tim Ursprung asked to confirm — Nick explained MI example where MemberID is family-shared, proposed MemberID (unique hash) + CardID (insurance card). Tim reviewing.",
         "PatientAddressVersion": "duplicate?",
-        "InsuranceGroupId": "Not sure if this is different than GroupID?",
-        "PrescriptionCarveoutType": "Duplicate w/ RxBenefitCarveOutIndicator?",
-        "RiskPatient": "No idea what this is",
-        "CoverageTypeCode": "We have Coverage Tier Cd / Description but its not used",
-        "SpanType": "No idea what this is",
+        "InsuranceGroupId": "RESOLVED: Nick confirms synonymous with group_id on group table (Apr 18)",
+        "PrescriptionCarveoutType": "RESOLVED: Nick says only need CarveOut Indicator, which already exists as rx_benefit_carve_out_indicator on benefit_package (Apr 18)",
+        "RiskPatient": "RESOLVED: Michal clarified (Apr 20) — Boolean flag for Medicare Advantage risk-bearing enrollment. Risk=Yes means member under risk-bearing MA plan (payment adjusted by age/sex/health status). Used for Medicare-specific timelines, compliance, reporting. Nick initially didn't know; now answered.",
+        "CoverageTypeCode": "RESOLVED: Nick (Apr 18) says currently 2 distinct bool fields (medical_benefit_indicator + rx_benefit_indicator) on benefit_package. Could derive CoverageTypeCode in ETL, or app could use both fields. Michal asks (Apr 20) if we can populate via ETL. DECISION PENDING: derive in ETL or keep separate bools.",
+        "SpanType": "Nick says 'lots to unpack here, lets discuss'. Still open.",
         "Name": "No idea what this is",
         "SupressLetters": "Are we going to start asking for this? Do we need it?",
         "LetterSupressionDate": "Are we going to start asking for this? Do we need it?",
-        "IsERISA": "Are we going to start asking for this? Do we need it?",
-        "IsFEHBPlan": "Are we going to start asking for this? Do we need it?",
+        "IsERISA": "RESOLVED: Nick (Apr 18) — new concept, not received today. Likely just a Bool on benefit_package. ERISA = federal law setting standards for private retirement/health plans. Designation may differ across clients.",
+        "IsFEHBPlan": "RESOLVED: Nick (Apr 18) — new concept, not received today. Likely just a Bool on benefit_package. FEHB = Federal Employee Health Benefit (subset of ERISA plans, OPM category).",
         "IsErisa_Group": "Duplicated here & Eligibility. We do not get this today. Is this new?",
         "ExternalGroupId": "not mapped",
         "AddressKey_Group": "not mapped"
       },
+      "nick_clarifications_apr_17": {
+        "$comment": "Nick Foreyt's direct responses to Carlos's initial yellow field review. Source: Eligibility Teams chat, Apr 17 2026.",
+        "custom_fields": "Already exists on Eligibility. Nick suggests putting on BOTH group & elig for flexibility in what layer stores the custom attribute.",
+        "relationship_code": "TWO DIFFERENT MEANINGS. REL_CD on Eligibility = relationship between Member/Patient and Subscriber of coverage. REL_CD on RelatedPerson = relationship between Member/Patient and the Related Person. Not the same field — both are needed.",
+        "organization_name": "DIFFERENT from EmployerGroupName. Organization = umbrella entity (e.g., 'McDonalds'). Group = more granular plans under org (e.g., 'McDonalds HMO', 'McDonalds PPO'). Organization groups together multiple groups.",
+        "medical_rx_benefit_indicators": "Functionally equivalent to MemberBenefit enum (Medical/Pharmacy/MedicalAndPharmacy). Nick prefers separate bools: 'more distinct, easier to code'. Open to suggestions. CoverageTypeCode could be derived in ETL from these two bools if needed.",
+        "subscriber_key": "Key to join to related_person.related_person_key for information about subscriber on the coverage. Michal asked (Apr 18) 'what is subscriber_key?' — Nick confirmed it's the FK to RelatedPerson for the subscriber.",
+        "physical_address_key": "Nick has 3 address FKs (mailing/physical/privacy). Domain has PatientAddressKey as single FK. Structural gap: need to decide if 3 separate FKs or single FK.",
+        "related_person_address_key": "Michal (Apr 18) suggests should live on related_person table, not eligibility. Nick says no real difference, just tried to keep elig lean."
+      },
+      "michal_new_fields_apr_18": {
+        "$comment": "Fields Michal identified as missing from the schema that ARE in V1 business requirements. Source: Eligibility Teams chat, Apr 18 2026.",
+        "fields": [
+          {"field": "InsuranceGroupId", "v1_equivalent": "Insurance Group ID (String, required)", "v1_page": "Member Identification and Coverage", "nick_response": "Synonymous with group_id on group table", "status": "RESOLVED"},
+          {"field": "IsERISA", "v1_equivalent": "Not a field; ERISA is a Commercial LOB subtype", "v1_page": "V1. NewUM Case Model", "nick_response": "New concept, likely 2 addl Bool indicators on benefit_package", "status": "RESOLVED"},
+          {"field": "IsFEHBPlan", "v1_equivalent": "Not a field; FEHB is an OPM LOB category", "v1_page": "V1. NewUM Case Model", "nick_response": "New concept, likely 2 addl Bool indicators on benefit_package", "status": "RESOLVED"},
+          {"field": "PrescriptionCarveoutType", "v1_equivalent": "Prescription Benefit Carveout (value set TBD)", "v1_page": "Member Identification and Coverage", "nick_response": "Only seeing need for CarveOut Indicator, which we have", "status": "RESOLVED"},
+          {"field": "RiskPatient", "v1_equivalent": "Risk Patient (Boolean)", "v1_page": "Member Identification and Coverage", "nick_response": "Nick initially had no idea. Michal clarified (Apr 20): Medicare Risk indicator = member under risk-bearing MA plan", "status": "RESOLVED"},
+          {"field": "DualEligibilityStatus", "v1_equivalent": "Not defined as field; covered in edge cases", "v1_page": "Member Identification and Coverage", "nick_response": "Already on benefit_package as dual_eligibility_indicator", "status": "RESOLVED"},
+          {"field": "CoverageTypeCode", "v1_equivalent": "Member Benefit (Enum: Medical/Pharmacy/Medical+Pharmacy)", "v1_page": "Member Identification and Coverage", "nick_response": "Currently 2 distinct fields (medical/rx benefit indicators). Could derive in ETL or app uses both.", "status": "PENDING — derive in ETL vs keep bools"},
+          {"field": "SpanType", "v1_equivalent": "Not defined; coverage spans discussed in edge cases", "v1_page": "Member Identification and Coverage", "nick_response": "Lots to unpack, lets discuss", "status": "OPEN"}
+        ]
+      },
+      "michal_additional_missing_fields_apr_18": {
+        "$comment": "Additional fields Michal identified from V1 business requirements not in current schema. Source: Eligibility Teams chat, Apr 18 2026.",
+        "fields": [
+          {"field": "ProductLineName", "entity": "benefit_package", "nick_response": "Not received from client. Heavily overloaded field today. Typically HMO/PPO/POS (= ProductType). More granular = custom element combo. May be config item or custom_fields.", "confluence_ref": "NewUM1/Member Identification and Coverage", "status": "NEEDS DISCUSSION"},
+          {"field": "ProductOfferingName", "entity": "benefit_package", "nick_response": "Same as ProductLineName — not standardized, client-specific, overloaded.", "status": "NEEDS DISCUSSION"},
+          {"field": "LineOfBusiness_on_BenefitPackage", "entity": "benefit_package", "michal_question": "Shouldn't BenefitPackage have a field of LineOfBusiness?", "nick_response": "We have major_lob. Open to additional granular LOB but fears overloaded field. Maybe OK but were trying to avoid overloading.", "status": "NEEDS DISCUSSION"}
+        ]
+      },
+      "snake_case_discussion": {
+        "status": "PENDING",
+        "marc_gale_request": "Marc Gale asked Michal (Apr 16) to confirm snake_case everywhere. Marc says CamelCase would not be ideal.",
+        "michal_response": "Not at the moment, pending discussion not resolved. But optimistic he can convince everyone.",
+        "source": "Eligibility Teams chat, Apr 16 2026"
+      },
+      "miro_er_update_apr_18": {
+        "note": "Michal updated Eligibility ER diagram on Miro (Apr 18). Link: https://miro.com/app/board/uXjVGVycF3Y=/?moveToWidget=3458764661425332328&cot=14",
+        "board_id": "uXjVGVycF3Y=",
+        "widget_id": "3458764661425332328"
+      },
+      "miro_gaps_note_apr_20": {
+        "$comment": "Live 'Gaps & Missing Fields' text block found on the Miro board (Apr 20 capture). Miro item ID: 3458764661048858915. Placed in main architecture area near Case schema (position 2421,681). Reflects open gaps as of today.",
+        "source": "Miro board uXjVGVycF3Y= — fresh capture 2026-04-20",
+        "label": "PROPOSED DRAFT: Eligibility Schema (promoted from OLD DRAFT)",
+        "eligibility_flat_target_state_diagram": {
+          "widget_id": "3458764667875106700",
+          "title": "EligibilityFlat — Full Column View (Target State)",
+          "status": "NOT READY — Sandy marked 'Disregard - Not ready'"
+        },
+        "gap_1_missing_scope_fields": {
+          "summary": "13 fields required for scope determination are missing from the Eligibility ER diagram",
+          "fields": [
+            {"field": "CarrierId", "type": "string", "reason": "required for identifier-based scope validation", "status": "OPEN"},
+            {"field": "AccountId / InsuranceGroupId / BenefitPackage", "type": "string", "reason": "carve-out identifiers", "note": "InsuranceGroupId previously marked RESOLVED — board still lists as missing", "status": "OPEN"},
+            {"field": "ASOIndicator", "type": "boolean", "reason": "ASO delegation rule", "status": "OPEN"},
+            {"field": "MemberBenefit", "type": "enum (Medical / Pharmacy / Medical+Pharmacy)", "reason": "hard business rule — must be first-class column, not JSON blob", "status": "OPEN"},
+            {"field": "PrescriptionBenefitCarveout", "type": "boolean", "reason": "scope determination", "status": "OPEN"},
+            {"field": "OONBenefit", "type": "code", "reason": "scope determination", "status": "OPEN"},
+            {"field": "RiskPatient", "type": "flag", "reason": "scope determination", "note": "Previously marked RESOLVED as Medicare Risk indicator — board still lists as missing", "status": "OPEN"},
+            {"field": "EligibilitySource", "type": "code", "reason": "scope determination", "status": "OPEN"},
+            {"field": "StateOfPlanIssue", "type": "state code", "reason": "scope determination", "status": "OPEN"},
+            {"field": "MedicareBeneficiaryId / MBI", "type": "string", "reason": "Medicare-only identifier", "status": "OPEN"},
+            {"field": "InsurancePlan / PlanDescription", "type": "string", "reason": "scope determination", "status": "OPEN"},
+            {"field": "ProductOffering", "type": "string/code", "reason": "finer-grained than Product, needed for rule collision prevention", "status": "OPEN"},
+            {"field": "PreferredLanguage", "type": "string/code", "reason": "member accessibility", "status": "OPEN"},
+            {"field": "AccessibilityCorrespondence", "type": "string/code", "reason": "member accessibility", "status": "OPEN"}
+          ],
+          "custom_fields_note": "CustomFields (JSON column) could absorb some but is a red flag — rules need structured fields, not JSON blobs"
+        },
+        "gap_2_contact_data_missing": {
+          "summary": "Address, Phone (home/mobile/work), and Member Representative contact info missing from Person and Eligibility tables",
+          "status": "OPEN"
+        },
+        "gap_3_coverage_dates": {
+          "summary": "CoverageEffective/CoverageEnd dates — confirmed present in schema",
+          "status": "RESOLVED"
+        },
+        "gap_4_business_grain_fk_bug": {
+          "summary": "BusinessGrain FK is PayerVersion typed as 'Type' — should be 'guid'. Data modeling bug.",
+          "status": "OPEN — needs fix"
+        },
+        "gap_5_product_offering_level": {
+          "summary": "No explicit ProductOffering level. Docs require 3-level hierarchy: LOB -> Product Line -> Product Offering. Schema has MajorLineOfBusiness -> Product but missing Product Offering granularity.",
+          "status": "OPEN"
+        },
+        "gap_6_member_representative_entity": {
+          "summary": "No MemberRepresentative entity. Docs require representative name, relationship, address, phone on eligibility record.",
+          "status": "OPEN — may need own table or fields on Person/Eligibility"
+        }
+      },
+      "person_patient_table": {
+        "nick_response": "Forgot about this, forgetting use case. Michal says it should serve as crosswalk table for member_id / person_id.",
+        "status": "OPEN"
+      },
       "open_questions_from_nick": [
         "Do we need PayerKey on eligibility for anything?",
-        "Is InsuranceGroupId different than GroupID?",
-        "Is PrescriptionCarveoutType duplicate with RxBenefitCarveOutIndicator?",
-        "What is RiskPatient?",
-        "What is SpanType?",
+        "What is SpanType? (Nick: lots to unpack, lets discuss)",
         "What is Name (on eligibility)?",
         "Should we start asking for SupressLetters / LetterSupressionDate?",
-        "Should we start asking for IsERISA / IsFEHBPlan?",
         "Is IsErisa on Group new? We don't get it today and it's duplicated on Eligibility.",
-        "What is LineOfBusinessVersion intended to be used for?"
+        "What is LineOfBusinessVersion intended to be used for?",
+        "ProductLine / ProductOffering — config item or custom_fields? Needs discussion.",
+        "Person/Patient crosswalk table — Nick forgot use case, Michal says needed for member_id / person_id crosswalk."
+      ],
+      "resolved_questions": [
+        "InsuranceGroupId = synonymous with group_id (Nick Apr 18)",
+        "PrescriptionCarveoutType = covered by rx_benefit_carve_out_indicator (Nick Apr 18)",
+        "RiskPatient = Medicare Risk indicator, Boolean (Michal Apr 20)",
+        "DualEligibilityStatus = already on benefit_package as dual_eligibility_indicator (Nick Apr 18)",
+        "IsERISA / IsFEHBPlan = new Bool indicators on benefit_package (Nick Apr 18)",
+        "CoverageTypeCode = can derive from medical_benefit_indicator + rx_benefit_indicator in ETL (PENDING final decision)"
       ]
     },
 
@@ -815,23 +919,58 @@
     },
 
     "case_schema_detail": {
-      "$comment": "Detailed Case schema structure from System Design Document. Expands on cases_domain section.",
+      "$comment": "Detailed Case schema structure from System Design Document + Case & Overlapping Domains meeting (Apr 17 2026).",
       "core_tables": [
-        { "table": "Case", "purpose": "Root record. Holds live workflow state: status, priority, disposition" },
-        { "table": "CaseHistory", "purpose": "Immutable field-level audit log across all mutable tables" },
-        { "table": "CaseAction", "purpose": "Pending work queue for the rules engine. Records discrete blocking/non-blocking actions" },
-        { "table": "CaseMessage", "purpose": "Append-only log of all inbound and outbound communications (fax, letter, call)" },
-        { "table": "CaseDocument", "purpose": "Append-only log of documents (lab results, auth letters, referrals)" },
-        { "table": "CaseMedicalDrugElement", "purpose": "Medical drugs attached to a case (administered in a facility, billed under medical benefit)" },
-        { "table": "CasePharmacyDrugElement", "purpose": "Pharmacy drugs dispensed directly to a patient. Handled separately from medical drugs" },
-        { "table": "CaseRadiationElement", "purpose": "Radiation therapies on a case, identified by CPT code. Mutable" },
-        { "table": "CaseGeneticMolecularTestingElement", "purpose": "Genetic/molecular tests requiring PA, identified by CPT code" },
-        { "table": "PotentialEligibility", "purpose": "Eligibility candidates surfaced during patient search, before case assignment" }
+        { "table": "Case", "purpose": "Root record. Holds live workflow state: status, priority, disposition. Mutable but fully audited via CasePatch; uses optimistic locking + soft deletion." },
+        { "table": "CasePatch", "purpose": "Append-only audit log. Field-level change tracking (who, when, payload). Never updated or deleted. Authoritative for historical state reconstruction and compliance." },
+        { "table": "CaseAction", "purpose": "Pending work item from rules engine. Unresolved action blocks workflow progression. Soft-deleted on resolution." },
+        { "table": "CaseOfficeContact", "purpose": "Exactly 2 contact records per case (Ordering + Servicing/Treating). Fax, phone, email. Primary targets for outbound fax and determination notices." },
+        { "table": "CaseMedicalDrugElement", "purpose": "One row per infused/injected drug line. Links to immutable DrugSnapshot. Contains dosing, clinical rationale, drug-level determination, MaxBillingUnits." },
+        { "table": "CasePharmacyDrugElement", "purpose": "One row per oral/retail pharmacy drug. NDC, GPI, Strength, Form. Auth sent to PBM (not health plan)." },
+        { "table": "CaseRadiationElement", "purpose": "One row per XRT procedure. Links to RadiationTherapySnapshot. OUT OF SCOPE for V1.0 — table present for future use." },
+        { "table": "CaseGeneticMolecularTestingElement", "purpose": "One row per GMT procedure. No dosing fields. OUT OF SCOPE for V1.0." },
+        { "table": "CaseMessage", "purpose": "Append-only log of all communications (fax, phone, notices). Never modified. Contains PHI — HIPAA-compliant storage required." },
+        { "table": "CaseDocument", "purpose": "Append-only. Metadata + Document Manager reference ID. Content lives outside case DB." },
+        { "table": "CaseNote", "purpose": "Internal staff annotations. Mutable and soft-deletable (unlike CaseMessage)." },
+        { "table": "PotentialEligibility", "purpose": "All eligibility candidates for a case (supports dual-eligible). Selected promoted to Case.PrimaryEligibilityKey." },
+        { "table": "DrugSnapshot", "purpose": "Immutable. Freezes drug identity (RxCUI, NDC, HCPCS) at intake. Shared by Medical + Pharmacy drug elements." },
+        { "table": "RadiationTherapySnapshot", "purpose": "Immutable. CPT code + code list version at assignment time." },
+        { "table": "GeneticMolecularTestSnapshot", "purpose": "Immutable. CPT code + test name at assignment time." },
+        { "table": "VW_ClinicianFlat", "purpose": "Common view (NOT materialized). Flattened clinician identity, NPI, TIN, specialty for case entry lookups." },
+        { "table": "VW_TreatingFacilityFlat", "purpose": "Common view (NOT materialized). Flattened facility info for Place of Treatment field." },
+        { "table": "EligibilityFlat", "purpose": "Highly denormalized flat table. Patient demographics + coverage + benefits + employer group + plan hierarchy per eligibility span. Populated by ETL from payer feeds." }
       ],
       "schema_layers": {
-        "core": { "color": "White", "pattern": "Mutable records; CaseHistory provides field-level audit" },
-        "auxiliary_views": { "color": "Blue", "pattern": "Flattened, soft-versioned lookups from Provider and Eligibility domains" },
+        "core": { "color": "White", "pattern": "Mutable records; CasePatch provides field-level audit" },
+        "auxiliary_views": { "color": "Blue", "pattern": "Flattened, soft-versioned lookups from Provider and Eligibility domains. Confirmed as common views (NOT materialized) per Michal Apr 16." },
         "auxiliary_snapshots": { "color": "Orange", "pattern": "Versioned, append-only reference data from Drug/Radiation/GMT" }
+      },
+      "case_overlapping_domains_meeting_apr_17": {
+        "$comment": "From 'Case & overlapping domains' Teams chat. Meeting held Apr 17, 55 min.",
+        "purpose": "Align Data Team, Case Engine Team, and Services Team around case ER diagram. Clarify ownership of overlapping schema domains.",
+        "responsibility_boundaries": {
+          "data_team": "Michal Mucha — ER diagram coordination, eligibility + provider schema, cross-team collaboration",
+          "case_engine_team": "Joseph Destefano / Dmytro Hridin — core white case tables (Case, CasePatch, CaseAction), rules engine",
+          "services_team": "Matthew Emerson / Bogdan Chachun — drugs API extension, drugs/regimen overlap with case schema",
+          "rule": "All teams must have rep at future workshops. ER diagram = single source of truth, extended by data dictionary in Confluence."
+        },
+        "unresolved_items": [
+          "Case reopening semantics — product must define 'reopen' vs appeal vs reconsideration before data model finalized",
+          "Payer receipt date/time — Tim clarified (Apr 18): date/time payer receives case (vs Initiation = OH receipt). Most cases don't have it.",
+          "CaseAction vs CaseMessage boundary — unclear where auth file sending, oral/written notifications land",
+          "Full case timeline reconstruction — union CasePatch + CaseAction + CaseMessage not validated against current model",
+          "CasePatch schema evolution — if schema changes mid-lifecycle, replaying events may break"
+        ],
+        "action_items": [
+          {"who": "Joseph/Dmytro", "what": "Chase full product definition of case reopening"},
+          {"who": "Joseph/Dmytro", "what": "Create first draft data dictionary (table + field descriptions, enums, config)"},
+          {"who": "Matthew/Bogdan", "what": "Update ER for drugs/regimen area. Add case_regimen join table for future many-to-many."},
+          {"who": "Michal", "what": "Follow up with Tim on payer receipt date/time — DONE: Tim clarified Apr 18"},
+          {"who": "Michal", "what": "Arrange follow-up session for remaining questions document"},
+          {"who": "Joseph/Dmytro", "what": "Add determination timestamp as explicit field on case table"},
+          {"who": "Joseph/Dmytro", "what": "Clarify CaseAction vs CaseMessage distinction"}
+        ],
+        "tim_document_update": "Tim Ursprung shared 'NewUM Case Schema 4.docx' (Apr 20) with additional items added since Friday. Now the single working document for remaining case schema questions."
       },
       "audit_mechanisms": [
         "CaseHistory: old/new value per column — full field-level trail on all mutable tables",
@@ -1780,6 +1919,27 @@
       ]
     },
 
+    "ado_sprint_26_04_28": {
+      "$comment": "Active sprint Apr 14-28, 2026. Carlos's #187416 moved To Do→Active. New investigation task #188109 created. Nick Foreyt declared Eligibility schema complete on 2026-04-21.",
+      "sprint": "26.04.28",
+      "sprint_dates": "2026-04-14 to 2026-04-28",
+      "captured": "2026-04-21",
+      "notable_event": "Nick Foreyt 2026-04-21 11:06 AM: Eligibility schema finalized / complete declaration",
+      "carlos_assigned": [
+        { "id": 187416, "title": "Case utilisation of Eligibility data", "state": "Active", "type": "User Story", "story_points": 13, "sprint": "26.04.28", "note": "State changed To Do→Active this sprint. Implement and document how eligibility data is consumed in case workflows." },
+        { "id": 188109, "title": "Investigation", "state": "Active", "type": "Task", "sprint": "26.04.28", "note": "NEW — likely child of #187416. Investigation task for eligibility case utilisation." },
+        { "id": 187564, "title": "Manual eligibility storage pattern", "state": "Active", "type": "User Story", "story_points": 5, "sprint": "backlog (no sprint)", "note": "Active but unsprinted. Replacement for removed #185716." }
+      ],
+      "closed_since_last_capture": [
+        { "id": 188116, "title": "lack of access", "type": "Task", "note": "Was Carlos-assigned task — now closed." }
+      ],
+      "related_eligibility_items": [
+        { "id": 187385, "title": "Eligibility final adjustment and approval", "state": "Active", "assignee": "Michal Mucha", "story_points": 5, "sprint": "26.04.28" },
+        { "id": 187414, "title": "Document bidirectional data exchange NewUM<->Databricks", "state": "Active", "assignee": "Michal Mucha", "story_points": 3, "sprint": "26.04.28" },
+        { "id": 187970, "title": "Review of Eligibility by Onco Data team", "state": "Code Review", "assignee": "Michal Mucha", "sprint": "26.04.28" }
+      ]
+    },
+
     "confluence_activity_march_25": {
       "$comment": "NewUM-related Confluence pages modified on March 25, 2026.",
       "pages": [
@@ -1802,7 +1962,7 @@
       { "topic": "Eligibility API CQRS refactoring", "status": "RESOLVED — ADO #186301 CLOSED March 25, 2026 by Roman Buchyn. CQRS approach implemented.", "impact": "Resolved" },
       { "topic": "Databricks→PostgreSQL data exchange", "status": "STRONG SIGNAL — April 10 Sprint Demo: Arben Osmani demoed working Python POC implementing Candidate #2 (ADLS+Airflow+PostgreSQL COPY). Parallel ADLS fetch (32 threads, 60s for 52 files), COPY command (85K rows/sec, 15M rows in 3 min), unlogged staging tables, atomic rename-swap. 4 modes: append/replace/upsert/merge. Intended for Airflow orchestration. Option D (Spark JDBC push, our proposal) not yet presented.", "owners": ["Michal Mucha", "Marc Gale", "Arben Osmani"], "impact": "Determines how Databricks data gets consumed by newUM's PostgreSQL backend" },
       { "topic": "Eligibility final adjustment", "status": "ACTIVE — ADO #187385 (Michal Mucha, April 2). New ticket for final eligibility schema adjustments after workshops.", "impact": "Final eligibility schema refinements before V1 freeze" },
-      { "topic": "Case utilisation of Eligibility data", "status": "TO DO — ADO #187416 (Carlos Carrillo, sprint 26.04.14). Implement and document how eligibility data is consumed in case workflows.", "impact": "Assigned to Carlos — first implementation ticket" }
+      { "topic": "Case utilisation of Eligibility data", "status": "ACTIVE — ADO #187416 (Carlos Carrillo, sprint 26.04.28, 13pts). State changed To Do→Active. Child task #188109 (Investigation) also Active. Nick Foreyt declared Eligibility schema complete 2026-04-21.", "impact": "Assigned to Carlos — first implementation ticket, now in flight" }
     ]
   },
 

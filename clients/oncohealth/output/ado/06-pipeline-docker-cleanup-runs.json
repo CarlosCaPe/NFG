@@ -4,6 +4,68 @@
     {
       "_links": {
         "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932/runs/334692"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=334692"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=932"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932?revision=3",
+        "id": 932,
+        "revision": 3,
+        "name": "docker-cleanup",
+        "folder": "\\DevOps"
+      },
+      "state": "completed",
+      "result": "succeeded",
+      "createdDate": "2026-04-19T01:00:06.3117162Z",
+      "finishedDate": "2026-04-19T01:03:15.9408234Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932/runs/334692",
+      "id": 334692,
+      "name": "20260418.1"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932/runs/333366"
+        },
+        "web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/results?buildId=333366"
+        },
+        "pipeline.web": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_build/definition?definitionId=932"
+        },
+        "pipeline": {
+          "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932?revision=3"
+        }
+      },
+      "templateParameters": {},
+      "pipeline": {
+        "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932?revision=3",
+        "id": 932,
+        "revision": 3,
+        "name": "docker-cleanup",
+        "folder": "\\DevOps"
+      },
+      "state": "completed",
+      "result": "succeeded",
+      "createdDate": "2026-04-12T01:00:08.6859178Z",
+      "finishedDate": "2026-04-12T01:03:08.4654545Z",
+      "url": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932/runs/333366",
+      "id": 333366,
+      "name": "20260411.1"
+    },
+    {
+      "_links": {
+        "self": {
           "href": "https://dev.azure.com/oncologyanalytics/07664ca3-a7fe-4170-adca-cebdf3d8cc97/_apis/pipelines/932/runs/331957"
         },
         "web": {

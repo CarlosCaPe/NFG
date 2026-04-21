@@ -1,64 +1,5 @@
-Tasks (466)
+Tasks (525)
 ============================================================
-[Closed] #184886 Create library of configurable Case Actions and Transitions | Pero Jaman | P2 | pts | newUM\26.03.17 | 
-[Closed] #184918 Migrate current file folder structure to be up to date with the documentation | Dmytro Petriv | P2 | pts | newUM\26.03.17 | 
-[Closed] #184920 refactor api folder to be clean and sustainable | Petro Brezitskiy | P2 | pts | newUM\26.03.31 | 
-[Closed] #184929 What about payer hierarchy representation | Michal Mucha | P2 | pts | newUM\26.03.17 | 
-[Closed] #184950 Add custom eslint rules to enforce some file folder structure and add Claud md more context | Dmytro Petriv | P2 | pts | newUM\26.03.31 | 
-[Closed] #184959 Implement nav bar menu as on design | Yurii Bodnar | P2 | pts | newUM\26.03.17 | 
-[Closed] #185002 Create a stepper component based on design | Petro Brezitskiy | P2 | pts | newUM\26.03.17 | 
-[Closed] #185053 review with NewUM | Michal Mucha | P2 | pts | newUM\26.03.17 | 
-[Closed] #185054 Review with Onco Data Team | Michal Mucha | P2 | pts | newUM\26.03.17 | 
-[Closed] #185055 review within NewUM data team | Michal Mucha | P2 | pts | newUM\26.03.17 | 
-[Closed] #185057 Update the diagrams | Unassigned | P2 | pts | newUM\26.03.17 | 
-[Closed] #185095 Confirm full auditability for providers | Arben Osmani | P2 | pts | newUM\26.03.17 | 
-[Closed] #185113 Integrate example configuration details with Case Engine doc | Jack Hall | P2 | pts | newUM\26.03.31 | 
-[Closed] #185114 Add Case API to Case Engine doc | Jack Hall | P2 | pts | newUM\26.03.17 | 
-[Closed] #185237 Implement update of Treatment Start Date | Dmytro Hridin | P2 | pts | newUM\26.03.17 | 
-[Closed] #185346 Create a stepper wizard component | Petro Brezitskiy | P2 | pts | newUM\26.03.17 | 
-[Closed] #185347 Move member search page inside the step wizard | Petro Brezitskiy | P2 | pts | newUM\26.03.31 | 
-[Closed] #185366 CI/CD | Unassigned | P2 | pts | newUM\26.03.17 | 
-[Closed] #185414 Update Provider Proposed Data Model | Arben Osmani | P2 | pts | newUM\26.03.17 | 
-[Closed] #185554 Unify options | Mykola Vorona | P2 | pts | newUM\26.03.17 | 
-[Closed] #185556 Add validation to put methods (with tests) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.31 | core
-[Closed] #185558 Remove Id from create model | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.31 | 
-[Closed] #185591 review the doc | Oleksandr Nykonenko | P2 | pts | newUM\26.03.31 | 
-[Closed] #185592 review the doc | Cory Johnson | P2 | pts | newUM\26.03.31 | 
-[Closed] #185593 review the doc | Arben Osmani | P2 | pts | newUM\26.03.31 | 
-[Closed] #185594 review the doc | Carlos Carrillo | P2 | pts | newUM\26.03.31 | 
-[Closed] #185595 Investigate | Cory Johnson | P2 | pts | newUM\26.03.17 | 
-[Closed] #185596 Investigate | Cory Johnson | P2 | pts | newUM\26.03.17 | 
-[Closed] #185598 Move member info to a stepper | Mykola Vorona | P2 | pts | newUM\26.03.17 | 
-[Closed] #185641 Sync Date type with API format | Petro Brezitskiy | P2 | pts | newUM\26.03.17 | 
-[Closed] #185643 [FE] implement readonly styles for components | Yurii Bodnar | P2 | pts | newUM\26.03.17 | 
-[Closed] #185645 Testing 181257 | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
-[Closed] #185646 Testing 181259 | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
-[Closed] #185647 investigation | Oleksandr Nykonenko | P2 | pts | newUM\26.03.31 | 
-[Closed] #185665 Add VPN routes to the VNET | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
-[Closed] #185666 Work with Zaki Mohammed to meet Onco's DB best practices | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
-[Closed] #185706 NewUM Architecture Diagram | Bogdan Chachun | P2 | pts | newUM\26.03.17 | BE Services
-[Closed] #185715 Payer group taxonomy | Cory Johnson | P2 | pts | newUM\26.03.31 | 
-[Removed] #185716 Manual eligibility storage pattern | Unassigned | P2 | pts | newUM\26.03.31 | 
-[Closed] #185717 Person/Member PK/FK | Michal Mucha | P2 | pts | newUM\26.03.31 | 
-[Closed] #185748 Bussiness gap analysis | Arben Osmani | P2 | pts | newUM\26.03.31 | 
-[Closed] #185794 Update provider diagram with meeting decisions | Arben Osmani | P2 | pts | newUM\26.03.31 | 
-[Closed] #185800 Adjust sidebar styles. | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
-[Closed] #185849 Update member endpoints | Mykola Vorona | P2 | pts | newUM\26.03.31 | 
-[Closed] #185854 Document envs deployment process | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
-[Closed] #185855 Document OKTA JWT usage | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
-[Closed] #185933 Document security section | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
-[Closed] #186046 Onboarding for Michal Kochanski | Michal Kochanski | P2 | pts | newUM\26.03.31 | 
-[Closed] #186052 Prepare initial files required for TAF | Ivan Karpa | P2 | pts | newUM\26.03.31 | 
-[Closed] #186054 Setup VDI Michal Kochanski | Michal Kochanski | P2 | pts | newUM\26.03.31 | 
-[Closed] #186056 Setup VDI Olha Pidhorna | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
-[Removed] #186059 Prepare confluence page with useful links | Unassigned | P2 | pts | newUM\26.03.31 | 
-[Closed] #186061 Prepare the confluence page with useful links | Taras Badlo | P2 | pts | newUM\26.03.31 | 
-[Closed] #186067 Define the situation with test environment | Andriy Sapryka | P2 | pts | newUM\26.03.31 | 
-[Closed] #186154 [Drugs API] Create Load ICD-10 logic | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
-[Closed] #186155 [NewUM] Create Drugs API Client | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
-[Closed] #186156 [NewUM] Inegrate with Load ICD-10 endpoint | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
-[Closed] #186157 Add App configs for test env | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
-[Closed] #186178 implementation | Cory Johnson | P2 | pts | newUM\26.03.31 | 
 [Closed] #186232 Create UAT database and user | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
 [Closed] #186233 Add secrets to Azure Vault | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
 [Closed] #186234 Add UAT step for FE | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
@@ -96,7 +37,7 @@ Tasks (466)
 [Closed] #186568 1 reviewer for PR other than self | Michal Mucha | P2 | pts | newUM\26.03.31 | 
 [Closed] #186569 investigation | Carlos Carrillo | P2 | pts | newUM\26.03.31 | 
 [Closed] #186570 implementation | Oleksandr Nykonenko | P2 | pts | newUM\26.03.31 | 
-[Active] #186617 Make a data dictionary for Case Schema | Jack Hall | P2 | pts | newUM\26.04.14 | 
+[Closed] #186617 Make a data dictionary for Case table | Jack Hall | P2 | pts | newUM\26.04.14 | 
 [Closed] #186688 Create Story Book | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
 [Closed] #186690 Add ADLS Write-back Endpoints to blob-api | Arben Osmani | P2 | pts | newUM\26.03.31 | 
 [Closed] #186714 Investigate how we can get Cancer Stage for Diagnosis | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
@@ -125,42 +66,40 @@ Tasks (466)
 [Closed] #187155 [DrugsAPI] Enrich Regimen Drugs endpoint with alternative drugs | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
 [Closed] #187157 [NewUM] Enrich contract with alternative drugs | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
 [Closed] #187216 document details on NFR, security, alerting and etc | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
-[Active] #187419 Fold in event-based audit log concept | Joseph Destefano | P2 | pts | newUM\26.04.14 | 
-[Active] #187420 Updates based on Onco's review | Joseph Destefano | P2 | pts | newUM\26.04.14 | 
+[Active] #187419 Fold in event-based audit log concept | Joseph Destefano | P2 | pts | newUM\26.04.28 | 
+[Active] #187420 Updates based on Onco's review | Joseph Destefano | P2 | pts | newUM\26.04.28 | 
 [Closed] #187513 Testing Draft Case Creation | Andriy Sapryka | P2 | pts | newUM\26.03.31 | 
-[Active] #187516 Testing Load ICD-10 Library with Diagnosis Group (182089 and 182090) | Taras Badlo | P2 | pts | newUM\26.04.14 | 
-[Active] #187517 Prepare seed data for testing | Olha Pidhorna | P2 | pts | newUM\26.04.14 | 
-[Active] #187528 Testing Validate Member Eligibility at Treatment Start Date | Olha Pidhorna | P2 | pts | newUM\26.04.14 | 
+[Closed] #187516 Testing Load ICD-10 Library with Diagnosis Group (182089 and 182090) | Taras Badlo | P2 | pts | newUM\26.04.28 | 
+[Removed] #187517 Prepare seed data for testing | Olha Pidhorna | P2 | pts | newUM\26.04.14 | 
+[Closed] #187528 Testing Validate Member Eligibility at Treatment Start Date | Olha Pidhorna | P2 | pts | newUM\26.04.14 | 
 [Closed] #187529 Testing search existing regiments by drug composition | Andriy Sapryka | P2 | pts | newUM\26.04.14 | 
-[Closed] #187530 Define the scope of testing for existing endpoints | Taras Badlo | P2 | pts | newUM\26.04.14 | 
-[New] #187531 Testing select treatment type | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
-[Active] #187532 Testing select existing regiment | Andriy Sapryka | P2 | pts | newUM\26.04.14 | 
-[Active] #187533 Testing allow switching between equivalent drugs | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
+[Closed] #187530 Define the scope of testing for existing endpoints | Taras Badlo | P2 | pts | newUM\26.04.28 | 
+[Closed] #187531 Testing select treatment type | Ivan Karpa | P2 | pts | newUM\26.04.28 | 
+[Closed] #187532 Testing select existing regiment | Andriy Sapryka | P2 | pts | newUM\26.04.28 | 
+[Closed] #187533 Testing allow switching between equivalent drugs | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
 [Closed] #187535 Testing Create Draft Case and Save Progress | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
 [Closed] #187537 Implement save | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
 [Closed] #187540 update tests | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
-[Active] #187564 Manual eligibility storage pattern | Michal Mucha | P2 | pts | newUM\26.04.14 | 
-[New] #187565 Document in Confluence - Data Dump from Databricks to Azure Blob Storage | Cory Johnson | P2 | pts | newUM\26.04.14 | 
-[Code Review] #187599 implement POC for patch | Dmytro Hridin | P2 | pts | newUM\26.04.14 | 
-[Code Review] #187600 document approaches | Dmytro Hridin | P2 | pts | newUM\26.04.14 | 
-[Active] #187603 Testing saving ICD-10 code and Diagnosis group context | Taras Badlo | P2 | pts | newUM\26.04.14 | 
+[Closed] #187565 Document in Confluence - Data Dump from Databricks to Azure Blob Storage | Cory Johnson | P2 | pts | newUM\26.04.14 | 
+[Closed] #187599 implement POC for patch | Dmytro Hridin | P2 | pts | newUM\26.04.14 | 
+[Closed] #187600 document approaches | Dmytro Hridin | P2 | pts | newUM\26.04.14 | 
+[Closed] #187603 Testing saving ICD-10 code and Diagnosis group context | Taras Badlo | P2 | pts | newUM\26.04.14 | 
 [Closed] #187607 Testing Save cancer stage | Olha Pidhorna | P2 | pts | newUM\26.04.14 | 
 [Closed] #187618 Draw CaseAction lifecycle diagram | Jack Hall | P2 | pts | newUM\26.03.31 | 
 [Closed] #187648 Clean up Docker VM storage | Luiyi Valentin | P2 | pts | newUM\26.04.14 | DevOps
 [Closed] #187649 Create Docker clean up to run every sunday | Luiyi Valentin | P2 | pts | newUM\26.04.14 | DevOps
-[Code Review] #187677 Change structure of already existing framework | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
-[New] #187678 Add and Test basic API rules | Unassigned | P2 | pts | newUM\26.04.14 | 
-[New] #187679 Add and Test basic UI rules | Unassigned | P2 | pts | newUM\26.04.14 | 
-[New] #187680 Add and test general rules | Unassigned | P2 | pts | newUM\26.04.14 | 
-[New] #187681 Prepare examples for cloude | Unassigned | P2 | pts | newUM\26.04.14 | 
+[Closed] #187677 Change structure of already existing framework | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
+[Closed] #187678 Add and Test basic API rules | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
+[Closed] #187679 Add and Test basic UI rules | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
+[Closed] #187680 Add and test general rules | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
+[Closed] #187681 Prepare examples for cloude | Michal Kochanski | P2 | pts | newUM\26.04.14 | 
 [Closed] #187691 Separate Drugs into separate beneficial types [PHARMACY/MEDICAL] | Mykola Vorona | P2 | pts | newUM\26.04.14 | 
 [Closed] #187692 Add all the required columns for drug tables [READ_ONLY] | Mykola Vorona | P2 | pts | newUM\26.04.14 | 
 [Closed] #187694 Handle different column-demanded cells [TEXT INPUT, SELECT, ACTIONS, etc...] | Yurii Bodnar | P2 | pts | newUM\26.04.14 | 
 [Closed] #187695 Create global DRUGS context [state & data handling] | Petro Brezitskiy | P2 | pts | newUM\26.04.14 | 
 [Closed] #187696 Describe validation logic [per row] | Petro Brezitskiy | P2 | pts | newUM\26.04.14 | 
 [Closed] #187697 Handle inline row values calculations | Petro Brezitskiy | P2 | pts | newUM\26.04.14 | 
-[New] #187728 Figure out the mechanism to bring this data to NewUM | Michal Mucha | P2 | pts | newUM\26.04.14 | 
-[New] #187731 Figure out the mechanism to bring this data to NewUM | Michal Mucha | P2 | pts | newUM\26.04.14 | 
+[New] #187731 Figure out the mechanism to bring this data to NewUM | Oleksandr Nykonenko | P2 | pts | newUM\26.04.14 | 
 [Closed] #187764 AssignRegimen endpoint | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
 [Closed] #187765 AssignRegimen Handler | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
 [Closed] #187766 Migration to Drop ETL tables | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
@@ -172,93 +111,95 @@ Tasks (466)
 [Closed] #187776 Pull Request | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
 [Closed] #187777 Update Regimen Drugs for Case Entry | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
 [Closed] #187807 Update Drugs API search logic | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
-[Active] #187816 Billing Address | Arben Osmani | P2 | pts | newUM\26.04.14 | 
-[Active] #187817 Taxonomy Codes | Arben Osmani | P2 | pts | newUM\26.04.14 | 
-[Active] #187818 TIN | Arben Osmani | P2 | pts | newUM\26.04.14 | 
+[Closed] #187816 Billing Address | Arben Osmani | P2 | pts | newUM\26.04.14 | 
+[Closed] #187817 Taxonomy Codes | Arben Osmani | P2 | pts | newUM\26.04.14 | 
+[Closed] #187818 TIN | Arben Osmani | P2 | pts | newUM\26.04.14 | 
 [Closed] #187820 Investigate how to properly handle calculations on both the backend and frontend | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
 [Closed] #187821 Investigate how to properly handle calculations on both the backend and frontend | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
-[New] #187936 Testing Populate initial Dosing details | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
-[New] #187941 Testing initial dosing details | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
-[New] #187942 Testing forms and strengths | Ivan Karpa | P2 | pts | newUM\26.04.14 | 
-[New] #187943 Testing edits | Taras Badlo | P2 | pts | newUM\26.04.14 | 
-[New] #187944 Test Existing regiment | Andriy Sapryka | P2 | pts | newUM\26.04.14 | 
+[New] #187936 Testing Populate initial Dosing details | Ivan Karpa | P2 | pts | newUM\26.04.28 | 
+[Active] #187941 Testing initial dosing details | Ivan Karpa | P2 | pts | newUM\26.04.28 | 
+[Active] #187942 Testing forms and strengths | Ivan Karpa | P2 | pts | newUM\26.04.28 | 
+[Active] #187943 Testing edits | Taras Badlo | P2 | pts | newUM\26.04.28 | 
+[Closed] #187944 Test Existing regiment | Andriy Sapryka | P2 | pts | newUM\26.04.14 | 
 [Closed] #187945 add tests | Dmytro Hridin | P2 | pts | newUM\26.04.14 | 
 [Closed] #187946 Deploy portainer (POC) | Luiyi Valentin | P2 | pts | newUM\26.04.14 | DevOps
 [Closed] #187947 Deploy Headlamp (POC) | Luiyi Valentin | P2 | pts | newUM\26.04.14 | DevOps
 [Closed] #187948 Request DNS setup | Luiyi Valentin | P2 | pts | newUM\26.04.14 | DevOps
 [Closed] #187949 Return Treatment Types for Payer | Roman Buchyn | P2 | pts | newUM\26.04.14 | 
-[Code Review] #187954 Confluence documentation | Michal Mucha | P2 | pts | newUM\26.04.14 | 
-[Active] #187970 Review of Eligibility by Onco Data team | Michal Mucha | P2 | pts | newUM\26.04.14 | 
-[Active] #187972 Bring flat files from Matis to Blob storage | Cory Johnson | P2 | pts | newUM\26.04.14 | 
+[Closed] #187954 Confluence documentation | Michal Mucha | P2 | pts | newUM\26.04.14 | 
+[Code Review] #187970 Review of Eligibility by Onco Data team | Michal Mucha | P2 | pts | newUM\26.04.28 | 
+[Closed] #187972 Bring flat files from Matis to Blob storage | Cory Johnson | P2 | pts | newUM\26.04.14 | 
 [Closed] #188056 Describe regimen API callbacks | Yurii Bodnar | P2 | pts | newUM\26.04.14 | 
 [Closed] #188057 Handle options mapping for PHARMACY DRUGS | Mykola Vorona | P2 | pts | newUM\26.04.14 | 
-[Active] #188065 Add ComputeStrength calculation in case of Pack form | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
-[Active] #188109 Investigation | Carlos Carrillo | P2 | pts | newUM\26.04.14 | 
-[Active] #188112 Writing data to prostgress | Arben Osmani | P2 | pts | newUM\26.04.14 | 
-[Active] #188116 lack of access | Carlos Carrillo | P2 | pts | newUM\26.04.14 | 
-[Active] #188133 Add Okta authentication for Headlamp | Luiyi Valentin | P2 | pts | newUM\26.04.14 | DevOps
+[Closed] #188065 Add ComputeStrength calculation in case of Pack form | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
+[Active] #188109 Investigation | Carlos Carrillo | P2 | pts | newUM\26.04.28 | 
+[Closed] #188112 Writing data to prostgress | Arben Osmani | P2 | pts | newUM\26.04.14 | 
+[Closed] #188116 lack of access | Carlos Carrillo | P2 | pts | newUM\26.04.14 | 
+[Active] #188133 Add Okta authentication for Headlamp | Luiyi Valentin | P2 | pts | newUM\26.04.28 | DevOps
 [Closed] #188353 Rule Condition Validation Research | Roman Buchyn | P2 | pts | newUM\26.04.14 | 
-[Active] #188398 Document the approach | Arben Osmani | P2 | pts | newUM\26.04.14 | 
-[Active] #188400 Implement the python script to read data from ADLS | Arben Osmani | P2 | pts | newUM\26.04.14 | 
-[Closed] #181121 Create Dockerfile | Dmytro Petriv | P2 | pts | newUM\26.02.03 | 
-[Closed] #181122 Create Helm charts or k8s manifests | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
-[Closed] #181299 Deploy VM using Terraform | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
-[Closed] #181300 Install Docker | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
-[Closed] #181301 Install Azure agent | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
-[Closed] #181302 Test the new agent | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
-[Closed] #181330 Rename CaseMeta to OpenCaseMeta | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[Closed] #181332 Add OpenCaseDrugElementMeta | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[Closed] #181333 OpenCaseRadiationElementMeta | Iryna Lukianovets | P2 | pts | newUM\26.02.17 | core
-[Closed] #181334 Add EligibilityIdentity | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.03 | core
-[Closed] #181335 Add LineOfBuisiness | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.03 | core
-[Closed] #181336 Add Payer | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[Closed] #181357 [BE] Expose Intake APIs for FE Integration (Eligibility, Case , Case Meta) | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[Closed] #181358 [FE] Integrate member search with API | Petro Brezitskiy | P2 | pts | newUM\26.03.03 | FE
-[Closed] #181360 [BE] Define Diagnosis & Clinical Indication Data Model and API Contract | Iryna Lukianovets | P2 | pts | newUM\26.03.03 | BE Services; core
-[Removed] #181363 [FE] Implement Diagnosis & Clinical Indication Capture UI (Mock-Driven) | Dmytro Petriv | P2 | pts | newUM\26.02.17 | FE
-[Removed] #181364 [BE] Define Chemo Assignment Type on Case (Single-Option Prototype) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
-[Closed] #181365 [FE] Implement Chemo Assignment Selection UI (Single-Path) | Mykola Vorona | P2 | pts | newUM\26.02.17 | FE
-[Removed] #181368 [BE] Define Chemo Regimen and Dosing Review Contract (Prototype) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
-[Closed] #181369 [FE] Implement Chemo Protocol Details UI: Regimen Selection and Dosing Review (Mock-Driven) | Petro Brezitskiy | P2 | pts | newUM\26.02.17 | FE
-[Removed] #181370 [BE] Define Case Submission Confirmation Response Contract (Prototype) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
-[Removed] #181371 [FE] Implement Submission Confirmation UI Using Mocked Submission Response | Unassigned | P2 | pts | newUM\26.03.03 | FE
-[Removed] #181373 [BE] Implement and Expose APIs for Case Intake and Chemo Assignment Integration | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
-[Removed] #181374 [FE] Integrate Case Intake and Chemo Assignment UI with Backend APIs | Unassigned | P2 | pts | newUM\26.03.03 | FE
-[Closed] #181612 Pickup environmnet variables and mount it as Kubernetes ConfigMaps from Helm values | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
-[Closed] #181613 Create step to pickup keyvault secrets variables and mount it as Kubernetes Secrets | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
-[Closed] #181680 Refactor Members Search for need of UI team | Iryna Lukianovets | P2 | pts | newUM\26.02.17 | 
-[Closed] #181681 Set up Unit Test project | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181682 Set up Integration Test project | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181683 Add Unit tests | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181684 Add Integration tests | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181685 Add unit test and integration tasks to CI | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181689 Job Monitor investigation | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181691 Create a Application Gateway using Terraform | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
-[Closed] #181692 Create Prototype with Microsoft Engine Rules | Roman Buchyn | P2 | pts | newUM\26.02.17 | 
-[Closed] #181693 Create Confluence page about prototype with Microsoft Engine Rules | Roman Buchyn | P2 | pts | newUM\26.02.17 | 
-[Closed] #181766 Add Regimen | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | 
-[Closed] #181828 Investigate Dynamic LINQ | Roman Buchyn | P2 | pts | newUM\26.02.17 | 
-[Closed] #181834 Create or attache a SSL/TSL certificate from Onco's domain | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
-[Closed] #181918 Create doc in Confluence | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181988 Document Service Investigation | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181989 Create doc in Confluence | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #181999 Connect Application Gateway VNET to Onco's VNETs | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
-[Closed] #182054 Implement ForeignKeys on existing entities | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[Closed] #182092 Fax Inbound and Outbound workflow analysis | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #182093 Create doc in Confluence | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
-[Closed] #182097 Update tests for updated constraints | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[Closed] #182099 Add NewUm.Domain project and Implement Case domain | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
-[New] #182100 Split post methods to createEntity and createVersion | Unassigned | P2 | pts | newUM\26.02.17 | core
-[Closed] #182295 Draft full ERD for core backend | Jack Hall | P2 | pts | newUM\26.03.03 | core
-[Removed] #182296 Migration pipeline high-level design | Vika Nobis | P2 | pts | newUM\26.03.03 | core
-[Closed] #182297 Config design doc | Pero Jaman | P2 | pts | newUM\26.03.03 | BE Services; core
-[Closed] #182298 Architecture docs clarifying deployment and interfaces | Jack Hall | P2 | pts | newUM\26.03.03 | core
-[Closed] #182299 Product requirements doc | Inna Mariienko | P2 | pts | newUM\26.03.03 | BE Services; core
-[Removed] #182300 Development approach doc | Vika Nobis | P2 | pts | newUM\26.02.17 | 
-[Closed] #182310 Implement sql migrations step | Dmytro Hridin | P2 | pts | newUM\26.02.17 | 
-[Closed] #182328 Migrate a sample of eligibility data from EligibilityMS (and possibly OADB) to newUM | Oleksandr Nykonenko | P2 | pts | newUM | 
-[Closed] #182414 Add Person | Iryna Lukianovets | P2 | pts | newUM\26.03.03 | core
-[Closed] #182415 Add BusinessGrouping | Drazen Borota | P2 | pts | newUM\26.03.03 | core
+[Closed] #188398 Document the approach | Arben Osmani | P2 | pts | newUM\26.04.14 | 
+[Closed] #188400 Implement the python script to read data from ADLS | Arben Osmani | P2 | pts | newUM\26.04.14 | 
+[Closed] #188527 Make data dictionary for Case*Element tables | Jack Hall | P2 | pts | newUM\26.04.14 | 
+[Closed] #188528 Make data dictionary for supporting tables in Case Schema | Jack Hall | P2 | pts | newUM\26.04.14 | 
+[Closed] #188578 Extend Case DTO for contain TreatmentType | Roman Buchyn | P2 | pts | newUM\26.04.14 | 
+[Closed] #188585 API integrations | Petro Brezitskiy | P2 | pts | newUM\26.04.14 | 
+[Closed] #188589 Create migration template | Luiyi Valentin | P2 | pts | newUM\26.04.14 | 
+[Closed] #188590 Use cd.ymal instead of azure-pipelines.yaml | Luiyi Valentin | P2 | pts | newUM\26.04.14 | 
+[Closed] #188591 Create Docker build and push template | Luiyi Valentin | P2 | pts | newUM\26.04.14 | 
+[Closed] #188603 [NewUM] Add endpoint to search drugs | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
+[Closed] #188610 integrate subentities: icd10code | Dmytro Hridin | P2 | pts | newUM\26.04.14 | 
+[Closed] #188611 Investigation | Nazar Mashtaler | P2 | pts | newUM\26.04.28 | 
+[Active] #188634 implementation | Oleksandr Nykonenko | P2 | pts | newUM\26.04.14 | 
+[Closed] #188776 Testing if the flow is working | Taras Badlo | P2 | pts | newUM\26.04.14 | 
+[Closed] #188785 Testing saving existing regiment and drug type to the case | Andriy Sapryka | P2 | pts | newUM\26.04.28 | 
+[Active] #188786 Testing apply benefit type configuration from PDL | Olha Pidhorna | P2 | pts | newUM\26.04.28 | 
+[New] #188787 Calculate allowed dose and without patient weigh and high | Olha Pidhorna | P2 | pts | newUM\26.04.28 | 
+[Active] #188788 Testing calculate Quantity per Authorization (Pharmacy  Drugs) | Olha Pidhorna | P2 | pts | newUM\26.04.28 | 
+[Closed] #188801 Create api end point to check check if regimen exists | Nazar Mashtaler | P2 | pts | newUM\26.04.28 | 
+[Active] #188843 investigation | Arben Osmani | P2 | pts | newUM\26.04.28 | 
+[Closed] #188869 [DrugsAPI] Add endpoint tio search drugs | Bogdan Chachun | P2 | pts | newUM\26.04.14 | 
+[Code Review] #188870 Code Review | Unassigned | P2 | pts | newUM\26.04.28 | 
+[Closed] #188935 Rule Condition Validation | Roman Buchyn | P2 | pts | newUM\26.04.28 | 
+[Active] #188946 [NewUM] Save Custome Regimen Drugs | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Code Review] #188948 extend current RFC | Dmytro Hridin | P2 | pts | newUM\26.04.28 | 
+[Code Review] #188949 extend patch enpdoint based of rfc | Dmytro Hridin | P2 | pts | newUM\26.04.28 | 
+[Active] #188950 update tests | Dmytro Hridin | P2 | pts | newUM\26.04.28 | 
+[New] #188951 Apply schema updates | Unassigned | P2 | pts | newUM\26.04.28 | 
+[New] #188952 Implement api changes | Unassigned | P2 | pts | newUM\26.04.28 | 
+[New] #188953 update tests | Olha Pidhorna | P2 | pts | newUM\26.04.28 | 
+[Closed] #188955 Handle "Treatment Start Date" without specified time | Roman Buchyn | P2 | pts | newUM\26.04.28 | 
+[Closed] #188969 Save selected treatment type | Mykola Vorona | P2 | pts | newUM\26.04.28 | 
+[Active] #188977 Investigation | Oleksandr Nykonenko | P2 | pts | newUM\26.04.28 | 
+[Closed] #189064 Fix serialization of problem details response | Vasco Santos | P2 | pts | newUM\26.04.28 | 
+[Closed] #189066 Investigate root cause of said bug | Vasco Santos | P2 | pts | newUM\26.04.28 | 
+[Closed] #189069 Create newUM version of check if regiment exist end point | Nazar Mashtaler | P2 | pts | newUM\26.04.28 | 
+[Closed] #189075 Update contract to support only Date | Roman Buchyn | P2 | pts | newUM\26.04.28 | 
+[Closed] #189083 Ensure the eligibility version exists before updating entry | Vasco Santos | P2 | pts | newUM\26.04.28 | 
+[Active] #189090 Testing search drug | Andriy Sapryka | P2 | pts | newUM\26.04.28 | 
+[New] #189091 Testing implement previous button | Taras Badlo | P2 | pts | newUM\26.04.28 | 
+[New] #189095 Testing allow user edit dosing | Taras Badlo | P2 | pts | newUM\26.04.28 | 
+[Closed] #189188 Add ICD10Code properties to CaseResult | Vasco Santos | P2 | pts | newUM\26.04.28 | 
+[Closed] #189189 Ensure all Case-related handlers include Icd10Code entity | Vasco Santos | P2 | pts | newUM\26.04.28 | 
+[Active] #189190 investigation | Oleksandr Nykonenko | P2 | pts | newUM | 
+[Active] #189216 waiting on mail from Databricks team | Michal Mucha | P2 | pts | newUM\26.04.28 | 
+[Active] #189217 adjustments to ER | Arben Osmani | P2 | pts | newUM\26.04.28 | 
+[New] #189220 [FE] Display alternative drugs as HCPCS + Generic + Brand in the HCPCS dropdown | Unassigned | P2 | pts | newUM\26.04.28 | 
+[New] #189221 [BE] Return structured alternative drug display fields for HCPCS dropdown options | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Code Review] #189273 Fix issue with error message information | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Closed] #189274 Fix issue with treatmentStartDate | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Code Review] #189276 Provider data from Databricks to NewUM | Oleksandr Nykonenko | P2 | pts | newUM\26.04.28 | 
+[New] #189288 Testing update with patch | Olha Pidhorna | P2 | pts | newUM\26.04.28 | 
+[Closed] #189289 Update: Case, Icd10Code, Regimen, CaseDrugSnapshot | Roman Buchyn | P2 | pts | newUM\26.04.28 | 
+[Code Review] #189305 Implement basic Compiler | Vladyslav Kyrychuk | P2 | pts | newUM\26.04.28 | core
+[New] #189311 Databricks dump | Unassigned | P2 | pts | newUM\26.04.28 | 
+[New] #189312 Access to repos | Cory Johnson | P2 | pts | newUM\26.04.28 | 
+[New] #189313 New service principal | Unassigned | P2 | pts | newUM\26.04.28 | 
+[New] #189314 Airflow 3.0 repo | Cory Johnson | P2 | pts | newUM\26.04.28 | 
+[Active] #189316 [NewUM] Add Regimen Type | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Active] #189367 [DrugsAPI] Get Drugs Details | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Active] #189368 [NewUM] Get Drugs Details | Bogdan Chachun | P2 | pts | newUM\26.04.28 | 
+[Active] #189387 Investigation | Nazar Mashtaler | P2 | pts | newUM\26.04.28 | 
+[Active] #189402 Set CreatedBy / UpdatedBy | Roman Buchyn | P2 | pts | newUM\26.04.28 | 
 [Closed] #182416 Add BusinessGrain | Drazen Borota | P2 | pts | newUM\26.02.17 | core
 [Closed] #182417 Add ProductLine | Drazen Borota | P2 | pts | newUM\26.03.03 | core
 [Closed] #182507 Define rules in JSON and build NRules in runtime | Roman Buchyn | P2 | pts | newUM\26.02.17 | core
@@ -400,6 +341,65 @@ Tasks (466)
 [Closed] #184801 NUCC - NPESS | Arben Osmani | P2 | pts | newUM\26.03.17 | 
 [Closed] #184822 create a new monorepo under devops | Oleksandr Nykonenko | P2 | pts | newUM\26.03.17 | 
 [Closed] #184842 Add coverage support | Luiyi Valentin | P2 | pts | newUM\26.03.17 | DevOps
+[Closed] #184886 Create library of configurable Case Actions and Transitions | Pero Jaman | P2 | pts | newUM\26.03.17 | 
+[Closed] #184918 Migrate current file folder structure to be up to date with the documentation | Dmytro Petriv | P2 | pts | newUM\26.03.17 | 
+[Closed] #184920 refactor api folder to be clean and sustainable | Petro Brezitskiy | P2 | pts | newUM\26.03.31 | 
+[Closed] #184929 What about payer hierarchy representation | Michal Mucha | P2 | pts | newUM\26.03.17 | 
+[Closed] #184950 Add custom eslint rules to enforce some file folder structure and add Claud md more context | Dmytro Petriv | P2 | pts | newUM\26.03.31 | 
+[Closed] #184959 Implement nav bar menu as on design | Yurii Bodnar | P2 | pts | newUM\26.03.17 | 
+[Closed] #185002 Create a stepper component based on design | Petro Brezitskiy | P2 | pts | newUM\26.03.17 | 
+[Closed] #185053 review with NewUM | Michal Mucha | P2 | pts | newUM\26.03.17 | 
+[Closed] #185054 Review with Onco Data Team | Michal Mucha | P2 | pts | newUM\26.03.17 | 
+[Closed] #185055 review within NewUM data team | Michal Mucha | P2 | pts | newUM\26.03.17 | 
+[Closed] #185057 Update the diagrams | Unassigned | P2 | pts | newUM\26.03.17 | 
+[Closed] #185095 Confirm full auditability for providers | Arben Osmani | P2 | pts | newUM\26.03.17 | 
+[Closed] #185113 Integrate example configuration details with Case Engine doc | Jack Hall | P2 | pts | newUM\26.03.31 | 
+[Closed] #185114 Add Case API to Case Engine doc | Jack Hall | P2 | pts | newUM\26.03.17 | 
+[Closed] #185237 Implement update of Treatment Start Date | Dmytro Hridin | P2 | pts | newUM\26.03.17 | 
+[Closed] #185346 Create a stepper wizard component | Petro Brezitskiy | P2 | pts | newUM\26.03.17 | 
+[Closed] #185347 Move member search page inside the step wizard | Petro Brezitskiy | P2 | pts | newUM\26.03.31 | 
+[Closed] #185366 CI/CD | Unassigned | P2 | pts | newUM\26.03.17 | 
+[Closed] #185414 Update Provider Proposed Data Model | Arben Osmani | P2 | pts | newUM\26.03.17 | 
+[Closed] #185554 Unify options | Mykola Vorona | P2 | pts | newUM\26.03.17 | 
+[Closed] #185556 Add validation to put methods (with tests) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.31 | core
+[Closed] #185558 Remove Id from create model | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.31 | 
+[Closed] #185591 review the doc | Oleksandr Nykonenko | P2 | pts | newUM\26.03.31 | 
+[Closed] #185592 review the doc | Cory Johnson | P2 | pts | newUM\26.03.31 | 
+[Closed] #185593 review the doc | Arben Osmani | P2 | pts | newUM\26.03.31 | 
+[Closed] #185594 review the doc | Carlos Carrillo | P2 | pts | newUM\26.03.31 | 
+[Closed] #185595 Investigate | Cory Johnson | P2 | pts | newUM\26.03.17 | 
+[Closed] #185596 Investigate | Cory Johnson | P2 | pts | newUM\26.03.17 | 
+[Closed] #185598 Move member info to a stepper | Mykola Vorona | P2 | pts | newUM\26.03.17 | 
+[Closed] #185641 Sync Date type with API format | Petro Brezitskiy | P2 | pts | newUM\26.03.17 | 
+[Closed] #185643 [FE] implement readonly styles for components | Yurii Bodnar | P2 | pts | newUM\26.03.17 | 
+[Closed] #185645 Testing 181257 | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #185646 Testing 181259 | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Closed] #185647 investigation | Oleksandr Nykonenko | P2 | pts | newUM\26.03.31 | 
+[Closed] #185665 Add VPN routes to the VNET | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
+[Closed] #185666 Work with Zaki Mohammed to meet Onco's DB best practices | Luiyi Valentin | P2 | pts | newUM\26.03.31 | DevOps
+[Closed] #185706 NewUM Architecture Diagram | Bogdan Chachun | P2 | pts | newUM\26.03.17 | BE Services
+[Closed] #185715 Payer group taxonomy | Cory Johnson | P2 | pts | newUM\26.03.31 | 
+[Removed] #185716 Manual eligibility storage pattern | Unassigned | P2 | pts | newUM\26.03.31 | 
+[Closed] #185717 Person/Member PK/FK | Michal Mucha | P2 | pts | newUM\26.03.31 | 
+[Closed] #185748 Bussiness gap analysis | Arben Osmani | P2 | pts | newUM\26.03.31 | 
+[Closed] #185794 Update provider diagram with meeting decisions | Arben Osmani | P2 | pts | newUM\26.03.31 | 
+[Closed] #185800 Adjust sidebar styles. | Yurii Bodnar | P2 | pts | newUM\26.03.31 | 
+[Closed] #185849 Update member endpoints | Mykola Vorona | P2 | pts | newUM\26.03.31 | 
+[Closed] #185854 Document envs deployment process | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
+[Closed] #185855 Document OKTA JWT usage | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
+[Closed] #185933 Document security section | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
+[Closed] #186046 Onboarding for Michal Kochanski | Michal Kochanski | P2 | pts | newUM\26.03.31 | 
+[Closed] #186052 Prepare initial files required for TAF | Ivan Karpa | P2 | pts | newUM\26.03.31 | 
+[Closed] #186054 Setup VDI Michal Kochanski | Michal Kochanski | P2 | pts | newUM\26.03.31 | 
+[Closed] #186056 Setup VDI Olha Pidhorna | Olha Pidhorna | P2 | pts | newUM\26.03.31 | 
+[Removed] #186059 Prepare confluence page with useful links | Unassigned | P2 | pts | newUM\26.03.31 | 
+[Closed] #186061 Prepare the confluence page with useful links | Taras Badlo | P2 | pts | newUM\26.03.31 | 
+[Closed] #186067 Define the situation with test environment | Andriy Sapryka | P2 | pts | newUM\26.03.31 | 
+[Closed] #186154 [Drugs API] Create Load ICD-10 logic | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
+[Closed] #186155 [NewUM] Create Drugs API Client | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
+[Closed] #186156 [NewUM] Inegrate with Load ICD-10 endpoint | Bogdan Chachun | P2 | pts | newUM\26.03.31 | 
+[Closed] #186157 Add App configs for test env | Dmytro Hridin | P2 | pts | newUM\26.03.31 | 
+[Closed] #186178 implementation | Cory Johnson | P2 | pts | newUM\26.03.31 | 
 [Closed] #180143 check if BE exists | Unassigned | P2 | pts | newUM\26.02.03 | 
 [Closed] #180212 Create App Config in OKTA | Bogdan Chachun | P2 | pts | newUM\26.02.03 | 
 [Closed] #180243 Research .NET rules engines | Jack Hall | P2 | pts | newUM\26.02.03 | 
@@ -465,4 +465,63 @@ Tasks (466)
 [Closed] #180999 [NewUM] Integration with Notification service | Bogdan Chachun | P2 | pts | newUM\26.02.03 | 
 [Closed] #181000 [NewUM] Stub for sending letter | Bogdan Chachun | P2 | pts | newUM\26.02.03 | 
 [Closed] #181001 Verify getting token logic and sending letter | Bogdan Chachun | P2 | pts | newUM\26.02.03 | 
+[Closed] #181121 Create Dockerfile | Dmytro Petriv | P2 | pts | newUM\26.02.03 | 
+[Closed] #181122 Create Helm charts or k8s manifests | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
 [Closed] #181123 Create CD pipeline's steps | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
+[Closed] #181299 Deploy VM using Terraform | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
+[Closed] #181300 Install Docker | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
+[Closed] #181301 Install Azure agent | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
+[Closed] #181302 Test the new agent | Luiyi Valentin | P2 | pts | newUM\26.02.03 | 
+[Closed] #181330 Rename CaseMeta to OpenCaseMeta | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[Closed] #181332 Add OpenCaseDrugElementMeta | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[Closed] #181333 OpenCaseRadiationElementMeta | Iryna Lukianovets | P2 | pts | newUM\26.02.17 | core
+[Closed] #181334 Add EligibilityIdentity | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.03 | core
+[Closed] #181335 Add LineOfBuisiness | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.03 | core
+[Closed] #181336 Add Payer | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[Closed] #181357 [BE] Expose Intake APIs for FE Integration (Eligibility, Case , Case Meta) | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[Closed] #181358 [FE] Integrate member search with API | Petro Brezitskiy | P2 | pts | newUM\26.03.03 | FE
+[Closed] #181360 [BE] Define Diagnosis & Clinical Indication Data Model and API Contract | Iryna Lukianovets | P2 | pts | newUM\26.03.03 | BE Services; core
+[Removed] #181363 [FE] Implement Diagnosis & Clinical Indication Capture UI (Mock-Driven) | Dmytro Petriv | P2 | pts | newUM\26.02.17 | FE
+[Removed] #181364 [BE] Define Chemo Assignment Type on Case (Single-Option Prototype) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
+[Closed] #181365 [FE] Implement Chemo Assignment Selection UI (Single-Path) | Mykola Vorona | P2 | pts | newUM\26.02.17 | FE
+[Removed] #181368 [BE] Define Chemo Regimen and Dosing Review Contract (Prototype) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
+[Closed] #181369 [FE] Implement Chemo Protocol Details UI: Regimen Selection and Dosing Review (Mock-Driven) | Petro Brezitskiy | P2 | pts | newUM\26.02.17 | FE
+[Removed] #181370 [BE] Define Case Submission Confirmation Response Contract (Prototype) | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
+[Removed] #181371 [FE] Implement Submission Confirmation UI Using Mocked Submission Response | Unassigned | P2 | pts | newUM\26.03.03 | FE
+[Removed] #181373 [BE] Implement and Expose APIs for Case Intake and Chemo Assignment Integration | Vladyslav Kyrychuk | P2 | pts | newUM\26.03.03 | core
+[Removed] #181374 [FE] Integrate Case Intake and Chemo Assignment UI with Backend APIs | Unassigned | P2 | pts | newUM\26.03.03 | FE
+[Closed] #181612 Pickup environmnet variables and mount it as Kubernetes ConfigMaps from Helm values | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
+[Closed] #181613 Create step to pickup keyvault secrets variables and mount it as Kubernetes Secrets | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
+[Closed] #181680 Refactor Members Search for need of UI team | Iryna Lukianovets | P2 | pts | newUM\26.02.17 | 
+[Closed] #181681 Set up Unit Test project | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181682 Set up Integration Test project | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181683 Add Unit tests | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181684 Add Integration tests | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181685 Add unit test and integration tasks to CI | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181689 Job Monitor investigation | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181691 Create a Application Gateway using Terraform | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
+[Closed] #181692 Create Prototype with Microsoft Engine Rules | Roman Buchyn | P2 | pts | newUM\26.02.17 | 
+[Closed] #181693 Create Confluence page about prototype with Microsoft Engine Rules | Roman Buchyn | P2 | pts | newUM\26.02.17 | 
+[Closed] #181766 Add Regimen | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | 
+[Closed] #181828 Investigate Dynamic LINQ | Roman Buchyn | P2 | pts | newUM\26.02.17 | 
+[Closed] #181834 Create or attache a SSL/TSL certificate from Onco's domain | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
+[Closed] #181918 Create doc in Confluence | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181988 Document Service Investigation | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181989 Create doc in Confluence | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #181999 Connect Application Gateway VNET to Onco's VNETs | Luiyi Valentin | P2 | pts | newUM\26.02.17 | DevOps
+[Closed] #182054 Implement ForeignKeys on existing entities | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[Closed] #182092 Fax Inbound and Outbound workflow analysis | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #182093 Create doc in Confluence | Bogdan Chachun | P2 | pts | newUM\26.02.17 | 
+[Closed] #182097 Update tests for updated constraints | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[Closed] #182099 Add NewUm.Domain project and Implement Case domain | Vladyslav Kyrychuk | P2 | pts | newUM\26.02.17 | core
+[New] #182100 Split post methods to createEntity and createVersion | Unassigned | P2 | pts | newUM\26.02.17 | core
+[Closed] #182295 Draft full ERD for core backend | Jack Hall | P2 | pts | newUM\26.03.03 | core
+[Removed] #182296 Migration pipeline high-level design | Vika Nobis | P2 | pts | newUM\26.03.03 | core
+[Closed] #182297 Config design doc | Pero Jaman | P2 | pts | newUM\26.03.03 | BE Services; core
+[Closed] #182298 Architecture docs clarifying deployment and interfaces | Jack Hall | P2 | pts | newUM\26.03.03 | core
+[Closed] #182299 Product requirements doc | Inna Mariienko | P2 | pts | newUM\26.03.03 | BE Services; core
+[Removed] #182300 Development approach doc | Vika Nobis | P2 | pts | newUM\26.02.17 | 
+[Closed] #182310 Implement sql migrations step | Dmytro Hridin | P2 | pts | newUM\26.02.17 | 
+[Closed] #182328 Migrate a sample of eligibility data from EligibilityMS (and possibly OADB) to newUM | Oleksandr Nykonenko | P2 | pts | newUM | 
+[Closed] #182414 Add Person | Iryna Lukianovets | P2 | pts | newUM\26.03.03 | core
+[Closed] #182415 Add BusinessGrouping | Drazen Borota | P2 | pts | newUM\26.03.03 | core

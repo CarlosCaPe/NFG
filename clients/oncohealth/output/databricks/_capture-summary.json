@@ -1,77 +1,36 @@
 {
-  "captured": "2026-03-24T21:30:00.000Z",
+  "captured": "2026-04-20T17:49:27.978Z",
   "url": "https://adb-2393860672770324.4.azuredatabricks.net/",
-  "workspace": "oh-databricks-ws-test",
-  "env": "test",
-  "auth": "PAT (visualstudio-carlos)",
-  "token_expires": "2027-03-24",
-  "user": "ccarrillo@oncologyanalytics.com (Carlos Carrillo)",
-  "api_validation": {
-    "endpoints_tested": [
-      { "endpoint": "/api/2.0/clusters/list", "status": 200, "note": "No clusters running" },
-      { "endpoint": "/api/2.1/unity-catalog/metastore_summary", "status": 200 },
-      { "endpoint": "/api/2.1/unity-catalog/catalogs", "status": 200, "count": 8 },
-      { "endpoint": "/api/2.1/unity-catalog/schemas", "status": 200 },
-      { "endpoint": "/api/2.1/unity-catalog/tables", "status": 200 },
-      { "endpoint": "/api/2.1/unity-catalog/iceberg-rest/v1/config", "status": 200, "note": "Requires ?warehouse=<catalog_name> parameter" },
-      { "endpoint": "/api/2.1/unity-catalog/iceberg-rest/v1/catalogs/*/namespaces", "status": 200, "note": "All 6 catalogs respond" },
-      { "endpoint": "/api/2.0/sql/warehouses", "status": 200, "count": 1 },
-      { "endpoint": "/api/2.0/preview/scim/v2/ServicePrincipals", "status": 200, "count": 3 },
-      { "endpoint": "/api/2.0/policies/clusters/list", "status": 200, "count": 7 },
-      { "endpoint": "/api/2.1/jobs/list", "status": 200, "count": 0 },
-      { "endpoint": "/api/2.0/pipelines", "status": 200, "count": 0 }
-    ]
-  },
-  "metastore": {
-    "id": "30737b7a-18b6-4e81-9016-03e2c816cc37",
-    "name": "metastore",
-    "cloud": "azure",
-    "region": "eastus2",
-    "external_access_enabled": false,
-    "delta_sharing_scope": "INTERNAL",
-    "storage_root": "abfss://unitycatalog@ohdatabrickswssamsdev.dfs.core.windows.net/30737b7a-18b6-4e81-9016-03e2c816cc37",
-    "storage_root_credential_name": "oh-databricks-ws-da-dev"
-  },
-  "catalogs": [
-    { "name": "drugmaster_test", "comment": "Drug Master TEST", "type": "MANAGED", "schemas": 4, "tables": 41 },
-    { "name": "eligibility_test", "comment": "Eligibility TEST", "type": "MANAGED", "schemas": 15, "tables": "~75" },
-    { "name": "enterprisedata_test", "comment": "EnterpriseData TEST", "type": "MANAGED", "schemas": 9, "tables": "~195" },
-    { "name": "inbound_ingestion_test", "comment": "Inbound Ingestion TEST", "type": "MANAGED", "schemas": 29, "tables": "~65" },
-    { "name": "newum_migration_test", "comment": "newUM Migration TEST", "type": "MANAGED", "schemas": 5, "tables": 90 },
-    { "name": "main", "comment": "Auto-created", "type": "MANAGED", "schemas": 2, "tables": 0 },
-    { "name": "samples", "type": "SYSTEM" },
-    { "name": "system", "type": "SYSTEM" }
-  ],
-  "service_principals": [
-    { "name": "databricks_airflow_sp_test", "appId": "6759a888-3038-4b05-a76b-8556aba5ad7a", "active": true },
-    { "name": "app-cc28t0 new-data-api", "appId": "90336730-f2e6-4960-adcd-a890cf092a20", "active": true },
-    { "name": "databricks_workspace_dev", "appId": "6f46a974-c1a5-4e9a-8f56-0563fc32f19b", "active": true }
-  ],
-  "sql_warehouses": [
-    { "name": "Starter Warehouse", "id": "090a45551ae1dc50", "state": "STOPPED", "size": "Small", "type": "PRO" }
-  ],
-  "cluster_policies": ["Developer Compute", "Developer Compute-DLT", "Developer Compute-Job", "Developer Compute-Job-Shared", "Developer Compute-Large", "Developer Compute-Photon", "Developer Compute-Shared"],
-  "iceberg_findings": {
-    "endpoint_works": true,
-    "requires_warehouse_param": true,
-    "uniform_enabled_tables": 0,
-    "external_access_enabled": false,
-    "external_use_schema_granted": false,
-    "blocker": "No tables have UniForm/IcebergCompatV2 enabled. Metastore external_access_enabled=false. No EXTERNAL_USE_SCHEMA grants."
-  },
-  "previous_errors": [
-    { "date": "2026-03-23", "section": "clusters", "status": 401, "reason": "No auth — scraper could not complete Entra ID SSO" },
-    { "date": "2026-03-23", "section": "jobs", "status": 401 },
-    { "date": "2026-03-23", "section": "unity-catalog", "status": 401 }
-  ],
-  "resolution": "PAT token created manually via Databricks UI. Full API capture completed 2026-03-24. Iceberg REST endpoint confirmed working (needs ?warehouse param). 8 catalogs, ~466 tables discovered.",
-  "files": [
-    "01-metastore-summary.json",
-    "02-catalogs.json",
-    "03-schemas-all.json",
-    "04-tables-all.json",
-    "05-service-principals.json",
-    "06-sql-warehouses.json",
-    "07-cluster-policies.json"
+  "files": 14,
+  "totalBytes": 1141259,
+  "errors": [
+    {
+      "section": "workspace",
+      "error": "no files"
+    },
+    {
+      "section": "clusters",
+      "error": {
+        "_error": true,
+        "status": 401,
+        "statusText": ""
+      }
+    },
+    {
+      "section": "jobs",
+      "error": {
+        "_error": true,
+        "status": 401,
+        "statusText": ""
+      }
+    },
+    {
+      "section": "unity-catalog",
+      "error": {
+        "_error": true,
+        "status": 401,
+        "statusText": ""
+      }
+    }
   ]
 }
