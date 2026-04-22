@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$comment": "NFG project identity — single source of truth for AI agents. Every fact is confirmed by vendor docs or user.",
-  "version": "1.34.0",
-  "last_updated": "2026-04-21",
+  "version": "1.35.0",
+  "last_updated": "2026-04-22",
   "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
 
   "identity": {
@@ -73,6 +73,38 @@
   },
 
   "environments": {
+    "app_urls": {
+      "uat":  { "ui": "https://newum-uat.oncologyanalytics.com/",  "api": "https://newum-api-uat.oncologyanalytics.com/" },
+      "test": { "ui": "https://newum-test.oncologyanalytics.com/", "api": "https://newum-api-test.oncologyanalytics.com/" },
+      "dev":  { "ui": "https://newum-dev.oncologyanalytics.com/",  "api": "https://newum-api-dev.oncologyanalytics.com/" },
+      "note": "Some URLs only reachable via OncoHealth VPN or VDI (windows365 CPC)",
+      "confirmed": true,
+      "source": "ADO project summary — 2026-04-22"
+    },
+    "tool_urls": {
+      "datadog":   "https://us3.datadoghq.com/",
+      "sonarqube": "https://sonarqube.oncologyanalytics.com/",
+      "databricks_test": "https://adb-2393860672770324.4.azuredatabricks.net",
+      "azure_subscription": "newUM DEV",
+      "azure_vault": "oh-aks-newum-kv-nonprod",
+      "confirmed": true,
+      "source": "ADO project summary — 2026-04-22"
+    },
+    "database_host": {
+      "nonprod": "fcc9bae56d16.privatelink.postgres.database.azure.com",
+      "note": "privatelink — only reachable from windows365 CPC or Azure network",
+      "vs_code_extension": "Official Microsoft PostgreSQL VS Code extension recommended",
+      "access_request": "devopsrequest@oncologyanalytics.com",
+      "confirmed": true,
+      "source": "ADO project summary + session context"
+    },
+    "ado_access_note": {
+      "carlos_license": "Stakeholder — can see project/boards/pipelines but NOT git repos via REST API",
+      "blocker": "PAT with Code:Read scope returns empty repos list (200 but count:0) due to Stakeholder license",
+      "fix": "Request Basic license or repo read grant via devopsrequest@oncologyanalytics.com",
+      "confirmed": true,
+      "source": "PAT diagnosis 2026-04-22"
+    },
     "azure_devops": {
       "url": "https://dev.azure.com/oncologyanalytics/newUM",
       "confirmed": true,
@@ -339,6 +371,13 @@
       "email": "imariienko@oncologyanalytics.com",
       "confirmed": true,
       "source": "Teams async daily + access inventory"
+    },
+    {
+      "name": "Dmytro Hridin",
+      "role": "Backend Engineer (BE team) — owns NewUM.Migrator, the embedded .NET migration runner at /src/NewUM.API/NewUM.Migrator in newum_services repo. Has implemented DB schema tasks (#187118 ICD codes, #186298 controllers/services refactor, #183324 services integration approach). Migration system SME — go-to for understanding how the postgresql-cd pipeline applies DB changes.",
+      "email": "dhridin@oncologyanalytics.com",
+      "confirmed": true,
+      "source": "ADO task list (tasks.json) + DevOps thread ADO #189396 (2026-04-22)"
     },
     {
       "name": "Will Crawford",
@@ -1084,6 +1123,43 @@
           "limitations": ["Not suitable for large scans or heavy transformations", "If PostgreSQL is unavailable, all queries fail — no cached copy"]
         }
       ]
+    },
+
+    "migration_system": {
+      "$comment": "NewUM PostgreSQL DB migration tooling — confirmed via DevOps thread on ADO #189396 (2026-04-22).",
+      "runner": "NewUM.Migrator",
+      "runner_path": "/src/NewUM.API/NewUM.Migrator in newum_services repo",
+      "runner_language": ".NET (C#)",
+      "runner_internals": "UNKNOWN — must confirm with Dmytro Hridin. Likely EF Core migrations, DbUp, or custom runner.",
+      "pipeline": {
+        "name": "postgresql-cd",
+        "definition_id": 912,
+        "folder": "DevOps",
+        "authored_by": "Luiyi Valentin",
+        "trigger": "Runs before each environment deploy",
+        "confirmed_runs": [327928, 327908, 327833],
+        "confirmed_run_dates": ["2026-03-24", "2026-03-23"],
+        "result": "All succeeded"
+      },
+      "ado_thread_findings": {
+        "date": "2026-04-22",
+        "source": "DevOps reply to Carlos on ADO #189396 DBA charter thread",
+        "confirmed": [
+          "Instance & Configuration and Security sections mostly completed via Azure (not raw config files)",
+          "Migrations run in pipeline execution before each environment deploy",
+          "NewUM.Migrator at /src/NewUM.API/NewUM.Migrator is the actual runner",
+          "Dmytro Hridin can give deep context on how migrations work"
+        ],
+        "open_question": "What library/framework powers NewUM.Migrator? EF Core? DbUp? Custom SQL runner?",
+        "impact_on_flyway_pr": "Our Flyway PR skeleton (#189396) may be additive (governance layer), redundant, or needs integration. Requires alignment with Dmytro before merging."
+      },
+      "sme": {
+        "name": "Dmytro Hridin",
+        "email": "dhridin@oncologyanalytics.com",
+        "role": "Backend Engineer — migration system SME"
+      },
+      "confirmed": true,
+      "source": "DevOps ADO #189396 thread (2026-04-22) + ADO task list (03-workitems-task.json)"
     },
 
     "matis_migration": {

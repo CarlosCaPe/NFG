@@ -62,8 +62,8 @@ function inlineFormat(text) {
 }
 
 function mdToConfluence(md) {
-  // Strip YAML frontmatter
-  md = md.replace(/^---[\s\S]*?---\n*/m, '');
+  // Strip YAML frontmatter (only if --- is at the very start of the file)
+  md = md.replace(/^---[\s\S]*?---\n*/, '');
 
   // Adapt repo-local references for Confluence audience
   md = md.replace(/`\.\.\/\.\.\/knowledge\.json`/g, 'project knowledge base');

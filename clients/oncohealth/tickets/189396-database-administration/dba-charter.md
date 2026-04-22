@@ -127,11 +127,19 @@ Recommended setup:
 
 ## 2. Schema & Object Management
 
-### Migration tool: Flyway (proposed)
+### Migration tool: NewUM.Migrator (existing) + Flyway (proposed complement)
 
-> ⚠️ **PENDING DECISION:** Ticket #189396 lists Alembic/SQLAlchemy and Liquibase as migration tooling options. DBA proposes **Flyway** because: (1) backend is .NET — no Python dependency in the pipeline, (2) plain SQL that Zaki Mohammed can audit without SQLAlchemy knowledge, (3) `cleanDisabled=true` protects production from accidental schema wipe, (4) checksum validation prevents tampering. Needs explicit sign-off from Erik Hjortshoj or Jack Hall's replacement before this PR merges.
+> ⚠️ **KEY FINDING — 2026-04-22:** DevOps confirmed that migrations are already running in production via the **`postgresql-cd` pipeline** (definition ID 912, authored by Luiyi Valentin). The actual migration runner is **`NewUM.Migrator`** — a .NET project at `/src/NewUM.API/NewUM.Migrator` in the `newum_services` repo. This predates our Flyway PR skeleton. **Next step: schedule a call with Dmytro Hridin (`dhridin@oncologyanalytics.com`) to understand what NewUM.Migrator uses internally (EF Core? DbUp? custom runner?) before deciding whether Flyway is additive, redundant, or replacing it.**
 
-**What is already in place** (PR skeleton at `clients/oncohealth/tickets/189396-database-administration/pr/`):
+> The Flyway PR skeleton (ticket #189396) remains valid as a governance layer proposal — Flyway's `cleanDisabled`, checksum validation, and `outOfOrder=false` safety settings may complement the existing runner even if NewUM.Migrator does the actual SQL execution. Resolution required before PR merge.
+
+**What is already in production** (running via `postgresql-cd` pipeline since at least 2026-03-23):
+- Migrations applied per-environment before each deploy
+- Pipeline runs: #327928, #327908, #327833 (all succeeded, March 2026)
+- Pipeline owned by: Luiyi Valentin (DevOps)
+- Migration code owned by: Dmytro Hridin (BE team)
+
+**What is in our PR skeleton** (at `clients/oncohealth/tickets/189396-database-administration/pr/`):
 - `db/flyway.conf` — safety settings: `cleanDisabled=true`, `validateOnMigrate=true`, `outOfOrder=false`
 - `db/migrations/V1__baseline_schema.sql` — placeholder; must be filled via `pg_dump --schema-only` from CPC
 - `db/migrations/V2__roles_and_permissions.sql` — role model (newum_app, newum_migrations, newum_readonly)
@@ -184,7 +192,7 @@ Developer writes V{n}__*.sql
 | Role | Login | Privileges | Used by |
 |------|-------|------------|---------|
 | `newum_app` | No (login via named user) | SELECT, INSERT, UPDATE, DELETE on all tables/sequences. No DDL. | .NET application pods |
-| `newum_migrations` | No (login via pipeline service principal) | Full DDL + DML. Only used by ADO pipeline. | Flyway migration runner |
+| `newum_migrations` | No (login via pipeline service principal) | Full DDL + DML. Only used by ADO pipeline. | NewUM.Migrator / Flyway pipeline runner |
 | `newum_readonly` | No (login via named user) | SELECT only. No DML. | DataDog agent, reporting queries, debugging |
 
 Named login users (`newum_dev`, `newum_test`, production equivalents) are provisioned by DevOps
@@ -442,7 +450,8 @@ Once 30 days of production data exists:
 
 | Tool | Role | Owner |
 |------|------|-------|
-| Flyway CLI | Migration execution | DBA (config), DevOps (ADO pipeline) |
+| NewUM.Migrator (.NET) | Migration execution (existing, confirmed running) | Dmytro Hridin (BE), Luiyi Valentin (pipeline) |
+| Flyway CLI | Migration governance layer (proposed — pending alignment with NewUM.Migrator) | DBA (config), DevOps (ADO pipeline) |
 | Azure Database for PostgreSQL Flexible Server | Managed engine | DevOps provisions, DBA configures |
 | PgBouncer | Connection pooling | DBA designs config, DevOps deploys on AKS |
 | DataDog Postgres integration | Monitoring, alerting | DevOps enables agent; DBA defines monitors |
@@ -458,11 +467,12 @@ Once 30 days of production data exists:
   for Python tooling but not mandated.
 
 **What we do NOT use:**
-- EF Core migrations (ORM generates SQL — conflicts with Flyway ownership)
 - pgAdmin for production changes (all changes are scripted)
-- Liquibase (proposed to exclude in favor of Flyway — pending decision, see Section 2)
-- Alembic/SQLAlchemy (proposed to exclude — .NET backend, no Python in migration pipeline — pending decision, see Section 2)
+- Liquibase (no evidence of use; excluded unless NewUM.Migrator audit reveals otherwise)
+- Alembic/SQLAlchemy (.NET backend — no Python in the migration pipeline)
 - ADF for DB orchestration (Airflow is the sole orchestrator — hard constraint from System Design Doc)
+
+> Note on EF Core: DevOps confirmed Instance & Config + Security are "completed mostly using Azure." Whether NewUM.Migrator uses EF Core internally is unknown — confirm with Dmytro Hridin before making a blanket exclusion. If it does, our role shifts to governing the SQL output of EF migrations, not replacing the runner.
 
 ---
 
@@ -568,8 +578,9 @@ flyway migrate -configFiles=db/flyway.conf
 
 | Team | Point of contact | Our interface |
 |------|-----------------|---------------|
-| DevOps | Luiyi Valentin | Provide postgresql.conf parameters + PgBouncer config → DevOps applies in Azure |
-| Backend (.NET) | Backend lead (post-Jack Hall) | Review DDL migration PRs; provide index guidance; define schema change request process |
+| DevOps | Luiyi Valentin (`lvalentin@oncohealth.us`) | Provide parameter recommendations → DevOps applies via Azure Portal; owns `postgresql-cd` pipeline (ID 912) |
+| BE / Migration SME | Dmytro Hridin (`dhridin@oncologyanalytics.com`) | Align on NewUM.Migrator internals; define boundary between app-side and DBA-side migration governance |
+| Backend (.NET) | Backend lead (post-Jack Hall) | Review DDL migration PRs; provide index guidance; schema change request process |
 | Data (Databricks) | Michal Mucha | Maintain `wal_level=logical`, replication slot health; coordinate on schema evolution for Lakeflow |
 | Product / BA | Rachel Collier, Vika Nobis | Document schema decisions in ADO task comments; publish data dictionary to Confluence |
 | Security / Audit | Jakub Chabik (Manager) | Quarterly access review; pgAudit log retention; HIPAA evidence |
@@ -580,21 +591,22 @@ flyway migrate -configFiles=db/flyway.conf
 
 | # | Item | Owner | Priority | Blocker? |
 |---|------|-------|----------|----------|
-| 1 | Fill `V1__baseline_schema.sql` — run `pg_dump --schema-only --no-owner --no-acl` from windows365 CPC against `newum_dev` | Carlos (DBA) | High | Yes — blocks Flyway PR merge |
+| 1 | **NewUM.Migrator audit** — schedule call with Dmytro Hridin to understand: what library/framework powers it, how migrations are versioned, how it behaves on failure, and whether Flyway governance layer is additive or conflicting | Carlos + Dmytro | Critical | Yes — blocks all migration tooling decisions |
 | 2 | **Self-assign ADO #189396** in Azure DevOps — currently UNASSIGNED | Carlos | High | Yes — ticket has no owner |
-| 3 | **Flyway vs Alembic decision** — get explicit sign-off from Erik Hjortshoj or Jack Hall's replacement | Carlos raises, Erik/lead decides | High | Yes — blocks PR merge |
-| 4 | **airflow-dna repo access** — email `devopsrequest@oncologyanalytics.com`: "Need contributor access to airflow-dna repo for DBA ticket #189396" | Carlos | High | Yes — blocks PR submission |
-| 5 | **Zaki Mohammed first contact** — share `V2__roles_and_permissions.sql` and `db-migrate.yml` approval gate for his review; contact via Alexander Rodriguez or Luiyi | Carlos | High | No (but needed before prod) |
-| 6 | Data dictionary for Case schema (ADO #186617 — Jack Hall departed 2026-04-10, currently unassigned) | **TBD** | High | No |
-| 7 | Enable `pgaudit` extension via Azure Portal — open child ADO task under #189396 | Luiyi (DevOps) | High | No |
-| 8 | Set `wal_level=logical` in Azure Portal (required for Lakeflow Connect) — open child ADO task under #189396 | Luiyi (DevOps) + DBA confirms | High | No |
-| 9 | UAT/prod environments — provisioning not yet confirmed; coordinate with Luiyi once dev/test pipeline is stable | DevOps + DBA | Medium | No |
-| 10 | PgBouncer deployment in AKS | DBA designs config, DevOps deploys | Medium | No |
-| 11 | Azure Backup vault long-term retention policy (7yr HIPAA) | DevOps + DBA policy | Medium | No |
-| 12 | Airflow DAGs: backup verification, bloat check, slow query report | DBA authors (Airflow infra = Data team) | Medium | No |
-| 13 | DataDog Postgres integration + custom monitors | DevOps enables, DBA defines monitors | Medium | No |
-| 14 | Quarterly failover test runbook | DBA authors, DevOps executes | Low (pre-prod) | No |
-| 15 | RLS evaluation for multi-payer data isolation | DBA + Architecture | Low (V2 scope) | No |
+| 3 | **Instance & Config / Security scope clarification** — DevOps confirmed these are "completed mostly using Azure." Confirm with Luiyi which specific parameters are already set and which are still open | Carlos + Luiyi | High | No — but avoids duplicate work |
+| 4 | Fill `V1__baseline_schema.sql` — run `pg_dump --schema-only --no-owner --no-acl` from windows365 CPC against `newum_dev` (only after NewUM.Migrator audit — may change approach) | Carlos (DBA) | High | Yes — blocks Flyway PR merge |
+| 5 | **airflow-dna repo access** — email `devopsrequest@oncologyanalytics.com`: "Need contributor access to airflow-dna repo for DBA ticket #189396" | Carlos | High | Yes — blocks PR submission |
+| 6 | **Zaki Mohammed first contact** — share `V2__roles_and_permissions.sql` and `db-migrate.yml` approval gate for his review; contact via Alexander Rodriguez or Luiyi | Carlos | High | No (but needed before prod) |
+| 7 | Data dictionary for Case schema (ADO #186617 — Jack Hall departed 2026-04-10, currently unassigned) | **TBD** | High | No |
+| 8 | Enable `pgaudit` extension via Azure Portal — open child ADO task under #189396 | Luiyi (DevOps) | High | No |
+| 9 | Set `wal_level=logical` in Azure Portal (required for Lakeflow Connect) — open child ADO task under #189396 | Luiyi (DevOps) + DBA confirms | High | No |
+| 10 | UAT/prod environments — provisioning not yet confirmed; coordinate with Luiyi once dev/test pipeline is stable | DevOps + DBA | Medium | No |
+| 11 | PgBouncer deployment in AKS | DBA designs config, DevOps deploys | Medium | No |
+| 12 | Azure Backup vault long-term retention policy (7yr HIPAA) | DevOps + DBA policy | Medium | No |
+| 13 | Airflow DAGs: backup verification, bloat check, slow query report | DBA authors (Airflow infra = Data team) | Medium | No |
+| 14 | DataDog Postgres integration + custom monitors | DevOps enables, DBA defines monitors | Medium | No |
+| 15 | Quarterly failover test runbook | DBA authors, DevOps executes | Low (pre-prod) | No |
+| 16 | RLS evaluation for multi-payer data isolation | DBA + Architecture | Low (V2 scope) | No |
 
 ---
 
