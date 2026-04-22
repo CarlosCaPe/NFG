@@ -13,9 +13,6 @@ it is a **scripting-first, automation-first discipline** where every runbook, co
 baseline, and operational procedure ships as code that can be reviewed in a pull request,
 version-controlled in Git, and executed idempotently in any environment.
 
-Every manual action we take today is a debt we pay tomorrow in a 3am incident. Our goal is to
-drive that debt to zero.
-
 ---
 
 ## Scope — What We Own
@@ -455,7 +452,7 @@ Once 30 days of production data exists:
 | psycopg2 + Python | Maintenance scripts (`check-bloat.py`, etc.) | DBA |
 
 **Data access layer (application side — not DBA-owned but relevant):**
-- Backend team uses **Dapper** (confirmed in L99 + system design context). No EF ORM.
+- Backend team uses **Dapper** (confirmed in System Design Doc / Confluence NewUM Engineering space). No EF ORM.
 - This means no ORM-generated migrations — all schema changes come through Flyway. Good.
 - Python scripts (Airflow DAGs, maintenance) use `psycopg2`. SQLAlchemy Core is acceptable
   for Python tooling but not mandated.
