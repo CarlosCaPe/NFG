@@ -1126,11 +1126,27 @@
     },
 
     "migration_system": {
-      "$comment": "NewUM PostgreSQL DB migration tooling — confirmed via DevOps thread on ADO #189396 (2026-04-22).",
+      "$comment": "NewUM PostgreSQL DB migration tooling — fully confirmed via source code read 2026-04-22.",
       "runner": "NewUM.Migrator",
       "runner_path": "/src/NewUM.API/NewUM.Migrator in newum_services repo",
-      "runner_language": ".NET (C#)",
-      "runner_internals": "UNKNOWN — must confirm with Dmytro Hridin. Likely EF Core migrations, DbUp, or custom runner.",
+      "runner_language": ".NET 10 (C#)",
+      "runner_internals": "EF Core 10.0.2 — confirmed. Uses Microsoft.EntityFrameworkCore.Relational + Npgsql.EntityFrameworkCore.PostgreSQL. Calls dbContext.Database.MigrateAsync() which applies all pending migrations in order.",
+      "framework": "EF Core (NOT Flyway, NOT DbUp, NOT custom runner)",
+      "history_table": "__EFMigrationsHistory — standard EF Core table, auto-managed in the target DB",
+      "migration_naming": "Timestamp-based: YYYYMMDDHHmmss_Name (e.g. 20260330110454_InitialCreate)",
+      "migrations_location": "/src/NewUM.API/NewUM.DAL/Migrations/ in newum_services repo",
+      "migration_count": 16,
+      "migrations_date_range": "2026-03-30 (InitialCreate) → 2026-04-22 (MakeRegimenNameNullable)",
+      "failure_behavior": "EF Core wraps each migration in a transaction. If a migration fails, that individual migration rolls back. No manual try/catch rollback in Migrator code — failure causes non-zero exit code and pipeline stops.",
+      "dangerous_flag": {
+        "name": "MIGRATOR_DROP_ALL_TABLES",
+        "behavior": "If set to 'true', drops ALL tables in public schema before running migrations",
+        "comment_in_code": "temporary solution due to major changes in the database schema. We will remove this after we are sure that all the changes are stable",
+        "risk": "CRITICAL if enabled in UAT/PROD — full data loss. Must confirm it is NOT set in any non-dev environment.",
+        "action": "Open item: confirm env var value in Test/UAT pipelines via DevOps"
+      },
+      "seed_behavior": "When MIGRATOR_DROP_ALL_TABLES=true, after migration it also runs seed services (SeedServices) to repopulate reference data",
+      "flyway_decision": "RESOLVED: Flyway is NOT in use and NOT needed. EF Core is the migration system. Flyway reference in DBA charter has been removed — EF Core governance is the correct framing.",
       "pipeline": {
         "name": "postgresql-cd",
         "definition_id": 912,
@@ -1149,17 +1165,15 @@
           "Migrations run in pipeline execution before each environment deploy",
           "NewUM.Migrator at /src/NewUM.API/NewUM.Migrator is the actual runner",
           "Dmytro Hridin can give deep context on how migrations work"
-        ],
-        "open_question": "What library/framework powers NewUM.Migrator? EF Core? DbUp? Custom SQL runner?",
-        "impact_on_flyway_pr": "Our Flyway PR skeleton (#189396) may be additive (governance layer), redundant, or needs integration. Requires alignment with Dmytro before merging."
+        ]
       },
       "sme": {
         "name": "Dmytro Hridin",
         "email": "dhridin@oncologyanalytics.com",
-        "role": "Backend Engineer — migration system SME"
+        "role": "Backend Engineer — migration system SME. No longer needed for framework question (resolved by code read). Still useful for: rollback strategy details, env var usage in prod, pipeline integration nuances."
       },
       "confirmed": true,
-      "source": "DevOps ADO #189396 thread (2026-04-22) + ADO task list (03-workitems-task.json)"
+      "source": "Direct source code read via ADO REST API 2026-04-22 — NewUM.Migrator/Program.cs + NewUM.DAL/Migrations/"
     },
 
     "matis_migration": {

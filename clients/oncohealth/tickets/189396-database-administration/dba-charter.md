@@ -1,7 +1,7 @@
 # DBA Role Charter — newUM PostgreSQL
 **Ticket:** ADO #189396 | **Team:** NewFire Global / OncoHealth Data & Backend  
 **Owner:** Carlos Carrillo (AI-Leveraged Documenter, dataqbs via NFG)  
-**Date:** 2026-04-22 | **Status:** Draft v1.0
+**Date:** 2026-04-22 | **Status:** Draft v2.0 (migration framework confirmed — EF Core 10)
 
 ---
 
@@ -19,7 +19,7 @@ version-controlled in Git, and executed idempotently in any environment.
 
 | Domain | We own | We do NOT own |
 |--------|--------|---------------|
-| Schema DDL governance | Migration scripts, review gate, Flyway config | Application feature logic inside SQL |
+| Schema DDL governance | EF Core migration review, naming standards, review gate | Application feature logic inside SQL |
 | Role & privilege model | Role definitions, GRANT/REVOKE scripts | Azure AD user provisioning (DevOps) |
 | postgresql.conf baseline | Parameter recommendations, documentation | Azure Portal click-ops (DevOps applies) |
 | Backup & recovery | Strategy, DAGs, restore runbooks, testing | Azure infrastructure provisioning |
@@ -40,7 +40,7 @@ version-controlled in Git, and executed idempotently in any environment.
 Old-school DBA: log into pgAdmin, run commands manually, write a Word doc.  
 Our approach:
 
-1. **Every change is a migration script** — no DDL outside of `db/migrations/V{n}__*.sql`. (Migration runner: Flyway proposed — pending team decision, see Section 2.)
+1. **Every change is a migration script** — no DDL outside of an EF Core migration in `NewUM.DAL/Migrations/`. (Migration runner: **NewUM.Migrator using EF Core 10** — confirmed 2026-04-22.)
 2. **Every runbook is a script** — shell, Python, or SQL. If it can't be re-run safely, it's wrong.
 3. **Every config recommendation ships as code** — `postgresql.conf` parameters documented in a versioned `.conf` file, applied via ADO pipeline or Ansible, never by hand.
 4. **Every alert is defined in code** — DataDog monitors and thresholds live in Terraform/YAML, not set via UI.
@@ -127,11 +127,11 @@ Recommended setup:
 
 ## 2. Schema & Object Management
 
-### Migration tool: NewUM.Migrator (existing) + Flyway (proposed complement)
+### Migration tool: NewUM.Migrator (EF Core 10 — confirmed)
 
-> ⚠️ **KEY FINDING — 2026-04-22:** DevOps confirmed that migrations are already running in production via the **`postgresql-cd` pipeline** (definition ID 912, authored by Luiyi Valentin). The actual migration runner is **`NewUM.Migrator`** — a .NET project at `/src/NewUM.API/NewUM.Migrator` in the `newum_services` repo. This predates our Flyway PR skeleton. **Next step: schedule a call with Dmytro Hridin (`dhridin@oncologyanalytics.com`) to understand what NewUM.Migrator uses internally (EF Core? DbUp? custom runner?) before deciding whether Flyway is additive, redundant, or replacing it.**
+> ✅ **RESOLVED — 2026-04-22:** Source code read confirmed **NewUM.Migrator uses EF Core 10.0.2** (`Microsoft.EntityFrameworkCore.Relational` + `Npgsql.EntityFrameworkCore.PostgreSQL`). It calls `dbContext.Database.MigrateAsync()` — the standard EF Core migration path. **Flyway is NOT in use and NOT needed.** The DBA role is to govern EF Core migration quality, not introduce a second tool.
 
-> The Flyway PR skeleton (ticket #189396) remains valid as a governance layer proposal — Flyway's `cleanDisabled`, checksum validation, and `outOfOrder=false` safety settings may complement the existing runner even if NewUM.Migrator does the actual SQL execution. Resolution required before PR merge.
+> 🚨 **RISK FLAG — 2026-04-22:** `MIGRATOR_DROP_ALL_TABLES` env var found in source. If set to `true`, it drops ALL tables in `public` schema before migrating. Code comment says "temporary" — must confirm it is **not** active in Test/UAT/PROD.
 
 **What is already in production** (running via `postgresql-cd` pipeline since at least 2026-03-23):
 - Migrations applied per-environment before each deploy
@@ -139,12 +139,12 @@ Recommended setup:
 - Pipeline owned by: Luiyi Valentin (DevOps)
 - Migration code owned by: Dmytro Hridin (BE team)
 
-**What is in our PR skeleton** (at `clients/oncohealth/tickets/189396-database-administration/pr/`):
-- `db/flyway.conf` — safety settings: `cleanDisabled=true`, `validateOnMigrate=true`, `outOfOrder=false`
-- `db/migrations/V1__baseline_schema.sql` — placeholder; must be filled via `pg_dump --schema-only` from CPC
-- `db/migrations/V2__roles_and_permissions.sql` — role model (newum_app, newum_migrations, newum_readonly)
-- `scripts/migrate-local.sh` — developer-facing CLI wrapper
-- `azure-pipelines/db-migrate.yml` — ADO pipeline (gated execution, owned by DevOps)
+**Migration files in source** (`/src/NewUM.API/NewUM.DAL/Migrations/` — 16 migrations as of 2026-04-22):
+- Naming: `YYYYMMDDHHmmss_Name.cs` (e.g. `20260330110454_InitialCreate.cs`)
+- First migration: `20260330110454_InitialCreate` (2026-03-30)
+- Latest migration: `20260422000001_MakeRegimenNameNullable` (2026-04-22)
+- History table: `__EFMigrationsHistory` (auto-managed by EF Core in each target DB)
+- Snapshot: `NewUMDbContextModelSnapshot.cs` — tracks current schema state for EF tooling
 
 **Domain schemas confirmed** (from Miro + schema workshops as of 2026-04-21):
 
@@ -167,8 +167,8 @@ Developer writes V{n}__*.sql
   → PR opened in ADO
   → DBA review (idempotency, naming, impact radius, rollback strategy)
   → 1 approval required (standard); 2 approvals for schema-breaking changes
-  → ADO pipeline runs flyway info (dry-run) on PR branch
-  → Merge → pipeline runs flyway migrate against dev automatically
+  → ADO pipeline runs NewUM.Migrator in dry-run mode (GetPendingMigrationsAsync) on PR branch
+  → Merge → postgresql-cd pipeline runs NewUM.Migrator (MigrateAsync) against dev automatically
   → Manual approval gate before test/UAT/prod
 ```
 
@@ -192,7 +192,7 @@ Developer writes V{n}__*.sql
 | Role | Login | Privileges | Used by |
 |------|-------|------------|---------|
 | `newum_app` | No (login via named user) | SELECT, INSERT, UPDATE, DELETE on all tables/sequences. No DDL. | .NET application pods |
-| `newum_migrations` | No (login via pipeline service principal) | Full DDL + DML. Only used by ADO pipeline. | NewUM.Migrator / Flyway pipeline runner |
+| `newum_migrations` | No (login via pipeline service principal) | Full DDL + DML. Only used by ADO pipeline. | NewUM.Migrator (EF Core) via `postgresql-cd` pipeline |
 | `newum_readonly` | No (login via named user) | SELECT only. No DML. | DataDog agent, reporting queries, debugging |
 
 Named login users (`newum_dev`, `newum_test`, production equivalents) are provisioned by DevOps
@@ -227,7 +227,7 @@ HIPAA audit trail retention: 10 years (ADLS Gen2 WORM storage, per operational_p
 **Secrets management:**
 - Database passwords live in Azure Key Vault (managed by DevOps)
 - ADO pipelines pull credentials from variable group `newum-db-{env}` at runtime
-- No credentials in `flyway.conf`, no credentials in Git
+- No credentials in `.env` or config files committed to Git
 - Local dev uses `.env` file (gitignored). Template: `.env.example` (credentials redacted)
 - Rotation cadence: 90 days for application users; immediate on any suspected leak
 
@@ -451,7 +451,7 @@ Once 30 days of production data exists:
 | Tool | Role | Owner |
 |------|------|-------|
 | NewUM.Migrator (.NET) | Migration execution (existing, confirmed running) | Dmytro Hridin (BE), Luiyi Valentin (pipeline) |
-| Flyway CLI | Migration governance layer (proposed — pending alignment with NewUM.Migrator) | DBA (config), DevOps (ADO pipeline) |
+| EF Core 10.0.2 | Migration framework (embedded in NewUM.Migrator — confirmed) | BE team authors migrations; DBA reviews |  
 | Azure Database for PostgreSQL Flexible Server | Managed engine | DevOps provisions, DBA configures |
 | PgBouncer | Connection pooling | DBA designs config, DevOps deploys on AKS |
 | DataDog Postgres integration | Monitoring, alerting | DevOps enables agent; DBA defines monitors |
@@ -461,18 +461,17 @@ Once 30 days of production data exists:
 | psycopg2 + Python | Maintenance scripts (`check-bloat.py`, etc.) | DBA |
 
 **Data access layer (application side — not DBA-owned but relevant):**
-- Backend team uses **Dapper** (confirmed in System Design Doc / Confluence NewUM Engineering space). No EF ORM.
-- This means no ORM-generated migrations — all schema changes come through Flyway. Good.
+- Backend team uses **EF Core 10** for schema migrations via NewUM.Migrator (confirmed 2026-04-22). Runtime data access pattern (Dapper vs EF Core) not yet confirmed — check System Design Doc.
+- EF Core generates C# migration classes; SQL output is DBA's review surface. No manual `.sql` files.
 - Python scripts (Airflow DAGs, maintenance) use `psycopg2`. SQLAlchemy Core is acceptable
   for Python tooling but not mandated.
 
 **What we do NOT use:**
 - pgAdmin for production changes (all changes are scripted)
-- Liquibase (no evidence of use; excluded unless NewUM.Migrator audit reveals otherwise)
+- Flyway (not in use — EF Core is the confirmed migration framework)
+- Liquibase (no evidence of use)
 - Alembic/SQLAlchemy (.NET backend — no Python in the migration pipeline)
 - ADF for DB orchestration (Airflow is the sole orchestrator — hard constraint from System Design Doc)
-
-> Note on EF Core: DevOps confirmed Instance & Config + Security are "completed mostly using Azure." Whether NewUM.Migrator uses EF Core internally is unknown — confirm with Dmytro Hridin before making a blanket exclusion. If it does, our role shifts to governing the SQL output of EF migrations, not replacing the runner.
 
 ---
 
@@ -494,7 +493,7 @@ Once 30 days of production data exists:
 | Failover test | `scripts/failover-test.sh` | Quarterly DR test |
 
 ### Change management for DDL
-1. No DDL outside of a Flyway migration script
+1. No DDL outside of an EF Core migration class in `NewUM.DAL/Migrations/`
 2. Breaking changes (DROP COLUMN, type change, rename) require 2-approver review + notification to backend team (at minimum 1 sprint in advance)
 3. All migrations use **Expand-Contract** pattern: add nullable column first; apply constraint in a subsequent migration after all consumers have deployed (confirmed pattern from operational_practices in System Design Doc)
 4. Emergency hotfix migrations: 2-engineer approval + post-incident review same day
@@ -553,17 +552,18 @@ FROM pg_replication_slots ORDER BY 3 DESC;
 SELECT pg_drop_replication_slot('<slot_name>');
 ```
 
-**Migration failure (Flyway)**
+**Migration failure (EF Core / NewUM.Migrator)**
 ```bash
-# Check what Flyway thinks failed
-flyway info -configFiles=db/flyway.conf
+# Check pending vs applied migrations (output by NewUM.Migrator on startup)
+# Look for: "Pending migrations: <name>" in pipeline logs
 
-# If migration is partially applied and marked FAILED:
-# 1. Fix the SQL error
-# 2. Run flyway repair (resets checksum, marks failed migration as deleted)
-flyway repair -configFiles=db/flyway.conf
-# 3. Re-run
-flyway migrate -configFiles=db/flyway.conf
+# EF Core wraps each migration in a transaction.
+# On failure: that migration rolls back automatically; pipeline exits non-zero.
+# Fix the migration class, rebuild, re-run the pipeline.
+
+# To inspect __EFMigrationsHistory directly:
+psql -h fcc9bae56d16.privatelink.postgres.database.azure.com -U newum_app -d newum_dev \
+  -c "SELECT migration_id, product_version FROM public.__\"EFMigrationsHistory\" ORDER BY 1;"
 ```
 
 ### Post-incident review
@@ -591,10 +591,10 @@ flyway migrate -configFiles=db/flyway.conf
 
 | # | Item | Owner | Priority | Blocker? |
 |---|------|-------|----------|----------|
-| 1 | **NewUM.Migrator audit** — schedule call with Dmytro Hridin to understand: what library/framework powers it, how migrations are versioned, how it behaves on failure, and whether Flyway governance layer is additive or conflicting | Carlos + Dmytro | Critical | Yes — blocks all migration tooling decisions |
+| 1 | **NewUM.Migrator audit** — ~~RESOLVED 2026-04-22~~ Framework confirmed: **EF Core 10.0.2**. History table: `__EFMigrationsHistory`. 16 migrations as of 2026-04-22. Risk item: confirm `MIGRATOR_DROP_ALL_TABLES` is NOT set in Test/UAT/PROD env vars | Carlos (verify with DevOps) | Critical | Partially resolved — drop flag still needs confirmation |
 | 2 | **Self-assign ADO #189396** in Azure DevOps — currently UNASSIGNED | Carlos | High | Yes — ticket has no owner |
 | 3 | **Instance & Config / Security scope clarification** — DevOps confirmed these are "completed mostly using Azure." Confirm with Luiyi which specific parameters are already set and which are still open | Carlos + Luiyi | High | No — but avoids duplicate work |
-| 4 | Fill `V1__baseline_schema.sql` — run `pg_dump --schema-only --no-owner --no-acl` from windows365 CPC against `newum_dev` (only after NewUM.Migrator audit — may change approach) | Carlos (DBA) | High | Yes — blocks Flyway PR merge |
+| 4 | **Baseline schema snapshot** — run `pg_dump --schema-only --no-owner --no-acl` from windows365 CPC against `newum_dev` for reference. Note: with EF Core, `__EFMigrationsHistory` + source migrations are the canonical history. A pg_dump snapshot is useful as a point-in-time reference, not as a V1 migration file. | Carlos (DBA) | High | No |
 | 5 | **airflow-dna repo access** — email `devopsrequest@oncologyanalytics.com`: "Need contributor access to airflow-dna repo for DBA ticket #189396" | Carlos | High | Yes — blocks PR submission |
 | 6 | **Zaki Mohammed first contact** — share `V2__roles_and_permissions.sql` and `db-migrate.yml` approval gate for his review; contact via Alexander Rodriguez or Luiyi | Carlos | High | No (but needed before prod) |
 | 7 | Data dictionary for Case schema (ADO #186617 — Jack Hall departed 2026-04-10, currently unassigned) | **TBD** | High | No |
@@ -626,8 +626,8 @@ flyway migrate -configFiles=db/flyway.conf
    Paste output into `pr/db/migrations/V1__baseline_schema.sql` (replaces the `SELECT 1` placeholder).
 3. **airflow-dna access request** — Email `devopsrequest@oncologyanalytics.com`:
    > Subject: Repo access request — airflow-dna  
-   > Body: "Need contributor access to the airflow-dna repo for DBA work on ticket [#189396](https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/189396). Scope: adding Flyway migration pipeline (`azure-pipelines/db-migrate.yml`) and role scripts."
-4. **Flyway decision** — Raise in next standup or async Teams message to Erik/Jack's replacement. Reference: [#189396](https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/189396) currently lists Alembic; DBA proposes Flyway (reasons in Section 2). Need written confirmation in ADO comment or Teams.
+   > Body: "Need contributor access to the airflow-dna repo for DBA work on ticket [#189396](https://dev.azure.com/oncologyanalytics/newUM/_workitems/edit/189396). Scope: adding role scripts and DBA maintenance DAGs."
+4. **Migration tooling alignment** — Confirm with Luiyi/Dmytro: (a) `MIGRATOR_DROP_ALL_TABLES` is disabled in Test/UAT/PROD, (b) DBA review gate for new EF Core migrations, (c) whether `newum_migrations` role is already provisioned in all environments.
 
 ### Before prod
 
