@@ -1,0 +1,42 @@
+# AdhereHealth — Sub-client configuration
+# Part of NFG (NewFire Global) umbrella contract
+
+client:
+  name: AdhereHealth
+  legal_name: AdhereHealth
+  alias: adh
+  domain: healthcare technology / medication adherence
+  project: ""                  # TBD — fill once confirmed
+  project_full: ""             # TBD
+  description: Behavioral science-driven medication adherence and value-based care solutions for health plans and risk-bearing entities. Proprietary platform (Adhere Platform™) combining predictive analytics, clinical workflows, and omnichannel engagement.
+  hq: Nashville, TN
+  founded: 2006
+  website: https://adherehealth.com
+
+auth:
+  primary_email: ""            # TBD — client-provisioned email
+  alt_email: ""
+  username: ""
+  sso_provider: ""             # TBD
+  sso_url: ""
+  mfa: ""
+  vpc:
+    name: ""
+    url: ""
+
+services: []
+  # Add entries as access is provisioned. Use oncohealth/client.yaml as reference.
+  # Types: google-doc | miro | azure-devops | atlassian | sharepoint-xlsx | sharepoint-docx
+  #        databricks | teams | calendar-outlook | calendar-google | graph-api
+
+tech_stack:
+  backend: []                  # TBD
+  frontend: []                 # TBD
+  testing: []                  # TBD
+  devops: []                   # TBD
+  data: []                     # TBD
+
+team: []
+  # Fill as contacts are introduced
+
+executive_steering: []

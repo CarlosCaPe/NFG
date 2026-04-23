@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "last_updated": "2026-04-23",
+  "methodology": "4D Paradigm (Describe → Delegate → Diligent → Disclose)",
+
+  "identity": {
+    "project_name": "",
+    "project_full_name": "",
+    "confirmed": false,
+    "source": ""
+  },
+
+  "contracting_chain": {
+    "your_company": { "name": "dataqbs", "role": "contractor" },
+    "staffing_partner": { "name": "NewFire Global Partners", "alias": "NFG", "role": "staffing / consulting partner" },
+    "end_client": {
+      "name": "AdhereHealth",
+      "legal_name": "AdhereHealth",
+      "domain": "healthcare technology / medication adherence",
+      "hq": "Nashville, TN",
+      "founded": 2006,
+      "website": "https://adherehealth.com",
+      "role": "end client"
+    },
+    "chain": "dataqbs → NFG → AdhereHealth"
+  },
+
+  "your_role": {
+    "title": "AI-Leveraged Documenter",
+    "description": "Project documentation and specs, automated via Python/Node",
+    "tools": ["Python", "Node.js", "VS Code", "Copilot", "Claude"]
+  },
+
+  "email_identity": {
+    "nfg_email": "carlos.carrillo@newfireglobal.com",
+    "client_emails": [],
+    "client_username": ""
+  },
+
+  "client_overview": {
+    "summary": "AdhereHealth provides behavioral science-driven medication adherence and value-based care solutions for health plans and risk-bearing entities (Medicare Advantage, Medicaid, commercial).",
+    "platform": "Adhere Platform™ — SaaS with predictive analytics, intelligent clinical workflows, omnichannel outreach, and a licensed clinician network.",
+    "key_metrics": {
+      "roi": "4:1",
+      "health_plans_supported": "100+",
+      "interventions_delivered": "12M+"
+    },
+    "focus_areas": [
+      "Medication adherence and management",
+      "Care gap closure",
+      "Health equity / SDOH",
+      "HEDIS and Star Rating improvement",
+      "Medication Therapy Management (MTM)",
+      "Value-based care reimbursement"
+    ]
+  },
+
+  "environments": {},
+  "tech_stack": {},
+  "key_contacts": [],
+  "access_status": {
+    "completed": [],
+    "partial": [],
+    "blocked": []
+  },
+  "unknowns": [
+    "Project name / engagement scope",
+    "Client-provisioned email and SSO details",
+    "Primary contacts and onboarding coordinator",
+    "Tech stack in use",
+    "Systems to integrate with (ADO, Confluence, SharePoint, etc.)",
+    "VPC / VDI requirement"
+  ],
+  "next_steps": [
+    "Receive onboarding email from ADH/NFG with project details",
+    "Fill auth block in client.yaml once credentials are provisioned",
+    "Add team contacts as introductions happen",
+    "Begin service connections using shared/ scripts"
+  ]
+}
