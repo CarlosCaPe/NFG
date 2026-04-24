@@ -31,7 +31,7 @@ NFG/
 │   │   ├── knowledge.json      ← confirmed facts & unknowns
 │   │   ├── .env                ← credentials (gitignored)
 │   │   └── output/             ← all captured content
-│   └── <next-client>/          ← sub-client #2 (upcoming)
+│   └── adh/                    ← sub-client #2 (onboarding)
 ├── package.json
 └── .gitignore
 ```
@@ -101,6 +101,27 @@ cp -r clients/_template clients/<client-name>
 - **DevOps**: Azure DevOps, Databricks Asset Bundles (DAB), Kubernetes, SonarQube, DataDog
 - **Data**: Databricks, Unity Catalog (Bronze/Silver/Gold), Delta Live Tables, Great Expectations, Airflow, MS-SQL (OADB), Azure Blob Storage
 - **AI Coding**: Claude Code provisioned, Cursor on request
+
+### AdhereHealth (ADH)
+- **Project**: TBD — onboarding in progress (as of 2026-04-23)
+- **Purpose**: Behavioral science-driven medication adherence and value-based care solutions (Adhere Platform™)
+- **Domain**: Healthcare technology / medication adherence — serves Medicare Advantage, Medicaid, commercial health plans
+- **Config**: `clients/adh/client.yaml`
+- **Knowledge**: `clients/adh/knowledge.json` (v1.0.0)
+- **Auth**: TBD — credentials not yet provisioned
+- **HQ**: Nashville, TN | Founded: 2006 | Website: https://adherehealth.com
+
+#### Key Environments
+- TBD — fill as access is provisioned
+
+#### Connected Services
+- None yet — services list empty in client.yaml
+
+#### Key Team
+- TBD — contacts not yet introduced
+
+#### Tech Stack
+- TBD
 
 ## QueryMaster — Database Query Agent
 
